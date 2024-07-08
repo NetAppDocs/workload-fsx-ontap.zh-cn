@@ -1,0 +1,30 @@
+---
+sidebar: sidebar 
+permalink: initialize-replication.html 
+keywords: initialize replication, begin replication, start replication 
+summary: 初始化源卷和目标卷之间的复制关系。 
+---
+= 初始化复制关系
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+初始化源卷和目标卷之间的复制关系。
+
+.关于此任务
+初始化会执行_baseline传输：创建源卷的快照、然后将该快照及其引用的所有数据块传输到目标卷。
+
+.开始之前
+请考虑何时选择完成此操作。初始化可能非常耗时。您可能希望在非高峰时段运行基线传输。
+
+.步骤
+. 登录到工作负载出厂控制台。
+. 在存储中，选择*转至存储清单*。
+. 在*FSx for FS* ONTAP选项卡中，单击要更新的文件系统的三个点菜单，然后选择*Manage*。
+. 从文件系统概述中，选择*复制关系*选项卡。
+. 在复制关系选项卡中、单击要初始化的复制关系的三点菜单。
+. 选择*初始化*。
+. 在初始化关系对话框中，单击*Initi起 始化*。
+

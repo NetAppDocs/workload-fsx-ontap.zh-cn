@@ -1,0 +1,42 @@
+---
+sidebar: sidebar 
+permalink: quick-start.html 
+keywords: Amazon FSx for NetApp ONTAP, fsx, netapp, quick, get started, install, deploy, setup, launch, requirements, prerequisites, credentials, permissions, policy 
+summary: 只需几个步骤，即可开始使用适用于 ONTAP 的 FSX 。 
+---
+= Workload Factory for Amazon FSx for NetApp ONTAP快速入门
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+借助Workload Factory for Amazon FSx for NetApp ONTAP、您可以立即在_BASIC模式下开始使用。
+
+如果您要使用Workload Factory创建文件系统、管理资源等、可以通过几个步骤开始操作。在这种情况下、您需要AWS帐户才能开始使用。
+
+请按照以下步骤开始操作。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一个"] 登录到Workload Factory
+[role="quick-margin-para"]
+您需要 link:https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html["使用Workload Factory设置帐户"^] 和 link:https://console.workloads.netapp.com["登录"^]
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["两个"] 添加凭据和权限
+[role="quick-margin-para"]
+在_BASIC和_Automate之间进行选择 link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["操作模式"^]
+
+[role="quick-margin-para"]
+如果您选择在_BASIC模式下运行、则无需再继续操作。您可以开始使用Workload Factory for FSx for ONTAP复制部分完成的代码示例。
+
+[role="quick-margin-para"]
+如果您在_Automate模式下运行、则需要执行以下操作：选择数据库和AI等工作负载功能、以及创建IAM策略、以确保您拥有在_Automate模式下运行所需 link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["手动向帐户添加凭据"^] 的正确权限。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三个"] 创建文件系统
+[role="quick-margin-para"]
+您将创建FSx文件系统、以开始在Workload Factory中管理存储和FSx for ONTAP资源。在的 link:https://console.workloads.netapp.com["工作负载出厂控制台"^]“存储”中，单击*Create file system*。link:create-file-system.html["了解如何创建文件系统"](英文)
+
+[role="quick-margin-para"]
+您还可以从存储节省计算器开始、将Amazon Elel生 块存储、El生 性文件系统和FSx for Windows文件服务器存储环境的成本与FSx for ONTAP的成本进行比较。 link:explore-savings.html["利用存储节省计算器了解节省量。"]
+
+.下一步行动
+通过存储清单中的文件系统，您可以 link:create-volume.html["创建卷"]管理FSx for ONTAP文件系统，并为资源设置数据保护。

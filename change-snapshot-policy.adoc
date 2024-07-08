@@ -1,0 +1,37 @@
+---
+sidebar: sidebar 
+permalink: change-snapshot-policy.html 
+keywords: snapshot policy, snapshot schedule, modify snapshot policy, edit snapshot policy, change snapshot policy 
+summary: 随时更新卷的Snapshot策略。 
+---
+= 更改卷的Snapshot策略
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+随时更新卷的Snapshot策略。
+
+.关于此任务
+此操作会更新为卷创建快照的频率或禁用自动快照。
+
+.开始之前
+要显示现有快照策略、需要提供一个链接。要关联链接，请单击*Account name*下的*Associate link*。然后返回此操作。
+
+.步骤
+. 登录到工作负载出厂控制台。
+. 在存储中，选择*转至存储清单*。
+. 选择*卷*选项卡。
+. 在*卷*选项卡中，选择要更改快照策略的卷的三点菜单。
+. 选择*数据保护操作*、*快照*，然后选择*管理快照策略*。
+. 在"Snapshot policy management (Snapshot策略管理)"页面上、选择*更改现有Snapshot策略*。
+. 在*Snapshot policy name*字段中，为此卷选择其他快照策略。
++
+要禁用自动快照，请选择 `none`。
+
++
+如果不存在其他快照策略， link:create-snapshot-policy.html["为此卷创建新的Snapshot策略"]。
+
+. 单击 * 应用 * 。
+

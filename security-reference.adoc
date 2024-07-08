@@ -1,0 +1,19 @@
+---
+sidebar: sidebar 
+permalink: security-reference.html 
+keywords: security, data protection, IAM, file system access control, vpc 
+summary:  
+---
+= FSx for ONTAP的安全性
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Amazon FSx for NetApp ONTAP文档提供了以下安全主题供您参考。
+
+* link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/data-protection.html["Amazon FSx for NetApp ONTAP中的数据保护"^]
+* link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/security-iam.html["Amazon FSx for NetApp ONTAP的身份和访问管理"^]
+* link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limit-access-security-groups.html["使用Amazon VPC控制文件系统访问"^] 在Amazon FSx for NetApp ONTAP文档中
+

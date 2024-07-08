@@ -1,0 +1,53 @@
+---
+sidebar: sidebar 
+permalink: configure-active-directory.html 
+keywords: configure AD, configure active directory, update ad, edit active directory 
+summary:  
+---
+= 配置和更新Storage VM的Active Directory
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+为FSx for ONTAP文件系统中的Storage VM配置和更新Active Directory。
+
+.关于此任务
+配置和更新Storage VM的Active Directory的步骤相同。
+
+.步骤
+. 登录到工作负载出厂控制台。
+. 在存储中，选择*转至存储清单*。
+. 在*FSx for Storage VM*选项卡中，选择包含要更新的ONTAP的文件系统的三点菜单，然后选择*Manage*。
+. 从文件系统概述中，选择*Storage VMS*选项卡。
+. 从Storage VM选项卡中、选择要配置Active Directory的Storage VM的三点菜单。
+. 选择*管理AD配置*。
+. 在管理AD配置页面上、提供以下内容：
++
+.. *要加入的Active Directory域*：输入Active Directory的完全限定域名(FQDN)。
+.. *DNS IP地址*：最多输入三个IP地址，以逗号分隔。
+.. *SMB服务器NetBIOS名称*：输入要为Storage VM创建的Active Directory计算机对象的SMB服务器NetBIOS名称。这是Active Directory中此SVM的名称。
+.. *用户名*：输入现有Active Directory中服务帐户的用户名。
++
+请勿包含域前缀或后缀。对于 `EXAMPLE\ADMIN`，请使用 `ADMIN`。
+
+.. *密码*：输入服务帐户的密码。
+.. *组织单位(OU)*:输入组织单位。
++
+OU是要加入文件系统的组织单位的可分辨路径名称。
+
+.. *Delegated administrators group*：(可选)输入委派的文件系统管理员组。
++
+已删除的管理员组是Active Directory中可管理文件系统的组的名称。
+
++
+如果您使用的是AWS Managed Microsoft AD、则必须指定一个组、例如AWS Delegated FSx Administrators、AWS Delegated Administrators或具有对OU的委派权限的自定义组。
+
++
+如果您要加入自行管理的广告、请使用广告中的组名称。默认组为 `Domain Admins`。
+
+
+
+. 单击 * 应用 * 。
+

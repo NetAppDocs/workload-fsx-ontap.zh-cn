@@ -1,0 +1,30 @@
+---
+indexpage:
+  title: Amazon FSX for NetApp ONTAP 文档
+  lead: 适用于 NetApp ONTAP 的 Amazon FSX 将 ONTAP 的全部功能引入了原生 AWS 托管服务，可提供一致的混合云体验。本文档介绍如何使用BlueXP
+    Workload Factory管理FSx for ONTAP。
+  tiles:
+  - title: 开始使用
+    links:
+    - title: 发行说明
+      url: "/whats-new.html"
+    - title: 了解适用于NetApp ONTAP 的Amazon FSX
+      url: "/learn-fsx-ontap.html"
+    - title: 快速入门
+      url: "/quick-start.html"
+  - title: 使用FSx for ONTAP
+    links:
+    - title: 了解节省量
+      url: "/explore-savings.html"
+    - title: 创建FSx for ONTAP文件系统
+      url: "/create-file-system.html"
+    - title: 创建FSx for ONTAP卷
+      url: "/create-volume.html"
+    - title: 保护您的数据
+      url: "/data-protection-overview.html"
+  - title: 知识和支持
+    links:
+    - title: 注册以获得支持
+      url: "/support-registration.html"
+    - title: 获取帮助
+      url: "/get-help.html"

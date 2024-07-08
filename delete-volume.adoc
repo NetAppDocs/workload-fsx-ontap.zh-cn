@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: delete-volume.html 
+keywords: delete volume, volume deletion 
+summary: 您可以随时删除FSx for ONTAP文件系统中的卷。此操作不可逆。 
+---
+= 删除卷
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以随时删除FSx for ONTAP文件系统中的卷。此操作不可逆。
+
+.开始之前
+删除卷之前、请考虑以下事项：
+
+* 本地快照：与此FSx for ONTAP文件系统关联的所有快照都将被永久删除。
+* FSx for ONTAP备份：FSx for ONTAP备份副本将保留、您仍可使用它们。
+* 复制关系：建议您先使用 link:delete-replication.html["删除任何现有复制关系"] 此卷、然后再删除此卷、以确保不会保留任何已断开的关系。
+
+
+.步骤
+. 登录到工作负载出厂控制台。
+. 在存储中，选择*转至存储清单*。
+. 在*FSx for FS* ONTAP选项卡中，选择包含要删除的卷的文件系统的三个点菜单，然后选择*Manage*。
+. 从文件系统概述中，选择*Volumes*选项卡。
+. 从卷选项卡中、选择要删除的卷的三点菜单。
+. 选择*基本操作*，然后选择*删除卷*。
+. 在Delete volume对话框中、键入"delete"以删除此卷。
+. 单击 * 删除 * 。
+

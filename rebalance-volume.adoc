@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: rebalance-volume.html 
+keywords: rebalance capacity, volume capacity, redistribute capacity 
+summary: 重新平衡卷的容量、以避免随时间推移而出现的不平衡。 
+---
+= 重新平衡卷的容量
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+重新平衡卷的容量、以避免随时间推移而出现的不平衡。
+
+.关于此任务
+当由于添加新文件和文件增长而导致逐渐出现不平衡时、重新平衡卷会重新分布容量。手动启动重新平衡操作后、我们会选择文件并自动无中断地移动它们。
+
+
+NOTE: 只有FlexGroup卷才支持重新平衡卷。
+
+.开始之前
+要重新平衡卷，您必须 link:manage-links.html["关联链接"]。如果您没有现有链接，请 link:create-link.html["创建链接"]。要关联文件系统中的链接，请单击*Account name*下的*Associate link*。链接关联后、返回此操作。
+
+.步骤
+. 登录到工作负载出厂控制台。
+. 在*存储*中，选择*转至存储清单*。
+. 在*FSx for ONTAP选项卡中，选择包含要重新平衡的卷的文件系统的三个点菜单，然后选择*Manage*。
+. 从文件系统概述中，选择*Volumes*选项卡。
+. 从卷选项卡中、选择要重新平衡的卷的三点菜单。
+. 选择*高级操作*，然后选择*重新平衡卷*。
+. 在"Re平衡 卷"对话框中、选择*重新平衡*。
+

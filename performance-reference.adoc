@@ -1,0 +1,14 @@
+---
+sidebar: sidebar 
+permalink: performance-reference.html 
+keywords: performance, FSx for ONTAP performance 
+summary: FSx for ONTAP的性能。 
+---
+= FSx for ONTAP的性能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+有关性能概述、请参见 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/performance.html["适用于NetApp ONTAP 性能的Amazon FSX"^] 文档。

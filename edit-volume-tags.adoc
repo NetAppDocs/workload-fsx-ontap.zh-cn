@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: edit-volume-tags.html 
+keywords: volume tags, edit volume tags, edit tags 
+summary: 标记可以帮助您对资源进行分类。您可以随时为FSx for ONTAP卷添加、编辑和删除卷标记。 
+---
+= 编辑卷标记
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+标记可以帮助您对资源进行分类。您可以随时为FSx for ONTAP卷添加、编辑和删除卷标记。
+
+.步骤
+. 登录到工作负载出厂控制台。
+. 在存储中，选择*转至存储清单*。
+. 在*FSx for FS* ONTAP选项卡中，选择包含要更新的卷的文件系统的三个点菜单，然后选择*Manage*。
+. 从文件系统概述中，选择*Volumes*选项卡。
+. 在卷选项卡中、单击要修改其标记的卷对应的三个点菜单。
+. 选择*基本操作*，然后选择*编辑卷标记*。
+. 在编辑卷标记页面上、添加、编辑或删除标记。
++
+一个卷最多可以应用50个标记。
+
+. 单击 * 应用 * 。
+

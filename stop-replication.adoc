@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: stop-replication.html 
+keywords: stop replication, break replication 
+summary: 停止源卷和目标卷之间的复制关系。 
+---
+= 停止复制关系
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+停止复制后、从源卷到目标卷的计划复制更新将暂停。目标卷从只读过渡到读写。
+
+.步骤
+. 登录到工作负载出厂控制台。
+. 在存储中，选择*转至存储清单*。
+. 在*FSx for FS* ONTAP选项卡中，单击要更新的文件系统的三个点菜单，然后选择*Manage*。
+. 从文件系统概述中，选择*复制关系*选项卡。
+. 在复制关系选项卡中、单击要停止的复制关系的三点菜单。
+. 选择*中断*。
+. 在中断复制对话框中，选择*故障*。
+
+
+卷的复制状态将更改为*已断开*。目标卷将变为可写。

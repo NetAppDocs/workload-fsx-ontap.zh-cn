@@ -1,0 +1,22 @@
+---
+sidebar: sidebar 
+permalink: whats-new.html 
+keywords: 'what"s new, features, new, release notes, enhancements, fixes, new features, workload factory, amazon fsx' 
+summary: 了解Amazon FSx for NetApp ONTAP的新增功能。 
+---
+= 新增功能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+了解Amazon FSx for NetApp ONTAP的新增功能。
+
+
+
+== 7月7日
+
+适用于NetApp ONTAP的Amazon FSx现已在BlueXP Workload Factory中全面上市。
+
+link:learn-fsx-ontap.html["了解BlueXP Workload Factory for Amazon FSx for NetApp ONTAP"](英文)

@@ -1,0 +1,38 @@
+---
+sidebar: sidebar 
+permalink: create-storage-vm.html 
+keywords: create storage VM, create svm 
+summary: '您可以创建FSx for ONTAP Storage VM (SVM)、以便在Workload Factory中为工作负载提供存储和数据服务。' 
+---
+= 为FSx for ONTAP文件系统创建Storage VM
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+为FSx for ONTAP文件系统创建Storage VM (SVM)、以便为Workload Factory中的工作负载以虚拟方式访问存储和数据服务。
+
+.关于此任务
+Storage VM是一种孤立的文件服务器、可用于访问工作负载出厂存储中每个工作负载的数据。每个SVM都有自己的管理凭据和端点、用于管理和访问数据。
+
+通过SVM、在访问FSx for ONTAP中的数据时、客户端和工作站会使用SVM的端点(IP地址)挂载SVM托管的卷、CIFS或SMB共享或iSCSI LUN。
+
+.开始之前
+验证每个文件系统支持的Storage VM数量。有关每个文件系统的最大SVM数量、请参见 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html#max-svms["管理FSx for ONTAP Storage Virtual Machine"^] AWS文档中的。
+
+.步骤
+. 登录到工作负载出厂控制台。
+. 在存储中，选择*转至存储清单*。
+. 在FSx for ONTAP选项卡中，单击要创建Storage VM的文件系统的三点菜单，然后选择*Manage*。
+. 从文件系统概述中，选择*创建Storage VM*。
+. 在Storage VM页面上的Storage VM配置下、提供以下内容：
++
+.. *名称*：输入Storage VM的名称。
+.. * Storage VM凭据*：为此Storage VM的用户提供密码 `vsadmin` 或使用文件系统的 `fsxadmin` 用户凭据。
+.. *根卷安全模式*：根据访问数据的客户端类型选择根卷安全模式- UNIX (Linux客户端)、NTFS (Windows客户端)或混合。
+.. *标记*：您可以选择最多添加50个标记。
+
+
+. 单击 * 创建 * 。
+

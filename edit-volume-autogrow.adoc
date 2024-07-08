@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: edit-volume-autogrow.html 
+keywords: volume autogrow, increase volume capacity, enable autogrow 
+summary: 启用卷自动增长可使Workload Factory为您管理卷容量。您可以随时将其禁用。 
+---
+= 启用卷自动增长
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+启用卷自动增长可使Workload Factory为您管理卷容量。您可以随时将其禁用。
+
+(可选)您可以随时使用手动增加卷的卷容量 link:increase-volume-capacity.html["增加卷容量功能"]。
+
+
+NOTE: iSCSI卷不支持卷自动增长。
+
+.开始之前
+要启用卷自动增长，必须 link:manage-links.html["关联链接"]。如果您没有现有链接，请 link:create-link.html["创建链接"]。要关联文件系统中的链接，请单击*Account name*下的*Associate link*。链接关联后、返回此操作。
+
+.步骤
+. 登录到工作负载出厂控制台。
+. 在存储中，选择*转至存储清单*。
+. 在FSx for ONTAP选项卡中，选择包含要更新的卷的文件系统的三点菜单，然后选择*Manage*。
+. 从文件系统概述中，选择*Volumes*选项卡。
+. 从卷选项卡中、选择要修改的卷对应的三个点菜单。
+. 选择*基本操作*，然后选择*编辑卷自动增长*。
+. 在编辑自动增长对话框中、启用卷自动增长。
+. 单击 * 应用 * 。
+

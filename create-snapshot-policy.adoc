@@ -1,0 +1,62 @@
+---
+sidebar: sidebar 
+permalink: create-snapshot-policy.html 
+keywords: create 
+summary: 为FSx for ONTAP卷创建Snapshot策略。快照策略用于定义系统如何为卷创建快照。 
+---
+= 为FSx for ONTAP卷创建Snapshot策略
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+为FSx for ONTAP卷创建自定义快照策略。快照策略用于定义系统如何为卷创建快照。
+
+.关于此任务
+您可以为FSx for ONTAP创建与三个内置快照策略不同的自定义快照策略：
+
+* `default`
+* `default-1weekly`
+* `none`
+
+
+默认情况下、每个卷都与文件系统的快照策略相关联 `default` 。建议对大多数工作负载使用此策略。
+
+通过自定义策略、您可以指定何时创建快照、要保留多少副本以及如何为其命名。
+
+.开始之前
+* 在使用快照之前、请考虑以下有关快照容量的信息：
++
+** 对于大多数数据集、额外的20%容量足以将快照保留长达四周。随着数据变得越来越陈旧、使用它进行恢复的可能性也会降低。
+** 覆盖快照中的所有数据会占用大量卷容量、而这些容量会考虑在配置卷容量中。
+
+
+* 要创建自定义快照策略，您必须 link:manage-links.html["关联链接"]。如果您没有现有链接，请 link:create-link.html["创建链接"]。要关联文件系统中的链接，请单击*Account name*下的*Associate link*。链接关联后、返回此操作。
+
+
+.步骤
+. 登录到工作负载出厂控制台。
+. 在*存储*中，选择*转至存储清单*。
+. 在*FSx for ONTAP选项卡中，单击带有卷的文件系统的三个点菜单，然后选择*Manage*。
+. 在文件系统概述中，选择*Volumes*选项卡。
+. 从*卷*选项卡中，为要使用计划快照保护的卷选择三个点菜单。
+. 选择*数据保护操作*、*快照*，然后选择*管理快照策略*。
+. 在"Snapshot policy management (Snapshot策略管理)"页面上、选择*创建新的Snapshot策略*。
+. 在*Snapshot policy name*字段中，输入快照策略的名称。
+. 可选：在*Description*字段中，输入快照策略的说明。
+. 在*Schedule下，选择何时创建快照。例如、每分钟或每小时。
++
+您可以选择多个频率。
+
+. 在*份数*下，输入要保留的份数。
++
+最大副本数为1、023。
+
+. 可选：在“*命名约定”下，为策略输入*前缀*。
+. *保留标签*会自动填充。
++
+此标签是指SnapMirror或复制标签、用于仅选择要从源文件系统复制到目标文件系统的指定快照。
+
+. 单击 * 应用 * 。
+

@@ -1,0 +1,25 @@
+---
+sidebar: sidebar 
+permalink: update-throughput-capacity.html 
+keywords: update throughput, change throughput, throughput capacity 
+summary: 根据需要更新FSx for ONTAP文件系统的吞吐量。 
+---
+= 更新文件系统的吞吐量容量
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+根据需要更新FSx for ONTAP文件系统的吞吐量。
+
+有关吞吐量容量限制、请参阅 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html["配额"^] AWS FSx for NetApp ONTAP文档中的。
+
+.步骤
+. 登录到工作负载出厂控制台。
+. 在存储中，单击*转至存储清单*。
+. 在*FSx for FS* ONTAP选项卡中，单击要更新其吞吐量容量的文件系统的三点菜单，然后选择*Manage*。
+. 在"Information"(信息)下，单击*TherTherTh容*旁边的铅笔图标。鼠标悬停在*吞吐量*行上时，下拉箭头旁边将显示铅笔图标。
+. 在吞吐量容量对话框中、选择所需的吞吐量容量。
+. 单击 * 应用 * 。
+

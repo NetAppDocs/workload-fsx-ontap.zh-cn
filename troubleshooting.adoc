@@ -1,0 +1,16 @@
+---
+sidebar: sidebar 
+permalink: troubleshooting.html 
+keywords: troubleshooting, troubleshoot, help, issues 
+summary: Amazon FSx for NetApp ONTAP文档包含故障排除主题、供您参考。 
+---
+= FSx for ONTAP故障排除
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Amazon FSx for NetApp ONTAP文档包含故障排除主题、供您参考。
+
+有关详细信息、请参见 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/troubleshooting.html["对Amazon FSx for NetApp ONTAP进行故障排除"^] 。

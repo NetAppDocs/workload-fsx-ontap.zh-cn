@@ -1,0 +1,203 @@
+---
+sidebar: sidebar 
+permalink: create-file-system.html 
+keywords: create, FSx file system, ONTAP file system, Workload Factory, storage 
+summary: 使用Workload Factory、您可以创建适用于ONTAP文件系统的FSx、以添加和管理卷以及其他数据服务。 
+---
+= 创建FSx for ONTAP文件系统
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用Workload Factory、您可以创建适用于ONTAP文件系统的FSx、以添加和管理卷以及其他数据服务。
+
+.关于此任务
+创建文件系统时会创建Storage VM。
+
+.开始之前
+在创建FSx for ONTAP文件系统之前、您需要：
+
+* IAM角色的ARN、它为Workload Factory提供了创建FSx for ONTAP文件系统所需的权限。link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["了解如何为AWS帐户授予权限"^](英文)
+* 要为其创建 FSX for ONTAP 实例的区域和 VPC 信息。
+
+
+
+
+== 创建FSx for ONTAP文件系统
+
+您可以使用_Quick cre成_或_Advanced cre成_来创建FSx for ONTAP文件系统。
+
+[role="tabbed-block"]
+====
+.快速创建
+--
+通过快速创建、您可以使用建议的最佳实践配置。创建FSx for ONTAP文件系统后、您可以更改大多数设置。
+
+.步骤
+. 登录到工作负载出厂控制台。
+. 在存储中，选择*Create FSx for FS* ONTAP。
+. 在"Create FSx for ONTAP (创建FSx for Windows)"页面上、选择*快速创建*。
++
+您也可以加载已保存的配置。
+
+. 在文件系统常规配置下、提供以下内容：
++
+.. *AWS凭据*：选择在Workload Factory中添加AWS凭据、或者在不使用凭据的情况下继续操作。
+.. *文件系统名称*：输入文件系统的名称。
+.. *部署拓扑*：选择部署拓扑。
++
+*** 纵向扩展拓扑是指使用一个文件系统进行数据分发、并可增加文件大小以适应数据增长。
+*** 横向扩展拓扑使用多个文件系统进行数据分发。
+
+
+.. *HA对*：输入HA对的数量。
++
+*** 对于纵向扩展部署、只能有一个HA对。
+*** 对于横向扩展部署、可以有两到十二个HA对。
+
+
+.. *部署类型*：选择部署类型。
++
+*** 单可用性区域(单可用性区域、单可用性)部署：通过监控硬件故障来确保可用性、并在发生故障时自动更换基础架构组件。通过在可用性区域中自动复制数据以防止其发生组件故障、实现高持久性。
+*** 多可用性区域(Multi-AZ)部署：即使可用性区域不可用、也能持续提供数据。多可用性文件系统支持单可用性文件系统的所有可用性和持久性功能。多可用性文件系统专为业务关键型生产工作负载而设计、这些工作负载要求共享ONTAP文件数据具有高可用性、并需要具有跨可用性区域内置复制功能的存储。
+
+
+.. *标记*：您可以选择最多添加50个标记。
+
+
+. 在*网络和安全性*下的*区域和VPC*字段中，为文件系统选择区域和VPC。
+. 在*文件系统详细信息*下，提供以下内容：
++
+.. *SSD存储容量*：输入存储容量并选择存储容量单位。
+.. * ONTAP凭据*：输入您的ONTAP用户名和密码。
+.. *SMB/CCIFS设置*：可选。如果您计划使用SMB/CCIFS协议访问卷、则必须在文件系统创建期间为Storage VM配置Active Directory。提供为此文件系统创建的Storage VM的以下详细信息。
++
+... *要加入的Active Directory域*：输入Active Directory的完全限定域名(FQDN)。
+... *DNS IP地址*：最多输入三个DNS IP地址，以逗号分隔。
+... *SMB服务器NetBIOS名称*：输入要为Storage VM创建的Active Directory计算机对象的SMB服务器NetBIOS名称。这是Active Directory中此Storage VM的名称。
+... *用户名*：输入现有Active Directory中服务帐户的用户名。
++
+请勿包含域前缀或后缀。对于 `EXAMPLE\ADMIN`，请使用 `ADMIN`。
+
+... *密码*：输入服务帐户的密码。
+... *组织单位*：(可选)输入要为FSx for ONTAP创建计算机帐户的组织单位的名称。OU是要加入文件系统的组织单位的可分辨路径名称。
+... *委派管理员组*：(可选)输入Active Directory中可管理文件系统的组的名称。
++
+如果您使用的是AWS Managed Microsoft AD、则必须指定一个组、例如AWS Delegated FSx Administrators、AWS Delegated Administrators或具有对OU的委派权限的自定义组。
+
++
+如果您要加入自行管理的广告、请使用广告中的组名称。默认组为 `Domain Admins`。
+
+
+
+
+
+. 打开*Summary (摘要)*以查看您定义的配置。如果需要、您可以在保存或创建文件系统之前更改此时的任何设置。
+. 保存或创建文件系统。
+
+
+如果您创建了文件系统，现在可以在*Inventory*页中查看FSx for ONTAP文件系统。
+
+--
+.高级创建
+--
+使用Advanced create、您可以设置所有配置选项、包括可用性、安全性、备份和维护。
+
+.步骤
+. 转到工作负载出厂控制台。
+. 在存储中，选择*Create FSx for FS* ONTAP。
+. 在"Create FSx for ONTAP (创建FSx for Windows)"页面上、选择*高级创建*。
++
+您也可以加载已保存的配置。
+
+. 在文件系统常规配置下、提供以下内容：
++
+.. *AWS凭据*：选择在Workload Factory中添加AWS凭据、或者在不使用凭据的情况下继续操作。
+.. *文件系统名称*：输入文件系统的名称。
+.. *部署拓扑*：选择部署拓扑。
++
+*** 纵向扩展拓扑是指使用一个文件系统进行数据分发、并可增加文件大小以适应数据增长。
+*** 横向扩展拓扑使用多个文件系统进行数据分发。
+
+
+.. *HA对*：输入HA对的数量。
++
+*** 对于纵向扩展部署、只能有一个HA对。
+*** 对于横向扩展部署、可以有两到十二个HA对。
+
+
+.. *部署类型*：选择部署类型。
++
+*** 单可用性区域(单可用性区域、单可用性)部署：通过监控硬件故障来确保可用性、并在发生故障时自动更换基础架构组件。通过在可用性区域中自动复制数据以防止其发生组件故障、实现高持久性。
+*** 多可用性区域(Multi-AZ)部署：即使可用性区域不可用、也能持续提供数据。多可用性文件系统支持单可用性文件系统的所有可用性和持久性功能。多可用性文件系统专为业务关键型生产工作负载而设计、这些工作负载要求共享ONTAP文件数据具有高可用性、并需要具有跨可用性区域内置复制功能的存储。
+
+
+.. *标记*：您可以选择最多添加50个标记。
+
+
+. 在"网络和安全"下、提供以下内容：
++
+.. *区域和VPC*：为文件系统选择区域和VPC。
+.. *安全组*：创建或使用现有安全组。
+.. *可用性区域*：选择可用性区域和子网。
++
+*** 对于集群配置节点1：选择可用性区域和子网。
+*** 对于集群配置节点2：选择可用性区域和子网。
+
+
+.. *vPC路由表*：选择VPC路由表以启用客户端对卷的访问。
+.. *端点IP地址范围*：选择VPC*以外的*浮动IP地址范围或*输入IP地址范围*并输入IP地址范围。
+.. *加密*：从下拉列表中选择加密密钥名称。
+
+
+. 在文件系统详细信息下、提供以下内容：
++
+.. *SSD存储容量*：输入存储容量并选择存储容量单位。
+.. *已配置IOPs*：选择*自动*或*用户已配置*。
+.. *每个HA对的吞吐量*：选择每个HA对的吞吐量容量。
+.. * ONTAP凭据*：输入您的ONTAP用户名和密码。
+.. * Storage VM凭据*：输入您的用户名。密码可以特定于此文件系统、也可以使用为ONTAP凭据输入的相同密码。
+.. *SMB/CCIFS设置*：可选。如果您计划使用SMB/CCIFS协议访问卷、则必须在文件系统创建期间为Storage VM配置Active Directory。提供为此文件系统创建的Storage VM的以下详细信息。
++
+... *要加入的Active Directory域*：输入Active Directory的完全限定域名(FQDN)。
+... *DNS IP地址*：最多输入三个DNS IP地址，以逗号分隔。
+... *SMB服务器NetBIOS名称*：输入要为Storage VM创建的Active Directory计算机对象的SMB服务器NetBIOS名称。这是Active Directory中此Storage VM的名称。
+... *用户名*：输入现有Active Directory中服务帐户的用户名。
++
+请勿包含域前缀或后缀。对于 `EXAMPLE\ADMIN`，请使用 `ADMIN`。
+
+... *密码*：输入服务帐户的密码。
+... *组织单位*：(可选)输入要为FSx for ONTAP创建计算机帐户的组织单位的名称。OU是要加入文件系统的组织单位的可分辨路径名称。
+... *委派管理员组*：(可选)输入Active Directory中可管理文件系统的组的名称。
++
+如果您使用的是AWS Managed Microsoft AD、则必须指定一个组、例如AWS Delegated FSx Administrators、AWS Delegated Administrators或具有对OU的委派权限的自定义组。
+
++
+如果您要加入自行管理的广告、请使用广告中的组名称。默认组为 `Domain Admins`。
+
+
+
+
+
+. 在备份和维护下、提供以下内容：
++
+.. *FSx for ONTAP Backup*：默认情况下启用每日自动备份。如果需要、请禁用。
++
+... *自动备份保留期限*：输入自动备份的保留天数。
+... *每日自动备份窗口*:选择*No Preferences*(已为您选择每日备份开始时间)或*Select start time for daily backups*并指定开始时间。
+... *每周维护窗口*:选择*No Preferences*(为您选择每周维护窗口开始时间)或*Select start time for 30 minute每周维护窗口*并指定开始时间。
+
+
+
+
+. 保存或创建文件系统。
+
+
+如果您创建了文件系统，现在可以在*Inventory*页中查看FSx for ONTAP文件系统。
+
+--
+====
+.下一步行动
+通过存储清单中的文件系统，您可以 link:create-volume.html["创建卷"]管理FSx for ONTAP文件系统并设置 link:data-protection-overview.html["数据保护"] 资源。

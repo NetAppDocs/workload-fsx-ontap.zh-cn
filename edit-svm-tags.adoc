@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: edit-svm-tags.html 
+keywords: edit storage vm tags, vm tags, svm tags 
+summary: 随时为Storage VM添加、更新或删除Storage VM标记。 
+---
+= 编辑Storage VM标记
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+标记可以帮助您对资源进行分类。您可以随时为Storage VM添加、编辑和删除标记。
+
+.步骤
+. 登录到工作负载出厂控制台。
+. 在存储中，选择*转至存储清单*。
+. 在*FSx for Storage VM*选项卡中，选择包含要更新的ONTAP的文件系统的三点菜单，然后选择*Manage*。
+. 从文件系统概述中，选择*Storage VMS*选项卡。
+. 从Storage VM选项卡中、选择要编辑其标记的Storage VM的三个点菜单。
+. 选择*编辑Storage VM标记*。
+. 在编辑Storage VM标记页面上、添加、编辑或删除标记。
++
+一个Storage VM最多可以应用50个标记。
+
+. 单击 * 应用 * 。
+

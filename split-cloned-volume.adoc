@@ -1,0 +1,44 @@
+---
+sidebar: sidebar 
+permalink: split-cloned-volume.html 
+keywords: split clone volume, FlexVol volume 
+summary: 将克隆FlexVol卷从其父卷中拆分、使此克隆成为正常的读写FlexVol卷。 
+---
+= 拆分克隆的卷
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+将克隆FlexVol卷从其父卷中拆分、使此克隆成为正常的读写FlexVol卷。
+
+拆分期间、可以访问克隆和父级上的数据。拆分过程仅更新元数据、并且所需的IO极少。不会复制任何数据块。
+
+.关于此任务
+克隆拆分操作涉及以下内容：
+
+* 在拆分操作期间、无法创建FlexClone卷的新Snapshot副本。
+* 如果FlexClone卷属于数据保护关系、则无法将其从父卷中拆分。
+* 如果在拆分过程中将FlexClone卷脱机、则拆分操作将暂停；将FlexClone卷恢复联机后、拆分操作将恢复。
+* 拆分后、父FlexVol卷和克隆都需要分配由其卷保证确定的完整空间。
+* 从父卷拆分FlexClone卷后、这两个卷将无法重新加入。
+
+
+.开始之前
+拆分克隆的卷之前、请考虑以下事项：
+
+* 要拆分克隆的卷，必须 link:manage-links.html["关联链接"]。如果您没有现有链接，请 link:create-link.html["创建链接"]。要关联文件系统中的链接，请单击*Account name*下的*Associate link*。链接关联后、返回此操作。
+* 您必须是集群管理员。
+* 拆分操作开始时、FlexClone卷必须处于联机状态。
+* 要成功拆分父卷、此父卷必须联机。
+
+
+.步骤
+. 登录到工作负载出厂控制台。
+. 在存储中，选择*转至存储清单*。
+. 选择*卷*选项卡。
+. 在卷选项卡中、选择要拆分的克隆卷所在卷的三点菜单。
+. 选择*数据保护操作*，然后选择*拆分克隆的卷*。
+. 在“拆分卷”对话框中，单击*Delete*。
+

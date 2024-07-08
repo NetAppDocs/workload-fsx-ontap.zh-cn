@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: access-data.html 
+keywords: access data, mount clients, on-premises 
+summary: 您可以通过为NAS客户端挂载卷并为SAN客户端挂载iSCSI LUN、从内部访问FSx for ONTAP文件系统。 
+---
+= 访问您的数据
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以通过为NAS客户端挂载卷并为SAN客户端挂载iSCSI LUN、从内部访问FSx for ONTAP文件系统。
+
+link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/supported-fsx-clients.html["访问数据"^] 在Amazon FSx for NetApp ONTAP中、文档提供了有关如何访问数据供您参考的主题。
+
+
+
+== 连接到NAS客户端
+
+* link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/attach-linux-client.html["在Linux客户端上挂载卷"^]
+* link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/attach-windows-client.html["在Windows客户端上挂载卷"^]
+* link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/attach-mac-client.html["在macOS客户端上挂载卷"^]
+
+
+
+
+== 连接到SAN客户端
+
+* link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/mount-iscsi-luns-linux.html["在Linux客户端上挂载iSCSI LUN"^]
+* link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/mount-iscsi-windows.html["在Windows客户端上挂载iSCSI LUN"^]
+
