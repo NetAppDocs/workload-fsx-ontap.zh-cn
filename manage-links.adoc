@@ -22,7 +22,7 @@ link:links-overview.html["了解有关链接的更多信息"] 或 link:create-li
 您可以查看当前与您的帐户关联的链接。
 
 .步骤
-. 登录到工作负载出厂控制台。
+. 登录到 link:https://console.workloads.netapp.com/["工作负载出厂控制台"^]
 . 在存储中，选择*转至存储清单*。
 . 从“帐户”菜单中，选择*Links*。
 +
@@ -43,7 +43,7 @@ image:screenshot-view-link-details.png["一个屏幕、其中显示了使用特�
 创建链接后、您可以将其与FSx for ONTAP文件系统相关联。每个文件系统只能与一个NetApp帐户中的一个链接相关联、但一个链接可以与多个文件系统相关联。
 
 .步骤
-. 登录到工作负载出厂控制台。
+. 登录到 link:https://console.workloads.netapp.com/["工作负载出厂控制台"^]
 . 在存储中，选择*转至存储清单*。
 . 在*FSx for FS* ONTAP选项卡中，选择要关联链接的文件系统的三个点菜单，然后选择*Manage*。
 . 在文件系统概述中，选择*关联链接*。
@@ -71,7 +71,7 @@ NOTE: 您可以使用AWS控制台编辑Lamba网络配置(例如VPC、子网和�
 请注意、此链接仅会从Workload Factory中删除、而不会从AWS环境中删除。删除Workload Factory中的链接后、您必须从AWS帐户中删除Lamb非得 函数。
 
 .步骤
-. 登录到工作负载出厂控制台。
+. 登录到 link:https://console.workloads.netapp.com/["工作负载出厂控制台"^]
 . 在存储中，选择*转至存储清单*。
 . 从“帐户”菜单中，选择*Links*。
 . 从“链接”页面中，选择菜单按钮并选择*Remove*。

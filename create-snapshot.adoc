@@ -24,7 +24,7 @@ NOTE: 快照不是数据的副本。如果要创建数据副本、请考虑使�
 您必须 link:manage-links.html["关联链接"] 创建快照。如果您没有现有链接，请 link:create-link.html["创建链接"]。要关联文件系统中的链接，请单击*Account name*下的*Associate link*。链接关联后、返回此操作。
 
 .步骤
-. 登录到工作负载出厂控制台。
+. 登录到 link:https://console.workloads.netapp.com/["工作负载出厂控制台"^]
 . 在*存储*中，选择*转至存储清单*。
 . 在*FSx for ONTAP选项卡中，单击带有卷的文件系统的三个点菜单，然后选择*Manage*。
 . 在文件系统概述中，选择*Volumes*选项卡。

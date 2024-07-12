@@ -14,7 +14,7 @@ summary: 根据需要更新FSx for ONTAP备份计划。
 根据需要更新FSx for ONTAP备份计划。
 
 .步骤
-. 登录到工作负载出厂控制台。
+. 登录到 link:https://console.workloads.netapp.com/["工作负载出厂控制台"^]
 . 在存储中，单击*转至存储清单*。
 . 在*FSx for FS* ONTAP选项卡中，单击要更新备份计划的文件系统的三点菜单，然后选择*Manage*。
 . 在信息下，单击*FSx for ONTAP backup*旁边的铅笔图标。当鼠标悬停在*FSx for ONTAP backup*行上时，下拉箭头旁边会出现铅笔图标。

@@ -36,7 +36,7 @@ summary: 使用Workload Factory、您可以创建适用于ONTAP文件系统的FS
 通过快速创建、您可以使用建议的最佳实践配置。创建FSx for ONTAP文件系统后、您可以更改大多数设置。
 
 .步骤
-. 登录到工作负载出厂控制台。
+. 登录到 link:https://console.workloads.netapp.com/["工作负载出厂控制台"^]
 . 在存储中，选择*Create FSx for FS* ONTAP。
 . 在"Create FSx for ONTAP (创建FSx for Windows)"页面上、选择*快速创建*。
 +

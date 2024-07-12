@@ -17,7 +17,7 @@ summary:
 配置和更新Storage VM的Active Directory的步骤相同。
 
 .步骤
-. 登录到工作负载出厂控制台。
+. 登录到 link:https://console.workloads.netapp.com/["工作负载出厂控制台"^]
 . 在存储中，选择*转至存储清单*。
 . 在*FSx for Storage VM*选项卡中，选择包含要更新的ONTAP的文件系统的三点菜单，然后选择*Manage*。
 . 从文件系统概述中，选择*Storage VMS*选项卡。

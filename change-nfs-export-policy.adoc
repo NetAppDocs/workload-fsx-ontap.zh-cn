@@ -28,7 +28,7 @@ summary: 更改使用NFSv3或NFSv4.1协议类型的卷的NFS导出策略。
 
 
 .步骤
-. 登录到工作负载出厂控制台。
+. 登录到 link:https://console.workloads.netapp.com/["工作负载出厂控制台"^]
 . 在存储中，选择*转至存储清单*。
 . 在*FSx for FS* ONTAP选项卡中，选择包含要更新的卷的文件系统的三个点菜单，然后选择*Manage*。
 . 从文件系统概述中，选择*Volumes*选项卡。

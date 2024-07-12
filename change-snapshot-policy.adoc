@@ -20,7 +20,7 @@ summary: 随时更新卷的Snapshot策略。
 要显示现有快照策略、需要提供一个链接。要关联链接，请单击*Account name*下的*Associate link*。然后返回此操作。
 
 .步骤
-. 登录到工作负载出厂控制台。
+. 登录到 link:https://console.workloads.netapp.com/["工作负载出厂控制台"^]
 . 在存储中，选择*转至存储清单*。
 . 选择*卷*选项卡。
 . 在*卷*选项卡中，选择要更改快照策略的卷的三点菜单。

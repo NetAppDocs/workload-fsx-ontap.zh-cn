@@ -18,7 +18,7 @@ summary: 当已用SSD存储容量超过您指定的阈值时、手动增加适�
 .关于此任务
 增加文件系统容量会影响FSx for ONTAP文件系统的IOPS。
 
-对于文件系统、IOPS会自动 link:provision-iops.html["配置IOPS"] 增加3次、而SSD容量每增加1 GiB。例如、如果配置100 TiB (102、400 GiB) SSD容量、IOPS将增加300 TiB (307、200 GiB)。
+对于文件系统、IOPS会自动 link:provision-iops.html["配置IOPS"] 增加3次、而SSD容量每增加1 GiB。
 
 手动时 link:provision-iops.html["配置IOPS"] 、您可能需要增加IOPS分配、以支持增加的文件系统容量。
 

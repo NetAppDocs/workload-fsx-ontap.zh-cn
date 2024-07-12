@@ -22,7 +22,7 @@ Storage VM是一种孤立的文件服务器、可用于访问工作负载出厂�
 验证每个文件系统支持的Storage VM数量。有关每个文件系统的最大SVM数量、请参见 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html#max-svms["管理FSx for ONTAP Storage Virtual Machine"^] AWS文档中的。
 
 .步骤
-. 登录到工作负载出厂控制台。
+. 登录到 link:https://console.workloads.netapp.com/["工作负载出厂控制台"^]
 . 在存储中，选择*转至存储清单*。
 . 在FSx for ONTAP选项卡中，单击要创建Storage VM的文件系统的三点菜单，然后选择*Manage*。
 . 从文件系统概述中，选择*创建Storage VM*。

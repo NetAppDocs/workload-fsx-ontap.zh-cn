@@ -22,7 +22,6 @@
   <block id="135b308ed83c53f1516b7c754566d1c4" category="paragraph-title">开始之前</block>
   <block id="30780a2d5d1315bb3798040fb45df6f0" category="paragraph">确定要授予访问权限的用户或组以及要授予它们的访问类型。</block>
   <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">步骤</block>
-  <block id="80cda6d0b485a6d7ad08bec0e4e1e512" category="list-text">登录到工作负载出厂控制台。</block>
   <block id="7f855d340cfe6607ed51975896dd19da" category="list-text">在存储中，选择*转至存储清单*。</block>
   <block id="80ad238f0c32ccf7b3f91d0b7b0ea76b" category="list-text">在*FSx for FS* ONTAP选项卡中，选择包含要更新的卷的文件系统的三个点菜单，然后选择*Manage*。</block>
   <block id="f76864e1c2588ae3d6373b6ab95e2209" category="list-text">从文件系统概述中，选择*Volumes*选项卡。</block>
@@ -640,7 +639,6 @@
   <block id="e916aa8237833ef72c75def81e289920" category="paragraph">或者、您也可以 <block ref="2bbbc5acd5fd256837600f63916b0e57" category="inline-link-macro-rx"></block> 通过Workload Factory为您管理文件系统容量。</block>
   <block id="bdccdc17ac819f178e84be61503a0de2" category="paragraph">增加文件系统容量会影响FSx for ONTAP文件系统的IOPS。</block>
   <block id="11df76043d9d8bb3a76f1f7e71096a92" category="inline-link-macro">配置IOPS</block>
-  <block id="b677ee098503d5853f180332f5658aa6" category="paragraph">对于文件系统、IOPS会自动 <block ref="a9cec068297d5b243eecd658574a7cef" category="inline-link-macro-rx"></block> 增加3次、而SSD容量每增加1 GiB。例如、如果配置100 TiB (102、400 GiB) SSD容量、IOPS将增加300 TiB (307、200 GiB)。</block>
   <block id="e7317a971e575aecebe43b18f10a7503" category="paragraph">手动时 <block ref="a9cec068297d5b243eecd658574a7cef" category="inline-link-macro-rx"></block> 、您可能需要增加IOPS分配、以支持增加的文件系统容量。</block>
   <block id="ffc888e5ff626bf410d67b62a9e8a9a8" category="paragraph">有关SSD存储容量限制、请参阅 <block ref="5e5311b04805e422cc2fabe002034628" category="inline-link-macro-rx"></block> AWS FSx for NetApp ONTAP文档中的。</block>
   <block id="3fa4dafc00a14f08641efa3389891289" category="inline-link-macro">禁用自动容量管理</block>
@@ -1090,4 +1088,6 @@
   <block id="ef045d17e80274aec5be009d1f13f5a2" category="sidebar">为文件系统配置IOPS</block>
   <block id="63d5049791d9d79d86e9a108b0a999ca" category="sidebar">参考</block>
   <block id="231cf4c70d866b616c21baddaeed0696" category="sidebar">故障排除</block>
+  <block id="1feb39b44e4fcef3d4be063a2f0c0c2c" category="list-text">登录到 <block ref="372504cb6bb48559009ff8f8cdb9a245" category="inline-link-macro-rx"></block></block>
+  <block id="b39f472a8f42e6a145c20b290f2c0f7b" category="paragraph">对于文件系统、IOPS会自动 <block ref="a9cec068297d5b243eecd658574a7cef" category="inline-link-macro-rx"></block> 增加3次、而SSD容量每增加1 GiB。</block>
 </blocks>

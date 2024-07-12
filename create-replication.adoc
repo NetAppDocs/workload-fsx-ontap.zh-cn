@@ -34,7 +34,7 @@ summary: 为FSx for ONTAP文件系统创建复制关系、以避免在发生意�
 .复制单个卷
 --
 .步骤
-. 登录到工作负载出厂控制台。
+. 登录到 link:https://console.workloads.netapp.com/["工作负载出厂控制台"^]
 . 在存储中，选择*转至存储清单*。
 . 在*FSx for ONTAP选项卡中，选择包含要复制的卷的文件系统的三个点菜单，然后选择*Manage*。
 . 从卷选项卡中、选择要复制的卷的三点菜单。
@@ -80,7 +80,7 @@ _Auto_是使用工作负载Factory FSx for ONTAP用户界面创建卷时的默�
 .复制文件系统中的所有卷
 --
 .步骤
-. 登录到工作负载出厂控制台。
+. 登录到 link:https://console.workloads.netapp.com/["工作负载出厂控制台"^]
 . 在存储中，选择*转至存储清单*。
 . 在FSx for ONTAP选项卡中，单击包含卷的文件系统的三个点菜单，然后选择*Manage*。
 . 从文件系统概述中，选择*创建复制*。

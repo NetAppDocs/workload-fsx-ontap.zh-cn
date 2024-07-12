@@ -50,7 +50,7 @@ image:screenshot-ebs-calculator.png["存储计算器页面、其中比较了FSx 
 .Amazon Elastic Block Store (EBS)
 --
 .步骤
-. 登录到工作负载出厂控制台。
+. 登录到 link:https://console.workloads.netapp.com/["工作负载出厂控制台"^]
 . 在"Storage"(存储)中，选择"*浏览节省量*"，然后选择"* Amazon Elelic Block Store (EBS)*。
 . 在存储节省计算器中、提供以下详细信息：
 +
@@ -71,7 +71,7 @@ image:screenshot-ebs-calculator.png["存储计算器页面、其中比较了FSx 
 .Amazon FSx for Windows File Server
 --
 .步骤
-. 登录到工作负载出厂控制台。
+. 登录到 link:https://console.workloads.netapp.com/["工作负载出厂控制台"^]
 . 在存储中，选择*Explore savings *，然后选择*Amazon FSx for Windows File Server*。
 . 在存储节省计算器中、提供以下详细信息：
 +
@@ -93,7 +93,7 @@ image:screenshot-ebs-calculator.png["存储计算器页面、其中比较了FSx 
 .Amazon El生 性文件系统(EFS)
 --
 .步骤
-. 登录到工作负载出厂控制台。
+. 登录到 link:https://console.workloads.netapp.com/["工作负载出厂控制台"^]
 . 在存储中，选择*浏览节省量*，然后选择*Amazon El生 性文件系统(EFS)*。
 . 在存储节省计算器中、提供以下详细信息：
 +

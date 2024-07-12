@@ -65,7 +65,7 @@ link:links-overview.html["了解有关链接的更多信息"](英文)
 
 
 .步骤
-. 登录到工作负载出厂控制台。
+. 登录到 link:https://console.workloads.netapp.com/["工作负载出厂控制台"^]
 . 在存储中，选择*转至存储清单*。
 . 在*FSx for FS* ONTAP选项卡中，选择要关联链接的文件系统的三个点菜单，然后选择*Manage*。
 . 在文件系统概述中，选择*关联链接*。

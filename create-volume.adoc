@@ -37,7 +37,7 @@ FSx for ONTAP卷是一种虚拟资源、用于对数据进行分组、确定数�
 
 
 .步骤
-. 登录到工作负载出厂控制台。
+. 登录到 link:https://console.workloads.netapp.com/["工作负载出厂控制台"^]
 . 在存储中，选择*转至存储清单*。
 . 在*FSx for ONTAP选项卡中，选择要创建卷的文件系统的三个点菜单，然后选择*Manage*。
 . 在*Overview*选项卡中，单击*Create volume*。
