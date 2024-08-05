@@ -133,7 +133,7 @@ NOTE: 快照时间基于文件系统的时区、默认为协调世界时(UTC)。
 
 .. *分层策略*：为卷中存储的数据选择分层策略。
 +
-使用工作负载Factory FSx for ONTAP用户界面创建卷时、默认的分层策略为自动。有关卷分层策略的详细信息、请参阅 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["卷存储容量"^] AWS FSx for NetApp ONTAP文档中的。
+使用用户界面创建卷时、默认的层策略为自动。有关卷分层策略的详细信息、请参阅 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["卷存储容量"^] AWS FSx for NetApp ONTAP文档中的。
 
 
 
@@ -146,3 +146,6 @@ NOTE: 快照时间基于文件系统的时区、默认为协调世界时(UTC)。
 
 . 单击 * 创建 * 。
 
+
+.结果
+已启动卷创建。创建后、新卷将显示在"Volumes"(卷)选项卡中。

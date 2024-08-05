@@ -31,7 +31,7 @@ image:screenshot-links-button.png["显示如何打开\"链接\"页面的屏幕�
 . 如果存在任何链接、则概述页面将提供相关信息。
 . 要查看与链接关联的FSx for ONTAP文件系统，请选择“关联的资源”部分中的*view*按钮。
 +
-image:screenshot-view-link-details.png["一个屏幕、其中显示了使用特定链接的FSx for ONTAP文件系统。"]
+image:screenshot-view-link-details.png["屏幕截图、显示了正在使用特定链接的适用于ONTAP文件系统的FSx。"]
 
 . 如果您需要链接的亚马逊资源名称(ARN)、可以选择ARN字段旁边的_copy_icon。
 

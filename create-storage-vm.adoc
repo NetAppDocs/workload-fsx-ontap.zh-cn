@@ -21,6 +21,15 @@ Storage VM是一种孤立的文件服务器、可用于访问工作负载出厂�
 .开始之前
 验证每个文件系统支持的Storage VM数量。有关每个文件系统的最大SVM数量、请参见 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html#max-svms["管理FSx for ONTAP Storage Virtual Machine"^] AWS文档中的。
 
+
+
+== 创建Storage VM
+
+您可以从工作负载出厂控制台创建Storage VM。您还可以使用CodeBox中提供的以下工具：REST API、CloudFormation和Terraform。link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["了解如何使用CodeBox实现自动化"^](英文)
+
+
+NOTE: 使用来自CodeBox的Terraform时、您复制或下载的代码会隐藏 `fsxadmin` 和 `vsadmin` 密码。运行代码时、您需要重新输入密码。
+
 .步骤
 . 登录到 link:https://console.workloads.netapp.com/["工作负载出厂控制台"^]
 . 在存储中，选择*转至存储清单*。

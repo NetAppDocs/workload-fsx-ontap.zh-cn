@@ -27,7 +27,10 @@ summary: 使用Workload Factory、您可以创建适用于ONTAP文件系统的FS
 
 == 创建FSx for ONTAP文件系统
 
-您可以使用_Quick cre成_或_Advanced cre成_来创建FSx for ONTAP文件系统。
+您可以使用_Quick cre成_或_Advanced cre成_来创建FSx for ONTAP文件系统。您还可以使用CodeBox中提供的以下工具：REST API、CloudFormation和Terraform。link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["了解如何使用CodeBox实现自动化"^](英文)
+
+
+NOTE: 使用来自CodeBox的Terraform时、您复制或下载的代码会隐藏 `fsxadmin` 和 `vsadmin` 密码。运行代码时、您需要重新输入密码。
 
 [role="tabbed-block"]
 ====
@@ -106,7 +109,7 @@ summary: 使用Workload Factory、您可以创建适用于ONTAP文件系统的FS
 使用Advanced create、您可以设置所有配置选项、包括可用性、安全性、备份和维护。
 
 .步骤
-. 转到工作负载出厂控制台。
+. 登录到 link:https://console.workloads.netapp.com/["工作负载出厂控制台"^]
 . 在存储中，选择*Create FSx for FS* ONTAP。
 . 在"Create FSx for ONTAP (创建FSx for Windows)"页面上、选择*高级创建*。
 +

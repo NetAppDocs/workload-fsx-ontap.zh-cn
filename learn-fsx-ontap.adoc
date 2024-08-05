@@ -49,6 +49,18 @@ FSx for ONTAP提供以下功能：
 
 
 
+== 用于使用Workload Factory的工具
+
+您可以将BlueXP Workload Factory与以下工具结合使用：
+
+* *工作负载工厂控制台*：工作负载工厂控制台提供了一个可视化界面，可让您全面了解应用程序和项目
+* *REST API*：工作负载工厂REST API允许您部署和管理适用于ONTAP文件系统和其他AWS资源的FSx
+* *CloudFormation*：AWS CloudFormation代码允许您执行在Workload Factory控制台中定义的操作、以便在AWS帐户中对CloudFormation堆栈中的AWS和第三方资源进行建模、配置和管理。
+* *Terraform BlueXP Workload Factory提供程序*：Terraform可用于构建和管理在Workload Factory控制台中生成的基础架构工作流。
+
+
+
+
 == 成本
 
 您的FSx for ONTAP帐户由AWS而非Workload Factory维护。请参阅 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html#pricing-for-fsx-ontap["Amazon FSx for NetApp ONTAP的定价"^]。
