@@ -13,35 +13,23 @@ summary: '通过AWS FSx for NetApp ONTAP、了解在Amazon Elelic Block Store (E
 [role="lead"]
 了解通过使用Amazon Elecic Block Store (EBS)、Elecic File System (EFS)和FSx for Windows File Server和FSx for NetApp ONTAP为存储工作负载节省的空间。
 
-.关于此任务
-Workload Factory提供了一个存储计算器、用于将ONTAP文件系统FSx上的存储成本与Windows文件服务器存储的El生 元块存储(EBS)、生元文件系统(EFS)和FSx上的存储成本进行比较。根据您的存储要求、您可能会发现适用于ONTAP文件系统的FSx对您来说最经济高效。
+Workload Factory内置了一个存储节省计算器、可用于将您的Amazon存储环境与FSx for ONTAP进行比较。无论是否提供AWS凭据、您都可以探索节省的空间、并为您的存储环境自定义配置设置。如果您提供AWS凭据、则可以选择一个或多个Amazon El生 性块存储实例、并让Workload Factory自动进行比较。无论是手动还是自动、计算器都可以确定哪种存储服务可以为您的存储需求提供最低的成本。
 
-您可以使用存储计算器了解特定存储系统或特定卷的节省量。存储计算器将显示如果您使用FSx for ONTAP文件系统、这些存储系统上的工作负载的存储成本是否会降低。
-
-如果Workload Factory确定可以通过在FSx for ONTAP文件系统上运行这些工作负载来节省资金、则可以直接从Workload Factory从计算器中部署文件系统。在某些情况下、Workload Factory可能会建议您根据当前使用的存储量以及工作负载的性能特征部署多个文件系统。
+如果存储计算器确定最经济高效的存储是FSx for ONTAP、则无论您为Workload Factory授予的权限如何、您都可以创建或保存FSx for ONTAP配置、并使用代码框生成基础架构即代码模板。
 
 
 
-== 提供您的系统要求
+== 计算器选项
 
-如果通过向Workload Factory帐户添加AWS凭据来启用_Automate模式link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["了解有关模式的更多信息"]()，则Workload Factory可以确定AWS帐户中可用的所有存储系统，并在存储清单页面中显示这些系统上的卷特征。搜索的AWS帐户基于您在Workload Factory帐户中定义的凭据。
+您可以使用两个计算器选项来比较您的系统与FSx for ONTAP之间的成本-针对您的Amazon存储环境进行自定义和自动检测。
 
-此图显示了在AWS帐户中发现的FSx for Windows File Server系统上的卷。
+通过自定义了解节省量：您可以提供存储环境的配置设置、包括使用情形、区域、卷或文件系统数量、存储量、快照频率、每个快照的更改量、已配置的IOPS、吞吐量等。
 
-image:screenshot-storage-inventory.png["显示FSx for Windows File Server上卷的当前清单的存储清单页面。"]
-
-如果您尚未添加凭据将工作负载工厂帐户与AWS帐户(称为_BASIC _模式)关联起来、则可以手动输入要部署的存储系统所需的特征、存储计算器将根据成本确定最佳文件系统。您可以使用此方法确定新FSx for ONTAP文件系统的范围、同时也可以使用_Automate模式。
-
-此图显示了存储计算器页面、其中比较了FSx for ONTAP与EBS存储。
-
-image:screenshot-ebs-calculator.png["存储计算器页面、其中比较了FSx for ONTAP存储和Elagic Block Store存储。"]
-
-.开始之前
-要使Workload Factory在您的AWS帐户中检测Amazon Elelic Block Store (EBS)、Elelic File System (EFS)和FSx for Windows File Server存储环境、请确保您使用的是 link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["授予_Automate权限"^] AWS帐户。
+了解检测到的存储环境的节省量：Workload Factory可链接到您的现有AWS存储环境、并将详细信息提取到计算器中以进行自动比较。要使用自动模式、您需要授予"自动"权限。您可以更改使用情形、但所有其他详细信息都会在计算中自动确定。
 
 
 
-== 了解节省量
+== 了解通过自定义实现的节省
 
 按照选项卡下的步骤选择存储。
 
@@ -54,15 +42,15 @@ image:screenshot-ebs-calculator.png["存储计算器页面、其中比较了FSx 
 . 在"Storage"(存储)中，选择"*浏览节省量*"，然后选择"* Amazon Elelic Block Store (EBS)*。
 . 在存储节省计算器中、提供以下详细信息：
 +
-.. *用例*：从下拉菜单中选择用例。选定使用情形决定了FSx for ONTAP文件系统特征、以供比较。
-.. *地区*：从下拉菜单中选择EBS配置的地区。
-.. *选择EBS卷类型*：选择用于您的配置的EBS卷类型。
-.. *卷数*：输入EBS配置中的卷数。
-.. *每个卷的存储容量(TiB)*：输入每个卷的存储容量(以TiB为单位)。
-.. *Snapshot frequency *：为EBS配置选择快照频率。
-.. *每个快照的更改量(GiB)*：仅适用于快照存储。输入每个快照的更改量(以GiB为单位)。
-.. *每个卷的已配置IOPS *：适用于GP3、IO1和IO2卷。输入每个卷的已配置IOPS。
-.. *吞吐量(MiB/秒)*：仅适用于GP3卷。输入每个卷的吞吐量(以MiB/秒为单位)。
+.. *用例*：必填。从下拉菜单中选择一个用例。选定使用情形决定了FSx for ONTAP文件系统特征、以供比较。
+.. *地区*：可选。从下拉菜单中选择用于EBS配置的区域。
+.. *选择EBS卷类型*：可选。选择用于您的配置的EBS卷类型。
+.. *卷数*：可选。输入EBS配置中的卷数。
+.. *每个卷的存储容量(TiB)*：可选。输入每个卷的存储容量(以TiB为单位)。
+.. *快照频率*：可选。为EBS配置选择快照频率。
+.. *每个快照的更改量(GiB)*：可选。仅适用于Snapshot存储。输入每个快照的更改量(以GiB为单位)。
+.. *每个卷的已配置IOP*：可选。适用于GP3、IO1和IO2卷。输入每个卷的已配置IOPS。
+.. *吞吐量(MiB/秒)*：可选。仅适用于GP3卷。输入每个卷的吞吐量(以MiB/秒为单位)。
 
 
 
@@ -75,16 +63,16 @@ image:screenshot-ebs-calculator.png["存储计算器页面、其中比较了FSx 
 . 在存储中，选择*Explore savings *，然后选择*Amazon FSx for Windows File Server*。
 . 在存储节省计算器中、提供以下详细信息：
 +
-.. *用例*：从下拉菜单中选择用例。选定使用情形决定了FSx for ONTAP文件系统特征、以供比较。
-.. *地区*：从下拉菜单中选择FSx for Windows File Server配置的地区。
-.. *部署类型*：选择*单可用性区域*或*多可用性区域*。
+.. *用例*：必填。从下拉菜单中选择一个用例。选定使用情形决定了FSx for ONTAP文件系统特征、以供比较。
+.. *地区*：可选。从下拉菜单中选择FSx for Windows File Server配置的区域。
+.. *部署类型*：可选。选择*单可用性区域*或*多可用性区域*。
 .. *存储类型*：默认情况下会选择SSD存储类型。
-.. *存储容量(TiB)*：输入配置的存储容量。
-.. *重复数据删除节省量(%)*：输入重复数据删除预计节省的容量百分比。
-.. *Snapshot frequency *：为您的配置选择快照频率。
-.. *每个快照的更改量(GiB)*：仅适用于快照存储。输入每个快照的更改量(以GiB为单位)。
-.. *配置的SSD IOPs*：输入配置的SSD IOPS。
-.. *吞吐量(MiB/秒)*：以MiB/秒为单位输入吞吐量
+.. *存储容量(TiB)*：可选。输入配置的存储容量。
+.. *重复数据删除节省量(%)*：可选。输入重复数据删除预计可节省的容量百分比。
+.. *快照频率*：可选。为您的配置选择快照频率。
+.. *每个快照的更改量(GiB)*：可选。仅适用于Snapshot存储。输入每个快照的更改量(以GiB为单位)。
+.. *已配置SSD IOPs*：可选。输入已配置的SSD IOPS。
+.. *吞吐量(MiB/秒)*：可选。以MiB/秒为单位输入吞吐量
 
 
 
@@ -97,13 +85,92 @@ image:screenshot-ebs-calculator.png["存储计算器页面、其中比较了FSx 
 . 在存储中，选择*浏览节省量*，然后选择*Amazon El生 性文件系统(EFS)*。
 . 在存储节省计算器中、提供以下详细信息：
 +
-.. *用例*：从下拉菜单中选择用例。选定使用情形决定了FSx for ONTAP文件系统特征、以供比较。
-.. *地区*：从下拉菜单中选择FSx for Windows File Server配置的地区。
-.. *文件系统类型*：选择*区域*或*一个区域*。
-.. *存储容量(TiB)*：输入EFS配置的存储容量。
-.. *经常访问的数据(%)*：输入经常访问的数据的百分比。
-.. *吞吐量模式*：选择*已配置吞吐量*或* Elelic吞吐量*。
-.. *吞吐量(MiB/秒)*：以MiB/秒为单位输入吞吐量
+.. *用例*：必填。从下拉菜单中选择一个用例。选定使用情形决定了FSx for ONTAP文件系统特征、以供比较。
+.. *地区*：可选。从下拉菜单中选择FSx for Windows File Server配置的区域。
+.. *文件系统类型*：可选。选择*区域*或*一个区域*。
+.. *存储容量(TiB)*：可选。输入EFS配置的存储容量。
+.. *经常访问的数据(%)*：可选。输入经常访问的数据的百分比。
+.. *吞吐量模式*：可选。选择*已配置吞吐量*或* Elel应为 吞吐量*。
+.. *吞吐量(MiB/秒)*：可选。以MiB/秒为单位输入吞吐量
+
+
+
+
+--
+====
+提供存储系统配置的详细信息后、请查看页面上提供的计算结果和建议。
+
+此外，向下滚动到页面底部至*导出PDF*或*查看计算结果*。
+
+要切换到FSx for ONTAP，请按照中的说明进行操作 <<部署FSx for ONTAP文件系统,部署FSx for ONTAP文件系统>>。
+
+
+
+== 了解检测到的存储环境的节省量
+
+.开始之前
+要使Workload Factory在您的AWS帐户中检测Amazon Elelic Block Store (EBS)、Elelic File System (EFS)和FSx for Windows File Server存储环境、请确保您使用的是 link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["授予_Automate权限"^] AWS帐户。
+
+
+NOTE: 此计算器选项不支持计算EBS快照和FSx for Windows File Server卷影副本。在通过自定义探索节省空间时、您可以提供EBS和FSx for Windows File Server快照详细信息。
+
+按照选项卡下的步骤选择存储。
+
+[role="tabbed-block"]
+====
+.Amazon Elastic Block Store (EBS)
+--
+.步骤
+. 登录到 link:https://console.workloads.netapp.com/["工作负载出厂控制台"^]
+. 在存储中，选择*转至存储清单*。
+. 在存储清单中，选择* Elabic Block Store (EBS)选项卡。
+. 选择要与FSx for ONTAP进行比较的实例、然后单击*探索节省量*。
+. 此时将显示存储节省计算器。系统会根据您选择的实例预先填充以下存储系统特征：
++
+.. *用例*：适用于您的配置的用例。如果需要、您可以更改使用情形。
+.. *选定卷*：EBS配置中的卷数
+.. *总存储量(TiB)*：每个卷的存储量(以TiB为单位)
+.. *已配置总IOP*：对于GP3、IO1和IO2卷
+.. *总吞吐量(MiB/秒)*：仅适用于GP3卷
+
+
+
+
+--
+.Amazon FSx for Windows File Server
+--
+.步骤
+. 登录到 link:https://console.workloads.netapp.com/["工作负载出厂控制台"^]
+. 在存储中，选择*转至存储清单*。
+. 在存储清单中，选择*FSx for Windows File Server*选项卡。
+. 选择要与FSx for ONTAP进行比较的实例、然后单击*探索节省量*。
+. 此时将显示存储节省计算器。系统会根据您选择的实例的部署类型预先填充以下存储系统特征：
++
+.. *用例*：适用于您的配置的用例。如果需要、您可以更改使用情形。
+.. *选定的文件系统
+.. *总存储量(TiB)*
+.. *已配置SSD IOPs*
+.. *吞吐量(MiB/秒)*
+
+
+
+
+--
+.Amazon El生 性文件系统(EFS)
+--
+.步骤
+. 登录到 link:https://console.workloads.netapp.com/["工作负载出厂控制台"^]
+. 在存储中，选择*转至存储清单*。
+. 在存储清单中，选择* Elelic File System (EFS)*选项卡。
+. 选择要与FSx for ONTAP进行比较的实例、然后单击*探索节省量*。
+. 此时将显示存储节省计算器。系统会根据您选择的实例预先填充以下存储系统特征：
++
+.. *用例*：适用于您的配置的用例。如果需要、您可以更改使用情形。
+.. *文件系统总数*
+.. *总存储量(TiB)*
+.. *总配置吞吐量(MiB/秒)*
+.. *总弹性吞吐量-读取(GiB)*
+.. *总弹性吞吐量–写入(GiB)*
 
 
 
