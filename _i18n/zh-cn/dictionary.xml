@@ -1124,10 +1124,6 @@
   <block id="7b2421f95d1133c7da8946bd2bb58d94" category="list-text">*总弹性吞吐量–写入(GiB)*</block>
   <block id="691e71734464aaf43017f5b033e54559" category="section-title">2024 年 8 月 4 日</block>
   <block id="1d949c7c5600289e10795f178278edd1" category="section-title">2024年7月7日</block>
-  <block id="ed54fefae379fac8157c0d466e30a150" category="section-title">适用于数据库的Workload Factory初始版本</block>
-  <block id="7737adcb101b7285a3a8567ae4d22021" category="paragraph">初始版本包括以下功能：使用Amazon FSx for NetApp ONTAP作为数据库工作负载的存储环境、检测、管理和部署Microsoft SQL Server、部署和克隆数据库以及在Workload Factory中监控这些作业、从而了解节省的空间。</block>
-  <block id="76d820a16128270adf6a061b253cca06" category="inline-link-macro">了解数据库</block>
-  <block id="c8b559206fbe2064f93b1a567d84e637" category="paragraph"><block ref="eda6f6881c0c5cc5180d85b417e4f376" category="inline-link-macro-rx"></block>(英文)</block>
-  <block id="b067c9e642b13c36b2c53da10c676c3e" category="paragraph">&lt;stdin&gt;中未解析的指令-包括：_whatsnew/2024-08-04.adoc[]</block>
-  <block id="63407573d31f484ae46757dbe98044c7" category="paragraph">&lt;stdin&gt;中未解析的指令-包括：_whatsnew/2024-07-07.adoc[]</block>
+  <block id="b18d7ec0ad964d10af97254ea8b0612d" category="doc">Workload Factory for Amazon FSx for NetApp ONTAP的初始版本</block>
+  <block id="bbccc2f370efe6824018b613b1dd5839" category="paragraph">Amazon FSx for NetApp ONTAP现已在Workload Factory中全面上市。</block>
 </blocks>
