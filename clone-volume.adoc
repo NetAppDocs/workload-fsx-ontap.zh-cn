@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: clone-volume.html 
-keywords: clone volume 
+keywords: clone volume, clone, clone data 
 summary: 克隆卷以使其成为原始卷的读写卷、以便进行测试。 
 ---
 = 克隆卷
