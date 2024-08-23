@@ -42,4 +42,4 @@ summary: 了解Amazon FSx for NetApp ONTAP的新增功能。
 
 === Workload Factory for Amazon FSx for NetApp ONTAP的初始版本
 
-Amazon FSx for NetApp ONTAP在Workload Factory中已全面上市。
+Amazon FSx for NetApp ONTAP现已在Workload Factory中全面上市。
