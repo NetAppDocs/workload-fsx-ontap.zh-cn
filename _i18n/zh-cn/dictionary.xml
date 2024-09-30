@@ -130,7 +130,6 @@
   <block id="e9198457278be1c95b85e05535cb9f65" category="list-text">*组织单位(OU)*:输入组织单位。</block>
   <block id="7a2e6aa7ec8c0baa05c10c56e0f96e77" category="paragraph">OU是要加入文件系统的组织单位的可分辨路径名称。</block>
   <block id="ef13ae21eedaa1ecccd02fb7ddd30bb1" category="list-text">*Delegated administrators group*：(可选)输入委派的文件系统管理员组。</block>
-  <block id="e78e0461224b8a8fb358504cea15161d" category="paragraph">已删除的管理员组是Active Directory中可管理文件系统的组的名称。</block>
   <block id="85912990c5413ea32362225e50fc2629" category="paragraph">如果您使用的是AWS Managed Microsoft AD、则必须指定一个组、例如AWS Delegated FSx Administrators、AWS Delegated Administrators或具有对OU的委派权限的自定义组。</block>
   <block id="3fd21f2222285241b7bbfebc4759ab56" category="paragraph">如果您要加入自行管理的广告、请使用广告中的组名称。默认组为<block ref="746c2ea920930b61350130daa63e23e5" prefix=" " category="inline-code"></block>。</block>
   <block id="feee2b77515a5dc7c8021b28aff315e8" category="summary">在定期计划的备份之外为卷创建手动备份。</block>
@@ -224,8 +223,6 @@
   <block id="89a62ddcc9759060d903ef8b7aee42c3" category="list-text">*链接名称*：输入要用于此链接的名称。此名称在您的帐户中必须是唯一的。</block>
   <block id="68d5729d2a63e62a04de68bac212b9ab" category="list-text">*标记*：您可以选择添加要与此链接关联的任何标记、以便更轻松地对资源进行分类。例如、您可以添加一个标记、用于将此链接标识为由FSx for ONTAP文件系统使用。</block>
   <block id="c54e90f3916f294bec1f9be7d938fba1" category="paragraph">系统会根据FSx for ONTAP文件系统自动检索AWS帐户以及帐户、位置和安全组的其他信息。</block>
-  <block id="96e4942093191178179c76019581eee0" category="list-text">选择*重定向到CloudFormation*。</block>
-  <block id="d1b173de03b05ec6a5b1a04a0c72d5d0" category="paragraph">此时将显示一个对话框、说明如何从AWS CloudFormation服务创建链接。</block>
   <block id="c602cdf8533ce956e9f326890f6d8723" category="list-text">选择*继续*以打开AWS管理控制台、然后登录到此FSx for ONTAP文件系统的AWS帐户。</block>
   <block id="ab44f988398acb833af7b9b2bc6c26b9" category="list-text">在Quick create堆栈页面的"Capabilities"下、选择*我确认AWS CloudFormation可能会创建IAM资源*。</block>
   <block id="687e9c397e4fb6b561e735147b5af100" category="paragraph">请注意、在启动CloudFormation模板时、系统会向Lambdation授予三个权限。Workload Factory在使用链接时会使用这些权限。</block>
@@ -1121,8 +1118,6 @@
   <block id="691e71734464aaf43017f5b033e54559" category="section-title">2024 年 8 月 4 日</block>
   <block id="1d949c7c5600289e10795f178278edd1" category="section-title">2024年7月7日</block>
   <block id="b18d7ec0ad964d10af97254ea8b0612d" category="doc">Workload Factory for Amazon FSx for NetApp ONTAP的初始版本</block>
-  <block id="03b2cfc949418819e16b1dc5fa3660ae" category="list-text"><block ref="03b2cfc949418819e16b1dc5fa3660ae" category="inline-link-macro-rx"></block></block>
-  <block id="3b915cd68add8a6cdac4cd1adeb5f100" category="list-text"><block ref="3b915cd68add8a6cdac4cd1adeb5f100" category="inline-link-macro-rx"></block></block>
   <block id="bbccc2f370efe6824018b613b1dd5839" category="paragraph">Amazon FSx for NetApp ONTAP现已在Workload Factory中全面上市。</block>
   <block id="0fd886acd6700c343d655429665d7e6a" category="paragraph">现在、您可以使用CodeBox中的Terraform部署文件系统和Storage VM。</block>
   <block id="f0881d896f399a09e86122a09c00b74d" category="doc">为存储管理提供读取模式支持</block>
@@ -1138,4 +1133,28 @@
   <block id="26983a904e0717c520032a2178795368" category="list-text">单击 * 继续 * 。</block>
   <block id="b1bb1fd299d4d0d5a0bcf89deacb85de" category="list-text">键入"delete"以删除此卷。</block>
   <block id="b5cef683aab00353096b98823a237e69" category="section-title">2024年9月1日</block>
+  <block id="a384088a79fca35da6b697720f2ddd66" category="list-text"><block ref="a384088a79fca35da6b697720f2ddd66" category="inline-link-macro-rx"></block></block>
+  <block id="a9803c91b8fa40d3fdc106b005fdb16c" category="list-text"><block ref="a9803c91b8fa40d3fdc106b005fdb16c" category="inline-link-macro-rx"></block></block>
+  <block id="cd1df627bd8e5b96916530ffbf4664f6" category="doc">更新链接创建</block>
+  <block id="15f127e6d8c5111ce85f47eff68232a7" category="list-text">CodeBox查看器：CodeBox现在集成在链接创建过程中。您可以在重定向到AWS以执行此操作之前从Workload Factory中的CodeBox查看和复制CloudFormation模板。</block>
+  <block id="8efc4e00ac03374d3e1dc5d19c40016b" category="list-text">所需权限：现在、您可以在工作负载工厂的创建链接向导中查看和复制在AWS CloudFormation中创建链接所需的权限。</block>
+  <block id="3721bd571f4111dad2c363436de34c51" category="list-text">支持手动创建链接：此功能允许通过手动注册链接ARN在AWS CloudFormation中独立创建。当安全或开发运营团队协助创建链接时、这将非常有用。</block>
+  <block id="27f80dd01569e18971f783f257cc7294" category="paragraph"><block ref="27f80dd01569e18971f783f257cc7294" category="inline-link-macro-rx"></block></block>
+  <block id="652227e30bf6d77e12a5c024de7bc6d6" category="list-text">在*FSx for Storage VM*选项卡中，单击包含要更新的ONTAP的文件系统的三点菜单，然后选择*Manage*。</block>
+  <block id="37bb8b5cad0754acdd2d9ed1e9d36928" category="paragraph">委派管理员组是Active Directory中可管理文件系统的组的名称。</block>
+  <block id="1ffab80b063e5f05f25ab6681156237d" category="paragraph">如果您要连接到自行管理的AD、请使用AD中的组名称。默认组为<block ref="746c2ea920930b61350130daa63e23e5" prefix=" " category="inline-code"></block>。</block>
+  <block id="e359c45e41079948637e3625aa645ee6" category="paragraph">您有两种创建链接的选项-自动或手动。</block>
+  <block id="5f430c8ea369f8788a9d32bc5ddef4f4" category="list-text">自动：通过Workload Factory创建自动注册链接。自动创建的链接需要令牌才能实现工作负载工厂自动化、CloudFormation代码生命周期较短。只能使用长达6小时。</block>
+  <block id="f35d0bfc59b397e2ee196c7e6b0d33d7" category="list-text">手动：创建包含手动注册的链接。CloudFormation代码持续存在、让您有更多时间完成操作。这在与不同团队(如安全和开发运营团队)合作时非常有用、因为他们可能首先需要授予完成链接创建所需的权限。</block>
+  <block id="758ce486f132a2978be7ecfbcd518afa" category="list-text">您应考虑使用哪种链接创建选项。</block>
+  <block id="6903e2b3a86228f4d258e423fb6b913a" category="open-title">自动创建</block>
+  <block id="e07190df7367fb116bdd913bfce43fbe" category="paragraph">使用CloudFormation在Workload Factory中自动创建和注册链接。</block>
+  <block id="6a97c44fefe95ac9ca6fe05e50d1729f" category="paragraph">此时将显示重定向到CloudFormation对话框、并说明如何从AWS CloudFormation服务创建链接。</block>
+  <block id="a85b3f8e5456d47e8056e0372aeccb2a" category="open-title">手动创建</block>
+  <block id="6f19769f7ee87f4c55c249bc3849c48a" category="paragraph">使用此选项、您可以从AWS CloudFormation提取链接的ARN并在此处报告。Workload Factory会手动为您注册此链接。</block>
+  <block id="9f7d5c71d756492e276c5460cc778424" category="list-text">*链接注册*：单击下拉箭头以展开有关如何从AWS CloudFormation服务注册链接的说明。按照说明进行操作。</block>
+  <block id="c3b24be1571207cf6200f2d8b54ee7c0" category="paragraph">成功创建堆栈后、将Lamb编制ARN粘贴到文本框中。</block>
+  <block id="80cda6d0b485a6d7ad08bec0e4e1e512" category="list-text">登录到工作负载出厂控制台。</block>
+  <block id="c7f0e7c4e7e9f76582f27e34058deaa6" category="paragraph">将克隆的FlexVol volume从其父卷中拆分、使克隆成为正常的读写FlexVol volume。</block>
+  <block id="26e6f4cc71039ce95ddbb0acdad6891d" category="section-title">2024年9月29日</block>
 </blocks>

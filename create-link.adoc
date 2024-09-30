@@ -22,7 +22,14 @@ link:links-overview.html["了解有关链接的更多信息"](英文)
 
 要创建链接、您需要在AWS帐户中启动AWS CloudFormation堆栈。
 
+您有两种创建链接的选项-自动或手动。
+
+* 自动：通过Workload Factory创建自动注册链接。自动创建的链接需要令牌才能实现工作负载工厂自动化、CloudFormation代码生命周期较短。只能使用长达6小时。
+* 手动：创建包含手动注册的链接。CloudFormation代码持续存在、让您有更多时间完成操作。这在与不同团队(如安全和开发运营团队)合作时非常有用、因为他们可能首先需要授予完成链接创建所需的权限。
+
+
 .开始之前
+* 您应考虑使用哪种链接创建选项。
 * 您必须具有凭据才能登录到AWS帐户。
 * 使用CloudFormation堆栈添加链接时、您的AWS帐户必须具有以下权限：
 +
@@ -64,6 +71,12 @@ link:links-overview.html["了解有关链接的更多信息"](英文)
 ====
 
 
+[role="tabbed-block"]
+====
+.自动创建
+--
+使用CloudFormation在Workload Factory中自动创建和注册链接。
+
 .步骤
 . 登录到 link:https://console.workloads.netapp.com/["工作负载出厂控制台"^]
 . 在存储中，选择*转至存储清单*。
@@ -79,9 +92,9 @@ link:links-overview.html["了解有关链接的更多信息"](英文)
 
 
 
-. 选择*重定向到CloudFormation*。
+. 单击 * 创建 * 。
 +
-此时将显示一个对话框、说明如何从AWS CloudFormation服务创建链接。
+此时将显示重定向到CloudFormation对话框、并说明如何从AWS CloudFormation服务创建链接。
 
 . 选择*继续*以打开AWS管理控制台、然后登录到此FSx for ONTAP文件系统的AWS帐户。
 . 在Quick create堆栈页面的"Capabilities"下、选择*我确认AWS CloudFormation可能会创建IAM资源*。
@@ -102,5 +115,46 @@ link:links-overview.html["了解有关链接的更多信息"](英文)
 . 返回到工作负载出厂界面、您将看到此链接与FSx for ONTAP文件系统关联。
 
 
+--
+.手动创建
+--
+使用此选项、您可以从AWS CloudFormation提取链接的ARN并在此处报告。Workload Factory会手动为您注册此链接。
+
+.步骤
+. 登录到 link:https://console.workloads.netapp.com/["工作负载出厂控制台"^]
+. 在存储中，选择*转至存储清单*。
+. 在*FSx for FS* ONTAP选项卡中，选择要关联链接的文件系统的三个点菜单，然后选择*Manage*。
+. 在文件系统概述中，选择*关联链接*。
+. 在关联链接对话框中，选择*创建新链接*，然后选择*继续*。
+. 在"Create Link"页面上、提供以下内容：
++
+.. *链接名称*：输入要用于此链接的名称。此名称在您的帐户中必须是唯一的。
+.. *标记*：您可以选择添加要与此链接关联的任何标记、以便更轻松地对资源进行分类。例如、您可以添加一个标记、用于将此链接标识为由FSx for ONTAP文件系统使用。
+.. *链接注册*：单击下拉箭头以展开有关如何从AWS CloudFormation服务注册链接的说明。按照说明进行操作。
++
+请注意、在启动CloudFormation模板时、系统会向Lambdation授予三个权限。Workload Factory在使用链接时会使用这些权限。
+
++
+[source, json]
+----
+"lambda:InvokeFunction",
+"lambda:GetFunction",
+"lambda:UpdateFunctionCode"
+----
++
+成功创建堆栈后、将Lamb编制ARN粘贴到文本框中。
+
+.. 系统会根据FSx for ONTAP文件系统自动检索AWS帐户以及帐户、位置和安全组的其他信息。
+
+
+. 单击 * 创建 * 。
++
+您可以从事件页面监控链路创建状态。此过程不应超过5分钟。
+
+. 返回到工作负载出厂界面、您将看到此链接与FSx for ONTAP文件系统关联。
+
+
+--
+====
 .结果
 您创建的链接与FSx for ONTAP文件系统关联。
