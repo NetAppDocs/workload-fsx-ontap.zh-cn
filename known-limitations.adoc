@@ -63,7 +63,7 @@ summary: 已知限制确定了本产品版本不支持的平台、设备或功�
 == iSCSI协议支持
 
 * 只有纵向扩展部署才支持iSCSI协议。^1^
-* iSCSI协议仅适用于FlexGroup卷。^1^
+* iSCSI协议仅适用于FlexVol卷。^1^
 * 每个卷只能配置一个LUN。
 
 
