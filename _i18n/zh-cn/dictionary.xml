@@ -438,8 +438,6 @@
   <block id="c4037415f2f0cfbaf2d8633bef548eca" category="paragraph">删除卷之前、请考虑以下事项：</block>
   <block id="7ba3b681b508a24c70a973831af6f1ad" category="list-text">本地快照：与此FSx for ONTAP文件系统关联的所有快照都将被永久删除。</block>
   <block id="4d07a6e16a1c8ad6e621cc84eb969e7e" category="list-text">FSx for ONTAP备份：FSx for ONTAP备份副本将保留、您仍可使用它们。</block>
-  <block id="257f4990e0b233436c87d843d19bde86" category="inline-link-macro">删除任何现有复制关系</block>
-  <block id="dc3d3cc2dd8fe8ca34129b7367abba17" category="list-text">复制关系：建议您先使用 <block ref="507a7d95f37121fd7920ef201528352a" category="inline-link-macro-rx"></block> 此卷、然后再删除此卷、以确保不会保留任何已断开的关系。</block>
   <block id="524193967bbe3f8da7683435e0a28ea4" category="list-text">在*FSx for FS* ONTAP选项卡中，选择包含要删除的卷的文件系统的三个点菜单，然后选择*Manage*。</block>
   <block id="b0498e030069e9d348b276238c375c45" category="list-text">从卷选项卡中、选择要删除的卷的三点菜单。</block>
   <block id="c54ab0793e326deff351b944ad70d29c" category="list-text">选择*基本操作*，然后选择*删除卷*。</block>
@@ -1157,4 +1155,6 @@
   <block id="c7f0e7c4e7e9f76582f27e34058deaa6" category="paragraph">将克隆的FlexVol volume从其父卷中拆分、使克隆成为正常的读写FlexVol volume。</block>
   <block id="26e6f4cc71039ce95ddbb0acdad6891d" category="section-title">2024年9月29日</block>
   <block id="50fa5062b83d0f575448ba449245fa17" category="list-text">iSCSI协议仅适用于FlexVol卷。^1^</block>
+  <block id="e6816f159adf84ca7c085ce0702311af" category="inline-link-macro">删除所有现有复制关系</block>
+  <block id="da13b22f351bd4b981038bd55ca5d3ab" category="list-text">复制关系：删除此卷之前、必须先复制<block ref="fa9c4758a74309c74eff4644a0675063" category="inline-link-macro-rx"></block>此卷、以确保不会保留任何已断开的关系。</block>
 </blocks>
