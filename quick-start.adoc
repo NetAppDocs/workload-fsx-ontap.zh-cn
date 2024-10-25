@@ -23,13 +23,13 @@ summary: 只需几个步骤，即可开始使用适用于 ONTAP 的 FSX 。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["两个"] 添加凭据和权限
 [role="quick-margin-para"]
-在_BASIC和_Automate之间进行选择 link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["操作模式"^]
+在_BASIC、_Read_和_Automate之间进行选择 link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["操作模式"^]
 
 [role="quick-margin-para"]
 如果您选择在_BASIC模式下运行、则无需再继续操作。您可以开始使用Workload Factory for FSx for ONTAP复制部分完成的代码示例。
 
 [role="quick-margin-para"]
-如果您在_Automate模式下运行、则需要执行以下操作：选择数据库和AI等工作负载功能、以及创建IAM策略、以确保您拥有在_Automate模式下运行所需 link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["手动向帐户添加凭据"^] 的正确权限。
+如果您在_Read_或_Automate _模式下运行、则需要执行以下操作：选择数据库和AI等工作负载功能、创建IAM策略以确保您拥有在_Read_或_Automate _模式下运行所需 link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["手动向帐户添加凭据"^] 的正确权限。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三个"] 创建文件系统
 [role="quick-margin-para"]

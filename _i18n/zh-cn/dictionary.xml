@@ -808,7 +808,6 @@
   <block id="aada29daee1d64ed0fe907043855cb7e" category="inline-image-macro">两个</block>
   <block id="27c19be9febabd1e2fb82d7a39784f2d" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block> 添加凭据和权限</block>
   <block id="ba8b072b83c1e6db56e40bf48ddb0871" category="inline-link-macro">操作模式</block>
-  <block id="f7598943d19e0d869abf49ffa1bf32a4" category="paragraph">在_BASIC和_Automate之间进行选择 <block ref="a1a436caedec06006ef5b76c82a83b04" category="inline-link-macro-rx"></block></block>
   <block id="fad2f7a49be756f98f3e7a34ef811e09" category="paragraph">如果您选择在_BASIC模式下运行、则无需再继续操作。您可以开始使用Workload Factory for FSx for ONTAP复制部分完成的代码示例。</block>
   <block id="ce8e7e98b5597e78e8fd7d6bc94729cb" category="inline-link-macro">手动向帐户添加凭据</block>
   <block id="ca8a2087e5557e317599344687a57391" category="inline-image-macro">三个</block>
@@ -1052,7 +1051,6 @@
   <block id="d527a24e3cd3e2df59c9ec57fb8383de" category="inline-image-macro">屏幕截图、显示了正在使用特定链接的适用于ONTAP文件系统的FSx。</block>
   <block id="8153258b50418b6ebcd06d64da06a5bc" category="paragraph"><block ref="8153258b50418b6ebcd06d64da06a5bc" category="inline-image-macro-rx" type="image"></block></block>
   <block id="8d0a9b10b0feb1fbeb54874e4db30c45" category="paragraph"><block ref="8d0a9b10b0feb1fbeb54874e4db30c45" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="6b6bb5bfce611b62621235836da5c8a9" category="paragraph">如果您在_Automate模式下运行、则需要执行以下操作：选择数据库和AI等工作负载功能、以及创建IAM策略、以确保您拥有在_Automate模式下运行所需 <block ref="bb44378f07a38aa36833bde05fae1b5d" category="inline-link-macro-rx"></block> 的正确权限。</block>
   <block id="e5a41f95a3cb9b200664e28fdab1a637" category="inline-image-macro">文件系统的"概述"选项卡中的三个点菜单的屏幕截图。</block>
   <block id="b32bfe90ed6acc2544026bb974e2ffc9" category="paragraph"><block ref="b32bfe90ed6acc2544026bb974e2ffc9" category="inline-image-macro-rx" type="image"></block></block>
   <block id="efa42d5c66cb9948f402ee559611e12d" category="section-title">Terraform支持</block>
@@ -1157,4 +1155,6 @@
   <block id="50fa5062b83d0f575448ba449245fa17" category="list-text">iSCSI协议仅适用于FlexVol卷。^1^</block>
   <block id="e6816f159adf84ca7c085ce0702311af" category="inline-link-macro">删除所有现有复制关系</block>
   <block id="da13b22f351bd4b981038bd55ca5d3ab" category="list-text">复制关系：删除此卷之前、必须先复制<block ref="fa9c4758a74309c74eff4644a0675063" category="inline-link-macro-rx"></block>此卷、以确保不会保留任何已断开的关系。</block>
+  <block id="f14fbd72eb1c8ba39f23e290779d3ac7" category="paragraph">在_BASIC、_Read_和_Automate之间进行选择 <block ref="a1a436caedec06006ef5b76c82a83b04" category="inline-link-macro-rx"></block></block>
+  <block id="9b0784be448bb1dc8f08485434f9a91a" category="paragraph">如果您在_Read_或_Automate _模式下运行、则需要执行以下操作：选择数据库和AI等工作负载功能、创建IAM策略以确保您拥有在_Read_或_Automate _模式下运行所需 <block ref="bb44378f07a38aa36833bde05fae1b5d" category="inline-link-macro-rx"></block> 的正确权限。</block>
 </blocks>
