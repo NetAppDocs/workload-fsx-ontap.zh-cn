@@ -68,7 +68,6 @@
   <block id="6c25e6a6da95b3d583c6ec4c3f82ed4d" category="list-text">每周</block>
   <block id="d8977131f7da0505ccdd8e33f901bb75" category="summary">随时更新卷的Snapshot策略。</block>
   <block id="340f8dee912ac16b4fb008726d3ee88f" category="doc">更改卷的Snapshot策略</block>
-  <block id="98a71d4244a8d2bc70cdcddc5cb64af6" category="paragraph">此操作会更新为卷创建快照的频率或禁用自动快照。</block>
   <block id="53e6e67988f9acb9f1aab8ccad2c0340" category="paragraph">要显示现有快照策略、需要提供一个链接。要关联链接，请单击*Account name*下的*Associate link*。然后返回此操作。</block>
   <block id="6e1473c0de5b054e5e9236bbe796cc32" category="list-text">选择*卷*选项卡。</block>
   <block id="b7896e81066533818c46cd2b875eb7bf" category="list-text">在*卷*选项卡中，选择要更改快照策略的卷的三点菜单。</block>
@@ -844,7 +843,6 @@
   <block id="edacd360980e63a5f2e01df2fa59b050" category="list-text">在"Reset fsxadmin password"对话框中、输入新的fsxadmin密码并重新输入以进行确认。</block>
   <block id="279e520d9175d8e5591ed2ca3fc5acab" category="summary">根据需要重置Storage VM密码。</block>
   <block id="217c9f6fe263e655130a845fd58ccebe" category="doc">重置Storage VM的密码</block>
-  <block id="eda74f1b1bef1d5fd22f162e31e3f4c5" category="list-text">选择*Storage VM*选项卡。</block>
   <block id="a22a424f6f09fb9aab17350b24d152ce" category="list-text">在Storage VM选项卡中、选择要重置密码的Storage VM的三点菜单。</block>
   <block id="3930015dcc2810869591e35a2b5d714b" category="list-text">选择 * 重置密码 * 。</block>
   <block id="0828ddc896996b7d41cc9ceb1e453764" category="list-text">在重置密码对话框中、提供以下内容：</block>
@@ -1091,7 +1089,6 @@
   <block id="c0c6f43c72d4131a3142969ee1f93961" category="paragraph">要切换到FSx for ONTAP，请按照中的说明进行操作 <block ref="d4d3e2c1446af85f31cda9e1ddaf30d7" category="inline-xref-macro-rx"></block>。</block>
   <block id="b531032648e600a642b682616d2a0bdd" category="section-title">了解检测到的存储环境的节省量</block>
   <block id="cb10bf47866edd2ac9fb6586867bd1f6" category="admonition">此计算器选项不支持计算EBS快照和FSx for Windows File Server卷影副本。在通过自定义探索节省空间时、您可以提供EBS和FSx for Windows File Server快照详细信息。</block>
-  <block id="9f9100c91adcf9dad4883f822e09cda9" category="list-text">在存储清单中，选择* Elabic Block Store (EBS)选项卡。</block>
   <block id="4e6bb917970bfdc851c5092e11272217" category="list-text">选择要与FSx for ONTAP进行比较的实例、然后单击*探索节省量*。</block>
   <block id="f59ef66ff04b00cacb36ef4c77c51958" category="list-text">此时将显示存储节省计算器。系统会根据您选择的实例预先填充以下存储系统特征：</block>
   <block id="bca9e850c916e20118ab9da7a15e1ab7" category="list-text">*用例*：适用于您的配置的用例。如果需要、您可以更改使用情形。</block>
@@ -1099,13 +1096,11 @@
   <block id="6c52ebf14450d045b355a868931e1164" category="list-text">*总存储量(TiB)*：每个卷的存储量(以TiB为单位)</block>
   <block id="304b6d4108ca48d891db9c471488358b" category="list-text">*已配置总IOP*：对于GP3、IO1和IO2卷</block>
   <block id="8f5e9660dd3425492cf59bc6e12606d8" category="list-text">*总吞吐量(MiB/秒)*：仅适用于GP3卷</block>
-  <block id="2da38d4eab31e419f29bebc00eb3d264" category="list-text">在存储清单中，选择*FSx for Windows File Server*选项卡。</block>
   <block id="15fc70bd68494b595c2e5441312916e5" category="list-text">此时将显示存储节省计算器。系统会根据您选择的实例的部署类型预先填充以下存储系统特征：</block>
   <block id="a32ffe6360aa9a89cb9696c19f828d91" category="list-text">*选定的文件系统</block>
   <block id="148f511d9c35e6ff4cb92ebc25a1c9cf" category="list-text">*总存储量(TiB)*</block>
   <block id="9dbb3393e470b57796b7ec491b66bdea" category="list-text">*已配置SSD IOPs*</block>
   <block id="22706a4c75c6b61679dc073e45ec6e08" category="list-text">*吞吐量(MiB/秒)*</block>
-  <block id="ff878267bfd97975ad2ec503878325c1" category="list-text">在存储清单中，选择* Elelic File System (EFS)*选项卡。</block>
   <block id="a765aa8369baa37d4241f37483d8954c" category="list-text">*文件系统总数*</block>
   <block id="9285022230e927d788a11d636f2a52c4" category="list-text">*总配置吞吐量(MiB/秒)*</block>
   <block id="6aae74300e54ee6bdcfadde9a88345f6" category="list-text">*总弹性吞吐量-读取(GiB)*</block>
@@ -1157,4 +1152,21 @@
   <block id="da13b22f351bd4b981038bd55ca5d3ab" category="list-text">复制关系：删除此卷之前、必须先复制<block ref="fa9c4758a74309c74eff4644a0675063" category="inline-link-macro-rx"></block>此卷、以确保不会保留任何已断开的关系。</block>
   <block id="f14fbd72eb1c8ba39f23e290779d3ac7" category="paragraph">在_BASIC、_Read_和_Automate之间进行选择 <block ref="a1a436caedec06006ef5b76c82a83b04" category="inline-link-macro-rx"></block></block>
   <block id="9b0784be448bb1dc8f08485434f9a91a" category="paragraph">如果您在_Read_或_Automate _模式下运行、则需要执行以下操作：选择数据库和AI等工作负载功能、创建IAM策略以确保您拥有在_Read_或_Automate _模式下运行所需 <block ref="bb44378f07a38aa36833bde05fae1b5d" category="inline-link-macro-rx"></block> 的正确权限。</block>
+  <block id="31139fb3d548620b7d82f880e4660606" category="doc">存储清单中的选项卡视图</block>
+  <block id="d4aa654cea4681dd5ca03650594006c6" category="paragraph">存储清单已更新为双选项卡视图：</block>
+  <block id="71083868a2ec5abfee9a2647a74612c0" category="list-text">FSx for ONTAP选项卡：显示您当前拥有的适用于ONTAP文件系统的FSx。</block>
+  <block id="1113c9108b3e58789456954d1c2ea9c2" category="list-text">Explore savings选项卡：显示Elabic Block Store、FSx for Windows File Server和Elabic File Systems存储系统。然后、您可以通过将这些系统与FSx for ONTAP进行比较来了解节省的空间。</block>
+  <block id="62cf721f97d39a9aaf1ac7786071551c" category="paragraph">随时更新为卷创建快照的频率或禁用自动快照。</block>
+  <block id="110f1585246a580402f0c6b34d42e65a" category="list-text">在*FSx for FS*选项卡中，选择包含要更新快照策略的卷的ONTAP for ONTAP文件系统的三个点菜单，然后选择*Manage*。</block>
+  <block id="fa8dc6e67f45bcde58853510e56ce6a1" category="list-text">从文件系统的概述选项卡中，选择*卷*选项卡。</block>
+  <block id="74e854d4ac135e193bafa7dfdf343efe" category="list-text">从存储中选择*转至存储清单*。</block>
+  <block id="9df0f8cc7fbb70153a71c3d1657c3d81" category="list-text">在*FSx for FS*选项卡中，选择包含要克隆的卷的ONTAP for ONTAP文件系统的三个点菜单，然后选择*Manage*。</block>
+  <block id="80ad1fda17ca981880509b63f91591c9" category="list-text">在存储清单中、选择*浏览节省量*选项卡。</block>
+  <block id="a1e5470290e2e47a8295d8ae0b1e78af" category="list-text">在* Elabic Block Store (EBS)选项卡中，选择要与FSx for ONTAP进行比较的实例，然后单击*Explore savings *。</block>
+  <block id="69664318bb60fdf05cfe25fa2b5a7242" category="list-text">选择*FSx for Windows File Server*选项卡。</block>
+  <block id="5e172a101429002f6723f0f156cbd608" category="list-text">选择* Elabic File System (EFS)*选项卡。</block>
+  <block id="78745d22af85f4409daf48ce5059c4c0" category="list-text">在*FSx for SVM*选项卡中，选择包含要更新的ONTAP的FSx for ONTAP文件系统的三点菜单，然后选择*Manage*。</block>
+  <block id="8c9880429b2df2018a366dbb14193026" category="list-text">从文件系统的概述选项卡中、选择*存储VMS*选项卡。</block>
+  <block id="ca677da26b1ef83b53f1decf3bf448d0" category="list-text">在*FSx for FS*选项卡中，选择包含要拆分的克隆卷的ONTAP for ONTAP文件系统的三个点菜单，然后选择*Manage*。</block>
+  <block id="d9f5899ddcae7952c9df69e075c822e2" category="section-title">2024年11月3日</block>
 </blocks>

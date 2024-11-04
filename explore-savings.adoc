@@ -122,9 +122,9 @@ NOTE: 此计算器选项不支持计算EBS快照和FSx for Windows File Server�
 --
 .步骤
 . 登录到 link:https://console.workloads.netapp.com/["工作负载出厂控制台"^]
-. 在存储中，选择*转至存储清单*。
-. 在存储清单中，选择* Elabic Block Store (EBS)选项卡。
-. 选择要与FSx for ONTAP进行比较的实例、然后单击*探索节省量*。
+. 从存储中选择*转至存储清单*。
+. 在存储清单中、选择*浏览节省量*选项卡。
+. 在* Elabic Block Store (EBS)选项卡中，选择要与FSx for ONTAP进行比较的实例，然后单击*Explore savings *。
 . 此时将显示存储节省计算器。系统会根据您选择的实例预先填充以下存储系统特征：
 +
 .. *用例*：适用于您的配置的用例。如果需要、您可以更改使用情形。
@@ -141,8 +141,9 @@ NOTE: 此计算器选项不支持计算EBS快照和FSx for Windows File Server�
 --
 .步骤
 . 登录到 link:https://console.workloads.netapp.com/["工作负载出厂控制台"^]
-. 在存储中，选择*转至存储清单*。
-. 在存储清单中，选择*FSx for Windows File Server*选项卡。
+. 从存储中选择*转至存储清单*。
+. 在存储清单中、选择*浏览节省量*选项卡。
+. 选择*FSx for Windows File Server*选项卡。
 . 选择要与FSx for ONTAP进行比较的实例、然后单击*探索节省量*。
 . 此时将显示存储节省计算器。系统会根据您选择的实例的部署类型预先填充以下存储系统特征：
 +
@@ -160,8 +161,9 @@ NOTE: 此计算器选项不支持计算EBS快照和FSx for Windows File Server�
 --
 .步骤
 . 登录到 link:https://console.workloads.netapp.com/["工作负载出厂控制台"^]
-. 在存储中，选择*转至存储清单*。
-. 在存储清单中，选择* Elelic File System (EFS)*选项卡。
+. 从存储中选择*转至存储清单*。
+. 在存储清单中、选择*浏览节省量*选项卡。
+. 选择* Elabic File System (EFS)*选项卡。
 . 选择要与FSx for ONTAP进行比较的实例、然后单击*探索节省量*。
 . 此时将显示存储节省计算器。系统会根据您选择的实例预先填充以下存储系统特征：
 +
