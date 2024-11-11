@@ -4,7 +4,7 @@ permalink: delete-svm.html
 keywords: delete storage vm, delete svm, remove svm 
 summary: '从FSx for ONTAP文件系统配置中删除不再需要的Storage VM (SVM)。' 
 ---
-= 删除Storage VM
+= 在BlueXP  工作负载出厂时删除Storage VM
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
@@ -21,12 +21,12 @@ summary: '从FSx for ONTAP文件系统配置中删除不再需要的Storage VM (
 
 
 .步骤
-. 登录到 link:https://console.workloads.netapp.com/["工作负载出厂控制台"^]
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 在存储中，选择*转至存储清单*。
-. 在*FSx for FS* ONTAP选项卡中，单击要更新的文件系统的三个点菜单，然后选择*Manage*。
+. 在*FSx for FS* ONTAP选项卡中，选择要更新的文件系统的三点菜单，然后选择*Manage*。
 . 从文件系统概述中，选择*Storage VMS*选项卡。
 . 在Storage VM选项卡中、选择要配置Active Directory的Storage VM的三点菜单。
 . 选择*删除Storage VM*。
 . 在删除Storage VM对话框中、键入"delete"以删除此Storage VM。
-. 单击 * 删除 * 。
+. 选择 * 删除 * 。
 

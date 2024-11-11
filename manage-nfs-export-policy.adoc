@@ -1,20 +1,20 @@
 ---
 sidebar: sidebar 
-permalink: change-nfs-export-policy.html 
+permalink: manage-nfs-export-policy.html 
 keywords: NFS, nfs, export policy, change export policy, update export policy, modify export policy 
-summary: 更改使用NFSv3或NFSv4.1协议类型的卷的NFS导出策略。 
+summary: 在BlueXP  工作负载工厂中管理使用NFSv3或NFSv4.1协议类型的卷的NFS导出策略。 
 ---
-= 更改卷的NFS导出策略
+= 在BlueXP  工作负载工厂中管理卷的NFS导出策略
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-更改使用NFSv3或NFSv4.1协议类型的卷的NFS导出策略。
+在BlueXP  工作负载工厂中管理使用NFSv3或NFSv4.1协议类型的卷的NFS导出策略。
 
 .关于此任务
-更改卷的导出策略涉及添加导出策略规则、这些规则详细说明了客户端规范、访问控制、超级用户访问和NFS版本。您可以添加多个导出策略并确定其优先级。
+管理卷的导出策略涉及添加导出策略规则、这些规则详细说明了客户端规范、访问控制、超级用户访问和NFS版本。您可以添加多个导出策略并确定其优先级。
 
 .开始之前
 确定导出策略规则的客户端规格。客户端规范的有效值如下：
@@ -28,11 +28,11 @@ summary: 更改使用NFSv3或NFSv4.1协议类型的卷的NFS导出策略。
 
 
 .步骤
-. 登录到 link:https://console.workloads.netapp.com/["工作负载出厂控制台"^]
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 在存储中，选择*转至存储清单*。
-. 在*FSx for FS* ONTAP选项卡中，选择包含要更新的卷的文件系统的三个点菜单，然后选择*Manage*。
+. 在*FSx for FS* ONTAP选项卡中，选择包含要更新的卷的文件系统的三点菜单，然后选择*Manage*。
 . 从文件系统概述中，选择*Volumes*选项卡。
-. 在卷选项卡中、单击要更改NFS导出策略的卷对应的三个点菜单。
+. 从卷选项卡中、为要更改NFS导出策略的卷选择三点菜单。
 . 选择*高级操作*，然后选择*编辑NFS导出策略*。
 . 在编辑NFS导出策略页面上、提供以下内容：
 +
@@ -51,5 +51,5 @@ summary: 更改使用NFSv3或NFSv4.1协议类型的卷的NFS导出策略。
 
 
 
-. 单击 * 应用 * 。
+. 选择 * 应用 * 。
 

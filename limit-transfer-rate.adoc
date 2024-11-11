@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: limit-transfer-rate.html 
 keywords: limit max transfer rate, limit transfer rate 
-summary: 限制复制关系的最大传输速率。传输速率无限制可能会对其他应用程序和网络的性能产生负面影响。 
+summary: 在BlueXP  工作负载工厂中限制复制关系的最大传输速率。 
 ---
 = 限制复制关系的最大传输速率
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 限制复制关系的最大传输速率。传输速率无限制可能�
 
 
 [role="lead"]
-限制复制关系的最大传输速率。传输速率无限制可能会对其他应用程序和网络的性能产生负面影响。
+在BlueXP  工作负载工厂中限制复制关系的最大传输速率。传输速率无限制可能会对其他应用程序和网络的性能产生负面影响。
 
 .关于此任务
 限制最大传输速率是可选的、但建议这样做。如果没有限制、网络和应用程序性能可能会下降。
@@ -22,15 +22,15 @@ summary: 限制复制关系的最大传输速率。传输速率无限制可能�
 请考虑为复制分配多少带宽。
 
 .步骤
-. 登录到 link:https://console.workloads.netapp.com/["工作负载出厂控制台"^]
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 在存储中，选择*转至存储清单*。
-. 在*FSx for FS* ONTAP选项卡中，单击要更新的文件系统的三个点菜单，然后选择*Manage*。
+. 在*FSx for FS* ONTAP选项卡中，选择要更新的文件系统的三点菜单，然后选择*Manage*。
 . 从文件系统概述中，选择*复制关系*选项卡。
-. 在复制关系选项卡中、单击复制关系的三点菜单以限制的最大传输速率。
+. 在复制关系选项卡中、选择复制关系的三点菜单以限制的最大传输速率。
 . 选择*编辑最大传输速率*。
 . 在编辑最大传输速率对话框中，选择*Limited*，然后输入最大传输速率(MB/秒)
 +
 或者，选择*Unlimited (无限制)*。
 
-. 单击 * 应用 * 。
+. 选择 * 应用 * 。
 

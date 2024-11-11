@@ -4,7 +4,7 @@ permalink: view-volume-details.html
 keywords: volume details, volume information 
 summary: 查看卷详细信息、分发、使用情况、访问和保护。 
 ---
-= 查看卷详细信息
+= 在BlueXP  工作负载出厂时查看卷详细信息
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
@@ -16,9 +16,9 @@ summary: 查看卷详细信息、分发、使用情况、访问和保护。
 只有在文件系统中创建卷后、才会显示卷详细信息。
 
 .步骤
-. 登录到 link:https://console.workloads.netapp.com/["工作负载出厂控制台"^]
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 在存储中，选择*转至存储清单*。
-. 在卷选项卡中、为要修改的卷选择三个点菜单。
+. 在卷选项卡中、为要修改的卷选择三点菜单。
 . 选择*基本操作*，然后选择*查看卷详细信息*。
 . 在*卷详细信息*中，选择选项卡以查看以下卷详细信息：
 +

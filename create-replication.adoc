@@ -4,14 +4,14 @@ permalink: create-replication.html
 keywords: replication, replicate 
 summary: 为FSx for ONTAP文件系统创建复制关系、以避免在发生意外灾难时丢失数据。 
 ---
-= 创建复制关系
+= 在BlueXP  工作负载出厂时创建复制关系
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-为FSx for ONTAP文件系统创建复制关系、以避免在发生意外灾难时丢失数据。
+在BlueXP  工作负载工厂中为FSx for ONTAP文件系统创建复制关系、以避免在发生意外灾难时丢失数据。
 
 .关于此任务
 复制是一个额外的数据保护层、在数据所在区域发生灾难时、这一点至关重要。如果使用跨区域复制、则可以避免数据丢失。
@@ -24,7 +24,7 @@ summary: 为FSx for ONTAP文件系统创建复制关系、以避免在发生意�
 开始之前、请确保满足以下前提条件。
 
 * 要创建复制关系、存储清单中必须有两个可用文件系统。
-* 用于复制关系的两个文件系统必须具有关联的链接。如果文件系统没有现有链接，请 link:create-link.html["首先创建链接"]。要 link:manage-links.html["关联链接"] 在文件系统中，单击*Account name*下的*Associate*链接。一旦链接在两个文件系统中关联、请返回此操作。
+* 用于复制关系的两个文件系统必须具有关联的链接。如果文件系统没有现有链接，请 link:create-link.html["首先创建链接"]。要link:manage-links.html["关联链接"]在文件系统中，选择*Account name*下的*Associate*链接。一旦链接在两个文件系统中关联、请返回此操作。
 
 
 要复制文件系统中的单个卷或所有卷、请完成以下步骤。
@@ -34,9 +34,9 @@ summary: 为FSx for ONTAP文件系统创建复制关系、以避免在发生意�
 .复制单个卷
 --
 .步骤
-. 登录到 link:https://console.workloads.netapp.com/["工作负载出厂控制台"^]
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 在存储中，选择*转至存储清单*。
-. 在*FSx for ONTAP选项卡中，选择包含要复制的卷的文件系统的三个点菜单，然后选择*Manage*。
+. 在*FSx for FS* ONTAP选项卡中，选择包含要复制的卷的文件系统的三点菜单，然后选择*Manage*。
 . 从卷选项卡中、选择要复制的卷的三点菜单。
 . 选择*数据保护操作*，然后选择*复制卷数据*。
 . 在创建复制页面上的复制目标下、提供以下内容：
@@ -46,7 +46,7 @@ summary: 为FSx for ONTAP文件系统创建复制关系、以避免在发生意�
 .. *卷名*：目标卷名称将自动生成，格式如下 `{OriginalVolumeName}_copy`。您可以使用自动生成的卷名称或输入其他卷名称。
 .. *分层策略*：为目标卷中存储的数据选择分层策略。
 +
-_Auto_是使用工作负载Factory FSx for ONTAP用户界面创建卷时的默认分层策略。有关卷分层策略的详细信息、请参阅 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["卷存储容量"^]AWS FSx for NetApp ONTAP文档中的。
+_Auto_是使用工作负载工厂FSx for ONTAP用户界面创建卷时的默认分层策略。有关卷分层策略的详细信息、请参阅 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["卷存储容量"^]AWS FSx for NetApp ONTAP文档中的。
 
 .. *最大传输速率*：选择*受限*并输入最大传输速率(MB/秒)或者，选择*Unlimited (无限制)*。
 +
@@ -73,16 +73,16 @@ _Auto_是使用工作负载Factory FSx for ONTAP用户界面创建卷时的默�
 
 
 
-. 单击 * 创建 * 。
+. 选择 * 创建 * 。
 
 
 --
 .复制文件系统中的所有卷
 --
 .步骤
-. 登录到 link:https://console.workloads.netapp.com/["工作负载出厂控制台"^]
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 在存储中，选择*转至存储清单*。
-. 在FSx for ONTAP选项卡中，单击包含卷的文件系统的三个点菜单，然后选择*Manage*。
+. 在FSx for ONTAP选项卡中，选择包含卷的文件系统的三点菜单，然后选择*Manage*。
 . 从文件系统概述中，选择*创建复制*。
 . 在创建复制页面上的复制目标下、提供以下内容：
 +
@@ -91,7 +91,7 @@ _Auto_是使用工作负载Factory FSx for ONTAP用户界面创建卷时的默�
 .. *卷名*：目标卷名称将自动生成，格式如下 `{OriginalVolumeName}_copy`。
 .. *分层策略*：为目标卷中存储的数据选择分层策略。
 +
-_Auto_是使用工作负载Factory FSx for ONTAP用户界面创建卷时的默认分层策略。有关卷分层策略的详细信息、请参阅 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["卷存储容量"^]AWS FSx for NetApp ONTAP文档中的。
+_Auto_是使用工作负载工厂FSx for ONTAP用户界面创建卷时的默认分层策略。有关卷分层策略的详细信息、请参阅 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["卷存储容量"^]AWS FSx for NetApp ONTAP文档中的。
 
 .. *最大传输速率*：选择*受限*并输入最大传输速率(MB/秒)或者，选择*Unlimited (无限制)*。
 +
@@ -118,7 +118,7 @@ _Auto_是使用工作负载Factory FSx for ONTAP用户界面创建卷时的默�
 
 
 
-. 单击 * 创建 * 。
+. 选择 * 创建 * 。
 
 
 --

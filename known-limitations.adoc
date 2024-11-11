@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: known-limitations.html 
 keywords: limitations, fsx, ontap 
-summary: 已知限制确定了本产品版本不支持的平台、设备或功能、或者这些平台、设备或功能无法与产品正确交互操作。仔细审查这些限制。 
+summary: 已知限制确定了本产品版本不支持的平台、设备或功能、或者这些平台、设备或功能无法与产品正确交互操作。 
 ---
-= 已知限制
+= Amazon FSx for NetApp ONTAP的已知限制
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-已知限制用于标识工作负载工厂中此产品版本不支持或无法与其正确交互的平台、设备或功能。仔细审查这些限制。
+已知限制确定了本产品版本不支持的平台、设备或功能、或者这些平台、设备或功能无法与产品正确交互操作。仔细审查这些限制。
 
 
 
@@ -54,7 +54,7 @@ summary: 已知限制确定了本产品版本不支持的平台、设备或功�
 
 == Storage VM
 
-每个SKU的Storage VM数量是有限的。Workload Factory不支持创建超出此限制的Storage VM。^1^
+每个SKU的Storage VM数量是有限的。工作负载工厂不支持创建超出限制的Storage VM。^1^
 
 有关每个文件系统的最大SVM数量、请参见 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html#max-svms["管理FSx for ONTAP Storage Virtual Machine"^] AWS文档中的。
 
@@ -94,6 +94,12 @@ summary: 已知限制确定了本产品版本不支持的平台、设备或功�
 * 弹性块存储(EBS)：ST1、SC1和标准卷类型
 * 弹性文件系统(EFS)：突发吞吐量模式
 
+
+
+
+== System Manager
+
+System Manager不支持FSx for ONTAP连接的链接。
 
 注意：
 

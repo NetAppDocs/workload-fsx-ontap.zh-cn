@@ -2,18 +2,18 @@
 sidebar: sidebar 
 permalink: links-overview.html 
 keywords: links, accounts, lambda 
-summary: 工作负载工厂链接可在工作负载工厂帐户与一个或多个FSx for ONTAP文件系统之间创建信任关系和连接。这样、您就可以直接从ONTAP REST API监控和管理某些文件系统功能、而这些API不是通过Amazon FSx for ONTAP API提供的。 
+summary: 工作负载工厂链接会在工作负载工厂帐户与一个或多个FSx for ONTAP文件系统之间创建信任关系和连接。 
 ---
-= 了解工作负载工厂链接
+= 了解BlueXP  工作负载出厂链接
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-工作负载工厂链接可在工作负载工厂帐户与一个或多个FSx for ONTAP文件系统之间创建信任关系和连接。这样、您就可以直接通过ONTAP REST API调用监控和管理某些文件系统功能、而这些功能不能通过Amazon FSx for ONTAP API使用。
+BlueXP  工作负载工厂链接会在工作负载工厂帐户与一个或多个FSx for ONTAP文件系统之间创建信任关系和连接。这样、您就可以直接通过ONTAP REST API调用监控和管理某些文件系统功能、而这些功能不能通过Amazon FSx for ONTAP API使用。
 
-您不需要链接即可开始使用Workload Factory、但在某些情况下、您需要创建一个链接来解锁所有Workload Factory功能和工作负载功能。
+您不需要链接即可开始使用工作负载工厂、但在某些情况下、您需要创建一个链接来解锁所有工作负载工厂功能和工作负载功能。
 
 
 
@@ -23,13 +23,13 @@ summary: 工作负载工厂链接可在工作负载工厂帐户与一个或多�
 
 创建链接后、您可以将其与一个或多个FSx for ONTAP文件系统相关联。每个文件系统只能与同一个NetApp帐户中的一个链接相关联。如果您有多个NetApp帐户、则一个文件系统可以与不同NetApp帐户下的其他链接相关联。
 
-您可以从Workload Factory中的FSx for ONTAP文件系统页面创建链接。link:create-link.html["了解如何创建链接"] 有关详细信息、请参见。
+您可以从工作负载出厂时的FSx for ONTAP文件系统页面创建链接。link:create-link.html["了解如何创建链接"] 有关详细信息、请参见。
 
 
 
 == Costs
 
-Lamb荷 执行的每个事务都会产生费用。由于Lamb荷 充当两个系统之间的代理、因此当Lamb荷 向文件系统上的ONTAP REST API发送请求以及将响应发送回工作负载工厂时、会收取一定费用。
+Lamb荷 执行的每个事务都会产生费用。由于Lamb荷 充当两个系统之间的代理、因此当Lamb荷 向文件系统上的ONTAP REST API发送请求以及将响应发送回工作负载出厂时、会收取一定费用。
 
 link:https://aws.amazon.com/lambda/pricing/["详细了解与使用AWS Lamb泄 压相关的成本"^]
 
@@ -37,7 +37,7 @@ link:https://aws.amazon.com/lambda/pricing/["详细了解与使用AWS Lamb泄 �
 
 == 需要链接时
 
-Workload Factory需要一个链接来显示某些信息并执行某些任务。如果您尝试执行需要链接的操作、但尚未将链接与FSx for ONTAP文件系统相关联、则会显示一条消息、指出此操作需要链接。您可以添加新链接、或者将FSx for ONTAP文件系统与现有链接相关联、以便执行此操作。
+工作负载工厂需要一个链接来显示某些信息并执行某些任务。如果您尝试执行需要链接的操作、但尚未将链接与FSx for ONTAP文件系统相关联、则会显示一条消息、指出此操作需要链接。您可以添加新链接、或者将FSx for ONTAP文件系统与现有链接相关联、以便执行此操作。
 
 需要链接的功能包括：
 

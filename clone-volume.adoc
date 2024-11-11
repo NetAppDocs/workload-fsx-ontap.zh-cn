@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: clone-volume.html 
 keywords: clone volume, clone, clone data 
-summary: 克隆卷以使其成为原始卷的读写卷、以便进行测试。 
+summary: 克隆BlueXP  工作负载出厂时的卷、为原始卷创建读写卷以供测试。 
 ---
-= 克隆卷
+= 在BlueXP  工作负载出厂时克隆卷
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-克隆卷以使其成为原始卷的读写卷、以便进行测试。
+克隆BlueXP  工作负载出厂时的卷、为原始卷创建读写卷以供测试。
 
 克隆反映数据的当前时间点状态。您还可以使用克隆为其他用户授予对数据的访问权限，而不授予他们对生产数据的访问权限。
 
@@ -23,12 +23,12 @@ summary: 克隆卷以使其成为原始卷的读写卷、以便进行测试。
 要使克隆的卷包含父卷中的所有数据以及创建后添加到克隆中的任何新数据、您需要 link:split-cloned-volume.html["拆分克隆"] 从父卷中获取。此外、如果父卷具有克隆、则不能将其删除。必须先拆分克隆、然后才能删除父卷。
 
 .步骤
-. 登录到 link:https://console.workloads.netapp.com/["工作负载出厂控制台"^]
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 从存储中选择*转至存储清单*。
-. 在*FSx for FS*选项卡中，选择包含要克隆的卷的ONTAP for ONTAP文件系统的三个点菜单，然后选择*Manage*。
+. 在*FSx for FS*选项卡中，选择包含要克隆的卷的ONTAP for ONTAP文件系统的三点菜单，然后选择*Manage*。
 . 从文件系统的概述选项卡中，选择*卷*选项卡。
 . 在卷选项卡中、选择要克隆的卷的三点菜单。
 . 选择*数据保护操作*，然后选择*克隆卷*。
 . 在克隆卷对话框中、输入卷克隆的名称。
-. 单击 * 克隆 * 。
+. 选择 * 克隆 * 。
 

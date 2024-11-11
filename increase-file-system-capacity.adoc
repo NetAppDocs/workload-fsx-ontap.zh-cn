@@ -4,7 +4,7 @@ permalink: increase-file-system-capacity.html
 keywords: increase capacity, increase file system capacity, increase FSx capacity 
 summary: 当已用SSD存储容量超过您指定的阈值时、手动增加适用于ONTAP文件系统的FSx的SSD存储容量。 
 ---
-= 增加文件系统容量
+= 在BlueXP  工作负载出厂时增加文件系统容量
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
@@ -13,7 +13,7 @@ summary: 当已用SSD存储容量超过您指定的阈值时、手动增加适�
 [role="lead"]
 当已用SSD存储容量超过您指定的阈值时、手动增加适用于ONTAP文件系统的FSx的SSD存储容量。
 
-或者、您也可以 link:enable-auto-capacity-management.html["启用自动容量管理功能"] 通过Workload Factory为您管理文件系统容量。
+或者、您也可以link:enable-auto-capacity-management.html["启用自动容量管理功能"]让工作负载工厂为您管理文件系统容量。
 
 .关于此任务
 增加文件系统容量会影响FSx for ONTAP文件系统的IOPS。
@@ -28,12 +28,12 @@ summary: 当已用SSD存储容量超过您指定的阈值时、手动增加适�
 要增加文件系统的容量，必须首先 link:enable-auto-capacity-management.html["禁用自动容量管理"]。
 
 .步骤
-. 登录到工作负载出厂控制台。
-. 在存储中，单击*转至存储清单*。
-. 在*FSx for FS* ONTAP选项卡中，单击文件系统的三个点菜单以增加的容量。
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 在存储中，选择*转至存储清单*。
+. 在*FSx for FS* ONTAP选项卡中，选择要增加容量的文件系统的三点菜单。
 . 选择 * 管理 * 。
-. 在“Information (信息)”下，单击“*Capacity Distribution (容量分布)”旁边的铅笔图标。当鼠标悬停在*Capacity Distribution *行上时，下拉箭头旁边将显示铅笔图标。
+. 在“信息”下，选择*Capacity Distribution *旁边的铅笔图标。当鼠标悬停在*Capacity Distribution *行上时，下拉箭头旁边将显示铅笔图标。
 . 在SSD存储大小对话框中、为*已配置容量*输入一个数字。
 . 选择已配置容量的单位。
-. 单击 * 应用 * 。
+. 选择 * 应用 * 。
 

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: create-snapshot.html 
 keywords: create snapshot, snapshot 
-summary: 为FSx for ONTAP卷创建手动快照。快照是卷内容的时间点版本。 
+summary: 在BlueXP  工作负载出厂时为FSx for ONTAP卷创建手动快照。快照是卷内容的时间点版本。 
 ---
 = 为FSx for ONTAP卷创建手动快照
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 为FSx for ONTAP卷创建手动快照。快照是卷内容的时间点�
 
 
 [role="lead"]
-为FSx for ONTAP卷创建手动快照。快照是卷内容的时间点版本。
+在BlueXP  工作负载出厂时为FSx for ONTAP卷创建手动快照。快照是卷内容的时间点版本。
 
 快照是卷的资源、是数据的即时捕获、只会为修改后的数据占用空间。由于数据会随时间发生变化、因此、随着快照的使用时间的推移、快照通常会占用更多的空间。
 
@@ -21,15 +21,15 @@ FSx for ONTAP卷使用写时即时复制、因此快照中任何未经修改的�
 NOTE: 快照不是数据的副本。如果要创建数据副本、请考虑使用FSx for ONTAP备份或卷复制功能。
 
 .开始之前
-您必须 link:manage-links.html["关联链接"] 创建快照。如果您没有现有链接，请 link:create-link.html["创建链接"]。要关联文件系统中的链接，请单击*Account name*下的*Associate link*。链接关联后、返回此操作。
+您必须 link:manage-links.html["关联链接"] 创建快照。如果您没有现有链接，请 link:create-link.html["创建链接"]。要关联文件系统中的链接，请选择*Account name*下的*Associate link*。链接关联后、返回此操作。
 
 .步骤
-. 登录到 link:https://console.workloads.netapp.com/["工作负载出厂控制台"^]
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 在*存储*中，选择*转至存储清单*。
-. 在*FSx for ONTAP选项卡中，单击带有卷的文件系统的三个点菜单，然后选择*Manage*。
+. 在*FSx for ONTAP选项卡中，选择包含卷的文件系统的三点菜单，然后选择*Manage*。
 . 在文件系统概述中，选择*Volumes*选项卡。
-. 从*卷*选项卡中，选择要保护的卷的三个点菜单。
+. 从*卷*选项卡中，选择要保护的卷的三点菜单。
 . 选择*数据保护操作*、*快照*、然后选择*从快照创建卷*。
 . 在从快照创建卷对话框的*快照名称*字段中、输入快照名称。
-. 单击 * 创建 * 。
+. 选择 * 创建 * 。
 

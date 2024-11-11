@@ -2,20 +2,20 @@
 sidebar: sidebar 
 permalink: learn-fsx-ontap.html 
 keywords: Amazon FSx for NetApp ONTAP, FSx, storage, aws 
-summary: Amazon FSx for NetApp ONTAP是一项完全托管的服务、允许客户启动和运行文件系统、作为工作负载工厂中工作负载的存储后端。 
+summary: Amazon FSx for NetApp ONTAP是一项完全托管的服务、允许客户启动和运行文件系统、作为工作负载工厂内工作负载的存储后端。 
 ---
-= 了解Workload Factory for Amazon FSx for NetApp ONTAP
+= 了解BlueXP  工作负载工厂中的Amazon FSx for NetApp ONTAP
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Amazon FSx for NetApp ONTAP是一种完全托管的基于云的数据存储服务、可提供高级数据管理功能和高度可扩展的性能。FSx for ONTAP允许您创建和管理文件系统、将其作为BlueXP Workload Factory中所有工作负载的存储后端。
+Amazon FSx for NetApp ONTAP是一种完全托管的基于云的数据存储服务、可提供高级数据管理功能和高度可扩展的性能。FSx for ONTAP允许您创建和管理文件系统、将其作为BlueXP  工作负载出厂时所有工作负载的存储后端。
 
 FSX for ONTAP 提供了与 NetApp 客户目前在内部使用的相同的特性，性能和管理功能，并具有原生 AWS 服务的精简性，灵活性，安全性和可扩展性。
 
-FSx for ONTAP是Workload Factory中的_Storage_组件。
+FSx for ONTAP是工作负载工厂中的_Storage_组件。
 
 
 
@@ -40,7 +40,7 @@ FSx for ONTAP提供以下功能：
 
 
 
-== Workload Factory中的其他功能
+== 工作负载工厂中的其他功能
 
 * *存储成本比较计算器*：将您的Amazon Elelic Block Store (EBS)、Elelic File System (EFS)和FSx for Windows File Server存储成本与FSx for ONTAP进行比较。通过计算器、您可以查看FSx for ONTAP存储配置如何提供潜在的节省、并计划迁移到FSx for ONTAP存储。
 * *Workload Factory用户界面*:提供_Quick cree_和_Advanced cree_部署模式选项。Quick create包含适用于您的存储配置的AWS、NetApp和行业标准最佳实践。
@@ -49,21 +49,22 @@ FSx for ONTAP提供以下功能：
 
 
 
-== 用于使用Workload Factory的工具
+== 用于工作负载工厂的工具
 
-您可以将BlueXP Workload Factory与以下工具结合使用：
+您可以将BlueXP  工作负载工厂与以下工具结合使用：
 
 * *工作负载工厂控制台*：工作负载工厂控制台提供了一个可视化界面，可让您全面了解应用程序和项目
-* *REST API*：工作负载工厂REST API允许您部署和管理适用于ONTAP文件系统和其他AWS资源的FSx
-* *CloudFormation*：AWS CloudFormation代码允许您执行在Workload Factory控制台中定义的操作、以便在AWS帐户中对CloudFormation堆栈中的AWS和第三方资源进行建模、配置和管理。
-* *Terraform BlueXP Workload Factory提供程序*：Terraform可用于构建和管理在Workload Factory控制台中生成的基础架构工作流。
+* BlueXP  console*：BlueXP  控制台提供了混合接口体验，因此您可以将BlueXP  工作负载出厂配置与其他BlueXP  服务结合使用
+* *REST API*：工作负载出厂REST API允许您部署和管理适用于ONTAP文件系统和其他AWS资源的FSx
+* *CloudFormation*：AWS CloudFormation代码可用于执行您在工作负载工厂控制台中定义的操作、以便在AWS帐户中对CloudFormation堆栈中的AWS和第三方资源进行建模、配置和管理
+* *Terraform BlueXP  工作负载工厂提供程序*：Terraform支持您构建和管理在工作负载工厂控制台中生成的基础架构工作流
 
 
 
 
 == 成本
 
-您的FSx for ONTAP帐户由AWS而非Workload Factory维护。请参阅 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html#pricing-for-fsx-ontap["Amazon FSx for NetApp ONTAP的定价"^]。
+您的FSx for ONTAP帐户由AWS而非工作负载工厂维护。请参阅 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html#pricing-for-fsx-ontap["Amazon FSx for NetApp ONTAP的定价"^]。
 
 
 
@@ -77,4 +78,4 @@ https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services
 
 适用于NetApp ONTAP 的Amazon FSX是AWS第一方解决方案。如有与您的FSx for ONTAP文件系统、基础架构或使用此服务的任何解决方案相关的问题或技术支持问题、请使用AWS管理控制台中的支持中心创建AWS支持案例。选择 "FSX for ONTAP " 服务和相应的类别。提供创建 AWS 支持案例所需的其余信息。
 
-有关Workload Factory或Workload Factory应用程序和服务的一般问题，请参阅 link:get-help.html["获取FSx for ONTAP for Workload Factory的帮助"]。
+有关工作负载工厂或工作负载工厂应用程序和服务的一般问题，请参见link:get-help.html["获取有关适用于工作负载工厂的FSx for ONTAP的帮助"]。

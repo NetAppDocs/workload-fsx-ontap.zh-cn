@@ -4,7 +4,7 @@ permalink: access-data.html
 keywords: access data, mount clients, on-premises 
 summary: 您可以通过为NAS客户端挂载卷并为SAN客户端挂载iSCSI LUN、从内部访问FSx for ONTAP文件系统。 
 ---
-= 访问您的数据
+= 访问FSx for ONTAP文件系统数据
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

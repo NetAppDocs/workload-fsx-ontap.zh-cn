@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: manage-links.html 
 keywords: links, accounts, lambda, creating, associating, disassociating, deleting, editing 
-summary: 您可以创建和管理链接、以便在工作负载工厂帐户与一个或多个FSx for ONTAP文件系统之间建立信任关系和连接。这样、您就可以直接从ONTAP文件系统监控和管理某些功能、而这些功能不是通过AWS FSx for ONTAP API提供的。 
+summary: 您可以在BlueXP  工作负载出厂时查看与您的帐户关联的链接、关联链接以及删除链接。 
 ---
-= 管理链接
+= 管理BlueXP  工作负载出厂链接
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-管理与Workload Factory帐户关联的链接。
+管理与BlueXP  工作负载工厂帐户关联的链接。
 
 link:links-overview.html["了解有关链接的更多信息"] 或 link:create-link.html["创建链接"]。
 
@@ -22,11 +22,10 @@ link:links-overview.html["了解有关链接的更多信息"] 或 link:create-li
 您可以查看当前与您的帐户关联的链接。
 
 .步骤
-. 登录到 link:https://console.workloads.netapp.com/["工作负载出厂控制台"^]
-. 在存储中，选择*转至存储清单*。
-. 从“帐户”菜单中，选择*Links*。
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 在主页中，从菜单中选择*链接*。
 +
-image:screenshot-links-button.png["显示如何打开\"链接\"页面的屏幕截图。"]
+image:screenshot-menu-links.png["显示如何打开\"链接\"页面的屏幕截图。"]
 
 . 如果存在任何链接、则概述页面将提供相关信息。
 . 要查看与链接关联的FSx for ONTAP文件系统，请选择“关联的资源”部分中的*view*按钮。
@@ -43,9 +42,9 @@ image:screenshot-view-link-details.png["屏幕截图、显示了正在使用特�
 创建链接后、您可以将其与FSx for ONTAP文件系统相关联。每个文件系统只能与一个NetApp帐户中的一个链接相关联、但一个链接可以与多个文件系统相关联。
 
 .步骤
-. 登录到 link:https://console.workloads.netapp.com/["工作负载出厂控制台"^]
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 在存储中，选择*转至存储清单*。
-. 在*FSx for FS* ONTAP选项卡中，选择要关联链接的文件系统的三个点菜单，然后选择*Manage*。
+. 在*FSx for FS* ONTAP选项卡中，选择要关联链接的文件系统的三点菜单，然后选择*Manage*。
 . 在文件系统概述中，选择*关联链接*。
 . 在关联链接页面中，选择*关联现有链接*，选择链接，然后选择*应用*。
 
@@ -68,15 +67,17 @@ NOTE: 您可以使用AWS控制台编辑Lamba网络配置(例如VPC、子网和�
 
 您可以删除环境中不再使用的链接。删除此链接后、任何使用此链接的FSx for ONTAP文件系统或其他资源将无法使用某些功能。
 
-请注意、此链接仅会从Workload Factory中删除、而不会从AWS环境中删除。删除Workload Factory中的链接后、您必须从AWS帐户中删除Lamb非得 函数。
+请注意、此链接仅会从Workload Factory中删除、而不会从AWS环境中删除。在工作负载出厂时删除链接后、必须从AWS帐户中删除Lamb非得 函数。
 
 .步骤
-. 登录到 link:https://console.workloads.netapp.com/["工作负载出厂控制台"^]
-. 在存储中，选择*转至存储清单*。
-. 从“帐户”菜单中，选择*Links*。
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 在主页中，从菜单中选择*链接*。
++
+image:screenshot-menu-links.png["显示如何打开\"链接\"页面的屏幕截图。"]
+
 . 从“链接”页面中，选择菜单按钮并选择*Remove*。
 +
-image:screenshot-remove-link.png["显示如何从Workload Factory中删除链接的屏幕截图。"]
+image:screenshot-remove-link.png["显示如何从工作负载出厂时删除链接的屏幕截图。"]
 
 . 如果确定，请再次选择*Remove*。
 

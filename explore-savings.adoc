@@ -4,7 +4,7 @@ permalink: explore-savings.html
 keywords: cost, savings, compare costs, EBS, EFS, FSx for Windows file servers FSx for ONTAP 
 summary: '通过AWS FSx for NetApp ONTAP、了解在Amazon Elelic Block Store (EBS)存储、Elelic File System (EFS)和FSx for Windows文件服务器中为存储工作负载节省的空间。' 
 ---
-= 了解FSx for ONTAP的节省量
+= 了解BlueXP  工作负载工厂中FSx for ONTAP的节省情况
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
@@ -13,9 +13,9 @@ summary: '通过AWS FSx for NetApp ONTAP、了解在Amazon Elelic Block Store (E
 [role="lead"]
 了解通过使用Amazon Elecic Block Store (EBS)、Elecic File System (EFS)和FSx for Windows File Server和FSx for NetApp ONTAP为存储工作负载节省的空间。
 
-Workload Factory内置了一个存储节省计算器、可用于将您的Amazon存储环境与FSx for ONTAP进行比较。无论是否提供AWS凭据、您都可以探索节省的空间、并为您的存储环境自定义配置设置。如果您提供AWS凭据、则可以选择一个或多个Amazon El生 性块存储实例、并让Workload Factory自动进行比较。无论是手动还是自动、计算器都可以确定哪种存储服务可以为您的存储需求提供最低的成本。
+工作负载工厂内置了存储节省计算器、您可以将Amazon存储环境与FSx for ONTAP进行比较。无论是否提供AWS凭据、您都可以探索节省的空间、并为您的存储环境自定义配置设置。如果您提供AWS凭据、则可以选择一个或多个Amazon El生 性块存储实例、并让工作负载工厂自动进行比较。无论是手动还是自动、计算器都可以确定哪种存储服务可以为您的存储需求提供最低的成本。
 
-如果存储计算器确定最经济高效的存储是FSx for ONTAP、则无论您为Workload Factory授予的权限如何、您都可以创建或保存FSx for ONTAP配置、并使用代码框生成基础架构即代码模板。
+如果存储计算器确定最经济高效的存储是FSx for ONTAP、则无论您为工作负载出厂设置了何种权限、您都可以创建或保存FSx for ONTAP配置、并使用代码框生成基础架构即代码模板。
 
 
 
@@ -25,7 +25,7 @@ Workload Factory内置了一个存储节省计算器、可用于将您的Amazon�
 
 通过自定义了解节省量：您可以提供存储环境的配置设置、包括使用情形、区域、卷或文件系统数量、存储量、快照频率、每个快照的更改量、已配置的IOPS、吞吐量等。
 
-了解检测到的存储环境的节省量：Workload Factory可链接到您的现有AWS存储环境、并将详细信息提取到计算器中以进行自动比较。要使用自动模式、您需要授予"自动"权限。您可以更改使用情形、但所有其他详细信息都会在计算中自动确定。
+探索检测到的存储环境节省的空间：工作负载出厂时可链接到现有AWS存储环境、并将详细信息提取到计算器中以进行自动比较。要使用自动模式、您需要授予"自动"权限。您可以更改使用情形、但所有其他详细信息都会在计算中自动确定。
 
 
 
@@ -38,7 +38,7 @@ Workload Factory内置了一个存储节省计算器、可用于将您的Amazon�
 .Amazon Elastic Block Store (EBS)
 --
 .步骤
-. 登录到 link:https://console.workloads.netapp.com/["工作负载出厂控制台"^]
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 在"Storage"(存储)中，选择"*浏览节省量*"，然后选择"* Amazon Elelic Block Store (EBS)*。
 . 在存储节省计算器中、提供以下详细信息：
 +
@@ -59,7 +59,7 @@ Workload Factory内置了一个存储节省计算器、可用于将您的Amazon�
 .Amazon FSx for Windows File Server
 --
 .步骤
-. 登录到 link:https://console.workloads.netapp.com/["工作负载出厂控制台"^]
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 在存储中，选择*Explore savings *，然后选择*Amazon FSx for Windows File Server*。
 . 在存储节省计算器中、提供以下详细信息：
 +
@@ -81,7 +81,7 @@ Workload Factory内置了一个存储节省计算器、可用于将您的Amazon�
 .Amazon El生 性文件系统(EFS)
 --
 .步骤
-. 登录到 link:https://console.workloads.netapp.com/["工作负载出厂控制台"^]
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 在存储中，选择*浏览节省量*，然后选择*Amazon El生 性文件系统(EFS)*。
 . 在存储节省计算器中、提供以下详细信息：
 +
@@ -109,7 +109,7 @@ Workload Factory内置了一个存储节省计算器、可用于将您的Amazon�
 == 了解检测到的存储环境的节省量
 
 .开始之前
-要使Workload Factory在您的AWS帐户中检测Amazon Elelic Block Store (EBS)、Elelic File System (EFS)和FSx for Windows File Server存储环境、请确保您使用的是 link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["授予_Automate权限"^] AWS帐户。
+要使工作负载工厂在您的AWS帐户中检测Amazon Elelic Block Store (EBS)、Elelic File System (EFS)和FSx for Windows File Server存储环境、请确保您使用的是link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["授予_Automate权限"^]AWS帐户。
 
 
 NOTE: 此计算器选项不支持计算EBS快照和FSx for Windows File Server卷影副本。在通过自定义探索节省空间时、您可以提供EBS和FSx for Windows File Server快照详细信息。
@@ -121,10 +121,10 @@ NOTE: 此计算器选项不支持计算EBS快照和FSx for Windows File Server�
 .Amazon Elastic Block Store (EBS)
 --
 .步骤
-. 登录到 link:https://console.workloads.netapp.com/["工作负载出厂控制台"^]
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 从存储中选择*转至存储清单*。
 . 在存储清单中、选择*浏览节省量*选项卡。
-. 在* Elabic Block Store (EBS)选项卡中，选择要与FSx for ONTAP进行比较的实例，然后单击*Explore savings *。
+. 在* Elabic Block Store (EBS)选项卡中，选择要与FSx for ONTAP进行比较的实例，然后选择*Explore savings *。
 . 此时将显示存储节省计算器。系统会根据您选择的实例预先填充以下存储系统特征：
 +
 .. *用例*：适用于您的配置的用例。如果需要、您可以更改使用情形。
@@ -140,11 +140,10 @@ NOTE: 此计算器选项不支持计算EBS快照和FSx for Windows File Server�
 .Amazon FSx for Windows File Server
 --
 .步骤
-. 登录到 link:https://console.workloads.netapp.com/["工作负载出厂控制台"^]
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 从存储中选择*转至存储清单*。
 . 在存储清单中、选择*浏览节省量*选项卡。
-. 选择*FSx for Windows File Server*选项卡。
-. 选择要与FSx for ONTAP进行比较的实例、然后单击*探索节省量*。
+. 在*Amazon FSx for Windows File Server*选项卡中，选择要与FSx for ONTAP进行比较的实例，然后选择*Explore savings *。
 . 此时将显示存储节省计算器。系统会根据您选择的实例的部署类型预先填充以下存储系统特征：
 +
 .. *用例*：适用于您的配置的用例。如果需要、您可以更改使用情形。
@@ -160,11 +159,10 @@ NOTE: 此计算器选项不支持计算EBS快照和FSx for Windows File Server�
 .Amazon El生 性文件系统(EFS)
 --
 .步骤
-. 登录到 link:https://console.workloads.netapp.com/["工作负载出厂控制台"^]
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 从存储中选择*转至存储清单*。
 . 在存储清单中、选择*浏览节省量*选项卡。
-. 选择* Elabic File System (EFS)*选项卡。
-. 选择要与FSx for ONTAP进行比较的实例、然后单击*探索节省量*。
+. 在* Elabic File System (EFS)*选项卡中，选择要与FSx for ONTAP进行比较的实例，然后选择*Explore savings *。
 . 此时将显示存储节省计算器。系统会根据您选择的实例预先填充以下存储系统特征：
 +
 .. *用例*：适用于您的配置的用例。如果需要、您可以更改使用情形。
@@ -187,9 +185,9 @@ NOTE: 此计算器选项不支持计算EBS快照和FSx for Windows File Server�
 
 == 部署FSx for ONTAP文件系统
 
-如果要切换到FSx for ONTAP以节省成本，请直接从创建FSx for ONTAP文件系统向导中单击*Creation*来创建文件系统，或者单击*Save*来保存建议的配置供以后使用。
+如果要切换到FSx for ONTAP以节省成本，请从创建FSx for ONTAP文件系统向导中直接选择*Creation*来创建文件系统，或者选择*Save*来保存建议的配置供以后使用。
 
-部署方法:: 在_Automate模式下、您可以直接从Workload Factory部署FSx for ONTAP文件系统。您还可以从代码框窗口复制内容、并使用其中一种代码框方法部署系统。
+部署方法:: 在_Automate模式下、您可以直接从工作负载工厂部署FSx for ONTAP文件系统。您还可以从代码框窗口复制内容、并使用其中一种代码框方法部署系统。
 +
 --
 在_BASIC模式下、您可以从CodeBox窗口复制内容、并使用其中一种CodeBox方法部署FSx for ONTAP文件系统。

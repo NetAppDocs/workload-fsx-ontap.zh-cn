@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: create-backup.html 
 keywords: create backup, volume backup, back up a volume 
-summary: 在定期计划的备份之外为卷创建手动备份。 
+summary: 在BlueXP  工作负载出厂时、为定期计划备份之外的卷创建手动备份。 
 ---
-= 创建卷的手动备份
+= 在BlueXP  工作负载出厂时为卷创建手动备份
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-在定期计划的备份之外为卷创建手动备份。
+在BlueXP  工作负载出厂时、为定期计划备份之外的卷创建手动备份。
 
 .关于此任务
 FSx for ONTAP备份按卷进行、因此每个备份仅包含特定卷中的数据。
@@ -22,12 +22,12 @@ FSx for ONTAP备份是增量备份、这意味着仅保存卷上在最近一次�
 要备份卷、卷和文件系统都必须具有足够的可用SSD存储容量来存储备份快照。创建备份快照时、快照占用的额外存储容量不会导致卷的SSD存储利用率超过98%。如果发生这种情况、备份将失败。
 
 .步骤
-. 登录到 link:https://console.workloads.netapp.com/["工作负载出厂控制台"^]
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 在存储中，选择*转至存储清单*。
-. 在*FSx for ONTAP选项卡中，单击带有卷的文件系统的三个点菜单，然后选择*Manage*。
+. 在*FSx for ONTAP选项卡中，选择包含卷的文件系统的三点菜单，然后选择*Manage*。
 . 在文件系统概述中，选择*Volumes*选项卡。
-. 从*卷*选项卡中，单击要备份的卷对应的三个点菜单。
+. 从*卷*选项卡中，选择要备份的卷的三点菜单。
 . 选择*数据保护操作*、* FSx for ONTAP backup*、然后选择*手动备份*。
 . 在手动备份对话框中、输入备份的名称。
-. 单击*备份*。
+. 选择*备份*。
 

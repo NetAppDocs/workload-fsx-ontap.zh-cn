@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: create-storage-vm.html 
 keywords: create storage VM, create svm 
-summary: '您可以创建FSx for ONTAP Storage VM (SVM)、以便在Workload Factory中为工作负载提供存储和数据服务。' 
+summary: '您可以创建FSx for ONTAP Storage VM (SVM)、以便在BlueXP  工作负载工厂中为工作负载提供存储和数据服务。' 
 ---
 = 为FSx for ONTAP文件系统创建Storage VM
 :allow-uri-read: 
@@ -11,10 +11,10 @@ summary: '您可以创建FSx for ONTAP Storage VM (SVM)、以便在Workload Fact
 
 
 [role="lead"]
-为FSx for ONTAP文件系统创建Storage VM (SVM)、以便为Workload Factory中的工作负载以虚拟方式访问存储和数据服务。
+为FSx for ONTAP文件系统创建一个Storage VM (SVM)、以便在BlueXP  工作负载工厂中以虚拟方式访问工作负载的存储和数据服务。
 
 .关于此任务
-Storage VM是一种孤立的文件服务器、可用于访问工作负载出厂存储中每个工作负载的数据。每个SVM都有自己的管理凭据和端点、用于管理和访问数据。
+Storage VM是一种隔离的文件服务器、可用于访问工作负载出厂存储中每个工作负载的数据。每个SVM都有自己的管理凭据和端点、用于管理和访问数据。
 
 通过SVM、在访问FSx for ONTAP中的数据时、客户端和工作站会使用SVM的端点(IP地址)挂载SVM托管的卷、CIFS或SMB共享或iSCSI LUN。
 
@@ -31,9 +31,9 @@ Storage VM是一种孤立的文件服务器、可用于访问工作负载出厂�
 NOTE: 使用来自CodeBox的Terraform时、您复制或下载的代码会隐藏 `fsxadmin` 和 `vsadmin` 密码。运行代码时、您需要重新输入密码。
 
 .步骤
-. 登录到 link:https://console.workloads.netapp.com/["工作负载出厂控制台"^]
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 在存储中，选择*转至存储清单*。
-. 在FSx for ONTAP选项卡中，单击要创建Storage VM的文件系统的三点菜单，然后选择*Manage*。
+. 在FSx for ONTAP选项卡中，选择要创建Storage VM的文件系统的三点菜单，然后选择*Manage*。
 . 从文件系统概述中，选择*创建Storage VM*。
 . 在Storage VM页面上的Storage VM配置下、提供以下内容：
 +
@@ -43,5 +43,5 @@ NOTE: 使用来自CodeBox的Terraform时、您复制或下载的代码会隐藏 
 .. *标记*：您可以选择最多添加50个标记。
 
 
-. 单击 * 创建 * 。
+. 选择 * 创建 * 。
 

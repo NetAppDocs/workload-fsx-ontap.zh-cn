@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: configure-active-directory.html 
 keywords: configure AD, configure active directory, update ad, edit active directory 
-summary:  
+summary: 在BlueXP  工作负载工厂为FSx for ONTAP文件系统中的Storage VM配置和更新Active Directory。 
 ---
 = 配置和更新Storage VM的Active Directory
 :allow-uri-read: 
@@ -11,15 +11,15 @@ summary:
 
 
 [role="lead"]
-为FSx for ONTAP文件系统中的Storage VM配置和更新Active Directory。
+在BlueXP  工作负载工厂为FSx for ONTAP文件系统中的Storage VM配置和更新Active Directory。
 
 .关于此任务
 配置和更新Storage VM的Active Directory的步骤相同。
 
 .步骤
-. 登录到 link:https://console.workloads.netapp.com/["工作负载出厂控制台"^]
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 在存储中，选择*转至存储清单*。
-. 在*FSx for Storage VM*选项卡中，单击包含要更新的ONTAP的文件系统的三点菜单，然后选择*Manage*。
+. 在*FSx for Storage VM*选项卡中，选择包含要更新的ONTAP的文件系统的三点菜单，然后选择*Manage*。
 . 从文件系统概述中，选择*Storage VMS*选项卡。
 . 从Storage VM选项卡中、选择要配置Active Directory的Storage VM的三点菜单。
 . 选择*管理AD配置*。
@@ -49,5 +49,5 @@ OU是要加入文件系统的组织单位的可分辨路径名称。
 
 
 
-. 单击 * 应用 * 。
+. 选择 * 应用 * 。
 

@@ -4,7 +4,7 @@ permalink: delete-volume.html
 keywords: delete volume, volume deletion 
 summary: 您可以随时删除FSx for ONTAP文件系统中的卷。此操作不可逆。 
 ---
-= 删除卷
+= 在BlueXP  工作负载出厂时删除卷
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
@@ -22,21 +22,21 @@ summary: 您可以随时删除FSx for ONTAP文件系统中的卷。此操作不�
 
 
 .步骤
-. 登录到 link:https://console.workloads.netapp.com/["工作负载出厂控制台"^]
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 在存储中，选择*转至存储清单*。
-. 在*FSx for FS* ONTAP选项卡中，选择包含要删除的卷的文件系统的三个点菜单，然后选择*Manage*。
+. 在*FSx for FS* ONTAP选项卡中，选择包含要删除的卷的文件系统的三点菜单，然后选择*Manage*。
 . 从文件系统概述中，选择*Volumes*选项卡。
 . 从卷选项卡中、选择要删除的卷的三点菜单。
 . 选择*基本操作*，然后选择*删除卷*。
 . 在删除卷对话框中、执行以下操作：
 +
-.. (可选)单击*备份卷*以在删除前备份此卷。
+.. (可选)选择*备份卷*以在删除前备份卷。
 +
 备份将保留在文件系统中、直到您手动将其删除为止。
 
-.. 单击 * 继续 * 。
+.. 选择 * 继续 * 。
 .. 键入"delete"以删除此卷。
-.. 单击 * 删除 * 。
+.. 选择 * 删除 * 。
 
 
 

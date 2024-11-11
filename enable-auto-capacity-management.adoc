@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: enable-auto-capacity-management.html 
 keywords: auto capacity, automatic capacity management, file system capacity 
-summary: 通过启用此功能、Workload Factory可以在容量需求随时间变化时自动向FSx for ONTAP文件系统添加增量存储。 
+summary: 通过启用此功能、工作负载工厂可以在容量需求随时间变化时自动向FSx for ONTAP文件系统添加增量存储。 
 ---
-= 为文件系统启用自动容量管理
+= 为FSx for ONTAP文件系统启用自动容量管理
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-通过启用此功能、Workload Factory可以在容量需求随时间变化时自动向FSx for ONTAP文件系统添加增量存储。
+通过启用此功能、BlueXP  工作负载工厂可以在容量需求随时间变化时自动向FSx for ONTAP文件系统添加增量存储。
 
 .关于此任务
 只有一个帐户可以管理此功能。
@@ -19,18 +19,18 @@ summary: 通过启用此功能、Workload Factory可以在容量需求随时间�
 适用于ONTAP文件系统的所有FSx的最大SSD存储容量为524、288 GiB。要申请增加配额、请参见 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html["配额"^] AWS FSx for NetApp ONTAP文档中的。
 
 .开始之前
-要完成此任务、您必须在Workload Factory中具有具有_Automate权限的凭据。
+要完成此任务、您必须在工作负载工厂拥有具有_Automate权限的凭据。
 
 .步骤
-. 登录到工作负载出厂控制台。
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 在存储中，选择*转至存储清单*。
-. 在*FSx for FS* ONTAP选项卡中，单击文件系统的三个点菜单，为启用自动容量管理。
+. 在*FSx for FS* ONTAP选项卡中，选择文件系统的三点菜单，为启用自动容量管理。
 . 选择 * 管理 * 。
-. 在“Information (信息)”下，单击“*Automatic Capacity management (自动容量管理)”旁边的铅笔图标。当鼠标悬停在*Automatic Capacity management *行上时，下拉箭头旁边将显示铅笔图标。
+. 在“Information (信息)”下，选择“*Automatic Capacity management (自动容量管理)”旁边的铅笔图标。当鼠标悬停在*Automatic Capacity management *行上时，下拉箭头旁边将显示铅笔图标。
 . 在*自动容量管理*对话框中，提供以下内容：
 +
 .. *凭据*：从下拉菜单中选择具有_Autome_权限的凭据。
-.. 单击启用按钮以*启用自动容量管理*。
+.. 选择启用按钮以*启用自动容量管理*。
 +
 或者、也可以禁用此功能。如果需要增加文件系统容量、则必须先禁用自动容量管理。
 
@@ -38,5 +38,5 @@ summary: 通过启用此功能、Workload Factory可以在容量需求随时间�
 .. *容量增加增量*：输入以增量方式增加容量的百分比。
 
 
-. 单击 * 应用 * 。
+. 选择 * 应用 * 。
 

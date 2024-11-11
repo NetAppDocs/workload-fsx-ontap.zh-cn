@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: change-replication-schedule.html 
 keywords: change replication schedule, update replication schedule, edit replication schedule 
-summary: 更改复制关系中源卷的复制计划。 
+summary: 在BlueXP  Workload Factory中更改复制关系中源卷的复制计划。 
 ---
 = 更改源卷的复制计划
 :allow-uri-read: 
@@ -11,16 +11,16 @@ summary: 更改复制关系中源卷的复制计划。
 
 
 [role="lead"]
-更改复制关系中源卷的复制计划。
+在BlueXP  Workload Factory中更改复制关系中源卷的复制计划。
 
 选择将源卷中的快照传输到复制的卷的频率、以匹配所需的点目标(RPO)。
 
 .步骤
-. 登录到 link:https://console.workloads.netapp.com/["工作负载出厂控制台"^]
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 在存储中，选择*转至存储清单*。
-. 在*FSx for FS* ONTAP选项卡中，单击要更新的文件系统的三个点菜单，然后选择*Manage*。
+. 在*FSx for FS* ONTAP选项卡中，选择要更新的文件系统的三点菜单，然后选择*Manage*。
 . 从文件系统概述中，选择*复制关系*选项卡。
-. 在复制关系选项卡中、单击要更改的复制关系计划的三点菜单。
+. 在复制关系选项卡中、选择要更改的复制关系计划的三点菜单。
 . 选择*编辑复制间隔*。
 . 在编辑复制间隔对话框中、选择从源卷传输快照的频率。您可以选择以下频率：
 +
@@ -31,5 +31,5 @@ summary: 更改复制关系中源卷的复制计划。
 ** 每周
 
 
-. 单击 * 应用 * 。
+. 选择 * 应用 * 。
 

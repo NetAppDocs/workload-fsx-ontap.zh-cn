@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: create-volume-from-snapshot.html 
 keywords: create volume from snapshot, new volume 
-summary: 为FSx for ONTAP卷创建手动快照。快照是卷内容的时间点版本。 
+summary: 在BlueXP  工作负载出厂时为FSx for ONTAP卷创建手动快照。快照是卷内容的时间点版本。 
 ---
 = 从快照创建新的FSx for ONTAP卷
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 为FSx for ONTAP卷创建手动快照。快照是卷内容的时间点�
 
 
 [role="lead"]
-从快照创建新的FSx for ONTAP卷以启用时间点恢复。
+从BlueXP  工作负载出厂时的快照创建新的FSx for ONTAP卷、以启用时间点恢复。
 
 .关于此任务
 快照是指FSx for ONTAP卷在某个时间点创建的只读映像。从快照创建新卷后、无论卷大小如何、只需几秒钟即可创建整个卷的副本。新创建的副本表示新卷。
@@ -24,12 +24,12 @@ summary: 为FSx for ONTAP卷创建手动快照。快照是卷内容的时间点�
 
 
 .步骤
-. 登录到 link:https://console.workloads.netapp.com/["工作负载出厂控制台"^]
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 在存储中，选择*转至存储清单*。
-. 在*FSx for ONTAP选项卡中，单击包含卷快照的文件系统的三个点菜单，然后选择*Manage*。
+. 在*FSx for ONTAP选项卡中，选择包含卷快照的文件系统的三点菜单，然后选择*Manage*。
 . 在文件系统概述中，选择*Volumes*选项卡。
-. 在卷选项卡中、单击包含要创建卷的快照的卷对应的三个点菜单。
+. 在卷选项卡中、选择包含要创建卷的快照的卷的三点菜单。
 . 选择*数据保护操作*、*快照*、然后选择*从快照创建卷*。
 . 在"Create volume from a Snapshot "(从快照创建卷)对话框中、输入快照名称。
-. 单击 * 创建 * 。
+. 选择 * 创建 * 。
 

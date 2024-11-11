@@ -1,17 +1,17 @@
 ---
 sidebar: sidebar 
 permalink: create-file-system.html 
-keywords: create, FSx file system, ONTAP file system, Workload Factory, storage 
-summary: 使用Workload Factory、您可以创建适用于ONTAP文件系统的FSx、以添加和管理卷以及其他数据服务。 
+keywords: create, FSx file system, ONTAP file system, workload factory, storage 
+summary: 使用BlueXP  工作负载工厂、您可以创建适用于ONTAP文件系统的FSx、以添加和管理卷以及其他数据服务。 
 ---
-= 创建FSx for ONTAP文件系统
+= 在BlueXP  工作负载出厂时为ONTAP文件系统创建FSx
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-使用Workload Factory、您可以创建适用于ONTAP文件系统的FSx、以添加和管理卷以及其他数据服务。
+使用BlueXP  工作负载工厂、您可以创建适用于ONTAP文件系统的FSx、以添加和管理卷以及其他数据服务。
 
 .关于此任务
 创建文件系统时会创建Storage VM。
@@ -19,7 +19,7 @@ summary: 使用Workload Factory、您可以创建适用于ONTAP文件系统的FS
 .开始之前
 在创建FSx for ONTAP文件系统之前、您需要：
 
-* IAM角色的ARN、它为Workload Factory提供了创建FSx for ONTAP文件系统所需的权限。link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["了解如何为AWS帐户授予权限"^](英文)
+* IAM角色的ARN、为工作负载工厂提供创建FSx for ONTAP文件系统所需的权限。link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["了解如何为AWS帐户授予权限"^](英文)
 * 要为其创建 FSX for ONTAP 实例的区域和 VPC 信息。
 
 
@@ -39,7 +39,7 @@ NOTE: 使用来自CodeBox的Terraform时、您复制或下载的代码会隐藏 
 通过快速创建、您可以使用建议的最佳实践配置。创建FSx for ONTAP文件系统后、您可以更改大多数设置。
 
 .步骤
-. 登录到 link:https://console.workloads.netapp.com/["工作负载出厂控制台"^]
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 在存储中，选择*Create FSx for FS* ONTAP。
 . 在"Create FSx for ONTAP (创建FSx for Windows)"页面上、选择*快速创建*。
 +
@@ -47,7 +47,7 @@ NOTE: 使用来自CodeBox的Terraform时、您复制或下载的代码会隐藏 
 
 . 在文件系统常规配置下、提供以下内容：
 +
-.. *AWS凭据*：选择在Workload Factory中添加AWS凭据、或者在不使用凭据的情况下继续操作。
+.. *AWS凭据*：选择在工作负载出厂时添加AWS凭据、或在无凭据的情况下继续操作。
 .. *文件系统名称*：输入文件系统的名称。
 .. *部署拓扑*：选择部署拓扑。
 +
@@ -109,7 +109,7 @@ NOTE: 使用来自CodeBox的Terraform时、您复制或下载的代码会隐藏 
 使用Advanced create、您可以设置所有配置选项、包括可用性、安全性、备份和维护。
 
 .步骤
-. 登录到 link:https://console.workloads.netapp.com/["工作负载出厂控制台"^]
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 在存储中，选择*Create FSx for FS* ONTAP。
 . 在"Create FSx for ONTAP (创建FSx for Windows)"页面上、选择*高级创建*。
 +
@@ -117,7 +117,7 @@ NOTE: 使用来自CodeBox的Terraform时、您复制或下载的代码会隐藏 
 
 . 在文件系统常规配置下、提供以下内容：
 +
-.. *AWS凭据*：选择在Workload Factory中添加AWS凭据、或者在不使用凭据的情况下继续操作。
+.. *AWS凭据*：选择在工作负载出厂时添加AWS凭据、或在无凭据的情况下继续操作。
 .. *文件系统名称*：输入文件系统的名称。
 .. *部署拓扑*：选择部署拓扑。
 +

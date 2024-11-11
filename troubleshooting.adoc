@@ -4,7 +4,7 @@ permalink: troubleshooting.html
 keywords: troubleshooting, troubleshoot, help, issues 
 summary: Amazon FSx for NetApp ONTAP文档包含故障排除主题、供您参考。 
 ---
-= FSx for ONTAP故障排除
+= 在BlueXP  工作负载出厂时对FSx for ONTAP进行故障排除
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

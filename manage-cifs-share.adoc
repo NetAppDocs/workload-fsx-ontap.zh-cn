@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: manage-cifs-share.html 
+keywords: cifs, CIFS, cifs share, change cifs share, update cifs share, modify cifs share 
+summary: 在BlueXP  工作负载出厂时更改使用SMB/CCIFS协议类型的卷的CIFS共享。 
+---
+= 在BlueXP  工作负载出厂时管理卷的CIFS共享
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+在BlueXP  工作负载出厂时管理卷的CIFS共享涉及到确定要授予访问权限的用户和组以及授予它们的访问类型。
+
+.开始之前
+确定要授予访问权限的用户或组以及要授予它们的访问类型。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 在存储中，选择*转至存储清单*。
+. 在*FSx for FS* ONTAP选项卡中，选择包含要更新的卷的文件系统的三点菜单，然后选择*Manage*。
+. 从文件系统概述中，选择*Volumes*选项卡。
+. 从卷选项卡中、选择要更改的SMB共享的卷的三点菜单。
+. 选择*高级操作*，然后选择*编辑CIFS共享*。
+. 在编辑CIFS共享页面上、提供以下内容：
++
+.. *用户或组*：输入有效的用户和组。用分号";"分隔每个条目。
+.. *权限*：选择*完全控制*、*读/写*、*读*或*无访问*。
+
+
+. 选择 * 应用 * 。
+

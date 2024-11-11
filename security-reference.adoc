@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: security-reference.html 
 keywords: security, data protection, IAM, file system access control, vpc 
-summary:  
+summary: Amazon FSx for NetApp ONTAP文档提供了以下安全主题供您参考。 
 ---
-= FSx for ONTAP的安全性
+= BlueXP  工作负载工厂中FSx for ONTAP的安全性
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

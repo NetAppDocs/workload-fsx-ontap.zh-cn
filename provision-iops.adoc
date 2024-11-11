@@ -11,23 +11,23 @@ summary: 为适用于ONTAP文件系统的FSx自动配置或手动配置SSD IOPS�
 
 
 [role="lead"]
-为适用于ONTAP文件系统的FSx自动配置或手动配置SSD IOPS。
+在BlueXP  工作负载工厂为适用于ONTAP文件系统的FSx自动配置或手动配置SSD IOPS。
 
 .关于此任务
 您可以为FSx文件系统启用SSD IOPS自动配置、也可以手动配置IOPS。
 
-自动配置的IOPS按每GiB 3次IOPS计算。
+自动配置的IOPS计算为每GiB 3次IOPS。
 
-如果手动配置IOPS，则可能需要先增加IOPS，然后才能执行此操作 link:increase-file-system-capacity.html["增加文件系统容量"]。
+如果手动配置IOPS，则可能需要在之前增加IOPSlink:increase-file-system-capacity.html["增加文件系统容量"]。
 
-有关IOPS限制、请参阅 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html["配额"^] AWS FSx for NetApp ONTAP文档中的。
+有关IOPS限制的信息、请参阅link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html["配额"^]AWS FSx for NetApp ONTAP文档中的。
 
 .步骤
-. 登录到工作负载出厂控制台。
-. 在存储中，单击*转至存储清单*。
-. 在*FSx for IOP*选项卡中，单击要配置ONTAP的文件系统的三个点菜单，然后选择*Manage*。
-. 在"Information"(信息)下，单击*IOPS分配*旁边的铅笔图标。当鼠标悬停在*IOPS分配*行上时，铅笔图标显示在下拉箭头旁边。
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 在存储中，选择*转至存储清单*。
+. 在*FSx for IOP*选项卡中，选择要配置ONTAP的文件系统的三点菜单，然后选择*Manage*。
+. 在"Information"(信息)下、选择鼠标悬停在*IOPS分配*行上时显示在下拉箭头旁边的铅笔图标。
 . 在Provisioned IOPS对话框中、选择*自动*或*用户配置*。
-. 如果选择*用户配置*，请输入* IOPS值*。
-. 单击 * 应用 * 。
+. 如果选择*用户配置*，请输入所需的*IOPS值*。
+. 选择 * 应用 * 。
 

@@ -2,25 +2,25 @@
 sidebar: sidebar 
 permalink: delete-replication.html 
 keywords: delete replication 
-summary: 根据需要删除复制关系。 
+summary: 根据需要在BlueXP  工作负载出厂时删除复制关系。 
 ---
-= 删除复制关系
+= 在BlueXP  工作负载出厂时删除复制关系
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-删除复制关系时、它会删除源卷与目标卷之间的复制关系。删除复制关系后、这两个卷将继续与它们所含的当前数据独立存在。
+在BlueXP  工作负载出厂时删除复制关系。删除复制关系时、它会删除源卷与目标卷之间的复制关系。删除复制关系后、这两个卷将继续与它们所含的当前数据独立存在。
 
 删除复制关系时、FSx for ONTAP还会删除源卷和目标卷的通用复制快照。
 
 .步骤
-. 登录到 link:https://console.workloads.netapp.com/["工作负载出厂控制台"^]
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 在存储中，选择*转至存储清单*。
-. 在*FSx for FS* ONTAP选项卡中，单击要更新的文件系统的三个点菜单，然后选择*Manage*。
+. 在*FSx for FS* ONTAP选项卡中，选择要更新的文件系统的三点菜单，然后选择*Manage*。
 . 从文件系统概述中，选择*复制关系*选项卡。
-. 在复制关系选项卡中、单击要删除的复制关系的三点菜单。
+. 在复制关系选项卡中、选择要删除的复制关系的三点菜单。
 . 选择 * 删除 * 。
-. 在“删除关系”对话框中，单击*Delete*。
+. 在“删除关系”对话框中，选择*Delete*。
 

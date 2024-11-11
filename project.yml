@@ -86,16 +86,16 @@ sidebar:
         url: "/edit-volume-autogrow.html"
       - title: 增加卷容量
         url: "/increase-volume-capacity.html"
-      - title: 编辑卷标记
-        url: "/edit-volume-tags.html"
+      - title: 管理卷标记
+        url: "/manage-volume-tags.html"
       - title: 重新平衡卷的容量
         url: "/rebalance-volume.html"
       - title: 更改分层策略
         url: "/change-tiering-policy.html"
-      - title: 更改NFS导出策略
-        url: "/change-nfs-export-policy.html"
-      - title: 更改CIFS共享
-        url: "/change-cifs-share.html"
+      - title: 管理NFS导出策略
+        url: "/manage-nfs-export-policy.html"
+      - title: 管理CIFS共享
+        url: "/manage-cifs-share.html"
       - title: 拆分克隆的卷
         url: split-cloned-volume.html
       - title: 删除卷
@@ -116,8 +116,8 @@ sidebar:
         url: "/replicate-svm-to-file-system.html"
       - title: 配置和更新Storage VM的Active Directory
         url: "/configure-active-directory.html"
-      - title: 编辑Storage VM标记
-        url: "/edit-svm-tags.html"
+      - title: 管理Storage VM标记
+        url: "/manage-svm-tags.html"
       - title: 重置Storage VM密码
         url: reset-svm-password.html
       - title: 删除Storage VM
@@ -126,8 +126,8 @@ sidebar:
       entries:
       - title: 更改卷的Snapshot策略
         url: change-snapshot-policy.html
-      - title: 更新FSx for ONTAP备份计划
-        url: "/update-backup-schedule.html"
+      - title: 管理FSx for ONTAP备份计划
+        url: "/manage-backup-schedule.html"
       - title: 启用和编辑快照以进行长期保留
         url: "/enable-snapshots-long-term.html"
       - title: 反转复制关系
@@ -165,5 +165,5 @@ sidebar:
   - title: 法律声明
     url: "/legal-notices.html"
 product-family:
-  name: BlueXP Workload Factory for AWS
+  name: BlueXP workload factory
   repo: workload-family
