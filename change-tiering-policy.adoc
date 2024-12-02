@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: change-tiering-policy.html 
-keywords:  
+keywords: tiering policy, change tier, change tiers, tier policy update 
 summary: 在BlueXP  工作负载出厂时更改分层策略、以便将数据从高性能主存储层重新分配到二级容量池存储层。 
 ---
 = 在BlueXP  工作负载出厂时更改卷的层策略

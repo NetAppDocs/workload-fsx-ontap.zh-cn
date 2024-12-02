@@ -62,11 +62,11 @@ _Auto_是使用工作负载工厂FSx for ONTAP用户界面创建卷时的默认�
 如果启用长期保留、请选择现有策略或创建新策略以定义要复制的快照以及要保留的数量。
 
 +
-... 对于*Choose an existing policy*，从下拉菜单中选择一个现有策略。
-... 对于*Create a new policy*，请提供以下内容：
+*** 对于*Choose an existing policy*，从下拉菜单中选择一个现有策略。
+*** 对于*Create a new policy*，请提供以下内容：
 +
-.... *策略名称*：输入策略名称。
-.... *Snapshot策略*：在表中，选择快照策略频率和要保留的副本数。您可以选择多个快照策略。
+**** *策略名称*：输入策略名称。
+**** *Snapshot策略*：在表中，选择快照策略频率和要保留的副本数。您可以选择多个快照策略。
 
 
 
@@ -93,7 +93,7 @@ _Auto_是使用工作负载工厂FSx for ONTAP用户界面创建卷时的默认�
 +
 _Auto_是使用工作负载工厂FSx for ONTAP用户界面创建卷时的默认分层策略。有关卷分层策略的详细信息、请参阅 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["卷存储容量"^]AWS FSx for NetApp ONTAP文档中的。
 
-.. *最大传输速率*：选择*受限*并输入最大传输速率(MB/秒)或者，选择*Unlimited (无限制)*。
+.. *最大传输速率*：选择*受限*并输入最大传输限制(单位：MiB/秒)或者，选择*Unlimited (无限制)*。
 +
 如果没有限制、网络和应用程序性能可能会下降。或者、对于关键工作负载(例如、主要用于灾难恢复的工作负载)、我们建议对用于ONTAP文件系统的FSx使用无限传输速率。
 
@@ -107,11 +107,11 @@ _Auto_是使用工作负载工厂FSx for ONTAP用户界面创建卷时的默认�
 如果启用长期保留、请选择现有策略或创建新策略以定义要复制的快照以及要保留的数量。
 
 +
-... 对于*Choose an existing policy*，从下拉菜单中选择一个现有策略。
-... 对于*Create a new policy*，请提供以下内容：
+*** 对于*Choose an existing policy*，从下拉菜单中选择一个现有策略。
+*** 对于*Create a new policy*，请提供以下内容：
 +
-.... *策略名称*：输入策略名称。
-.... *Snapshot策略*：在表中，选择快照策略频率和要保留的副本数。您可以选择多个快照策略。
+**** *策略名称*：输入策略名称。
+**** *Snapshot策略*：在表中，选择快照策略频率和要保留的副本数。您可以选择多个快照策略。
 
 
 
@@ -124,4 +124,4 @@ _Auto_是使用工作负载工厂FSx for ONTAP用户界面创建卷时的默认�
 --
 ====
 .结果
-复制关系将显示在*复制关系*选项卡中。
+复制关系显示在目标FSx for ONTAP文件系统的*复制关系*选项卡中。

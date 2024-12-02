@@ -23,8 +23,6 @@
   <block id="f76864e1c2588ae3d6373b6ab95e2209" category="list-text">从文件系统概述中，选择*Volumes*选项卡。</block>
   <block id="2ca869b68be8f2b6e678f47d25c26fb7" category="list-text">选择*高级操作*，然后选择*编辑CIFS共享*。</block>
   <block id="736934ebc3ee8de296f3d5213e79430e" category="list-text">在编辑CIFS共享页面上、提供以下内容：</block>
-  <block id="59d0fdf4151cde9e812dd005074026a6" category="list-text">*用户或组*：输入有效的用户和组。用分号";"分隔每个条目。</block>
-  <block id="e57960b090437945cad74087551739a4" category="list-text">*权限*：选择*完全控制*、*读/写*、*读*或*无访问*。</block>
   <block id="bbe48fb854ea022537208eeeff822f91" category="paragraph-title">关于此任务</block>
   <block id="4c9aa322b281bc41d9f93e03b1223838" category="paragraph">确定导出策略规则的客户端规格。客户端规范的有效值如下：</block>
   <block id="1d9e509ddb93a176b7d369a91ad7deaf" category="list-text">IP 地址</block>
@@ -221,7 +219,6 @@
   <block id="c2ca79898f24b0041abe0a50f8a67aec" category="open-title">复制文件系统中的所有卷</block>
   <block id="932ea72af08ac8563c34e80a7a85d205" category="list-text">从文件系统概述中，选择*创建复制*。</block>
   <block id="8642bd9871818efa86fdfbc89b47d7fe" category="list-text">*卷名*：目标卷名称将自动生成，格式如下<block ref="4b5beb37da0fa6444b7f9f92238aadb1" prefix=" " category="inline-code"></block>。</block>
-  <block id="27178687718ce0fb69f45347b32592a7" category="paragraph">复制关系将显示在*复制关系*选项卡中。</block>
   <block id="a008632064f344e2df83272a479135d3" category="doc">为FSx for ONTAP卷创建Snapshot策略</block>
   <block id="8044f667bde3c7c59b4115402b5eaf0b" category="paragraph">您可以为FSx for ONTAP创建与三个内置快照策略不同的自定义快照策略：</block>
   <block id="980ef1c1aa7d1456ee087df02119341e" category="list-text"><block ref="c21f969b5f03d33d43e04f8f136e7682" prefix="" category="inline-code"></block></block>
@@ -284,8 +281,6 @@
   <block id="60d0b377e23eff27c022e227c86f5dd8" category="paragraph">如果选择了自定义导出策略、请从下拉菜单中选择现有策略名称。</block>
   <block id="2c55176e07be69c565e1c2c03d514cf2" category="paragraph">如果选择了现有导出策略、请输入新的策略名称。</block>
   <block id="6925697406a52f10c0897464bf6b8ce9" category="list-text">*添加导出策略规则*：对于自定义导出策略、您可以选择向策略中添加导出策略规则。</block>
-  <block id="88d72087f7214769d97c6467f6f5c337" category="list-text">*CIFS share*：输入CIFS共享名称以提供SMB访问。</block>
-  <block id="002f70daceb1af048541c69bc0b3c655" category="list-text">*块访问*：允许运行关键业务应用程序的主机使用iSCSI协议访问卷。</block>
   <block id="40519cf86659d77977d5ff7930ae23e0" category="paragraph">填写以下字段以设置对卷的块访问。</block>
   <block id="03ddda000e99a192f6ff8b3f46b455d2" category="list-text">*iSCSI配置*：提供以下详细信息以配置iSCSI以对卷进行块访问。</block>
   <block id="15a68f4c283396b684880bba6f9b33b2" category="list-text">选择*创建新启动程序组*或*映射现有启动程序组*。</block>
@@ -398,7 +393,6 @@
   <block id="d2a6652ddeb631da029d1f2806e11fdc" category="open-title">Amazon El生 性文件系统(EFS)</block>
   <block id="7a81b7e66c9f8ac505d461aa77e680ed" category="list-text">在存储中，选择*浏览节省量*，然后选择*Amazon El生 性文件系统(EFS)*。</block>
   <block id="6a882e9e3ebbb1d673beb5404c763122" category="paragraph">提供存储系统配置的详细信息后、请查看页面上提供的计算结果和建议。</block>
-  <block id="224be392ef5d5444786fa1dea246184d" category="paragraph">此外，向下滚动到页面底部至*导出PDF*或*查看计算结果*。</block>
   <block id="aca77c97dcf29f670f572a7129863195" category="section-title">部署FSx for ONTAP文件系统</block>
   <block id="f31ed490fd3768dff2a1121a0a06095c" category="list-text">部署方法</block>
   <block id="543b29a63a3d070c0ff920d687259dfc" category="paragraph">在_BASIC模式下、您可以从CodeBox窗口复制内容、并使用其中一种CodeBox方法部署FSx for ONTAP文件系统。</block>
@@ -502,9 +496,6 @@
   <block id="18e73e557ecb75c57d1d16ca781cbfbe" category="list-text">选择*初始化*。</block>
   <block id="1eba71d64e6c5e410e558530711e835b" category="summary">已知限制确定了本产品版本不支持的平台、设备或功能、或者这些平台、设备或功能无法与产品正确交互操作。仔细审查这些限制。</block>
   <block id="482723983a4f2af954e36ff41e567451" category="doc">已知限制</block>
-  <block id="97e7c9a7d06eac006a28bf05467fcc8b" category="section-title">链路</block>
-  <block id="fd18465573ec21a6218982055981f6b1" category="section-title">存储效率</block>
-  <block id="573994bf2d443bf682f6d3d34a979de0" category="paragraph">创建卷后、无法禁用或启用存储效率。</block>
   <block id="488044172f20eab904aecc2827c019b4" category="section-title">吞吐量容量区域支持</block>
   <block id="0a27e957ebaf89bce02c66c147da7966" category="section-title">纵向扩展部署</block>
   <block id="24aa3b91eee064e4bbffa941e071bd95" category="paragraph">以下地区支持纵向扩展部署的最大吞吐量高达4 GB/秒：美国东部(俄亥俄州)地区、美国东部(弗吉尼亚)地区、美国西部(俄勒冈)地区和欧洲(爱尔兰)。</block>
@@ -517,7 +508,6 @@
   <block id="2204b0f79985b7b0565114e8305937a5" category="section-title">Storage VM</block>
   <block id="b1c8cb58e124bead4ca2e09fa1c20c9b" category="paragraph">有关每个文件系统的最大SVM数量、请参见 <block ref="17ef0d7491a925205e8443311f7ef122" category="inline-link-macro-rx"></block> AWS文档中的。</block>
   <block id="3a448e496404b548627a97fc00da8e23" category="section-title">iSCSI协议支持</block>
-  <block id="33060a985f3ea357dedca3b638c9dedc" category="list-text">只有纵向扩展部署才支持iSCSI协议。^1^</block>
   <block id="53c858a11ae23c19aee107fb913f096a" category="list-text">每个卷只能配置一个LUN。</block>
   <block id="044dbc650d6316ed90f739b69dfff7ee" category="section-title">区域支持</block>
   <block id="1bf3a4f06c8408a2ff436e0b847ca3a3" category="list-text">目前不支持加拿大西部(卡尔加里)地区。</block>
@@ -574,14 +564,6 @@
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
   <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">开放源代码</block>
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">通知文件提供有关 NetApp 软件中使用的第三方版权和许可证的信息。</block>
-  <block id="22e5a7336ebe77138f0282cedcb069ab" category="inline-link">工作负载工厂</block>
-  <block id="7ffcbeca3b450b8d05f9cf0eedb617f8" category="list-text"><block ref="7ffcbeca3b450b8d05f9cf0eedb617f8" category="inline-link-rx"></block></block>
-  <block id="887f800d53dc2cd5a7894464a6f60a6b" category="inline-link">数据库的工作负载工厂</block>
-  <block id="7e505d4c691d86e5bd415f9ccb849966" category="list-text"><block ref="7e505d4c691d86e5bd415f9ccb849966" category="inline-link-rx"></block></block>
-  <block id="9591e2d54c998ae1c9d48fd5be7762e9" category="inline-link">适用于GenAI的工作负载工厂</block>
-  <block id="f38c7416013fc239c3dd3288d40a40c0" category="list-text"><block ref="f38c7416013fc239c3dd3288d40a40c0" category="inline-link-rx"></block></block>
-  <block id="404a5efb62a3a3f22b02593091042608" category="inline-link">适用于VMware的工作负载工厂</block>
-  <block id="9a211183d3fa82368d76fdbab5abdeda" category="list-text"><block ref="9a211183d3fa82368d76fdbab5abdeda" category="inline-link-rx"></block></block>
   <block id="c2afadd6bca5968317f2f7f1a7e37514" category="doc">限制复制关系的最大传输速率</block>
   <block id="091ab8de8bd05d3d281793c55240d887" category="paragraph">限制最大传输速率是可选的、但建议这样做。如果没有限制、网络和应用程序性能可能会下降。</block>
   <block id="4cb1e25c015161bf2183f7f8af361d6a" category="paragraph">或者、对于关键工作负载(例如、主要用于灾难恢复的工作负载)、我们建议对用于ONTAP文件系统的FSx使用无限传输速率。</block>
@@ -1209,4 +1191,111 @@
   <block id="baae6cbba4c997ef4c9035394e7dbd9e" category="sidebar">管理CIFS共享</block>
   <block id="11c0aa7596d4f4521c9a98f708c34cc4" category="sidebar">管理Storage VM标记</block>
   <block id="e4b304b6d81189c09bd7e999a18522e8" category="sidebar">管理FSx for ONTAP备份计划</block>
+  <block id="c4f10a04f7aa75535a8a0475261393eb" category="doc">适用于ONTAP文件系统的横向扩展FSx的块存储</block>
+  <block id="152983842f852ef5bae46ac675caec95" category="paragraph">现在、如果使用的是最多包含6个HA对的横向扩展文件系统部署、则可以通过FSx for ONTAP配置块存储。</block>
+  <block id="8cce6f6c21973d5dff1898076cddb209" category="paragraph"><block ref="8cce6f6c21973d5dff1898076cddb209" category="inline-link-macro-rx"></block></block>
+  <block id="609b2d9256f15ecb9d57d3f545d91174" category="section-title">可使用mount命令</block>
+  <block id="67ba5d91692276a76737790f2df885ec" category="paragraph">现在、可以使用挂载命令通过NFS和CIFS访问卷。您可以通过依次选择*Basic Actions*和*view mount command*来获取FSx for ONTAP文件系统中卷的挂载点。</block>
+  <block id="f12470a0bbf95a722b70847640bd40c9" category="inline-image-macro">屏幕截图、显示了如何查看挂载命令、方法是进入FSx for ONTAP文件系统、选择卷菜单、选择基本操作、然后选择查看挂载命令。此时将显示mount命令对话框、并显示用于CIFS或NFS访问的mount命令。</block>
+  <block id="21817bf964617ea4f875252102707119" category="paragraph"><block ref="21817bf964617ea4f875252102707119" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="0087bca38db021c2b14c65d5893a9339" category="inline-link-macro">卷的view mount命令</block>
+  <block id="41cd808fdcb8411a8a73071649aca98e" category="paragraph"><block ref="41cd808fdcb8411a8a73071649aca98e" category="inline-link-macro-rx"></block></block>
+  <block id="70bf70871888ae321ee591627f1f149f" category="section-title">创建卷后更新存储效率</block>
+  <block id="4b1987aeb3ee9f5859457d872de9697a" category="paragraph">现在、您可以在创建卷后为FlexVol卷启用或禁用存储效率。存储效率包括重复数据删除、数据压缩和数据缩减。启用存储效率有助于在FlexVol volume上实现最佳空间节省。</block>
+  <block id="b8ae90ddbb68f3303ee755cd1d9b5819" category="inline-link-macro">更新卷的存储效率</block>
+  <block id="d26d51c8a86d1db1cfe8dd0317cc6274" category="paragraph"><block ref="d26d51c8a86d1db1cfe8dd0317cc6274" category="inline-link-macro-rx"></block></block>
+  <block id="aadb8a2a44b75c1333f5a52c2ceb1516" category="section-title">内部ONTAP集群发现和复制</block>
+  <block id="490a30e9496a9d55f2cfdb934812658b" category="paragraph">发现内部ONTAP集群数据并将其复制到FSx for ONTAP文件系统、以便用于丰富AI知识库。所有内部发现和复制工作流均可从存储清单中新的*内部ONTAP *选项卡访问。</block>
+  <block id="c6f905e067bdaa7ba33a58a907e59477" category="inline-link-macro">发现内部 ONTAP 集群</block>
+  <block id="b169507cd10826b5a52f573e2f75ad2c" category="paragraph"><block ref="b169507cd10826b5a52f573e2f75ad2c" category="inline-link-macro-rx"></block></block>
+  <block id="67e962050c9494ada1eab84c21826e3c" category="section-title">AWS凭据可改进节省量计算器分析</block>
+  <block id="81e738c909aeee7a4a781716391eae27" category="paragraph">现在、您可以选择从节省量计算器添加AWS凭据。与FSx for ONTAP相比、添加凭据可以提高Amazon El生 性块存储、El生 性文件系统和FSx for Windows文件服务器存储环境的节省量计算器分析的准确性。</block>
+  <block id="f98d47c0920e02232d981da56f082627" category="paragraph"><block ref="f98d47c0920e02232d981da56f082627" category="inline-link-macro-rx"></block></block>
+  <block id="9d16201337a7183b0ef0f80fcb36b5c2" category="paragraph">您还可以获取BlueXP  工作负载出厂时卷的挂载点。</block>
+  <block id="81433468b8608aba73a2350afe41ac5a" category="section-title">获取BlueXP  工作负载工厂中卷的挂载点</block>
+  <block id="06e52dae2c3e09e69a906c2fba89ed66" category="paragraph">获取卷在CIFS共享或NFS客户端上挂载共享的挂载点。</block>
+  <block id="4a6574ab96645d28cf548ed8372c655c" category="list-text">从卷选项卡中，选择卷的三点菜单，然后依次选择*Basic Actions*和*View mount command*。</block>
+  <block id="bd95ac5b25f35af153096a48803b03b4" category="list-text">在挂载命令对话框中，选择*Copy*以复制命令。您将在终端中输入复制的命令。</block>
+  <block id="4a553bf9ebe9a32a6743c78be912cfbc" category="list-text">选择 * 关闭 * 。</block>
+  <block id="0206587910cd5147f80c048ba00193af" category="paragraph">要在文件系统上配置iSCSI块卷、请选择不超过6个HA对。</block>
+  <block id="f3b270238d8c3f46a0b10d724c916e7d" category="list-text">*最大传输速率*：选择*受限*并输入最大传输限制(单位：MiB/秒)或者，选择*Unlimited (无限制)*。</block>
+  <block id="5ef8b0a1c66a4b2210971848d2ce9752" category="paragraph">复制关系显示在目标FSx for ONTAP文件系统的*复制关系*选项卡中。</block>
+  <block id="c866bd28f46aae4b063d835d59832e65" category="list-text">*CIFS共享*：提供以下内容：</block>
+  <block id="fbd8f4b666e0f634caa63d615cae9514" category="list-text">*名称*：输入CIFS共享名称以提供SMB访问。</block>
+  <block id="a0eaddecd9cba85df3eb61984ad9d41b" category="list-text">*权限*：选择“完全控制”、“读/写”、“读取”或“无访问权限”，然后输入用户或组，以分号(;)分隔。用户或组区分大小写、必须使用"域\用户名"格式包含用户的域。</block>
+  <block id="a1e344db18a7a956afd7ebcb57bcefa2" category="list-text">*块访问*：允许运行关键业务应用程序的主机使用iSCSI协议访问卷。只有当文件系统横向扩展部署包含6个或更少的HA对时、才能使用块访问。</block>
+  <block id="388660e21a97a90db2571da848fc61df" category="inline-link-macro">添加AWS凭据</block>
+  <block id="df33a8a514c43741a17399e9c12a0427" category="paragraph">此外、您还可以<block ref="10c34fa86244e9acc4f29a59fb8b09f7" category="inline-link-macro-rx"></block>提高计算器分析的准确性。选择*根据现有资源计算节省量*。您将被重定向到添加凭据页面。添加凭据后、请选择要与FSx for ONTAP进行比较的现有资源、然后选择*探索节省量*。</block>
+  <block id="914666cc05a2f50a3cbff56ab4c0d87c" category="paragraph">此外、通过选择以下选项之一向下滚动到页面底部以查看报告：</block>
+  <block id="037fbb0239239f2168489bba99e09b67" category="list-text">*导出PDF*</block>
+  <block id="10acfa1cd5e4b3b5f4da60bba2257672" category="list-text">*通过电子邮件发送*</block>
+  <block id="3902a76bb589f831b404ce1ec9865654" category="list-text">*查看计算结果*</block>
+  <block id="01887ff057face34cde00a98753d7347" category="section-title">高级ONTAP操作需要链接</block>
+  <block id="428b0b39be2352757edeb5f9f12a7bdd" category="inline-link">BlueXP  工作负载工厂</block>
+  <block id="7cf449620aa459bc5c449db69b07e507" category="paragraph"><block ref="7cf449620aa459bc5c449db69b07e507" category="inline-link-rx"></block></block>
+  <block id="a32b59044667570495820281f09cfa10" category="list-text">*名称*：输入CIFS共享的名称。</block>
+  <block id="a983c99827c51cfd1ffcfd3882536018" category="list-text">选择应用。</block>
+  <block id="aa6a9af5d2170a7e2225e0d97aefef52" category="paragraph">更改可能会导致当前用户或组无法访问CIFS共享。</block>
+  <block id="e58fa167b6770841b720711ad8a12b1a" category="list-text">选择*继续*以保存更改。</block>
+  <block id="f6db14d0bad35a9b610208b53b06c1ca" category="paragraph">此时将应用对CIFS共享所做的更改。</block>
+  <block id="8772abd9ec2ca5593300708cb88b5426" category="summary">在BlueXP  工作负载出厂时、您可以在创建卷后更新存储效率设置。</block>
+  <block id="b31795226510baf520db5a5e2287b56e" category="doc">更新卷的存储效率设置</block>
+  <block id="07834469705cb1cae603dc37fac50539" category="paragraph">存储效率功能包括重复数据删除、数据压缩和数据缩减、可在FlexVol volume上实现最佳空间节省。重复数据删除可消除重复的数据块。数据压缩可压缩数据块，以减少所需的物理存储量。数据缩减可在更少的空间中存储更多数据，以提高存储效率。</block>
+  <block id="6949ed855da826654fa3e3a2e2a18279" category="paragraph">如果您在创建卷时选择不启用存储效率、则可以随时启用此设置、以节省潜在的空间和成本。</block>
+  <block id="3561512c31eaec9705db4d98de971d93" category="paragraph">无论您启用还是禁用存储效率、卷都会使用精简配置。</block>
+  <block id="b3f2ba455947e37d7a336d7b339ee3cf" category="list-text">选择*高级操作*，然后选择*设置存储效率*。</block>
+  <block id="fc86913f9636c03cbcbb4e3e03d4b332" category="list-text">选择启用或禁用卷存储效率。</block>
+  <block id="b755b7c9e5db773b9578d24d7b40b61d" category="list-text">选择*Apply*以保存更改。</block>
+  <block id="4b5106453aabbf759975ebe8415f9dca" category="summary">在BlueXP  工作负载工厂中发现和复制内部ONTAP数据、以便用于丰富AI知识库。</block>
+  <block id="bbe131cae781cb02f20f1bff02911991" category="doc">在BlueXP  工作负载工厂中使用内部ONTAP集群数据</block>
+  <block id="124cb3fd3d0a35a1abf1c0f90f37e8a9" category="paragraph">要使用内部ONTAP集群中的数据、您首先需要发现内部ONTAP集群。发现内部ONTAP集群后、您可以在以下任何使用情形中使用这些数据。</block>
+  <block id="2a3b399798aa16ecfbc1425cc560bfad" category="list-text">使用情形</block>
+  <block id="ef63a3d009f11deff50f4dc327b32173" category="list-text">请注意、这一系列任务的重点是GenAI工作负载的主要用例。</block>
+  <block id="809c357d304bbfa1cd4446574b270af8" category="inline-link-macro">丰富AI知识库</block>
+  <block id="9cce19ad5b8f6c533905f11c61df97c8" category="list-text">*GenAI工作负载*：将内部部署的ONTAP卷数据复制到FSx for ONTAP文件系统中，以便可以将这些数据用于<block ref="f591db1a99ea9ae06218a2a67c7815b6" category="inline-link-macro-rx"></block>。</block>
+  <block id="f15192f8afdcf438f7b1ccf0cda2b436" category="list-text">*备份和迁移到云*：复制到FSx for ONTAP文件系统的内部ONTAP卷数据可用作云中的备份。</block>
+  <block id="5b5a84720ff8905504e8a45fbc52fb73" category="list-text">*数据分层*：复制后、不常访问的内部ONTAP卷数据可以从SSD存储层分层到容量池存储层。</block>
+  <block id="0fd8af6af12775b851e6156334372818" category="paragraph">在BlueXP  工作负载工厂中发现内部ONTAP集群、以便将数据复制到Amazon FSx for NetApp ONTAP文件系统。</block>
+  <block id="4185f116d64b1130e6f9ba4250b147fa" category="paragraph">开始之前、请确保您已具备以下条件：</block>
+  <block id="7e496dd07644d2f06f315e4fa164cc69" category="list-text">用于复制的FSx for ONTAP文件系统。</block>
+  <block id="165a2e236f1aabd383e31c0b94f74338" category="inline-link-macro">创建一个</block>
+  <block id="96c11fa75af4ee186742d94b8c4312d1" category="list-text">要与发现的内部集群关联的已连接链路。如果没有链接，则需要<block ref="fde76afbe668994cedb59a1786140b8f" category="inline-link-macro-rx"></block>。</block>
+  <block id="d9475c746638e60d2b7ab26ca255f52c" category="list-text">具有所需权限的ONTAP用户凭据。</block>
+  <block id="08964fe3be5deba1b9687a253e630608" category="list-text">内部ONTAP 9.8及更高版本。</block>
+  <block id="23850e6cb293edf3ae576c2cd44e4966" category="list-text">连接、如下图所示。</block>
+  <block id="83e32e548e13c6454cf00928e1e27eec" category="inline-image-macro">屏幕截图、显示应如何将内部ONTAP集群连接到Amazon Web Services Cloud的管理路径和数据路径</block>
+  <block id="ee8491e0fa59a945f11048b87d7cde35" category="paragraph"><block ref="ee8491e0fa59a945f11048b87d7cde35" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="9528f87db447698374dc42a5acad7283" category="list-text">选择*内部部署ONTAP *选项卡。</block>
+  <block id="6717014f0e48b7ab08c9846925b42c93" category="list-text">选择*发现*。</block>
+  <block id="4df09781d0339837ee9af988af1317c6" category="list-text">查看前提条件并选择*Next*。</block>
+  <block id="a94ba7c755ae23b126e888fda5f83d7b" category="list-text">在"Discover ONTAP On-sremises (发现内部部署)"页面上、在*集群配置*下提供以下内容：</block>
+  <block id="a256638e063d95d3879716a329eda540" category="list-text">*链接*：选择链接。该链路将与内部集群关联、以便在集群和工作负载工厂之间建立连接。</block>
+  <block id="db442d2f15cc5ca62b25c302ecc39e4d" category="paragraph">如果尚未创建链接、请按照说明进行操作、然后返回到此操作并选择此链接。</block>
+  <block id="d6c619de487035b86fe99726a4142c96" category="list-text">*集群IP地址*：提供要复制的内部ONTAP集群的IP地址。</block>
+  <block id="5284e36227d3576d0531d813669d810f" category="list-text">* ONTAP credenties*：输入内部ONTAP集群的ONTAP凭据。确保用户具有所需的权限。</block>
+  <block id="10f4ba1588812227f6775ff4cdd8731a" category="list-text">选择*Discover (发现)*以启动发现过程。</block>
+  <block id="9107799f71b772409d2dda6a954c2b55" category="paragraph">发现内部ONTAP集群后、此集群将显示在*内部部署ONTAP *选项卡中。</block>
+  <block id="c0bb7503a06a72052adfacae53dc8968" category="inline-xref">将数据复制到FSx for ONTAP文件系统</block>
+  <block id="d8656001c9a7903c7967c4f00f9dd267" category="paragraph">现在，您可以查看内部ONTAP集群和中的数据<block ref="21efd3440e5c8575cf2acdff77601bf0" category="inline-xref-macro-rx"></block>。</block>
+  <block id="f4a663f98fdbf7294b4d7065fe81028d" category="section-title">从内部ONTAP集群复制卷数据</block>
+  <block id="99f4cb77b09904f65d27606598e1d1d2" category="paragraph">将卷数据从内部ONTAP集群复制到FSx for ONTAP文件系统。复制后、可以使用这些数据丰富AI知识库。</block>
+  <block id="a979d07ec6790355c195ac942aac0f7a" category="list-text">您必须发现内部ONTAP集群才能复制其卷数据。</block>
+  <block id="bbaf3e2bb6ee0562252678dc510975b4" category="list-text">要将适用于ONTAP文件系统的FSx作为复制目标、您必须具有一个可用FSx。</block>
+  <block id="5fc398b3211d605127c144291f3eda23" category="list-text">内部ONTAP集群和用于复制关系的FSx for ONTAP文件系统都必须具有关联的链接。如果一个或两个内置集群和FSx for ONTAP集群都没有现有链路，<block ref="1bb172d13e94db502d24bfc1c5a4fc0a" category="inline-link-macro-rx"></block>。要<block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>在文件系统中，选择*Account name*下的*Associate*链接。在内部ONTAP集群和FSx for ONTAP文件系统中关联链路后、返回此操作。</block>
+  <block id="aea1c4ebf571d37a1b92fbbf08a1d97c" category="list-text">要按Storage VM查找卷、您可以从下拉列表中*选择Storage VM*。</block>
+  <block id="e03b6f62981f4a86c7a1c627e22e63e8" category="list-text">选择一个或多个要复制的卷、然后选择*复制*。</block>
+  <block id="72106a023ea21862c78ae92b6102ff34" category="list-text">*分层数据*：为目标卷中存储的数据选择分层策略。</block>
+  <block id="5f80f89e32023b75a946369589efc7db" category="list-text">*Auto*：使用工作负载工厂FSx for ONTAP用户界面创建卷时的默认分层策略。在特定时间段内将所有冷数据(包括用户数据和快照)分层到容量池存储层。</block>
+  <block id="606156d99b6306c9a4135ba1dbe3f5e8" category="paragraph">有关卷分层策略的详细信息、请参阅 <block ref="de51d392f5d252a956349995f441f55c" category="inline-link-macro-rx"></block>AWS FSx for NetApp ONTAP文档中的。</block>
+  <block id="4814d993ecb870a2261a2819e47b0371" category="list-text">对于现有策略，请选择*选择现有策略*，然后从下拉菜单中选择现有策略。</block>
+  <block id="a4f4dcbfc1fe91a36caaac04506e0179" category="list-text">对于新策略，请选择*创建新策略*并提供以下内容：</block>
+  <block id="6ec6b573aef4b43427215b26f7b1db91" category="section-title">从BlueXP  工作负载出厂时删除内部ONTAP集群</block>
+  <block id="f2b13eb0b412655e8697e5140bff3b74" category="paragraph">根据需要从BlueXP  工作负载出厂时删除内部ONTAP集群。</block>
+  <block id="3b1c3bad959c6c151d464eb6b626f56f" category="paragraph">您必须<block ref="fa9c4758a74309c74eff4644a0675063" category="inline-link-macro-rx"></block>先对内部ONTAP集群中的所有卷执行此操作、然后才能删除此集群、这样就不会保留任何已断开的关系。</block>
+  <block id="78ce280a4b77e37298d71642a4457c0a" category="list-text">选择要删除的内部ONTAP集群。</block>
+  <block id="5b4dad1d897213eb27b108cb47f3a75d" category="list-text">选择三点菜单，然后选择*Remove from Workload Factory。</block>
+  <block id="a8cf8ae4f9fef4837824fb9409537e5d" category="paragraph">内部ONTAP集群已从BlueXP  工作负载出厂时删除。</block>
+  <block id="6ad17d07338dffda7982d8efdad3a276" category="section-title">2024年12月1日</block>
+  <block id="aab28bb522b1a572add493963001b88d" category="sidebar">使用内部ONTAP数据</block>
+  <block id="5d831b6559b5decf8f758715856498b9" category="sidebar">更新存储效率</block>
 </blocks>

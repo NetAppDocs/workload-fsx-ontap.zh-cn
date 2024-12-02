@@ -27,6 +27,8 @@ summary: '通过AWS FSx for NetApp ONTAP、了解在Amazon Elelic Block Store (E
 
 探索检测到的存储环境节省的空间：工作负载出厂时可链接到现有AWS存储环境、并将详细信息提取到计算器中以进行自动比较。要使用自动模式、您需要授予"自动"权限。您可以更改使用情形、但所有其他详细信息都会在计算中自动确定。
 
+此外、您还可以link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["添加AWS凭据"^]提高计算器分析的准确性。选择*根据现有资源计算节省量*。您将被重定向到添加凭据页面。添加凭据后、请选择要与FSx for ONTAP进行比较的现有资源、然后选择*探索节省量*。
+
 
 
 == 了解通过自定义实现的节省
@@ -100,7 +102,12 @@ summary: '通过AWS FSx for NetApp ONTAP、了解在Amazon Elelic Block Store (E
 ====
 提供存储系统配置的详细信息后、请查看页面上提供的计算结果和建议。
 
-此外，向下滚动到页面底部至*导出PDF*或*查看计算结果*。
+此外、通过选择以下选项之一向下滚动到页面底部以查看报告：
+
+* *导出PDF*
+* *通过电子邮件发送*
+* *查看计算结果*
+
 
 要切换到FSx for ONTAP，请按照中的说明进行操作 <<部署FSx for ONTAP文件系统,部署FSx for ONTAP文件系统>>。
 
@@ -179,7 +186,12 @@ NOTE: 此计算器选项不支持计算EBS快照和FSx for Windows File Server�
 ====
 提供存储系统配置的详细信息后、请查看页面上提供的计算结果和建议。
 
-此外，向下滚动到页面底部至*导出PDF*或*查看计算结果*。
+此外、通过选择以下选项之一向下滚动到页面底部以查看报告：
+
+* *导出PDF*
+* *通过电子邮件发送*
+* *查看计算结果*
+
 
 
 

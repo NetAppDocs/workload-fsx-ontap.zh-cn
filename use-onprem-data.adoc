@@ -1,0 +1,159 @@
+---
+sidebar: sidebar 
+permalink: use-onprem-data.html 
+keywords: use, detect, replicate, remove, on-premises, ONTAP cluster, on-premises cluster, ONTAP 
+summary: 在BlueXP  工作负载工厂中发现和复制内部ONTAP数据、以便用于丰富AI知识库。 
+---
+= 在BlueXP  工作负载工厂中使用内部ONTAP集群数据
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+在BlueXP  工作负载工厂中发现和复制内部ONTAP数据、以便用于丰富AI知识库。
+
+.关于此任务
+要使用内部ONTAP集群中的数据、您首先需要发现内部ONTAP集群。发现内部ONTAP集群后、您可以在以下任何使用情形中使用这些数据。
+
+使用情形:: 请注意、这一系列任务的重点是GenAI工作负载的主要用例。
++
+--
+* *GenAI工作负载*：将内部部署的ONTAP卷数据复制到FSx for ONTAP文件系统中，以便可以将这些数据用于link:https://docs.netapp.com/us-en/workload-genai/create-knowledgebase.html["丰富AI知识库"^]。
+* *备份和迁移到云*：复制到FSx for ONTAP文件系统的内部ONTAP卷数据可用作云中的备份。
+* *数据分层*：复制后、不常访问的内部ONTAP卷数据可以从SSD存储层分层到容量池存储层。
+
+
+--
+
+
+
+
+== 发现内部 ONTAP 集群
+
+在BlueXP  工作负载工厂中发现内部ONTAP集群、以便将数据复制到Amazon FSx for NetApp ONTAP文件系统。
+
+.开始之前
+开始之前、请确保您已具备以下条件：
+
+* 用于复制的FSx for ONTAP文件系统。
+* 要与发现的内部集群关联的已连接链路。如果没有链接，则需要link:create-link.html["创建一个"]。
+* 具有所需权限的ONTAP用户凭据。
+* 内部ONTAP 9.8及更高版本。
+* 连接、如下图所示。
++
+image:screenshot-on-prem-connectivity.png["屏幕截图、显示应如何将内部ONTAP集群连接到Amazon Web Services Cloud的管理路径和数据路径"]
+
+
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 在存储中，选择*转至存储清单*。
+. 选择*内部部署ONTAP *选项卡。
+. 选择*发现*。
+. 查看前提条件并选择*Next*。
+. 在"Discover ONTAP On-sremises (发现内部部署)"页面上、在*集群配置*下提供以下内容：
++
+.. *链接*：选择链接。该链路将与内部集群关联、以便在集群和工作负载工厂之间建立连接。
++
+如果尚未创建链接、请按照说明进行操作、然后返回到此操作并选择此链接。
+
+.. *集群IP地址*：提供要复制的内部ONTAP集群的IP地址。
+.. * ONTAP credenties*：输入内部ONTAP集群的ONTAP凭据。确保用户具有所需的权限。
+
+
+. 选择*Discover (发现)*以启动发现过程。
+
+
+.结果
+发现内部ONTAP集群后、此集群将显示在*内部部署ONTAP *选项卡中。
+
+现在，您可以查看内部ONTAP集群和中的数据<<从内部ONTAP集群复制卷数据,将数据复制到FSx for ONTAP文件系统>>。
+
+
+
+== 从内部ONTAP集群复制卷数据
+
+将卷数据从内部ONTAP集群复制到FSx for ONTAP文件系统。复制后、可以使用这些数据丰富AI知识库。
+
+.开始之前
+* 您必须发现内部ONTAP集群才能复制其卷数据。
+* 要将适用于ONTAP文件系统的FSx作为复制目标、您必须具有一个可用FSx。
+* 内部ONTAP集群和用于复制关系的FSx for ONTAP文件系统都必须具有关联的链接。如果一个或两个内置集群和FSx for ONTAP集群都没有现有链路，link:create-link.html["首先创建链接"]。要link:manage-links.html["关联链接"]在文件系统中，选择*Account name*下的*Associate*链接。在内部ONTAP集群和FSx for ONTAP文件系统中关联链路后、返回此操作。
+
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 在存储中，选择*转至存储清单*。
+. 选择*内部部署ONTAP *选项卡。
+. 要按Storage VM查找卷、您可以从下拉列表中*选择Storage VM*。
+. 选择一个或多个要复制的卷、然后选择*复制*。
+. 在创建复制页面上的复制目标下、提供以下内容：
++
+.. *FSx for ONTAP file system*：为目标FSx for ONTAP文件系统选择ONTAP文件系统的凭据、区域和FSx名称。
+.. * Storage VM名称*：从下拉菜单中选择Storage VM。
+.. *卷名*：目标卷名称将自动生成，格式如下 `{OriginalVolumeName}_copy`。您可以使用自动生成的卷名称或输入其他卷名称。
+.. *分层数据*：为目标卷中存储的数据选择分层策略。
++
+*** *Auto*：使用工作负载工厂FSx for ONTAP用户界面创建卷时的默认分层策略。在特定时间段内将所有冷数据(包括用户数据和快照)分层到容量池存储层。
+*** *仅Snapshot *：将仅Snapshot数据分层到容量池存储层。
+*** *无*：将卷的所有数据保留在主存储层上。
+*** *全部*：将所有用户数据和快照数据标记为冷数据、并将其存储在容量池存储层中。
++
+请注意、某些分层策略具有关联的最短冷却期、该冷却期用于设置卷中的用户数据必须保持非活动状态的时间或_冷却天数_、才能将数据视为"冷"数据并移至容量池存储层。冷却期从数据写入磁盘时开始。
+
++
+有关卷分层策略的详细信息、请参阅 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["卷存储容量"^]AWS FSx for NetApp ONTAP文档中的。
+
+
+
+.. *最大传输速率*：选择*受限*并输入最大传输限制(单位：MiB/秒)或者，选择*Unlimited (无限制)*。
++
+如果没有限制、网络和应用程序性能可能会下降。或者、对于关键工作负载(例如、主要用于灾难恢复的工作负载)、我们建议对用于ONTAP文件系统的FSx使用无限传输速率。
+
+
+
+. 在复制设置下、提供以下内容：
++
+.. *复制间隔*：选择从源卷向目标卷传输快照的频率。
+.. *长期保留*：(可选)启用快照以进行长期保留。
++
+如果启用长期保留、请选择现有策略或创建新策略以定义要复制的快照以及要保留的数量。
+
++
+*** 对于现有策略，请选择*选择现有策略*，然后从下拉菜单中选择现有策略。
+*** 对于新策略，请选择*创建新策略*并提供以下内容：
++
+**** *策略名称*：输入策略名称。
+**** *Snapshot策略*：在表中，选择快照策略频率和要保留的副本数。您可以选择多个快照策略。
+
+
+
+
+
+
+. 选择 * 创建 * 。
+
+
+.结果
+复制关系显示在目标FSx for ONTAP文件系统的*复制关系*选项卡中。
+
+
+
+== 从BlueXP  工作负载出厂时删除内部ONTAP集群
+
+根据需要从BlueXP  工作负载出厂时删除内部ONTAP集群。
+
+.开始之前
+您必须link:delete-replication.html["删除所有现有复制关系"]先对内部ONTAP集群中的所有卷执行此操作、然后才能删除此集群、这样就不会保留任何已断开的关系。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 在存储中，选择*转至存储清单*。
+. 选择*内部部署ONTAP *选项卡。
+. 选择要删除的内部ONTAP集群。
+. 选择三点菜单，然后选择*Remove from Workload Factory。
+
+
+.结果
+内部ONTAP集群已从BlueXP  工作负载出厂时删除。
