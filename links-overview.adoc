@@ -42,12 +42,15 @@ link:https://aws.amazon.com/lambda/pricing/["详细了解与使用AWS Lamb泄 �
 需要链接的功能包括：
 
 * 显示FSx for ONTAP文件系统上安装的ONTAP版本
-* 管理系统上的iSCSI卷
-* 为卷启用和禁用自动增长功能
+* 在FSx for ONTAP文件系统上管理iSCSI卷
+* 卷的自动增长功能
 * 创建和管理Snapshot策略
-* 配置复制关系并在文件系统之间复制卷
-* 配置备份关系并将卷数据备份到云存储
-* 克隆文件系统中的卷
+* 复制关系配置
+* FSx for ONTAP文件系统之间的卷复制
+* 备份关系配置
+* 将卷数据备份到云存储
+* FSx for ONTAP文件系统中的卷克隆
 * 直接从ONTAP显示其他指标(默认指标由Amazon CloudWatch收集)
 * 管理NFS导出策略
+* 管理CIFS共享
 

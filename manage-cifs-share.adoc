@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: manage-cifs-share.html 
 keywords: cifs, CIFS, cifs share, change cifs share, update cifs share, modify cifs share 
-summary: 在BlueXP  工作负载出厂时更改使用SMB/CCIFS协议类型的卷的CIFS共享。 
+summary: 在BlueXP  工作负载工厂中管理卷的CIFS共享包括创建、确定用户和组访问权限以及删除。 
 ---
 = 在BlueXP  工作负载出厂时管理卷的CIFS共享
 :allow-uri-read: 
@@ -11,10 +11,20 @@ summary: 在BlueXP  工作负载出厂时更改使用SMB/CCIFS协议类型的�
 
 
 [role="lead"]
-在BlueXP  工作负载出厂时管理卷的CIFS共享涉及到确定要授予访问权限的用户和组以及授予它们的访问类型。
+在BlueXP  工作负载工厂中管理卷的CIFS共享包括创建CIFS共享、确定要授予访问权限的用户和组以及为其授予的访问类型以及删除CIFS共享。
 
 .开始之前
-确定要授予访问权限的用户或组以及要授予它们的访问类型。
+开始之前、请执行以下操作：
+
+* 要管理CIFS共享，必须link:manage-links.html["关联链接"]。如果您没有现有链接，请 link:create-link.html["创建链接"]。要关联文件系统中的链接，请选择*Account name*下的*Associate link*。链接关联后、返回此操作。
+* 确定要授予访问权限的用户或组以及要授予它们的访问类型。
+
+
+
+
+== 为卷创建CIFS共享
+
+按照以下步骤为卷创建CIFS共享。
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
@@ -22,19 +32,63 @@ summary: 在BlueXP  工作负载出厂时更改使用SMB/CCIFS协议类型的�
 . 在*FSx for FS* ONTAP选项卡中，选择包含要更新的卷的文件系统的三点菜单，然后选择*Manage*。
 . 从文件系统概述中，选择*Volumes*选项卡。
 . 从卷选项卡中、选择要更改的SMB共享的卷的三点菜单。
-. 选择*高级操作*，然后选择*编辑CIFS共享*。
-. 在编辑CIFS共享页面上、提供以下内容：
+. 选择*高级操作*，然后选择*管理CIFS共享*。
+. 在管理CIFS共享页面上、选择*创建CIFS共享*。
+. 在创建CIFS共享对话框中、提供以下内容：
 +
 .. *名称*：输入CIFS共享的名称。
 .. *权限*：选择“完全控制”、“读/写”、“读取”或“无访问权限”，然后输入用户或组，以分号(;)分隔。用户或组区分大小写、必须使用"域\用户名"格式包含用户的域。
 
 
-. 选择应用。
-+
-更改可能会导致当前用户或组无法访问CIFS共享。
-
-. 选择*继续*以保存更改。
+. 选择 * 创建 * 。
 
 
 .结果
-此时将应用对CIFS共享所做的更改。
+此时将为卷创建CIFS共享。
+
+
+
+== 更改卷的CIFS共享
+
+按照以下步骤更改卷的CIFS共享设置。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 在存储中，选择*转至存储清单*。
+. 在*FSx for FS* ONTAP选项卡中，选择包含要更新的卷的文件系统的三点菜单，然后选择*Manage*。
+. 从文件系统概述中，选择*Volumes*选项卡。
+. 从卷选项卡中、选择要更改的SMB共享的卷的三点菜单。
+. 选择*高级操作*，然后选择*管理CIFS共享*。
+. 在管理CIFS共享页面上、将鼠标悬停在某个CIFS共享上、然后选择铅笔图标进行更改。
+. 更改CIFS访问权限、或者要为其授予权限的用户或组。
++
+更改可能会导致当前用户或组无法访问CIFS共享。
+
+. 选择*应用*以保存更改。
+
+
+.结果
+此时将更新卷的CIFS共享。
+
+
+
+== 删除卷的CIFS共享
+
+按照以下步骤删除卷的CIFS共享。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 在存储中，选择*转至存储清单*。
+. 在*FSx for FS* ONTAP选项卡中，选择包含要更新的卷的文件系统的三点菜单，然后选择*Manage*。
+. 从文件系统概述中，选择*Volumes*选项卡。
+. 从卷选项卡中、选择要更改的SMB共享的卷的三点菜单。
+. 选择*高级操作*，然后选择*管理CIFS共享*。
+. 在管理CIFS共享页面上、将鼠标悬停在某个CIFS共享上、然后选择垃圾桶图标将其删除。
++
+删除CIFS共享将使其不可用、并且任何要挂载它的用户都无法访问它。
+
+. 选择*Delete*确认删除。
+
+
+.结果
+卷的CIFS共享将被删除。

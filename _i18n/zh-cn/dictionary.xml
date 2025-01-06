@@ -21,8 +21,6 @@
   <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">步骤</block>
   <block id="7f855d340cfe6607ed51975896dd19da" category="list-text">在存储中，选择*转至存储清单*。</block>
   <block id="f76864e1c2588ae3d6373b6ab95e2209" category="list-text">从文件系统概述中，选择*Volumes*选项卡。</block>
-  <block id="2ca869b68be8f2b6e678f47d25c26fb7" category="list-text">选择*高级操作*，然后选择*编辑CIFS共享*。</block>
-  <block id="736934ebc3ee8de296f3d5213e79430e" category="list-text">在编辑CIFS共享页面上、提供以下内容：</block>
   <block id="bbe48fb854ea022537208eeeff822f91" category="paragraph-title">关于此任务</block>
   <block id="4c9aa322b281bc41d9f93e03b1223838" category="paragraph">确定导出策略规则的客户端规格。客户端规范的有效值如下：</block>
   <block id="1d9e509ddb93a176b7d369a91ad7deaf" category="list-text">IP 地址</block>
@@ -396,28 +394,21 @@
   <block id="aca77c97dcf29f670f572a7129863195" category="section-title">部署FSx for ONTAP文件系统</block>
   <block id="f31ed490fd3768dff2a1121a0a06095c" category="list-text">部署方法</block>
   <block id="543b29a63a3d070c0ff920d687259dfc" category="paragraph">在_BASIC模式下、您可以从CodeBox窗口复制内容、并使用其中一种CodeBox方法部署FSx for ONTAP文件系统。</block>
-  <block id="3c6efe0ce159fb5b8ee4882bcf3ad973" category="summary">NetApp以多种方式为Workload Factory及其云服务提供支持。全天候提供丰富的免费自助支持选项，例如知识库（ KB ）文章和社区论坛。您的支持注册包括通过 Web 服务单提供的远程技术支持。</block>
   <block id="6a7b2c9c4cec65ad972b108fa0a1192b" category="section-title">获取FSx for ONTAP支持</block>
-  <block id="4435b263dd1a35bcd8dfda050db92b3b" category="paragraph">有关FSx for ONTAP、其基础架构或任何使用该服务的解决方案的技术支持、请参阅该产品的工作负载工厂文档中的"获得帮助"。</block>
   <block id="18cf072964a583150dd247485ba75b92" category="inline-link-macro">适用于 ONTAP 的 Amazon FSX</block>
   <block id="9d06990508d25d367d9158c6558eb9c8" category="paragraph"><block ref="9d06990508d25d367d9158c6558eb9c8" category="inline-link-macro-rx"></block></block>
   <block id="35f9849ffdd809bda11d0fc56e1e3583" category="paragraph">要获得特定于Workload Factory及其存储解决方案和服务的技术支持、请使用下面所述的支持选项。</block>
   <block id="edd15fbeb7b2dffa163336ecd4f3e80c" category="section-title">使用自助支持选项</block>
   <block id="5e4b821a1a82558dead1ef6961e90666" category="paragraph">这些选项每周 7 天，每天 24 小时免费提供：</block>
   <block id="5b6cf869265c13af8566f192b4ab3d2a" category="list-text">文档</block>
-  <block id="d935525f4850c4638cbf48ae53fb4686" category="paragraph">您当前正在查看的Workload Factory文档。</block>
   <block id="19111351b69b6b15668130b38b7f6038" category="inline-link">知识库</block>
   <block id="436f63b446dba5a418c698d49bd39718" category="list-text"><block ref="436f63b446dba5a418c698d49bd39718" category="inline-link-rx"></block></block>
-  <block id="ba6274b9c9d1f81bb3a648fa289986b8" category="paragraph">搜索工作负载工厂知识库、查找有助于解决问题的文章。</block>
   <block id="14526abd8bda5af347775025cd5342cf" category="inline-link">社区</block>
   <block id="410fdb9caa9c64da2ff3f88f4836960d" category="list-text"><block ref="410fdb9caa9c64da2ff3f88f4836960d" category="inline-link-rx"></block></block>
-  <block id="7faef90df03399696ba9d4815b37171a" category="paragraph">加入Workload Factory社区、关注正在进行的讨论或创建新的讨论。</block>
   <block id="d88bacf2a9fdcbbc844edcba97c34e30" category="section-title">向NetApp支持部门创建案例</block>
   <block id="82812db645b6ff5e9c2a24ddfb66c8d6" category="paragraph">除了上述自助支持选项之外、您还可以在激活支持后与NetApp支持专家合作解决任何问题。</block>
   <block id="8fece025a1a8fef7018449bf104a2527" category="paragraph-title">开始之前</block>
   <block id="e2a733504c4088b809813bbb35a3ddfd" category="inline-link-macro">了解如何注册获取支持</block>
-  <block id="a12ea39ddf1c98adfd7f751299705efa" category="paragraph">要使用*创建案例*功能，您必须先注册获得支持。 将您的NetApp支持站点凭据与您的工作负载出厂登录关联起来。<block ref="d9fea24984986beabae03291c4b721de" category="inline-link-macro-rx"></block>(英文)</block>
-  <block id="356c88ac4b0ec3f7689cc91f54701fef" category="list-text">在Workload Factory控制台的右上角，选择*Help &gt; Support*。</block>
   <block id="aadd86a3fadf19221852692c6e4adc2f" category="paragraph">选择此选项将打开BlueXP控制台一个新的浏览器选项卡并加载支持信息板。</block>
   <block id="08d96fdd1a845d80db99e6e1dffb8bc7" category="list-text">在*资源*页面上、在技术支持下选择一个可用选项：</block>
   <block id="6a1b74969231967ed071d465206b15c7" category="list-text">如果您想通过电话与某人通话，请选择*呼叫我们*。系统会将您定向到netapp.com上的一个页面、其中列出了您可以拨打的电话号码。</block>
@@ -498,7 +489,6 @@
   <block id="482723983a4f2af954e36ff41e567451" category="doc">已知限制</block>
   <block id="488044172f20eab904aecc2827c019b4" category="section-title">吞吐量容量区域支持</block>
   <block id="0a27e957ebaf89bce02c66c147da7966" category="section-title">纵向扩展部署</block>
-  <block id="24aa3b91eee064e4bbffa941e071bd95" category="paragraph">以下地区支持纵向扩展部署的最大吞吐量高达4 GB/秒：美国东部(俄亥俄州)地区、美国东部(弗吉尼亚)地区、美国西部(俄勒冈)地区和欧洲(爱尔兰)。</block>
   <block id="2e8bf528a9bc28508b7cf3ffef710f1c" category="section-title">横向扩展部署</block>
   <block id="3e14c6b63ec31128bf81a140eecbaeb0" category="paragraph">以下地区支持的横向扩展部署最大吞吐量为3和6 GB/秒：美国东部(北弗吉尼亚)、美国东部(俄亥俄州)、美国西部(俄勒冈)、欧洲(爱尔兰)和亚太地区(悉尼)。</block>
   <block id="1d19e21de0f93b11f5ceb8b535a3afc2" category="section-title">容量管理</block>
@@ -509,13 +499,9 @@
   <block id="b1c8cb58e124bead4ca2e09fa1c20c9b" category="paragraph">有关每个文件系统的最大SVM数量、请参见 <block ref="17ef0d7491a925205e8443311f7ef122" category="inline-link-macro-rx"></block> AWS文档中的。</block>
   <block id="3a448e496404b548627a97fc00da8e23" category="section-title">iSCSI协议支持</block>
   <block id="53c858a11ae23c19aee107fb913f096a" category="list-text">每个卷只能配置一个LUN。</block>
-  <block id="044dbc650d6316ed90f739b69dfff7ee" category="section-title">区域支持</block>
-  <block id="1bf3a4f06c8408a2ff436e0b847ca3a3" category="list-text">目前不支持加拿大西部(卡尔加里)地区。</block>
   <block id="7e7397a7b79323762c61941fc0e6b5f9" category="section-title">数据保护</block>
   <block id="3625bed0ef82516150cc87137582e2b5" category="list-text">无法删除快照。</block>
-  <block id="720a8000a7c475fdd307a99cc1a79ac7" category="list-text">仅支持在FSx for ONTAP文件系统之间进行复制。</block>
   <block id="fa0b5078a184e3a9f13892acdade9375" category="list-text">复制文件系统时、文件系统中的所有卷都会使用相同的复制策略。</block>
-  <block id="2755e2232e7c57beeec07b1f327577b9" category="list-text">只有最后一个快照可供还原。</block>
   <block id="6868a45b7f86e5379e5d85b2d762b844" category="section-title">存储节省计算器</block>
   <block id="b243e9d890e3c0d1d9ba32de03c0eb00" category="paragraph">存储节省计算器不会计算以下配置的成本节省：</block>
   <block id="9049888f2f272bf903633de4a685ba6a" category="list-text">FSx for Windows文件服务器：HDD存储类型</block>
@@ -580,15 +566,6 @@
   <block id="70f0040e444997fbb4beeeae8bd03d34" category="paragraph"><block ref="70f0040e444997fbb4beeeae8bd03d34" category="inline-link-macro-rx"></block></block>
   <block id="8cd69d367e2dbdfca9ec0b55ba13baec" category="section-title">需要链接时</block>
   <block id="c0653b3ad30a51a0fe3228ad2877ac9d" category="paragraph">需要链接的功能包括：</block>
-  <block id="ab887a13e0e43ab14f26aa4139d3931e" category="list-text">显示FSx for ONTAP文件系统上安装的ONTAP版本</block>
-  <block id="6a0bbe6ca6ca13a9f69ba22ff72d4db9" category="list-text">管理系统上的iSCSI卷</block>
-  <block id="f713a1eba4a310a7dee6e6148031ac90" category="list-text">为卷启用和禁用自动增长功能</block>
-  <block id="b688472ba5c5b20a13e35de55bbd243e" category="list-text">创建和管理Snapshot策略</block>
-  <block id="607207d543b313ae2d9720c777e7a286" category="list-text">配置复制关系并在文件系统之间复制卷</block>
-  <block id="f39a1ae39e9d73b3a9aa6c431f9fb9d4" category="list-text">配置备份关系并将卷数据备份到云存储</block>
-  <block id="f15997f78fd09915dc098e9c00579d74" category="list-text">克隆文件系统中的卷</block>
-  <block id="12f68de27d579f57f0f70762ccd96328" category="list-text">直接从ONTAP显示其他指标(默认指标由Amazon CloudWatch收集)</block>
-  <block id="1a59c94816246f9168f366b6938e1715" category="list-text">管理NFS导出策略</block>
   <block id="fa1a08e2a749c9f330c9a8e60cac9cc3" category="doc">管理链接</block>
   <block id="a4fcf9229a590e13a5a514e19c4c398e" category="paragraph"><block ref="97608ab403cabf20e3bcac439aacde61" category="inline-link-macro-rx"></block> 或 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。</block>
   <block id="e32918056c538c64f6e229f2ca257e25" category="section-title">查看与您的帐户关联的链接</block>
@@ -694,8 +671,6 @@
   <block id="6155892ff0823c5997e8d188a29e66e2" category="list-text">在中断复制对话框中，选择*故障*。</block>
   <block id="f42375f716d314b031447e015387fbff" category="paragraph">卷的复制状态将更改为*已断开*。目标卷将变为可写。</block>
   <block id="42748df9eaa0be17ddc5cc1593cf57ab" category="doc">注册以获得支持</block>
-  <block id="996ad73a480311d4f86d6946935389d2" category="paragraph">要获得特定于Workload Factory及其存储解决方案和服务的技术支持、需要注册支持。您必须从BlueXP控制台注册获得支持、BlueXP控制台是一个与Workload Factory不同的基于Web的控制台。</block>
-  <block id="c552970fd4dc8118ba1806da596acad9" category="paragraph">注册获取支持不会为云提供商文件服务启用NetApp支持。有关与云提供商文件服务、其基础架构或任何使用该服务的解决方案相关的技术支持、请参阅该产品的Workload Factory文档中的"获得帮助"。</block>
   <block id="0b0e252af8897fbe981ec6682d2aa33b" category="section-title">支持注册概述</block>
   <block id="d7e4bb081bf4ec4814d83edcfbdb8b96" category="paragraph">注册您的帐户ID支持订阅(您的20位960xxxxxxxxx序列号位于BlueXP的支持资源页面上)将作为您的单个支持订阅ID。必须注册每个BlueXP帐户级别的支持订阅。</block>
   <block id="f9e05c2b383e3f11e3b4bebbe8952225" category="paragraph">通过注册、您可以创建支持服务单和自动生成案例等功能。要完成注册、请按如下所述将NetApp 支持站点(NSS)帐户添加到BlueXP中。</block>
@@ -781,7 +756,6 @@
   <block id="8cf9dbe17cb44a10f0622b63961c131d" category="sidebar">卷管理</block>
   <block id="56994f1db86bfe709cbe47f96bde566f" category="sidebar">编辑卷自动增长</block>
   <block id="be6125857b11bdb69d1f89bf69787f48" category="sidebar">重新平衡卷的容量</block>
-  <block id="9f4aa892debf403a854859b0ca9c9ff6" category="sidebar">更改分层策略</block>
   <block id="28b0bfb965f113c41530116951bfce50" category="sidebar">文件系统管理</block>
   <block id="ff117b5e42f4a60dd5b7859999c4f2bd" category="sidebar">启用自动容量管理</block>
   <block id="c7ad4dd9b2ecb508f1366110b020e001" category="sidebar">重置fsxadmin密码</block>
@@ -1089,9 +1063,7 @@
   <block id="4a74309dc15865035b8b93cec28f2a96" category="list-text">在信息下，选择*FSx for ONTAP backup*旁边的铅笔图标。当鼠标悬停在*FSx for ONTAP backup*行上时，下拉箭头旁边会出现铅笔图标。</block>
   <block id="9f16bb4c9cbb656a02f2d0ac20ae70a8" category="list-text">*每日自动备份*：启用或禁用此功能。如果禁用此功能，请选择*Apply*。如果启用了此功能、请完成以下步骤。</block>
   <block id="1b7732fda3ed237c994a5ac55fb150ea" category="list-text">*每日自动备份窗口*:选择*No Preferences*(已为您选择每日备份开始时间)或*Select start time for daily backups*并指定开始时间。</block>
-  <block id="9267ce1924a6f0548efc234c84461fa8" category="summary">在BlueXP  工作负载出厂时更改使用SMB/CCIFS协议类型的卷的CIFS共享。</block>
   <block id="5bdcc5d3e4e631055e0153df468f21d6" category="doc">在BlueXP  工作负载出厂时管理卷的CIFS共享</block>
-  <block id="17c44173e4e9c50b2859e1925d7af336" category="paragraph">在BlueXP  工作负载出厂时管理卷的CIFS共享涉及到确定要授予访问权限的用户和组以及授予它们的访问类型。</block>
   <block id="3d158aba7d5d233ad247917999b7f8f9" category="list-text">从卷选项卡中、选择要更改的SMB共享的卷的三点菜单。</block>
   <block id="20ce09b74b6e0e3f084a81d605cc8f77" category="summary">您可以在BlueXP  工作负载出厂时查看与您的帐户关联的链接、关联链接以及删除链接。</block>
   <block id="2083481ef56023982330c4d1cbedcd07" category="doc">管理BlueXP  工作负载出厂链接</block>
@@ -1187,8 +1159,6 @@
   <block id="a5707c7f948a436824cd06775026c409" category="sidebar">适用于 NetApp ONTAP 的 Amazon FSX 将 ONTAP 的全部功能引入了原生 AWS 托管服务，可提供一致的混合云体验。本文档介绍如何使用BlueXP  Workload Factory管理FSx for ONTAP。</block>
   <block id="788881725a778e76ae58ef03f1dd4d7e" category="sidebar">Amazon FSx for NetApp ONTAP for BlueXP  Workload工厂文档</block>
   <block id="d151342d67a639e871ca8c57524ca7f8" category="sidebar">管理卷标记</block>
-  <block id="3a1a7312146508132d80f244521968ee" category="sidebar">管理NFS导出策略</block>
-  <block id="baae6cbba4c997ef4c9035394e7dbd9e" category="sidebar">管理CIFS共享</block>
   <block id="11c0aa7596d4f4521c9a98f708c34cc4" category="sidebar">管理Storage VM标记</block>
   <block id="e4b304b6d81189c09bd7e999a18522e8" category="sidebar">管理FSx for ONTAP备份计划</block>
   <block id="c4f10a04f7aa75535a8a0475261393eb" category="doc">适用于ONTAP文件系统的横向扩展FSx的块存储</block>
@@ -1215,7 +1185,6 @@
   <block id="81433468b8608aba73a2350afe41ac5a" category="section-title">获取BlueXP  工作负载工厂中卷的挂载点</block>
   <block id="06e52dae2c3e09e69a906c2fba89ed66" category="paragraph">获取卷在CIFS共享或NFS客户端上挂载共享的挂载点。</block>
   <block id="4a6574ab96645d28cf548ed8372c655c" category="list-text">从卷选项卡中，选择卷的三点菜单，然后依次选择*Basic Actions*和*View mount command*。</block>
-  <block id="bd95ac5b25f35af153096a48803b03b4" category="list-text">在挂载命令对话框中，选择*Copy*以复制命令。您将在终端中输入复制的命令。</block>
   <block id="4a553bf9ebe9a32a6743c78be912cfbc" category="list-text">选择 * 关闭 * 。</block>
   <block id="0206587910cd5147f80c048ba00193af" category="paragraph">要在文件系统上配置iSCSI块卷、请选择不超过6个HA对。</block>
   <block id="f3b270238d8c3f46a0b10d724c916e7d" category="list-text">*最大传输速率*：选择*受限*并输入最大传输限制(单位：MiB/秒)或者，选择*Unlimited (无限制)*。</block>
@@ -1234,10 +1203,7 @@
   <block id="428b0b39be2352757edeb5f9f12a7bdd" category="inline-link">BlueXP  工作负载工厂</block>
   <block id="7cf449620aa459bc5c449db69b07e507" category="paragraph"><block ref="7cf449620aa459bc5c449db69b07e507" category="inline-link-rx"></block></block>
   <block id="a32b59044667570495820281f09cfa10" category="list-text">*名称*：输入CIFS共享的名称。</block>
-  <block id="a983c99827c51cfd1ffcfd3882536018" category="list-text">选择应用。</block>
   <block id="aa6a9af5d2170a7e2225e0d97aefef52" category="paragraph">更改可能会导致当前用户或组无法访问CIFS共享。</block>
-  <block id="e58fa167b6770841b720711ad8a12b1a" category="list-text">选择*继续*以保存更改。</block>
-  <block id="f6db14d0bad35a9b610208b53b06c1ca" category="paragraph">此时将应用对CIFS共享所做的更改。</block>
   <block id="8772abd9ec2ca5593300708cb88b5426" category="summary">在BlueXP  工作负载出厂时、您可以在创建卷后更新存储效率设置。</block>
   <block id="b31795226510baf520db5a5e2287b56e" category="doc">更新卷的存储效率设置</block>
   <block id="07834469705cb1cae603dc37fac50539" category="paragraph">存储效率功能包括重复数据删除、数据压缩和数据缩减、可在FlexVol volume上实现最佳空间节省。重复数据删除可消除重复的数据块。数据压缩可压缩数据块，以减少所需的物理存储量。数据缩减可在更少的空间中存储更多数据，以提高存储效率。</block>
@@ -1295,7 +1261,63 @@
   <block id="78ce280a4b77e37298d71642a4457c0a" category="list-text">选择要删除的内部ONTAP集群。</block>
   <block id="5b4dad1d897213eb27b108cb47f3a75d" category="list-text">选择三点菜单，然后选择*Remove from Workload Factory。</block>
   <block id="a8cf8ae4f9fef4837824fb9409537e5d" category="paragraph">内部ONTAP集群已从BlueXP  工作负载出厂时删除。</block>
-  <block id="6ad17d07338dffda7982d8efdad3a276" category="section-title">2024年12月1日</block>
   <block id="aab28bb522b1a572add493963001b88d" category="sidebar">使用内部ONTAP数据</block>
   <block id="5d831b6559b5decf8f758715856498b9" category="sidebar">更新存储效率</block>
+  <block id="442b133d7d895a50d67d2f8514b6fc0a" category="doc">卷CIFS共享增强功能</block>
+  <block id="c67048e1717263df3fc8ffc894f40785" category="paragraph">以下增强功能可用于在BlueXP  工作负载工厂中管理Amazon FSx for ONTAP文件系统中卷的CIFS共享：</block>
+  <block id="28ee2134fc1275e4f2052b7bd91a9f8d" category="list-text">支持在一个卷上使用多个CIFS共享</block>
+  <block id="aa8a0747da321d7501a2f34bb5326b65" category="list-text">用于随时更新用户和组的选项</block>
+  <block id="a85d37847efda31b7b7b0ee3ee3cd2ab" category="list-text">用于随时更新用户和组权限的选项</block>
+  <block id="0c05c06c8c5abf5cf4956491502d212a" category="list-text">CIFS共享删除</block>
+  <block id="1122186beaf8563a5f76bdc23dfd22a5" category="inline-link-macro">管理 CIFS 共享</block>
+  <block id="f59eead66ce9829f954d28d72a4e99b1" category="paragraph"><block ref="f59eead66ce9829f954d28d72a4e99b1" category="inline-link-macro-rx"></block></block>
+  <block id="2898ec90c27f1541e38a1849b4b9923a" category="list-text">在挂载命令对话框中、选择*复制*以复制NFS挂载点或CIFS共享的命令。您将在终端中输入复制的命令。</block>
+  <block id="b6a4501cc05e54e2e5a513c3b552183a" category="paragraph">NetApp以多种方式为BlueXP  工作负载工厂及其云服务提供支持。全天候提供丰富的免费自助支持选项，例如知识库（ KB ）文章和社区论坛。您的支持注册包括通过 Web 服务单提供的远程技术支持。</block>
+  <block id="261966eaf033c38f6934f2c8fc36d79c" category="paragraph">有关FSx for ONTAP、其基础架构或任何使用该服务的解决方案的技术支持、请参阅该产品的工作负载工厂文档中的"获得帮助"。</block>
+  <block id="5b49df4e58e2a4750acd8bfa8687ccd6" category="paragraph">您当前正在查看的工作负载工厂文档。</block>
+  <block id="ba51332e265e54eb4295d6e7d057bad8" category="paragraph">搜索工作负载工厂知识库、查找有助于解决问题的文章。</block>
+  <block id="fc3e8f3c2017c33d444d483913a485ba" category="paragraph">加入工作负载工厂社区、关注正在进行的讨论或创建新的讨论。</block>
+  <block id="ffa18fada5deeeb1e533786297855e7d" category="paragraph">要使用*创建案例*功能，您必须先注册支持。请将您的NetApp支持站点凭据与您的工作负载出厂登录名关联起来。<block ref="d9fea24984986beabae03291c4b721de" category="inline-link-macro-rx"></block>(英文)</block>
+  <block id="e13a5649dfef3a1c76c4be8e463226d7" category="list-text">在工作负载工厂控制台的右上角，选择*Help &gt; Support*。</block>
+  <block id="42236277fa3913ec4d1fd1e17b26874c" category="paragraph">在所有地区、纵向扩展配置最高支持2 Gb/秒。以下地区支持纵向扩展部署的最大吞吐量高达4 GB/秒：美国东部(俄亥俄州)地区、美国东部(弗吉尼亚)地区、美国西部(俄勒冈)地区和欧洲(爱尔兰)。</block>
+  <block id="f23f9e699754fa9634675e68ddb2477a" category="list-text">对于长期保留复制关系、只有最后一个快照可供还原。</block>
+  <block id="3566e30d1125b1cc489403b83380b16e" category="list-text">显示FSx for ONTAP文件系统上安装的ONTAP版本</block>
+  <block id="70b71b7616d1607e66f58defc9384bf3" category="list-text">在FSx for ONTAP文件系统上管理iSCSI卷</block>
+  <block id="dd7d7ae00fef8de94b69aa7b5b540cb1" category="list-text">卷的自动增长功能</block>
+  <block id="3351e8dc51e33708d3280516a366bf4f" category="list-text">创建和管理Snapshot策略</block>
+  <block id="bc405b20c5dce6dc67910950f2591510" category="list-text">复制关系配置</block>
+  <block id="900f24520b234a239d52bc47e673bdd5" category="list-text">FSx for ONTAP文件系统之间的卷复制</block>
+  <block id="2886577fc59b2d9df21dd1d41704de71" category="list-text">备份关系配置</block>
+  <block id="ab8c429c03a3887588677f966f3e8c48" category="list-text">将卷数据备份到云存储</block>
+  <block id="0fb8fbbbeb74e2e76be7a39d75ecdcda" category="list-text">FSx for ONTAP文件系统中的卷克隆</block>
+  <block id="981bc65604544a529c511adc06cb441f" category="list-text">直接从ONTAP显示其他指标(默认指标由Amazon CloudWatch收集)</block>
+  <block id="310e8bd2aa0fbf766664a8fadbb86083" category="list-text">管理NFS导出策略</block>
+  <block id="9d19d65b5c0b11e65c72a68e686c8efc" category="list-text">管理CIFS共享</block>
+  <block id="5b4240cc70ef93fd3963a5a4a1489114" category="summary">在BlueXP  工作负载工厂中管理卷的CIFS共享包括创建、确定用户和组访问权限以及删除。</block>
+  <block id="5917a5ef86ec0bb832a8231c1ca2e1df" category="paragraph">在BlueXP  工作负载工厂中管理卷的CIFS共享包括创建CIFS共享、确定要授予访问权限的用户和组以及为其授予的访问类型以及删除CIFS共享。</block>
+  <block id="ed2b1c265309f7d9a2006128f317479e" category="paragraph">开始之前、请执行以下操作：</block>
+  <block id="1832295f4669cf4c232bd0b7e1d64a4b" category="list-text">要管理CIFS共享，必须<block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>。如果您没有现有链接，请 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。要关联文件系统中的链接，请选择*Account name*下的*Associate link*。链接关联后、返回此操作。</block>
+  <block id="0162ca60ba3c63c1058d5815f318b75b" category="section-title">为卷创建CIFS共享</block>
+  <block id="cbbe8730f4012f0727071442d89615d6" category="paragraph">按照以下步骤为卷创建CIFS共享。</block>
+  <block id="7b83ec4f9189886fea5cbe593c19e290" category="list-text">选择*高级操作*，然后选择*管理CIFS共享*。</block>
+  <block id="212dea300359fc96977228999150178c" category="list-text">在管理CIFS共享页面上、选择*创建CIFS共享*。</block>
+  <block id="5844bed8558487b50b554f8e08c11861" category="list-text">在创建CIFS共享对话框中、提供以下内容：</block>
+  <block id="e8a8f2eb5b946d837e542d5a63fad375" category="paragraph">此时将为卷创建CIFS共享。</block>
+  <block id="e72636c845db0954868fedab8b9039a9" category="section-title">更改卷的CIFS共享</block>
+  <block id="1865d8e00fbb6200e9726e5afde71e2d" category="paragraph">按照以下步骤更改卷的CIFS共享设置。</block>
+  <block id="ca8738e363c21866f7099ffaef924318" category="list-text">在管理CIFS共享页面上、将鼠标悬停在某个CIFS共享上、然后选择铅笔图标进行更改。</block>
+  <block id="5a299cf518ea7257993d2714505b5ff2" category="list-text">更改CIFS访问权限、或者要为其授予权限的用户或组。</block>
+  <block id="84779d2a2e99170bfbb6261853aee8d0" category="paragraph">此时将更新卷的CIFS共享。</block>
+  <block id="bb806e2102217ea2d3a0c758e03eb23c" category="section-title">删除卷的CIFS共享</block>
+  <block id="7fe3781e49adf652332e06e0cf96f9ca" category="paragraph">按照以下步骤删除卷的CIFS共享。</block>
+  <block id="2385aa1bb13246d1508cfe232ff59c2f" category="list-text">在管理CIFS共享页面上、将鼠标悬停在某个CIFS共享上、然后选择垃圾桶图标将其删除。</block>
+  <block id="db881e47b9137977356b0d30938ec851" category="paragraph">删除CIFS共享将使其不可用、并且任何要挂载它的用户都无法访问它。</block>
+  <block id="6b7a52834d577f2e4ac4d587036728f4" category="list-text">选择*Delete*确认删除。</block>
+  <block id="8c880a68f0285449b1f44d4fdeca7cae" category="paragraph">卷的CIFS共享将被删除。</block>
+  <block id="ce638fcfafd4d79a49524062225d7fbc" category="paragraph">要获得特定于BlueXP  工作负载工厂及其存储解决方案和服务的技术支持、需要注册支持。您必须从BlueXP  控制台注册获取支持、该控制台是工作负载出厂时单独的基于Web的控制台。</block>
+  <block id="2cbcc262b0a39ec19c5f69bffccb70fb" category="paragraph">注册获取支持不会为云提供商文件服务启用NetApp支持。有关与云提供商文件服务、其基础架构或任何使用该服务的解决方案相关的技术支持、请参阅该产品的工作负载工厂文档中的"获得帮助"。</block>
+  <block id="37b8354fe553b0151888468751ea8eb0" category="section-title">2025年1月5日</block>
+  <block id="5c8df45cbe01191b205c30373b7e5739" category="section-title">2024年12月1日</block>
+  <block id="d83aca6cf65672d392d39e7c76942a11" category="sidebar">更改层策略</block>
+  <block id="07b434b23f63ca6490df33b213599320" category="sidebar">管理 NFS 导出策略</block>
 </blocks>

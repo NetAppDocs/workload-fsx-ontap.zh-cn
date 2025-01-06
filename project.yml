@@ -47,7 +47,7 @@ sidebar:
       - title: 创建卷
         url: "/create-volume.html"
       - title: 访问您的数据
-        url: access-data.html
+        url: "/access-data.html"
     - title: 创建Storage VM
       url: "/create-storage-vm.html"
     - title: 保护您的数据
@@ -77,7 +77,7 @@ sidebar:
         - title: 初始化复制关系
           url: "/initialize-replication.html"
       - title: 克隆卷
-        url: clone-volume.html
+        url: "/clone-volume.html"
       - title: 使用内部ONTAP数据
         url: "/use-onprem-data.html"
   - title: 管理和监控
@@ -92,16 +92,16 @@ sidebar:
         url: "/manage-volume-tags.html"
       - title: 重新平衡卷的容量
         url: "/rebalance-volume.html"
-      - title: 更改分层策略
+      - title: 更改层策略
         url: "/change-tiering-policy.html"
       - title: 更新存储效率
         url: "/update-storage-efficiency.html"
-      - title: 管理NFS导出策略
+      - title: 管理 NFS 导出策略
         url: "/manage-nfs-export-policy.html"
-      - title: 管理CIFS共享
+      - title: 管理 CIFS 共享
         url: "/manage-cifs-share.html"
       - title: 拆分克隆的卷
-        url: split-cloned-volume.html
+        url: "/split-cloned-volume.html"
       - title: 删除卷
         url: "/delete-volume.html"
     - title: 文件系统管理
@@ -123,13 +123,13 @@ sidebar:
       - title: 管理Storage VM标记
         url: "/manage-svm-tags.html"
       - title: 重置Storage VM密码
-        url: reset-svm-password.html
+        url: "/reset-svm-password.html"
       - title: 删除Storage VM
         url: "/delete-svm.html"
     - title: 数据保护管理
       entries:
       - title: 更改卷的Snapshot策略
-        url: change-snapshot-policy.html
+        url: "/change-snapshot-policy.html"
       - title: 管理FSx for ONTAP备份计划
         url: "/manage-backup-schedule.html"
       - title: 启用和编辑快照以进行长期保留

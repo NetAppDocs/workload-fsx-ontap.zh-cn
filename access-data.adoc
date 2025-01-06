@@ -29,7 +29,7 @@ link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/supported-fsx-clients.htm
 . 在*FSx for ONTAP选项卡中，选择包含卷的文件系统的三点菜单，然后选择*Manage*。
 . 从文件系统概述中，选择*Volumes*选项卡。
 . 从卷选项卡中，选择卷的三点菜单，然后依次选择*Basic Actions*和*View mount command*。
-. 在挂载命令对话框中，选择*Copy*以复制命令。您将在终端中输入复制的命令。
+. 在挂载命令对话框中、选择*复制*以复制NFS挂载点或CIFS共享的命令。您将在终端中输入复制的命令。
 . 选择 * 关闭 * 。
 
 
