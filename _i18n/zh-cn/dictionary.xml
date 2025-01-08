@@ -17,7 +17,6 @@
   <block id="ca56f4eb8ce272724e91bdcba9289351" category="inline-link-macro">在Windows客户端上挂载iSCSI LUN</block>
   <block id="5e566a13383eb6798f798ddefecee8c1" category="list-text"><block ref="5e566a13383eb6798f798ddefecee8c1" category="inline-link-macro-rx"></block></block>
   <block id="135b308ed83c53f1516b7c754566d1c4" category="paragraph-title">开始之前</block>
-  <block id="30780a2d5d1315bb3798040fb45df6f0" category="paragraph">确定要授予访问权限的用户或组以及要授予它们的访问类型。</block>
   <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">步骤</block>
   <block id="7f855d340cfe6607ed51975896dd19da" category="list-text">在存储中，选择*转至存储清单*。</block>
   <block id="f76864e1c2588ae3d6373b6ab95e2209" category="list-text">从文件系统概述中，选择*Volumes*选项卡。</block>
@@ -1294,7 +1293,6 @@
   <block id="310e8bd2aa0fbf766664a8fadbb86083" category="list-text">管理NFS导出策略</block>
   <block id="9d19d65b5c0b11e65c72a68e686c8efc" category="list-text">管理CIFS共享</block>
   <block id="5b4240cc70ef93fd3963a5a4a1489114" category="summary">在BlueXP  工作负载工厂中管理卷的CIFS共享包括创建、确定用户和组访问权限以及删除。</block>
-  <block id="5917a5ef86ec0bb832a8231c1ca2e1df" category="paragraph">在BlueXP  工作负载工厂中管理卷的CIFS共享包括创建CIFS共享、确定要授予访问权限的用户和组以及为其授予的访问类型以及删除CIFS共享。</block>
   <block id="ed2b1c265309f7d9a2006128f317479e" category="paragraph">开始之前、请执行以下操作：</block>
   <block id="1832295f4669cf4c232bd0b7e1d64a4b" category="list-text">要管理CIFS共享，必须<block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>。如果您没有现有链接，请 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。要关联文件系统中的链接，请选择*Account name*下的*Associate link*。链接关联后、返回此操作。</block>
   <block id="0162ca60ba3c63c1058d5815f318b75b" category="section-title">为卷创建CIFS共享</block>
@@ -1320,4 +1318,6 @@
   <block id="5c8df45cbe01191b205c30373b7e5739" category="section-title">2024年12月1日</block>
   <block id="d83aca6cf65672d392d39e7c76942a11" category="sidebar">更改层策略</block>
   <block id="07b434b23f63ca6490df33b213599320" category="sidebar">管理 NFS 导出策略</block>
+  <block id="6026d035efbb2d0fc978d9ab5bb5b084" category="paragraph">在BlueXP  工作负载出厂时管理卷的CIFS共享包括创建CIFS共享、确定要授予访问权限的用户和组以及为其授予的权限级别、以及删除CIFS共享。</block>
+  <block id="34e81b46b7f1e5e087ae28a3b95e81fb" category="list-text">确定要为其授予访问权限的用户或组以及要为其授予的权限级别。</block>
 </blocks>
