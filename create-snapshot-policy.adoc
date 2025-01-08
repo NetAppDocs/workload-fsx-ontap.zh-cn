@@ -36,10 +36,27 @@ summary: 在BlueXP  工作负载出厂时为FSx for ONTAP卷创建Snapshot策�
 
 
 .步骤
-使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。。在*存储*中，选择*转至存储清单*。。在*FSx for ONTAP选项卡中，选择包含卷的文件系统的三点菜单，然后选择*Manage*。。在文件系统概述中，选择*Volumes*选项卡。。从*卷*选项卡中，选择要使用计划快照保护的卷的三点菜单。。选择*数据保护操作*、*快照*，然后选择*管理快照策略*。。在"Snapshot policy management (Snapshot策略管理)"页面上、选择*创建新的Snapshot策略*。。在*Snapshot policy name*字段中，输入快照策略的名称。。可选：在*Description*字段中，输入快照策略的说明。。在*Schedule下，选择何时创建快照。例如、每分钟或每小时。
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 在*存储*中，选择*转至存储清单*。
+. 在*FSx for ONTAP选项卡中，选择包含卷的文件系统的三点菜单，然后选择*Manage*。
+. 在文件系统概述中，选择*Volumes*选项卡。
+. 从*卷*选项卡中，选择要使用计划快照保护的卷的三点菜单。
+. 选择*数据保护操作*、*快照*，然后选择*管理快照策略*。
+. 在"Snapshot policy management (Snapshot策略管理)"页面上、选择*创建新的Snapshot策略*。
+. 在*Snapshot policy name*字段中，输入快照策略的名称。
+. 可选：在*Description*字段中，输入快照策略的说明。
+. 在*Schedule下，选择何时创建快照。例如、每分钟或每小时。
++
+您可以选择多个频率。
 
-+您可以选择多个频率。。在*份数*下，输入要保留的份数。
+. 在*份数*下，输入要保留的份数。
++
+最大副本数为1、023。
 
-+最大副本数为1、023。。可选：在“*命名约定”下，为策略输入*前缀*。。*保留标签*会自动填充。
+. 可选：在“*命名约定”下，为策略输入*前缀*。
+. *保留标签*会自动填充。
++
+此标签是指SnapMirror或复制标签、用于仅选择要从源文件系统复制到目标文件系统的指定快照。
 
-+此标签是指SnapMirror或复制标签、用于仅选择指定快照以从源文件系统复制到目标文件系统。。选择 * 应用 * 。
+. 选择 * 应用 * 。
+

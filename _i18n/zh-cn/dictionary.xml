@@ -937,10 +937,6 @@
   <block id="26aa14a56cb65f177e49de0f78d28f50" category="summary">在BlueXP  工作负载出厂时为FSx for ONTAP卷创建Snapshot策略。快照策略用于定义系统如何为卷创建快照。</block>
   <block id="845e00b5325a1fed5014a20ed341a698" category="paragraph">在BlueXP  工作负载出厂时为FSx for ONTAP卷创建自定义快照策略。快照策略用于定义系统如何为卷创建快照。</block>
   <block id="9b5cb8f49e83e342d48c95385ebf43e7" category="list-text">要创建自定义快照策略，您必须 <block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>。如果您没有现有链接，请 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。要关联文件系统中的链接，请选择*Account name*下的*Associate link*。链接关联后、返回此操作。</block>
-  <block id="bde64956326818fe8b0667c56ca96cb2" category="paragraph">使用其中一个登录<block ref="68ceec76279c6913cdee16884c2d813a" category="inline-link-macro-rx"></block>。。在*存储*中，选择*转至存储清单*。。在*FSx for ONTAP选项卡中，选择包含卷的文件系统的三点菜单，然后选择*Manage*。。在文件系统概述中，选择*Volumes*选项卡。。从*卷*选项卡中，选择要使用计划快照保护的卷的三点菜单。。选择*数据保护操作*、*快照*，然后选择*管理快照策略*。。在"Snapshot policy management (Snapshot策略管理)"页面上、选择*创建新的Snapshot策略*。。在*Snapshot policy name*字段中，输入快照策略的名称。。可选：在*Description*字段中，输入快照策略的说明。。在*Schedule下，选择何时创建快照。例如、每分钟或每小时。</block>
-  <block id="fc44d0b301d97eb155695e7e98d13195" category="paragraph">+您可以选择多个频率。。在*份数*下，输入要保留的份数。</block>
-  <block id="e30313f4b4ec8d88a97bc809eb25a275" category="paragraph">+最大副本数为1、023。。可选：在“*命名约定”下，为策略输入*前缀*。。*保留标签*会自动填充。</block>
-  <block id="404cc58e2d73e238e13299d652231d3e" category="paragraph">+此标签是指SnapMirror或复制标签、用于仅选择指定快照以从源文件系统复制到目标文件系统。。选择 * 应用 * 。</block>
   <block id="475db696847724a8e496eba7476bc2ce" category="summary">在BlueXP  工作负载出厂时为FSx for ONTAP卷创建手动快照。快照是卷内容的时间点版本。</block>
   <block id="512defc52682eb6b6d9585f8d5494603" category="paragraph">您必须 <block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block> 创建快照。如果您没有现有链接，请 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。要关联文件系统中的链接，请选择*Account name*下的*Associate link*。链接关联后、返回此操作。</block>
   <block id="8e835d5a49d273fb898a556146f8b52c" category="list-text">从*卷*选项卡中，选择要保护的卷的三点菜单。</block>
@@ -1320,4 +1316,15 @@
   <block id="07b434b23f63ca6490df33b213599320" category="sidebar">管理 NFS 导出策略</block>
   <block id="6026d035efbb2d0fc978d9ab5bb5b084" category="paragraph">在BlueXP  工作负载出厂时管理卷的CIFS共享包括创建CIFS共享、确定要授予访问权限的用户和组以及为其授予的权限级别、以及删除CIFS共享。</block>
   <block id="34e81b46b7f1e5e087ae28a3b95e81fb" category="list-text">确定要为其授予访问权限的用户或组以及要为其授予的权限级别。</block>
+  <block id="3b3e8444b249018f7cabe035d36fb53b" category="list-text">从*卷*选项卡中，选择要使用计划快照保护的卷的三点菜单。</block>
+  <block id="d67e779675002ae52bb96db205e592f8" category="list-text">在"Snapshot policy management (Snapshot策略管理)"页面上、选择*创建新的Snapshot策略*。</block>
+  <block id="8197cd59767b0d487d39d4530835d10e" category="list-text">在*Snapshot policy name*字段中，输入快照策略的名称。</block>
+  <block id="443886f68921b4853b3d9661df7a7c0f" category="list-text">可选：在*Description*字段中，输入快照策略的说明。</block>
+  <block id="7881dae15f35ca3fa5220cbe11bdefe2" category="list-text">在*Schedule下，选择何时创建快照。例如、每分钟或每小时。</block>
+  <block id="ed8034815557020cf5cb39ef2e1c8cea" category="paragraph">您可以选择多个频率。</block>
+  <block id="f2361db09e678cda3613419cc1de72f2" category="list-text">在*份数*下，输入要保留的份数。</block>
+  <block id="c610ec69c40639be95a74d6a4551c7eb" category="paragraph">最大副本数为1、023。</block>
+  <block id="b6576df8ae387ace84c72b1d00479bc0" category="list-text">可选：在“*命名约定”下，为策略输入*前缀*。</block>
+  <block id="78c10834148d83801a4f716235d19c09" category="list-text">*保留标签*会自动填充。</block>
+  <block id="8a2e9f9173bc33c79f9448e05bf8e7c0" category="paragraph">此标签是指SnapMirror或复制标签、用于仅选择要从源文件系统复制到目标文件系统的指定快照。</block>
 </blocks>
