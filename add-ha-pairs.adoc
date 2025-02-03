@@ -1,0 +1,53 @@
+---
+sidebar: sidebar 
+permalink: add-ha-pairs.html 
+keywords: add high-availability pairs, add HA pairs, add HA pair, add high-availability pair, scale out, file system, fsx for ontap 
+summary: 在BlueXP  工作负载出厂时向文件系统添加高可用性对、以横向扩展文件系统。 
+---
+= 将HA对添加到BlueXP  工作负载出厂时的文件系统
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+添加高可用性(HA)对、在BlueXP  工作负载工厂横向扩展FSx for ONTAP第二代单可用性文件系统、以提高性能和容量。与第一代文件系统相比、这种扩展可为您提供更高的性能可扩展性和灵活性。
+
+.关于此任务
+新的HA对将使用相同的SKU和相同的容量添加到每个HA对。
+
+以下各项不支持添加HA对：
+
+* 适用于ONTAP文件系统的多云HA部署或第一代FSx
+* FSx、适用于包含5个以上Storage VM的ONTAP文件系统
+* FSx、用于使用iSCSI LUN的ONTAP文件系统
+* 最大SSD容量或接近最大SSD容量或已达到IO分配限制的配置
+
+
+有关添加HA对、请考虑以下事项：
+
+* HA对删除：一旦将HA对添加到文件系统、就无法将其删除。
+* 操作时间和限制：添加HA对可能需要大约30分钟。请考虑在维护时段或低活动时段添加HA对。此外、添加HA对会限制其他操作、例如添加更多HA对、配置IOPS、增加SSD容量和更新吞吐量容量。
+* IO分配：自动IO分配取决于总存储容量。用户配置的IO分配量乘以添加的HA对量。
+* NVMe缓存：添加HA对时、NVMe缓存默认处于启用状态。对于繁重的工作负载、建议关闭NVMe缓存。
+* HA对数：建议将文件系统扩展为偶数个HA对、以便在HA对之间平衡分布数据。
+* LUN创建：仅当添加HA对时文件系统上尚不存在LUN时、才可在第二代单可用性文件系统上创建LUN。只有具有6个或更少HA对的文件系统才支持创建LUN。
+
+
+.开始之前
+在将HA对添加到文件系统之前、请执行以下操作：
+
+* 删除所有iSCSI LUN以横向扩展文件系统。
+* 确保文件系统中的Storage VM不超过5个。
+
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 在存储中，选择*转至存储清单*。
+. 在*FSx for ONTAP HA*选项卡的*Information*下，选择*HA P对*旁边的铅笔图标。
+. 在*添加HA对*对话框中，选择要添加到文件系统的HA对的数量。
+. 选择*添加*以确认添加HA对。
+
+
+.结果
+工作负载出厂时将启动向文件系统添加HA对的过程。在添加HA对之前、文件系统不可用于其他操作、例如创建卷。您可以在*Tracker选项卡中监视操作进度。

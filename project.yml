@@ -82,6 +82,8 @@ sidebar:
         url: "/use-onprem-data.html"
   - title: 管理和监控
     entries:
+    - title: 使用Tracker监控操作
+      url: "/monitor-operations.html"
     - title: 卷管理
       entries:
       - title: 编辑卷自动增长

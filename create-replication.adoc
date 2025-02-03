@@ -36,9 +36,7 @@ summary: 为FSx for ONTAP文件系统创建复制关系、以避免在发生意�
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 在存储中，选择*转至存储清单*。
-. 在*FSx for FS* ONTAP选项卡中，选择包含要复制的卷的文件系统的三点菜单，然后选择*Manage*。
-. 从卷选项卡中、选择要复制的卷的三点菜单。
-. 选择*数据保护操作*，然后选择*复制卷数据*。
+. 在*FSx for ONTAP选项卡中，选择包含要复制的卷的文件系统的三点菜单，然后选择*复制 卷数据*。
 . 在创建复制页面上的复制目标下、提供以下内容：
 +
 .. *FSx for ONTAP file system*：为目标FSx for ONTAP文件系统选择ONTAP文件系统的凭据、区域和FSx名称。

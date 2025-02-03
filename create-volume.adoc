@@ -36,11 +36,19 @@ FSx for ONTAP卷是一种虚拟资源、用于对数据进行分组、确定数�
 
 
 
+
+
+== 创建卷
+
+您可以使用CodeBox中提供的以下工具创建卷：REST API、CloudFormation和Terraform。link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["了解如何使用CodeBox实现自动化"^](英文)
+
+
+NOTE: 使用来自CodeBox的Terraform时、您复制或下载的代码会隐藏 `fsxadmin` 和 `vsadmin` 密码。运行代码时、您需要重新输入密码。
+
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 在存储中，选择*转至存储清单*。
-. 在*FSx for FS* ONTAP选项卡中，选择要创建卷的文件系统的三点菜单，然后选择*Manage*。
-. 从*Overview*选项卡中，选择*Create volume*。
+. 在*FSx for ONTAP选项卡中，选择要创建卷的文件系统的三点菜单，然后选择*Create volume*。
 . 在Create volume页面上的General Details下、提供以下详细信息：
 +
 .. *卷名称*：输入卷的名称。
@@ -113,6 +121,58 @@ FlexGroup卷大小取决于成分卷的数量。每个成分卷需要100 GiB。
 .. *存储效率*：禁用或启用存储效率。
 +
 可通过利用ONTAP的重复数据删除和数据压缩功能来实现存储效率。重复数据删除可消除重复的数据块。数据压缩可压缩数据块，以减少所需的物理存储量。
+
+.. *immutable files*：默认情况下、此功能(也称为SnapLock)处于禁用状态。启用不可删除文件可防止在指定时间段内删除或覆盖数据。只有在创建卷期间才能启用此功能。启用后、此功能将无法禁用。这是FSx for ONTAP的一项高级功能、需要额外付费。有关详细信息、请参阅link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html["SnapLock的工作原理"^]Amazon FSx for NetApp ONTAP文档中的。
++
+启用不可更改文件功能会将此卷中的文件永久提交到不可更改的WORM (一次写入、多次读取)状态。
+
++
+保留模式:: 您可以从两种保留模式中进行选择-_Enterprise或_Compliance。
++
+--
+*** 在_Enterprise模式(不可更改的文件或SnapLock)下、管理员可以在文件保留期间删除该文件。
+*** 在_Compliance模式下、无法在WORM文件的保留期限到期之前将其删除。同样、在卷中所有文件的保留期限到期之前、无法删除不可更改的卷。
+
+
+--
+保留期限:: 保留期限有两项设置-_保留 策略_和_保留 期限_。retri力policy_定义 了文件在不可固定的WORM状态下保留多长时间。您可以指定自己的保留策略、也可以使用默认保留策略(未指定)、即30年。最小值和最大值_保留期限_用于定义允许锁定文件的时间范围。
++
+--
+注意:: 即使保留期限到期、您也无法修改WORM文件。您只能将其删除或设置新的保留期限以重新启用WORM保护。
+
+
+--
+自动完成:: 您可以选择启用自动提交功能。如果文件在自动提交期限内未发生更改、则自动提交功能会将文件提交到SnapLock卷上的WORM状态。默认情况下、自动提交功能处于禁用状态。要自动提交的文件必须驻留在 SnapLock 卷上。
+卷附加模式:: 您不能修改受WORM保护的文件中的现有数据。但是、通过不可改变的文件、您可以使用WORM可附加文件来保护现有数据。例如、您可以生成日志文件或保留音频或视频流数据、同时以增量方式向这些数据写入数据。link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/worm-state.html#worm-state-append["了解有关卷附加模式的更多信息"^]在Amazon FSx for NetApp ONTAP文档中。
++
+--
+.不可配置文件的步骤
+... 选择以启用由SnapLock提供支持的*不可更改文件*。
+... 单击复选框以同意并继续。
+... 单击 * 启用 * 。
+... *保留模式*：选择*企业*或*合规*模式。
+... *保留期限*：
++
+**** 选择保留策略：
++
+***** *未指定*：将保留策略设置为30年。
+***** *指定期限*：输入秒数、分钟数、小时数、天数、月数或年数以设置您自己的保留策略。
+
+
+**** 选择最短和最长保留期限：
++
+***** *最小*：输入秒数、分钟数、小时数、天数、月数或年数以设置最短保留期限。
+***** *最大*：输入秒数、分钟数、小时数、天数、月数或年数以设置最长保留期限。
+
+
+
+
+... *AutoCommit *：禁用或启用自动提交。如果启用了自动提交、请设置自动提交期限。
+... *卷附加模式*：禁用或启用。用于向WORM文件添加新内容。
+
+
+--
+
 
 .. *Snapshot policy*：选择快照策略以指定快照的频率和保留时间。
 +

@@ -33,8 +33,7 @@ NOTE: 使用来自CodeBox的Terraform时、您复制或下载的代码会隐藏 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 在存储中，选择*转至存储清单*。
-. 在FSx for ONTAP选项卡中，选择要创建Storage VM的文件系统的三点菜单，然后选择*Manage*。
-. 从文件系统概述中，选择*创建Storage VM*。
+. 在FSx for ONTAP选项卡中、选择要创建Storage VM的文件系统的三点菜单、然后选择*创建Storage VM*。
 . 在Storage VM页面上的Storage VM配置下、提供以下内容：
 +
 .. *名称*：输入Storage VM的名称。

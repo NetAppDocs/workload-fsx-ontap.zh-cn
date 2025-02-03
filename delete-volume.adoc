@@ -19,6 +19,7 @@ summary: 您可以随时删除FSx for ONTAP文件系统中的卷。此操作不�
 * 复制关系：删除此卷之前、必须先复制link:delete-replication.html["删除所有现有复制关系"]此卷、以确保不会保留任何已断开的关系。
 * 本地快照：与此FSx for ONTAP文件系统关联的所有快照都将被永久删除。
 * FSx for ONTAP备份：FSx for ONTAP备份副本将保留、您仍可使用它们。
+* 不可移动文件：在保留期限到期之前、无法删除包含由SnapLock提供支持的不可移动文件的卷。
 
 
 .步骤

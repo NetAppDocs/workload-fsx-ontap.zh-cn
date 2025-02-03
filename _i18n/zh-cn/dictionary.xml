@@ -196,7 +196,6 @@
   <block id="4820ffe2fe615fd37fb7932b296c86f1" category="inline-link-macro">关联链接</block>
   <block id="06c8b7e08cdd0ff26018bb7b51851a9f" category="paragraph">要复制文件系统中的单个卷或所有卷、请完成以下步骤。</block>
   <block id="4f6c910e41c00f71304d3d06714c1c38" category="open-title">复制单个卷</block>
-  <block id="e0498c311fd63d398b51f62c2bf97e3b" category="list-text">选择*数据保护操作*，然后选择*复制卷数据*。</block>
   <block id="b9a2f47b5bc4bd7fcc8d23d6721ec4c2" category="list-text">在创建复制页面上的复制目标下、提供以下内容：</block>
   <block id="837278414ab16e2a74dfc1b2102bcd54" category="list-text">*FSx for ONTAP file system*：为目标FSx for ONTAP文件系统选择ONTAP文件系统的凭据、区域和FSx名称。</block>
   <block id="c8ad1bd40ad1f2f7011877a43d0904aa" category="list-text">* Storage VM名称*：从下拉菜单中选择Storage VM。</block>
@@ -238,7 +237,6 @@
   <block id="bc7303a544a54859ef646aaae48578a5" category="paragraph">通过SVM、在访问FSx for ONTAP中的数据时、客户端和工作站会使用SVM的端点(IP地址)挂载SVM托管的卷、CIFS或SMB共享或iSCSI LUN。</block>
   <block id="0be7879371b03da9f3e439c5431f1db2" category="inline-link-macro">管理FSx for ONTAP Storage Virtual Machine</block>
   <block id="cbddd6713cb3317df938ea4a6fd2cd84" category="paragraph">验证每个文件系统支持的Storage VM数量。有关每个文件系统的最大SVM数量、请参见 <block ref="17ef0d7491a925205e8443311f7ef122" category="inline-link-macro-rx"></block> AWS文档中的。</block>
-  <block id="e65cbc1f8e84ec0a33192b999f9e9cc4" category="list-text">从文件系统概述中，选择*创建Storage VM*。</block>
   <block id="cdbc38b99c6a38c90c6623e1ac73a0fd" category="list-text">在Storage VM页面上的Storage VM配置下、提供以下内容：</block>
   <block id="c9f265881e56f4c52918525bdcb9205d" category="list-text">*名称*：输入Storage VM的名称。</block>
   <block id="42a49281a2c075c2004f1e73852b27e3" category="list-text">* Storage VM凭据*：为此Storage VM的用户提供密码<block ref="6173aa5206484b5224450952747c7148" prefix=" " category="inline-code"></block> 或使用文件系统的<block ref="679500f227997b45be97e3ca8115c678" prefix=" " category="inline-code"></block> 用户凭据。</block>
@@ -930,8 +928,6 @@
   <block id="7607cf6a75040d1b9bf8fde1cfaecf12" category="doc">在BlueXP  工作负载出厂时创建复制关系</block>
   <block id="161fc7b1d67184a50e10e19fb2489263" category="paragraph">在BlueXP  工作负载工厂中为FSx for ONTAP文件系统创建复制关系、以避免在发生意外灾难时丢失数据。</block>
   <block id="cf2d4a66ab67f86354f74f9c2cd68326" category="list-text">用于复制关系的两个文件系统必须具有关联的链接。如果文件系统没有现有链接，请 <block ref="1bb172d13e94db502d24bfc1c5a4fc0a" category="inline-link-macro-rx"></block>。要<block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>在文件系统中，选择*Account name*下的*Associate*链接。一旦链接在两个文件系统中关联、请返回此操作。</block>
-  <block id="d3c14843d08cf463d9ea9a6b94804262" category="list-text">在*FSx for FS* ONTAP选项卡中，选择包含要复制的卷的文件系统的三点菜单，然后选择*Manage*。</block>
-  <block id="089bd3378d1656ee1710bccf951f8421" category="list-text">从卷选项卡中、选择要复制的卷的三点菜单。</block>
   <block id="215ff1ada74bcc801bd4be406a4760b9" category="paragraph">_Auto_是使用工作负载工厂FSx for ONTAP用户界面创建卷时的默认分层策略。有关卷分层策略的详细信息、请参阅 <block ref="de51d392f5d252a956349995f441f55c" category="inline-link-macro-rx"></block>AWS FSx for NetApp ONTAP文档中的。</block>
   <block id="1d1c040daca4e036fc6766de8bee1a0d" category="list-text">在FSx for ONTAP选项卡中，选择包含卷的文件系统的三点菜单，然后选择*Manage*。</block>
   <block id="26aa14a56cb65f177e49de0f78d28f50" category="summary">在BlueXP  工作负载出厂时为FSx for ONTAP卷创建Snapshot策略。快照策略用于定义系统如何为卷创建快照。</block>
@@ -944,7 +940,6 @@
   <block id="4da97157b6693eaf9968b187d7b8259c" category="paragraph">为FSx for ONTAP文件系统创建一个Storage VM (SVM)、以便在BlueXP  工作负载工厂中以虚拟方式访问工作负载的存储和数据服务。</block>
   <block id="54f16768a20bbfb09d736f2fa0a731aa" category="paragraph">Storage VM是一种隔离的文件服务器、可用于访问工作负载出厂存储中每个工作负载的数据。每个SVM都有自己的管理凭据和端点、用于管理和访问数据。</block>
   <block id="08e2fd9fd4dc9adfe3d5f817b3499842" category="paragraph">您可以从工作负载出厂控制台创建Storage VM。您还可以使用CodeBox中提供的以下工具：REST API、CloudFormation和Terraform。<block ref="e0a3467dce43941c7b863cc8d6f0a62a" category="inline-link-macro-rx"></block>(英文)</block>
-  <block id="76e3f0d82963df25a63cb0c98b73397d" category="list-text">在FSx for ONTAP选项卡中，选择要创建Storage VM的文件系统的三点菜单，然后选择*Manage*。</block>
   <block id="55a23b72fe4aee5e2f0024c790d7eaba" category="paragraph">从BlueXP  工作负载出厂时的快照创建新的FSx for ONTAP卷、以启用时间点恢复。</block>
   <block id="8d34a33f34659b0ea11833ac0b8fac52" category="list-text">在*FSx for ONTAP选项卡中，选择包含卷快照的文件系统的三点菜单，然后选择*Manage*。</block>
   <block id="3ce528a1818baf0bbf2f6b362b1f7d58" category="list-text">在卷选项卡中、选择包含要创建卷的快照的卷的三点菜单。</block>
@@ -953,8 +948,6 @@
   <block id="70e17a61e26a90f517dba1b053b0c09e" category="paragraph">设置FSx for ONTAP文件系统后、您可以在BlueXP  工作负载出厂时为ONTAP卷创建FSx。</block>
   <block id="d5d682292e122fa36db263f49a714cc7" category="list-text">工作负载出厂时必须具有FSx for ONTAP文件系统。</block>
   <block id="60911d8c5f41bf949378c3bec9fe03b7" category="list-text">要配置对卷的访问权限，您必须 <block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>。如果您没有现有链接，请 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。要关联文件系统中的链接，请选择*Account name*下的*Associate link*。链接关联后、返回此操作。</block>
-  <block id="27403aa4066ffea03bd15fd0fd4e5e67" category="list-text">在*FSx for FS* ONTAP选项卡中，选择要创建卷的文件系统的三点菜单，然后选择*Manage*。</block>
-  <block id="892eff425e1d1bcf86736ccfc7447322" category="list-text">从*Overview*选项卡中，选择*Create volume*。</block>
   <block id="72ce63a6bef6ec13ef74a7eab0012469" category="summary">FSx for ONTAP在BlueXP  工作负载出厂时支持快照、卷备份和卷复制。</block>
   <block id="d041ab32e01d968ecc286a807158f8b3" category="doc">BlueXP  工作负载工厂中的数据保护</block>
   <block id="96a5899d90dd9b81319f168f67bcb5ae" category="summary">要在BlueXP  工作负载出厂时删除文件系统、必须先删除与该文件系统关联的任何卷、Storage VM或复制关系。</block>
@@ -1327,4 +1320,131 @@
   <block id="b6576df8ae387ace84c72b1d00479bc0" category="list-text">可选：在“*命名约定”下，为策略输入*前缀*。</block>
   <block id="78c10834148d83801a4f716235d19c09" category="list-text">*保留标签*会自动填充。</block>
   <block id="8a2e9f9173bc33c79f9448e05bf8e7c0" category="paragraph">此标签是指SnapMirror或复制标签、用于仅选择要从源文件系统复制到目标文件系统的指定快照。</block>
+  <block id="ed2a329d6f9bf2181ff23014cff23ba5" category="doc">BlueXP  工作负载出厂控制台中的CloudShell</block>
+  <block id="5eaddd0f57f7eaddd8610d939876ec8d" category="paragraph">CloudShell是一种嵌入式命令行界面功能、可在BlueXP  工作负载工厂中用于存储。您可以使用CloudShell在类似于Shell的环境中的工作负载出厂控制台中从多个会话创建、共享和执行ONTAP或AWS命令行界面命令。</block>
+  <block id="09a780ee2763ed81ce7dcd3480b57fe4" category="inline-link-macro">详细了解BlueXP  工作负载工厂中的CloudShell</block>
+  <block id="feff74472562237513e0ca0c55cd4e38" category="paragraph"><block ref="feff74472562237513e0ca0c55cd4e38" category="inline-link-macro-rx"></block></block>
+  <block id="9be163b55bb1cb61b0ccee4ea40ae6ee" category="section-title">清单数据下载</block>
+  <block id="e61fb273c97526db97c128ce9bfc04a9" category="paragraph">现在、您可以从BlueXP  工作负载工厂的存储将FSx for ONTAP清单数据下载到Microsoft Excel或CSV文件中。</block>
+  <block id="1d242bf1e7b71fd8602570478aa1bdc8" category="inline-image-macro">BlueXP  工作负载工厂中的存储的屏幕截图、其中显示了用于下载FSx for ONTAP文件系统清单数据的新下载按钮。</block>
+  <block id="b8040f0b8b5eff64bb15c9fc0fbc96d6" category="paragraph"><block ref="b8040f0b8b5eff64bb15c9fc0fbc96d6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="eae91301e6256990d5311778eafea0e5" category="section-title">FSx for ONTAP文件系统其他菜单选项</block>
+  <block id="0ad83f6b2d6e8bf103be3683c0c87ef9" category="paragraph">我们已通过"存储"中的FSx for ONTAP选项卡对FSx for ONTAP文件系统执行以下操作变得更加简单。</block>
+  <block id="8221d5fcbb1b8ef8a3fa535553679b44" category="list-text">复制卷数据</block>
+  <block id="bb8210b8fea9fd35bf14070e9b9f7cf9" category="inline-image-macro">"存储"中FSx for ONTAP选项卡的屏幕截图、其中显示了创建Storage VM、创建卷和复制卷数据的新菜单选项。</block>
+  <block id="2a10a5b76871c42edb3807a0dec574ae" category="paragraph"><block ref="2a10a5b76871c42edb3807a0dec574ae" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="2f72c2c06d295d3f5420254934ac77b1" category="section-title">Terraform支持创建卷</block>
+  <block id="7f28d622584eb6b05ee5ce1609e2de38" category="paragraph">现在、您可以使用CodeBox中的Terraform创建卷。</block>
+  <block id="d3156376048c94102c97709d5ff05e75" category="paragraph"><block ref="d3156376048c94102c97709d5ff05e75" category="inline-link-macro-rx"></block></block>
+  <block id="eb139dd9cb815e502d04047858e7c930" category="section-title">使用不可配置文件功能锁定文件</block>
+  <block id="849a110e76510a6394e4b27714d0bc20" category="paragraph">现在、在为FSx for ONTAP文件系统创建卷时、您可以使用不可改变的文件功能锁定文件。文件锁定可帮助您和其他人防止在指定期限内意外或故意删除文件。</block>
+  <block id="ea3d4df6f8aff21b2dfe549c5ecf9775" category="section-title">跟踪器可用于监控和跟踪操作</block>
+  <block id="c016252819aa3f6ede2b315b76b5c5b2" category="paragraph">Tracker、存储中提供了一种新的监控功能。您可以使用Tracker监控和跟踪凭据、存储和链接操作的进度和状态、查看操作任务和子任务的详细信息、诊断任何问题或故障、编辑失败操作的参数以及重试失败操作。</block>
+  <block id="7512718e82771ab0f98e51652a2e97c6" category="inline-link-macro">了解如何使用Tracker监控和跟踪操作</block>
+  <block id="30babb51ab17a107228fe65a4e65418b" category="paragraph"><block ref="30babb51ab17a107228fe65a4e65418b" category="inline-link-macro-rx"></block></block>
+  <block id="c1c23b72df9b53434f3c5ef6963cd2c1" category="section-title">支持适用于NetApp ONTAP文件系统的第二代Amazon FSx</block>
+  <block id="327da4942931ea47a06f556d15726878" category="paragraph">现在、您可以在BlueXP  工作负载工厂中对NetApp ONTAP第二代文件系统使用Amazon FSx。FSx for ONTAP第二代单AZ文件系统由多达12个HA对提供支持、可提供高达72 Gbps的吞吐量和240、000次SSD IOPS。FSx for ONTAP第二代Multi-AZ文件系统由一个HA对提供支持、可提供6 Gbps的吞吐量和200、000次SSD IOPS。</block>
+  <block id="a22d0116b85624117006e75d98d659db" category="inline-link-macro">添加高可用性对</block>
+  <block id="8a34eb45ca4cf03ce0d5e71fbfafb73a" category="list-text"><block ref="8a34eb45ca4cf03ce0d5e71fbfafb73a" category="inline-link-macro-rx"></block></block>
+  <block id="eeb5242f698ac9fda34591a326f4c0a3" category="inline-link-macro">Amazon FSx for NetApp ONTAP的配额和限制</block>
+  <block id="94f917accd36ed25f8a73175e8d4cdfb" category="list-text"><block ref="94f917accd36ed25f8a73175e8d4cdfb" category="inline-link-macro-rx"></block></block>
+  <block id="872fb30847d0e2ca8bac3e52054013c7" category="summary">在BlueXP  工作负载出厂时向文件系统添加高可用性对、以横向扩展文件系统。</block>
+  <block id="310011ba5387c43c841355394cd8cb9a" category="doc">将HA对添加到BlueXP  工作负载出厂时的文件系统</block>
+  <block id="304724e8759230c609bf9c333dfd2870" category="paragraph">添加高可用性(HA)对、在BlueXP  工作负载工厂横向扩展FSx for ONTAP第二代单可用性文件系统、以提高性能和容量。与第一代文件系统相比、这种扩展可为您提供更高的性能可扩展性和灵活性。</block>
+  <block id="a9a9a7c9ee5a38cb1e35ca4b8cce7276" category="paragraph">新的HA对将使用相同的SKU和相同的容量添加到每个HA对。</block>
+  <block id="c34a6e94bb77f8d46f8d1f9ca5d1c2b9" category="paragraph">以下各项不支持添加HA对：</block>
+  <block id="78d560615a8adc2f32fa3ecd80e33fd1" category="list-text">适用于ONTAP文件系统的多云HA部署或第一代FSx</block>
+  <block id="d1360a44b7e5113c71c2bccc4ade5ce8" category="list-text">FSx、适用于包含5个以上Storage VM的ONTAP文件系统</block>
+  <block id="943393d8598620d656ed3221b72683cf" category="list-text">FSx、用于使用iSCSI LUN的ONTAP文件系统</block>
+  <block id="7d37b0d4d8c2c037db887ba2ef4befd8" category="list-text">最大SSD容量或接近最大SSD容量或已达到IO分配限制的配置</block>
+  <block id="d87c9129ec2537bcf3c1a19ef369663c" category="paragraph">有关添加HA对、请考虑以下事项：</block>
+  <block id="bee7f2516cfc11bd1d783c9a0abddcfc" category="list-text">HA对删除：一旦将HA对添加到文件系统、就无法将其删除。</block>
+  <block id="3bb5813303893f4fbd1a3c16e489c6b2" category="list-text">操作时间和限制：添加HA对可能需要大约30分钟。请考虑在维护时段或低活动时段添加HA对。此外、添加HA对会限制其他操作、例如添加更多HA对、配置IOPS、增加SSD容量和更新吞吐量容量。</block>
+  <block id="ea59a490db5f0dbf4a08a12fc8ad506b" category="list-text">IO分配：自动IO分配取决于总存储容量。用户配置的IO分配量乘以添加的HA对量。</block>
+  <block id="7e1da5f0b87a5f6fa454d36b488af717" category="list-text">NVMe缓存：添加HA对时、NVMe缓存默认处于启用状态。对于繁重的工作负载、建议关闭NVMe缓存。</block>
+  <block id="ad8dcf096cb2afb4a235df61b29f9698" category="list-text">HA对数：建议将文件系统扩展为偶数个HA对、以便在HA对之间平衡分布数据。</block>
+  <block id="a918312e36a786ad734780ce0938389b" category="list-text">LUN创建：仅当添加HA对时文件系统上尚不存在LUN时、才可在第二代单可用性文件系统上创建LUN。只有具有6个或更少HA对的文件系统才支持创建LUN。</block>
+  <block id="df909e03d10a14950b92a8e5633d9123" category="paragraph">在将HA对添加到文件系统之前、请执行以下操作：</block>
+  <block id="4173fb9932d53246098b25db51af2252" category="list-text">删除所有iSCSI LUN以横向扩展文件系统。</block>
+  <block id="fefe421f31fcb913ee3602de627b2aad" category="list-text">确保文件系统中的Storage VM不超过5个。</block>
+  <block id="f4f11e4d478a467a240d18f498921150" category="list-text">在*FSx for ONTAP HA*选项卡的*Information*下，选择*HA P对*旁边的铅笔图标。</block>
+  <block id="9d8f80ba2bc026694d1d454d46507e1a" category="list-text">在*添加HA对*对话框中，选择要添加到文件系统的HA对的数量。</block>
+  <block id="03d260b6edf74eab2f53976254758a17" category="list-text">选择*添加*以确认添加HA对。</block>
+  <block id="379ea21065ee4862014742fa5a258e93" category="paragraph">工作负载出厂时将启动向文件系统添加HA对的过程。在添加HA对之前、文件系统不可用于其他操作、例如创建卷。您可以在*Tracker选项卡中监视操作进度。</block>
+  <block id="d290c400d30f537f28b8084fbc091982" category="list-text">在*FSx for ONTAP选项卡中，选择包含要复制的卷的文件系统的三点菜单，然后选择*复制 卷数据*。</block>
+  <block id="9c02b82df4be281c41318d376be29cf9" category="list-text">在FSx for ONTAP选项卡中、选择要创建Storage VM的文件系统的三点菜单、然后选择*创建Storage VM*。</block>
+  <block id="70975b8c8f6b12169d193367442b573d" category="paragraph">您可以使用CodeBox中提供的以下工具创建卷：REST API、CloudFormation和Terraform。<block ref="e0a3467dce43941c7b863cc8d6f0a62a" category="inline-link-macro-rx"></block>(英文)</block>
+  <block id="7bedae719019136090a7c4c373312767" category="list-text">在*FSx for ONTAP选项卡中，选择要创建卷的文件系统的三点菜单，然后选择*Create volume*。</block>
+  <block id="5cc952f284466929d6b64c6a769f954d" category="inline-link-macro">SnapLock的工作原理</block>
+  <block id="4f607bc8b085931c8b1fac489fd24290" category="list-text">*immutable files*：默认情况下、此功能(也称为SnapLock)处于禁用状态。启用不可删除文件可防止在指定时间段内删除或覆盖数据。只有在创建卷期间才能启用此功能。启用后、此功能将无法禁用。这是FSx for ONTAP的一项高级功能、需要额外付费。有关详细信息、请参阅<block ref="e334cd66539db07681f218968c17aeb4" category="inline-link-macro-rx"></block>Amazon FSx for NetApp ONTAP文档中的。</block>
+  <block id="f348514dc345ce9c1d9ad82ae7129779" category="paragraph">启用不可更改文件功能会将此卷中的文件永久提交到不可更改的WORM (一次写入、多次读取)状态。</block>
+  <block id="d1004c5cd3614165a3675cc9bcefd0ff" category="list-text">保留模式</block>
+  <block id="bf037d2be2988cb003e5473abb7458ad" category="list-text">您可以从两种保留模式中进行选择-_Enterprise或_Compliance。</block>
+  <block id="2c7186fdcb22214f6a80f0c4bf830b01" category="list-text">在_Enterprise模式(不可更改的文件或SnapLock)下、管理员可以在文件保留期间删除该文件。</block>
+  <block id="056049eeec9d03d44ee8b82656eddd56" category="list-text">在_Compliance模式下、无法在WORM文件的保留期限到期之前将其删除。同样、在卷中所有文件的保留期限到期之前、无法删除不可更改的卷。</block>
+  <block id="2dee9b3212ded01b0c388d81a6f5aec3" category="list-text">保留期限</block>
+  <block id="103d1ff0c19e1c2f05d0e9237137a1dd" category="list-text">保留期限有两项设置-_保留 策略_和_保留 期限_。retri力policy_定义 了文件在不可固定的WORM状态下保留多长时间。您可以指定自己的保留策略、也可以使用默认保留策略(未指定)、即30年。最小值和最大值_保留期限_用于定义允许锁定文件的时间范围。</block>
+  <block id="10de4bc81f754b19b0d27246a0589c05" category="list-text">注意</block>
+  <block id="1e6fe3169d6df99dc6e4d89c3f0ca701" category="list-text">即使保留期限到期、您也无法修改WORM文件。您只能将其删除或设置新的保留期限以重新启用WORM保护。</block>
+  <block id="00c161f0779702fcc736833a90e1c117" category="list-text">自动完成</block>
+  <block id="0710e9c5903cc398ef1a22a38cbb4666" category="list-text">您可以选择启用自动提交功能。如果文件在自动提交期限内未发生更改、则自动提交功能会将文件提交到SnapLock卷上的WORM状态。默认情况下、自动提交功能处于禁用状态。要自动提交的文件必须驻留在 SnapLock 卷上。</block>
+  <block id="f84002cfa8aafdd6963aef9819f03cbe" category="list-text">卷附加模式</block>
+  <block id="73085bf5d4b4c2626026794741768c09" category="inline-link-macro">了解有关卷附加模式的更多信息</block>
+  <block id="f70318a7f623a49e77262fc2b382b062" category="list-text">您不能修改受WORM保护的文件中的现有数据。但是、通过不可改变的文件、您可以使用WORM可附加文件来保护现有数据。例如、您可以生成日志文件或保留音频或视频流数据、同时以增量方式向这些数据写入数据。<block ref="d363aab3c17dd7b08ef55d9ecb5c0afa" category="inline-link-macro-rx"></block>在Amazon FSx for NetApp ONTAP文档中。</block>
+  <block id="dfb689231a842f04569410625d60363d" category="list-title">不可配置文件的步骤</block>
+  <block id="44ba7526f1340d677cb6220be4b1b823" category="list-text">选择以启用由SnapLock提供支持的*不可更改文件*。</block>
+  <block id="4f7680fa283bf52aaa8ee2edfd564db8" category="list-text">单击复选框以同意并继续。</block>
+  <block id="909d8cdc7c100d1834d4de10094f43ca" category="list-text">单击 * 启用 * 。</block>
+  <block id="088bb2d18ad8fbec398c29306e127221" category="list-text">*保留模式*：选择*企业*或*合规*模式。</block>
+  <block id="77b42ba4805daabc49114b9ab89a4177" category="list-text">*保留期限*：</block>
+  <block id="f35564204209083a652f147df603888c" category="list-text">选择保留策略：</block>
+  <block id="504152708cd9de44bb9cb86c2f924f58" category="list-text">*未指定*：将保留策略设置为30年。</block>
+  <block id="d52522aeac6c98a12810dc096d055647" category="list-text">*指定期限*：输入秒数、分钟数、小时数、天数、月数或年数以设置您自己的保留策略。</block>
+  <block id="6c174e94dd8ddcd5d81962e78326f53a" category="list-text">选择最短和最长保留期限：</block>
+  <block id="16358ae23c4e09a6d211bde0bb1d5944" category="list-text">*最小*：输入秒数、分钟数、小时数、天数、月数或年数以设置最短保留期限。</block>
+  <block id="0e5cb121a1c7b4c59daf6285123d8e75" category="list-text">*最大*：输入秒数、分钟数、小时数、天数、月数或年数以设置最长保留期限。</block>
+  <block id="9ddc08dbc82d9bea34f1dc4c5b59e6e7" category="list-text">*AutoCommit *：禁用或启用自动提交。如果启用了自动提交、请设置自动提交期限。</block>
+  <block id="f8688d8b01dc38763ec2b1f2b373aacc" category="list-text">*卷附加模式*：禁用或启用。用于向WORM文件添加新内容。</block>
+  <block id="4d039a03e23e55926708d85c8977d521" category="list-text">不可移动文件：在保留期限到期之前、无法删除包含由SnapLock提供支持的不可移动文件的卷。</block>
+  <block id="d39be15ae050d8e613043b0ac15e302b" category="section-title">正在添加HA对限制</block>
+  <block id="5efa36685932e62e6fc20327cd980750" category="list-text">此操作可能需要大约30分钟才能完成。</block>
+  <block id="a51a5c7e9ccc4724703a6ad204303926" category="list-text">添加HA对会限制以下操作：添加更多HA对、配置IOPS、增加SSD容量和更新吞吐量容量。</block>
+  <block id="0499cc2d877c04e04bec267579a95697" category="summary">在适用于存储的BlueXP  工作负载工厂中、使用跟踪器跟踪FSx for ONTAP、凭据和链接操作、并监控作业进度。</block>
+  <block id="dc58214807820bc923ac22555f97fd7a" category="doc">在BlueXP  工作负载工厂中使用Tracker监控存储操作</block>
+  <block id="a1351d61b85cd866d5c412c6e3220b98" category="paragraph">在BlueXP  工作负载工厂中使用跟踪器监控和跟踪FSx for ONTAP的执行情况、凭据和链路操作、并监控任务进度。</block>
+  <block id="d57581d19f1047da33c24e46abd88cd4" category="paragraph">Workload Factory提供了一项监控功能、可用于监控和跟踪FSx for ONTAP的进度和状态、凭据和链接操作、查看操作任务和子任务的详细信息、诊断任何问题或故障、编辑失败操作的参数以及重试失败的操作。您可以按类型和状态筛选作业、使用搜索功能查找作业以及下载作业表。</block>
+  <block id="5cc85b66adf3d2a6e3eb745a827cf4e0" category="paragraph">Tracker支持多达三个级别的监控、具体取决于操作。每个任务(例如文件系统部署)都会显示任务说明、状态、开始时间、任务工期、用户、区域、代理资源、任务ID以及所有相关子任务。</block>
+  <block id="5cdbeb1c4cc65e8f551e161828701113" category="list-text">带有示例的跟踪器任务级别</block>
+  <block id="6db8f73f40a9c238922a375a008fda96" category="list-text">级别1 (父作业)：跟踪文件系统部署。</block>
+  <block id="4848a390cc9141e051b33cd55dc40d06" category="list-text">级别2 (子作业)：跟踪与文件系统部署相关的子作业。</block>
+  <block id="df942ff3756f5cbd24f42b521acc64f8" category="list-text">级别3 (任务)：列出对每个资源执行的操作顺序。</block>
+  <block id="88ebc1f479e6de47fd711c4be81c4d26" category="list-text">操作状态</block>
+  <block id="afcc9733e2e2e0ce70f1ecee29c8f008" category="list-text">跟踪器中的操作状态如下：_in Progress _、_Success _和_Failed _。</block>
+  <block id="de32977622108a1960ab0fcf45adaf80" category="list-text">操作频率</block>
+  <block id="a9853b6069302c4152781f48222c3541" category="list-text">操作频率取决于作业类型和作业计划。</block>
+  <block id="01b0a4fcc33bdafd6e65537f24f463de" category="list-text">事件保留</block>
+  <block id="b3c382e94f4b4abcc049ce95e85dc998" category="list-text">事件将在用户界面中保留30天。</block>
+  <block id="cfd98e00a6e308c04ab9f76a854b6989" category="section-title">跟踪和监控操作</block>
+  <block id="c82c26735f08b789c8bf574ab4962fcc" category="paragraph">使用跟踪器在BlueXP  中跟踪和监控操作。</block>
+  <block id="48acd3e9d69adfbf7f5941961e95f6de" category="list-text">从存储清单中，选择帐户设置菜单，然后选择*Tracker。</block>
+  <block id="1c575ed3e5dce0a1d77706830609b278" category="inline-image-macro">帐户设置菜单的屏幕截图、突出显示了Tracker选项。</block>
+  <block id="7478b5abe2869b21138fe88cbd4d66da" category="paragraph"><block ref="7478b5abe2869b21138fe88cbd4d66da" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e443a93c9da9763cd15656814a7e0c2e" category="list-text">在Tracker选项卡中、使用筛选器或搜索功能缩小作业结果范围。您也可以下载作业报告。</block>
+  <block id="aa2a2cd452f8a71b2f2dcdae68114732" category="section-title">查看API请求</block>
+  <block id="68538d555ae12c680ea428aaa850d90f" category="paragraph">在跟踪程序的"Code"框中查看某个任务的API请求。</block>
+  <block id="968877018213bf42962084001c210472" category="list-text">在Tracker中、选择一个任务。</block>
+  <block id="2e6179b36329b65c38a5ca113ba0c81c" category="list-text">选择三点菜单，然后选择*查看API请求*。</block>
+  <block id="1448fba076a066622a9f93a25ab170a2" category="section-title">重试失败的操作</block>
+  <block id="89f1070b2ef1ba678a8cb4823fa74cb2" category="paragraph">在Tracker中重试失败的操作。您还可以复制失败操作的错误消息。</block>
+  <block id="2d7556f00012ad460e93441b51cce6ea" category="admonition">失败的操作仅允许重试x次。</block>
+  <block id="b866b632b7f32ded2a0a0907100641bf" category="list-text">在Tracker中、选择失败的操作。</block>
+  <block id="5d0eaa0ad00baabb57cbc22969070918" category="list-text">选择三点菜单，然后选择*Retry*。</block>
+  <block id="121145d60db2324903b129ae74d6c0a9" category="paragraph">此时将重新启动此操作。</block>
+  <block id="bde5076ae2a993de9042a7e1dd4dc445" category="section-title">编辑失败的操作并重试</block>
+  <block id="2ae5a8ae85adca2aebf16aa81130c9c5" category="paragraph">编辑失败操作的参数、然后在Tracker外部重试此操作。</block>
+  <block id="524ab960a72817bd7f9f107dc357d1bd" category="list-text">选择三点菜单，然后选择*编辑并重试*。</block>
+  <block id="a071e4310b0dbc18ec326c217f47692f" category="paragraph">系统会将您重定向到操作页面、您可以在其中编辑参数并重试此操作。</block>
+  <block id="49814788ce382c87a117a40e54ae858b" category="paragraph">此时将重新启动此操作。进入跟踪器以查看操作状态。</block>
+  <block id="986aee2caba870111e5ce3c5571c82de" category="section-title">2025年2月2日</block>
+  <block id="2e0c4c64c2671f5575eb184e577dcdae" category="sidebar">使用Tracker监控操作</block>
 </blocks>
