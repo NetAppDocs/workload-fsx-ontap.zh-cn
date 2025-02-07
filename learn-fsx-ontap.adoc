@@ -27,14 +27,14 @@ FSx for ONTAP提供以下功能：
 * *高可用性*：为每个FSx for ONTAP文件系统提供高可用性、支持单可用性区域和多可用性区域部署。
 * *自动快照*：通过高效的自动快照保护数据，快照几乎是文件系统或卷的即时、节省空间的时间点只读副本。
 * *卷复制*：通过跨Amazon Web Services跨区域复制提供灾难恢复。
-* *高效备份*：为另一个区域的数据副本提供额外的后续保护。这样可以在紧急情况下提供额外的保护层。
+* *高效备份*：在紧急情况下、通过另一个区域的数据副本增加额外的保护层。
 * *快速克隆*：通过快速克隆加快应用程序开发速度。
 * *多协议支持*：支持网络文件系统(NFS)、服务器消息块(SMB)和Internet小型计算机系统接口(iSCSI)协议。
 * *高吞吐量*：提供高吞吐量性能、以确保在FSx for ONTAP文件系统上运行的工作负载实现低的低迟发性。
-* *内存缓存和NVMe缓存*：结合了独特的内存缓存和NVMe缓存、进一步提高了频繁访问的数据的性能。
+* *内存缓存和NVMe缓存*：包括唯一的内存缓存和NVMe缓存、可提高经常访问的数据的性能。
 * *数十万IOP*：利用SSD磁盘提供数十万次IOPS、确保您的存储和工作负载及时获得结果。
 * *精简配置*：允许提前配置容量、节省成本、直到需要更多容量为止。
-* *重复数据删除和数据压缩*：消除重复的数据块并对数据块进行压缩、以减少FSx for ONTAP文件系统所需的物理存储量、从而节省成本。
+* *重复数据删除和数据压缩*：删除重复数据并对数据进行压缩、以减少FSx for ONTAP文件系统所需的物理存储量、从而节省成本。
 * *数据分层*：通过将不常访问的数据从高性能主SSD存储层移至二级容量池存储层、降低存储成本。
 
 
@@ -64,7 +64,7 @@ FSx for ONTAP提供以下功能：
 
 == 成本
 
-您的FSx for ONTAP帐户由AWS而非工作负载工厂维护。请参阅 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html#pricing-for-fsx-ontap["Amazon FSx for NetApp ONTAP的定价"^]。
+AWS会维护您的FSx for ONTAP帐户、而不是工作负载工厂。请参阅 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html#pricing-for-fsx-ontap["Amazon FSx for NetApp ONTAP的定价"^]。
 
 
 

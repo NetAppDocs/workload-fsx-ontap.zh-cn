@@ -13,7 +13,7 @@ summary: '通过AWS FSx for NetApp ONTAP、了解在Amazon Elelic Block Store (E
 [role="lead"]
 了解通过使用Amazon Elecic Block Store (EBS)、Elecic File System (EFS)和FSx for Windows File Server和FSx for NetApp ONTAP为存储工作负载节省的空间。
 
-工作负载工厂内置了存储节省计算器、您可以将Amazon存储环境与FSx for ONTAP进行比较。无论是否提供AWS凭据、您都可以探索节省的空间、并为您的存储环境自定义配置设置。如果您提供AWS凭据、则可以选择一个或多个Amazon El生 性块存储实例、并让工作负载工厂自动进行比较。无论是手动还是自动、计算器都可以确定哪种存储服务可以为您的存储需求提供最低的成本。
+BlueXP  工作负载工厂提供了一个存储节省计算器、用于将Amazon存储环境与FSx for ONTAP进行比较。无论是否提供AWS凭据、您都可以探索节省的空间、并为您的存储环境自定义配置设置。如果您提供AWS凭据、则可以选择一个或多个Amazon El生 性块存储实例、并让工作负载工厂自动进行比较。无论是手动还是自动、计算器都可以确定哪种存储服务可以为您的存储需求提供最低的成本。
 
 如果存储计算器确定最经济高效的存储是FSx for ONTAP、则无论您为工作负载出厂设置了何种权限、您都可以创建或保存FSx for ONTAP配置、并使用代码框生成基础架构即代码模板。
 

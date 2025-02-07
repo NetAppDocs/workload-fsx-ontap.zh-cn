@@ -4,14 +4,14 @@ permalink: data-protection-overview.html
 keywords: overview 
 summary: FSx for ONTAP在BlueXP  工作负载出厂时支持快照、卷备份和卷复制。 
 ---
-= BlueXP  工作负载工厂中的数据保护
+= BlueXP  Workload Factory中的数据保护类型
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-FSx for ONTAP支持使用快照创建卷的只读时间点映像、使用卷备份创建卷保留期较长的脱机备份、以及使用卷复制在不同区域为卷创建异步镜像。
+FSx for ONTAP支持快照、备份和复制以实现数据保护。我们建议您结合使用多种数据保护类型、以便为不可避免的情况做好准备并保护您的数据。
 
 
 

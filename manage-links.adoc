@@ -11,7 +11,7 @@ summary: 您可以在BlueXP  工作负载出厂时查看与您的帐户关联�
 
 
 [role="lead"]
-管理与BlueXP  工作负载工厂帐户关联的链接。
+管理与BlueXP  工作负载工厂帐户关联的链接。您可以查看与FSx for ONTAP文件系统关联的链接、将链接与FSx for ONTAP文件系统关联、编辑链接以及删除链接。
 
 link:links-overview.html["了解有关链接的更多信息"] 或 link:create-link.html["创建链接"]。
 

@@ -301,7 +301,6 @@
   <block id="a481fc89f2e7d4e062f18bfa2b0d4c70" category="list-text">*聚合列表*：仅适用于FlexGroup卷。添加或删除聚合。最小聚合数为1。</block>
   <block id="688711a00683b1f80450615a64ae5765" category="list-text">*成分卷数*：仅适用于FlexGroup卷。输入每个聚合的成分卷数。每个成分卷需要100 GiB。</block>
   <block id="39827364402eb7a6398af8c1194aa72d" category="doc">数据保护概述</block>
-  <block id="35eb62f4f63e90889d34bd74cbe2ab3c" category="paragraph">FSx for ONTAP支持使用快照创建卷的只读时间点映像、使用卷备份创建卷保留期较长的脱机备份、以及使用卷复制在不同区域为卷创建异步镜像。</block>
   <block id="ba396d6d8a54df8d845ef7c6817efc3c" category="section-title">数据保护类型</block>
   <block id="c964369b092ed7e6fb64df0283dd7a2b" category="paragraph">为工作负载提供数据保护有助于确保您可以随时从任何数据丢失中恢复。在选择要使用的功能之前、请先了解数据保护的类型。</block>
   <block id="9147e5e61a7b9260dec09f3a6eb3e5be" category="paragraph-title">快照</block>
@@ -512,14 +511,11 @@
   <block id="1252aae786a3ef33141ff6f61e500bd3" category="list-text">*高可用性*：为每个FSx for ONTAP文件系统提供高可用性、支持单可用性区域和多可用性区域部署。</block>
   <block id="8b4170a08fe233d3f1ab1a7f2b813fe7" category="list-text">*自动快照*：通过高效的自动快照保护数据，快照几乎是文件系统或卷的即时、节省空间的时间点只读副本。</block>
   <block id="ee3721a037ae0201585fa0f3d8524835" category="list-text">*卷复制*：通过跨Amazon Web Services跨区域复制提供灾难恢复。</block>
-  <block id="48e2b64d68a2c2feb299e73854cb2fd9" category="list-text">*高效备份*：为另一个区域的数据副本提供额外的后续保护。这样可以在紧急情况下提供额外的保护层。</block>
   <block id="d4ea6120d445184b4e6aeb2e9a91b4f7" category="list-text">*快速克隆*：通过快速克隆加快应用程序开发速度。</block>
   <block id="8634654a2dc1e4d5fd5259271ca403cc" category="list-text">*多协议支持*：支持网络文件系统(NFS)、服务器消息块(SMB)和Internet小型计算机系统接口(iSCSI)协议。</block>
   <block id="e38815d408b5081ee472d1082f1ec96d" category="list-text">*高吞吐量*：提供高吞吐量性能、以确保在FSx for ONTAP文件系统上运行的工作负载实现低的低迟发性。</block>
-  <block id="2268df68a18ecb74f8cbbca6ec310482" category="list-text">*内存缓存和NVMe缓存*：结合了独特的内存缓存和NVMe缓存、进一步提高了频繁访问的数据的性能。</block>
   <block id="7a9e397cb5993968200649ca78b17a6d" category="list-text">*数十万IOP*：利用SSD磁盘提供数十万次IOPS、确保您的存储和工作负载及时获得结果。</block>
   <block id="c0bfa18f4d4b53df41758502c7ed279b" category="list-text">*精简配置*：允许提前配置容量、节省成本、直到需要更多容量为止。</block>
-  <block id="dacc1efce8073cac35b2ee5a9ae52c4c" category="list-text">*重复数据删除和数据压缩*：消除重复的数据块并对数据块进行压缩、以减少FSx for ONTAP文件系统所需的物理存储量、从而节省成本。</block>
   <block id="4db5604b0bc72aea1fe7399b332f28cb" category="list-text">*数据分层*：通过将不常访问的数据从高性能主SSD存储层移至二级容量池存储层、降低存储成本。</block>
   <block id="a5a980f3518b6bdf573ccca8b4570aaa" category="list-text">*Codebox*：为开发人员提供FSx for ONTAP操作的代码查看器、用于复制和下载的代码模板以及用于代码重复使用的自动化目录。</block>
   <block id="20b4f77bd00b4f63a49ec8e08f3bf6a6" category="section-title">成本</block>
@@ -943,13 +939,10 @@
   <block id="55a23b72fe4aee5e2f0024c790d7eaba" category="paragraph">从BlueXP  工作负载出厂时的快照创建新的FSx for ONTAP卷、以启用时间点恢复。</block>
   <block id="8d34a33f34659b0ea11833ac0b8fac52" category="list-text">在*FSx for ONTAP选项卡中，选择包含卷快照的文件系统的三点菜单，然后选择*Manage*。</block>
   <block id="3ce528a1818baf0bbf2f6b362b1f7d58" category="list-text">在卷选项卡中、选择包含要创建卷的快照的卷的三点菜单。</block>
-  <block id="949524c655289917241748aa79f7ac90" category="summary">在BlueXP  工作负载出厂时设置FSx for ONTAP文件系统后、您可以为ONTAP卷创建FSx。</block>
   <block id="3f069fcb238357ca598d1a4d611a62de" category="doc">在BlueXP  工作负载出厂时创建FSx for ONTAP卷</block>
-  <block id="70e17a61e26a90f517dba1b053b0c09e" category="paragraph">设置FSx for ONTAP文件系统后、您可以在BlueXP  工作负载出厂时为ONTAP卷创建FSx。</block>
   <block id="d5d682292e122fa36db263f49a714cc7" category="list-text">工作负载出厂时必须具有FSx for ONTAP文件系统。</block>
   <block id="60911d8c5f41bf949378c3bec9fe03b7" category="list-text">要配置对卷的访问权限，您必须 <block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>。如果您没有现有链接，请 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。要关联文件系统中的链接，请选择*Account name*下的*Associate link*。链接关联后、返回此操作。</block>
   <block id="72ce63a6bef6ec13ef74a7eab0012469" category="summary">FSx for ONTAP在BlueXP  工作负载出厂时支持快照、卷备份和卷复制。</block>
-  <block id="d041ab32e01d968ecc286a807158f8b3" category="doc">BlueXP  工作负载工厂中的数据保护</block>
   <block id="96a5899d90dd9b81319f168f67bcb5ae" category="summary">要在BlueXP  工作负载出厂时删除文件系统、必须先删除与该文件系统关联的任何卷、Storage VM或复制关系。</block>
   <block id="378213b58b31bfb9d173e8b2ad3c0968" category="doc">在BlueXP  工作负载出厂时删除文件系统</block>
   <block id="a3101c3638d17143df93e5cfcc3c3a0a" category="list-text">在*FSx for FS*选项卡中，选择要删除的ONTAP for ONTAP文件系统的三点菜单。</block>
@@ -984,7 +977,6 @@
   <block id="8107582f3eb31967f7b5b6bdc4826ea0" category="list-text">如果选择禁用快照以进行长期保留、请选择*应用*以完成此操作。</block>
   <block id="66ca66124b69024cef94c671dc4b97bf" category="list-text">要使用现有策略、请从下拉菜单中选择该策略。</block>
   <block id="dd0818ef84ecf338be3c795b4a57e5c4" category="doc">了解BlueXP  工作负载工厂中FSx for ONTAP的节省情况</block>
-  <block id="9ce81c8939619bb16315ccf3c3c9f052" category="paragraph">工作负载工厂内置了存储节省计算器、您可以将Amazon存储环境与FSx for ONTAP进行比较。无论是否提供AWS凭据、您都可以探索节省的空间、并为您的存储环境自定义配置设置。如果您提供AWS凭据、则可以选择一个或多个Amazon El生 性块存储实例、并让工作负载工厂自动进行比较。无论是手动还是自动、计算器都可以确定哪种存储服务可以为您的存储需求提供最低的成本。</block>
   <block id="26852699cf6fe74856b51ba453d4c0ac" category="paragraph">如果存储计算器确定最经济高效的存储是FSx for ONTAP、则无论您为工作负载出厂设置了何种权限、您都可以创建或保存FSx for ONTAP配置、并使用代码框生成基础架构即代码模板。</block>
   <block id="798944cb742e35be45b885ba05ab898c" category="paragraph">探索检测到的存储环境节省的空间：工作负载出厂时可链接到现有AWS存储环境、并将详细信息提取到计算器中以进行自动比较。要使用自动模式、您需要授予"自动"权限。您可以更改使用情形、但所有其他详细信息都会在计算中自动确定。</block>
   <block id="b86c5bb2dd8e6c760c8bbfff2ddf0923" category="paragraph">要使工作负载工厂在您的AWS帐户中检测Amazon Elelic Block Store (EBS)、Elelic File System (EFS)和FSx for Windows File Server存储环境、请确保您使用的是<block ref="d9270f60c282b5496f17a4b48a6da305" category="inline-link-macro-rx"></block>AWS帐户。</block>
@@ -1031,7 +1023,6 @@
   <block id="a3ee2d6d4606b21bc131c4389e63413b" category="list-text">*REST API*：工作负载出厂REST API允许您部署和管理适用于ONTAP文件系统和其他AWS资源的FSx</block>
   <block id="35507c73673fd91f2b540f5ac22435e2" category="list-text">*CloudFormation*：AWS CloudFormation代码可用于执行您在工作负载工厂控制台中定义的操作、以便在AWS帐户中对CloudFormation堆栈中的AWS和第三方资源进行建模、配置和管理</block>
   <block id="2b796a233d6b48fb3e49b8c71a2addb1" category="list-text">*Terraform BlueXP  工作负载工厂提供程序*：Terraform支持您构建和管理在工作负载工厂控制台中生成的基础架构工作流</block>
-  <block id="8c643102fad13c593e1b977fbd4541d0" category="paragraph">您的FSx for ONTAP帐户由AWS而非工作负载工厂维护。请参阅 <block ref="d466c04e3dc9277f23f307f5afe7df62" category="inline-link-macro-rx"></block>。</block>
   <block id="652598e6fd9da9bdc98db0ef4a093ddd" category="paragraph">有关工作负载工厂或工作负载工厂应用程序和服务的一般问题，请参见<block ref="b4c96257ecccde997612582bfecaef76" category="inline-link-macro-rx"></block>。</block>
   <block id="1dde4a08beb94964c3432a2fc7fdc3fc" category="doc">BlueXP  Workload Factory的法律声明</block>
   <block id="ac09047fc1cd6bf09a117141110f48d7" category="summary">在BlueXP  工作负载工厂中限制复制关系的最大传输速率。</block>
@@ -1055,7 +1046,6 @@
   <block id="3d158aba7d5d233ad247917999b7f8f9" category="list-text">从卷选项卡中、选择要更改的SMB共享的卷的三点菜单。</block>
   <block id="20ce09b74b6e0e3f084a81d605cc8f77" category="summary">您可以在BlueXP  工作负载出厂时查看与您的帐户关联的链接、关联链接以及删除链接。</block>
   <block id="2083481ef56023982330c4d1cbedcd07" category="doc">管理BlueXP  工作负载出厂链接</block>
-  <block id="239ad8ad0a1e3c62675449c7c312ff33" category="paragraph">管理与BlueXP  工作负载工厂帐户关联的链接。</block>
   <block id="3e0b9b190a3e069bed44756ddb118289" category="list-text">在主页中，从菜单中选择*链接*。</block>
   <block id="cc26ff728c1b9844af11d5c6831287a6" category="paragraph"><block ref="cc26ff728c1b9844af11d5c6831287a6" category="inline-image-macro-rx" type="image"></block></block>
   <block id="a91b1be003fc8ddd1b9b9c2667168d69" category="paragraph">您不能从工作负载出厂界面编辑链接。如果需要更改链接、则需要创建一个新链接、然后将该链接与文件系统关联。</block>
@@ -1447,4 +1437,13 @@
   <block id="49814788ce382c87a117a40e54ae858b" category="paragraph">此时将重新启动此操作。进入跟踪器以查看操作状态。</block>
   <block id="986aee2caba870111e5ce3c5571c82de" category="section-title">2025年2月2日</block>
   <block id="2e0c4c64c2671f5575eb184e577dcdae" category="sidebar">使用Tracker监控操作</block>
+  <block id="b1fe1919850819316de56e436737f1d9" category="summary">设置FSx for ONTAP文件系统后、在BlueXP  工作负载出厂时创建FSx for ONTAP卷。</block>
+  <block id="62e770531a6a6f3e80ca57b3b83bb3db" category="doc">BlueXP  Workload Factory中的数据保护类型</block>
+  <block id="9da70164a8dd044e50707cfb202de218" category="paragraph">FSx for ONTAP支持快照、备份和复制以实现数据保护。我们建议您结合使用多种数据保护类型、以便为不可避免的情况做好准备并保护您的数据。</block>
+  <block id="fa7cdd584b5bc6a975df18dc4ebe5895" category="paragraph">BlueXP  工作负载工厂提供了一个存储节省计算器、用于将Amazon存储环境与FSx for ONTAP进行比较。无论是否提供AWS凭据、您都可以探索节省的空间、并为您的存储环境自定义配置设置。如果您提供AWS凭据、则可以选择一个或多个Amazon El生 性块存储实例、并让工作负载工厂自动进行比较。无论是手动还是自动、计算器都可以确定哪种存储服务可以为您的存储需求提供最低的成本。</block>
+  <block id="de62d09e228b6d55e899456a13b153dd" category="list-text">*高效备份*：在紧急情况下、通过另一个区域的数据副本增加额外的保护层。</block>
+  <block id="669fb0eb9744dc9a4caa9500aa2efdd0" category="list-text">*内存缓存和NVMe缓存*：包括唯一的内存缓存和NVMe缓存、可提高经常访问的数据的性能。</block>
+  <block id="8e011e1c010d6b411d584ecf79e79304" category="list-text">*重复数据删除和数据压缩*：删除重复数据并对数据进行压缩、以减少FSx for ONTAP文件系统所需的物理存储量、从而节省成本。</block>
+  <block id="acf29f0fa117accd6f0be38d23e9b566" category="paragraph">AWS会维护您的FSx for ONTAP帐户、而不是工作负载工厂。请参阅 <block ref="d466c04e3dc9277f23f307f5afe7df62" category="inline-link-macro-rx"></block>。</block>
+  <block id="4baeabf837f67f70aeb93e0dfea60d36" category="paragraph">管理与BlueXP  工作负载工厂帐户关联的链接。您可以查看与FSx for ONTAP文件系统关联的链接、将链接与FSx for ONTAP文件系统关联、编辑链接以及删除链接。</block>
 </blocks>

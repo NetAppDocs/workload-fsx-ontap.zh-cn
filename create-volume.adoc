@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: create-volume.html 
 keywords: create volume, FSx for ONTAP volume 
-summary: 在BlueXP  工作负载出厂时设置FSx for ONTAP文件系统后、您可以为ONTAP卷创建FSx。 
+summary: 设置FSx for ONTAP文件系统后、在BlueXP  工作负载出厂时创建FSx for ONTAP卷。 
 ---
 = 在BlueXP  工作负载出厂时创建FSx for ONTAP卷
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 在BlueXP  工作负载出厂时设置FSx for ONTAP文件系统后、�
 
 
 [role="lead"]
-设置FSx for ONTAP文件系统后、您可以在BlueXP  工作负载出厂时为ONTAP卷创建FSx。
+设置FSx for ONTAP文件系统后、在BlueXP  工作负载出厂时创建FSx for ONTAP卷。
 
 .关于此任务
 FSx for ONTAP卷是一种虚拟资源、用于对数据进行分组、确定数据的存储方式以及确定对数据的访问类型。卷不会占用文件系统存储容量。存储在卷中的数据主要占用SSD存储。根据卷的分层策略、数据可能还会占用容量池存储。您可以在创建卷时设置其大小、并可稍后更改其大小。
