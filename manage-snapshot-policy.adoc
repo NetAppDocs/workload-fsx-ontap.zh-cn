@@ -1,0 +1,120 @@
+---
+sidebar: sidebar 
+permalink: manage-snapshot-policy.html 
+keywords: manage snapshot policy, change snapshot policy, snapshot policies, snapshot schedule, update 
+summary: 在BlueXP  工作负载工厂中管理FSx for ONTAP卷的Snapshot策略。快照策略用于定义系统如何为卷创建快照。 
+---
+= 管理Snapshot策略
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+在BlueXP  工作负载工厂中管理FSx for ONTAP卷的Snapshot策略。快照策略用于定义系统如何为卷创建快照。
+
+.关于此任务
+为FSx for ONTAP文件系统中的卷分配、更改和删除Snapshot策略等Snapshot管理操作在Storage VM级别进行管理。Snapshot策略可以与单个Storage VM共享、也可以与所有Storage VM共享。
+
+某些管理任务要求您link:manage-links.html["关联链接"]访问FSx for ONTAP文件系统。如果您没有现有链接，请 link:create-link.html["创建链接"]。
+
+默认情况下、每个卷都与文件系统的快照策略相关联 `default` 。建议对大多数工作负载使用此策略。
+
+
+
+== 更改快照策略
+
+您可以更改要保留的快照策略名称、计划和副本数、以及启用或禁用不可变快照。无法在Storage VM之间启用或禁用策略共享。此选项仅在创建Snapshot策略期间可用。
+
+.开始之前
+要显示现有快照策略、您需要关联一个链接。要关联链接，请在*帐户名称*下选择*关联链接*。然后返回此操作。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 在*存储*中，选择*转至存储清单*。
+. 在*FSx for FS* ONTAP选项卡中，选择文件系统的三点菜单，然后选择*Manage*。
+. 在文件系统概述中，选择*Storage VMS*选项卡。
+. 从*Storage VM*选项卡中，选择包含要使用计划快照保护的卷的Storage VM的三点菜单，然后选择*Advanced Actions*和*Manage Snapshot Policies*。
+. 在Snapshot策略管理页面上，选择要更改的快照策略的三点菜单，然后选择*Edit*。
+. 在编辑快照策略对话框中、对快照策略进行必要的更改。
+. 选择 * 应用 * 。
+
+
+.结果
+此时将更新此Snapshot策略。
+
+
+
+== 将快照策略分配给卷
+
+您可以将快照策略分配给单个卷、以便为该卷创建计划快照。
+
+.开始之前
+您必须link:manage-links.html["关联链接"]分配快照策略。如果您没有现有链接，请 link:create-link.html["创建链接"]。要关联文件系统中的链接，请选择*Account name*下的*Associate link*。链接关联后、返回此操作。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 在*存储*中，选择*转至存储清单*。
+. 在*FSx for ONTAP选项卡中，选择要将快照策略分配到的卷所在文件系统的三点菜单，然后选择*Manage*。
+. 在文件系统概述中，选择*Storage VMS*选项卡。
+. 从*Storage VM*选项卡中，选择包含要使用计划快照保护的卷的Storage VM的三点菜单，然后选择*Advanced Actions*和*Manage Snapshot Policies*。
+. 在Snapshot策略管理页面上、选择快照策略的三点菜单、然后选择*将策略分配给卷*。
+. 在分配快照策略对话框中、选择要分配给卷的快照策略并查看策略计划。
++
+如果此策略包含不可更改的快照、并且您希望使用此策略、请接受此语句。
+
+. 选择*Assign*。
+
+
+.结果
+此时将为卷分配Snapshot策略。
+
+
+
+== 启用不可变更的快照
+
+锁定快照、防止在保留期间将其删除。
+
+.开始之前
+您必须link:manage-links.html["关联链接"]启用不可变更的快照。如果您没有现有链接，请 link:create-link.html["创建链接"]。要关联文件系统中的链接，请选择*Account name*下的*Associate link*。链接关联后、返回此操作。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 在*存储*中，选择*转至存储清单*。
+. 在*FSx for ONTAP SnapMirror*选项卡中，选择包含要锁定快照的卷的文件系统的三点菜单，然后选择*Manage*。
+. 在文件系统概述中，选择*Volumes*选项卡。
+. 从*卷*选项卡中，选择要保护的卷的三点菜单。
+. 选择*数据保护操作*、*快照*，然后选择*使快照不可更改*。
+. 在Make a Snapshot immutable对话框中、执行以下操作：
++
+.. *Snapshot name*:选择要锁定的快照。
+.. 以小时、天、月或年为单位设置*保留期限*。
+.. 接受陈述。
+
+
+. 选择 * 应用 * 。
+
+
+.结果
+卷快照现已锁定。
+
+
+
+== 删除快照策略
+
+删除不再需要的快照策略。
+
+您不能删除分配给多个卷的快照策略。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 在*存储*中，选择*转至存储清单*。
+. 在*FSx for ONTAP选项卡中，选择包含卷的文件系统的三点菜单，然后选择*Manage*。
+. 在文件系统概述中，选择*Storage VMS*选项卡。
+. 从*Storage VM*选项卡中，选择要删除快照策略的Storage VM的三点菜单，然后选择*Advanced Actions*和*Manage Snapshot Policies*。
+. 在Snapshot策略管理页面上，选择要删除的快照策略的三点菜单，然后选择*Delete*。
+. 在删除对话框中，选择*Delete*以删除策略。
+
+
+.结果
+此时将删除此Snapshot策略。

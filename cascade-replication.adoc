@@ -1,0 +1,145 @@
+---
+sidebar: sidebar 
+permalink: cascade-replication.html 
+keywords: replicate, cascade, cascade replication, cascade deployment, data protection, volume replication, replicate data protection volume 
+summary: 复制数据保护卷或级联卷数据复制、将数据保护扩展到三级系统或迁移数据。 
+---
+= 在BlueXP  工作负载出厂时复制数据保护卷
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+复制数据保护卷或级联卷数据复制、将数据保护扩展到三级系统或迁移数据。
+
+.关于此任务
+BlueXP  工作负载工厂支持复制数据保护卷。在ONTAP中、复制数据保护卷被视为_镜像-镜像级联部署_。镜像 - 镜像级联部署由一系列关系组成，其中，源卷镜像到二级卷，而二级卷镜像到三级卷。如果二级卷不可用，您可以同步主卷和三级卷之间的关系，而无需执行新的基线传输。
+
+对于运行ONTAP 9.6及更高版本的ONTAP文件系统、FSx支持此功能。请参阅 link:https://docs.netapp.com/us-en/ontap/data-protection/compatible-ontap-versions-snapmirror-concept.html#snapmirror-disaster-recovery-relationships["兼容ONTAP版本的ONTAP文档"^]。
+
+
+NOTE: 如果此关系的源卷是一个数据保护卷、并且是另一个关系的目标、则不支持反转此复制关系。
+
+.开始之前
+请注意、级联配置中的卷重新同步可能需要较长时间。
+
+[role="tabbed-block"]
+====
+.复制单个卷
+--
+您可以复制数据保护(DP)卷。
+
+
+NOTE: 支持一个数据保护卷的一个副本。您不能为DP卷创建第二个副本。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 在存储中、选择转至存储清单。
+. 在FSx for ONTAP选项卡中、选择要更新的文件系统的三点菜单、然后选择管理。
+. 选择卷选项卡。
+. 选择数据保护卷(DP/复制的卷)的三点菜单、然后选择*复制卷数据*。
+. 在创建复制页面上的复制目标下、提供以下内容：
++
+.. *FSx for ONTAP file system*：为目标FSx for ONTAP文件系统选择ONTAP文件系统的凭据、区域和FSx名称。
+.. * Storage VM名称*：从下拉菜单中选择Storage VM。
+.. *卷名*：目标卷名称将自动生成，格式如下 `{OriginalVolumeName}_copy`。您可以使用自动生成的卷名称或输入其他卷名称。
+.. *用例*：选择以下复制用例之一。
++
+*** 迁移：将数据传输到目标FSx for ONTAP文件系统
+*** 热灾难恢复：确保关键工作负载的高可用性和快速灾难恢复
+*** 冷灾难恢复或归档灾难恢复：
++
+**** 冷灾难恢复：使用更长的恢复时间目标(RTO)和恢复点对象(RPO)来降低成本
+**** 归档：复制数据以实现长期存储和合规性
+
+
+*** 其他
+
+
+.. *分层策略*：为目标卷中存储的数据选择分层策略。根据您选择的使用情形、分层策略将默认采用为此使用情形建议的分层策略。
++
+使用工作负载工厂FSx for ONTAP用户界面创建卷时、默认分层策略为_Balanced (Auto)_。有关卷分层策略的详细信息、请参阅 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["卷存储容量"^] AWS FSx for NetApp ONTAP文档中的。
+
+.. *最大传输速率*：选择*受限*并输入最大传输速率(MB/秒)或者，选择*Unlimited (无限制)*。
++
+如果没有限制、网络和应用程序性能可能会下降。或者、对于关键工作负载(例如、主要用于灾难恢复的工作负载)、我们建议对用于ONTAP文件系统的FSx使用无限传输速率。
+
+
+
+. 在复制设置下、提供以下内容：
++
+.. *复制间隔*：选择从源卷向目标卷传输快照的频率。
+.. *长期保留*：(可选)启用快照以进行长期保留。
++
+如果启用长期保留、请选择现有策略或创建新策略以定义要复制的快照以及要保留的数量。
+
++
+*** 对于*Choose an existing policy*，从下拉菜单中选择一个现有策略。
+*** 对于*Create a new policy*，请提供以下内容：
++
+**** *策略名称*：输入策略名称。
+**** *Snapshot策略*：在表中，选择快照策略频率和要保留的副本数。您可以选择多个快照策略。
+
+
+
+
+
+
+. 选择 * 创建 * 。
+
+
+--
+.复制文件系统中的所有卷
+--
+您可以复制文件系统中的所有数据保护(DP)卷。
+
+
+NOTE: 支持一个数据保护卷的一个副本。您不能为DP卷创建第二个副本。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 在存储中，选择*转至存储清单*。
+. 在FSx for ONTAP选项卡中，选择包含卷的文件系统的三点菜单，然后选择*Manage*。
+. 从文件系统概述中，选择*创建复制*。
+. 在创建复制页面上的复制目标下、提供以下内容：
++
+.. *FSx for ONTAP file system*：为目标FSx for ONTAP文件系统选择ONTAP文件系统的凭据、区域和FSx名称。
+.. * Storage VM名称*：从下拉菜单中选择Storage VM。
+.. *卷名*：目标卷名称将自动生成，格式如下 `{OriginalVolumeName}_copy`。
+.. *分层策略*：为目标卷中存储的数据选择分层策略。
++
+_Auto_是使用工作负载工厂FSx for ONTAP用户界面创建卷时的默认分层策略。有关卷分层策略的详细信息、请参阅 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["卷存储容量"^]AWS FSx for NetApp ONTAP文档中的。
+
+.. *最大传输速率*：选择*受限*并输入最大传输限制(单位：MiB/秒)或者，选择*Unlimited (无限制)*。
++
+如果没有限制、网络和应用程序性能可能会下降。或者、对于关键工作负载(例如、主要用于灾难恢复的工作负载)、我们建议对用于ONTAP文件系统的FSx使用无限传输速率。
+
+
+
+. 在复制设置下、提供以下内容：
++
+.. *复制间隔*：选择从源卷向目标卷传输快照的频率。
+.. *长期保留*：(可选)启用快照以进行长期保留。
++
+如果启用长期保留、请选择现有策略或创建新策略以定义要复制的快照以及要保留的数量。
+
++
+*** 对于*Choose an existing policy*，从下拉菜单中选择一个现有策略。
+*** 对于*Create a new policy*，请提供以下内容：
++
+**** *策略名称*：输入策略名称。
+**** *Snapshot策略*：在表中，选择快照策略频率和要保留的副本数。您可以选择多个快照策略。
+
+
+
+
+
+
+. 选择 * 创建 * 。
+
+
+--
+====
+.结果
+复制的一个或多个卷将进行复制并显示在目标FSx for ONTAP文件系统的*复制关系*选项卡中。

@@ -90,6 +90,8 @@ sidebar:
         url: "/edit-volume-autogrow.html"
       - title: 增加卷容量
         url: "/increase-volume-capacity.html"
+      - title: 管理不可配置文件
+        url: "/manage-immutable-files.html"
       - title: 管理卷标记
         url: "/manage-volume-tags.html"
       - title: 重新平衡卷的容量
@@ -130,24 +132,34 @@ sidebar:
         url: "/delete-svm.html"
     - title: 数据保护管理
       entries:
-      - title: 更改卷的Snapshot策略
-        url: "/change-snapshot-policy.html"
-      - title: 管理FSx for ONTAP备份计划
-        url: "/manage-backup-schedule.html"
-      - title: 启用和编辑快照以进行长期保留
-        url: "/enable-snapshots-long-term.html"
-      - title: 反转复制关系
-        url: "/reverse-replication.html"
-      - title: 更改源卷的复制计划
-        url: "/change-replication-schedule.html"
-      - title: 限制复制关系的最大传输速率
-        url: "/limit-transfer-rate.html"
-      - title: 手动更新复制关系中的快照数据
-        url: "/update-snapshot-replication.html"
-      - title: 停止复制关系
-        url: "/stop-replication.html"
-      - title: 删除复制关系
-        url: "/delete-replication.html"
+      - title: 快照
+        entries:
+        - title: 管理Snapshot策略
+          url: "/manage-snapshot-policy.html"
+        - title: 启用和编辑快照以进行长期保留
+          url: "/enable-snapshots-long-term.html"
+      - title: 备份
+        entries:
+        - title: 管理FSx for ONTAP备份计划
+          url: "/manage-backup-schedule.html"
+      - title: 复制
+        entries:
+        - title: 反转复制关系
+          url: "/reverse-replication.html"
+        - title: 更改源卷的复制计划
+          url: "/change-replication-schedule.html"
+        - title: 限制复制关系的最大传输速率
+          url: "/limit-transfer-rate.html"
+        - title: 手动更新复制关系中的快照数据
+          url: "/update-snapshot-replication.html"
+        - title: 复制数据保护卷
+          url: "/cascade-replication.html"
+        - title: 暂停和恢复复制关系
+          url: "/pause-resume-replication.html"
+        - title: 停止复制关系
+          url: "/stop-replication.html"
+        - title: 删除复制关系
+          url: "/delete-replication.html"
     - title: 性能管理
       entries:
       - title: 为文件系统配置IOPS

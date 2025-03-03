@@ -48,14 +48,7 @@
   <block id="d575c663732894699f897600bc377c13" category="list-text">每8小时</block>
   <block id="c512b685438f41daa7386329a3b8f8d3" category="list-text">每天</block>
   <block id="6c25e6a6da95b3d583c6ec4c3f82ed4d" category="list-text">每周</block>
-  <block id="340f8dee912ac16b4fb008726d3ee88f" category="doc">更改卷的Snapshot策略</block>
   <block id="6e1473c0de5b054e5e9236bbe796cc32" category="list-text">选择*卷*选项卡。</block>
-  <block id="deb2625de46069416467be6ef82576e6" category="list-text">选择*数据保护操作*、*快照*，然后选择*管理快照策略*。</block>
-  <block id="f3d450e7102c8a592a9e2a2acdfb49b7" category="list-text">在"Snapshot policy management (Snapshot策略管理)"页面上、选择*更改现有Snapshot策略*。</block>
-  <block id="48edfc423c398e987bce9d3f63beaca4" category="list-text">在*Snapshot policy name*字段中，为此卷选择其他快照策略。</block>
-  <block id="088f5e36566ccf52293c1fe9f051ace2" category="paragraph">要禁用自动快照，请选择<block ref="334c4a4c42fdb79d7ebc3e73b517e6f8" prefix=" " category="inline-code"></block>。</block>
-  <block id="d856101e7a19a68220dc0bde8102de2c" category="inline-link-macro">为此卷创建新的Snapshot策略</block>
-  <block id="c1b04f6c929db7a38b307b1b487c5ae3" category="paragraph">如果不存在其他快照策略， <block ref="f4fed179849f82b0031cfe5a67e50793" category="inline-link-macro-rx"></block>。</block>
   <block id="7cdbf010bb1a9d098db5a255cd4d6b61" category="paragraph">您可以随时更改卷的层策略。此层策略按卷定义。</block>
   <block id="9fc6aa19a53184c8aa3107a44c58215f" category="paragraph">确定数据的存储位置会对您节省成本产生影响。</block>
   <block id="910be748e2c5441fa28e2f0439a2bf6e" category="paragraph">FSx for ONTAP具有两个存储卷数据的层：</block>
@@ -125,7 +118,6 @@
   <block id="6aad0d457607a641d63a0daca3a0529a" category="list-text">对于纵向扩展部署、只能有一个HA对。</block>
   <block id="56dcdb97483e2b91ea46d0e3aed1e819" category="list-text">对于横向扩展部署、可以有两到十二个HA对。</block>
   <block id="f22c148b111a19f2c93bf5b1c1cbb2a6" category="list-text">*部署类型*：选择部署类型。</block>
-  <block id="7069a3965ec1f768679b31ddeea0b6e4" category="list-text">单可用性区域(单可用性区域、单可用性)部署：通过监控硬件故障来确保可用性、并在发生故障时自动更换基础架构组件。通过在可用性区域中自动复制数据以防止其发生组件故障、实现高持久性。</block>
   <block id="8860331ce66022dce5b0f67e6c8398ab" category="list-text">多可用性区域(Multi-AZ)部署：即使可用性区域不可用、也能持续提供数据。多可用性文件系统支持单可用性文件系统的所有可用性和持久性功能。多可用性文件系统专为业务关键型生产工作负载而设计、这些工作负载要求共享ONTAP文件数据具有高可用性、并需要具有跨可用性区域内置复制功能的存储。</block>
   <block id="a578dfdba57cca5b9cde80a5e42544c6" category="list-text">*标记*：您可以选择最多添加50个标记。</block>
   <block id="2d65a0ce899e5ca708d5a1002a8d0a1d" category="list-text">在*网络和安全性*下的*区域和VPC*字段中，为文件系统选择区域和VPC。</block>
@@ -189,7 +181,6 @@
   <block id="ca0c3dd7dca9f636af3209d526098e1e" category="doc">创建复制关系</block>
   <block id="43fb2f38eb75c426be46178f1bcecee8" category="paragraph">复制是一个额外的数据保护层、在数据所在区域发生灾难时、这一点至关重要。如果使用跨区域复制、则可以避免数据丢失。</block>
   <block id="e9cb9ef1f5a746f51fcf4a92869ed58c" category="paragraph">此操作将为FSx for ONTAP文件系统中的一个或所有源卷创建复制关系。</block>
-  <block id="a23124e7b9d52614dfc22924317fd877" category="paragraph">目标文件系统中复制的卷遵循以下命名格式：<block ref="4b5beb37da0fa6444b7f9f92238aadb1" prefix=" " category="inline-code"></block>。</block>
   <block id="584e3ee876c862f377d3d9b7080d32d9" category="paragraph">开始之前、请确保满足以下前提条件。</block>
   <block id="3188210715ec1f36a4acbadb45350bad" category="list-text">要创建复制关系、存储清单中必须有两个可用文件系统。</block>
   <block id="33429c6ab13a995d68ffda0c4dc39c19" category="inline-link-macro">首先创建链接</block>
@@ -215,7 +206,6 @@
   <block id="c2ca79898f24b0041abe0a50f8a67aec" category="open-title">复制文件系统中的所有卷</block>
   <block id="932ea72af08ac8563c34e80a7a85d205" category="list-text">从文件系统概述中，选择*创建复制*。</block>
   <block id="8642bd9871818efa86fdfbc89b47d7fe" category="list-text">*卷名*：目标卷名称将自动生成，格式如下<block ref="4b5beb37da0fa6444b7f9f92238aadb1" prefix=" " category="inline-code"></block>。</block>
-  <block id="a008632064f344e2df83272a479135d3" category="doc">为FSx for ONTAP卷创建Snapshot策略</block>
   <block id="8044f667bde3c7c59b4115402b5eaf0b" category="paragraph">您可以为FSx for ONTAP创建与三个内置快照策略不同的自定义快照策略：</block>
   <block id="980ef1c1aa7d1456ee087df02119341e" category="list-text"><block ref="c21f969b5f03d33d43e04f8f136e7682" prefix="" category="inline-code"></block></block>
   <block id="1ec8e1ced51ca70514fb4350ad7c29e1" category="list-text"><block ref="98f7255bb829345ca7879b7a6127f250" prefix="" category="inline-code"></block></block>
@@ -231,8 +221,6 @@
   <block id="5b10cd7d19a8a16358cb05922f38a69e" category="paragraph">快照是卷的资源、是数据的即时捕获、只会为修改后的数据占用空间。由于数据会随时间发生变化、因此、随着快照的使用时间的推移、快照通常会占用更多的空间。</block>
   <block id="bbc11127132b3f6e8be58ad79bf66689" category="paragraph">FSx for ONTAP卷使用写时即时复制、因此快照中任何未经修改的文件不会占用卷的任何容量。</block>
   <block id="4eb3a89899e681d1b9380bde026db85c" category="admonition">快照不是数据的副本。如果要创建数据副本、请考虑使用FSx for ONTAP备份或卷复制功能。</block>
-  <block id="1377f38f1ff649a51cee62f8b5e48acb" category="list-text">选择*数据保护操作*、*快照*、然后选择*从快照创建卷*。</block>
-  <block id="6a6a7663d9d32db04967b3413cefa463" category="list-text">在从快照创建卷对话框的*快照名称*字段中、输入快照名称。</block>
   <block id="644e775d0497e56fe0475dde3829ce1e" category="doc">为FSx for ONTAP文件系统创建Storage VM</block>
   <block id="bc7303a544a54859ef646aaae48578a5" category="paragraph">通过SVM、在访问FSx for ONTAP中的数据时、客户端和工作站会使用SVM的端点(IP地址)挂载SVM托管的卷、CIFS或SMB共享或iSCSI LUN。</block>
   <block id="0be7879371b03da9f3e439c5431f1db2" category="inline-link-macro">管理FSx for ONTAP Storage Virtual Machine</block>
@@ -250,7 +238,6 @@
   <block id="7703989c08fa05b728e233f271b4650e" category="list-text">在"Create volume from a Snapshot "(从快照创建卷)对话框中、输入快照名称。</block>
   <block id="25b72c08a4a289e6b89fc38db06792a9" category="doc">创建FSx for ONTAP卷</block>
   <block id="afd1f136e7e58574d1730a6b37234e12" category="paragraph">FSx for ONTAP卷是一种虚拟资源、用于对数据进行分组、确定数据的存储方式以及确定对数据的访问类型。卷不会占用文件系统存储容量。存储在卷中的数据主要占用SSD存储。根据卷的分层策略、数据可能还会占用容量池存储。您可以在创建卷时设置其大小、并可稍后更改其大小。</block>
-  <block id="63a2db18e99f30997c05b3ce6b5315ed" category="paragraph">卷可能会使用以下协议：</block>
   <block id="80f199570ae102e9c62f81fcbfd159eb" category="list-text">CIFS：适用于Windows操作系统的文件存储协议</block>
   <block id="8a1e5168feb60a6391f96310159dca9a" category="list-text">NFS：适用于Unix操作系统的文件存储协议</block>
   <block id="ec38854bd667a882fa1d0b62579b5079" category="list-text">iSCSI：块存储协议</block>
@@ -337,7 +324,6 @@
   <block id="8d842d300c3897225b96256a87a3535b" category="list-text">删除连接到SVM的所有非根卷。</block>
   <block id="ecd2a8fbe72ce15477dd74abc24effe9" category="list-text">选择*删除Storage VM*。</block>
   <block id="d56cf22b93dfca2dbb4f657bfb2646ee" category="list-text">在删除Storage VM对话框中、键入"delete"以删除此Storage VM。</block>
-  <block id="780efb49a17e123c477d4625dfe38545" category="summary">您可以随时删除FSx for ONTAP文件系统中的卷。此操作不可逆。</block>
   <block id="8e9a64bda9d21f945b6489df2e7946e1" category="doc">删除卷</block>
   <block id="c4037415f2f0cfbaf2d8633bef548eca" category="paragraph">删除卷之前、请考虑以下事项：</block>
   <block id="7ba3b681b508a24c70a973831af6f1ad" category="list-text">本地快照：与此FSx for ONTAP文件系统关联的所有快照都将被永久删除。</block>
@@ -374,7 +360,6 @@
   <block id="00c83c7330e77156c35301871a4c4199" category="list-text">*Snapshot策略*：选择一个或多个Snapshot策略。</block>
   <block id="9823554a2be74ea3c8fe833a284ad50a" category="list-text">*要保留的副本*：输入要在目标文件系统上保留的Snapshot副本数。</block>
   <block id="1deea867e21bd00dec42db5a9c106317" category="summary">通过AWS FSx for NetApp ONTAP、了解在Amazon Elelic Block Store (EBS)存储、Elelic File System (EFS)和FSx for Windows文件服务器中为存储工作负载节省的空间。</block>
-  <block id="86b5b3b0e4f0ecb1a68a9f07a11bbd37" category="paragraph">了解通过使用Amazon Elecic Block Store (EBS)、Elecic File System (EFS)和FSx for Windows File Server和FSx for NetApp ONTAP为存储工作负载节省的空间。</block>
   <block id="ed8b2920ddc5b14cb6c0ba24c4b6c3af" category="inline-link-macro">授予_Automate权限</block>
   <block id="cf48d7891f28d92c4308fb5debb574b0" category="section-title">了解节省量</block>
   <block id="71399ad2fbf1c89cad16b73c9e208e04" category="paragraph">按照选项卡下的步骤选择存储。</block>
@@ -463,7 +448,6 @@
   <block id="7db52e1b6d399a07ae2a24a19f03a6ad" category="inline-link-macro">启用自动容量管理功能</block>
   <block id="bdccdc17ac819f178e84be61503a0de2" category="paragraph">增加文件系统容量会影响FSx for ONTAP文件系统的IOPS。</block>
   <block id="11df76043d9d8bb3a76f1f7e71096a92" category="inline-link-macro">配置IOPS</block>
-  <block id="e7317a971e575aecebe43b18f10a7503" category="paragraph">手动时 <block ref="a9cec068297d5b243eecd658574a7cef" category="inline-link-macro-rx"></block> 、您可能需要增加IOPS分配、以支持增加的文件系统容量。</block>
   <block id="ffc888e5ff626bf410d67b62a9e8a9a8" category="paragraph">有关SSD存储容量限制、请参阅 <block ref="5e5311b04805e422cc2fabe002034628" category="inline-link-macro-rx"></block> AWS FSx for NetApp ONTAP文档中的。</block>
   <block id="3fa4dafc00a14f08641efa3389891289" category="inline-link-macro">禁用自动容量管理</block>
   <block id="e58acd1760f609c958f436e6f19a798d" category="paragraph">要增加文件系统的容量，必须首先 <block ref="8c3635bc720b3de661de28059e4ae780" category="inline-link-macro-rx"></block>。</block>
@@ -544,7 +528,6 @@
   <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">开放源代码</block>
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">通知文件提供有关 NetApp 软件中使用的第三方版权和许可证的信息。</block>
   <block id="c2afadd6bca5968317f2f7f1a7e37514" category="doc">限制复制关系的最大传输速率</block>
-  <block id="091ab8de8bd05d3d281793c55240d887" category="paragraph">限制最大传输速率是可选的、但建议这样做。如果没有限制、网络和应用程序性能可能会下降。</block>
   <block id="4cb1e25c015161bf2183f7f8af361d6a" category="paragraph">或者、对于关键工作负载(例如、主要用于灾难恢复的工作负载)、我们建议对用于ONTAP文件系统的FSx使用无限传输速率。</block>
   <block id="e4f625e812bf67c821c7b742fdaa3196" category="paragraph">请考虑为复制分配多少带宽。</block>
   <block id="76d46f140889dce175ee00325fc5a79f" category="list-text">选择*编辑最大传输速率*。</block>
@@ -599,9 +582,7 @@
   <block id="9bd1b5c2c50da3c36cba4f17c259ae08" category="inline-link-macro">利用存储节省计算器了解节省量。</block>
   <block id="74125d7a69a31a4c2d6c6637ca43f137" category="paragraph">您还可以从存储节省计算器开始、将Amazon Elel生 块存储、El生 性文件系统和FSx for Windows文件服务器存储环境的成本与FSx for ONTAP的成本进行比较。 <block ref="487bc82bdb3f9feb4b100f5bfcc33ebf" category="inline-link-macro-rx"></block></block>
   <block id="89568baf7659b31a2110d1de7f69778d" category="paragraph">通过存储清单中的文件系统，您可以 <block ref="41a32458a6146c3b772c57ac70acc68e" category="inline-link-macro-rx"></block>管理FSx for ONTAP文件系统，并为资源设置数据保护。</block>
-  <block id="5cc3559759253562c2ea32461733d1e7" category="summary">重新平衡卷的容量、以避免随时间推移而出现的不平衡。</block>
   <block id="15aca40f14c29fe9e5a56d6734a1f791" category="paragraph">当由于添加新文件和文件增长而导致逐渐出现不平衡时、重新平衡卷会重新分布容量。手动启动重新平衡操作后、我们会选择文件并自动无中断地移动它们。</block>
-  <block id="18ad76c062a0f79a812d4e5b767d88e2" category="admonition">只有FlexGroup卷才支持重新平衡卷。</block>
   <block id="c58a14e0270c321d51e150d167496aa7" category="list-text">选择*高级操作*，然后选择*重新平衡卷*。</block>
   <block id="f648cc9da4798cb98b75d0072b51f243" category="list-text">在"Re平衡 卷"对话框中、选择*重新平衡*。</block>
   <block id="a509c58d8659a3366f3053048526e6ec" category="summary">将Storage VM复制到另一个FSx for ONTAP文件系统可在数据丢失时提供一个数据访问保护层。</block>
@@ -645,7 +626,6 @@
   <block id="409766cd0db7ec9b85833ef656de2116" category="list-text"><block ref="409766cd0db7ec9b85833ef656de2116" category="inline-link-macro-rx"></block></block>
   <block id="47907ab6ec7e02dbdeb22ffa8ac228d7" category="inline-link-macro">使用Amazon VPC控制文件系统访问</block>
   <block id="6b9bde75a1b36a3f2587b75da7e4d465" category="list-text"><block ref="e23cede047683010b635fbb95a093f5a" category="inline-link-macro-rx"></block> 在Amazon FSx for NetApp ONTAP文档中</block>
-  <block id="2a4ddefc4a831a22e6cfdbbb609eaceb" category="summary">将克隆FlexVol卷从其父卷中拆分、使此克隆成为正常的读写FlexVol卷。</block>
   <block id="f2a2c338be7bacd4b2be28a24746b905" category="doc">拆分克隆的卷</block>
   <block id="b8af9d1764435c0a46ecd100cf22a5d1" category="paragraph">拆分期间、可以访问克隆和父级上的数据。拆分过程仅更新元数据、并且所需的IO极少。不会复制任何数据块。</block>
   <block id="c4cd35d7fc36711b152277ade5e6d3b7" category="paragraph">克隆拆分操作涉及以下内容：</block>
@@ -716,7 +696,6 @@
   <block id="67fd29a6cc928abe6b6f86ff09e307f2" category="paragraph">只有在文件系统中创建卷后、才会显示卷详细信息。</block>
   <block id="6d861bb7f63e6cf47b5c554ee05eac67" category="list-text">选择*基本操作*，然后选择*查看卷详细信息*。</block>
   <block id="439d42a534fe0bae9413648240777bfc" category="list-text">在*卷详细信息*中，选择选项卡以查看以下卷详细信息：</block>
-  <block id="3f0fcc3f124d83e05e6cc909b9289d22" category="list-text">*常规详细信息*：包括卷名称、卷UUID、卷ID、创建时间、状态、 卷类型(读写/数据保护(RW/DP)或只读)、快照策略名称、托管Storage VM (SVM)和标记。</block>
   <block id="1c7942ef9895243b7d4ef6b21c58b5c4" category="list-text">*分发*：包括托管聚合、卷模式(FlexGroup或FlexVol)、成分卷(仅限FlexGroup)和重新平衡比率(仅限FlexGroup -高、中或低)。</block>
   <block id="ebf624cb45bff65c163a51dc14608a8e" category="list-text">*消耗*：包括大小、已用SSD、已用容量池、自动增长设置、最大增长大小、 存储效率设置、节省的数据压缩空间、节省的重复数据删除空间、分层策略和冷却天数。</block>
   <block id="5c56dce0204190e932ff7e64632a6971" category="list-text">*访问*：包括NFS的接合路径、安全模式、导出策略和NFS版本、Active Directory、CIFS共享名称、用户或组以及SMB/CCIFS的权限、iSCSI的启动程序组和主机IQN。</block>
@@ -837,7 +816,6 @@
   <block id="37bb8b5cad0754acdd2d9ed1e9d36928" category="paragraph">委派管理员组是Active Directory中可管理文件系统的组的名称。</block>
   <block id="1ffab80b063e5f05f25ab6681156237d" category="paragraph">如果您要连接到自行管理的AD、请使用AD中的组名称。默认组为<block ref="746c2ea920930b61350130daa63e23e5" prefix=" " category="inline-code"></block>。</block>
   <block id="e359c45e41079948637e3625aa645ee6" category="paragraph">您有两种创建链接的选项-自动或手动。</block>
-  <block id="f35d0bfc59b397e2ee196c7e6b0d33d7" category="list-text">手动：创建包含手动注册的链接。CloudFormation代码持续存在、让您有更多时间完成操作。这在与不同团队(如安全和开发运营团队)合作时非常有用、因为他们可能首先需要授予完成链接创建所需的权限。</block>
   <block id="758ce486f132a2978be7ecfbcd518afa" category="list-text">您应考虑使用哪种链接创建选项。</block>
   <block id="6903e2b3a86228f4d258e423fb6b913a" category="open-title">自动创建</block>
   <block id="6a97c44fefe95ac9ca6fe05e50d1729f" category="paragraph">此时将显示重定向到CloudFormation对话框、并说明如何从AWS CloudFormation服务创建链接。</block>
@@ -847,7 +825,6 @@
   <block id="e6816f159adf84ca7c085ce0702311af" category="inline-link-macro">删除所有现有复制关系</block>
   <block id="da13b22f351bd4b981038bd55ca5d3ab" category="list-text">复制关系：删除此卷之前、必须先复制<block ref="fa9c4758a74309c74eff4644a0675063" category="inline-link-macro-rx"></block>此卷、以确保不会保留任何已断开的关系。</block>
   <block id="f14fbd72eb1c8ba39f23e290779d3ac7" category="paragraph">在_BASIC、_Read_和_Automate之间进行选择 <block ref="a1a436caedec06006ef5b76c82a83b04" category="inline-link-macro-rx"></block></block>
-  <block id="9b0784be448bb1dc8f08485434f9a91a" category="paragraph">如果您在_Read_或_Automate _模式下运行、则需要执行以下操作：选择数据库和AI等工作负载功能、创建IAM策略以确保您拥有在_Read_或_Automate _模式下运行所需 <block ref="bb44378f07a38aa36833bde05fae1b5d" category="inline-link-macro-rx"></block> 的正确权限。</block>
   <block id="31139fb3d548620b7d82f880e4660606" category="doc">存储清单中的选项卡视图</block>
   <block id="d4aa654cea4681dd5ca03650594006c6" category="paragraph">存储清单已更新为双选项卡视图：</block>
   <block id="71083868a2ec5abfee9a2647a74612c0" category="list-text">FSx for ONTAP选项卡：显示您当前拥有的适用于ONTAP文件系统的FSx。</block>
@@ -875,12 +852,7 @@
   <block id="c2a714b67167aae1661b248d570b356d" category="list-text">在*FSx for FS* ONTAP选项卡中，选择要更新的文件系统的三点菜单，然后选择*Manage*。</block>
   <block id="6d257e829bd979b1905ac4edd5b4a469" category="list-text">在复制关系选项卡中、选择要更改的复制关系计划的三点菜单。</block>
   <block id="24347b3ddf5a25cc9c27e54ae285ade1" category="list-text">选择 * 应用 * 。</block>
-  <block id="7be5abc23ad53ad695c77a03eb7214c9" category="summary">随时更新BlueXP  工作负载出厂时卷的Snapshot策略。</block>
-  <block id="9c35dc6b069b6a95cb6819e3959eb977" category="doc">在BlueXP  工作负载出厂时更改卷的Snapshot策略</block>
-  <block id="d567a5c19f9cca95f4739c35028367b6" category="paragraph">随时在BlueXP  工作负载出厂时更新为卷创建快照的频率或禁用自动快照。</block>
   <block id="f2a6898f5e2a659b0a4e936d2179af7b" category="paragraph">要显示现有快照策略、您需要关联一个链接。要关联链接，请在*帐户名称*下选择*关联链接*。然后返回此操作。</block>
-  <block id="23fd5f8d36c1c5c8fb7a03a0e3032596" category="list-text">在*FSx for FS*选项卡中，选择包含要更新快照策略的卷的ONTAP for ONTAP文件系统的三点菜单，然后选择*Manage*。</block>
-  <block id="372b7375695f4a2648579256818d2d0e" category="list-text">在*卷*选项卡中，选择要更改其快照策略的卷的三点菜单。</block>
   <block id="af215976e40a730a67c8637d4caae8f6" category="list-text">选择*应用*以保存更改。</block>
   <block id="8cb5ce6df0f7a83b17c0640431645fbe" category="summary">在BlueXP  工作负载出厂时更改分层策略、以便将数据从高性能主存储层重新分配到二级容量池存储层。</block>
   <block id="6e342a0f88f597871307e39e9b4d00f4" category="doc">在BlueXP  工作负载出厂时更改卷的层策略</block>
@@ -908,7 +880,6 @@
   <block id="7d7910ac46765b911b27c9c2083854bd" category="summary">您可以创建和管理链接、以便在BlueXP  工作负载工厂帐户与一个或多个FSx for ONTAP文件系统之间提供信任关系和连接。</block>
   <block id="a5a4b7a68e3e1941c36e80f4f74df45d" category="doc">在BlueXP  工作负载出厂时创建链接</block>
   <block id="a93321ba62072a8d18fc71a4f192358a" category="paragraph">您可以创建和管理链接、以便在工作负载工厂帐户与BlueXP  工作负载工厂中一个或多个适用于ONTAP文件系统的FSx之间建立信任关系和连接。这样、您就可以直接从FSx for ONTAP文件系统监控和管理某些功能、而这些功能不是通过AWS FSx for ONTAP API提供的。</block>
-  <block id="c5e5ca53fa52186f7add37b295184791" category="list-text">自动：通过工作负载工厂创建具有自动注册功能的链接。自动创建的链接需要令牌才能实现工作负载工厂自动化、CloudFormation代码生命周期较短。只能使用长达6小时。</block>
   <block id="1c04ed7ac6ae9dcde52b75daba3d1612" category="paragraph">使用CloudFormation在工作负载工厂中自动创建和注册链接。</block>
   <block id="043b13da46aed51663f89927fa38d1bc" category="list-text">在*FSx for FS* ONTAP选项卡中，选择要关联链接的文件系统的三点菜单，然后选择*Manage*。</block>
   <block id="bf18811faac9b8e4fcaebab51afd1113" category="list-text">选择 * 创建 * 。</block>
@@ -926,8 +897,6 @@
   <block id="cf2d4a66ab67f86354f74f9c2cd68326" category="list-text">用于复制关系的两个文件系统必须具有关联的链接。如果文件系统没有现有链接，请 <block ref="1bb172d13e94db502d24bfc1c5a4fc0a" category="inline-link-macro-rx"></block>。要<block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>在文件系统中，选择*Account name*下的*Associate*链接。一旦链接在两个文件系统中关联、请返回此操作。</block>
   <block id="215ff1ada74bcc801bd4be406a4760b9" category="paragraph">_Auto_是使用工作负载工厂FSx for ONTAP用户界面创建卷时的默认分层策略。有关卷分层策略的详细信息、请参阅 <block ref="de51d392f5d252a956349995f441f55c" category="inline-link-macro-rx"></block>AWS FSx for NetApp ONTAP文档中的。</block>
   <block id="1d1c040daca4e036fc6766de8bee1a0d" category="list-text">在FSx for ONTAP选项卡中，选择包含卷的文件系统的三点菜单，然后选择*Manage*。</block>
-  <block id="26aa14a56cb65f177e49de0f78d28f50" category="summary">在BlueXP  工作负载出厂时为FSx for ONTAP卷创建Snapshot策略。快照策略用于定义系统如何为卷创建快照。</block>
-  <block id="845e00b5325a1fed5014a20ed341a698" category="paragraph">在BlueXP  工作负载出厂时为FSx for ONTAP卷创建自定义快照策略。快照策略用于定义系统如何为卷创建快照。</block>
   <block id="9b5cb8f49e83e342d48c95385ebf43e7" category="list-text">要创建自定义快照策略，您必须 <block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>。如果您没有现有链接，请 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。要关联文件系统中的链接，请选择*Account name*下的*Associate link*。链接关联后、返回此操作。</block>
   <block id="475db696847724a8e496eba7476bc2ce" category="summary">在BlueXP  工作负载出厂时为FSx for ONTAP卷创建手动快照。快照是卷内容的时间点版本。</block>
   <block id="512defc52682eb6b6d9585f8d5494603" category="paragraph">您必须 <block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block> 创建快照。如果您没有现有链接，请 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。要关联文件系统中的链接，请选择*Account name*下的*Associate link*。链接关联后、返回此操作。</block>
@@ -941,7 +910,6 @@
   <block id="3ce528a1818baf0bbf2f6b362b1f7d58" category="list-text">在卷选项卡中、选择包含要创建卷的快照的卷的三点菜单。</block>
   <block id="3f069fcb238357ca598d1a4d611a62de" category="doc">在BlueXP  工作负载出厂时创建FSx for ONTAP卷</block>
   <block id="d5d682292e122fa36db263f49a714cc7" category="list-text">工作负载出厂时必须具有FSx for ONTAP文件系统。</block>
-  <block id="60911d8c5f41bf949378c3bec9fe03b7" category="list-text">要配置对卷的访问权限，您必须 <block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>。如果您没有现有链接，请 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。要关联文件系统中的链接，请选择*Account name*下的*Associate link*。链接关联后、返回此操作。</block>
   <block id="72ce63a6bef6ec13ef74a7eab0012469" category="summary">FSx for ONTAP在BlueXP  工作负载出厂时支持快照、卷备份和卷复制。</block>
   <block id="96a5899d90dd9b81319f168f67bcb5ae" category="summary">要在BlueXP  工作负载出厂时删除文件系统、必须先删除与该文件系统关联的任何卷、Storage VM或复制关系。</block>
   <block id="378213b58b31bfb9d173e8b2ad3c0968" category="doc">在BlueXP  工作负载出厂时删除文件系统</block>
@@ -961,7 +929,6 @@
   <block id="136dc09835924029e4299fa28f17233d" category="list-text">选择 * 继续 * 。</block>
   <block id="f7f2169256b833e4b912b12eeb380c4e" category="summary">启用卷自动增长可使BlueXP  工作负载在出厂时为您管理卷容量。您可以随时将其禁用。</block>
   <block id="5d6c153f1e4ed3eaf701b67f0de4cee6" category="doc">在BlueXP  工作负载出厂时启用卷自动增长</block>
-  <block id="49d3064815a18006405df55cc92d66d0" category="paragraph">要启用卷自动增长，必须 <block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>。如果您没有现有链接，请 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。要关联文件系统中的链接，请选择*Account name*下的*Associate link*。链接关联后、返回此操作。</block>
   <block id="442b64cea00e2efaa2cb2cb89dba4ab3" category="list-text">在FSx for ONTAP选项卡中，选择包含要更新的卷的文件系统的三点菜单，然后选择*Manage*。</block>
   <block id="a0b96ee62d98191f36ed547bccb7babd" category="list-text">从卷选项卡中、选择要修改的卷对应的三点菜单。</block>
   <block id="a4fc5c253ce09fe4825f0474ddb3368c" category="summary">通过启用此功能、工作负载工厂可以在容量需求随时间变化时自动向FSx for ONTAP文件系统添加增量存储。</block>
@@ -995,11 +962,9 @@
   <block id="9a043b713e882184d11ad1a7919816bc" category="doc">在BlueXP  工作负载出厂时增加卷容量</block>
   <block id="9aebf119a4043534b3bad38302a5a426" category="paragraph">随时在BlueXP  工作负载出厂时手动增加卷的卷容量。</block>
   <block id="37af5d3c1fc55c4c592c9e25262e33e0" category="paragraph">或者、您也可以<block ref="e5ea0961d6c7f5be0b804e74d995de2b" category="inline-link-macro-rx"></block>让工作负载出厂时为您管理卷容量。</block>
-  <block id="4b393875b5b045103675a2b1cafadea3" category="paragraph">要增加卷容量，您必须 <block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>。如果您没有现有链接，请 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。要关联文件系统中的链接，请选择*Account name*下的*Associate link*。链接关联后、返回此操作。</block>
   <block id="eb5b43fd3063e7e7d316d276274f9cdf" category="list-text">从卷选项卡中、选择要增加容量的卷的三点菜单。</block>
   <block id="fff3d9f088697aebfe71e7b67e73d713" category="list-text">选择*增加*。</block>
   <block id="91dba10e04f0058a3a870602dfa68322" category="doc">在BlueXP  工作负载出厂时初始化复制关系</block>
-  <block id="e7468956ee9dd1bea83fcdcd24d2fcda" category="paragraph">在BlueXP  工作负载出厂时初始化源卷和目标卷之间的复制关系。</block>
   <block id="9d766b6178ad56fec4d1320aa17e387b" category="list-text">在复制关系选项卡中、选择要初始化的复制关系的三点菜单。</block>
   <block id="0e42938784ca54b8dc455284578841f0" category="list-text">在初始化关系对话框中，选择*Initi起 始化*。</block>
   <block id="478b776fc28a60e8545a858eb7ca9a3e" category="summary">已知限制确定了本产品版本不支持的平台、设备或功能、或者这些平台、设备或功能无法与产品正确交互操作。</block>
@@ -1033,7 +998,6 @@
   <block id="55981a57e653c44a83666d6d6bf1a27d" category="paragraph">BlueXP  工作负载工厂链接会在工作负载工厂帐户与一个或多个FSx for ONTAP文件系统之间创建信任关系和连接。这样、您就可以直接通过ONTAP REST API调用监控和管理某些文件系统功能、而这些功能不能通过Amazon FSx for ONTAP API使用。</block>
   <block id="691199ddecf65c4783496c94612dd07f" category="paragraph">您不需要链接即可开始使用工作负载工厂、但在某些情况下、您需要创建一个链接来解锁所有工作负载工厂功能和工作负载功能。</block>
   <block id="c1dad4a74a18053a2db1d6f5da393921" category="paragraph">您可以从工作负载出厂时的FSx for ONTAP文件系统页面创建链接。<block ref="e9a88ae15a9584972e43294d65e9c8ac" category="inline-link-macro-rx"></block> 有关详细信息、请参见。</block>
-  <block id="73e5c2c2b839cfd3116941a00923fc5c" category="paragraph">Lamb荷 执行的每个事务都会产生费用。由于Lamb荷 充当两个系统之间的代理、因此当Lamb荷 向文件系统上的ONTAP REST API发送请求以及将响应发送回工作负载出厂时、会收取一定费用。</block>
   <block id="895a7d895aa3866c9188fcd255af1541" category="paragraph">工作负载工厂需要一个链接来显示某些信息并执行某些任务。如果您尝试执行需要链接的操作、但尚未将链接与FSx for ONTAP文件系统相关联、则会显示一条消息、指出此操作需要链接。您可以添加新链接、或者将FSx for ONTAP文件系统与现有链接相关联、以便执行此操作。</block>
   <block id="20cbf23ff8204cff465470ae4144d936" category="summary">根据需要在BlueXP  工作负载出厂时管理FSx for ONTAP文件系统的备份计划。</block>
   <block id="53fe87832fd05bf7a8e9f1e1bad4aa86" category="doc">管理FSx for ONTAP文件系统的备份计划</block>
@@ -1054,7 +1018,6 @@
   <block id="1165cd760ac241cf9b13fc44c28d6b24" category="paragraph"><block ref="1165cd760ac241cf9b13fc44c28d6b24" category="inline-image-macro-rx" type="image"></block></block>
   <block id="5b9288dd513e4ad0d5f06df075069a08" category="summary">在BlueXP  工作负载工厂中管理使用NFSv3或NFSv4.1协议类型的卷的NFS导出策略。</block>
   <block id="2a18f1bf3376d6496c74dcddd35d9f18" category="doc">在BlueXP  工作负载工厂中管理卷的NFS导出策略</block>
-  <block id="252f635ce0e02569bc7f4824220027fb" category="paragraph">管理卷的导出策略涉及添加导出策略规则、这些规则详细说明了客户端规范、访问控制、超级用户访问和NFS版本。您可以添加多个导出策略并确定其优先级。</block>
   <block id="d9947fb691dd22ea8a1d462ee67cb7d8" category="list-text">从卷选项卡中、为要更改NFS导出策略的卷选择三点菜单。</block>
   <block id="91b382ba4d85ee3a4830cb39b5070557" category="doc">在BlueXP  工作负载工厂中管理Storage VM标记</block>
   <block id="208cbe9257272bd35a854a8389f07d99" category="paragraph">标记可以帮助您对资源进行分类。您可以随时在BlueXP  工作负载工厂中为Storage VM添加、编辑和删除标记。</block>
@@ -1065,9 +1028,7 @@
   <block id="10592ebe37a7e3117136f2d8cface935" category="summary">提供了BlueXP  工作负载工厂中FSx for ONTAP的性能参考。</block>
   <block id="c317ab6f4d236615fdd0149ad3e2d27f" category="doc">BlueXP  工作负载工厂中FSx for ONTAP的性能</block>
   <block id="62f6d5ab5287069375e2b4fe49fd674d" category="paragraph">在BlueXP  工作负载工厂为适用于ONTAP文件系统的FSx自动配置或手动配置SSD IOPS。</block>
-  <block id="6279733ae5fa09a4c693b345e6259618" category="paragraph">自动配置的IOPS计算为每GiB 3次IOPS。</block>
   <block id="eeba2ebb020e2a04f72c79660c1af4c0" category="inline-link-macro">增加文件系统容量</block>
-  <block id="53ff04abd2d50962417acb562ee2071b" category="paragraph">如果手动配置IOPS，则可能需要在之前增加IOPS<block ref="94a3285243f3705d6ad038b61125cb2f" category="inline-link-macro-rx"></block>。</block>
   <block id="c0e7e25823412689ce1766213ff693a9" category="paragraph">有关IOPS限制的信息、请参阅<block ref="5e5311b04805e422cc2fabe002034628" category="inline-link-macro-rx"></block>AWS FSx for NetApp ONTAP文档中的。</block>
   <block id="d768b5419e467ed9a94738eddae95578" category="list-text">在*FSx for IOP*选项卡中，选择要配置ONTAP的文件系统的三点菜单，然后选择*Manage*。</block>
   <block id="b110ae22e3b6b4051be0372bbeb02ea7" category="list-text">在"Information"(信息)下、选择鼠标悬停在*IOPS分配*行上时显示在下拉箭头旁边的铅笔图标。</block>
@@ -1082,13 +1043,9 @@
   <block id="2cadb9b6b8dd7d35ff0aa90d81d0e9f1" category="paragraph">如果您选择在_BASIC模式下运行、则无需再继续操作。您可以开始使用适用于FSx for ONTAP的工作负载工厂复制部分完成的代码示例。</block>
   <block id="e5d3c7248ff4540f88c13fbf9252d0a3" category="inline-link-macro">工作负载出厂控制台</block>
   <block id="4e3446d47d185e690e48c92eec422d48" category="paragraph">您将创建FSx文件系统、以开始在工作负载工厂管理存储和FSx for ONTAP资源。在的<block ref="fe6e1b2479e1125e03c713ad62b5343f" category="inline-link-macro-rx"></block>存储中，选择*Create file system*。<block ref="1f3b8beb11bf530a33922b2af302faf4" category="inline-link-macro-rx"></block>(英文)</block>
-  <block id="892d96c1ea1d0d5c15f1753543473053" category="doc">在BlueXP  工作负载出厂时重新平衡卷的容量</block>
-  <block id="fd56bc312829573216004c1f13094ba1" category="paragraph">重新平衡BlueXP  工作负载工厂中卷的容量、以避免随时间推移而出现的不平衡。</block>
-  <block id="2d014d35b29e17b05c626e8bae085896" category="paragraph">要重新平衡卷，您必须 <block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>。如果您没有现有链接，请 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。要关联文件系统中的链接，请选择*Account name*下的*Associate link*。链接关联后、返回此操作。</block>
   <block id="4d63cdce7e101414c4de73486d63848d" category="list-text">在*FSx for FS* ONTAP选项卡中，选择包含要重新平衡的卷的文件系统的三点菜单，然后选择*Manage*。</block>
   <block id="91d9e9f75e88d6dd3c5e8243febefc5c" category="list-text">从卷选项卡中、选择要重新平衡的卷的三点菜单。</block>
   <block id="dce2b73a361987bf4b1c310d93bedcb4" category="paragraph">将Storage VM复制到BlueXP  工作负载工厂中的另一个FSx for ONTAP文件系统、可在数据丢失时提供数据访问保护层。此操作会将一个Storage VM中的所有卷复制到另一个FSx for ONTAP文件系统。</block>
-  <block id="55b2a15f20b69e21fedf18aaf44231dc" category="paragraph">要将Storage VM复制到另一个FSx for ONTAP文件系统，您必须 <block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>。如果您没有现有链接，请 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。要关联文件系统中的链接，请选择*Account name*下的*Associate link*。链接关联后、返回此操作。</block>
   <block id="32c800656566b827842f290b45bbf1ca" category="list-text">在*FSx for Storage VM*选项卡中，选择包含要复制的ONTAP的文件系统的三点菜单，然后选择*Manage*。</block>
   <block id="3ed4d57a718312d39dfbeecf23d4628d" category="list-text">从Storage VM选项卡中、选择要为其复制SVM的Storage VM的三点菜单。</block>
   <block id="2040ece547336d41d3854efddb8f1fbe" category="summary">如有必要、请在BlueXP  工作负载出厂时重置fsxadmin密码。</block>
@@ -1114,14 +1071,11 @@
   <block id="c093c61eee4ba610a36be21124590c57" category="list-text">在“反向关系”对话框中，选择“*反向*”。</block>
   <block id="ca2703d1ec923670ae7d47a759f6c653" category="doc">BlueXP  工作负载工厂中FSx for ONTAP的安全性</block>
   <block id="e59b1d3ff9ef6335d3eb89e26e51c113" category="doc">在BlueXP  工作负载出厂时拆分克隆的卷</block>
-  <block id="ed336fe8167ba465de69843674f2bb8b" category="paragraph">将克隆的FlexVol volume从其父卷中拆分、使此克隆在BlueXP  工作负载出厂时成为正常的读写FlexVol volume。</block>
-  <block id="4221c4f70e20ff2b0cb4f924427fa492" category="list-text">要拆分克隆的卷，必须 <block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>。如果您没有现有链接，请 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。要关联文件系统中的链接，请选择*Account name*下的*Associate link*。链接关联后、返回此操作。</block>
   <block id="3822ebb0123ce3a0855c69b2ad2f5dde" category="list-text">在卷选项卡中、选择要拆分的克隆卷所在卷的三点菜单。</block>
   <block id="d774297729b342ccb9c4096a5382bba3" category="list-text">在“拆分卷”对话框中，选择*Delete*。</block>
   <block id="70d5997237e2a666a80612de57a49652" category="paragraph">此时、卷克隆将拆分并显示在"Volumes"(卷)选项卡中。</block>
   <block id="9008567922abb01808940c72d9c40865" category="summary">在BlueXP  工作负载工厂中停止源卷和目标卷之间的复制关系。</block>
   <block id="783c3c542a27863fe48da0a9aac34b59" category="doc">在BlueXP  工作负载工厂中停止复制关系</block>
-  <block id="ce8af3e8124546d72e99ab485387a943" category="paragraph">在BlueXP  工作负载工厂中停止复制关系。停止复制关系后、从源卷到目标卷的计划复制更新将暂停。目标卷从只读过渡到读写。</block>
   <block id="ff10894647d9b5fe392476cdda757297" category="list-text">在复制关系选项卡中、选择要停止的复制关系的三点菜单。</block>
   <block id="056634bec4a153903ebb9b769277f4d7" category="summary">要向NetApp技术支持创建支持案例、您需要先将NetApp支持站点帐户添加到工作负载工厂、然后注册支持。</block>
   <block id="464833b57975baf081537d1958478560" category="doc">在BlueXP  工作负载出厂时对FSx for ONTAP进行故障排除</block>
@@ -1170,7 +1124,6 @@
   <block id="c866bd28f46aae4b063d835d59832e65" category="list-text">*CIFS共享*：提供以下内容：</block>
   <block id="fbd8f4b666e0f634caa63d615cae9514" category="list-text">*名称*：输入CIFS共享名称以提供SMB访问。</block>
   <block id="a0eaddecd9cba85df3eb61984ad9d41b" category="list-text">*权限*：选择“完全控制”、“读/写”、“读取”或“无访问权限”，然后输入用户或组，以分号(;)分隔。用户或组区分大小写、必须使用"域\用户名"格式包含用户的域。</block>
-  <block id="a1e344db18a7a956afd7ebcb57bcefa2" category="list-text">*块访问*：允许运行关键业务应用程序的主机使用iSCSI协议访问卷。只有当文件系统横向扩展部署包含6个或更少的HA对时、才能使用块访问。</block>
   <block id="388660e21a97a90db2571da848fc61df" category="inline-link-macro">添加AWS凭据</block>
   <block id="df33a8a514c43741a17399e9c12a0427" category="paragraph">此外、您还可以<block ref="10c34fa86244e9acc4f29a59fb8b09f7" category="inline-link-macro-rx"></block>提高计算器分析的准确性。选择*根据现有资源计算节省量*。您将被重定向到添加凭据页面。添加凭据后、请选择要与FSx for ONTAP进行比较的现有资源、然后选择*探索节省量*。</block>
   <block id="914666cc05a2f50a3cbff56ab4c0d87c" category="paragraph">此外、通过选择以下选项之一向下滚动到页面底部以查看报告：</block>
@@ -1181,7 +1134,6 @@
   <block id="428b0b39be2352757edeb5f9f12a7bdd" category="inline-link">BlueXP  工作负载工厂</block>
   <block id="7cf449620aa459bc5c449db69b07e507" category="paragraph"><block ref="7cf449620aa459bc5c449db69b07e507" category="inline-link-rx"></block></block>
   <block id="a32b59044667570495820281f09cfa10" category="list-text">*名称*：输入CIFS共享的名称。</block>
-  <block id="aa6a9af5d2170a7e2225e0d97aefef52" category="paragraph">更改可能会导致当前用户或组无法访问CIFS共享。</block>
   <block id="8772abd9ec2ca5593300708cb88b5426" category="summary">在BlueXP  工作负载出厂时、您可以在创建卷后更新存储效率设置。</block>
   <block id="b31795226510baf520db5a5e2287b56e" category="doc">更新卷的存储效率设置</block>
   <block id="07834469705cb1cae603dc37fac50539" category="paragraph">存储效率功能包括重复数据删除、数据压缩和数据缩减、可在FlexVol volume上实现最佳空间节省。重复数据删除可消除重复的数据块。数据压缩可压缩数据块，以减少所需的物理存储量。数据缩减可在更少的空间中存储更多数据，以提高存储效率。</block>
@@ -1191,7 +1143,6 @@
   <block id="fc86913f9636c03cbcbb4e3e03d4b332" category="list-text">选择启用或禁用卷存储效率。</block>
   <block id="b755b7c9e5db773b9578d24d7b40b61d" category="list-text">选择*Apply*以保存更改。</block>
   <block id="4b5106453aabbf759975ebe8415f9dca" category="summary">在BlueXP  工作负载工厂中发现和复制内部ONTAP数据、以便用于丰富AI知识库。</block>
-  <block id="bbe131cae781cb02f20f1bff02911991" category="doc">在BlueXP  工作负载工厂中使用内部ONTAP集群数据</block>
   <block id="124cb3fd3d0a35a1abf1c0f90f37e8a9" category="paragraph">要使用内部ONTAP集群中的数据、您首先需要发现内部ONTAP集群。发现内部ONTAP集群后、您可以在以下任何使用情形中使用这些数据。</block>
   <block id="2a3b399798aa16ecfbc1425cc560bfad" category="list-text">使用情形</block>
   <block id="ef63a3d009f11deff50f4dc327b32173" category="list-text">请注意、这一系列任务的重点是GenAI工作负载的主要用例。</block>
@@ -1199,7 +1150,6 @@
   <block id="9cce19ad5b8f6c533905f11c61df97c8" category="list-text">*GenAI工作负载*：将内部部署的ONTAP卷数据复制到FSx for ONTAP文件系统中，以便可以将这些数据用于<block ref="f591db1a99ea9ae06218a2a67c7815b6" category="inline-link-macro-rx"></block>。</block>
   <block id="f15192f8afdcf438f7b1ccf0cda2b436" category="list-text">*备份和迁移到云*：复制到FSx for ONTAP文件系统的内部ONTAP卷数据可用作云中的备份。</block>
   <block id="5b5a84720ff8905504e8a45fbc52fb73" category="list-text">*数据分层*：复制后、不常访问的内部ONTAP卷数据可以从SSD存储层分层到容量池存储层。</block>
-  <block id="0fd8af6af12775b851e6156334372818" category="paragraph">在BlueXP  工作负载工厂中发现内部ONTAP集群、以便将数据复制到Amazon FSx for NetApp ONTAP文件系统。</block>
   <block id="4185f116d64b1130e6f9ba4250b147fa" category="paragraph">开始之前、请确保您已具备以下条件：</block>
   <block id="7e496dd07644d2f06f315e4fa164cc69" category="list-text">用于复制的FSx for ONTAP文件系统。</block>
   <block id="165a2e236f1aabd383e31c0b94f74338" category="inline-link-macro">创建一个</block>
@@ -1222,14 +1172,12 @@
   <block id="c0bb7503a06a72052adfacae53dc8968" category="inline-xref">将数据复制到FSx for ONTAP文件系统</block>
   <block id="d8656001c9a7903c7967c4f00f9dd267" category="paragraph">现在，您可以查看内部ONTAP集群和中的数据<block ref="21efd3440e5c8575cf2acdff77601bf0" category="inline-xref-macro-rx"></block>。</block>
   <block id="f4a663f98fdbf7294b4d7065fe81028d" category="section-title">从内部ONTAP集群复制卷数据</block>
-  <block id="99f4cb77b09904f65d27606598e1d1d2" category="paragraph">将卷数据从内部ONTAP集群复制到FSx for ONTAP文件系统。复制后、可以使用这些数据丰富AI知识库。</block>
   <block id="a979d07ec6790355c195ac942aac0f7a" category="list-text">您必须发现内部ONTAP集群才能复制其卷数据。</block>
   <block id="bbaf3e2bb6ee0562252678dc510975b4" category="list-text">要将适用于ONTAP文件系统的FSx作为复制目标、您必须具有一个可用FSx。</block>
   <block id="5fc398b3211d605127c144291f3eda23" category="list-text">内部ONTAP集群和用于复制关系的FSx for ONTAP文件系统都必须具有关联的链接。如果一个或两个内置集群和FSx for ONTAP集群都没有现有链路，<block ref="1bb172d13e94db502d24bfc1c5a4fc0a" category="inline-link-macro-rx"></block>。要<block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>在文件系统中，选择*Account name*下的*Associate*链接。在内部ONTAP集群和FSx for ONTAP文件系统中关联链路后、返回此操作。</block>
   <block id="aea1c4ebf571d37a1b92fbbf08a1d97c" category="list-text">要按Storage VM查找卷、您可以从下拉列表中*选择Storage VM*。</block>
   <block id="e03b6f62981f4a86c7a1c627e22e63e8" category="list-text">选择一个或多个要复制的卷、然后选择*复制*。</block>
   <block id="72106a023ea21862c78ae92b6102ff34" category="list-text">*分层数据*：为目标卷中存储的数据选择分层策略。</block>
-  <block id="5f80f89e32023b75a946369589efc7db" category="list-text">*Auto*：使用工作负载工厂FSx for ONTAP用户界面创建卷时的默认分层策略。在特定时间段内将所有冷数据(包括用户数据和快照)分层到容量池存储层。</block>
   <block id="606156d99b6306c9a4135ba1dbe3f5e8" category="paragraph">有关卷分层策略的详细信息、请参阅 <block ref="de51d392f5d252a956349995f441f55c" category="inline-link-macro-rx"></block>AWS FSx for NetApp ONTAP文档中的。</block>
   <block id="4814d993ecb870a2261a2819e47b0371" category="list-text">对于现有策略，请选择*选择现有策略*，然后从下拉菜单中选择现有策略。</block>
   <block id="a4f4dcbfc1fe91a36caaac04506e0179" category="list-text">对于新策略，请选择*创建新策略*并提供以下内容：</block>
@@ -1273,7 +1221,6 @@
   <block id="9d19d65b5c0b11e65c72a68e686c8efc" category="list-text">管理CIFS共享</block>
   <block id="5b4240cc70ef93fd3963a5a4a1489114" category="summary">在BlueXP  工作负载工厂中管理卷的CIFS共享包括创建、确定用户和组访问权限以及删除。</block>
   <block id="ed2b1c265309f7d9a2006128f317479e" category="paragraph">开始之前、请执行以下操作：</block>
-  <block id="1832295f4669cf4c232bd0b7e1d64a4b" category="list-text">要管理CIFS共享，必须<block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>。如果您没有现有链接，请 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。要关联文件系统中的链接，请选择*Account name*下的*Associate link*。链接关联后、返回此操作。</block>
   <block id="0162ca60ba3c63c1058d5815f318b75b" category="section-title">为卷创建CIFS共享</block>
   <block id="cbbe8730f4012f0727071442d89615d6" category="paragraph">按照以下步骤为卷创建CIFS共享。</block>
   <block id="7b83ec4f9189886fea5cbe593c19e290" category="list-text">选择*高级操作*，然后选择*管理CIFS共享*。</block>
@@ -1299,17 +1246,12 @@
   <block id="07b434b23f63ca6490df33b213599320" category="sidebar">管理 NFS 导出策略</block>
   <block id="6026d035efbb2d0fc978d9ab5bb5b084" category="paragraph">在BlueXP  工作负载出厂时管理卷的CIFS共享包括创建CIFS共享、确定要授予访问权限的用户和组以及为其授予的权限级别、以及删除CIFS共享。</block>
   <block id="34e81b46b7f1e5e087ae28a3b95e81fb" category="list-text">确定要为其授予访问权限的用户或组以及要为其授予的权限级别。</block>
-  <block id="3b3e8444b249018f7cabe035d36fb53b" category="list-text">从*卷*选项卡中，选择要使用计划快照保护的卷的三点菜单。</block>
-  <block id="d67e779675002ae52bb96db205e592f8" category="list-text">在"Snapshot policy management (Snapshot策略管理)"页面上、选择*创建新的Snapshot策略*。</block>
   <block id="8197cd59767b0d487d39d4530835d10e" category="list-text">在*Snapshot policy name*字段中，输入快照策略的名称。</block>
-  <block id="443886f68921b4853b3d9661df7a7c0f" category="list-text">可选：在*Description*字段中，输入快照策略的说明。</block>
-  <block id="7881dae15f35ca3fa5220cbe11bdefe2" category="list-text">在*Schedule下，选择何时创建快照。例如、每分钟或每小时。</block>
   <block id="ed8034815557020cf5cb39ef2e1c8cea" category="paragraph">您可以选择多个频率。</block>
   <block id="f2361db09e678cda3613419cc1de72f2" category="list-text">在*份数*下，输入要保留的份数。</block>
   <block id="c610ec69c40639be95a74d6a4551c7eb" category="paragraph">最大副本数为1、023。</block>
   <block id="b6576df8ae387ace84c72b1d00479bc0" category="list-text">可选：在“*命名约定”下，为策略输入*前缀*。</block>
   <block id="78c10834148d83801a4f716235d19c09" category="list-text">*保留标签*会自动填充。</block>
-  <block id="8a2e9f9173bc33c79f9448e05bf8e7c0" category="paragraph">此标签是指SnapMirror或复制标签、用于仅选择要从源文件系统复制到目标文件系统的指定快照。</block>
   <block id="ed2a329d6f9bf2181ff23014cff23ba5" category="doc">BlueXP  工作负载出厂控制台中的CloudShell</block>
   <block id="5eaddd0f57f7eaddd8610d939876ec8d" category="paragraph">CloudShell是一种嵌入式命令行界面功能、可在BlueXP  工作负载工厂中用于存储。您可以使用CloudShell在类似于Shell的环境中的工作负载出厂控制台中从多个会话创建、共享和执行ONTAP或AWS命令行界面命令。</block>
   <block id="09a780ee2763ed81ce7dcd3480b57fe4" category="inline-link-macro">详细了解BlueXP  工作负载工厂中的CloudShell</block>
@@ -1366,14 +1308,12 @@
   <block id="70975b8c8f6b12169d193367442b573d" category="paragraph">您可以使用CodeBox中提供的以下工具创建卷：REST API、CloudFormation和Terraform。<block ref="e0a3467dce43941c7b863cc8d6f0a62a" category="inline-link-macro-rx"></block>(英文)</block>
   <block id="7bedae719019136090a7c4c373312767" category="list-text">在*FSx for ONTAP选项卡中，选择要创建卷的文件系统的三点菜单，然后选择*Create volume*。</block>
   <block id="5cc952f284466929d6b64c6a769f954d" category="inline-link-macro">SnapLock的工作原理</block>
-  <block id="4f607bc8b085931c8b1fac489fd24290" category="list-text">*immutable files*：默认情况下、此功能(也称为SnapLock)处于禁用状态。启用不可删除文件可防止在指定时间段内删除或覆盖数据。只有在创建卷期间才能启用此功能。启用后、此功能将无法禁用。这是FSx for ONTAP的一项高级功能、需要额外付费。有关详细信息、请参阅<block ref="e334cd66539db07681f218968c17aeb4" category="inline-link-macro-rx"></block>Amazon FSx for NetApp ONTAP文档中的。</block>
   <block id="f348514dc345ce9c1d9ad82ae7129779" category="paragraph">启用不可更改文件功能会将此卷中的文件永久提交到不可更改的WORM (一次写入、多次读取)状态。</block>
   <block id="d1004c5cd3614165a3675cc9bcefd0ff" category="list-text">保留模式</block>
   <block id="bf037d2be2988cb003e5473abb7458ad" category="list-text">您可以从两种保留模式中进行选择-_Enterprise或_Compliance。</block>
   <block id="2c7186fdcb22214f6a80f0c4bf830b01" category="list-text">在_Enterprise模式(不可更改的文件或SnapLock)下、管理员可以在文件保留期间删除该文件。</block>
   <block id="056049eeec9d03d44ee8b82656eddd56" category="list-text">在_Compliance模式下、无法在WORM文件的保留期限到期之前将其删除。同样、在卷中所有文件的保留期限到期之前、无法删除不可更改的卷。</block>
   <block id="2dee9b3212ded01b0c388d81a6f5aec3" category="list-text">保留期限</block>
-  <block id="103d1ff0c19e1c2f05d0e9237137a1dd" category="list-text">保留期限有两项设置-_保留 策略_和_保留 期限_。retri力policy_定义 了文件在不可固定的WORM状态下保留多长时间。您可以指定自己的保留策略、也可以使用默认保留策略(未指定)、即30年。最小值和最大值_保留期限_用于定义允许锁定文件的时间范围。</block>
   <block id="10de4bc81f754b19b0d27246a0589c05" category="list-text">注意</block>
   <block id="1e6fe3169d6df99dc6e4d89c3f0ca701" category="list-text">即使保留期限到期、您也无法修改WORM文件。您只能将其删除或设置新的保留期限以重新启用WORM保护。</block>
   <block id="00c161f0779702fcc736833a90e1c117" category="list-text">自动完成</block>
@@ -1383,8 +1323,6 @@
   <block id="f70318a7f623a49e77262fc2b382b062" category="list-text">您不能修改受WORM保护的文件中的现有数据。但是、通过不可改变的文件、您可以使用WORM可附加文件来保护现有数据。例如、您可以生成日志文件或保留音频或视频流数据、同时以增量方式向这些数据写入数据。<block ref="d363aab3c17dd7b08ef55d9ecb5c0afa" category="inline-link-macro-rx"></block>在Amazon FSx for NetApp ONTAP文档中。</block>
   <block id="dfb689231a842f04569410625d60363d" category="list-title">不可配置文件的步骤</block>
   <block id="44ba7526f1340d677cb6220be4b1b823" category="list-text">选择以启用由SnapLock提供支持的*不可更改文件*。</block>
-  <block id="4f7680fa283bf52aaa8ee2edfd564db8" category="list-text">单击复选框以同意并继续。</block>
-  <block id="909d8cdc7c100d1834d4de10094f43ca" category="list-text">单击 * 启用 * 。</block>
   <block id="088bb2d18ad8fbec398c29306e127221" category="list-text">*保留模式*：选择*企业*或*合规*模式。</block>
   <block id="77b42ba4805daabc49114b9ab89a4177" category="list-text">*保留期限*：</block>
   <block id="f35564204209083a652f147df603888c" category="list-text">选择保留策略：</block>
@@ -1395,9 +1333,7 @@
   <block id="0e5cb121a1c7b4c59daf6285123d8e75" category="list-text">*最大*：输入秒数、分钟数、小时数、天数、月数或年数以设置最长保留期限。</block>
   <block id="9ddc08dbc82d9bea34f1dc4c5b59e6e7" category="list-text">*AutoCommit *：禁用或启用自动提交。如果启用了自动提交、请设置自动提交期限。</block>
   <block id="f8688d8b01dc38763ec2b1f2b373aacc" category="list-text">*卷附加模式*：禁用或启用。用于向WORM文件添加新内容。</block>
-  <block id="4d039a03e23e55926708d85c8977d521" category="list-text">不可移动文件：在保留期限到期之前、无法删除包含由SnapLock提供支持的不可移动文件的卷。</block>
   <block id="d39be15ae050d8e613043b0ac15e302b" category="section-title">正在添加HA对限制</block>
-  <block id="5efa36685932e62e6fc20327cd980750" category="list-text">此操作可能需要大约30分钟才能完成。</block>
   <block id="a51a5c7e9ccc4724703a6ad204303926" category="list-text">添加HA对会限制以下操作：添加更多HA对、配置IOPS、增加SSD容量和更新吞吐量容量。</block>
   <block id="0499cc2d877c04e04bec267579a95697" category="summary">在适用于存储的BlueXP  工作负载工厂中、使用跟踪器跟踪FSx for ONTAP、凭据和链接操作、并监控作业进度。</block>
   <block id="dc58214807820bc923ac22555f97fd7a" category="doc">在BlueXP  工作负载工厂中使用Tracker监控存储操作</block>
@@ -1446,4 +1382,215 @@
   <block id="8e011e1c010d6b411d584ecf79e79304" category="list-text">*重复数据删除和数据压缩*：删除重复数据并对数据进行压缩、以减少FSx for ONTAP文件系统所需的物理存储量、从而节省成本。</block>
   <block id="acf29f0fa117accd6f0be38d23e9b566" category="paragraph">AWS会维护您的FSx for ONTAP帐户、而不是工作负载工厂。请参阅 <block ref="d466c04e3dc9277f23f307f5afe7df62" category="inline-link-macro-rx"></block>。</block>
   <block id="4baeabf837f67f70aeb93e0dfea60d36" category="paragraph">管理与BlueXP  工作负载工厂帐户关联的链接。您可以查看与FSx for ONTAP文件系统关联的链接、将链接与FSx for ONTAP文件系统关联、编辑链接以及删除链接。</block>
+  <block id="4a922c367b35639ecb9d911b81fdb458" category="doc">自动容量管理改进</block>
+  <block id="5868fd5ebf39f0f3dce9bd4ba23dcb6f" category="paragraph">启用自动容量管理后、BlueXP  Workload Factory现在会每30分钟检查一次文件系统是否达到其容量阈值、而不是每2小时检查一次。</block>
+  <block id="b8f4f574565ae3f9b004976be6075660" category="paragraph">工作负载工厂还会扫描卷中的可用Inode、并根据配置的自动容量管理阈值增加其计数。</block>
+  <block id="410d677b6db33c7f47c30b3d219c4846" category="paragraph">达到容量阈值时、配置的IOPS设置不再受影响。</block>
+  <block id="c21bf517f636f8492b01232a674a8d2e" category="section-title">不可变更的快照</block>
+  <block id="525386f4531b9b4bbd2b84ae92c59c07" category="paragraph">现在、您可以锁定快照、使其在特定保留期限内不可改变。锁定可防止未经授权的访问和恶意删除快照。您可以在创建快照策略期间、创建手动快照时以及创建快照之后启用不可变快照。</block>
+  <block id="b811c826e0c0b54d5803fe35cb209c82" category="section-title">更新不可更改的文件</block>
+  <block id="a321ab5f7c12f7cdaa9d6077d68dc055" category="paragraph">现在、您可以对不可变文件配置进行以下更改：保留策略、保留期限、自动提交期限和卷附加模式。</block>
+  <block id="a864feef5272f034d55e1119c5495be8" category="inline-link-macro">管理不可配置文件</block>
+  <block id="0825291b8f1461ab76888807d639764b" category="paragraph"><block ref="0825291b8f1461ab76888807d639764b" category="inline-link-macro-rx"></block></block>
+  <block id="2915f18b56c3e4e3c1ef137551d9a65d" category="section-title">数据复制增强功能</block>
+  <block id="114e60d7d0f811f597761cf833328a96" category="list-text">跨帐户复制：BlueXP  工作负载出厂控制台支持在两个AWS帐户之间进行复制以及复制管理。</block>
+  <block id="6fa19d46a9961be1aeabe428c8550d2f" category="list-text">数据保护卷复制：现在、当卷从复制的卷进行复制时、数据保护卷支持级联复制。</block>
+  <block id="699cadf384181ae5970ed8c0de60e0ff" category="inline-link-macro">复制数据保护卷</block>
+  <block id="f4ae9aa33f99746ec1459126f50c3db7" category="paragraph"><block ref="f4ae9aa33f99746ec1459126f50c3db7" category="inline-link-macro-rx"></block></block>
+  <block id="0348e63af5ee6958b15125648a1ecae7" category="list-text">暂停和恢复复制：您可以暂停(暂停)从源卷到目标卷的计划复制更新、然后在准备就绪后恢复复制计划。暂停期间、源卷和目标卷会彼此独立、目标卷会从只读过渡到读写。</block>
+  <block id="38485996f06c5e13eed5605901b52530" category="inline-link-macro">暂停和恢复复制关系</block>
+  <block id="fc81b1e4233a48b719520033e56b4194" category="paragraph"><block ref="fc81b1e4233a48b719520033e56b4194" category="inline-link-macro-rx"></block></block>
+  <block id="fd8693cf8f6802fd1c7d50d5742a4c71" category="section-title">Tracker中的CloudShell事件</block>
+  <block id="e7a6197673267c30b5dc86e0d5f6c536" category="paragraph">现在、您可以在Tracker中跟踪CloudShell事件。</block>
+  <block id="17f03194826a802587b82edd13d7ac95" category="summary">复制数据保护卷或级联卷数据复制、将数据保护扩展到三级系统或迁移数据。</block>
+  <block id="70b72bd626a098817ae0ea2c2270cbcf" category="doc">在BlueXP  工作负载出厂时复制数据保护卷</block>
+  <block id="92c9c52844cb226e2b3234f5acfbd4a8" category="paragraph">BlueXP  工作负载工厂支持复制数据保护卷。在ONTAP中、复制数据保护卷被视为_镜像-镜像级联部署_。镜像 - 镜像级联部署由一系列关系组成，其中，源卷镜像到二级卷，而二级卷镜像到三级卷。如果二级卷不可用，您可以同步主卷和三级卷之间的关系，而无需执行新的基线传输。</block>
+  <block id="7652817ee4e140c39bef87f9905461f3" category="inline-link-macro">兼容ONTAP版本的ONTAP文档</block>
+  <block id="96931212d5287ed1b328f78b0384b98d" category="paragraph">对于运行ONTAP 9.6及更高版本的ONTAP文件系统、FSx支持此功能。请参阅 <block ref="645fdc124f317ebe54966e1f8afbb990" category="inline-link-macro-rx"></block>。</block>
+  <block id="69d48e6ee6f4d25e240641aa5e451ba6" category="admonition">如果此关系的源卷是一个数据保护卷、并且是另一个关系的目标、则不支持反转此复制关系。</block>
+  <block id="38560383963343c333f3627cb6870516" category="paragraph">请注意、级联配置中的卷重新同步可能需要较长时间。</block>
+  <block id="13a7709a927165a14ae05ef8395921bd" category="paragraph">您可以复制数据保护(DP)卷。</block>
+  <block id="b6465b889ea3f6dce46bfc3720bd65be" category="admonition">支持一个数据保护卷的一个副本。您不能为DP卷创建第二个副本。</block>
+  <block id="e698a18ce9b5d160600af63e05302271" category="list-text">在存储中、选择转至存储清单。</block>
+  <block id="b4c7f647802ebd00adeea4321d3094c4" category="list-text">在FSx for ONTAP选项卡中、选择要更新的文件系统的三点菜单、然后选择管理。</block>
+  <block id="05c0eed2abbd9c20871b6af0eb7b1e38" category="list-text">选择卷选项卡。</block>
+  <block id="2025c60fe6cbb0b8f566aedde84249b3" category="list-text">选择数据保护卷(DP/复制的卷)的三点菜单、然后选择*复制卷数据*。</block>
+  <block id="c9213b34d634cd52f1bdd6f79a305263" category="list-text">*用例*：选择以下复制用例之一。</block>
+  <block id="257ce4bae137964f3625a1e1d6f1369b" category="list-text">迁移：将数据传输到目标FSx for ONTAP文件系统</block>
+  <block id="30940cba2bad8606f971a78b21b2ec59" category="list-text">热灾难恢复：确保关键工作负载的高可用性和快速灾难恢复</block>
+  <block id="4479dbc11cc7245a39dd940a6a86b3a5" category="list-text">冷灾难恢复或归档灾难恢复：</block>
+  <block id="a7683152ac8a3322afd2ab0f568eb7ab" category="list-text">冷灾难恢复：使用更长的恢复时间目标(RTO)和恢复点对象(RPO)来降低成本</block>
+  <block id="24249670ae7cb490931a0cfb669e35fb" category="list-text">归档：复制数据以实现长期存储和合规性</block>
+  <block id="6311ae17c1ee52b36e68aaf4ad066387" category="list-text">其他</block>
+  <block id="b0535a5a3845dff314d063755ccd7db6" category="list-text">*分层策略*：为目标卷中存储的数据选择分层策略。根据您选择的使用情形、分层策略将默认采用为此使用情形建议的分层策略。</block>
+  <block id="eb78d95f0e39e6c6d43b610047113a9b" category="paragraph">使用工作负载工厂FSx for ONTAP用户界面创建卷时、默认分层策略为_Balanced (Auto)_。有关卷分层策略的详细信息、请参阅 <block ref="de51d392f5d252a956349995f441f55c" category="inline-link-macro-rx"></block> AWS FSx for NetApp ONTAP文档中的。</block>
+  <block id="df6ed69179c65d0ae683b9ebfb3119be" category="paragraph">您可以复制文件系统中的所有数据保护(DP)卷。</block>
+  <block id="2b88e1e87621ef2c158ac9491970ddf8" category="paragraph">复制的一个或多个卷将进行复制并显示在目标FSx for ONTAP文件系统的*复制关系*选项卡中。</block>
+  <block id="8b6bca394ded2ad4bd57d5b7e1b13873" category="paragraph">要在文件系统上配置iSCSI块卷、请选择不超过六个HA对。</block>
+  <block id="cf5df8345ca5f203e0f805460b558155" category="list-text">单可用性区域(单可用性区域、单可用性)部署：通过监控硬件故障来提供可用性、并在发生故障时自动更换基础架构组件。通过在可用性区域中自动复制数据以防止其发生组件故障、实现高持久性。</block>
+  <block id="65122529e27ab1e34a08fc55d0f38a93" category="list-text">自动：通过工作负载工厂创建具有自动注册功能的链接。自动创建的链接需要令牌才能实现工作负载工厂自动化、CloudFormation代码生命周期较短。只能使用最多六个小时。</block>
+  <block id="b1a94bb6f0b93b26134ff88823a75e78" category="list-text">手动：创建包含手动注册的链接。CloudFormation代码持续存在、让您有更多时间完成操作。当与不同的团队(如安全和开发运营团队)合作时、这很有用、因为他们可能首先需要授予完成链接创建所需的权限。</block>
+  <block id="99f375ee1d56d1983309c071fe9cb69a" category="paragraph">目标文件系统中复制的卷是数据保护(DP)卷，命名格式如下：<block ref="4b5beb37da0fa6444b7f9f92238aadb1" prefix=" " category="inline-code"></block>。</block>
+  <block id="02d60b2752d9739923230b4d901add35" category="paragraph">您可以复制一个源(读/写)卷或一个数据保护(DP)卷。您不能为DP卷创建第二个副本。</block>
+  <block id="df4c98f43132ebd68d92a0c9822984df" category="list-text">在复制数据页面上的复制目标下、提供以下内容：</block>
+  <block id="ff1d02000e266ba203887393d4fcef27" category="paragraph">_Auto_是使用工作负载工厂FSx for ONTAP用户界面创建卷时的默认分层策略。有关卷分层策略的详细信息、请参阅 <block ref="de51d392f5d252a956349995f441f55c" category="inline-link-macro-rx"></block> AWS FSx for NetApp ONTAP文档中的。</block>
+  <block id="0cbe076a4ce5208b10cdb81c9e175006" category="list-text">*选择现有策略*：从下拉菜单中选择现有策略。</block>
+  <block id="b9a658e63ae9e8d9a604efb8acd930e6" category="list-text">*创建新策略*：提供以下内容：</block>
+  <block id="78c187892204fa9a888a00a5635447c9" category="list-text">可选：启用不可删除的快照。</block>
+  <block id="bac08643512e190f9a6a6c2a8e9b983b" category="list-text">选择*启用不可更改的快照*以防止在保留期间删除此策略中创建的快照。</block>
+  <block id="4e41f89501d754d5c6885a51e74ac5f0" category="list-text">以小时、天、月或年为单位设置*保留期限*。</block>
+  <block id="fc930892107e4be1c1458012ac813f7f" category="paragraph">您可以复制文件系统中的所有源(读/写)卷和数据保护(DP)卷。</block>
+  <block id="f94531f2db8755eeb06e1cbec25d5143" category="admonition">支持一次性复制数据保护卷。</block>
+  <block id="3702b0a09f07d723e87db7b55a1f1ae4" category="list-text">从文件系统概述中，选择*复制数据*。</block>
+  <block id="2d8ee1a45745947c5dd0e4e9c6745151" category="list-text">选择*复本*。</block>
+  <block id="58defc647621cf2147bca50eba3d13f5" category="summary">在BlueXP  工作负载出厂时为Storage VM创建自定义快照策略。</block>
+  <block id="2a07132290664925d6acf392c1b389ba" category="doc">在BlueXP  工作负载出厂时为Storage VM创建Snapshot策略</block>
+  <block id="2f8e07938edc25be83cf584fa9baa96b" category="paragraph">在BlueXP  工作负载出厂时为Storage VM创建自定义快照策略。快照策略用于定义系统如何为Storage VM创建快照。您可以为FSx for ONTAP文件系统中的Storage VM创建快照策略。您还可以在多个Storage VM之间共享此策略。</block>
+  <block id="cf6066b0e9e3a71171e38923cf6da6f9" category="list-text">在文件系统概述中，选择*Storage VMS*选项卡。</block>
+  <block id="f74e735c048e3c0f84c80e2fade1fb56" category="list-text">从*Storage VMS*选项卡中，为要使用计划快照保护的卷选择三点菜单，然后依次选择*Advanced Actions*和*Manage Snapshot Policies*。</block>
+  <block id="c92307c84c3661374297e6b2cb6a8af4" category="list-text">在Snapshot策略管理页面上，选择*Create Snapshot policy*。</block>
+  <block id="8f85e33d4d57546c4315ec537e86fbb6" category="list-text">(可选)输入快照策略的说明。</block>
+  <block id="e6bc7137728dba3572d5a96b4a9042c3" category="list-text">在*策略计划和副本*下、选择何时创建快照。例如、每分钟或每小时。</block>
+  <block id="376856cf80b209a98a5965ac500fa9c2" category="paragraph">此标签是指SnapMirror或复制标签、用于仅选择要从源文件系统复制到目标文件系统的指定快照。</block>
+  <block id="c4f08518809bffff8a2b5046db374241" category="list-text">可选：为所需的任何计划启用*不可变更快照*，为每个计划设置*保留期限*，然后接受该语句以继续。</block>
+  <block id="fbe63591e4efcbefdcee988dc8bc46ae" category="paragraph">启用不可删除的快照会锁定此快照策略中的所有快照、以防止在保留期间删除这些快照。</block>
+  <block id="67e792ffec4a29b646fa11aff1d8c441" category="list-text">*跨Storage VM*共享*：默认启用。启用后、快照策略将在文件系统中的所有Storage VM之间共享。禁用可为单个Storage VM创建快照策略。</block>
+  <block id="bcdd10c1cff7243af519e9d8eec8dbd8" category="paragraph">此时将创建Snapshot策略。</block>
+  <block id="c30e0acb90fa2137d90a80462f560839" category="list-text">在*FSx for FS* ONTAP选项卡中，选择包含要创建快照的卷的文件系统的三点菜单，然后选择*Manage*。</block>
+  <block id="fefc3b8b375d96e8bf83d73c262aab57" category="list-text">从*卷*选项卡中，选择要使用快照保护的卷的三点菜单。</block>
+  <block id="f01fa636d7ab2112e7dd3793a4da0345" category="list-text">选择*数据保护操作*、*快照*，然后选择*创建快照*。</block>
+  <block id="84c4fbf0889e2d552cef58742fbb6561" category="list-text">在Create a Snapshot对话框的*Snapshot name*字段中输入快照名称。</block>
+  <block id="6ed24439c49aa780b53884f3cee8e455" category="list-text">可选：使快照不可更改、以防止快照在保留期间被删除。</block>
+  <block id="497a3a6d6896389f61471114110cc7fe" category="list-text">启用*不可变更快照*。</block>
+  <block id="be418a0bf2ad3249acf7833b04db3bd5" category="list-text">将*保留期限*设置为小时数、天数、月数或年数。</block>
+  <block id="6612ee3812a7ecc1b61dc6f585b1c26f" category="list-text">接受有关不可变更快照的语句。</block>
+  <block id="a07e25b28678b53fe808a082369fda80" category="paragraph">此卷具有一个Snapshot副本。</block>
+  <block id="86ee35c0029c920dce9ef56d88935e8e" category="paragraph">卷可能会使用以下协议：</block>
+  <block id="f9c23d0688e853bcefd0a1c9f4247f62" category="list-text">要配置对卷的访问权限，您必须 <block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>。如果您没有现有链接，请 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。要关联文件系统中的链接，请选择*Account name*下的*Associate link*。链接关联后、返回此操作。</block>
+  <block id="8feb9be2f7d30e723f1c8aa899250dae" category="list-text">*块访问*：允许运行关键业务应用程序的主机使用iSCSI协议访问卷。只有当文件系统横向扩展部署包含六个或更少的HA对时、才能使用块访问。</block>
+  <block id="ad5ae1649d193a804147218da52fd8ad" category="list-text">*immutable files*：默认情况下、此功能(也称为SnapLock)处于禁用状态。启用不可删除文件可防止在指定时间段内删除或覆盖数据。只有在创建卷期间才能启用此功能。启用此功能后、将无法禁用它。这是FSx for ONTAP的一项高级功能、需要额外付费。有关详细信息、请参阅<block ref="e334cd66539db07681f218968c17aeb4" category="inline-link-macro-rx"></block>Amazon FSx for NetApp ONTAP文档中的。</block>
+  <block id="f122287653386d74229199bd670f4990" category="list-text">保留期限有两项设置-_保留 策略_和_保留 期限_。retri力policy_定义 了文件在不可固定的WORM状态下保留多长时间。您可以指定自己的保留策略或使用默认保留策略(未指定)、即30年。最小值和最大值_保留期限_用于定义允许锁定文件的时间范围。</block>
+  <block id="35728d1f4ec13c002da573ba8e7069f7" category="list-text">选中相应框以同意并继续。</block>
+  <block id="71377237946a16cc4981e8007b83be9b" category="list-text">选择 * 启用 * 。</block>
+  <block id="427c298c7e18f9930012cc8fc9c01fcd" category="summary">在FSx for ONTAP文件系统中删除不再需要的卷并释放空间。此操作不可逆。</block>
+  <block id="c6e676032b22d8e639d8347f2bfe87d5" category="list-text">不可修改的文件和快照：在保留期限结束之前、无法删除包含不可修改的文件和快照的卷。</block>
+  <block id="857724ecf757b1bcd8495bdca7e9031a" category="paragraph">要启用卷自动增长，必须 <block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>。如果您没有现有链接，请 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。要关联文件系统中的链接，请选择*Account name*下的*Associate link*。链接关联后、返回此操作。</block>
+  <block id="c8b905c92d0173f2a57027886d96ccda" category="paragraph">每30分钟对FSx for ONTAP文件系统进行一次扫描、以确定是否需要添加增量存储并检查卷中的可用卷索引节点或最大文件和文件夹数、以便其计数根据配置的自动容量管理阈值增加。</block>
+  <block id="063db47ee02fdc9a25f24c45a2f07d88" category="paragraph">要确保卷的Inode随存储容量一起增加，您必须<block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>。如果您没有现有链接，请 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。要关联文件系统中的链接，请选择*Account name*下的*Associate link*。链接关联后、返回此操作。</block>
+  <block id="c19ec77905390b48637066dbfe338f41" category="paragraph">每30分钟执行一次文件系统扫描、以确定文件系统是否需要额外容量。</block>
+  <block id="db95f08d46f6135faf16036ec8d0bee1" category="paragraph">了解通过使用Amazon Elecic Block Store (EBS)、Elecic File System (EFS)和FSx for Windows File Server和FSx for NetApp ONTAP为存储工作负载节省的空间。</block>
+  <block id="40042d0ee93698f3f63a7f8a3f2c9c1f" category="paragraph">手动时<block ref="a9cec068297d5b243eecd658574a7cef" category="inline-link-macro-rx"></block>、您可能需要增加IOPS分配以支持增加的文件系统容量。</block>
+  <block id="58d1dabb2d9059ce86ad3732b8fdce6d" category="paragraph">要增加卷容量，您必须 <block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>。如果您没有现有链接，请 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。要关联文件系统中的链接，请选择*Account name*下的*Associate link*。链接关联后、返回此操作。</block>
+  <block id="4a2b234996b70a9f17edaef6ad63c683" category="paragraph">初始化源卷和目标卷之间的复制关系、以传输快照以及BlueXP  工作负载出厂时的所有数据块。</block>
+  <block id="d2a2f0e04d26b7123eb9c705ec13e758" category="list-text">此操作可能需要大约30分钟才能完成。</block>
+  <block id="1e0df4591e77aee403bcdd8f97b71ee5" category="paragraph">限制最大传输速率是可选的、但建议这样做。如果没有限制、网络和应用程序性能可能会下降。</block>
+  <block id="def5ef91837644047b00e3f35f6d9fde" category="paragraph">Lamb荷 执行的每个事务都会产生费用。由于Lamb荷 充当两个系统之间的代理、因此、当Lamb荷 向文件系统上的ONTAP REST API发送请求以及将响应发送回工作负载出厂时、会产生费用。</block>
+  <block id="40d8be3de1697aeb13e210a5a2adc870" category="list-text">要管理CIFS共享，必须<block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>。如果您没有现有链接，请 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。要关联文件系统中的链接，请选择*Account name*下的*Associate link*。链接关联后、返回此操作。</block>
+  <block id="427e6edb85323a6bc01bcb3b7cc04394" category="paragraph">更改可能会导致当前用户或组无法访问CIFS共享。</block>
+  <block id="8deecf84343cc455d4c3c3eea19e99e4" category="summary">启用此功能后、您可以更新某些不可更改的文件设置。</block>
+  <block id="b7461c37ab24fcaeffe8427333f04775" category="doc">在BlueXP  工作负载工厂中管理卷的不可配置文件</block>
+  <block id="64a89a3651290ba9a03fd440b6a0ebf1" category="paragraph">启用此功能后、您可以更新卷的某些不可变文件设置、例如保留策略和期限、自动提交期限以及卷附加模式。</block>
+  <block id="b492e06a3b3ad8340a18b513da6d700b" category="inline-link-macro">创建卷</block>
+  <block id="dcfa45791ee058474d9440831351e387" category="paragraph">请注意，只有在期间才能启用不可删除的文件<block ref="c2ed7675c4babbb461c62976097c066d" category="inline-link-macro-rx"></block>。</block>
+  <block id="83974dc1026ee374e42bc49ce1009e84" category="list-text">在卷选项卡中、选择要克隆的卷的三点菜单。</block>
+  <block id="93e46e1a97b77571f38fbf3e149f1774" category="list-text">选择*数据保护操作*，然后选择*管理不可更改的文件*。</block>
+  <block id="ad020fe684b765118a2055b344aee93d" category="list-text">在管理不可更改文件页面上、您可以更新以下内容：</block>
+  <block id="41aead073b18e72c83b214fa747bdba7" category="list-text">*保留期限*：选择*未指定*或*指定期限*。</block>
+  <block id="0a797ee72fc728e25a5c140bd12640a5" category="list-text">*未指定*：默认最短期限为"0"年、默认最长期限为"30年"。</block>
+  <block id="bdc86b1b59114d960fddc6510ce5b5aa" category="list-text">*指定期限*：用于定义保留策略、最短和最长期限、自动提交功能以及卷附加模式功能的选项。请提供以下详细信息：</block>
+  <block id="f8acb56e7fdfc40573cdcf902933cf6b" category="list-text">*保留策略*：此期限必须大于或等于最短保留期限、且小于或等于最长保留期限。</block>
+  <block id="5e014a6c33a86633de2b837f04c25093" category="list-text">*最短和最长期限*：设置将此卷中的文件提交到不可变动的WORM状态的最短和最长期限。</block>
+  <block id="25c4d2e22e431bb231ebfacb000ad26c" category="list-text">*自动提交*：启用或禁用自动将在自动提交期间未修改的文件提交到WORM的功能。</block>
+  <block id="a673f232c0f3e69598b33b45ea372eb0" category="list-text">*卷附加模式*：启用或禁用此功能。启用卷附加模式后、您可以向WORM文件添加新内容。</block>
+  <block id="400fae8e788b3721b9ac25fe01f04f50" category="list-text">单击 * 应用 * 。</block>
+  <block id="0040dd329c12b8e069f111ec942d89fd" category="paragraph">现在、更新将应用于卷。</block>
+  <block id="750bccba0d1370cdcf80e381531ccf20" category="paragraph">管理卷的导出策略涉及添加详细说明客户端规范、访问控制、超级用户访问和NFS版本的导出策略规则。您可以添加多个导出策略并确定其优先级。</block>
+  <block id="ce9febcc7ffbadd58aed913f41d83102" category="summary">在BlueXP  工作负载工厂中管理FSx for ONTAP卷的Snapshot策略。快照策略用于定义系统如何为卷创建快照。</block>
+  <block id="4867c217eac62c97b182966f57c83e8f" category="doc">管理Snapshot策略</block>
+  <block id="491d37c735073b9ba15b69c580439021" category="paragraph">为FSx for ONTAP文件系统中的卷分配、更改和删除Snapshot策略等Snapshot管理操作在Storage VM级别进行管理。Snapshot策略可以与单个Storage VM共享、也可以与所有Storage VM共享。</block>
+  <block id="dfcdbd589e3208b5fc1db45a90025691" category="paragraph">某些管理任务要求您<block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>访问FSx for ONTAP文件系统。如果您没有现有链接，请 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。</block>
+  <block id="67366ad19b5e2e9e027ed804f4af5cd5" category="section-title">更改快照策略</block>
+  <block id="497d50d3f3c01373e9ac618dc8d7762e" category="paragraph">您可以更改要保留的快照策略名称、计划和副本数、以及启用或禁用不可变快照。无法在Storage VM之间启用或禁用策略共享。此选项仅在创建Snapshot策略期间可用。</block>
+  <block id="9ea7c3b914bc2e35b22018cf6a394157" category="list-text">在*FSx for FS* ONTAP选项卡中，选择文件系统的三点菜单，然后选择*Manage*。</block>
+  <block id="05e9e67e0a7b3e37b36ddc3b7369520c" category="list-text">从*Storage VM*选项卡中，选择包含要使用计划快照保护的卷的Storage VM的三点菜单，然后选择*Advanced Actions*和*Manage Snapshot Policies*。</block>
+  <block id="d7fce79e36f277c6ee1448e9b3e3056e" category="list-text">在Snapshot策略管理页面上，选择要更改的快照策略的三点菜单，然后选择*Edit*。</block>
+  <block id="c1ab7167093d7244d8ccd66294caac86" category="list-text">在编辑快照策略对话框中、对快照策略进行必要的更改。</block>
+  <block id="14f87882e6a43eb538fc1c6aa4ea44de" category="paragraph">此时将更新此Snapshot策略。</block>
+  <block id="6e1d84f2f9e9a9941b445952f6b20cf9" category="section-title">将快照策略分配给卷</block>
+  <block id="d88e3ecb2bebd33ebfaa42eb01224df4" category="paragraph">您可以将快照策略分配给单个卷、以便为该卷创建计划快照。</block>
+  <block id="ca3948c35bce5a01ff818d8165bc9432" category="paragraph">您必须<block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>分配快照策略。如果您没有现有链接，请 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。要关联文件系统中的链接，请选择*Account name*下的*Associate link*。链接关联后、返回此操作。</block>
+  <block id="4eec9d8605d9286e4625ff2e2cf81a8e" category="list-text">在*FSx for ONTAP选项卡中，选择要将快照策略分配到的卷所在文件系统的三点菜单，然后选择*Manage*。</block>
+  <block id="2e0f47563683dde9235309ef305c18bd" category="list-text">在Snapshot策略管理页面上、选择快照策略的三点菜单、然后选择*将策略分配给卷*。</block>
+  <block id="f6a4c9bb30fd5cd61b4fb4f8ab626585" category="list-text">在分配快照策略对话框中、选择要分配给卷的快照策略并查看策略计划。</block>
+  <block id="52f76b2c670528ae6ea65a2af73db841" category="paragraph">如果此策略包含不可更改的快照、并且您希望使用此策略、请接受此语句。</block>
+  <block id="ae1f5753f901b2162aa527ff2e48296e" category="list-text">选择*Assign*。</block>
+  <block id="3a7afc12c5189a91a9f3ff461538baee" category="paragraph">此时将为卷分配Snapshot策略。</block>
+  <block id="cd7d7ecbb8f81d67254037fc1073255b" category="section-title">启用不可变更的快照</block>
+  <block id="e299611a9963740ce6eae50818e11e01" category="paragraph">锁定快照、防止在保留期间将其删除。</block>
+  <block id="48b71084b80ec0f51cf2f98eb22f3529" category="paragraph">您必须<block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>启用不可变更的快照。如果您没有现有链接，请 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。要关联文件系统中的链接，请选择*Account name*下的*Associate link*。链接关联后、返回此操作。</block>
+  <block id="c86b5e8cb1615df74bbfa38f4ad243e7" category="list-text">在*FSx for ONTAP SnapMirror*选项卡中，选择包含要锁定快照的卷的文件系统的三点菜单，然后选择*Manage*。</block>
+  <block id="8950e37ceffb542d0cd61122c2d8200b" category="list-text">选择*数据保护操作*、*快照*，然后选择*使快照不可更改*。</block>
+  <block id="600034d3e50968f487a1ad55349b4df4" category="list-text">在Make a Snapshot immutable对话框中、执行以下操作：</block>
+  <block id="e8c231a32939563d96b05572f232c0bd" category="list-text">*Snapshot name*:选择要锁定的快照。</block>
+  <block id="91b4811e58dfaf59d86eff78a04f785e" category="list-text">接受陈述。</block>
+  <block id="ac01830d09cb9d4a6364700c03ac9a48" category="paragraph">卷快照现已锁定。</block>
+  <block id="07d4b0619f50f6f95ed7b83a046239a5" category="section-title">删除快照策略</block>
+  <block id="696434880f5851290eaa4b1ba9f80d85" category="paragraph">删除不再需要的快照策略。</block>
+  <block id="122929b907900af2bcf3e5bace6a2385" category="paragraph">您不能删除分配给多个卷的快照策略。</block>
+  <block id="df5ac48f314a037eb80499fa07b659ad" category="list-text">从*Storage VM*选项卡中，选择要删除快照策略的Storage VM的三点菜单，然后选择*Advanced Actions*和*Manage Snapshot Policies*。</block>
+  <block id="a406d236bad23526e469ee1e5b111d14" category="list-text">在Snapshot策略管理页面上，选择要删除的快照策略的三点菜单，然后选择*Delete*。</block>
+  <block id="6a89139e7be9bba144081cf61352e3c2" category="list-text">在删除对话框中，选择*Delete*以删除策略。</block>
+  <block id="3e2144322d0c83071684bb1ffb11338d" category="paragraph">此时将删除此Snapshot策略。</block>
+  <block id="7aea6efc0dbafc8802c9399b1e3f6754" category="summary">暂停和恢复复制关系、以便目标卷成为源卷。</block>
+  <block id="5dd762d4ab72b7f0d07d15a60666a191" category="doc">在BlueXP  工作负载出厂时暂停和恢复复制关系</block>
+  <block id="9fe4e8e61dcc40a52fe579f0f61b5261" category="paragraph">暂停复制关系以停止从源卷到目标卷的计划复制更新。目标卷从只读过渡到读写。这两个卷仍会共享最新的复制快照作为新基线、以供日后重新同步时使用。</block>
+  <block id="76540d9eea5e27790a75dc0204324995" category="paragraph">暂停后、源卷和目标卷之间的复制关系将继续存在。数据传输将暂停、卷将变得独立。要重新启用从源卷到目标卷的更改传输、请恢复复制。</block>
+  <block id="fc8a23c186b506791d82b21a875d3180" category="paragraph">恢复复制后、对目标卷所做的所有更改都将撤消、BlueXP  工作负载出厂时会重新启用复制。目标卷会从读写过渡到只读、并按计划的复制间隔再次从源卷接收更新。恢复复制关系后、目标卷将还原到最新的初始复制快照、此时、卷复制过程将重新开始。</block>
+  <block id="9eef2cd11da6de70c97fb30475ecd676" category="paragraph">如果在传输进行中暂停、则传输不会受到影响、关系将变为"暂停"、直到传输完成为止。如果当前传输已被禁止、则它现在是将来的传输、不会重新启动。</block>
+  <block id="a252d0c2ed77d353301a08614eb0500e" category="section-title">暂停复制关系</block>
+  <block id="5d4b7fc2e52dde05ac8cda99a07dc088" category="list-text">在复制关系选项卡中、选择要暂停的复制关系的三点菜单。</block>
+  <block id="a967615115cf9697b2655e3b54f1a0f4" category="list-text">选择*暂停(暂停)*。</block>
+  <block id="dbd53807f2ebdf4974197a2ab5736a1a" category="list-text">在“*置于两国间的关系”对话框中，选择“*置于两国间的关系”。</block>
+  <block id="bac97be0c65530902c34b510dbb654b6" category="paragraph">此关系将暂停、并且其状态显示为"Paused"。</block>
+  <block id="eb59ce075de56e53756cdc61346d3683" category="section-title">恢复已暂停的复制关系</block>
+  <block id="510f0c7862ed4f4c13983246f994308e" category="paragraph">恢复复制关系后、在复制停止期间对目标卷所做的任何更改都将被删除。</block>
+  <block id="066bae3848de957d63279e05e08fdb38" category="list-text">在复制关系选项卡中、选择要恢复的复制关系的三点菜单。</block>
+  <block id="f9d637e15d973238afdaad997d440a45" category="list-text">选择*恢复*。</block>
+  <block id="e7dcd5c9be11d7b7d17ab22e0486a710" category="list-text">在“恢复关系”对话框中，选择*Resume*。</block>
+  <block id="a79cee1f678331ce4a5e786550999b02" category="paragraph">此关系将恢复、并且其状态显示为"已复制"。</block>
+  <block id="26da52f61184b82e14aa7b1fa701a979" category="paragraph">自动配置的IOPS计算为每GiB三次IOPS。</block>
+  <block id="924b3daa7ecef370ff9a603b3208772b" category="paragraph">如果手动配置IOPS，则可能需要在之前增加IOPS<block ref="94a3285243f3705d6ad038b61125cb2f" category="inline-link-macro-rx"></block>。</block>
+  <block id="47442843c99a1990c6f90a2c7e4055a9" category="paragraph">如果您在_Read_或_Automate _模式下运行、则需要选择数据库和AI等工作负载功能、并创建IAM策略、以确保您拥有在_Read_或_Automate _模式下运行所需<block ref="bb44378f07a38aa36833bde05fae1b5d" category="inline-link-macro-rx"></block>的正确权限。</block>
+  <block id="3a3c8188eae554af0e7f07bfef2e124b" category="summary">检查并重新平衡卷的容量、以避免随着时间的推移而出现不平衡。</block>
+  <block id="8083bd6761abe4735ad26f9c18899032" category="doc">检查并重新平衡卷的容量</block>
+  <block id="270753bb6aea2d40b94194b021e500ae" category="paragraph">检查FlexGroup卷容量的平衡并重新平衡卷容量、以便在所有成分卷之间均匀分布文件、以便所有节点都参与单个Flex Group卷的工作负载。</block>
+  <block id="8d52048ef57a4217559a7ca3e0deeefa" category="paragraph">FlexGroup卷容量分布在具有两个或更多高可用性(HA)对的适用于ONTAP的横向扩展FSx文件系统中的多个成分卷上。每个成分卷都是一个容器、用于指定单个文件的最大大小。FSx for ONTAP以均匀的方式将文件分布在所有成分卷上、以便所有节点都参与单个FlexGroup卷的工作负载。</block>
+  <block id="3e614bee780ca4f239b415605468630f" category="paragraph">如果成分卷未均匀分布在所有节点上、则FlexGroup卷性能会下降。</block>
+  <block id="04533b4edf31c61772ef483585fb29cf" category="paragraph">检查FlexGroup卷容量的平衡情况包括评估成分卷的当前布局。在重新平衡卷的容量时、BlueXP  工作负载工厂会设计一个包含偶数成分卷的新成分卷布局、以便在所有HA对之间均匀分布数据。该服务将执行重新平衡计划、进而改进读取和写入操作。</block>
+  <block id="f6dc3e9c7132f490eeec938c03027a06" category="admonition">只有FlexGroup卷才支持重新平衡卷。</block>
+  <block id="d394f348c0b6fbd4e88b415bafdbea68" category="section-title">检查FlexGroup卷的平衡情况</block>
+  <block id="1cc1dda63f89374c05c8b8f5c8126341" category="paragraph">检查活动FlexGroup卷的平衡情况。</block>
+  <block id="eeaecacdda76be13c8594ef17a7c395c" category="list-text">FlexGroup卷平衡仅适用于使用至少两个HA对的横向扩展部署的适用于ONTAP文件系统的FSx。</block>
+  <block id="480a98de796f5eb054e749dedf2dbce3" category="list-text">卷模式必须是FlexGroup卷。</block>
+  <block id="4c61a2a51509658d891bb7416dad5238" category="list-text">要检查FlexGroup卷的平衡情况，您必须<block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>。如果您没有现有链接，请 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。要关联文件系统中的链接，请选择*Account name*下的*Associate link*。链接关联后、返回此操作。</block>
+  <block id="a0c24c81835ca446fe958b4abdb6c08c" category="list-text">从卷选项卡中，选择表顶部的*检查FlexGroup平衡*。</block>
+  <block id="8b7b54e191e5f6ab54dc9475259af500" category="list-text">在FlexGroup平衡窗口中、查看FSx for ONTAP文件系统中所有FlexGroup卷的平衡状态。</block>
+  <block id="1997a93792e2a8be597c246f39ee9fd5" category="inline-xref">重新平衡它</block>
+  <block id="6b59c2a4df281550186d4d3fc75ba6d5" category="paragraph">如果FlexGroup卷不平衡，请考虑<block ref="59031c1bf074b0ee450445a716c796e8" category="inline-xref-macro-rx"></block>。</block>
+  <block id="1fd02848e48f953c62155cbb42dd331b" category="section-title">重新平衡FlexGroup卷</block>
+  <block id="64de3f9223f666126336ac4c9a3aa94d" category="paragraph"><block ref="1f11182db84cfb1742cc746fa76f8fe6" category="inline-xref-macro-rx"></block>重新平衡卷之前。</block>
+  <block id="af7202b99122b0c2ef1b703335afeef9" category="paragraph">要重新平衡卷，您必须 <block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>。如果您没有现有链接，请 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。要关联文件系统中的链接，请选择*Account name*下的*Associate link*。链接关联后、返回此操作。</block>
+  <block id="a7f82ab64c2423d5bfd6e7a3852441cc" category="paragraph">FlexGroup卷的容量会重新平衡。</block>
+  <block id="9c633958a5d66a1547197d5b123c8c3c" category="paragraph">要将Storage VM复制到另一个FSx for ONTAP文件系统，您必须 <block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>。如果您没有现有链接，请 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。要关联文件系统中的链接，请选择*Account name*下的*Associate link*。链接关联后、返回此操作。</block>
+  <block id="ceb833d216db0e056b9ab7d22ba4f023" category="paragraph">如果没有限制、网络和应用程序性能可能会下降。或者、对于关键工作负载(例如、主要用于灾难恢复的工作负载)、我们建议对用于ONTAP文件系统的FSx使用无限传输速率。</block>
+  <block id="c4ee13228c56b3c8a94bcef6d8d6d357" category="summary">将克隆FlexVol volume从其父卷中拆分、使此克隆成为正常的读/写FlexVol volume。</block>
+  <block id="c04185e8791b4a9dde9952d191aff02c" category="paragraph">将克隆的FlexVol volume从其父卷中拆分、使此克隆在BlueXP  工作负载出厂时成为正常读/写FlexVol volume。</block>
+  <block id="7a40cb07bf6252b24e9c2d81b57fca8d" category="list-text">要拆分克隆的卷，必须 <block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>。如果您没有现有链接，请 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。要关联文件系统中的链接，请选择*Account name*下的*Associate link*。链接关联后、返回此操作。</block>
+  <block id="652949a64c85ee3404c2f8c9537d8046" category="paragraph">在BlueXP  工作负载工厂中停止复制关系。停止复制关系后、从源卷到目标卷的计划复制更新将暂停。目标卷从只读过渡到读/写。</block>
+  <block id="c24db838f46fefcbb09e7501c8ce667f" category="doc">在BlueXP  工作负载工厂中使用内部ONTAP集群数据</block>
+  <block id="db4ad8d47d4bcafdb0edef9931836b31" category="paragraph">在BlueXP  工作负载工厂中发现内部ONTAP集群、以便将数据复制到Amazon FSx for NetApp ONTAP文件系统。</block>
+  <block id="dde14eef9b53344c34a3e3e63830d29e" category="paragraph">将卷数据从内部ONTAP集群复制到FSx for ONTAP文件系统。复制后、可以使用这些数据丰富AI知识库。</block>
+  <block id="b04f4fce1228aa8dc3f0ae05daa48cd7" category="list-text">*Auto*：使用工作负载工厂FSx for ONTAP用户界面创建卷时的默认分层策略。在特定时间段内将所有冷数据(包括用户数据和快照)分层到容量池存储层。</block>
+  <block id="8b02e3f5a15bae20358e2221cac45d83" category="list-text">*常规详细信息*：包括卷名称、卷UUID、卷ID、创建时间、状态、卷类型(读/写/数据保护(RW/DP)或只读)、快照策略名称、托管Storage VM (SVM)和标记。</block>
+  <block id="2d5a4b914acb6c2f03d312067c73ce32" category="section-title">2025年3月2日</block>
 </blocks>

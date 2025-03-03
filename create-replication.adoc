@@ -18,7 +18,7 @@ summary: 为FSx for ONTAP文件系统创建复制关系、以避免在发生意�
 
 此操作将为FSx for ONTAP文件系统中的一个或所有源卷创建复制关系。
 
-目标文件系统中复制的卷遵循以下命名格式： `{OriginalVolumeName}_copy`。
+目标文件系统中复制的卷是数据保护(DP)卷，命名格式如下： `{OriginalVolumeName}_copy`。
 
 .开始之前
 开始之前、请确保满足以下前提条件。
@@ -33,18 +33,20 @@ summary: 为FSx for ONTAP文件系统创建复制关系、以避免在发生意�
 ====
 .复制单个卷
 --
+您可以复制一个源(读/写)卷或一个数据保护(DP)卷。您不能为DP卷创建第二个副本。
+
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 在存储中，选择*转至存储清单*。
 . 在*FSx for ONTAP选项卡中，选择包含要复制的卷的文件系统的三点菜单，然后选择*复制 卷数据*。
-. 在创建复制页面上的复制目标下、提供以下内容：
+. 在复制数据页面上的复制目标下、提供以下内容：
 +
 .. *FSx for ONTAP file system*：为目标FSx for ONTAP文件系统选择ONTAP文件系统的凭据、区域和FSx名称。
 .. * Storage VM名称*：从下拉菜单中选择Storage VM。
 .. *卷名*：目标卷名称将自动生成，格式如下 `{OriginalVolumeName}_copy`。您可以使用自动生成的卷名称或输入其他卷名称。
 .. *分层策略*：为目标卷中存储的数据选择分层策略。
 +
-_Auto_是使用工作负载工厂FSx for ONTAP用户界面创建卷时的默认分层策略。有关卷分层策略的详细信息、请参阅 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["卷存储容量"^]AWS FSx for NetApp ONTAP文档中的。
+_Auto_是使用工作负载工厂FSx for ONTAP用户界面创建卷时的默认分层策略。有关卷分层策略的详细信息、请参阅 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["卷存储容量"^] AWS FSx for NetApp ONTAP文档中的。
 
 .. *最大传输速率*：选择*受限*并输入最大传输速率(MB/秒)或者，选择*Unlimited (无限制)*。
 +
@@ -60,10 +62,16 @@ _Auto_是使用工作负载工厂FSx for ONTAP用户界面创建卷时的默认�
 如果启用长期保留、请选择现有策略或创建新策略以定义要复制的快照以及要保留的数量。
 
 +
-*** 对于*Choose an existing policy*，从下拉菜单中选择一个现有策略。
-*** 对于*Create a new policy*，请提供以下内容：
+*** *选择现有策略*：从下拉菜单中选择现有策略。
+*** *创建新策略*：提供以下内容：
 +
 **** *策略名称*：输入策略名称。
+**** 可选：启用不可删除的快照。
++
+***** 选择*启用不可更改的快照*以防止在保留期间删除此策略中创建的快照。
+***** 以小时、天、月或年为单位设置*保留期限*。
+
+
 **** *Snapshot策略*：在表中，选择快照策略频率和要保留的副本数。您可以选择多个快照策略。
 
 
@@ -77,12 +85,17 @@ _Auto_是使用工作负载工厂FSx for ONTAP用户界面创建卷时的默认�
 --
 .复制文件系统中的所有卷
 --
+您可以复制文件系统中的所有源(读/写)卷和数据保护(DP)卷。
+
+
+NOTE: 支持一次性复制数据保护卷。
+
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 在存储中，选择*转至存储清单*。
 . 在FSx for ONTAP选项卡中，选择包含卷的文件系统的三点菜单，然后选择*Manage*。
-. 从文件系统概述中，选择*创建复制*。
-. 在创建复制页面上的复制目标下、提供以下内容：
+. 从文件系统概述中，选择*复制数据*。
+. 在复制数据页面上的复制目标下、提供以下内容：
 +
 .. *FSx for ONTAP file system*：为目标FSx for ONTAP文件系统选择ONTAP文件系统的凭据、区域和FSx名称。
 .. * Storage VM名称*：从下拉菜单中选择Storage VM。
@@ -105,8 +118,8 @@ _Auto_是使用工作负载工厂FSx for ONTAP用户界面创建卷时的默认�
 如果启用长期保留、请选择现有策略或创建新策略以定义要复制的快照以及要保留的数量。
 
 +
-*** 对于*Choose an existing policy*，从下拉菜单中选择一个现有策略。
-*** 对于*Create a new policy*，请提供以下内容：
+*** *选择现有策略*：从下拉菜单中选择现有策略。
+*** *创建新策略*：提供以下内容：
 +
 **** *策略名称*：输入策略名称。
 **** *Snapshot策略*：在表中，选择快照策略频率和要保留的副本数。您可以选择多个快照策略。
@@ -116,7 +129,7 @@ _Auto_是使用工作负载工厂FSx for ONTAP用户界面创建卷时的默认�
 
 
 
-. 选择 * 创建 * 。
+. 选择*复本*。
 
 
 --

@@ -11,7 +11,7 @@ summary: 在BlueXP  工作负载工厂中停止源卷和目标卷之间的复�
 
 
 [role="lead"]
-在BlueXP  工作负载工厂中停止复制关系。停止复制关系后、从源卷到目标卷的计划复制更新将暂停。目标卷从只读过渡到读写。
+在BlueXP  工作负载工厂中停止复制关系。停止复制关系后、从源卷到目标卷的计划复制更新将暂停。目标卷从只读过渡到读/写。
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。

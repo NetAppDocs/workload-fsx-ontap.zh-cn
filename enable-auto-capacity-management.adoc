@@ -14,12 +14,16 @@ summary: 通过启用此功能、工作负载工厂可以在容量需求随时�
 通过启用此功能、BlueXP  工作负载工厂可以在容量需求随时间变化时自动向FSx for ONTAP文件系统添加增量存储。
 
 .关于此任务
+每30分钟对FSx for ONTAP文件系统进行一次扫描、以确定是否需要添加增量存储并检查卷中的可用卷索引节点或最大文件和文件夹数、以便其计数根据配置的自动容量管理阈值增加。
+
 只有一个帐户可以管理此功能。
 
 适用于ONTAP文件系统的所有FSx的最大SSD存储容量为524、288 GiB。要申请增加配额、请参见 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html["配额"^] AWS FSx for NetApp ONTAP文档中的。
 
 .开始之前
 要完成此任务、您必须在工作负载工厂拥有具有_Automate权限的凭据。
+
+要确保卷的Inode随存储容量一起增加，您必须link:manage-links.html["关联链接"]。如果您没有现有链接，请 link:create-link.html["创建链接"]。要关联文件系统中的链接，请选择*Account name*下的*Associate link*。链接关联后、返回此操作。
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
@@ -40,3 +44,6 @@ summary: 通过启用此功能、工作负载工厂可以在容量需求随时�
 
 . 选择 * 应用 * 。
 
+
+.结果
+每30分钟执行一次文件系统扫描、以确定文件系统是否需要额外容量。

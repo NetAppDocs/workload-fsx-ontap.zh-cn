@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: split-cloned-volume.html 
 keywords: split clone volume, FlexVol volume 
-summary: 将克隆FlexVol卷从其父卷中拆分、使此克隆成为正常的读写FlexVol卷。 
+summary: 将克隆FlexVol volume从其父卷中拆分、使此克隆成为正常的读/写FlexVol volume。 
 ---
 = 在BlueXP  工作负载出厂时拆分克隆的卷
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 将克隆FlexVol卷从其父卷中拆分、使此克隆成为正常的�
 
 
 [role="lead"]
-将克隆的FlexVol volume从其父卷中拆分、使此克隆在BlueXP  工作负载出厂时成为正常的读写FlexVol volume。
+将克隆的FlexVol volume从其父卷中拆分、使此克隆在BlueXP  工作负载出厂时成为正常读/写FlexVol volume。
 
 拆分期间、可以访问克隆和父级上的数据。拆分过程仅更新元数据、并且所需的IO极少。不会复制任何数据块。
 

@@ -20,7 +20,7 @@ summary: 当已用SSD存储容量超过您指定的阈值时、手动增加适�
 
 对于文件系统、IOPS会自动 link:provision-iops.html["配置IOPS"] 增加3次、而SSD容量每增加1 GiB。
 
-手动时 link:provision-iops.html["配置IOPS"] 、您可能需要增加IOPS分配、以支持增加的文件系统容量。
+手动时link:provision-iops.html["配置IOPS"]、您可能需要增加IOPS分配以支持增加的文件系统容量。
 
 有关SSD存储容量限制、请参阅 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html["配额"^] AWS FSx for NetApp ONTAP文档中的。
 

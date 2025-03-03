@@ -29,7 +29,7 @@ BlueXP  工作负载工厂链接会在工作负载工厂帐户与一个或多�
 
 == Costs
 
-Lamb荷 执行的每个事务都会产生费用。由于Lamb荷 充当两个系统之间的代理、因此当Lamb荷 向文件系统上的ONTAP REST API发送请求以及将响应发送回工作负载出厂时、会收取一定费用。
+Lamb荷 执行的每个事务都会产生费用。由于Lamb荷 充当两个系统之间的代理、因此、当Lamb荷 向文件系统上的ONTAP REST API发送请求以及将响应发送回工作负载出厂时、会产生费用。
 
 link:https://aws.amazon.com/lambda/pricing/["详细了解与使用AWS Lamb泄 压相关的成本"^]
 

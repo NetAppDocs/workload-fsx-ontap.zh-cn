@@ -16,7 +16,7 @@ summary: 为适用于ONTAP文件系统的FSx自动配置或手动配置SSD IOPS�
 .关于此任务
 您可以为FSx文件系统启用SSD IOPS自动配置、也可以手动配置IOPS。
 
-自动配置的IOPS计算为每GiB 3次IOPS。
+自动配置的IOPS计算为每GiB三次IOPS。
 
 如果手动配置IOPS，则可能需要在之前增加IOPSlink:increase-file-system-capacity.html["增加文件系统容量"]。
 

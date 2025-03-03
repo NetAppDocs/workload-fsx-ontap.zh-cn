@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: delete-volume.html 
 keywords: delete volume, volume deletion 
-summary: 您可以随时删除FSx for ONTAP文件系统中的卷。此操作不可逆。 
+summary: 在FSx for ONTAP文件系统中删除不再需要的卷并释放空间。此操作不可逆。 
 ---
 = 在BlueXP  工作负载出厂时删除卷
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 您可以随时删除FSx for ONTAP文件系统中的卷。此操作不�
 
 
 [role="lead"]
-您可以随时删除FSx for ONTAP文件系统中的卷。此操作不可逆。
+在FSx for ONTAP文件系统中删除不再需要的卷并释放空间。此操作不可逆。
 
 .开始之前
 删除卷之前、请考虑以下事项：
@@ -19,7 +19,7 @@ summary: 您可以随时删除FSx for ONTAP文件系统中的卷。此操作不�
 * 复制关系：删除此卷之前、必须先复制link:delete-replication.html["删除所有现有复制关系"]此卷、以确保不会保留任何已断开的关系。
 * 本地快照：与此FSx for ONTAP文件系统关联的所有快照都将被永久删除。
 * FSx for ONTAP备份：FSx for ONTAP备份副本将保留、您仍可使用它们。
-* 不可移动文件：在保留期限到期之前、无法删除包含由SnapLock提供支持的不可移动文件的卷。
+* 不可修改的文件和快照：在保留期限结束之前、无法删除包含不可修改的文件和快照的卷。
 
 
 .步骤
