@@ -39,7 +39,7 @@ summary: 了解Amazon FSx for NetApp ONTAP的新增功能。
 
 现在、您可以对不可变文件配置进行以下更改：保留策略、保留期限、自动提交期限和卷附加模式。
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-immutable-files.html["管理不可配置文件"^]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-immutable-files.html["管理不可配置文件"]
 
 
 
@@ -74,7 +74,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/monitor-operations.html["�
 
 CloudShell是一种嵌入式命令行界面功能、可在BlueXP  工作负载工厂中用于存储。您可以使用CloudShell在类似于Shell的环境中的工作负载出厂控制台中从多个会话创建、共享和执行ONTAP或AWS命令行界面命令。
 
-link:https://docs.netapp.com/us-en/workload-setup-admin/use-cloudshell.html["详细了解BlueXP  工作负载工厂中的CloudShell"^]
+link:https://docs.netapp.com/us-en/workload-setup-admin/use-cloudshell.html["详细了解BlueXP  工作负载工厂中的CloudShell"]
 
 
 
