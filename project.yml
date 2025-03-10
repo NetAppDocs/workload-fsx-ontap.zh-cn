@@ -152,8 +152,6 @@ sidebar:
           url: "/limit-transfer-rate.html"
         - title: 手动更新复制关系中的快照数据
           url: "/update-snapshot-replication.html"
-        - title: 复制数据保护卷
-          url: "/cascade-replication.html"
         - title: 暂停和恢复复制关系
           url: "/pause-resume-replication.html"
         - title: 停止复制关系
