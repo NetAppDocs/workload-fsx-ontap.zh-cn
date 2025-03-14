@@ -28,3 +28,11 @@ indexpage:
       url: "/support-registration.html"
     - title: 获取帮助
       url: "/get-help.html"
+  - title: 博客和社区
+    links:
+    - title: NetApp 社区
+      url: https://community.netapp.com/t5/BlueXP-and-Services/ct-p/CDS
+    - title: BlueXP博客
+      url: https://bluexp.netapp.com/blog
+    - title: 云网络研讨会
+      url: https://bluexp.netapp.com/events
