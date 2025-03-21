@@ -45,32 +45,6 @@ summary: 在BlueXP  工作负载工厂中管理FSx for ONTAP卷的Snapshot策�
 
 
 
-== 将快照策略分配给卷
-
-您可以将快照策略分配给单个卷、以便为该卷创建计划快照。
-
-.开始之前
-您必须link:manage-links.html["关联链接"]分配快照策略。如果您没有现有链接，请 link:create-link.html["创建链接"]。要关联文件系统中的链接，请选择*Account name*下的*Associate link*。链接关联后、返回此操作。
-
-.步骤
-. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在*存储*中，选择*转至存储清单*。
-. 在*FSx for ONTAP选项卡中，选择要将快照策略分配到的卷所在文件系统的三点菜单，然后选择*Manage*。
-. 在文件系统概述中，选择*Storage VMS*选项卡。
-. 从*Storage VM*选项卡中，选择包含要使用计划快照保护的卷的Storage VM的三点菜单，然后选择*Advanced Actions*和*Manage Snapshot Policies*。
-. 在Snapshot策略管理页面上、选择快照策略的三点菜单、然后选择*将策略分配给卷*。
-. 在分配快照策略对话框中、选择要分配给卷的快照策略并查看策略计划。
-+
-如果此策略包含不可更改的快照、并且您希望使用此策略、请接受此语句。
-
-. 选择*Assign*。
-
-
-.结果
-此时将为卷分配Snapshot策略。
-
-
-
 == 启用不可变更的快照
 
 锁定快照、防止在保留期间将其删除。
@@ -100,11 +74,60 @@ summary: 在BlueXP  工作负载工厂中管理FSx for ONTAP卷的Snapshot策�
 
 
 
+== 将快照策略分配给卷
+
+您可以将快照策略分配给单个卷、以便为该卷创建计划快照。
+
+.开始之前
+您必须link:manage-links.html["关联链接"]分配快照策略。如果您没有现有链接，请 link:create-link.html["创建链接"]。要关联文件系统中的链接，请选择*Account name*下的*Associate link*。链接关联后、返回此操作。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 在*存储*中，选择*转至存储清单*。
+. 在*FSx for ONTAP选项卡中，选择要将快照策略分配到的卷所在文件系统的三点菜单，然后选择*Manage*。
+. 在文件系统概述中，选择*Storage VMS*选项卡。
+. 从*Storage VM*选项卡中，选择包含要使用计划快照保护的卷的Storage VM的三点菜单，然后选择*Advanced Actions*和*Manage Snapshot Policies*。
+. 在Snapshot策略管理页面上、选择快照策略的三点菜单、然后选择*将策略分配给卷*。
+. 在分配快照策略对话框中、选择要分配给卷的快照策略并查看策略计划。
++
+如果此策略包含不可更改的快照、并且您希望使用此策略、请接受此语句。
+
+. 选择*Assign*。
+
+
+.结果
+此时将为卷分配Snapshot策略。
+
+
+
+== 从卷中删除Snapshot策略
+
+从卷中删除快照策略、因为您不再需要此卷的快照、或者您要删除分配给多个卷的快照策略。对于<<删除快照策略,删除Snapshot策略>>已分配给多个卷的、您必须手动将其从所有卷中删除。
+
+.开始之前
+您必须link:manage-links.html["关联链接"]删除快照策略。如果您没有现有链接，请 link:create-link.html["创建链接"]。要关联文件系统中的链接，请选择*Account name*下的*Associate link*。链接关联后、返回此操作。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 在*存储*中，选择*转至存储清单*。
+. 在*FSx for ONTAP选项卡中，选择要将快照策略分配到的卷所在文件系统的三点菜单，然后选择*Manage*。
+. 在文件系统概述中，选择*Storage VMS*选项卡。
+. 从*Storage VM*选项卡中，选择包含要使用计划快照保护的卷的Storage VM的三点菜单，然后选择*Advanced Actions*和*Manage Snapshot Policies*。
+. 在Snapshot策略管理页面上、选择快照策略的三点菜单、然后选择*将策略分配给卷*。
+. 在"Assign Snapshot policy"(分配快照策略)对话框中，选择*None*(无)以删除快照策略。
+. 选择*Assign*。
+
+
+.结果
+此时将从卷中删除此Snapshot策略。
+
+
+
 == 删除快照策略
 
 删除不再需要的快照策略。
 
-您不能删除分配给多个卷的快照策略。
+如果将一个快照策略分配给多个卷、则必须从所有卷中手动<<从卷中删除Snapshot策略,将其删除>>删除该快照策略。或者、也可以<<将快照策略分配给卷,分配其他Snapshot策略>>访问卷。
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。

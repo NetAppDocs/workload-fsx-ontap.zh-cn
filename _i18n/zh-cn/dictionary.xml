@@ -1502,7 +1502,6 @@
   <block id="ac01830d09cb9d4a6364700c03ac9a48" category="paragraph">卷快照现已锁定。</block>
   <block id="07d4b0619f50f6f95ed7b83a046239a5" category="section-title">删除快照策略</block>
   <block id="696434880f5851290eaa4b1ba9f80d85" category="paragraph">删除不再需要的快照策略。</block>
-  <block id="122929b907900af2bcf3e5bace6a2385" category="paragraph">您不能删除分配给多个卷的快照策略。</block>
   <block id="df5ac48f314a037eb80499fa07b659ad" category="list-text">从*Storage VM*选项卡中，选择要删除快照策略的Storage VM的三点菜单，然后选择*Advanced Actions*和*Manage Snapshot Policies*。</block>
   <block id="a406d236bad23526e469ee1e5b111d14" category="list-text">在Snapshot策略管理页面上，选择要删除的快照策略的三点菜单，然后选择*Delete*。</block>
   <block id="6a89139e7be9bba144081cf61352e3c2" category="list-text">在删除对话框中，选择*Delete*以删除策略。</block>
@@ -1567,4 +1566,23 @@
   <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">NetApp 社区</block>
   <block id="abd0fe91ce589ecf3c7bad0543ccad16" category="sidebar">BlueXP博客</block>
   <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">云网络研讨会</block>
+  <block id="bf453f792f281dc877c5d1e809edc5dc" category="list-text">创建Snapshot策略后、无法修改其与Storage VM的关联、但您始终可以在卷中添加或删除此策略。</block>
+  <block id="5ba1bedcea9a8eb833a1e739064fb440" category="list-text">不可变更快照不支持以下功能：</block>
+  <block id="6165c4352e1504dbaeef34d0cc50c187" category="list-text">一致性组</block>
+  <block id="55449fd175613962d882ab450cfc5f3c" category="list-text">FabricPool</block>
+  <block id="098a9352bab68d0361bda3b31e3eaf76" category="list-text">FlexCache 卷</block>
+  <block id="699d8f5d3b7e2d1c55958f4a396e8a2e" category="list-text">SMTape</block>
+  <block id="c0b79db5f258f0c991a383cbdbf001dd" category="list-text">SnapMirror活动同步</block>
+  <block id="1e769eb49609f668beaad20993434cae" category="list-text">使用-Schedule参数的SnapMirror策略规则</block>
+  <block id="403490259ca485564378615496f0d12e" category="list-text">SnapMirror同步</block>
+  <block id="2846fa2cc87d39181cb096c418a258e9" category="list-text">SVM数据移动性(用于将SVM从源集群迁移或重新定位到目标集群)</block>
+  <block id="19b8f390095f155d76eaa34c5d8f5d20" category="section-title">从卷中删除Snapshot策略</block>
+  <block id="29708169ed62ce48a3c9b4614e316be4" category="inline-xref">删除Snapshot策略</block>
+  <block id="fce714b45eae0b2db843a127811c7dfa" category="paragraph">从卷中删除快照策略、因为您不再需要此卷的快照、或者您要删除分配给多个卷的快照策略。对于<block ref="fe803bef0fbadbb3c4f9d940b9fdfdb7" category="inline-xref-macro-rx"></block>已分配给多个卷的、您必须手动将其从所有卷中删除。</block>
+  <block id="41a5b9bb16fef0a6d96c008d7a310dc7" category="paragraph">您必须<block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>删除快照策略。如果您没有现有链接，请 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。要关联文件系统中的链接，请选择*Account name*下的*Associate link*。链接关联后、返回此操作。</block>
+  <block id="5b37f5e2e1d22ef188736327699e7d83" category="list-text">在"Assign Snapshot policy"(分配快照策略)对话框中，选择*None*(无)以删除快照策略。</block>
+  <block id="a7f4573e8d9f9cb2323d7ca62fa2b33e" category="paragraph">此时将从卷中删除此Snapshot策略。</block>
+  <block id="c767b489e8017a2255cc2520d048debc" category="inline-xref">将其删除</block>
+  <block id="8a56213a87eaeeacb994e03d5159956f" category="inline-xref">分配其他Snapshot策略</block>
+  <block id="3b3794d46a127b883871123c6319af47" category="paragraph">如果将一个快照策略分配给多个卷、则必须从所有卷中手动<block ref="65129050bfb27f4fbe34192e54c5d427" category="inline-xref-macro-rx"></block>删除该快照策略。或者、也可以<block ref="bcabdc7ed5212cdefb2de947daf28c6a" category="inline-xref-macro-rx"></block>访问卷。</block>
 </blocks>
