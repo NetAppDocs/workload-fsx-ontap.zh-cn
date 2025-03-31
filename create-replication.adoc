@@ -44,9 +44,25 @@ summary: 为FSx for ONTAP文件系统创建复制关系、以避免在发生意�
 .. *FSx for ONTAP file system*：为目标FSx for ONTAP文件系统选择ONTAP文件系统的凭据、区域和FSx名称。
 .. * Storage VM名称*：从下拉菜单中选择Storage VM。
 .. *卷名*：目标卷名称将自动生成，格式如下 `{OriginalVolumeName}_copy`。您可以使用自动生成的卷名称或输入其他卷名称。
-.. *分层策略*：为目标卷中存储的数据选择分层策略。
+.. *用例*：选择以下复制用例之一。根据所选的使用情形、工作负载出厂时会根据最佳实践使用建议的值填充表单。您可以接受建议的值、也可以在填写表单后进行更改。
 +
-_Auto_是使用工作负载工厂FSx for ONTAP用户界面创建卷时的默认分层策略。有关卷分层策略的详细信息、请参阅 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["卷存储容量"^] AWS FSx for NetApp ONTAP文档中的。
+*** 迁移：将数据传输到目标FSx for ONTAP文件系统
+*** 热灾难恢复：确保关键工作负载的高可用性和快速灾难恢复
+*** 冷灾难恢复或归档灾难恢复：
++
+**** 冷灾难恢复：使用更长的恢复时间目标(RTO)和恢复点对象(RPO)来降低成本
+**** 归档：复制数据以实现长期存储和合规性
+
+
+*** 其他
+
+
+.. *分层策略*：为目标卷中存储的数据选择分层策略。对于您选择的使用情形、此层策略默认为建议的层策略。
++
+使用工作负载出厂控制台创建卷时、默认分层策略为_Balanced (Auto)_。有关卷分层策略的详细信息、请参阅 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["卷存储容量"^] AWS FSx for NetApp ONTAP文档中的。请注意、工作负载工厂在工作负载工厂控制台中使用基于用例的名称来执行分层策略、并将FSx for ONTAP分层策略名称括在圆括号中。
+
++
+如果您选择了迁移用例、则工作负载出厂时会自动选择将源卷的分层策略复制到目标卷。您可以取消选择以复制此层策略、并选择一个适用于选定进行复制的卷的层策略。
 
 .. *最大传输速率*：选择*受限*并输入最大传输速率(MB/秒)或者，选择*Unlimited (无限制)*。
 +
@@ -100,9 +116,25 @@ NOTE: 支持一次性复制数据保护卷。
 .. *FSx for ONTAP file system*：为目标FSx for ONTAP文件系统选择ONTAP文件系统的凭据、区域和FSx名称。
 .. * Storage VM名称*：从下拉菜单中选择Storage VM。
 .. *卷名*：目标卷名称将自动生成，格式如下 `{OriginalVolumeName}_copy`。
-.. *分层策略*：为目标卷中存储的数据选择分层策略。
+.. *用例*：选择以下复制用例之一。根据所选的使用情形、工作负载出厂时会根据最佳实践使用建议的值填充表单。您可以接受建议的值、也可以在填写表单后进行更改。
 +
-_Auto_是使用工作负载工厂FSx for ONTAP用户界面创建卷时的默认分层策略。有关卷分层策略的详细信息、请参阅 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["卷存储容量"^]AWS FSx for NetApp ONTAP文档中的。
+*** 迁移：将数据传输到目标FSx for ONTAP文件系统
+*** 热灾难恢复：确保关键工作负载的高可用性和快速灾难恢复
+*** 冷灾难恢复或归档灾难恢复：
++
+**** 冷灾难恢复：使用更长的恢复时间目标(RTO)和恢复点对象(RPO)来降低成本
+**** 归档：复制数据以实现长期存储和合规性
+
+
+*** 其他
+
+
+.. *分层策略*：为目标卷中存储的数据选择分层策略。对于您选择的使用情形、此层策略默认为建议的层策略。
++
+使用工作负载出厂控制台创建卷时、默认分层策略为_Balanced (Auto)_。有关卷分层策略的详细信息、请参阅 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["卷存储容量"^] AWS FSx for NetApp ONTAP文档中的。请注意、工作负载工厂在工作负载工厂控制台中使用基于用例的名称来执行分层策略、并将FSx for ONTAP分层策略名称括在圆括号中。
+
++
+如果您选择了迁移用例、则工作负载工厂会自动选择将源卷的分层策略复制到文件系统中的目标卷。您可以取消选择以复制此层策略、并选择应用于要复制的目标文件系统中的卷的层策略。
 
 .. *最大传输速率*：选择*受限*并输入最大传输限制(单位：MiB/秒)或者，选择*Unlimited (无限制)*。
 +

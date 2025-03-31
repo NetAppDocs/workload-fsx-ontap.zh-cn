@@ -56,18 +56,12 @@
   <block id="39a3f8d31ec380cdb5ca4ececc3fb091" category="list-text">*容量池存储层*：此二级存储层用于归档数据或不常访问的数据、也称为_col_data。</block>
   <block id="12fa6703fd5b2a66b1251d09d2e43ae0" category="inline-link-macro">管理存储容量</block>
   <block id="7a205a79cbbaeb0f7ced8b7674174b67" category="paragraph">有关存储层的详细信息、请参见 <block ref="2816fe46f04db216f4e3ba5898a5519a" category="inline-link-macro-rx"></block> AWS for FSx for NetApp ONTAP文档中的。</block>
-  <block id="71227ec189a04b8c0e4b23f526c11e74" category="paragraph">更改分层策略之前、请查看四个可用的分层策略。</block>
-  <block id="8483425bb0bb26bc11233622564a2bca" category="list-text">*自动*：在特定时间段内将所有冷数据(包括用户数据和快照)分层到容量池存储层。</block>
   <block id="00cb9991d0309c15645d8450d4025960" category="list-text">*仅Snapshot *：将仅Snapshot数据分层到容量池存储层。</block>
   <block id="c8708259fa3c27b146a11f1d525bbed3" category="list-text">*无*：将卷的所有数据保留在主存储层上。</block>
   <block id="e9490b5c27d3d776758f193608ccfc70" category="list-text">*全部*：将所有用户数据和快照数据标记为冷数据、并将其存储在容量池存储层中。</block>
   <block id="bc9fd7aea881fd55baf43b86ae624fd7" category="paragraph">请注意、某些分层策略具有关联的最短冷却期、该冷却期用于设置卷中的用户数据必须保持非活动状态的时间或_冷却天数_、才能将数据视为"冷"数据并移至容量池存储层。冷却期从数据写入磁盘时开始。</block>
   <block id="b0377ad22f3d2823c281bddf9364eb30" category="list-text">选择*高级操作*，然后选择*更改分层策略*。</block>
-  <block id="c9b998e45c31726fa66ca1b0bb585e72" category="list-text">在更改分层策略页面上、选择以下分层策略之一：</block>
-  <block id="30de36019d5f8e7b87a49a1451adef8e" category="list-text">*自动*：输入冷却天数。</block>
-  <block id="2798d429ff91df1e7767a08dfd48bc50" category="list-text">*仅Snapshot *：输入冷却天数。</block>
   <block id="d015a34de96d3f92372df94da0f629a7" category="list-text">* 无 *</block>
-  <block id="b7f7419550863cb97e0251545c2b5304" category="list-text">*全部*</block>
   <block id="d50044469c0bf9ab38eff9cf7243fb25" category="doc">克隆卷</block>
   <block id="63bd0fb2b2b460703fbd97af05a3976c" category="paragraph">克隆反映数据的当前时间点状态。您还可以使用克隆为其他用户授予对数据的访问权限，而不授予他们对生产数据的访问权限。</block>
   <block id="9efa6a3d6da89d5d8581ec031f3a674f" category="paragraph">只有FlexClone卷才支持卷克隆。</block>
@@ -348,8 +342,6 @@
   <block id="8c197cb16511819fd1686972b919b4bd" category="list-text">在*自动容量管理*对话框中，提供以下内容：</block>
   <block id="811c0aa0f47faeb6a24c4abfb98d7a22" category="list-text">*凭据*：从下拉菜单中选择具有_Autome_权限的凭据。</block>
   <block id="3e0bdb480d66a7375d532c6c4aff035d" category="paragraph">或者、也可以禁用此功能。如果需要增加文件系统容量、则必须先禁用自动容量管理。</block>
-  <block id="b2ce8c8b67c1ce9e75a1a834e6a756d7" category="list-text">*Capacity threshold"：输入FSx for ONTAP文件系统的最大大小。</block>
-  <block id="c5384d1f343e28d37a573909233d561e" category="list-text">*容量增加增量*：输入以增量方式增加容量的百分比。</block>
   <block id="c2a6ed685a94077454f8bad592ecfa44" category="doc">启用和编辑快照以进行长期保留</block>
   <block id="84926cfe10c3390bcbf0d7f22bc20ed1" category="paragraph">这些步骤同样适用于启用和编辑快照以进行长期保留。</block>
   <block id="9c3e61915a26d815f332c75fcafffe40" category="list-text">选择*编辑长期保留*。</block>
@@ -743,7 +735,6 @@
   <block id="c7f1094806f4a7907a28dc01a1473f90" category="inline-link-macro">了解如何使用CodeBox实现自动化</block>
   <block id="672d0efbe9223ef23c5fd7d2c7cd4a95" category="paragraph">您可以使用_Quick cre成_或_Advanced cre成_来创建FSx for ONTAP文件系统。您还可以使用CodeBox中提供的以下工具：REST API、CloudFormation和Terraform。<block ref="e0a3467dce43941c7b863cc8d6f0a62a" category="inline-link-macro-rx"></block>(英文)</block>
   <block id="11e2fb5025fdb2cb91fd04c343163328" category="admonition">使用来自CodeBox的Terraform时、您复制或下载的代码会隐藏<block ref="679500f227997b45be97e3ca8115c678" prefix=" " category="inline-code"></block> 和<block ref="6173aa5206484b5224450952747c7148" prefix=" " category="inline-code"></block> 密码。运行代码时、您需要重新输入密码。</block>
-  <block id="b3028e0c6912bbb0c93b59dff7fa9ba5" category="paragraph">使用用户界面创建卷时、默认的层策略为自动。有关卷分层策略的详细信息、请参阅 <block ref="de51d392f5d252a956349995f441f55c" category="inline-link-macro-rx"></block> AWS FSx for NetApp ONTAP文档中的。</block>
   <block id="9376aafc358c7dd83094603f26235eb3" category="paragraph">已启动卷创建。创建后、新卷将显示在"Volumes"(卷)选项卡中。</block>
   <block id="21e6ab9737790ab1abc18e49091d3c18" category="paragraph">下图直观地展示了使用快照、跨区域复制以及备份到对象存储来保护FSx for ONTAP存储的数据。</block>
   <block id="90388f794d575e628df271470a4b766e" category="inline-image-macro">屏幕截图显示了使用快照、跨区域复制以及备份到对象存储来保护FSx for ONTAP存储的数据。</block>
@@ -1399,7 +1390,6 @@
   <block id="99f375ee1d56d1983309c071fe9cb69a" category="paragraph">目标文件系统中复制的卷是数据保护(DP)卷，命名格式如下：<block ref="4b5beb37da0fa6444b7f9f92238aadb1" prefix=" " category="inline-code"></block>。</block>
   <block id="02d60b2752d9739923230b4d901add35" category="paragraph">您可以复制一个源(读/写)卷或一个数据保护(DP)卷。您不能为DP卷创建第二个副本。</block>
   <block id="df4c98f43132ebd68d92a0c9822984df" category="list-text">在复制数据页面上的复制目标下、提供以下内容：</block>
-  <block id="ff1d02000e266ba203887393d4fcef27" category="paragraph">_Auto_是使用工作负载工厂FSx for ONTAP用户界面创建卷时的默认分层策略。有关卷分层策略的详细信息、请参阅 <block ref="de51d392f5d252a956349995f441f55c" category="inline-link-macro-rx"></block> AWS FSx for NetApp ONTAP文档中的。</block>
   <block id="0cbe076a4ce5208b10cdb81c9e175006" category="list-text">*选择现有策略*：从下拉菜单中选择现有策略。</block>
   <block id="b9a658e63ae9e8d9a604efb8acd930e6" category="list-text">*创建新策略*：提供以下内容：</block>
   <block id="78c187892204fa9a888a00a5635447c9" category="list-text">可选：启用不可删除的快照。</block>
@@ -1585,4 +1575,44 @@
   <block id="c767b489e8017a2255cc2520d048debc" category="inline-xref">将其删除</block>
   <block id="8a56213a87eaeeacb994e03d5159956f" category="inline-xref">分配其他Snapshot策略</block>
   <block id="3b3794d46a127b883871123c6319af47" category="paragraph">如果将一个快照策略分配给多个卷、则必须从所有卷中手动<block ref="65129050bfb27f4fbe34192e54c5d427" category="inline-xref-macro-rx"></block>删除该快照策略。或者、也可以<block ref="bcabdc7ed5212cdefb2de947daf28c6a" category="inline-xref-macro-rx"></block>访问卷。</block>
+  <block id="e2becee7c382badfb02490cd30d53c6a" category="doc">横向扩展系统的自动容量管理</block>
+  <block id="5f7d427820d14cb172d0390463b259c4" category="paragraph">现在、工作负载出厂时会扫描卷中的可用Inode、并根据配置的自动容量管理阈值增加其计数。此功能支持横向扩展系统的自动容量管理。您可以在自动容量管理过程中启用inode管理。</block>
+  <block id="85729d1984aee9281a3cc017500ff795" category="paragraph"><block ref="85729d1984aee9281a3cc017500ff795" category="inline-link-macro-rx"></block></block>
+  <block id="d0405304bf4b7c3f042b05203316ddd5" category="section-title">FlexGroup重新平衡API</block>
+  <block id="90f7c93b8d9614f0fd7cc2ee87f199c1" category="paragraph">BlueXP  工作负载出厂时会发布FlexGroup重新平衡API、您可以通过此API执行计划来重新平衡FlexGroup中的数据。重新平衡会将数据均匀地重新分布到成员卷。</block>
+  <block id="1a256f86b88647f213e637c9cab0ed8b" category="inline-link-macro">BlueXP  工作负载出厂API文档</block>
+  <block id="9f2e2c38a7baafe56307fced13716496" category="paragraph"><block ref="9f2e2c38a7baafe56307fced13716496" category="inline-link-macro-rx"></block></block>
+  <block id="40f45c6ac2dbe2255c8ef062d007653f" category="section-title">复制数据表单包括使用情形</block>
+  <block id="d3a1df9d08a100116ee8f443f56f895d" category="paragraph">复制数据表现在包括一些用例、便于您填写表单。您可以选择以下数据复制用例之一：迁移、热灾难恢复、冷灾难恢复、归档或其他。选择使用情形后、工作负载出厂时会根据最佳实践建议相应的值。您可以接受预选值或自定义表单中的值。</block>
+  <block id="37fa21b7ca602fd8fe055b26a1de7d8b" category="inline-link-macro">复制数据</block>
+  <block id="0c09136cc5ea602bb57eff7c2432239d" category="paragraph"><block ref="0c09136cc5ea602bb57eff7c2432239d" category="inline-link-macro-rx"></block></block>
+  <block id="9425459482ebc84a43dc550767dd3e0f" category="section-title">数据层策略术语变更</block>
+  <block id="ac41e4be5fb8d94814ca592ccb928b7c" category="paragraph">现在、当您在创建卷、复制数据或更新现有分层策略期间选择分层策略时、您会发现用于描述分层策略的新术语。</block>
+  <block id="1680d9abb7a22a23c44b7a4b6381f160" category="list-text">_平衡(自动)_</block>
+  <block id="ba8ad03a370d66806f12b2e607ea29c7" category="list-text">成本优化(全部)_</block>
+  <block id="c9c6a4f8a60589f93e4860841bc03333" category="list-text">_性能优化(仅限Snapshot)_</block>
+  <block id="a6fcdc1d4500a732bf90fecba61d743f" category="paragraph">更改分层策略之前、请查看可用的分层策略。</block>
+  <block id="e84817a9fe20b81cf24dd658855e9fc7" category="list-text">*Balanced (Auto)*：使用用户界面创建卷时的默认分层策略。在冷却期结束后、将经常访问的数据保留在SSD存储层中、并将不经常访问的数据和快照分层到容量池存储层。建议用于常规主要工作负载。</block>
+  <block id="da76ce854b187b083336e89b84bad3c1" category="list-text">*成本优化(全部)*：将所有快照和数据分层到容量池存储层。建议用于次要目标。</block>
+  <block id="ab70a861a0bf8910a4c86c6b152856f9" category="list-text">*性能优化(仅限Snapshot)*：仅将快照数据分层到容量池存储层。建议用于任务关键型数据库等低延迟工作负载。</block>
+  <block id="520d469a2d88715ae341e1304b5dc54c" category="list-text">*无*：将卷数据保留在SSD存储层中、防止将其移动到容量池存储层。</block>
+  <block id="c0cd3022b47264d5aa8c40e5868253f4" category="list-text">在更改分层策略页面上、选择复制源卷的分层策略或选择以下分层策略之一：</block>
+  <block id="747aa537268cce89af37f6ccfe778eba" category="list-text">*平衡(自动)*：输入冷却天数。</block>
+  <block id="9b36aeed42df15feeee43371d884c2d0" category="list-text">*成本优化(全部)*</block>
+  <block id="abd229fc1eceaa762a4af4c2554c3253" category="list-text">*性能优化(仅限Snapshot)*：输入冷却天数。</block>
+  <block id="22965065ba7ae1409232e37abbbb066f" category="list-text">*用例*：选择以下复制用例之一。根据所选的使用情形、工作负载出厂时会根据最佳实践使用建议的值填充表单。您可以接受建议的值、也可以在填写表单后进行更改。</block>
+  <block id="257ce4bae137964f3625a1e1d6f1369b" category="list-text">迁移：将数据传输到目标FSx for ONTAP文件系统</block>
+  <block id="30940cba2bad8606f971a78b21b2ec59" category="list-text">热灾难恢复：确保关键工作负载的高可用性和快速灾难恢复</block>
+  <block id="4479dbc11cc7245a39dd940a6a86b3a5" category="list-text">冷灾难恢复或归档灾难恢复：</block>
+  <block id="a7683152ac8a3322afd2ab0f568eb7ab" category="list-text">冷灾难恢复：使用更长的恢复时间目标(RTO)和恢复点对象(RPO)来降低成本</block>
+  <block id="24249670ae7cb490931a0cfb669e35fb" category="list-text">归档：复制数据以实现长期存储和合规性</block>
+  <block id="6311ae17c1ee52b36e68aaf4ad066387" category="list-text">其他</block>
+  <block id="181b737a36ca59661f38fe5373437f6a" category="list-text">*分层策略*：为目标卷中存储的数据选择分层策略。对于您选择的使用情形、此层策略默认为建议的层策略。</block>
+  <block id="a477f639de1e54cd01d24b4d8302b5ff" category="paragraph">使用工作负载出厂控制台创建卷时、默认分层策略为_Balanced (Auto)_。有关卷分层策略的详细信息、请参阅 <block ref="de51d392f5d252a956349995f441f55c" category="inline-link-macro-rx"></block> AWS FSx for NetApp ONTAP文档中的。请注意、工作负载工厂在工作负载工厂控制台中使用基于用例的名称来执行分层策略、并将FSx for ONTAP分层策略名称括在圆括号中。</block>
+  <block id="960f25577dd51f8946d9ce933ec7dd9d" category="paragraph">如果您选择了迁移用例、则工作负载出厂时会自动选择将源卷的分层策略复制到目标卷。您可以取消选择以复制此层策略、并选择一个适用于选定进行复制的卷的层策略。</block>
+  <block id="f5d7c3fe6307c9200b4306b913e03daa" category="paragraph">如果您选择了迁移用例、则工作负载工厂会自动选择将源卷的分层策略复制到文件系统中的目标卷。您可以取消选择以复制此层策略、并选择应用于要复制的目标文件系统中的卷的层策略。</block>
+  <block id="70790f6319078f7b58ce5d5adf8b27ed" category="list-text">*阈值增加*：输入FSx for ONTAP文件系统的最大大小。</block>
+  <block id="83b9d06ffc256e2f2bbc40862d118517" category="list-text">*增量增加*：输入用于增量增加容量的百分比。</block>
+  <block id="67cfcc957e64e9b21fe6f9036930ba34" category="list-text">可选：启用自动索引节点管理、通过将索引节点(文件)数量增加到允许的限制来确保每个卷的文件容量可以纵向扩展。</block>
+  <block id="db54384248c75c5896f34bcb0879b66c" category="section-title">2025年3月30日</block>
 </blocks>
