@@ -14,7 +14,7 @@ summary: 使用BlueXP  工作负载工厂、您可以创建适用于ONTAP文件
 使用BlueXP  工作负载工厂、您可以创建适用于ONTAP文件系统的FSx、以添加和管理卷以及其他数据服务。
 
 .关于此任务
-创建文件系统时会创建Storage VM。
+在创建文件系统过程中会创建Storage VM和安全组。
 
 .开始之前
 在创建FSx for ONTAP文件系统之前、您需要：
@@ -150,6 +150,9 @@ NOTE: 使用来自CodeBox的Terraform时、您复制或下载的代码会隐藏 
 +
 .. *区域和VPC*：为文件系统选择区域和VPC。
 .. *安全组*：创建或使用现有安全组。
++
+对于新的安全组、请参见<<安全组详细信息,安全组详细信息>>了解安全组协议、端口和角色的说明。
+
 .. *可用性区域*：选择可用性区域和子网。
 +
 *** 对于集群配置节点1：选择可用性区域和子网。
@@ -207,6 +210,119 @@ NOTE: 使用来自CodeBox的Terraform时、您复制或下载的代码会隐藏 
 如果您创建了文件系统，现在可以在*Inventory*页中查看FSx for ONTAP文件系统。
 
 --
+====
+
+
+== 安全组详细信息
+
+下表提供了安全组详细信息、包括协议、端口和角色。
+
+[]
+====
+[cols="2,2,4a"]
+|===
+| 协议 | 端口 | 角色 
+
+
+| SSH | 22  a| 
+SSH 访问集群管理 LIF 或节点管理 LIF 的 IP 地址
+
+
+
+| TCP | 80  a| 
+对集群管理LIF IP地址的网页访问权限
+
+
+
+| TCP/UDP | 111  a| 
+远程过程调用 NFS
+
+
+
+| TCP/UDP | 135  a| 
+远程过程调用 CIFS
+
+
+
+| UDP | 137  a| 
+CIFS的NetBIOS名称解析
+
+
+
+| TCP/UDP | 139  a| 
+用于 CIFS 的 NetBIOS 服务会话
+
+
+
+| TCP | 443  a| 
+对集群管理LIF或SVM管理LIF的IP地址进行ONTAP REST API访问
+
+
+
+| TCP | 445  a| 
+Microsoft SMB/CIFS over TCP （通过 TCP ）和 NetBIOS 成帧
+
+
+
+| TCP/UDP | 635  a| 
+NFS 挂载
+
+
+
+| TCP | 749  a| 
+Kerberos
+
+
+
+| TCP/UDP | 2049  a| 
+NFS 服务器守护进程
+
+
+
+| TCP | 3260  a| 
+通过 iSCSI 数据 LIF 进行 iSCSI 访问
+
+
+
+| TCP/UDP | 4045  a| 
+NFS 锁定守护进程
+
+
+
+| TCP/UDP | 4046  a| 
+NFS 的网络状态监视器
+
+
+
+| UDP | 4049  a| 
+NFS配额协议
+
+
+
+| TCP | 10000  a| 
+网络数据管理协议(NDMP)和NetApp SnapMirror集群间通信
+
+
+
+| TCP | 11104  a| 
+管理NetApp SnapMirror集群间通信
+
+
+
+| TCP | 11105  a| 
+使用集群间 LIF 进行 SnapMirror 数据传输
+
+
+
+| TCP/UDP | 161-162  a| 
+简单网络管理协议(Simple Network Management Protocol、SNMP)
+
+
+
+| 所有 ICMP | 全部  a| 
+Ping 实例
+
+|===
 ====
 .下一步行动
 通过存储清单中的文件系统，您可以 link:create-volume.html["创建卷"]管理FSx for ONTAP文件系统并设置 link:data-protection-overview.html["数据保护"] 资源。
