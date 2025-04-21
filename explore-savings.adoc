@@ -116,7 +116,7 @@ BlueXP  工作负载工厂提供了一个存储节省计算器、用于将Amazo
 == 了解检测到的存储环境的节省量
 
 .开始之前
-要使工作负载工厂在您的AWS帐户中检测Amazon Elelic Block Store (EBS)、Elelic File System (EFS)和FSx for Windows File Server存储环境、请确保您使用的是link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["授予_Automate权限"^]AWS帐户。
+要使工作负载工厂在您的AWS帐户中检测Amazon Elelic Block Store (EBS)、Elelic File System (EFS)和FSx for Windows File Server存储环境、请确保您使用的是link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["授予_read_权限"^]AWS帐户。
 
 
 NOTE: 此计算器选项不支持计算EBS快照和FSx for Windows File Server卷影副本。在通过自定义探索节省空间时、您可以提供EBS和FSx for Windows File Server快照详细信息。
