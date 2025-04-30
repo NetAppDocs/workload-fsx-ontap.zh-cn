@@ -1669,4 +1669,9 @@
   <block id="fbabb5b35538d91f91e0e1d4f56ff5a4" category="paragraph">Ping 实例</block>
   <block id="70b2c09de9e176a879c840cb014b8c20" category="inline-link-macro">授予_read_权限</block>
   <block id="e395c91c5c84949d52ffb229805b2f5f" category="paragraph">要使工作负载工厂在您的AWS帐户中检测Amazon Elelic Block Store (EBS)、Elelic File System (EFS)和FSx for Windows File Server存储环境、请确保您使用的是<block ref="aa999e6a1b84a9d79249d89f4acbbea1" category="inline-link-macro-rx"></block>AWS帐户。</block>
+  <block id="c09b5be4c2da04f4040eef1878f258aa" category="inline-link-macro">ONTAP 9 文档</block>
+  <block id="3611f3afb9bd4ea20ff757fe165aa678" category="paragraph">此外、选择的使用情形还决定了复制策略或SnapMirror策略(ONTAP)。用于描述复制策略的术语来自<block ref="20dfa0e16eac8597602ade67a04436fd" category="inline-link-macro-rx"></block>。</block>
+  <block id="b5b213ff8da55d939d5b26b2acad4e23" category="list-text">对于migrate和other、复制策略称为_MirorAllSnapshot _。_镜像 所有快照_是一种异步策略、用于镜像所有快照和最新活动文件系统。</block>
+  <block id="5fc1e1e4cb63004511e44d8fbb5b04a2" category="list-text">对于热、冷或归档灾难恢复、复制策略称为_MirorAndVault_。_镜像AndVault_是一种异步存储策略、用于镜像最新活动文件系统以及每日和每周快照。</block>
+  <block id="a1eefe5e0a806535abe58cb68a54c9d1" category="paragraph">对于所有使用情形、如果启用快照以进行长期保留、则默认复制策略为_MirorAndVault_。</block>
 </blocks>

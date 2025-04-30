@@ -55,6 +55,17 @@ summary: 为FSx for ONTAP文件系统创建复制关系、以避免在发生意�
 
 
 *** 其他
++
+此外、选择的使用情形还决定了复制策略或SnapMirror策略(ONTAP)。用于描述复制策略的术语来自link:https://docs.netapp.com/us-en/ontap/data-protection/default-protection-policies-concept.html["ONTAP 9 文档"^]。
+
++
+**** 对于migrate和other、复制策略称为_MirorAllSnapshot _。_镜像 所有快照_是一种异步策略、用于镜像所有快照和最新活动文件系统。
+**** 对于热、冷或归档灾难恢复、复制策略称为_MirorAndVault_。_镜像AndVault_是一种异步存储策略、用于镜像最新活动文件系统以及每日和每周快照。
++
+对于所有使用情形、如果启用快照以进行长期保留、则默认复制策略为_MirorAndVault_。
+
+
+
 
 
 .. *分层策略*：为目标卷中存储的数据选择分层策略。对于您选择的使用情形、此层策略默认为建议的层策略。
@@ -127,6 +138,17 @@ NOTE: 支持一次性复制数据保护卷。
 
 
 *** 其他
++
+此外、选择的使用情形还决定了复制策略或SnapMirror策略(ONTAP)。用于描述复制策略的术语来自link:https://docs.netapp.com/us-en/ontap/data-protection/default-protection-policies-concept.html["ONTAP 9 文档"^]。
+
++
+**** 对于migrate和other、复制策略称为_MirorAllSnapshot _。_镜像 所有快照_是一种异步策略、用于镜像所有快照和最新活动文件系统。
+**** 对于热、冷或归档灾难恢复、复制策略称为_MirorAndVault_。_镜像AndVault_是一种异步存储策略、用于镜像最新活动文件系统以及每日和每周快照。
++
+对于所有使用情形、如果启用快照以进行长期保留、则默认复制策略为_MirorAndVault_。
+
+
+
 
 
 .. *分层策略*：为目标卷中存储的数据选择分层策略。对于您选择的使用情形、此层策略默认为建议的层策略。
