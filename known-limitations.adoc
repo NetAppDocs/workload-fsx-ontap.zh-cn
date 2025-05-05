@@ -106,6 +106,12 @@ summary: 已知限制确定了本产品版本不支持的平台、设备或功�
 
 System Manager不支持FSx for ONTAP连接的链接。
 
+
+
+== AWS支持
+
+使用Connector时不支持AWS的"ConnectOR"管理器。
+
 注意：
 
 . 适用于Amazon FSx for NetApp ONTAP

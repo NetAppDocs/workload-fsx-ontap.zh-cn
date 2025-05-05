@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: monitor-operations.html 
-keywords: monitor databases, monitor jobs, track database jobs 
+keywords: monitor databases, monitor jobs, track storage jobs, track jobs 
 summary: 在适用于存储的BlueXP  工作负载工厂中、使用跟踪器跟踪FSx for ONTAP、凭据和链接操作、并监控作业进度。 
 ---
 = 在BlueXP  工作负载工厂中使用Tracker监控存储操作
@@ -14,9 +14,11 @@ summary: 在适用于存储的BlueXP  工作负载工厂中、使用跟踪器�
 在BlueXP  工作负载工厂中使用跟踪器监控和跟踪FSx for ONTAP的执行情况、凭据和链路操作、并监控任务进度。
 
 .关于此任务
-Workload Factory提供了一项监控功能、可用于监控和跟踪FSx for ONTAP的进度和状态、凭据和链接操作、查看操作任务和子任务的详细信息、诊断任何问题或故障、编辑失败操作的参数以及重试失败的操作。您可以按类型和状态筛选作业、使用搜索功能查找作业以及下载作业表。
+Workload Factory提供了一种监控功能、可用于监控和跟踪FSx for ONTAP的进度和状态、凭据和链接操作、查看操作任务和子任务的详细信息以及诊断任何问题或故障。
 
-Tracker支持多达三个级别的监控、具体取决于操作。每个任务(例如文件系统部署)都会显示任务说明、状态、开始时间、任务工期、用户、区域、代理资源、任务ID以及所有相关子任务。
+Tracker提供了多种操作。您可以按时间范围(过去24小时、7天、14天或30天)、工作负载、状态和用户筛选作业；使用搜索功能查找作业；以及将作业表下载为CSV文件。您可以随时刷新Tracker。您可以快速重试失败的操作、也可以编辑失败操作的参数并重试此操作。
+
+Tracker支持两个级别的监控、具体取决于操作。每个任务(例如文件系统部署)都会显示任务说明、状态、开始时间、任务工期、用户、区域、代理资源、任务ID以及所有相关子任务。您可以查看API响应以了解操作期间发生的情况。
 
 带有示例的跟踪器任务级别::
 +

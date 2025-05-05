@@ -1,0 +1,54 @@
+---
+sidebar: sidebar 
+permalink: configuration-analysis.html 
+keywords: configuration issues, issues, improve, analyze, storage configuration, Amazon FSx for NetApp ONTAP, FSx for ONTAP, recommendation, recommendations 
+summary: BlueXP  工作负载工厂会定期分析Amazon FSx for NetApp ONTAP文件系统配置、以确定是否存在任何问题。 
+---
+= FSx for ONTAP文件系统的配置分析
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+BlueXP  工作负载工厂会定期分析Amazon FSx for NetApp ONTAP文件系统配置、以确定是否存在任何问题。发现问题后、工作负载工厂会向您显示问题所在、并说明需要更改哪些内容、以确保您的文件系统存储达到峰值性能、经济高效并符合最佳实践。
+
+主要功能包括：
+
+* 每日配置分析
+* 自动最佳实践验证
+* 主动可观察性
+* 从洞察力到行动
+* AWS架构完善的Framework Advisor
+
+
+
+
+== 架构良好的状态
+
+在文件系统级别的工作负载出厂控制台中、列出了所有FSx for ONTAP文件系统的设计良好状态。架构良好的状态分为"问题"、"未分析"或"架构良好"三类。选择精心设计的状态会将您重定向到文件系统中的"精心设计的状态"选项卡、您可以在其中找到文件系统的精心设计的得分、配置类别和所有配置。
+
+精心设计的得分:: 得分包括当前分析的所有配置、并以百分比形式显示。25%的分数表示25%的文件系统配置设计良好。
+配置类别:: 文件系统配置会根据AWS精心设计的框架的以下五大支柱按类别进行组织。
++
+--
+* _Reliability _：确保工作负载正确一致地执行其预期功能、即使发生中断也是如此。例如、FSx for ONTAP备份就是一个配置示例。
+* _Security_：强调通过风险评估和缓解策略保护数据、系统和资产。
+* _卓越运营_：专注于提供最优架构和业务价值。
+* _成本优化_：旨在提供业务价值、同时最大程度地降低成本。
+* _Performance效率_：侧重于高效利用资源来满足系统要求、并在需求变化时保持最佳性能。
+
+
+--
+
+
+
+
+== 分析要求
+
+要进行完整的文件系统分析、必须关联一个链接。通过链路连接、工作负载可以在出厂时分析数据保护和性能等所有文件系统配置。
+
+link:create-link.html["了解如何创建链接。"]
+
+.下一步行动
+link:improve-configurations.html["改进FSx for ONTAP部署的配置"]

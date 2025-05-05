@@ -37,29 +37,58 @@ image:screenshot-view-link-details.png["屏幕截图、显示了正在使用特�
 
 
 
-== 将链接与FSx for ONTAP文件系统关联
-
-创建链接后、您可以将其与FSx for ONTAP文件系统相关联。每个文件系统只能与一个NetApp帐户中的一个链接相关联、但一个链接可以与多个文件系统相关联。
-
-.步骤
-. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在存储中，选择*转至存储清单*。
-. 在*FSx for FS* ONTAP选项卡中，选择要关联链接的文件系统的三点菜单，然后选择*Manage*。
-. 在文件系统概述中，选择*关联链接*。
-. 在关联链接页面中，选择*关联现有链接*，选择链接，然后选择*应用*。
-
-
-.结果
-此链接与FSx for ONTAP文件系统关联、您可以执行高级ONTAP操作。
-
-
-
 == 编辑链接
 
 您不能从工作负载出厂界面编辑链接。如果需要更改链接、则需要创建一个新链接、然后将该链接与文件系统关联。
 
 
 NOTE: 您可以使用AWS控制台编辑Lamba网络配置(例如VPC、子网和安全组)、所做的更改将反映在链接管理UI中；但是、这些更改可能会导致Lamba和ONTAP之间出现连接问题、因此不建议这样做。
+
+
+
+== 对链路进行身份验证
+
+提供工作负载出厂凭据的管理用户密码或AWS机密管理器机密ARN、以将链接连接到FSx for ONTAP文件系统。
+
+使用Connector时不支持AWS的"ConnectOR"管理器。
+
+
+NOTE: 每个链路仅支持一种身份验证方法。例如、如果您选择使用AWS专有信息管理器进行链接身份验证、则以后无法更改此身份验证方法。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 在存储中，选择*转至存储清单*。
+. 在*FSx for FS* ONTAP选项卡中，选择要关联链接的文件系统的三点菜单，然后选择*Manage*。
+. 在文件系统概述中，选择*鉴定链接*。
+. 在身份验证链接页面中、选择身份验证模式：
++
+** Workload Factory：输入密码两次。
+** AWS机密管理器：输入机密ARN。
+
+
+. 选择 * 应用 * 。
+
+
+.结果
+链路经过身份验证、您可以执行高级ONTAP操作
+
+
+
+== 更新用于链路身份验证的密码
+
+如果管理密码无效、请更新此密码以连接到FSx for ONTAP文件系统的链接。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 在存储中，选择*转至存储清单*。
+. 在*FSx for FS* ONTAP选项卡中，选择要关联链接的文件系统的三点菜单，然后选择*Manage*。
+. 在文件系统概述中，选择*更新密码*。
+. 在身份验证链接页面中、输入新密码两次。
+. 选择 * 应用 * 。
+
+
+.结果
+此时、密码已更新、并且此链接现已连接到FSx for ONTAP文件系统。
 
 
 

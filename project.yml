@@ -38,7 +38,7 @@ sidebar:
       entries:
       - title: 链接概述
         url: "/links-overview.html"
-      - title: 创建链接
+      - title: 使用链接连接到文件系统
         url: "/create-link.html"
       - title: 管理链接
         url: "/manage-links.html"
@@ -76,6 +76,8 @@ sidebar:
           url: "/create-replication.html"
         - title: 初始化复制关系
           url: "/initialize-replication.html"
+      - title: 利用自主防兰森保护功能保护数据
+        url: "/ransomware-protection.html"
       - title: 克隆卷
         url: "/clone-volume.html"
       - title: 使用内部ONTAP数据
@@ -84,6 +86,12 @@ sidebar:
     entries:
     - title: 使用Tracker监控操作
       url: "/monitor-operations.html"
+    - title: 实施文件系统最佳实践
+      entries:
+      - title: FSx for ONTAP的配置分析
+        url: "/configuration-analysis.html"
+      - title: 实施架构良好的文件系统配置
+        url: "/improve-configurations.html"
     - title: 卷管理
       entries:
       - title: 编辑卷自动增长
@@ -144,6 +152,8 @@ sidebar:
           url: "/manage-backup-schedule.html"
       - title: 复制
         entries:
+        - title: 复制数据保护卷
+          url: "/cascade-replication.html"
         - title: 反转复制关系
           url: "/reverse-replication.html"
         - title: 更改源卷的复制计划

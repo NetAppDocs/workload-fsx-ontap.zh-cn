@@ -1,0 +1,113 @@
+---
+sidebar: sidebar 
+permalink: ransomware-protection.html 
+keywords: ransomware, arp, autonomous protection, protect, security, detect, detection, restore, recover, threat, attack, suspect, anti-ransomware, entropy, abnormal volume activity, anti-ransomware, extension conformity, ransomware protection strategy 
+summary: 自主勒索软件保护可通过NAS环境中的工作负载分析来检测可能是勒索软件攻击的异常活动并发出警告。 
+---
+= 利用自动防兰森保护功能保护您的数据
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+利用自动勒索软件保护(ARP)保护数据、此功能可在NAS (NFS/SMB)环境中使用工作负载分析来检测可能是勒索软件攻击的异常活动并发出警告。当怀疑发生攻击时、ARP还会创建新的、不可变更的快照、您可以从中还原数据。
+
+.关于此任务
+使用ARP防止攻击者在勒索赎金之前扣留数据的拒绝服务攻击。ARP提供基于以下各项的实时勒索软件检测：
+
+* 将传入数据标识为加密或纯文本。
+* 可检测以下内容的分析：
++
+** **平均值**：对文件中数据的随机性的评估
+** **文件扩展名类型**：不符合正常扩展名类型的扩展名
+** **文件IOP**：使用数据加密时异常卷活动激增
+
+
+
+
+在对少量文件进行加密后、ARP可以检测到大多数勒索软件攻击的蔓延、并自动采取措施保护数据、并提醒您可疑攻击正在发生。
+
+ARP功能会根据Amazon FSx for NetApp ONTAP运行的ONTAP版本自动更新、因此您无需手动更新。
+
+学习和主动模式:: ARP首先在_leARNARNING_模式下运行、然后自动切换到_active mode_.
++
+--
+* *学习模式*：启用ARP时，它以_leARNing_模式运行。在学习模式下、FSx for ONTAP文件系统会根据分析区域(熵、文件扩展名类型和文件IOPS)开发警报配置文件。在文件系统在学习模式下运行ARP有足够的时间来评估工作负载特征之后、工作负载出厂会自动切换到ARP到_active mode_并 开始保护您的数据。
+* *活动模式*：ARP切换到_active mode_后、FSx for ONTAP会创建ARP/AI快照、以便在检测到威胁时保护数据。
++
+在活动模式下、如果文件扩展名被标记为异常、则应评估警报。您可以对警报采取措施来保护您的数据、也可以将警报标记为误报。将警报标记为误报可更新警报配置文件。例如、如果警报由新文件扩展名触发、而您将警报标记为误报、则下次观察到该文件扩展名时、您不会收到警报。
+
+
+
+--
+不支持的配置:: 以下配置不支持使用ARP。
++
+--
+* SAN/块卷
+* iSCSI 卷
+* NVMe卷
+
+
+--
+
+
+
+
+== 为文件系统启用自动防软件保护
+
+为文件系统启用ARP可自动为所有现有NAS卷和新创建的NAS卷添加保护。
+
+启用ARP后、如果发生攻击且您确定攻击是真实的、BlueXP  工作负载出厂时会自动设置一个快照策略、该策略每四小时最多需要六个快照。每个快照锁定2-5天。
+
+.开始之前
+要为文件系统启用ARP，必须link:manage-links.html["关联链接"]。如果您没有现有链接，请 link:create-link.html["创建链接"]。要关联文件系统中的链接，请选择*Account name*下的*Associate link*。链接关联后、返回此操作。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 在存储中，选择*转至存储清单*。
+. 在*FSx for ARP*选项卡中，选择要启用ONTAP的文件系统的三点菜单，然后选择*Manage*。
+. 在“信息”下，选择“*自主防系统防*”旁边的铅笔图标。当鼠标悬停在“*自主防兰索保护*”行上时，下拉箭头旁边会出现铅笔图标。
+. 在"Autonomous Ransouor Protection (自主防系统防兰森保护)"对话框中、启用或禁用此功能。
+. 接受陈述以继续。
+. 选择*应用*以保存更改。
+
+
+
+
+== 验证勒索软件攻击
+
+确定攻击是虚假警报还是真正的勒索软件事件。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 在存储中，选择*转至存储清单*。
+. 从文件系统概述中，选择*Volumes*选项卡。
+. 从"Autonomous Ranso器 保护"磁贴中选择*分析攻击*。
+. 下载攻击事件报告以查看是否有任何文件或文件夹被泄露、然后确定是否发生了攻击。
+. 如果未发生攻击，请为表中的卷选择*False alar*，然后选择*Close*
+. 如果发生了攻击，请为表中的卷选择*实际攻击*。此时将打开还原受影响的卷数据对话框。您可以立即进入<<在勒索软件攻击后恢复数据,恢复数据>>或选择*关闭*，然后返回以完成恢复过程。
+
+
+
+
+== 在勒索软件攻击后恢复数据
+
+如果怀疑受到攻击、系统会在该时间点创建卷快照并锁定该副本。如果稍后确认攻击、则可以使用ARP快照还原受影响的文件或整个卷。
+
+在保留期限结束之前、无法删除锁定的快照。但是，如果您稍后决定将此攻击标记为误报，则锁定的副本将被删除。
+
+了解受影响的文件和攻击时间后、可以有选择地从各种快照中恢复受影响的文件、而不是简单地将整个卷还原到其中一个快照。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 在存储中，选择*转至存储清单*。
+. 从文件系统概述中，选择*Volumes*选项卡。
+. 从"Autonomous Ranso器 保护"磁贴中选择*分析攻击*。
+. 如果发生了攻击，请为表中的卷选择*实际攻击*。
+. 在"Restore受损卷数据"对话框中、按照说明在文件级别或卷级别进行还原。在大多数情况下、您将还原文件、而不是整个卷。
+. 完成恢复后，选择*Close*。
+
+
+.结果
+已还原受影响的数据。

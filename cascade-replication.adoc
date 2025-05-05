@@ -1,49 +1,39 @@
 ---
 sidebar: sidebar 
-permalink: create-replication.html 
-keywords: replication, replicate 
-summary: 为FSx for ONTAP文件系统创建复制关系、以避免在发生意外灾难时丢失数据。 
+permalink: cascade-replication.html 
+keywords: replicate, cascade, cascade replication, cascade deployment, data protection, volume replication, replicate data protection volume 
+summary: 复制数据保护卷或级联卷数据复制、将数据保护扩展到三级系统或迁移数据。 
 ---
-= 在BlueXP  工作负载出厂时创建复制关系
+= 在BlueXP  工作负载出厂时复制数据保护卷
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-在BlueXP  工作负载工厂中为FSx for ONTAP文件系统创建复制关系、以避免在发生意外灾难时丢失数据。
+复制数据保护卷或级联卷数据复制、将数据保护扩展到三级系统或迁移数据。
 
 .关于此任务
-复制是一个额外的数据保护层、在数据所在区域发生灾难时、这一点至关重要。如果使用跨区域复制、则可以避免数据丢失。
+BlueXP  工作负载工厂支持复制数据保护卷、也称为_级 联部署_。级联部署_由一系列关系组成、其中、一个源卷镜像到一个二级卷(第一个跃点)、而该二级卷镜像到一个三级卷(第二个跃点)。如果二级卷不可用，您可以同步主卷和三级卷之间的关系，而无需执行新的基线传输。
 
-此操作将为FSx for ONTAP文件系统中的一个或所有源卷创建复制关系。
+对于运行ONTAP 9.6及更高版本的ONTAP文件系统、FSx支持此功能。请参阅 link:https://docs.netapp.com/us-en/ontap/data-protection/compatible-ontap-versions-snapmirror-concept.html#snapmirror-disaster-recovery-relationships["兼容ONTAP版本的ONTAP文档"^]。
 
-目标文件系统中复制的卷是数据保护(DP)卷，命名格式如下： `{OriginalVolumeName}_copy`。
+详细了解 link:https://docs.netapp.com/us-en/ontap/data-protection/supported-deployment-config-concept.html#how-cascade-deployments-work["级联部署的工作原理"^]。
 
 .开始之前
-开始之前、请确保满足以下前提条件。
+开始之前、请考虑以下事项：
 
-* 要创建复制关系、存储清单中必须有两个可用文件系统。
-* 用于复制关系的两个文件系统必须具有关联的链接。如果文件系统没有现有链接，请 link:create-link.html["首先创建链接"]。要link:manage-links.html["关联链接"]在文件系统中，选择*Account name*下的*Associate*链接。一旦链接在两个文件系统中关联、请返回此操作。
+* 请注意、级联配置中的卷重新同步可能需要较长时间。
+* 如果此关系的源卷是一个数据保护卷、并且是另一个关系的目标、则不支持反转此复制关系。
+* 支持数据保护卷的一个副本(或第二个跃点)。最佳做法不是为数据保护卷创建第二个副本(或第三个跃点)。
 
-
-要复制文件系统中的选定卷或复制所有卷、请完成以下步骤。
-
-您可以复制一个源(读/写)卷或一个数据保护(DP)卷。支持级联复制、但第三个跃点不支持。详细了解 link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_cascade-replication/cascade-replication.html["级联复制"^]。
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 在存储中，选择*转至存储清单*。
 . 在*FSx for FS* ONTAP选项卡中，选择包含要复制的卷的文件系统的三点菜单，然后选择*Manage*。
-. 复制文件系统中的所有卷或复制选定卷。
-+
-** 复制文件系统中的所有卷：从文件系统概述中，选择*复制数据*。
-** 要复制选定卷：从文件系统概述中，选择*Volumes*选项卡。
-+
-在卷表中，选择一个或多个卷，然后选择*复制数据*。
-
-
-
+. 从文件系统概述中，选择*Volumes*选项卡。
+. 在卷表中、选择一个或多个数据保护卷(DP/复制的卷)、然后选择*复制数据*。
 . 在复制数据页面上的复制目标下、提供以下内容：
 +
 .. *FSx for ONTAP file system*：为目标FSx for ONTAP文件系统选择ONTAP文件系统的凭据、区域和FSx名称。
@@ -60,17 +50,6 @@ summary: 为FSx for ONTAP文件系统创建复制关系、以避免在发生意�
 
 
 *** 其他
-+
-此外、选择的使用情形还决定了复制策略或SnapMirror策略(ONTAP)。用于描述复制策略的术语来自link:https://docs.netapp.com/us-en/ontap/data-protection/default-protection-policies-concept.html["ONTAP 9 文档"^]。
-
-+
-**** 对于migrate和other、复制策略称为_MirorAllSnapshot _。_镜像 所有快照_是一种异步策略、用于镜像所有快照和最新活动文件系统。
-**** 对于热、冷或归档灾难恢复、复制策略称为_MirorAndVault_。_镜像AndVault_是一种异步存储策略、用于镜像最新活动文件系统以及每日和每周快照。
-+
-对于所有使用情形、如果启用快照以进行长期保留、则默认复制策略为_MirorAndVault_。
-
-
-
 
 
 .. *分层策略*：为目标卷中存储的数据选择分层策略。对于您选择的使用情形、此层策略默认为建议的层策略。
@@ -119,4 +98,4 @@ NOTE: 长期保留需要匹配的源标签和目标标签。如果需要、工�
 
 
 .结果
-复制关系显示在目标FSx for ONTAP文件系统的*复制关系*选项卡中。
+复制的一个或多个卷将进行复制并显示在目标FSx for ONTAP文件系统的*复制关系*选项卡中。

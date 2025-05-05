@@ -95,6 +95,7 @@ FlexGroup卷大小取决于成分卷的数量。每个成分卷需要100 GiB。
 ..... *权限*：选择“完全控制”、“读/写”、“读取”或“无访问权限”，然后输入用户或组，以分号(;)分隔。用户或组区分大小写、必须使用"域\用户名"格式包含用户的域。
 
 
+.... *安全模式*：对于双协议卷、请选择UNIX或NTFS安全模式。UNIX是双协议卷的默认安全模式。有关此上下文中用户映射的详细指导，请参阅AWS博客文章link:https://aws.amazon.com/blogs/storage/enabling-multiprotocol-workloads-with-amazon-fsx-for-netapp-ontap["使用Amazon FSx for NetApp ONTAP启用多协议工作负载"^]。
 
 
 *** *块访问*：允许运行关键业务应用程序的主机使用iSCSI协议访问卷。只有当文件系统横向扩展部署包含六个或更少的HA对时、才能使用块访问。

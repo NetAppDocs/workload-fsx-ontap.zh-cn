@@ -1,0 +1,60 @@
+---
+sidebar: sidebar 
+permalink: improve-configurations.html 
+keywords: implement best practices, well-architected file system, Amazon FSx for NetApp ONTAP, FSx for ONTAP 
+summary: 适用于数据库的BlueXP  工作负载工厂会扫描Microsoft SQL Server配置、提供洞察力和建议、帮助您实现卓越运营。 
+---
+= 实施架构良好的文件系统配置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+利用配置分析洞察和建议、利用BlueXP  工作负载工厂为FSx for ONTAP文件系统实施最佳实践。您可以轻松发现问题并采取措施来改进任何未针对可靠性、安全性、效率、性能和成本进行优化的系统的架构。
+
+.关于此任务
+BlueXP  每天都会分析Amazon FSx for NetApp ONTAP文件系统部署配置。每日分析可提供洞察力和建议、并提供自动修复配置问题的选项、以使您的文件系统符合最佳实践。
+
+您可以选择查看有关文件系统配置问题的建议、并从工作负载出厂控制台中的存储清单中修复这些问题。
+
+分析的内容:: 工作负载工厂会分析FSx for ONTAP文件系统的以下配置的架构良好状态：
++
+--
+* SSD容量阈值
+* 数据分层
+* 计划的本地快照
+* FSx for ONTAP备份、和
+* 远程数据复制
+
+
+--
+
+
+.开始之前
+* 您必须具有具有只读或读/写权限的凭据。link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["了解如何在AWS帐户中授予权限"^](英文)
+* 在选择修复设置或配置之前、请确保仔细查看每个建议。
+
+
+
+NOTE: 修复过程可能会导致实例停机或服务中断。在选择修复配置问题之前、请务必仔细查看此建议。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 在"数据库"磁贴中、选择*转至存储清单*。
+. 在*FSx for FS* ONTAP选项卡中，导航到*well archected statues*列，然后选择要修复的文件系统问题。
+. 在为文件系统设计完善的信息板中、按类别、子类别、状态、严重性和标记筛选配置问题。
+. 选择下拉箭头可查看任何配置的建议。请务必仔细阅读此建议。
++
+此建议说明了未优化配置的最佳实践和潜在陷阱。
+
+. 选择*修复*。
++
+如果可以选择*查看和修复*、请选择要修复的受影响卷。
+
+. 查看对话框中显示的摘要和操作项、了解选择修复问题时会发生什么情况。某些操作可能会导致实例停机或服务中断。
+. 选择*继续*以修复配置问题。
+
+
+.结果
+此时将启动修复问题的过程。选择*作业监控*选项卡以查看操作状态。

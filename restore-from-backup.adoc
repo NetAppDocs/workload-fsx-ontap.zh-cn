@@ -13,6 +13,8 @@ summary: 将卷从备份还原到AWS帐户中的任何FSx for ONTAP文件系统�
 [role="lead"]
 在BlueXP  工作负载出厂时、您可以将卷从备份还原到AWS帐户中的任何FSx for ONTAP文件系统。
 
+工作负载出厂时会确定您是否有足够的容量用于还原、如果没有、则会自动添加SSD存储层容量。
+
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 在存储中，选择*转至存储清单*。
@@ -26,6 +28,15 @@ summary: 将卷从备份还原到AWS帐户中的任何FSx for ONTAP文件系统�
 .. *目标Storage VM*：从下拉菜单中选择目标Storage VM。
 .. *备份名称*：从下拉菜单中选择备份名称。
 .. *已还原卷名称*：输入已还原的卷名称。
+
+
+. 验证用于还原操作的文件系统容量。
++
+当文件系统容量受限时、可能会发生以下情况：
+
++
+** 还原操作可能会将已用容量推送到您指定的阈值以上。您可以完成还原操作。考虑link:increase-file-system-capacity.html["手动添加SSD存储层容量"]或选择工作负载出厂时自动添加SSD存储层容量。
+** 还原需要额外的SSD容量。您必须为工作负载出厂设置选择以自动添加SSD存储层容量、然后才能继续操作。
 
 
 . 选择 * 还原 * 。

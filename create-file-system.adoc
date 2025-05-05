@@ -77,7 +77,10 @@ NOTE: 使用来自CodeBox的Terraform时、您复制或下载的代码会隐藏 
 . 在*文件系统详细信息*下，提供以下内容：
 +
 .. *SSD存储容量*：输入存储容量并选择存储容量单位。
-.. * ONTAP凭据*：输入您的ONTAP用户名和密码。
+.. * ONTAP凭据*：可选。输入您的ONTAP用户名和密码。可以现在或稍后设置密码。
++
+如果您提供的用户不是fsxadmin用户、而稍后您需要重置fsxadmin密码、则可以从AWS控制台执行此操作。
+
 .. *SMB/CCIFS设置*：可选。如果您计划使用SMB/CCIFS协议访问卷、则必须在文件系统创建期间为Storage VM配置Active Directory。提供为此文件系统创建的Storage VM的以下详细信息。
 +
 ... *要加入的Active Directory域*：输入Active Directory的完全限定域名(FQDN)。
@@ -169,8 +172,11 @@ NOTE: 使用来自CodeBox的Terraform时、您复制或下载的代码会隐藏 
 .. *SSD存储容量*：输入存储容量并选择存储容量单位。
 .. *已配置IOPs*：选择*自动*或*用户已配置*。
 .. *每个HA对的吞吐量*：选择每个HA对的吞吐量容量。
-.. * ONTAP凭据*：输入您的ONTAP用户名和密码。
-.. * Storage VM凭据*：输入您的用户名。密码可以特定于此文件系统、也可以使用为ONTAP凭据输入的相同密码。
+.. * ONTAP凭据*：可选。输入您的ONTAP用户名和密码。可以现在或稍后设置密码。
++
+如果您提供的用户不是fsxadmin用户、而稍后您需要重置fsxadmin密码、则可以从AWS控制台执行此操作。
+
+.. * Storage VM凭据*：可选。输入您的用户名。密码可以特定于此文件系统、也可以使用为ONTAP凭据输入的相同密码。可以现在或稍后设置密码。
 .. *SMB/CCIFS设置*：可选。如果您计划使用SMB/CCIFS协议访问卷、则必须在文件系统创建期间为Storage VM配置Active Directory。提供为此文件系统创建的Storage VM的以下详细信息。
 +
 ... *要加入的Active Directory域*：输入Active Directory的完全限定域名(FQDN)。

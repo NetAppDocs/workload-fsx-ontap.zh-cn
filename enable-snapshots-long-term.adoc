@@ -17,6 +17,8 @@ summary: 启用快照以实现长期保留、这样您就可以复制特定快�
 
 这些步骤同样适用于启用和编辑快照以进行长期保留。
 
+如果内部ONTAP集群是复制关系的目标、则不支持更改快照以进行长期保留。
+
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 在存储中，选择*转至存储清单*。
