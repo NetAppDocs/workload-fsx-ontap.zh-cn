@@ -557,9 +557,6 @@
   <block id="9bd1b5c2c50da3c36cba4f17c259ae08" category="inline-link-macro">利用存储节省计算器了解节省量。</block>
   <block id="74125d7a69a31a4c2d6c6637ca43f137" category="paragraph">您还可以从存储节省计算器开始、将Amazon Elel生 块存储、El生 性文件系统和FSx for Windows文件服务器存储环境的成本与FSx for ONTAP的成本进行比较。 <block ref="487bc82bdb3f9feb4b100f5bfcc33ebf" category="inline-link-macro-rx"></block></block>
   <block id="89568baf7659b31a2110d1de7f69778d" category="paragraph">通过存储清单中的文件系统，您可以 <block ref="41a32458a6146c3b772c57ac70acc68e" category="inline-link-macro-rx"></block>管理FSx for ONTAP文件系统，并为资源设置数据保护。</block>
-  <block id="15aca40f14c29fe9e5a56d6734a1f791" category="paragraph">当由于添加新文件和文件增长而导致逐渐出现不平衡时、重新平衡卷会重新分布容量。手动启动重新平衡操作后、我们会选择文件并自动无中断地移动它们。</block>
-  <block id="c58a14e0270c321d51e150d167496aa7" category="list-text">选择*高级操作*，然后选择*重新平衡卷*。</block>
-  <block id="f648cc9da4798cb98b75d0072b51f243" category="list-text">在"Re平衡 卷"对话框中、选择*重新平衡*。</block>
   <block id="a509c58d8659a3366f3053048526e6ec" category="summary">将Storage VM复制到另一个FSx for ONTAP文件系统可在数据丢失时提供一个数据访问保护层。</block>
   <block id="ec42d150d63ba9d69905da61ff84b59b" category="doc">将Storage VM复制到另一个FSx for ONTAP文件系统</block>
   <block id="068ecbcf009e32427973dc04a3628cb7" category="list-text">选择*复本Storage VM*。</block>
@@ -1007,7 +1004,6 @@
   <block id="e5d3c7248ff4540f88c13fbf9252d0a3" category="inline-link-macro">工作负载出厂控制台</block>
   <block id="4e3446d47d185e690e48c92eec422d48" category="paragraph">您将创建FSx文件系统、以开始在工作负载工厂管理存储和FSx for ONTAP资源。在的<block ref="fe6e1b2479e1125e03c713ad62b5343f" category="inline-link-macro-rx"></block>存储中，选择*Create file system*。<block ref="1f3b8beb11bf530a33922b2af302faf4" category="inline-link-macro-rx"></block>(英文)</block>
   <block id="4d63cdce7e101414c4de73486d63848d" category="list-text">在*FSx for FS* ONTAP选项卡中，选择包含要重新平衡的卷的文件系统的三点菜单，然后选择*Manage*。</block>
-  <block id="91d9e9f75e88d6dd3c5e8243febefc5c" category="list-text">从卷选项卡中、选择要重新平衡的卷的三点菜单。</block>
   <block id="dce2b73a361987bf4b1c310d93bedcb4" category="paragraph">将Storage VM复制到BlueXP  工作负载工厂中的另一个FSx for ONTAP文件系统、可在数据丢失时提供数据访问保护层。此操作会将一个Storage VM中的所有卷复制到另一个FSx for ONTAP文件系统。</block>
   <block id="32c800656566b827842f290b45bbf1ca" category="list-text">在*FSx for Storage VM*选项卡中，选择包含要复制的ONTAP的文件系统的三点菜单，然后选择*Manage*。</block>
   <block id="3ed4d57a718312d39dfbeecf23d4628d" category="list-text">从Storage VM选项卡中、选择要为其复制SVM的Storage VM的三点菜单。</block>
@@ -1485,9 +1481,7 @@
   <block id="8083bd6761abe4735ad26f9c18899032" category="doc">检查并重新平衡卷的容量</block>
   <block id="270753bb6aea2d40b94194b021e500ae" category="paragraph">检查FlexGroup卷容量的平衡并重新平衡卷容量、以便在所有成分卷之间均匀分布文件、以便所有节点都参与单个Flex Group卷的工作负载。</block>
   <block id="8d52048ef57a4217559a7ca3e0deeefa" category="paragraph">FlexGroup卷容量分布在具有两个或更多高可用性(HA)对的适用于ONTAP的横向扩展FSx文件系统中的多个成分卷上。每个成分卷都是一个容器、用于指定单个文件的最大大小。FSx for ONTAP以均匀的方式将文件分布在所有成分卷上、以便所有节点都参与单个FlexGroup卷的工作负载。</block>
-  <block id="3e614bee780ca4f239b415605468630f" category="paragraph">如果成分卷未均匀分布在所有节点上、则FlexGroup卷性能会下降。</block>
   <block id="04533b4edf31c61772ef483585fb29cf" category="paragraph">检查FlexGroup卷容量的平衡情况包括评估成分卷的当前布局。在重新平衡卷的容量时、BlueXP  工作负载工厂会设计一个包含偶数成分卷的新成分卷布局、以便在所有HA对之间均匀分布数据。该服务将执行重新平衡计划、进而改进读取和写入操作。</block>
-  <block id="f6dc3e9c7132f490eeec938c03027a06" category="admonition">只有FlexGroup卷才支持重新平衡卷。</block>
   <block id="d394f348c0b6fbd4e88b415bafdbea68" category="section-title">检查FlexGroup卷的平衡情况</block>
   <block id="1cc1dda63f89374c05c8b8f5c8126341" category="paragraph">检查活动FlexGroup卷的平衡情况。</block>
   <block id="eeaecacdda76be13c8594ef17a7c395c" category="list-text">FlexGroup卷平衡仅适用于使用至少两个HA对的横向扩展部署的适用于ONTAP文件系统的FSx。</block>
@@ -1500,7 +1494,6 @@
   <block id="1fd02848e48f953c62155cbb42dd331b" category="section-title">重新平衡FlexGroup卷</block>
   <block id="64de3f9223f666126336ac4c9a3aa94d" category="paragraph"><block ref="1f11182db84cfb1742cc746fa76f8fe6" category="inline-xref-macro-rx"></block>重新平衡卷之前。</block>
   <block id="af7202b99122b0c2ef1b703335afeef9" category="paragraph">要重新平衡卷，您必须 <block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>。如果您没有现有链接，请 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。要关联文件系统中的链接，请选择*Account name*下的*Associate link*。链接关联后、返回此操作。</block>
-  <block id="a7f82ab64c2423d5bfd6e7a3852441cc" category="paragraph">FlexGroup卷的容量会重新平衡。</block>
   <block id="9c633958a5d66a1547197d5b123c8c3c" category="paragraph">要将Storage VM复制到另一个FSx for ONTAP文件系统，您必须 <block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>。如果您没有现有链接，请 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。要关联文件系统中的链接，请选择*Account name*下的*Associate link*。链接关联后、返回此操作。</block>
   <block id="ceb833d216db0e056b9ab7d22ba4f023" category="paragraph">如果没有限制、网络和应用程序性能可能会下降。或者、对于关键工作负载(例如、主要用于灾难恢复的工作负载)、我们建议对用于ONTAP文件系统的FSx使用无限传输速率。</block>
   <block id="c4ee13228c56b3c8a94bcef6d8d6d357" category="summary">将克隆FlexVol volume从其父卷中拆分、使此克隆成为正常的读/写FlexVol volume。</block>
@@ -1892,4 +1885,23 @@
   <block id="636ce0dc4b81c78698b769c07d69f35c" category="sidebar">利用自主防兰森保护功能保护数据</block>
   <block id="ce812f613f07996b313f45414329b88e" category="sidebar">实施文件系统最佳实践</block>
   <block id="e6dcf40c0e3ce889fc9c5c061867f960" category="sidebar">FSx for ONTAP的配置分析</block>
+  <block id="77aaaafa70c293a92472a80015bece8b" category="paragraph">如果成分卷未均匀分布在所有节点上、则FlexGroup卷性能会下降。</block>
+  <block id="ae622e3b9df5d2fe3f644c0dba928e66" category="paragraph">当由于添加新文件和文件增长而导致逐渐出现不平衡时、重新平衡卷会重新分布容量。手动启动重新平衡操作后、我们会选择文件并自动无中断地移动它们。卷传输操作会占用文件系统资源。</block>
+  <block id="8a348b83eb54b8869c9afef29caffc5e" category="admonition">仅FlexGroup卷支持重新平衡、iSCSI或NVMe FlexGroup卷则不支持重新平衡。</block>
+  <block id="dea985c157083fcf289f38e7ab4aede0" category="paragraph">重新平衡一个或多个不平衡的卷。数据在成员卷之间重新分布以重新平衡FlexGroup卷。根据您喜欢的数据分发布局、重新平衡操作可能会添加FlexGroup成员卷并增加已配置卷的大小。</block>
+  <block id="6a0d7c16b4c559c5dc9c875e37641a9c" category="admonition">工作负载出厂管理员可以在此操作期间停止重新平衡。</block>
+  <block id="5fdec390c6be629fa932553e2fe5cb25" category="list-text">请注意、要重新平衡的卷上的现有快照会变为部分快照、不能用于还原卷数据、但在重新平衡后创建的新快照可用于还原卷数据。</block>
+  <block id="930dade8556383009e0018f93aeb74bc" category="list-text">在FlexGroup平衡窗口中、选择*重新平衡*以重新平衡一个或多个不平衡的卷。</block>
+  <block id="48d59fcf4b8606ffc1ea7c49fae9c2b9" category="list-text">在重新平衡向导中、选择您喜欢的数据分布布局。</block>
+  <block id="d2759013b04b9118f16fe5b617dd7975" category="list-text">*性能优化*(建议)：增加FlexGroup成员卷的数量和卷的配置大小。遵循NetApp最佳实践。</block>
+  <block id="782a0e1598a5b037c74d5a726a398869" category="list-text">*受限*：支持复制关系中的卷。FlexGroup成员卷的数量和已配置卷的大小保持不变。如果所有选定卷都参与复制关系、则默认选中此选项。</block>
+  <block id="bbf2c701b4183e96081700fbc871fa76" category="list-text">*手动*：为每个HA对选择所需数量的FlexGroup成员卷。根据您的选择、FlexGroup成员卷的数量和卷的已配置大小可能会增加。</block>
+  <block id="d8b3ea3fc3957a87e42e4b5e3257d192" category="list-text">*Throttling *：可选。默认情况下处于禁用状态。启用限制可限制文件系统上卷移动的带宽、并降低传出卷复制流量的速度。</block>
+  <block id="401ed2c14f82092756a797059818f59d" category="paragraph">以MB/秒为单位输入限制值</block>
+  <block id="3117f7777a863eeec7887ce7461f4d67" category="list-text">选择布局比较视图，然后选择*Next*。</block>
+  <block id="81d9477d2a350f3be114cdcb17416f29" category="list-text">卷布局比较</block>
+  <block id="5ad2de3bf91266caa9759e836ce832b5" category="list-text">FSx for ONTAP布局比较</block>
+  <block id="897bea1a5ca479178427004f773ee72e" category="list-text">(可选)在重新平衡之前下载卷移动列表。</block>
+  <block id="703547df715082455f8920d78fe90a30" category="list-text">选择*重新平衡*。</block>
+  <block id="dc3d2b1db09a8cee9576c2df34eba7b1" category="paragraph">根据添加到FlexGroup中的FlexGroup成员卷的数量、一次只能执行一个FlexGroup卷成员移动操作。操作完成后、文件系统将被控制回原始值。</block>
 </blocks>
