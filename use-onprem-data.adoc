@@ -19,7 +19,7 @@ summary: 在BlueXP  工作负载工厂中发现和复制内部ONTAP数据、以
 使用情形:: 请注意、这一系列任务的重点是GenAI工作负载的主要用例。
 +
 --
-* *GenAI工作负载*：将内部部署的ONTAP卷数据复制到FSx for ONTAP文件系统中，以便可以将这些数据用于link:https://docs.netapp.com/us-en/workload-genai/create-knowledgebase.html["丰富AI知识库"^]。
+* *GenAI工作负载*：将内部部署的ONTAP卷数据复制到FSx for ONTAP文件系统中，以便可以将这些数据用于link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/create-knowledgebase.html["丰富AI知识库"^]。
 * *备份和迁移到云*：复制到FSx for ONTAP文件系统的内部ONTAP卷数据可用作云中的备份。
 * *数据分层*：复制后、不常访问的内部ONTAP卷数据可以从SSD存储层分层到容量池存储层。
 

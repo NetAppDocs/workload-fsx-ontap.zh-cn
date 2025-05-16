@@ -51,4 +51,4 @@ BlueXP  工作负载工厂会定期分析Amazon FSx for NetApp ONTAP文件系�
 link:create-link.html["了解如何创建链接。"]
 
 .下一步行动
-link:improve-configurations.html["改进FSx for ONTAP部署的配置"]
+link:improve-configurations.html["实施架构良好的文件系统配置"]

@@ -1101,7 +1101,6 @@
   <block id="2a3b399798aa16ecfbc1425cc560bfad" category="list-text">使用情形</block>
   <block id="ef63a3d009f11deff50f4dc327b32173" category="list-text">请注意、这一系列任务的重点是GenAI工作负载的主要用例。</block>
   <block id="809c357d304bbfa1cd4446574b270af8" category="inline-link-macro">丰富AI知识库</block>
-  <block id="9cce19ad5b8f6c533905f11c61df97c8" category="list-text">*GenAI工作负载*：将内部部署的ONTAP卷数据复制到FSx for ONTAP文件系统中，以便可以将这些数据用于<block ref="f591db1a99ea9ae06218a2a67c7815b6" category="inline-link-macro-rx"></block>。</block>
   <block id="f15192f8afdcf438f7b1ccf0cda2b436" category="list-text">*备份和迁移到云*：复制到FSx for ONTAP文件系统的内部ONTAP卷数据可用作云中的备份。</block>
   <block id="5b5a84720ff8905504e8a45fbc52fb73" category="list-text">*数据分层*：复制后、不常访问的内部ONTAP卷数据可以从SSD存储层分层到容量池存储层。</block>
   <block id="4185f116d64b1130e6f9ba4250b147fa" category="paragraph">开始之前、请确保您已具备以下条件：</block>
@@ -1719,8 +1718,6 @@
   <block id="8f1eb02f728d9f5ee9934382b0494f93" category="paragraph">要进行完整的文件系统分析、必须关联一个链接。通过链路连接、工作负载可以在出厂时分析数据保护和性能等所有文件系统配置。</block>
   <block id="fcc3e7348faefdb90df77848c11a3cd2" category="inline-link-macro">了解如何创建链接。</block>
   <block id="d1d2547b7ef1924a459a05adb0445929" category="paragraph"><block ref="d1d2547b7ef1924a459a05adb0445929" category="inline-link-macro-rx"></block></block>
-  <block id="03ed34f82c3cbad618294be6c94ca447" category="inline-link-macro">改进FSx for ONTAP部署的配置</block>
-  <block id="906102ec8d33b9c800e95c6b9ee1bbdf" category="paragraph"><block ref="906102ec8d33b9c800e95c6b9ee1bbdf" category="inline-link-macro-rx"></block></block>
   <block id="02f2e108af721f7fc825883d8811e77a" category="list-text">* ONTAP凭据*：可选。输入您的ONTAP用户名和密码。可以现在或稍后设置密码。</block>
   <block id="824994853534784eb4495b892e13b1c6" category="paragraph">如果您提供的用户不是fsxadmin用户、而稍后您需要重置fsxadmin密码、则可以从AWS控制台执行此操作。</block>
   <block id="dd34b811cd079417f985f8f56a4f1dca" category="list-text">* Storage VM凭据*：可选。输入您的用户名。密码可以特定于此文件系统、也可以使用为ONTAP凭据输入的相同密码。可以现在或稍后设置密码。</block>
@@ -1906,4 +1903,6 @@
   <block id="dfbf98e5a4263fb93c5b851bfc384ae3" category="list-text">*REST API*：使用工作负载工厂REST API部署和管理适用于ONTAP文件系统和其他AWS资源的FSx。</block>
   <block id="57f4ce64453b6cd8aa398c4f88d38c2e" category="list-text">*CloudFormation*：使用AWS CloudFormation代码执行您在工作负载出厂控制台中定义的操作、以便在您的AWS帐户中对CloudFormation堆栈中的AWS和第三方资源进行建模、配置和管理。</block>
   <block id="06c2e2277da374dd2cc7b735a1d1e848" category="list-text">*Terraform BlueXP  工作负载工厂提供程序*：使用Terraform构建和管理在工作负载工厂控制台中生成的基础架构工作流。</block>
+  <block id="eaaaf380859de755a58a543fbffc3d8a" category="paragraph"><block ref="eaaaf380859de755a58a543fbffc3d8a" category="inline-link-macro-rx"></block></block>
+  <block id="1418bddde60a7d4a1fbd71041ef29d36" category="list-text">*GenAI工作负载*：将内部部署的ONTAP卷数据复制到FSx for ONTAP文件系统中，以便可以将这些数据用于<block ref="8b94b70e10f0f6c7944c9419ec9922bc" category="inline-link-macro-rx"></block>。</block>
 </blocks>
