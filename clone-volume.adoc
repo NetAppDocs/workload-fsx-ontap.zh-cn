@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: clone-volume.html 
 keywords: clone volume, clone, clone data 
-summary: 克隆BlueXP  工作负载出厂时的卷、为原始卷创建读写卷以供测试。 
+summary: 在 BlueXP 工作负载工厂中克隆一个卷，以制作原始卷的读/写卷进行测试。 
 ---
 = 在BlueXP  工作负载出厂时克隆卷
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 克隆BlueXP  工作负载出厂时的卷、为原始卷创建读写�
 
 
 [role="lead"]
-克隆BlueXP  工作负载出厂时的卷、为原始卷创建读写卷以供测试。
+在 BlueXP 工作负载工厂中克隆一个卷，以制作原始卷的读/写卷进行测试。
 
 克隆反映数据的当前时间点状态。您还可以使用克隆为其他用户授予对数据的访问权限，而不授予他们对生产数据的访问权限。
 

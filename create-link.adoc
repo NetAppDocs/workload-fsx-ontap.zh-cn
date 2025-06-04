@@ -39,7 +39,7 @@ NOTE: 使用Connector时不支持AWS的"ConnectOR"管理器。
 
 .开始之前
 * 您应考虑使用哪种链接创建选项。
-* 您需要在工作负载工厂中至少有一个FSx for ONTAP文件系统。要发现或创建FSx for ONTAP文件系统、您必须拥有一个AWS帐户、该帐户必须具有FSx for ONTAP实例的权限以及link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html#overview["在工作负载出厂时添加凭据"^]存储管理的只读或读写权限。
+* 您需要在工作负载工厂中至少有一个FSx for ONTAP文件系统。要发现或创建 FSx for ONTAP 文件系统，您必须拥有一个具有 FSx for ONTAP 实例权限的 AWS 账户，并且link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html#overview["在工作负载出厂时添加凭据"^]具有存储管理的_只读_或_读/写_权限。
 * 使用CloudFormation堆栈添加链接时、您的AWS帐户必须具有以下权限：
 +
 [%collapsible]

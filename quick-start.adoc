@@ -23,13 +23,13 @@ summary: 只需几个步骤、即可在BlueXP  工作负载工厂开始使用FS
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["两个"] 添加凭据和权限
 [role="quick-margin-para"]
-在_BASIC、_Read_和_Automate之间进行选择 link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["操作模式"^]
+在 _basic_、_read-only_ 和 _read/write_ 之间进行选择link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["操作模式"^]
 
 [role="quick-margin-para"]
 如果您选择在_BASIC模式下运行、则无需再继续操作。您可以开始使用适用于FSx for ONTAP的工作负载工厂复制部分完成的代码示例。
 
 [role="quick-margin-para"]
-如果您在_Read_或_Automate _模式下运行、则需要选择数据库和AI等工作负载功能、并创建IAM策略、以确保您拥有在_Read_或_Automate _模式下运行所需link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["手动向帐户添加凭据"^]的正确权限。
+如果您在“只读”或“读/写”模式下操作，则需要link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["手动向帐户添加凭据"^]其中包括选择工作负载功能（例如数据库和 AI）以及创建 IAM 策略以确保您拥有以_只读_或_读/写_模式操作的正确权限。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三个"] 创建文件系统
 [role="quick-margin-para"]

@@ -789,7 +789,6 @@
   <block id="50fa5062b83d0f575448ba449245fa17" category="list-text">iSCSI协议仅适用于FlexVol卷。^1^</block>
   <block id="e6816f159adf84ca7c085ce0702311af" category="inline-link-macro">删除所有现有复制关系</block>
   <block id="da13b22f351bd4b981038bd55ca5d3ab" category="list-text">复制关系：删除此卷之前、必须先复制<block ref="fa9c4758a74309c74eff4644a0675063" category="inline-link-macro-rx"></block>此卷、以确保不会保留任何已断开的关系。</block>
-  <block id="f14fbd72eb1c8ba39f23e290779d3ac7" category="paragraph">在_BASIC、_Read_和_Automate之间进行选择 <block ref="a1a436caedec06006ef5b76c82a83b04" category="inline-link-macro-rx"></block></block>
   <block id="31139fb3d548620b7d82f880e4660606" category="doc">存储清单中的选项卡视图</block>
   <block id="d4aa654cea4681dd5ca03650594006c6" category="paragraph">存储清单已更新为双选项卡视图：</block>
   <block id="71083868a2ec5abfee9a2647a74612c0" category="list-text">FSx for ONTAP选项卡：显示您当前拥有的适用于ONTAP文件系统的FSx。</block>
@@ -824,7 +823,6 @@
   <block id="c4fd230e0a883356d07ecc8aa57a1408" category="paragraph">在BlueXP  工作负载出厂时、您可以更改分层策略、以便自动将数据从高性能主存储层重新分配到二级容量池存储层。</block>
   <block id="fe5187438e2ab675d9a19928dd40ea31" category="list-text">在*FSx for FS* ONTAP选项卡中，选择包含要更新的卷的文件系统的三点菜单，然后选择*Manage*。</block>
   <block id="cf85f41b48d74de17d9ad6aec327fcc7" category="list-text">从卷选项卡中、选择要更改分层策略的卷的三点菜单。</block>
-  <block id="303558e4a397de6362e02f36b29e52e2" category="summary">克隆BlueXP  工作负载出厂时的卷、为原始卷创建读写卷以供测试。</block>
   <block id="528d7c15fdf4463dd61cddf39e8e7abf" category="doc">在BlueXP  工作负载出厂时克隆卷</block>
   <block id="200d51c026656f479a6f4c6ec3536b64" category="list-text">在*FSx for FS*选项卡中，选择包含要克隆的卷的ONTAP for ONTAP文件系统的三点菜单，然后选择*Manage*。</block>
   <block id="8646e0bbc26f59aa853dc93d48061b77" category="list-text">在卷选项卡中、选择要克隆的卷的三点菜单。</block>
@@ -1325,7 +1323,6 @@
   <block id="a864feef5272f034d55e1119c5495be8" category="inline-link-macro">管理不可配置文件</block>
   <block id="2915f18b56c3e4e3c1ef137551d9a65d" category="section-title">数据复制增强功能</block>
   <block id="114e60d7d0f811f597761cf833328a96" category="list-text">跨帐户复制：BlueXP  工作负载出厂控制台支持在两个AWS帐户之间进行复制以及复制管理。</block>
-  <block id="0348e63af5ee6958b15125648a1ecae7" category="list-text">暂停和恢复复制：您可以暂停(暂停)从源卷到目标卷的计划复制更新、然后在准备就绪后恢复复制计划。暂停期间、源卷和目标卷会彼此独立、目标卷会从只读过渡到读写。</block>
   <block id="38485996f06c5e13eed5605901b52530" category="inline-link-macro">暂停和恢复复制关系</block>
   <block id="fc81b1e4233a48b719520033e56b4194" category="paragraph"><block ref="fc81b1e4233a48b719520033e56b4194" category="inline-link-macro-rx"></block></block>
   <block id="fd8693cf8f6802fd1c7d50d5742a4c71" category="section-title">Tracker中的CloudShell事件</block>
@@ -1440,9 +1437,7 @@
   <block id="3e2144322d0c83071684bb1ffb11338d" category="paragraph">此时将删除此Snapshot策略。</block>
   <block id="7aea6efc0dbafc8802c9399b1e3f6754" category="summary">暂停和恢复复制关系、以便目标卷成为源卷。</block>
   <block id="5dd762d4ab72b7f0d07d15a60666a191" category="doc">在BlueXP  工作负载出厂时暂停和恢复复制关系</block>
-  <block id="9fe4e8e61dcc40a52fe579f0f61b5261" category="paragraph">暂停复制关系以停止从源卷到目标卷的计划复制更新。目标卷从只读过渡到读写。这两个卷仍会共享最新的复制快照作为新基线、以供日后重新同步时使用。</block>
   <block id="76540d9eea5e27790a75dc0204324995" category="paragraph">暂停后、源卷和目标卷之间的复制关系将继续存在。数据传输将暂停、卷将变得独立。要重新启用从源卷到目标卷的更改传输、请恢复复制。</block>
-  <block id="fc8a23c186b506791d82b21a875d3180" category="paragraph">恢复复制后、对目标卷所做的所有更改都将撤消、BlueXP  工作负载出厂时会重新启用复制。目标卷会从读写过渡到只读、并按计划的复制间隔再次从源卷接收更新。恢复复制关系后、目标卷将还原到最新的初始复制快照、此时、卷复制过程将重新开始。</block>
   <block id="9eef2cd11da6de70c97fb30475ecd676" category="paragraph">如果在传输进行中暂停、则传输不会受到影响、关系将变为"暂停"、直到传输完成为止。如果当前传输已被禁止、则它现在是将来的传输、不会重新启动。</block>
   <block id="a252d0c2ed77d353301a08614eb0500e" category="section-title">暂停复制关系</block>
   <block id="5d4b7fc2e52dde05ac8cda99a07dc088" category="list-text">在复制关系选项卡中、选择要暂停的复制关系的三点菜单。</block>
@@ -1457,7 +1452,6 @@
   <block id="a79cee1f678331ce4a5e786550999b02" category="paragraph">此关系将恢复、并且其状态显示为"已复制"。</block>
   <block id="26da52f61184b82e14aa7b1fa701a979" category="paragraph">自动配置的IOPS计算为每GiB三次IOPS。</block>
   <block id="924b3daa7ecef370ff9a603b3208772b" category="paragraph">如果手动配置IOPS，则可能需要在之前增加IOPS<block ref="94a3285243f3705d6ad038b61125cb2f" category="inline-link-macro-rx"></block>。</block>
-  <block id="47442843c99a1990c6f90a2c7e4055a9" category="paragraph">如果您在_Read_或_Automate _模式下运行、则需要选择数据库和AI等工作负载功能、并创建IAM策略、以确保您拥有在_Read_或_Automate _模式下运行所需<block ref="bb44378f07a38aa36833bde05fae1b5d" category="inline-link-macro-rx"></block>的正确权限。</block>
   <block id="3a3c8188eae554af0e7f07bfef2e124b" category="summary">检查并重新平衡卷的容量、以避免随着时间的推移而出现不平衡。</block>
   <block id="8083bd6761abe4735ad26f9c18899032" category="doc">检查并重新平衡卷的容量</block>
   <block id="270753bb6aea2d40b94194b021e500ae" category="paragraph">检查FlexGroup卷容量的平衡并重新平衡卷容量、以便在所有成分卷之间均匀分布文件、以便所有节点都参与单个Flex Group卷的工作负载。</block>
@@ -1607,8 +1601,6 @@
   <block id="d4b4ed7579a4f9267cc7dff8a948018e" category="cell">所有 ICMP</block>
   <block id="b1c94ca2fbc3e78fc30069c8d0f01680" category="cell">全部</block>
   <block id="fbabb5b35538d91f91e0e1d4f56ff5a4" category="paragraph">Ping 实例</block>
-  <block id="70b2c09de9e176a879c840cb014b8c20" category="inline-link-macro">授予_read_权限</block>
-  <block id="e395c91c5c84949d52ffb229805b2f5f" category="paragraph">要使工作负载工厂在您的AWS帐户中检测Amazon Elelic Block Store (EBS)、Elelic File System (EFS)和FSx for Windows File Server存储环境、请确保您使用的是<block ref="aa999e6a1b84a9d79249d89f4acbbea1" category="inline-link-macro-rx"></block>AWS帐户。</block>
   <block id="c09b5be4c2da04f4040eef1878f258aa" category="inline-link-macro">ONTAP 9 文档</block>
   <block id="3611f3afb9bd4ea20ff757fe165aa678" category="paragraph">此外、选择的使用情形还决定了复制策略或SnapMirror策略(ONTAP)。用于描述复制策略的术语来自<block ref="20dfa0e16eac8597602ade67a04436fd" category="inline-link-macro-rx"></block>。</block>
   <block id="b5b213ff8da55d939d5b26b2acad4e23" category="list-text">对于migrate和other、复制策略称为_MirorAllSnapshot _。_镜像 所有快照_是一种异步策略、用于镜像所有快照和最新活动文件系统。</block>
@@ -1662,7 +1654,6 @@
   <block id="2bbce7d3d059871083eb12013b7bc70d" category="section-title">支持备用ONTAP用户凭据</block>
   <block id="21fe54f48c52f1924f6b2b74751f1611" category="paragraph">工作负载工厂现在支持使用备用ONTAP凭据集来创建文件系统、从而最大限度地降低安全风险。您可以选择一组不同的ONTAP凭据、也可以选择不为fsxadmin和vsaadmin用户提供密码、而不是仅使用fsxadmin用户。</block>
   <block id="514f1fc0ac0ff6e4200d3637146367f1" category="section-title">更新了权限术语</block>
-  <block id="a7b97ab7d88b015e92ed51ef4bee9c25" category="paragraph">现在、工作负载出厂用户界面和文档使用"只读"来表示读取权限、使用"读写"来表示自动执行权限。</block>
   <block id="17f03194826a802587b82edd13d7ac95" category="summary">复制数据保护卷或级联卷数据复制、将数据保护扩展到三级系统或迁移数据。</block>
   <block id="70b72bd626a098817ae0ea2c2270cbcf" category="doc">在BlueXP  工作负载出厂时复制数据保护卷</block>
   <block id="7022ef39a3ec93cac3dc3468cb63623d" category="paragraph">BlueXP  工作负载工厂支持复制数据保护卷、也称为_级 联部署_。级联部署_由一系列关系组成、其中、一个源卷镜像到一个二级卷(第一个跃点)、而该二级卷镜像到一个三级卷(第二个跃点)。如果二级卷不可用，您可以同步主卷和三级卷之间的关系，而无需执行新的基线传输。</block>
@@ -1716,7 +1707,6 @@
   <block id="05a2e668e80fd3ace12e9585ebc06578" category="paragraph">关联新链接包括创建和关联。</block>
   <block id="ec19cf5bb597b8c81392ce26e30276fe" category="paragraph">您有两种创建链接的选项-自动或手动。要创建链接、您需要在AWS帐户中启动AWS CloudFormation堆栈。</block>
   <block id="695199449ad50832d8cff3be92e812b3" category="inline-link-macro">在工作负载出厂时添加凭据</block>
-  <block id="f1eaaab14536c4d820d0472133fd3c45" category="list-text">您需要在工作负载工厂中至少有一个FSx for ONTAP文件系统。要发现或创建FSx for ONTAP文件系统、您必须拥有一个AWS帐户、该帐户必须具有FSx for ONTAP实例的权限以及<block ref="bc6de13f807f280fdd09c86a039f3f7c" category="inline-link-macro-rx"></block>存储管理的只读或读写权限。</block>
   <block id="2f1cd483ab7b6144b733f5155b2026c6" category="list-text">在*FSx for ONTAP Link*选项卡中，选择要关联链接的文件系统的三点菜单，然后选择*Associate link*。</block>
   <block id="29abae1dabc3d83e30cbe456ae214256" category="list-text">*AWS SeslogManager*：可选。允许工作负载工厂从AWS密码管理器提取FSx for ONTAP访问凭据。</block>
   <block id="13ecd4f9bb62f6c0730c8f136a58fb36" category="paragraph">链路部署堆栈会将以下默认机密管理器ARN正则表达式添加到Lamb代 权限策略中：<block ref="218d5bbe44642244cc57db37477be310" prefix=" " category="inline-code"></block>。</block>
@@ -1775,7 +1765,6 @@
   <block id="aff279b636a9024db3b44375d88e80eb" category="list-text">计划的本地快照</block>
   <block id="887673b402c7bbc141e56321e277605f" category="list-text">远程数据复制</block>
   <block id="2f5c8a4d7476b305dbc46e2886046e37" category="inline-link-macro">了解如何在AWS帐户中授予权限</block>
-  <block id="3d4d7dfea7b3c8e6611f1b6c46261c79" category="list-text">您必须具有具有只读或读/写权限的凭据。<block ref="2022cabf257ab03f558a69fe97667e91" category="inline-link-macro-rx"></block>(英文)</block>
   <block id="ec18319549282942e8c5b076a25d2f8e" category="list-text">在选择修复设置或配置之前、请确保仔细查看每个建议。</block>
   <block id="47df3bf0f7ade58852082d72bcde28c6" category="admonition">修复过程可能会导致实例停机或服务中断。在选择修复配置问题之前、请务必仔细查看此建议。</block>
   <block id="d74f751ba3d9c20ce8b684f638c03719" category="list-text">在"数据库"磁贴中、选择*转至存储清单*。</block>
@@ -1929,4 +1918,15 @@
   <block id="af06e2a95bd9706f705a4480e8f40846" category="list-text">*Terraform BlueXP  工作负载工厂提供程序*：使用Terraform构建和管理在工作负载工厂控制台中生成的基础架构工作流。</block>
   <block id="4aa37f4d9a391345e9a54c68333e2503" category="section-title">2025年6月3日</block>
   <block id="3f704fe76e8b9e4bf51184f82c064656" category="paragraph"><block ref="03b2cfc949418819e16b1dc5fa3660ae" category="inline-link-macro-rx"></block> == 2025年3月2日</block>
+  <block id="0592779b8245b0df30d4f675dd276086" category="list-text">暂停和恢复复制：您可以暂停(暂停)从源卷到目标卷的计划复制更新、然后在准备就绪后恢复复制计划。在暂停期间，源卷和目标卷变得独立，并且目标卷从只读转换为读/写。</block>
+  <block id="4ead5e435cb4f2c7cf627b1d1e84c333" category="paragraph">工作负载工厂用户界面和文档现在使用“只读”来指代读取权限，使用“读/写”来指代自动化权限。</block>
+  <block id="bf1eae05016a3b136059039ae18136f1" category="summary">在 BlueXP 工作负载工厂中克隆一个卷，以制作原始卷的读/写卷进行测试。</block>
+  <block id="ee3553e6baa58a561bf979cf7ae15053" category="list-text">您需要在工作负载工厂中至少有一个FSx for ONTAP文件系统。要发现或创建 FSx for ONTAP 文件系统，您必须拥有一个具有 FSx for ONTAP 实例权限的 AWS 账户，并且<block ref="bc6de13f807f280fdd09c86a039f3f7c" category="inline-link-macro-rx"></block>具有存储管理的_只读_或_读/写_权限。</block>
+  <block id="20f8a84eb910bbd8af91b95f380d163c" category="inline-link-macro">授予只读权限</block>
+  <block id="3dc74e0841fa831cf5cd20ac04ed6651" category="paragraph">要使工作负载工厂在您的AWS帐户中检测Amazon Elelic Block Store (EBS)、Elelic File System (EFS)和FSx for Windows File Server存储环境、请确保您使用的是<block ref="13ae78c09f3df6bcab328a886064dd51" category="inline-link-macro-rx"></block>AWS帐户。</block>
+  <block id="4548f94159b489b0c24b45e3a301c68c" category="list-text">您必须拥有具有_只读_或_读/写_权限的凭据。<block ref="2022cabf257ab03f558a69fe97667e91" category="inline-link-macro-rx"></block>(英文)</block>
+  <block id="896d6bec42b8c83090c4e03345712729" category="paragraph">暂停复制关系以停止从源卷到目标卷的计划复制更新。目标卷从只读过渡到读/写。这两个卷仍会共享最新的复制快照作为新基线、以供日后重新同步时使用。</block>
+  <block id="30e57761ad37a97249e7a0876abdd7cc" category="paragraph">恢复复制后、对目标卷所做的所有更改都将撤消、BlueXP  工作负载出厂时会重新启用复制。目标卷从读/写转换为只读，并再次按照计划的复制间隔从源卷接收更新。恢复复制关系后、目标卷将还原到最新的初始复制快照、此时、卷复制过程将重新开始。</block>
+  <block id="b91aff97cc4dadbca9539fae72dedecc" category="paragraph">在 _basic_、_read-only_ 和 _read/write_ 之间进行选择<block ref="a1a436caedec06006ef5b76c82a83b04" category="inline-link-macro-rx"></block></block>
+  <block id="b31987b3ffb35fe02be38fe9d8e701f1" category="paragraph">如果您在“只读”或“读/写”模式下操作，则需要<block ref="bb44378f07a38aa36833bde05fae1b5d" category="inline-link-macro-rx"></block>其中包括选择工作负载功能（例如数据库和 AI）以及创建 IAM 策略以确保您拥有以_只读_或_读/写_模式操作的正确权限。</block>
 </blocks>

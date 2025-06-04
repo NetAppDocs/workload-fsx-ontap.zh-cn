@@ -33,7 +33,7 @@ BlueXP  每天都会分析Amazon FSx for NetApp ONTAP文件系统部署配置�
 
 
 .开始之前
-* 您必须具有具有只读或读/写权限的凭据。link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["了解如何在AWS帐户中授予权限"^](英文)
+* 您必须拥有具有_只读_或_读/写_权限的凭据。link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["了解如何在AWS帐户中授予权限"^](英文)
 * 在选择修复设置或配置之前、请确保仔细查看每个建议。
 
 
