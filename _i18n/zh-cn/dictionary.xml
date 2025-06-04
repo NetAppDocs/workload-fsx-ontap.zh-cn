@@ -219,7 +219,6 @@
   <block id="749bb7d7b85b238efdd51a2af6612da7" category="list-text">选择*数据保护操作*、*快照*、然后选择*从快照创建卷*。</block>
   <block id="7703989c08fa05b728e233f271b4650e" category="list-text">在"Create volume from a Snapshot "(从快照创建卷)对话框中、输入快照名称。</block>
   <block id="25b72c08a4a289e6b89fc38db06792a9" category="doc">创建FSx for ONTAP卷</block>
-  <block id="afd1f136e7e58574d1730a6b37234e12" category="paragraph">FSx for ONTAP卷是一种虚拟资源、用于对数据进行分组、确定数据的存储方式以及确定对数据的访问类型。卷不会占用文件系统存储容量。存储在卷中的数据主要占用SSD存储。根据卷的分层策略、数据可能还会占用容量池存储。您可以在创建卷时设置其大小、并可稍后更改其大小。</block>
   <block id="80f199570ae102e9c62f81fcbfd159eb" category="list-text">CIFS：适用于Windows操作系统的文件存储协议</block>
   <block id="8a1e5168feb60a6391f96310159dca9a" category="list-text">NFS：适用于Unix操作系统的文件存储协议</block>
   <block id="ec38854bd667a882fa1d0b62579b5079" category="list-text">iSCSI：块存储协议</block>
@@ -252,7 +251,6 @@
   <block id="d7452a3655b7342c92f5b56d0b8526ed" category="list-text">输入新启动程序组的*启动程序组名称*。</block>
   <block id="9b990db2de543eb2fd38454ae899ab11" category="list-text">在Host Initiators下、添加一个或多个iSCSI限定名称(iSCSI限定名称、IQN)主机启动程序。</block>
   <block id="8cc48e7c3f902d1b7dd7d0ecb40ade52" category="list-text">在效率和保护下、提供以下详细信息：</block>
-  <block id="693c76b9e50b1968a91a20939d11fb98" category="list-text">*存储效率*：禁用或启用存储效率。</block>
   <block id="4f16f68a6d9522c0d097a900978f6f0d" category="paragraph">可通过利用ONTAP的重复数据删除和数据压缩功能来实现存储效率。重复数据删除可消除重复的数据块。数据压缩可压缩数据块，以减少所需的物理存储量。</block>
   <block id="f03207e238654d36cb2c88950bf22d84" category="list-text">*Snapshot policy*：选择快照策略以指定快照的频率和保留时间。</block>
   <block id="84e947d0a820262a46013852b1928efd" category="paragraph">以下是AWS的默认策略。对于自定义快照策略、必须关联一个链接。</block>
@@ -318,8 +316,6 @@
   <block id="edd5da19d30912fca4670982f9aef531" category="inline-link-macro">增加卷容量功能</block>
   <block id="f9e4840a1cf1ddb5632e031e0334acb9" category="paragraph">(可选)您可以随时使用手动增加卷的卷容量 <block ref="11462b2e1fd0bd94e3dc25fc7f04c4ba" category="inline-link-macro-rx"></block>。</block>
   <block id="2332ee8494d2f8246a961c95630281a2" category="admonition">iSCSI卷不支持卷自动增长。</block>
-  <block id="91bdace9adb8211a77783be051ae3e78" category="list-text">选择*基本操作*，然后选择*编辑卷自动增长*。</block>
-  <block id="e334870bb4631c235cfca40400daae69" category="list-text">在编辑自动增长对话框中、启用卷自动增长。</block>
   <block id="3d7b2807e22b58e985dfcb21a31b176e" category="summary">标记可以帮助您对资源进行分类。您可以随时为FSx for ONTAP卷添加、编辑和删除卷标记。</block>
   <block id="c966edae1d484c4f3e557d47709e08a1" category="list-text">选择*基本操作*，然后选择*编辑卷标记*。</block>
   <block id="9724e2d67a8b8dacb5f774fbf0309b44" category="list-text">在编辑卷标记页面上、添加、编辑或删除标记。</block>
@@ -449,7 +445,6 @@
   <block id="488044172f20eab904aecc2827c019b4" category="section-title">吞吐量容量区域支持</block>
   <block id="0a27e957ebaf89bce02c66c147da7966" category="section-title">纵向扩展部署</block>
   <block id="2e8bf528a9bc28508b7cf3ffef710f1c" category="section-title">横向扩展部署</block>
-  <block id="3e14c6b63ec31128bf81a140eecbaeb0" category="paragraph">以下地区支持的横向扩展部署最大吞吐量为3和6 GB/秒：美国东部(北弗吉尼亚)、美国东部(俄亥俄州)、美国西部(俄勒冈)、欧洲(爱尔兰)和亚太地区(悉尼)。</block>
   <block id="1d19e21de0f93b11f5ceb8b535a3afc2" category="section-title">容量管理</block>
   <block id="80f7abc9fbb9a7fcbc94b93ffe8883fa" category="list-text">iSCSI协议当前不支持卷自动增长功能。</block>
   <block id="a4f157471406b244df3c4e7727b860ce" category="list-text">运行自动容量管理功能时、不允许手动增加容量。</block>
@@ -870,7 +865,6 @@
   <block id="55a23b72fe4aee5e2f0024c790d7eaba" category="paragraph">从BlueXP  工作负载出厂时的快照创建新的FSx for ONTAP卷、以启用时间点恢复。</block>
   <block id="8d34a33f34659b0ea11833ac0b8fac52" category="list-text">在*FSx for ONTAP选项卡中，选择包含卷快照的文件系统的三点菜单，然后选择*Manage*。</block>
   <block id="3ce528a1818baf0bbf2f6b362b1f7d58" category="list-text">在卷选项卡中、选择包含要创建卷的快照的卷的三点菜单。</block>
-  <block id="3f069fcb238357ca598d1a4d611a62de" category="doc">在BlueXP  工作负载出厂时创建FSx for ONTAP卷</block>
   <block id="d5d682292e122fa36db263f49a714cc7" category="list-text">工作负载出厂时必须具有FSx for ONTAP文件系统。</block>
   <block id="72ce63a6bef6ec13ef74a7eab0012469" category="summary">FSx for ONTAP在BlueXP  工作负载出厂时支持快照、卷备份和卷复制。</block>
   <block id="96a5899d90dd9b81319f168f67bcb5ae" category="summary">要在BlueXP  工作负载出厂时删除文件系统、必须先删除与该文件系统关联的任何卷、Storage VM或复制关系。</block>
@@ -889,14 +883,10 @@
   <block id="21ffc1d60d910e1796100ec0f0e054bf" category="list-text">从卷选项卡中、选择要删除的卷的三点菜单。</block>
   <block id="ad1d6a18c0d830b44dfe2e6a96d2807d" category="list-text">(可选)选择*备份卷*以在删除前备份卷。</block>
   <block id="136dc09835924029e4299fa28f17233d" category="list-text">选择 * 继续 * 。</block>
-  <block id="f7f2169256b833e4b912b12eeb380c4e" category="summary">启用卷自动增长可使BlueXP  工作负载在出厂时为您管理卷容量。您可以随时将其禁用。</block>
-  <block id="5d6c153f1e4ed3eaf701b67f0de4cee6" category="doc">在BlueXP  工作负载出厂时启用卷自动增长</block>
   <block id="442b64cea00e2efaa2cb2cb89dba4ab3" category="list-text">在FSx for ONTAP选项卡中，选择包含要更新的卷的文件系统的三点菜单，然后选择*Manage*。</block>
   <block id="a0b96ee62d98191f36ed547bccb7babd" category="list-text">从卷选项卡中、选择要修改的卷对应的三点菜单。</block>
   <block id="a4fc5c253ce09fe4825f0474ddb3368c" category="summary">通过启用此功能、工作负载工厂可以在容量需求随时间变化时自动向FSx for ONTAP文件系统添加增量存储。</block>
   <block id="bd0cd4a796621f54f57afed7ce044b14" category="doc">为FSx for ONTAP文件系统启用自动容量管理</block>
-  <block id="86699015e319e1f0d9764f4cc8296e22" category="paragraph">通过启用此功能、BlueXP  工作负载工厂可以在容量需求随时间变化时自动向FSx for ONTAP文件系统添加增量存储。</block>
-  <block id="dfee49f6e7d939f9d77bcc58a66381b0" category="paragraph">要完成此任务、您必须在工作负载工厂拥有具有_Automate权限的凭据。</block>
   <block id="d473b237e9c91fd6e196904b26b4c56c" category="list-text">在*FSx for FS* ONTAP选项卡中，选择文件系统的三点菜单，为启用自动容量管理。</block>
   <block id="37315e43d6c90fe6798b7397bf15ebae" category="list-text">在“Information (信息)”下，选择“*Automatic Capacity management (自动容量管理)”旁边的铅笔图标。当鼠标悬停在*Automatic Capacity management *行上时，下拉箭头旁边将显示铅笔图标。</block>
   <block id="c5c6c97593c886ac31454d1f10313b78" category="list-text">选择启用按钮以*启用自动容量管理*。</block>
@@ -930,7 +920,6 @@
   <block id="0e42938784ca54b8dc455284578841f0" category="list-text">在初始化关系对话框中，选择*Initi起 始化*。</block>
   <block id="478b776fc28a60e8545a858eb7ca9a3e" category="summary">已知限制确定了本产品版本不支持的平台、设备或功能、或者这些平台、设备或功能无法与产品正确交互操作。</block>
   <block id="bd2e4cb8c94783198db1a525a87ae34a" category="doc">Amazon FSx for NetApp ONTAP的已知限制</block>
-  <block id="ebb8834ddc064318ec8eb05605b0880f" category="paragraph">要在工作负载出厂用户界面中完成某些操作(如复制)、需要使用链接。</block>
   <block id="aa75e9d89ef77ba0164dfacff4eadc7c" category="paragraph">每个SKU的Storage VM数量是有限的。工作负载工厂不支持创建超出限制的Storage VM。^1^</block>
   <block id="26ed02718973e705cd69ee6e109400e0" category="section-title">System Manager</block>
   <block id="9ee31cf2622a4d1606ccae84e2ba0742" category="paragraph">System Manager不支持FSx for ONTAP连接的链接。</block>
@@ -1084,7 +1073,6 @@
   <block id="037fbb0239239f2168489bba99e09b67" category="list-text">*导出PDF*</block>
   <block id="10acfa1cd5e4b3b5f4da60bba2257672" category="list-text">*通过电子邮件发送*</block>
   <block id="3902a76bb589f831b404ce1ec9865654" category="list-text">*查看计算结果*</block>
-  <block id="01887ff057face34cde00a98753d7347" category="section-title">高级ONTAP操作需要链接</block>
   <block id="428b0b39be2352757edeb5f9f12a7bdd" category="inline-link">BlueXP  工作负载工厂</block>
   <block id="7cf449620aa459bc5c449db69b07e507" category="paragraph"><block ref="7cf449620aa459bc5c449db69b07e507" category="inline-link-rx"></block></block>
   <block id="a32b59044667570495820281f09cfa10" category="list-text">*名称*：输入CIFS共享的名称。</block>
@@ -1319,7 +1307,6 @@
   <block id="49814788ce382c87a117a40e54ae858b" category="paragraph">此时将重新启动此操作。进入跟踪器以查看操作状态。</block>
   <block id="986aee2caba870111e5ce3c5571c82de" category="section-title">2025年2月2日</block>
   <block id="2e0c4c64c2671f5575eb184e577dcdae" category="sidebar">使用Tracker监控操作</block>
-  <block id="b1fe1919850819316de56e436737f1d9" category="summary">设置FSx for ONTAP文件系统后、在BlueXP  工作负载出厂时创建FSx for ONTAP卷。</block>
   <block id="62e770531a6a6f3e80ca57b3b83bb3db" category="doc">BlueXP  Workload Factory中的数据保护类型</block>
   <block id="9da70164a8dd044e50707cfb202de218" category="paragraph">FSx for ONTAP支持快照、备份和复制以实现数据保护。我们建议您结合使用多种数据保护类型、以便为不可避免的情况做好准备并保护您的数据。</block>
   <block id="fa7cdd584b5bc6a975df18dc4ebe5895" category="paragraph">BlueXP  工作负载工厂提供了一个存储节省计算器、用于将Amazon存储环境与FSx for ONTAP进行比较。无论是否提供AWS凭据、您都可以探索节省的空间、并为您的存储环境自定义配置设置。如果您提供AWS凭据、则可以选择一个或多个Amazon El生 性块存储实例、并让工作负载工厂自动进行比较。无论是手动还是自动、计算器都可以确定哪种存储服务可以为您的存储需求提供最低的成本。</block>
@@ -1499,7 +1486,6 @@
   <block id="dde14eef9b53344c34a3e3e63830d29e" category="paragraph">将卷数据从内部ONTAP集群复制到FSx for ONTAP文件系统。复制后、可以使用这些数据丰富AI知识库。</block>
   <block id="b04f4fce1228aa8dc3f0ae05daa48cd7" category="list-text">*Auto*：使用工作负载工厂FSx for ONTAP用户界面创建卷时的默认分层策略。在特定时间段内将所有冷数据(包括用户数据和快照)分层到容量池存储层。</block>
   <block id="8b02e3f5a15bae20358e2221cac45d83" category="list-text">*常规详细信息*：包括卷名称、卷UUID、卷ID、创建时间、状态、卷类型(读/写/数据保护(RW/DP)或只读)、快照策略名称、托管Storage VM (SVM)和标记。</block>
-  <block id="2d5a4b914acb6c2f03d312067c73ce32" category="section-title">2025年3月2日</block>
   <block id="95712b1074d83e6727c42aa16be5af5a" category="paragraph"><block ref="95712b1074d83e6727c42aa16be5af5a" category="inline-link-macro-rx"></block></block>
   <block id="815e02f013485997d1d56438f0bf1505" category="paragraph"><block ref="815e02f013485997d1d56438f0bf1505" category="inline-link-macro-rx"></block></block>
   <block id="21a1f3fb63f8e2b67d072b29080f89f9" category="list-text">级别1 (任务)：跟踪文件系统部署。</block>
@@ -1787,7 +1773,6 @@
   <block id="9d0e9f5c0aa1e38cfaa8e64e155bc5a8" category="list-text">SSD容量阈值</block>
   <block id="396928510e06818ef017921022cce2af" category="list-text">数据分层</block>
   <block id="aff279b636a9024db3b44375d88e80eb" category="list-text">计划的本地快照</block>
-  <block id="70846b7105b6028169209033aae31a0c" category="list-text">FSx for ONTAP备份、和</block>
   <block id="887673b402c7bbc141e56321e277605f" category="list-text">远程数据复制</block>
   <block id="2f5c8a4d7476b305dbc46e2886046e37" category="inline-link-macro">了解如何在AWS帐户中授予权限</block>
   <block id="3d4d7dfea7b3c8e6611f1b6c46261c79" category="list-text">您必须具有具有只读或读/写权限的凭据。<block ref="2022cabf257ab03f558a69fe97667e91" category="inline-link-macro-rx"></block>(英文)</block>
@@ -1802,7 +1787,6 @@
   <block id="fe5f70c74405942514095d724e090b64" category="paragraph">如果可以选择*查看和修复*、请选择要修复的受影响卷。</block>
   <block id="579feafb828551ab15b2e4f1aad57afc" category="list-text">查看对话框中显示的摘要和操作项、了解选择修复问题时会发生什么情况。某些操作可能会导致实例停机或服务中断。</block>
   <block id="45b5dce37159255d07342e3102124571" category="list-text">选择*继续*以修复配置问题。</block>
-  <block id="b24e2a5a00274660f4537c173554dd06" category="paragraph">此时将启动修复问题的过程。选择*作业监控*选项卡以查看操作状态。</block>
   <block id="20086b220eeb33caf74bd6e628cfcd8c" category="section-title">AWS支持</block>
   <block id="ffe2f2a5c6f5c2a7a4d95da829cd5cb4" category="paragraph">BlueXP  工作负载工厂链接会在工作负载工厂帐户与一个或多个FSx for ONTAP文件系统之间创建信任关系和连接。这样、您就可以直接通过ONTAP REST API调用监控和管理某些文件系统功能、而这些功能不能通过Amazon FSx for ONTAP API使用。</block>
   <block id="8f30a77efbeaeec8415337994a976197" category="paragraph">您可以使用存储在工作负载出厂凭据服务中的凭据或存储在AWS密码管理器中的凭据进行真实链接。工作负载工厂不支持更改身份验证模式。</block>
@@ -1902,7 +1886,47 @@
   <block id="e234d079cc2fccaeed8041a81e1e8122" category="list-text">*CloudShell命令行界面*：工作负载工厂包括一个CloudShell命令行界面、用于通过一个基于浏览器的命令行界面跨帐户管理和操作AWS和NetApp环境。从工作负载出厂控制台的顶部栏访问CloudShell。</block>
   <block id="dfbf98e5a4263fb93c5b851bfc384ae3" category="list-text">*REST API*：使用工作负载工厂REST API部署和管理适用于ONTAP文件系统和其他AWS资源的FSx。</block>
   <block id="57f4ce64453b6cd8aa398c4f88d38c2e" category="list-text">*CloudFormation*：使用AWS CloudFormation代码执行您在工作负载出厂控制台中定义的操作、以便在您的AWS帐户中对CloudFormation堆栈中的AWS和第三方资源进行建模、配置和管理。</block>
-  <block id="06c2e2277da374dd2cc7b735a1d1e848" category="list-text">*Terraform BlueXP  工作负载工厂提供程序*：使用Terraform构建和管理在工作负载工厂控制台中生成的基础架构工作流。</block>
   <block id="eaaaf380859de755a58a543fbffc3d8a" category="paragraph"><block ref="eaaaf380859de755a58a543fbffc3d8a" category="inline-link-macro-rx"></block></block>
   <block id="1418bddde60a7d4a1fbd71041ef29d36" category="list-text">*GenAI工作负载*：将内部部署的ONTAP卷数据复制到FSx for ONTAP文件系统中，以便可以将这些数据用于<block ref="8b94b70e10f0f6c7944c9419ec9922bc" category="inline-link-macro-rx"></block>。</block>
+  <block id="7583f12b4559f6687c67d8588da1e2f7" category="doc">卷自动增长增强</block>
+  <block id="b57fe4f5ee65a0e01f61993297811ebf" category="paragraph">现在，您可以设置卷的自动增长大小，以便卷大小可以超出业务需求和应用程序要求的预配置大小。</block>
+  <block id="9f1effd9ace68ca00fe9e9e3c024b362" category="inline-link-macro">启用卷自动增长</block>
+  <block id="0177289fb77b50bdfc34ab44aa432a21" category="paragraph"><block ref="0177289fb77b50bdfc34ab44aa432a21" category="inline-link-macro-rx"></block></block>
+  <block id="159687e1c95e32f1dcb6c9c1624ba327" category="section-title">架构完善的分析更新</block>
+  <block id="8500b95246538dfef049532751c1e9f5" category="paragraph">工作负载工厂现在会分析您的 FSx for ONTAP 文件系统，以检查是否正在利用存储效率，包括数据压缩、压缩和重复数据删除。存储效率衡量文件系统利用可用空间的效率。</block>
+  <block id="26e5625f54c5c47a57293d23260101c7" category="inline-link-macro">查看存储效率的良好架构状态</block>
+  <block id="80378f8a6a0c86610258fa79cd78497b" category="paragraph"><block ref="80378f8a6a0c86610258fa79cd78497b" category="inline-link-macro-rx"></block></block>
+  <block id="e4b0d36f0e7c4f3745520d8f27ed510b" category="section-title">存储仪表板增强功能</block>
+  <block id="47586d678be72b51ea7ac193f83c19b2" category="paragraph">从今天开始，当您从工作负载工厂控制台打开存储工作负载时，您将看到“仪表板”。全新设计的仪表板提供 FSx for ONTAP 系统的整体视图，包括文件系统数量、SSD 总容量、架构完善的状态概览、数据保护概览以及复制关系的运行状况。</block>
+  <block id="74d3ed8321cbdac2928290eee4795cef" category="section-title">卷选项卡增强功能</block>
+  <block id="0d25e8e0a888c31329b48ed4a33f98f6" category="paragraph">存储工作负载对工作负载工厂控制台中 FSx for ONTAP 文件系统内的“卷”选项卡进行了增强。增强功能包括：</block>
+  <block id="90a8a55f34e9e967f8619ecc5b0ba92a" category="list-text">*新卡*：SSD 容量、容量池和自主勒索软件防护 (ARP)</block>
+  <block id="f80c9595c105a10d312aac80217ebb84" category="list-text">*新列*：容量分布、已用 SSD 容量、已用容量池和 SSD 效率</block>
+  <block id="92eacda944854c6bfa8676c60aaa4c96" category="section-title">卷创建的存储效率更新</block>
+  <block id="af1e7fa29b343a7d9bd55952a334e8c9" category="paragraph">创建新卷时，默认启用存储效率，包括数据压缩、压缩和重复数据删除。</block>
+  <block id="55321b0c9d5d13d71a60766806796f90" category="inline-link-macro">在工作负载工厂中创建新卷</block>
+  <block id="9257e0b60b0f1cd3867c62713d3370aa" category="paragraph"><block ref="9257e0b60b0f1cd3867c62713d3370aa" category="inline-link-macro-rx"></block></block>
+  <block id="70fc7bb591b365ee183f47900503df43" category="paragraph">未启用长期保留的复制将使用 _MirrorAllSnapshots_ 策略。启用长期保留会将 _MirrorAndVault_ 策略分配给复制。</block>
+  <block id="2057c4b03e98bbdb86c44c6ec3eec31d" category="summary">设置 FSx for ONTAP 文件系统后，在工作负载工厂中创建 FSx for ONTAP 卷。</block>
+  <block id="bb8606f4a66c1f0354653ba69a9e1256" category="doc">在工作负载工厂中创建 FSx for ONTAP 卷</block>
+  <block id="60f5b412bf1c0bf652e02bf44be5dc6f" category="paragraph">设置 FSx for ONTAP 文件系统后，在工作负载工厂中创建 FSx for ONTAP 卷作为用于对数据进行分组的虚拟资源。</block>
+  <block id="0456e4c2545668177705b8072e1b93ba" category="paragraph">FSx for ONTAP 卷以虚拟方式对数据进行分组，确定数据的存储方式，并确定对数据的访问类型。卷不会占用文件系统存储容量。存储在卷中的数据主要占用SSD存储。根据卷的分层策略、数据可能还会占用容量池存储。您可以在创建卷时设置其大小、并可稍后更改其大小。</block>
+  <block id="51d89d2baec646eb989c0ff4fd38d651" category="list-text">卷自动增长：可选启用卷自动增长功能，自动扩展卷容量，直至达到最大容量。此功能可适应不断增长的数据使用量，确保运行不中断。</block>
+  <block id="746dd2fcf8e89b32c19195b26ac96dbf" category="paragraph">指定卷的最大增长大小和单位。最大增长大小不能小于当前卷大小。</block>
+  <block id="67e50725d2f9318432dc7449280446c3" category="list-text">*存储效率*：默认启用。选择此项可禁用该功能。</block>
+  <block id="b796f9c9a5e3021f08d8f0e74890007d" category="summary">启用卷自动增长以让工作负载工厂为您管理卷容量。您可以随时将其禁用。</block>
+  <block id="2753f972110374eb67c560eb5ff6266c" category="doc">在工作负载工厂中启用卷自动增长</block>
+  <block id="870bfc0407fd21936b0eda7ce98ea951" category="list-text">选择*基本操作*，然后选择*设置卷自动增长*。</block>
+  <block id="6f11493010276b8e782926f7cd8ee493" category="list-text">在“设置自动增长”对话框中，启用卷自动增长功能，以自动扩展卷容量，直至达到最大大小。此功能可适应不断增长的数据使用量，确保操作不间断。</block>
+  <block id="6fd69dde99b8a0114b3c69839bb5f201" category="paragraph">启用自动容量管理后，BlueXP 工作负载工厂可以根据容量需求随时间变化自动向 FSx for ONTAP 文件系统添加增量存储。此外，启用此功能无需手动监控容量，并降低了影响应用程序数据读写的风险。</block>
+  <block id="a0ddf9e17030c7c21387932426a4defa" category="list-text">您必须拥有工作负载工厂中具有读/写权限的凭据才能完成此任务。</block>
+  <block id="2063734e5b01a934d73b02ba309a34e6" category="list-text">您不应在数据迁移期间启用此功能，因为 AWS 规定 SSD 容量增加之间至少需要六小时的冷却期。此限制可能会延迟调整，因此请做好相应的规划。</block>
+  <block id="667bda9d5b08fe1666f3fe061ce424aa" category="list-text">FSx for ONTAP 备份</block>
+  <block id="af20abc7154e9ee224c54b48b6ec7d63" category="list-text">存储效率</block>
+  <block id="8d5352cda3351c4fe9fe9f49933c852b" category="paragraph">此时将启动修复问题的过程。选择帐户设置菜单，然后选择*Tracker*查看操作状态。</block>
+  <block id="4957b29fcffeec300ed417debafed722" category="paragraph">以下区域支持高达 6 GB/s 的最大吞吐容量，以进行横向扩展部署：美国东部（弗吉尼亚北部和俄亥俄）、美国西部（加利福尼亚北部和俄勒冈）、欧洲（法兰克福、爱尔兰和斯德哥尔摩）以及亚太地区（新加坡和悉尼）。</block>
+  <block id="58107709be0f763204df69a361ef7fe0" category="list-text">当启用自动容量管理时，需要一个链接来确保卷 inode 随着存储容量一起增加。</block>
+  <block id="af06e2a95bd9706f705a4480e8f40846" category="list-text">*Terraform BlueXP  工作负载工厂提供程序*：使用Terraform构建和管理在工作负载工厂控制台中生成的基础架构工作流。</block>
+  <block id="4aa37f4d9a391345e9a54c68333e2503" category="section-title">2025年6月3日</block>
+  <block id="3f704fe76e8b9e4bf51184f82c064656" category="paragraph"><block ref="03b2cfc949418819e16b1dc5fa3660ae" category="inline-link-macro-rx"></block> == 2025年3月2日</block>
 </blocks>

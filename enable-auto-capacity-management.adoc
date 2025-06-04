@@ -11,7 +11,7 @@ summary: 通过启用此功能、工作负载工厂可以在容量需求随时�
 
 
 [role="lead"]
-通过启用此功能、BlueXP  工作负载工厂可以在容量需求随时间变化时自动向FSx for ONTAP文件系统添加增量存储。
+启用自动容量管理后，BlueXP 工作负载工厂可以根据容量需求随时间变化自动向 FSx for ONTAP 文件系统添加增量存储。此外，启用此功能无需手动监控容量，并降低了影响应用程序数据读写的风险。
 
 .关于此任务
 每30分钟对FSx for ONTAP文件系统进行一次扫描、以确定是否需要添加增量存储并检查卷中的可用卷索引节点或最大文件和文件夹数、以便其计数根据配置的自动容量管理阈值增加。
@@ -21,9 +21,12 @@ summary: 通过启用此功能、工作负载工厂可以在容量需求随时�
 适用于ONTAP文件系统的所有FSx的最大SSD存储容量为524、288 GiB。要申请增加配额、请参见 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html["配额"^] AWS FSx for NetApp ONTAP文档中的。
 
 .开始之前
-要完成此任务、您必须在工作负载工厂拥有具有_Automate权限的凭据。
+开始之前、请考虑以下事项：
 
-要确保卷的Inode随存储容量一起增加，您必须link:manage-links.html["关联链接"]。如果您没有现有链接，请 link:create-link.html["创建链接"]。要关联文件系统中的链接，请选择*Account name*下的*Associate link*。链接关联后、返回此操作。
+* 您必须拥有工作负载工厂中具有读/写权限的凭据才能完成此任务。
+* 要确保卷的Inode随存储容量一起增加，您必须link:manage-links.html["关联链接"]。如果您没有现有链接，请 link:create-link.html["创建链接"]。要关联文件系统中的链接，请选择*Account name*下的*Associate link*。链接关联后、返回此操作。
+* 您不应在数据迁移期间启用此功能，因为 AWS 规定 SSD 容量增加之间至少需要六小时的冷却期。此限制可能会延迟调整，因此请做好相应的规划。
+
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
