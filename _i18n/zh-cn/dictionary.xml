@@ -1917,7 +1917,6 @@
   <block id="58107709be0f763204df69a361ef7fe0" category="list-text">当启用自动容量管理时，需要一个链接来确保卷 inode 随着存储容量一起增加。</block>
   <block id="af06e2a95bd9706f705a4480e8f40846" category="list-text">*Terraform BlueXP  工作负载工厂提供程序*：使用Terraform构建和管理在工作负载工厂控制台中生成的基础架构工作流。</block>
   <block id="4aa37f4d9a391345e9a54c68333e2503" category="section-title">2025年6月3日</block>
-  <block id="3f704fe76e8b9e4bf51184f82c064656" category="paragraph"><block ref="03b2cfc949418819e16b1dc5fa3660ae" category="inline-link-macro-rx"></block> == 2025年3月2日</block>
   <block id="0592779b8245b0df30d4f675dd276086" category="list-text">暂停和恢复复制：您可以暂停(暂停)从源卷到目标卷的计划复制更新、然后在准备就绪后恢复复制计划。在暂停期间，源卷和目标卷变得独立，并且目标卷从只读转换为读/写。</block>
   <block id="4ead5e435cb4f2c7cf627b1d1e84c333" category="paragraph">工作负载工厂用户界面和文档现在使用“只读”来指代读取权限，使用“读/写”来指代自动化权限。</block>
   <block id="bf1eae05016a3b136059039ae18136f1" category="summary">在 BlueXP 工作负载工厂中克隆一个卷，以制作原始卷的读/写卷进行测试。</block>
@@ -1929,4 +1928,12 @@
   <block id="30e57761ad37a97249e7a0876abdd7cc" category="paragraph">恢复复制后、对目标卷所做的所有更改都将撤消、BlueXP  工作负载出厂时会重新启用复制。目标卷从读/写转换为只读，并再次按照计划的复制间隔从源卷接收更新。恢复复制关系后、目标卷将还原到最新的初始复制快照、此时、卷复制过程将重新开始。</block>
   <block id="b91aff97cc4dadbca9539fae72dedecc" category="paragraph">在 _basic_、_read-only_ 和 _read/write_ 之间进行选择<block ref="a1a436caedec06006ef5b76c82a83b04" category="inline-link-macro-rx"></block></block>
   <block id="b31987b3ffb35fe02be38fe9d8e701f1" category="paragraph">如果您在“只读”或“读/写”模式下操作，则需要<block ref="bb44378f07a38aa36833bde05fae1b5d" category="inline-link-macro-rx"></block>其中包括选择工作负载功能（例如数据库和 AI）以及创建 IAM 策略以确保您拥有以_只读_或_读/写_模式操作的正确权限。</block>
+  <block id="2423cc9c7b9124d70e9fba7ab98b53df" category="doc">全新精心设计的分析和问题修复支持</block>
+  <block id="b03b65ae167fa7999b9020739117ae19" category="paragraph">FSx for ONTAP 文件系统的自动容量管理现在作为配置分析包含在精心设计的状态仪表板中。</block>
+  <block id="5a5b21f778da0dbaf4794873b0deb067" category="paragraph">此外，工作负载工厂现在支持修复以下配置问题：</block>
+  <block id="f2be69b635c39988351f6636a52c66bd" category="list-text">自动容量管理</block>
+  <block id="6745decee5065276cebd3695be1fb7bd" category="inline-link-macro">修复配置问题</block>
+  <block id="347dbce3139b58110904a187913fc7e1" category="paragraph"><block ref="347dbce3139b58110904a187913fc7e1" category="inline-link-macro-rx"></block></block>
+  <block id="5a7cf4155ebaa9aec1f33318c7c4cf82" category="section-title">2025年6月8日</block>
+  <block id="2d5a4b914acb6c2f03d312067c73ce32" category="section-title">2025年3月2日</block>
 </blocks>

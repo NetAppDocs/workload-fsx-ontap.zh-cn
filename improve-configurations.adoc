@@ -27,6 +27,7 @@ BlueXP  每天都会分析Amazon FSx for NetApp ONTAP文件系统部署配置�
 * FSx for ONTAP 备份
 * 远程数据复制
 * 存储效率
+* 自动容量管理
 
 
 --
