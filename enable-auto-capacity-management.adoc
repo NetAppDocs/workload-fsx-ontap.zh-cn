@@ -24,7 +24,7 @@ summary: 通过启用此功能、工作负载工厂可以在容量需求随时�
 开始之前、请考虑以下事项：
 
 * 您必须拥有工作负载工厂中具有读/写权限的凭据才能完成此任务。
-* 要确保卷的Inode随存储容量一起增加，您必须link:manage-links.html["关联链接"]。如果您没有现有链接，请 link:create-link.html["创建链接"]。要关联文件系统中的链接，请选择*Account name*下的*Associate link*。链接关联后、返回此操作。
+* 为了确保卷 inode 随着存储容量的增加，您必须关联一个链接。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何关联现有链接或创建并关联新链接"](英文)链接关联后、返回此操作。
 * 您不应在数据迁移期间启用此功能，因为 AWS 规定 SSD 容量增加之间至少需要六小时的冷却期。此限制可能会延迟调整，因此请做好相应的规划。
 
 

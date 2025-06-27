@@ -24,7 +24,7 @@ summary: 为FSx for ONTAP文件系统创建复制关系、以避免在发生意�
 开始之前、请确保满足以下前提条件。
 
 * 要创建复制关系、存储清单中必须有两个可用文件系统。
-* 用于复制关系的两个文件系统必须具有关联的链接。如果文件系统没有现有链接，请 link:create-link.html["首先创建链接"]。要link:manage-links.html["关联链接"]在文件系统中，选择*Account name*下的*Associate*链接。一旦链接在两个文件系统中关联、请返回此操作。
+* 用于复制关系的两个文件系统必须具有关联的链接。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何关联现有链接或创建并关联新链接"](英文)链接关联后、返回此操作。
 
 
 要复制文件系统中的选定卷或复制所有卷、请完成以下步骤。

@@ -79,7 +79,7 @@ image:screenshot-on-prem-connectivity.png["屏幕截图、显示应如何将内�
 .开始之前
 * 您必须发现内部ONTAP集群才能复制其卷数据。
 * 要将适用于ONTAP文件系统的FSx作为复制目标、您必须具有一个可用FSx。
-* 内部ONTAP集群和用于复制关系的FSx for ONTAP文件系统都必须具有关联的链接。如果一个或两个内置集群和FSx for ONTAP集群都没有现有链路，link:create-link.html["首先创建链接"]。要link:manage-links.html["关联链接"]在文件系统中，选择*Account name*下的*Associate*链接。在内部ONTAP集群和FSx for ONTAP文件系统中关联链路后、返回此操作。
+* 内部ONTAP集群和用于复制关系的FSx for ONTAP文件系统都必须具有关联的链接。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何关联现有链接或创建并关联新链接"](英文)链接关联后、返回此操作。
 
 
 .步骤

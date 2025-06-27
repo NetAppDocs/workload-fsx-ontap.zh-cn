@@ -61,7 +61,7 @@ ARP功能会根据Amazon FSx for NetApp ONTAP运行的ONTAP版本自动更新、
 启用ARP后、如果发生攻击且您确定攻击是真实的、BlueXP  工作负载出厂时会自动设置一个快照策略、该策略每四小时最多需要六个快照。每个快照锁定2-5天。
 
 .开始之前
-要为文件系统启用ARP，必须link:manage-links.html["关联链接"]。如果您没有现有链接，请 link:create-link.html["创建链接"]。要关联文件系统中的链接，请选择*Account name*下的*Associate link*。链接关联后、返回此操作。
+要为文件系统启用 ARP，您必须关联一个链接。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何关联现有链接或创建并关联新链接"](英文)链接关联后、返回此操作。
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。

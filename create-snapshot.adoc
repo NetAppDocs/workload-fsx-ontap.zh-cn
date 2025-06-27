@@ -21,7 +21,7 @@ FSx for ONTAP卷使用写时即时复制、因此快照中任何未经修改的�
 NOTE: 快照不是数据的副本。如果要创建数据副本、请考虑使用FSx for ONTAP备份或卷复制功能。
 
 .开始之前
-您必须 link:manage-links.html["关联链接"] 创建快照。如果您没有现有链接，请 link:create-link.html["创建链接"]。要关联文件系统中的链接，请选择*Account name*下的*Associate link*。链接关联后、返回此操作。
+您必须关联一个链接才能创建卷的手动快照。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何关联现有链接或创建并关联新链接"](英文)链接关联后、返回此操作。
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。

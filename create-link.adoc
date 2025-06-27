@@ -40,6 +40,12 @@ NOTE: 使用Connector时不支持AWS的"ConnectOR"管理器。
 .开始之前
 * 您应考虑使用哪种链接创建选项。
 * 您需要在工作负载工厂中至少有一个FSx for ONTAP文件系统。要发现或创建 FSx for ONTAP 文件系统，您必须拥有一个具有 FSx for ONTAP 实例权限的 AWS 账户，并且link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html#overview["在工作负载出厂时添加凭据"^]具有存储管理的_只读_或_读/写_权限。
+* 必须在与 FSx for ONTAP 文件系统关联的安全组中打开以下端口以实现链路连接。
++
+** 对于工作负载工厂控制台：端口 443 (HTTPS)
+** 对于 CloudShell：端口 22 (SSH)
+
+
 * 使用CloudFormation堆栈添加链接时、您的AWS帐户必须具有以下权限：
 +
 [%collapsible]
@@ -206,7 +212,7 @@ NOTE: 使用Connector时不支持AWS的"ConnectOR"管理器。
 
 +
 *** filesystemID = FSx文件系统ID
-*** 用户= FSX_USER
+*** 用户名 = FSx_user
 *** 密码= USER_password
 
 
@@ -242,7 +248,7 @@ NOTE: 使用Connector时不支持AWS的"ConnectOR"管理器。
 此密钥应包含以下有效密钥对：
 
 * filesystemID = FSx文件系统ID
-* 用户= FSX_USER
+* 用户名 = FSx_user
 * 密码= USER_password
 
 

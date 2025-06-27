@@ -34,7 +34,7 @@ NOTE: 仅FlexGroup卷支持重新平衡、iSCSI或NVMe FlexGroup卷则不支持�
 .开始之前
 * FlexGroup卷平衡仅适用于使用至少两个HA对的横向扩展部署的适用于ONTAP文件系统的FSx。
 * 卷模式必须是FlexGroup卷。
-* 要检查FlexGroup卷的平衡情况，您必须link:manage-links.html["关联链接"]。如果您没有现有链接，请 link:create-link.html["创建链接"]。要关联文件系统中的链接，请选择*Account name*下的*Associate link*。链接关联后、返回此操作。
+* 要检查 FlexGroup 卷的余额，您必须关联一个链接。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何关联现有链接或创建并关联新链接"](英文)链接关联后、返回此操作。
 
 
 .步骤
@@ -60,7 +60,7 @@ NOTE: 工作负载出厂管理员可以在此操作期间停止重新平衡。
 
 .开始之前
 * <<检查FlexGroup卷的平衡情况,检查FlexGroup卷的平衡情况>>重新平衡卷之前。
-* 要重新平衡卷，您必须 link:manage-links.html["关联链接"]。如果您没有现有链接，请 link:create-link.html["创建链接"]。要关联文件系统中的链接，请选择*Account name*下的*Associate link*。链接关联后、返回此操作。
+* 要重新平衡卷，您必须关联一个链接。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何关联现有链接或创建并关联新链接"](英文)链接关联后、返回此操作。
 * 请注意、要重新平衡的卷上的现有快照会变为部分快照、不能用于还原卷数据、但在重新平衡后创建的新快照可用于还原卷数据。
 
 

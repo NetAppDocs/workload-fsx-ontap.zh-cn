@@ -2,18 +2,18 @@
 sidebar: sidebar 
 permalink: manage-links.html 
 keywords: links, accounts, lambda, creating, associating, disassociating, deleting, editing 
-summary: 您可以在BlueXP  工作负载出厂时查看与您的帐户关联的链接、关联链接以及删除链接。 
+summary: 您可以查看与您的帐户关联的链接、更新链接验证的密码以及删除 BlueXP 工作负载工厂中的链接。 
 ---
-= 管理BlueXP  工作负载出厂链接
+= 管理工作负载工厂链接
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-管理与BlueXP  工作负载工厂帐户关联的链接。您可以查看与FSx for ONTAP文件系统关联的链接、将链接与FSx for ONTAP文件系统关联、编辑链接以及删除链接。
+管理与工作负载工厂帐户关联的链接。您可以查看与 FSx for ONTAP 文件系统关联的链接、提供用于链接身份验证的密码，以及从工作负载工厂控制台中移除链接。
 
-link:links-overview.html["了解有关链接的更多信息"] 或 link:create-link.html["创建链接"]。
+link:links-overview.html["了解有关链接的更多信息"] 或 link:create-link.html["创建并关联链接"]。
 
 
 

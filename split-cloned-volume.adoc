@@ -28,8 +28,7 @@ summary: 将克隆FlexVol volume从其父卷中拆分、使此克隆成为正常
 .开始之前
 拆分克隆的卷之前、请考虑以下事项：
 
-* 要拆分克隆的卷，必须 link:manage-links.html["关联链接"]。如果您没有现有链接，请 link:create-link.html["创建链接"]。要关联文件系统中的链接，请选择*Account name*下的*Associate link*。链接关联后、返回此操作。
-* 您必须是集群管理员。
+* 要分割克隆卷，您必须关联一个链接。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何关联现有链接或创建并关联新链接"](英文)链接关联后、返回此操作。
 * 拆分操作开始时、FlexClone卷必须处于联机状态。
 * 要成功拆分父卷、此父卷必须联机。
 
