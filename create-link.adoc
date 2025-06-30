@@ -31,10 +31,10 @@ NOTE: 使用Connector时不支持AWS的"ConnectOR"管理器。
 
 关联新链接包括创建和关联。
 
-您有两种创建链接的选项-自动或手动。要创建链接、您需要在AWS帐户中启动AWS CloudFormation堆栈。
+在此工作流程中，您有两种创建链接的选项 - 自动或手动。要创建链接、您需要在AWS帐户中启动AWS CloudFormation堆栈。
 
 * 自动：通过工作负载工厂创建具有自动注册功能的链接。自动创建的链接需要令牌才能实现工作负载工厂自动化、CloudFormation代码生命周期较短。只能使用最多六个小时。
-* 手动：创建包含手动注册的链接。CloudFormation代码持续存在、让您有更多时间完成操作。当与不同的团队(如安全和开发运营团队)合作时、这很有用、因为他们可能首先需要授予完成链接创建所需的权限。
+* 手动：使用 Codebox 中的 CloudFormation 或 Terraform 创建手动注册的链接。代码会保留，以便您有更多时间完成操作。当与不同的团队(如安全和开发运营团队)合作时、这很有用、因为他们可能首先需要授予完成链接创建所需的权限。
 
 
 .开始之前
@@ -110,6 +110,25 @@ NOTE: 使用Connector时不支持AWS的"ConnectOR"管理器。
 +
 *将VPC专用端点配置到AWS秘密管理器*默认处于禁用状态。选择此选项将使用VPC专用端点存储此密钥、而不是将其存储在本地。
 
+.. *链接权限*：选择以下链接权限选项之一：
++
+*** *自动*：选择此选项，以便 AWS CloudFormation 或 Terraform 代码自动创建 Lambda 权限策略和执行角色。
+*** *用户提供*：选择此选项可将指定的 Lambda 执行角色及其附加的策略分配给 Lambda 链接。Lambda需要以下权限。 `secretsmanager:GetSecretValue`仅当您启用 AWS Secrets Manager 时才需要权限。
++
+[source, json]
+----
+"ec2:CreateNetworkInterface",
+"ec2:DescribeNetworkInterfaces",
+"ec2:DeleteNetworkInterface",
+"ec2:AssignPrivateIpAddresses",
+"ec2:UnassignPrivateIpAddresses",
+"secretsmanager:GetSecretValue"
+----
++
+在文本框中输入 Lambda 执行角色 ARN。
+
+
+
 .. *标记*：您可以选择添加要与此链接关联的任何标记、以便更轻松地对资源进行分类。例如、您可以添加一个标记、用于将此链接标识为由FSx for ONTAP文件系统使用。
 +
 系统会根据FSx for ONTAP文件系统自动检索AWS帐户以及帐户、位置和安全组的其他信息。
@@ -142,7 +161,7 @@ NOTE: 使用Connector时不支持AWS的"ConnectOR"管理器。
 --
 .手动创建
 --
-使用此选项、您可以从AWS CloudFormation提取链接的ARN并在此处报告。工作负载出厂时会手动为您注册此链接。
+使用此选项，您可以提取链接的 ARN 并在此处报告。工作负载出厂时会手动为您注册此链接。您可以使用 Codebox 中的两个基础设施即代码 (IaC) 工具创建链接：CloudFormation 或 Terraform。
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
@@ -162,8 +181,27 @@ NOTE: 使用Connector时不支持AWS的"ConnectOR"管理器。
 +
 *将VPC专用端点配置到AWS秘密管理器*默认处于禁用状态。选择此选项将使用VPC专用端点存储此密钥、而不是将其存储在本地。
 
+.. *链接权限*：选择以下链接权限选项之一：
++
+*** *自动*：选择此选项，以便 AWS CloudFormation 或 Terraform 代码自动创建 Lambda 权限策略和执行角色。
+*** *用户提供*：选择此选项可将指定的 Lambda 执行角色及其附加的策略分配给 Lambda 链接。Lambda需要以下权限。 `secretsmanager:GetSecretValue`仅当您启用 AWS Secrets Manager 时才需要权限。
++
+[source, json]
+----
+"ec2:CreateNetworkInterface",
+"ec2:DescribeNetworkInterfaces",
+"ec2:DeleteNetworkInterface",
+"ec2:AssignPrivateIpAddresses",
+"ec2:UnassignPrivateIpAddresses"
+"secretsmanager:GetSecretValue"
+----
++
+在文本框中输入 Lambda 执行角色 ARN。
+
+
+
 .. *标记*：您可以选择添加要与此链接关联的任何标记、以便更轻松地对资源进行分类。例如、您可以添加一个标记、用于将此链接标识为由FSx for ONTAP文件系统使用。
-.. *链接注册*：选择下拉箭头以展开有关如何从AWS CloudFormation服务注册链接的说明。按照说明进行操作。
+.. *链接注册*：选择下拉箭头以展开有关如何从 AWS CloudFormation 服务或使用 Terraform 注册链接的说明。按照说明进行操作。
 +
 请注意、在启动CloudFormation模板时、系统会向Lambdation授予三个权限。工作负载工厂在使用链接时会使用这些权限。
 

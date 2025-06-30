@@ -104,16 +104,8 @@
   <block id="f33ee1d7e309154be1fc329fad0ad653" category="paragraph">您也可以加载已保存的配置。</block>
   <block id="7c6859274ee77ca082be3dcb424a440e" category="list-text">在文件系统常规配置下、提供以下内容：</block>
   <block id="73834661f85b42765d73b7cd61d1475c" category="list-text">*文件系统名称*：输入文件系统的名称。</block>
-  <block id="27db8fcb1cb750024f80a00d143ee777" category="list-text">*部署拓扑*：选择部署拓扑。</block>
-  <block id="e1db87892ddda8bfd0cc92dbf2aa8f28" category="list-text">纵向扩展拓扑是指使用一个文件系统进行数据分发、并可增加文件大小以适应数据增长。</block>
-  <block id="8dc86ca9377774615a191074143b0f0f" category="list-text">横向扩展拓扑使用多个文件系统进行数据分发。</block>
-  <block id="a27de2368abb354633f8d50b9ea7e0a2" category="list-text">*HA对*：输入HA对的数量。</block>
-  <block id="6aad0d457607a641d63a0daca3a0529a" category="list-text">对于纵向扩展部署、只能有一个HA对。</block>
-  <block id="56dcdb97483e2b91ea46d0e3aed1e819" category="list-text">对于横向扩展部署、可以有两到十二个HA对。</block>
   <block id="f22c148b111a19f2c93bf5b1c1cbb2a6" category="list-text">*部署类型*：选择部署类型。</block>
-  <block id="8860331ce66022dce5b0f67e6c8398ab" category="list-text">多可用性区域(Multi-AZ)部署：即使可用性区域不可用、也能持续提供数据。多可用性文件系统支持单可用性文件系统的所有可用性和持久性功能。多可用性文件系统专为业务关键型生产工作负载而设计、这些工作负载要求共享ONTAP文件数据具有高可用性、并需要具有跨可用性区域内置复制功能的存储。</block>
   <block id="a578dfdba57cca5b9cde80a5e42544c6" category="list-text">*标记*：您可以选择最多添加50个标记。</block>
-  <block id="2d65a0ce899e5ca708d5a1002a8d0a1d" category="list-text">在*网络和安全性*下的*区域和VPC*字段中，为文件系统选择区域和VPC。</block>
   <block id="fced9e440363d93f4173eeec105848ba" category="list-text">在*文件系统详细信息*下，提供以下内容：</block>
   <block id="6157c9c13988e3cea6397632d4ceff7e" category="list-text">*SSD存储容量*：输入存储容量并选择存储容量单位。</block>
   <block id="7966c6503cb79e36fabb3ff4e34bd3b0" category="list-text">*SMB/CCIFS设置*：可选。如果您计划使用SMB/CCIFS协议访问卷、则必须在文件系统创建期间为Storage VM配置Active Directory。提供为此文件系统创建的Storage VM的以下详细信息。</block>
@@ -138,8 +130,6 @@
   <block id="b98009df13b6a9c0bd5b540c1d2df378" category="list-text">*端点IP地址范围*：选择VPC*以外的*浮动IP地址范围或*输入IP地址范围*并输入IP地址范围。</block>
   <block id="adf3b9421185cf4dc6b3d80fb9c26d9b" category="list-text">*加密*：从下拉列表中选择加密密钥名称。</block>
   <block id="909443f15178d32af4981d109af80748" category="list-text">在文件系统详细信息下、提供以下内容：</block>
-  <block id="7af916ceff85ab2f29ca490366228701" category="list-text">*已配置IOPs*：选择*自动*或*用户已配置*。</block>
-  <block id="67d537df4a9c97aa749f6724139522f5" category="list-text">*每个HA对的吞吐量*：选择每个HA对的吞吐量容量。</block>
   <block id="31846199ab330eacea22764e7bc1ab7a" category="list-text">在备份和维护下、提供以下内容：</block>
   <block id="5a7b83bad76b38a063667e0b80bd78d6" category="list-text">*FSx for ONTAP Backup*：默认情况下启用每日自动备份。如果需要、请禁用。</block>
   <block id="f009614070b8aab7ff6edcea9473b3dc" category="list-text">*自动备份保留期限*：输入自动备份的保留天数。</block>
@@ -229,7 +219,6 @@
   <block id="b2e658eb3f11776899234dd87caf3823" category="list-text">* Storage VM名称*：(可选)输入Storage VM名称。</block>
   <block id="71a8fe56183b62227c11ca4ce811f166" category="list-text">*卷样式*：选择* FlexVol *或* FlexGroup *卷。</block>
   <block id="cb69a576eebf4d27436ae39122a9562c" category="paragraph">默认情况下、FlexVol卷模式处于选中状态。</block>
-  <block id="266af8c58e652263ed6f4ef9fc36cbbd" category="paragraph">FlexGroup卷大小取决于成分卷的数量。每个成分卷需要100 GiB。</block>
   <block id="ffe3253d848af0e44a26ba39fba69329" category="list-text">*卷大小*：输入卷大小和单位。</block>
   <block id="b46ad6f5a61764c118c979f2583ab630" category="paragraph">(可选)启用卷自动增长。当您选择*文件访问*作为卷访问类型时，此选项可用。</block>
   <block id="53ebc36ae845935202fde349f39b2e17" category="list-text">在"Access"(仅适用于具有关联链接的文件系统)下、提供以下详细信息：</block>
@@ -249,7 +238,6 @@
   <block id="d7452a3655b7342c92f5b56d0b8526ed" category="list-text">输入新启动程序组的*启动程序组名称*。</block>
   <block id="9b990db2de543eb2fd38454ae899ab11" category="list-text">在Host Initiators下、添加一个或多个iSCSI限定名称(iSCSI限定名称、IQN)主机启动程序。</block>
   <block id="8cc48e7c3f902d1b7dd7d0ecb40ade52" category="list-text">在效率和保护下、提供以下详细信息：</block>
-  <block id="4f16f68a6d9522c0d097a900978f6f0d" category="paragraph">可通过利用ONTAP的重复数据删除和数据压缩功能来实现存储效率。重复数据删除可消除重复的数据块。数据压缩可压缩数据块，以减少所需的物理存储量。</block>
   <block id="f03207e238654d36cb2c88950bf22d84" category="list-text">*Snapshot policy*：选择快照策略以指定快照的频率和保留时间。</block>
   <block id="20d2ce456e91b2afd45084ee06baab95" category="list-text">此策略会按照以下计划自动创建快照、并删除最早的快照副本、以便为较新的副本腾出空间：</block>
   <block id="4cd6a004e8e70008213c7c1917f36c49" category="list-text">每小时过五分钟创建最多六个每小时快照。</block>
@@ -706,7 +694,6 @@
   <block id="c7f1094806f4a7907a28dc01a1473f90" category="inline-link-macro">了解如何使用CodeBox实现自动化</block>
   <block id="672d0efbe9223ef23c5fd7d2c7cd4a95" category="paragraph">您可以使用_Quick cre成_或_Advanced cre成_来创建FSx for ONTAP文件系统。您还可以使用CodeBox中提供的以下工具：REST API、CloudFormation和Terraform。<block ref="e0a3467dce43941c7b863cc8d6f0a62a" category="inline-link-macro-rx"></block>(英文)</block>
   <block id="11e2fb5025fdb2cb91fd04c343163328" category="admonition">使用来自CodeBox的Terraform时、您复制或下载的代码会隐藏<block ref="679500f227997b45be97e3ca8115c678" prefix=" " category="inline-code"></block> 和<block ref="6173aa5206484b5224450952747c7148" prefix=" " category="inline-code"></block> 密码。运行代码时、您需要重新输入密码。</block>
-  <block id="9376aafc358c7dd83094603f26235eb3" category="paragraph">已启动卷创建。创建后、新卷将显示在"Volumes"(卷)选项卡中。</block>
   <block id="21e6ab9737790ab1abc18e49091d3c18" category="paragraph">下图直观地展示了使用快照、跨区域复制以及备份到对象存储来保护FSx for ONTAP存储的数据。</block>
   <block id="90388f794d575e628df271470a4b766e" category="inline-image-macro">屏幕截图显示了使用快照、跨区域复制以及备份到对象存储来保护FSx for ONTAP存储的数据。</block>
   <block id="29bed1477f8a04f4f702564c7e6bb224" category="paragraph"><block ref="29bed1477f8a04f4f702564c7e6bb224" category="inline-image-macro-rx" type="image"></block></block>
@@ -841,7 +828,6 @@
   <block id="8c5d091eb8bf13bd59184903f020f95c" category="paragraph">请注意、在启动CloudFormation模板时、系统会向Lambdation授予三个权限。工作负载工厂在使用链接时会使用这些权限。</block>
   <block id="4d4e41a17abafe417449016add2ee0bd" category="list-text">选择*创建堆栈*，然后选择*继续*。</block>
   <block id="e5942758c1bbae9768e2935841e7ca7a" category="list-text">返回到工作负载出厂界面、您将看到此链接与FSx for ONTAP文件系统关联。</block>
-  <block id="9d1d72e4ac9c59d5a464cfdbfae095f3" category="paragraph">使用此选项、您可以从AWS CloudFormation提取链接的ARN并在此处报告。工作负载出厂时会手动为您注册此链接。</block>
   <block id="7607cf6a75040d1b9bf8fde1cfaecf12" category="doc">在BlueXP  工作负载出厂时创建复制关系</block>
   <block id="161fc7b1d67184a50e10e19fb2489263" category="paragraph">在BlueXP  工作负载工厂中为FSx for ONTAP文件系统创建复制关系、以避免在发生意外灾难时丢失数据。</block>
   <block id="215ff1ada74bcc801bd4be406a4760b9" category="paragraph">_Auto_是使用工作负载工厂FSx for ONTAP用户界面创建卷时的默认分层策略。有关卷分层策略的详细信息、请参阅 <block ref="de51d392f5d252a956349995f441f55c" category="inline-link-macro-rx"></block>AWS FSx for NetApp ONTAP文档中的。</block>
@@ -854,7 +840,6 @@
   <block id="55a23b72fe4aee5e2f0024c790d7eaba" category="paragraph">从BlueXP  工作负载出厂时的快照创建新的FSx for ONTAP卷、以启用时间点恢复。</block>
   <block id="8d34a33f34659b0ea11833ac0b8fac52" category="list-text">在*FSx for ONTAP选项卡中，选择包含卷快照的文件系统的三点菜单，然后选择*Manage*。</block>
   <block id="3ce528a1818baf0bbf2f6b362b1f7d58" category="list-text">在卷选项卡中、选择包含要创建卷的快照的卷的三点菜单。</block>
-  <block id="d5d682292e122fa36db263f49a714cc7" category="list-text">工作负载出厂时必须具有FSx for ONTAP文件系统。</block>
   <block id="72ce63a6bef6ec13ef74a7eab0012469" category="summary">FSx for ONTAP在BlueXP  工作负载出厂时支持快照、卷备份和卷复制。</block>
   <block id="96a5899d90dd9b81319f168f67bcb5ae" category="summary">要在BlueXP  工作负载出厂时删除文件系统、必须先删除与该文件系统关联的任何卷、Storage VM或复制关系。</block>
   <block id="378213b58b31bfb9d173e8b2ad3c0968" category="doc">在BlueXP  工作负载出厂时删除文件系统</block>
@@ -1048,7 +1033,6 @@
   <block id="06e52dae2c3e09e69a906c2fba89ed66" category="paragraph">获取卷在CIFS共享或NFS客户端上挂载共享的挂载点。</block>
   <block id="4a6574ab96645d28cf548ed8372c655c" category="list-text">从卷选项卡中，选择卷的三点菜单，然后依次选择*Basic Actions*和*View mount command*。</block>
   <block id="4a553bf9ebe9a32a6743c78be912cfbc" category="list-text">选择 * 关闭 * 。</block>
-  <block id="0206587910cd5147f80c048ba00193af" category="paragraph">要在文件系统上配置iSCSI块卷、请选择不超过6个HA对。</block>
   <block id="f3b270238d8c3f46a0b10d724c916e7d" category="list-text">*最大传输速率*：选择*受限*并输入最大传输限制(单位：MiB/秒)或者，选择*Unlimited (无限制)*。</block>
   <block id="5ef8b0a1c66a4b2210971848d2ce9752" category="paragraph">复制关系显示在目标FSx for ONTAP文件系统的*复制关系*选项卡中。</block>
   <block id="c866bd28f46aae4b063d835d59832e65" category="list-text">*CIFS共享*：提供以下内容：</block>
@@ -1242,7 +1226,6 @@
   <block id="10de4bc81f754b19b0d27246a0589c05" category="list-text">注意</block>
   <block id="1e6fe3169d6df99dc6e4d89c3f0ca701" category="list-text">即使保留期限到期、您也无法修改WORM文件。您只能将其删除或设置新的保留期限以重新启用WORM保护。</block>
   <block id="00c161f0779702fcc736833a90e1c117" category="list-text">自动完成</block>
-  <block id="0710e9c5903cc398ef1a22a38cbb4666" category="list-text">您可以选择启用自动提交功能。如果文件在自动提交期限内未发生更改、则自动提交功能会将文件提交到SnapLock卷上的WORM状态。默认情况下、自动提交功能处于禁用状态。要自动提交的文件必须驻留在 SnapLock 卷上。</block>
   <block id="f84002cfa8aafdd6963aef9819f03cbe" category="list-text">卷附加模式</block>
   <block id="73085bf5d4b4c2626026794741768c09" category="inline-link-macro">了解有关卷附加模式的更多信息</block>
   <block id="f70318a7f623a49e77262fc2b382b062" category="list-text">您不能修改受WORM保护的文件中的现有数据。但是、通过不可改变的文件、您可以使用WORM可附加文件来保护现有数据。例如、您可以生成日志文件或保留音频或视频流数据、同时以增量方式向这些数据写入数据。<block ref="d363aab3c17dd7b08ef55d9ecb5c0afa" category="inline-link-macro-rx"></block>在Amazon FSx for NetApp ONTAP文档中。</block>
@@ -1314,10 +1297,8 @@
   <block id="fc81b1e4233a48b719520033e56b4194" category="paragraph"><block ref="fc81b1e4233a48b719520033e56b4194" category="inline-link-macro-rx"></block></block>
   <block id="fd8693cf8f6802fd1c7d50d5742a4c71" category="section-title">Tracker中的CloudShell事件</block>
   <block id="e7a6197673267c30b5dc86e0d5f6c536" category="paragraph">现在、您可以在Tracker中跟踪CloudShell事件。</block>
-  <block id="8b6bca394ded2ad4bd57d5b7e1b13873" category="paragraph">要在文件系统上配置iSCSI块卷、请选择不超过六个HA对。</block>
   <block id="cf5df8345ca5f203e0f805460b558155" category="list-text">单可用性区域(单可用性区域、单可用性)部署：通过监控硬件故障来提供可用性、并在发生故障时自动更换基础架构组件。通过在可用性区域中自动复制数据以防止其发生组件故障、实现高持久性。</block>
   <block id="65122529e27ab1e34a08fc55d0f38a93" category="list-text">自动：通过工作负载工厂创建具有自动注册功能的链接。自动创建的链接需要令牌才能实现工作负载工厂自动化、CloudFormation代码生命周期较短。只能使用最多六个小时。</block>
-  <block id="b1a94bb6f0b93b26134ff88823a75e78" category="list-text">手动：创建包含手动注册的链接。CloudFormation代码持续存在、让您有更多时间完成操作。当与不同的团队(如安全和开发运营团队)合作时、这很有用、因为他们可能首先需要授予完成链接创建所需的权限。</block>
   <block id="99f375ee1d56d1983309c071fe9cb69a" category="paragraph">目标文件系统中复制的卷是数据保护(DP)卷，命名格式如下：<block ref="4b5beb37da0fa6444b7f9f92238aadb1" prefix=" " category="inline-code"></block>。</block>
   <block id="df4c98f43132ebd68d92a0c9822984df" category="list-text">在复制数据页面上的复制目标下、提供以下内容：</block>
   <block id="0cbe076a4ce5208b10cdb81c9e175006" category="list-text">*选择现有策略*：从下拉菜单中选择现有策略。</block>
@@ -1349,7 +1330,6 @@
   <block id="a07e25b28678b53fe808a082369fda80" category="paragraph">此卷具有一个Snapshot副本。</block>
   <block id="86ee35c0029c920dce9ef56d88935e8e" category="paragraph">卷可能会使用以下协议：</block>
   <block id="8feb9be2f7d30e723f1c8aa899250dae" category="list-text">*块访问*：允许运行关键业务应用程序的主机使用iSCSI协议访问卷。只有当文件系统横向扩展部署包含六个或更少的HA对时、才能使用块访问。</block>
-  <block id="ad5ae1649d193a804147218da52fd8ad" category="list-text">*immutable files*：默认情况下、此功能(也称为SnapLock)处于禁用状态。启用不可删除文件可防止在指定时间段内删除或覆盖数据。只有在创建卷期间才能启用此功能。启用此功能后、将无法禁用它。这是FSx for ONTAP的一项高级功能、需要额外付费。有关详细信息、请参阅<block ref="e334cd66539db07681f218968c17aeb4" category="inline-link-macro-rx"></block>Amazon FSx for NetApp ONTAP文档中的。</block>
   <block id="f122287653386d74229199bd670f4990" category="list-text">保留期限有两项设置-_保留 策略_和_保留 期限_。retri力policy_定义 了文件在不可固定的WORM状态下保留多长时间。您可以指定自己的保留策略或使用默认保留策略(未指定)、即30年。最小值和最大值_保留期限_用于定义允许锁定文件的时间范围。</block>
   <block id="35728d1f4ec13c002da573ba8e7069f7" category="list-text">选中相应框以同意并继续。</block>
   <block id="71377237946a16cc4981e8007b83be9b" category="list-text">选择 * 启用 * 。</block>
@@ -1432,19 +1412,10 @@
   <block id="924b3daa7ecef370ff9a603b3208772b" category="paragraph">如果手动配置IOPS，则可能需要在之前增加IOPS<block ref="94a3285243f3705d6ad038b61125cb2f" category="inline-link-macro-rx"></block>。</block>
   <block id="3a3c8188eae554af0e7f07bfef2e124b" category="summary">检查并重新平衡卷的容量、以避免随着时间的推移而出现不平衡。</block>
   <block id="8083bd6761abe4735ad26f9c18899032" category="doc">检查并重新平衡卷的容量</block>
-  <block id="270753bb6aea2d40b94194b021e500ae" category="paragraph">检查FlexGroup卷容量的平衡并重新平衡卷容量、以便在所有成分卷之间均匀分布文件、以便所有节点都参与单个Flex Group卷的工作负载。</block>
-  <block id="8d52048ef57a4217559a7ca3e0deeefa" category="paragraph">FlexGroup卷容量分布在具有两个或更多高可用性(HA)对的适用于ONTAP的横向扩展FSx文件系统中的多个成分卷上。每个成分卷都是一个容器、用于指定单个文件的最大大小。FSx for ONTAP以均匀的方式将文件分布在所有成分卷上、以便所有节点都参与单个FlexGroup卷的工作负载。</block>
   <block id="04533b4edf31c61772ef483585fb29cf" category="paragraph">检查FlexGroup卷容量的平衡情况包括评估成分卷的当前布局。在重新平衡卷的容量时、BlueXP  工作负载工厂会设计一个包含偶数成分卷的新成分卷布局、以便在所有HA对之间均匀分布数据。该服务将执行重新平衡计划、进而改进读取和写入操作。</block>
-  <block id="d394f348c0b6fbd4e88b415bafdbea68" category="section-title">检查FlexGroup卷的平衡情况</block>
-  <block id="1cc1dda63f89374c05c8b8f5c8126341" category="paragraph">检查活动FlexGroup卷的平衡情况。</block>
   <block id="eeaecacdda76be13c8594ef17a7c395c" category="list-text">FlexGroup卷平衡仅适用于使用至少两个HA对的横向扩展部署的适用于ONTAP文件系统的FSx。</block>
-  <block id="480a98de796f5eb054e749dedf2dbce3" category="list-text">卷模式必须是FlexGroup卷。</block>
   <block id="a0c24c81835ca446fe958b4abdb6c08c" category="list-text">从卷选项卡中，选择表顶部的*检查FlexGroup平衡*。</block>
-  <block id="8b7b54e191e5f6ab54dc9475259af500" category="list-text">在FlexGroup平衡窗口中、查看FSx for ONTAP文件系统中所有FlexGroup卷的平衡状态。</block>
   <block id="1997a93792e2a8be597c246f39ee9fd5" category="inline-xref">重新平衡它</block>
-  <block id="6b59c2a4df281550186d4d3fc75ba6d5" category="paragraph">如果FlexGroup卷不平衡，请考虑<block ref="59031c1bf074b0ee450445a716c796e8" category="inline-xref-macro-rx"></block>。</block>
-  <block id="1fd02848e48f953c62155cbb42dd331b" category="section-title">重新平衡FlexGroup卷</block>
-  <block id="64de3f9223f666126336ac4c9a3aa94d" category="paragraph"><block ref="1f11182db84cfb1742cc746fa76f8fe6" category="inline-xref-macro-rx"></block>重新平衡卷之前。</block>
   <block id="ceb833d216db0e056b9ab7d22ba4f023" category="paragraph">如果没有限制、网络和应用程序性能可能会下降。或者、对于关键工作负载(例如、主要用于灾难恢复的工作负载)、我们建议对用于ONTAP文件系统的FSx使用无限传输速率。</block>
   <block id="c4ee13228c56b3c8a94bcef6d8d6d357" category="summary">将克隆FlexVol volume从其父卷中拆分、使此克隆成为正常的读/写FlexVol volume。</block>
   <block id="c04185e8791b4a9dde9952d191aff02c" category="paragraph">将克隆的FlexVol volume从其父卷中拆分、使此克隆在BlueXP  工作负载出厂时成为正常读/写FlexVol volume。</block>
@@ -1676,14 +1647,12 @@
   <block id="3909315ab3cc8353eec0cd02ce0845da" category="admonition">使用Connector时不支持AWS的"ConnectOR"管理器。</block>
   <block id="2c1b9e7969c6e96f38bd871fc9f26ae1" category="section-title">关联新链接</block>
   <block id="05a2e668e80fd3ace12e9585ebc06578" category="paragraph">关联新链接包括创建和关联。</block>
-  <block id="ec19cf5bb597b8c81392ce26e30276fe" category="paragraph">您有两种创建链接的选项-自动或手动。要创建链接、您需要在AWS帐户中启动AWS CloudFormation堆栈。</block>
   <block id="695199449ad50832d8cff3be92e812b3" category="inline-link-macro">在工作负载出厂时添加凭据</block>
   <block id="2f1cd483ab7b6144b733f5155b2026c6" category="list-text">在*FSx for ONTAP Link*选项卡中，选择要关联链接的文件系统的三点菜单，然后选择*Associate link*。</block>
   <block id="29abae1dabc3d83e30cbe456ae214256" category="list-text">*AWS SeslogManager*：可选。允许工作负载工厂从AWS密码管理器提取FSx for ONTAP访问凭据。</block>
   <block id="13ecd4f9bb62f6c0730c8f136a58fb36" category="paragraph">链路部署堆栈会将以下默认机密管理器ARN正则表达式添加到Lamb代 权限策略中：<block ref="218d5bbe44642244cc57db37477be310" prefix=" " category="inline-code"></block>。</block>
   <block id="de786693aed7955f1cb538f51e25f7d6" category="paragraph">您可以根据默认权限创建机密、也可以为链接策略分配自定义权限。</block>
   <block id="49af4dcead2678507453b9bff6c332f1" category="paragraph">*将VPC专用端点配置到AWS秘密管理器*默认处于禁用状态。选择此选项将使用VPC专用端点存储此密钥、而不是将其存储在本地。</block>
-  <block id="c1123c7a8501a00beea0820a4f4b2f90" category="list-text">*链接注册*：选择下拉箭头以展开有关如何从AWS CloudFormation服务注册链接的说明。按照说明进行操作。</block>
   <block id="c3b24be1571207cf6200f2d8b54ee7c0" category="paragraph">成功创建堆栈后、将Lamb编制ARN粘贴到文本框中。</block>
   <block id="91744aea42b1e1eb3b5b0f486498fe3c" category="paragraph">您创建的链接与FSx for ONTAP文件系统关联。您可以执行高级ONTAP操作。</block>
   <block id="48457d7f94975228307244f863f96fee" category="section-title">将现有链接与FSx for ONTAP文件系统相关联</block>
@@ -1820,10 +1789,6 @@
   <block id="ce812f613f07996b313f45414329b88e" category="sidebar">实施文件系统最佳实践</block>
   <block id="e6dcf40c0e3ce889fc9c5c061867f960" category="sidebar">FSx for ONTAP的配置分析</block>
   <block id="77aaaafa70c293a92472a80015bece8b" category="paragraph">如果成分卷未均匀分布在所有节点上、则FlexGroup卷性能会下降。</block>
-  <block id="ae622e3b9df5d2fe3f644c0dba928e66" category="paragraph">当由于添加新文件和文件增长而导致逐渐出现不平衡时、重新平衡卷会重新分布容量。手动启动重新平衡操作后、我们会选择文件并自动无中断地移动它们。卷传输操作会占用文件系统资源。</block>
-  <block id="8a348b83eb54b8869c9afef29caffc5e" category="admonition">仅FlexGroup卷支持重新平衡、iSCSI或NVMe FlexGroup卷则不支持重新平衡。</block>
-  <block id="dea985c157083fcf289f38e7ab4aede0" category="paragraph">重新平衡一个或多个不平衡的卷。数据在成员卷之间重新分布以重新平衡FlexGroup卷。根据您喜欢的数据分发布局、重新平衡操作可能会添加FlexGroup成员卷并增加已配置卷的大小。</block>
-  <block id="6a0d7c16b4c559c5dc9c875e37641a9c" category="admonition">工作负载出厂管理员可以在此操作期间停止重新平衡。</block>
   <block id="5fdec390c6be629fa932553e2fe5cb25" category="list-text">请注意、要重新平衡的卷上的现有快照会变为部分快照、不能用于还原卷数据、但在重新平衡后创建的新快照可用于还原卷数据。</block>
   <block id="930dade8556383009e0018f93aeb74bc" category="list-text">在FlexGroup平衡窗口中、选择*重新平衡*以重新平衡一个或多个不平衡的卷。</block>
   <block id="48d59fcf4b8606ffc1ea7c49fae9c2b9" category="list-text">在重新平衡向导中、选择您喜欢的数据分布布局。</block>
@@ -1837,7 +1802,6 @@
   <block id="5ad2de3bf91266caa9759e836ce832b5" category="list-text">FSx for ONTAP布局比较</block>
   <block id="897bea1a5ca479178427004f773ee72e" category="list-text">(可选)在重新平衡之前下载卷移动列表。</block>
   <block id="703547df715082455f8920d78fe90a30" category="list-text">选择*重新平衡*。</block>
-  <block id="dc3d2b1db09a8cee9576c2df34eba7b1" category="paragraph">根据添加到FlexGroup中的FlexGroup成员卷的数量、一次只能执行一个FlexGroup卷成员移动操作。操作完成后、文件系统将被控制回原始值。</block>
   <block id="4b50901597179fa075617d96ccf51901" category="list-text">*工作负载工厂控制台*：工作负载工厂控制台提供应用程序和项目的可视化、整体视图。</block>
   <block id="590410b3a112ba2f531f9aae44e29ed1" category="list-text">BlueXP  console*：BlueXP  控制台提供了混合接口体验，因此您可以将BlueXP  工作负载出厂配置与其他BlueXP  服务结合使用。</block>
   <block id="62c5120220d244bd5e611d7c4459b5c5" category="list-text">*问我*：使用"问我人工智能"助手提出问题并了解有关工作负载工厂的更多信息、而无需退出工作负载工厂Web UI。从工作负载出厂帮助菜单访问"询问我"。</block>
@@ -1933,9 +1897,129 @@
   <block id="00c1c06957f8f476507e7c8eab416ca3" category="paragraph">您必须关联一个链接才能分配快照策略。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>(英文)链接关联后、返回此操作。</block>
   <block id="f25575fb26d63d8bebf4c5a568518443" category="paragraph">您必须关联一个链接才能删除快照策略。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>(英文)链接关联后、返回此操作。</block>
   <block id="aef6ece6593a117983fcd0b9e27b2a94" category="paragraph">要为文件系统启用 ARP，您必须关联一个链接。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>(英文)链接关联后、返回此操作。</block>
-  <block id="1f217123f7d99348330184951007bc1c" category="list-text">要检查 FlexGroup 卷的余额，您必须关联一个链接。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>(英文)链接关联后、返回此操作。</block>
-  <block id="44b1a8a590c7561bdb240a720d2d9aaa" category="list-text">要重新平衡卷，您必须关联一个链接。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>(英文)链接关联后、返回此操作。</block>
   <block id="2ccb6b87f6c03ced811ff29d2a5f5ede" category="paragraph">要将存储虚拟机复制到另一个 FSx for ONTAP 文件系统，您必须关联一个链接。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>(英文)链接关联后、返回此操作。</block>
   <block id="99ae6104ba82455197d215357b50f2f1" category="list-text">要分割克隆卷，您必须关联一个链接。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>(英文)链接关联后、返回此操作。</block>
   <block id="21bd8c562c1d6ae4caf8a36f6d06c516" category="list-text">内部ONTAP集群和用于复制关系的FSx for ONTAP文件系统都必须具有关联的链接。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>(英文)链接关联后、返回此操作。</block>
+  <block id="562c87a680d962135f8e44bc0d159259" category="list-text">* Storage VM名称*：从下拉菜单中选择Storage VM。您选择的存储虚拟机是此复制关系中所有选定卷的目标。</block>
+  <block id="11f24c2a8c13499208f4d69098436bd2" category="paragraph">如果没有限制、网络和应用程序性能可能会下降。或者、对于关键工作负载(例如、主要用于灾难恢复的工作负载)、我们建议对用于ONTAP文件系统的FSx使用无限传输速率。。在复制设置下、提供以下内容：</block>
+  <block id="fca40712560cec2d2b7a47110cfecda1" category="list-text">*创建新策略*：输入*策略名称*。</block>
+  <block id="0546ab198c101c424e412d1355272bcd" category="list-text">*不可变快照*：可选。选择*启用不可更改的快照*以防止在保留期间删除此策略中创建的快照。</block>
+  <block id="64c17706e0528a5c44c7beee628cc101" category="doc">BlueXP 工作负载工厂通知服务支持</block>
+  <block id="c0ae6f0ec7cb1322a1c6b72f77e783f2" category="paragraph">BlueXP 工作负载工厂通知服务支持工作负载工厂向 BlueXP 警报服务或 Amazon SNS 主题发送通知。发送到 BlueXP 警报的通知会显示在 BlueXP 警报面板中。当工作负载工厂向 Amazon SNS 主题发布通知时，该主题的订阅者（例如人员或其他应用程序）会在为该主题配置的终端节点上收到通知（例如电子邮件或短信）。</block>
+  <block id="76490568879e4523bb6bd6d8263472a9" category="inline-link-macro">配置 BlueXP 工作负载工厂通知</block>
+  <block id="a10c281531128badfefa7086b353ead0" category="paragraph"><block ref="a10c281531128badfefa7086b353ead0" category="inline-link-macro-rx"></block></block>
+  <block id="16608889ffd4210e3527b28d2cabeee1" category="paragraph">工作负载工厂控制台中的存储控制面板新增了节省机会卡片。控制面板顶部的卡片显示在 Amazon Elastic Block Store (EBS)、Amazon FSx for Windows File Server 和 Amazon Elastic File Systems (EFS) 上运行的存储环境的节省机会数量。控制面板底部新增了三张卡片，按 Amazon 存储服务（EBS、FSx for Windows File Server 和 EFS）显示节省机会。您可以从所有卡片中更详细地了解节省机会。</block>
+  <block id="e2fc557edefb4b2854999f60dbd0d379" category="paragraph">通过 FSx for ONTAP 保护覆盖率卡和复制关系健康卡，您可以调查 FSx for ONTAP 文件系统中是否存在任何部分受保护的卷，以及调查复制关系的问题。在这两种情况下，您都可以采取措施来解决问题。</block>
+  <block id="34ccfe489231e34890602e4f0419b843" category="section-title">音量选项卡增强功能</block>
+  <block id="f659fbcb502240d4138a6337d4da17d5" category="paragraph">工作负载工厂控制台中的“卷”选项卡已得到增强，可提供更全面的 FSx for ONTAP 文件系统视图。增强功能包括新增 SSD 容量、容量池以及 NetApp 自主勒索软件防护 AI (ARP/AI) 卡。这些卡汇总了文件系统中所有卷的容量利用率和 ARP/AI 防护功能。</block>
+  <block id="7efd44dd06c377a68f3fc78abf7d91fb" category="paragraph">工作负载工厂现已支持第二代 Amazon FSx for NetApp ONTAP 文件系统。您可以在工作负载工厂控制台中创建、管理和监控第二代文件系统。所有新的商业区域均受支持。</block>
+  <block id="cd0ce691a9b616ae8983f22db2fb8a6d" category="inline-link-macro">在工作负载工厂中创建第二代文件系统</block>
+  <block id="f784f74601a71805db546f7b6842f0e5" category="paragraph"><block ref="f784f74601a71805db546f7b6842f0e5" category="inline-link-macro-rx"></block></block>
+  <block id="094caa4bbbbdba779d6ef8c57b995856" category="section-title">FlexVol 卷支持重新平衡卷容量</block>
+  <block id="ab0d60978b39ce0cb886ec1fbf91bad8" category="paragraph">FlexVol 卷可在工作负载工厂控制台中发现。您可以检查 FlexVol 卷的平衡情况，并在新文件的添加和文件增长导致不平衡时重新平衡 FlexVol 卷以重新分配容量。</block>
+  <block id="226bb141f0b474b8b8d4e55bfe659a94" category="inline-link-macro">重新平衡 FlexVol 卷的容量</block>
+  <block id="7f11a5de29d58c93cc212be8cf51b761" category="paragraph"><block ref="7f11a5de29d58c93cc212be8cf51b761" category="inline-link-macro-rx"></block></block>
+  <block id="d7581ee541e7cfa51fd2f75f93b7e64e" category="section-title">术语更新</block>
+  <block id="6e0c2d8cb551de024f6700ca0407257e" category="paragraph">在工作负载工厂控制台中，“自主勒索软件防护”(ARP) 一词已更新为“带 AI 的 NetApp 自主勒索软件防护”(ARP/AI)。</block>
+  <block id="d474538a7c98b462c08197d24f7c1c60" category="section-title">新卷默认启用 ARP/AI</block>
+  <block id="6a3bf8c141dbbeed37af8236f412b19a" category="paragraph">在工作负载工厂控制台中创建新卷时，如果文件系统具有 ARP/AI 策略，则 NetApp 自主勒索软件防护 AI (ARP/AI) 将默认启用。这意味着该卷将使用 AI 驱动的检测和响应功能自动防御勒索软件攻击。</block>
+  <block id="7e0b28b27ce3985a4a8d693330a04cb7" category="inline-link-macro">在工作负载工厂中创建卷</block>
+  <block id="3bf76f3556904b928c43201c04108364" category="paragraph"><block ref="3bf76f3556904b928c43201c04108364" category="inline-link-macro-rx"></block></block>
+  <block id="442d07125b5c2363eae9c33039172225" category="section-title">对不可变文件的复制支持</block>
+  <block id="6250cd311debe5758acc69f81921ab78" category="paragraph">工作负载工厂支持将不可变卷从一个 FSx for ONTAP 系统复制到另一个 FSx for ONTAP 文件系统，以保护关键数据免遭意外删除或勒索软件等恶意攻击。目标卷及其主机文件系统将处于不可变状态（即锁定状态），并且在保留期结束之前，目标文件系统中的任何数据都无法修改或删除。</block>
+  <block id="b6fc33d7434bb860ad528753113881b1" category="inline-link-macro">了解如何创建复制关系</block>
+  <block id="d3dbddfb353eaaa957947efb04ca7013" category="paragraph"><block ref="d3dbddfb353eaaa957947efb04ca7013" category="inline-link-macro-rx"></block></block>
+  <block id="d836bf4f72557e9399ce062e72ef15f6" category="section-title">链接创建增强功能</block>
+  <block id="1f8ca754f0193efb8fdc1c63a4d96672" category="paragraph">工作负载工厂控制台中的链接创建过程进行了以下增强。</block>
+  <block id="bdd7f454c54673987f53c40f8e5b8072" category="paragraph"><block ref="bdd7f454c54673987f53c40f8e5b8072" category="inline-link-macro-rx"></block></block>
+  <block id="5c44c7d986372ccb1d679985b5416b64" category="section-title">在链接创建期间管理 IAM 执行角色和权限</block>
+  <block id="43f8bec3c8d83ff27c8f5d629cd49d4d" category="paragraph">现在，您可以在工作负载工厂控制台中创建链接，从而管理 IAM 执行角色及其附加的权限策略。链接会在您的工作负载工厂账户与一个或多个 FSx for ONTAP 文件系统之间建立连接。您可以通过两种方式分配 IAM 执行角色和链接权限：自动分配或用户分配。在工作负载工厂中管理执行角色及其附加的权限策略意味着您无需再使用第三方代码。</block>
+  <block id="f83708b425052a7f19c02dfd5c3d0688" category="section-title">Terraform 支持链接创建</block>
+  <block id="d993aa63b5e96ec8db4090bd87d5c850" category="paragraph">您现在可以使用 Codebox 中的 Terraform 创建与 FSx for ONTAP 文件系统关联的链接。此功能适用于手动创建链接的用户。</block>
+  <block id="2cb3ea55d484ee81bd75e230c32b7fcd" category="paragraph">第二代 FSx for ONTAP 文件系统是默认部署类型。当区域不支持第二代 FSx for ONTAP 文件系统时，部署类型将切换为第一代。</block>
+  <block id="cc7023e1e70f83f63ba0c94135b83c2d" category="paragraph">对于高性能工作负载，或者当工作负载从小规模开始并逐步扩展到 72 GB/s 的吞吐量和 240 万 IOPS 时，建议使用此配置。</block>
+  <block id="ce920fde7af8f67cbfd1ca3e8efd6b91" category="list-text">多可用性区域(Multi-AZ)部署：即使可用性区域不可用、也能持续提供数据。多可用性文件系统专为业务关键型生产工作负载而设计、这些工作负载要求共享ONTAP文件数据具有高可用性、并需要具有跨可用性区域内置复制功能的存储。</block>
+  <block id="fc22ff32bfac4486f50da9af2033830e" category="paragraph">对于需要高达 6 GB/s 吞吐量或 200,000 IOPS 的工作负载，建议使用此单 HA 对配置。</block>
+  <block id="87839b96284704d104c8e445d0cfb887" category="list-text">对于第一代部署，您无法在创建文件系统后减少容量。</block>
+  <block id="8d4ad9a0aaca41b1aa7122cb909588a7" category="list-text">对于第二代部署，您可以在创建文件系统后增加容量。</block>
+  <block id="a2841b4c7bc0c058832e81b45f756892" category="list-text">*部署类型*：选择部署类型和文件系统生成。</block>
+  <block id="d790be978976d563ba38a969cce78e04" category="paragraph">*文件系统代数*：选择以下选项之一：** *第二代*：此配置适用于高性能工作负载，或工作负载从小规模开始，逐步扩展到 72 GB/s 吞吐量和 240 万 IOPS 的情况。** *第一代*：此配置非常适合需要高达 4 GB/s 吞吐量或 16 万 IOPS 的工作负载。第一代文件系统只能增加容量。</block>
+  <block id="0db3110a95d1dfd82b55d5dde656871c" category="paragraph">+ 第二代文件系统的可用性取决于所选区域。如果所选区域不支持第二代 FSx for ONTAP 文件系统，则部署类型将切换为第一代。</block>
+  <block id="5ee057335585da70af1caca368e4e422" category="list-text">*第二代*：对于需要高达 6 GB/s 吞吐量或 200,000 IOPS 的工作负载，建议使用此单 HA 对配置。在多可用区和第二代文件系统中，容量可以根据工作负载需求增加或减少。</block>
+  <block id="272021095e67d1fdf73f94aa211e4e56" category="list-text">*第一代*：此配置非常适合需要高达 4 GB/s 或 160,000 IOPS 的工作负载。第一代文件系统只能增加容量。</block>
+  <block id="912e83b52cf2a4421217bf96185e618a" category="paragraph">第二代文件系统的可用性取决于所选区域。如果所选区域不支持第二代 FSx for ONTAP 文件系统，则部署类型将切换为第一代。</block>
+  <block id="7ef603b4e7f8efb6252e42ef0745f9cc" category="list-text">对于第二代部署，您可以调整容量。</block>
+  <block id="6eb76be6a5409fb6f547e3cf3944cfe6" category="list-text">*每个 HA 对的吞吐容量*：选择每个 HA 对的吞吐容量。第一代文件系统仅支持一个 HA 对。</block>
+  <block id="ee6e43b0904c4672da5651009001b259" category="list-text">*预配置 IOPS*：选择以下选项之一：</block>
+  <block id="2c8c409e84df8a5368e9fc203dacd0e0" category="list-text">*自动*：对于自动操作，每创建 1 GiB，就会添加 3 IOPS。</block>
+  <block id="080138c9fde9abc63b7003839106198b" category="list-text">*用户配置*：对于用户配置，输入 IOPS 值。</block>
+  <block id="7392fd7ce1aac825ec2bdccdf93b5ad8" category="paragraph">在此工作流程中，您有两种创建链接的选项 - 自动或手动。要创建链接、您需要在AWS帐户中启动AWS CloudFormation堆栈。</block>
+  <block id="228b634c3bcbb5ddb0e529d6144522f7" category="list-text">手动：使用 Codebox 中的 CloudFormation 或 Terraform 创建手动注册的链接。代码会保留，以便您有更多时间完成操作。当与不同的团队(如安全和开发运营团队)合作时、这很有用、因为他们可能首先需要授予完成链接创建所需的权限。</block>
+  <block id="2f33e5a4fe58163ac0df8f3b097df4db" category="list-text">*链接权限*：选择以下链接权限选项之一：</block>
+  <block id="4c0e4494d278c08e2a1d6707604575a3" category="list-text">*自动*：选择此选项，以便 AWS CloudFormation 或 Terraform 代码自动创建 Lambda 权限策略和执行角色。</block>
+  <block id="dd9c72ad3bbeb047b573638ce62d0cc6" category="list-text">*用户提供*：选择此选项可将指定的 Lambda 执行角色及其附加的策略分配给 Lambda 链接。Lambda需要以下权限。<block ref="e6b67e3118c0caaf2206ab3d3fba8d67" prefix=" " category="inline-code"></block>仅当您启用 AWS Secrets Manager 时才需要权限。</block>
+  <block id="5f3b3b380e02766e8ad7eca5c6b37840" category="paragraph">在文本框中输入 Lambda 执行角色 ARN。</block>
+  <block id="cc5c21be990be307574e5fa4cb773c44" category="paragraph">使用此选项，您可以提取链接的 ARN 并在此处报告。工作负载出厂时会手动为您注册此链接。您可以使用 Codebox 中的两个基础设施即代码 (IaC) 工具创建链接：CloudFormation 或 Terraform。</block>
+  <block id="e151c7c26f691694d417720f8986d3fa" category="list-text">*链接注册*：选择下拉箭头以展开有关如何从 AWS CloudFormation 服务或使用 Terraform 注册链接的说明。按照说明进行操作。</block>
+  <block id="38adbad92c37166c4ce64da1eb51513b" category="inline-link-macro">创建卷</block>
+  <block id="32c902b48618ff09c74311dc0eadacf8" category="paragraph">复制包含不可变文件的源卷时，目标卷和文件系统将被锁定，直到源卷中不可变文件的保留期结束。不可变文件功能在以下情况下可用： <block ref="40da211f809bc6c9e6163aa605349c18" category="inline-link-macro-rx"></block>用于 FSx for ONTAP 文件系统。</block>
+  <block id="5001625507c3b9f08fdabbe789030cf8" category="list-text">您必须在工作负载工厂控制台中拥有 FSx for ONTAP 文件系统。</block>
+  <block id="1626bc194a1c6fb76d8a47eba39add09" category="paragraph">FlexGroup 卷大小取决于组成部分的数量，每个组成部分需要 100 GiB。</block>
+  <block id="f80d67f0a6951b3f6c1185e7c7f39c30" category="paragraph">指定卷的最大增长大小和单位。不能将最大增长大小设置为小于当前卷大小</block>
+  <block id="d932719afe063ca8fcfe0eb63f1b6ec9" category="paragraph">ONTAP 使用重复数据删除和压缩功能实现存储效率。重复数据删除可消除重复的数据块。数据压缩可压缩数据块，以减少所需的物理存储量。</block>
+  <block id="6952a6e9eef7bbc8ef4fe836a4a3851a" category="list-text">*immutable files*：默认情况下、此功能(也称为SnapLock)处于禁用状态。启用不可变文件可防止在一定时期内删除或覆盖数据。只有在创建卷期间才能启用此功能。启用此功能后、将无法禁用它。这是FSx for ONTAP的一项高级功能、需要额外付费。有关详细信息、请参阅<block ref="e334cd66539db07681f218968c17aeb4" category="inline-link-macro-rx"></block>Amazon FSx for NetApp ONTAP文档中的。</block>
+  <block id="7d10dca5001535e91f75cecae3291907" category="list-text">您可以选择启用自动提交功能。如果文件在自动提交期限内未发生更改、则自动提交功能会将文件提交到SnapLock卷上的WORM状态。默认情况下、自动提交功能处于禁用状态。您必须确保要自动提交的文件位于 SnapLock 卷上。</block>
+  <block id="9d083d8cac2f7524236aec0400de23bf" category="inline-link-macro">了解有关 ARP/AI 的更多信息</block>
+  <block id="cb0b32de8b019bb1df747d59de75707b" category="list-text">*ARP/AI*：当链接与文件系统关联时，NetApp 自主勒索软件保护与 AI (ARP/AI) 默认启用。<block ref="c4c4beca7d4846b88f49bf491b5261f6" category="inline-link-macro-rx"></block>(英文)接受陈述以继续。</block>
+  <block id="f6f1c3f8f0f62507f18da1fcf460ade4" category="paragraph">如果该功能不可用，则可能是由于以下原因之一：</block>
+  <block id="9e46846308a6940deed12bb97a4f8290" category="list-text">链接与文件系统无关联。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>(英文)链接关联后、返回此操作。</block>
+  <block id="7c3e31cda0e937f8fa1edeeb89e9fe70" category="list-text">ARP/AI 不支持具有不可变文件的卷以及具有 iSCSI 和 NVMe 协议的卷。</block>
+  <block id="df1195db43983cb33962d0fe23f28da4" category="list-text">文件系统已具有 ARP/AI 策略。</block>
+  <block id="0bce1227be581635db9bb209f22cf4e6" category="paragraph">工作负载工厂启动卷创建。创建完成后，系统会在“卷”选项卡中显示新卷。</block>
+  <block id="817a91472106a30911a7a081b0284ff7" category="paragraph">检查 FlexVol 或 FlexGroup 卷容量的平衡，并重新平衡卷容量，以将文件均匀分布在节点中的所有 FlexVol 卷或所有组成部分之间，以便所有节点都参与单个 FlexGroup 卷的工作负载。</block>
+  <block id="46119f30376fd007e4806359f116810d" category="paragraph">FlexVol 卷和 FlexGroup 卷支持重新平衡卷容量。当由于添加新文件和文件增长而导致逐渐出现不平衡时、重新平衡卷会重新分布容量。手动启动重新平衡操作后、我们会选择文件并自动无中断地移动它们。卷传输操作会占用文件系统资源。</block>
+  <block id="bbf6fdac51a56da72339e09ef6a7537c" category="paragraph">每种卷类型和重新平衡操作均有不同，如下所示。</block>
+  <block id="7d98517078b732298ebd050c16b0fdc2" category="list-text">FlexVol 卷</block>
+  <block id="31af9ccdfe896bb37c979ba564b11fea" category="list-text">FlexVol 卷是一种逻辑容器，能够灵活地管理数据，支持扩展、收缩、移动和高效复制。它们适用于 NAS 和 SAN 环境。</block>
+  <block id="0a29aedc128f13168b556b842596de7a" category="paragraph">在 FSx for ONTAP 文件系统中，一个 FlexVol 卷可以与一个节点内的其他 FlexVol 卷进行平衡。如果文件系统只有一个 FlexVol 卷，则无法进行重新平衡。当文件系统每个节点有多个 FlexVol 卷并且选择了单个 FlexVol 卷时，该 FlexVol 卷会在所有 FlexVol 卷的上下文中进行平衡，但只允许移动选定的卷。</block>
+  <block id="ee1ef6cf0f3971b44eb2abcac958fb8d" category="list-text">FlexGroup 卷</block>
+  <block id="86b9c6b8527a6bfd7d511bcbb627ca68" category="list-text">另一方面，FlexGroup 卷是可扩展的 NAS 容器，旨在实现高性能和自动负载分配。它们由多个成员卷（组成部分）组成，这些成员卷透明地共享流量。FlexGroup卷提供海量容量，超越 FlexVol 的限制，最高可达 60PB 容量和 4000 亿个文件。它们通过提供单一命名空间容器来简化管理。</block>
+  <block id="a1d763e9c6395bb77325bcad5657ce9e" category="paragraph">容量分布在具有两个或更多高可用性 (HA) 对的横向扩展 FSx for ONTAP 文件系统的多个组成部分中。每个成分卷都是一个容器、用于指定单个文件的最大大小。FSx for ONTAP以均匀的方式将文件分布在所有成分卷上、以便所有节点都参与单个FlexGroup卷的工作负载。</block>
+  <block id="d3ba2e7d0644f59c9834f36ad9a37bd9" category="admonition">iSCSI 和 NVMe 等 SAN 卷不支持重新平衡。</block>
+  <block id="287fd51e17b8ed83911f0acd39496c50" category="section-title">检查您的交易量余额</block>
+  <block id="7e42e168316583c933d50f5311ce6477" category="paragraph">检查 FSx for ONTAP 文件系统中 FlexVol 或 FlexGroup 卷的平衡。</block>
+  <block id="0691d778f09d713a755463d05ab1033d" category="inline-link-macro">创建链接</block>
+  <block id="53e6259fd019f47a663995e674152f8b" category="list-text">要检查卷的余额，您必须<block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block> 。如果您没有现有链接，请 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。要关联文件系统中的链接，请选择*Account name*下的*Associate link*。链接关联后、返回此操作。</block>
+  <block id="45e5ba6ed73eebcebdfec708c137cf22" category="list-text">在 *FSx for ONTAP* 选项卡中，选择包含要重新平衡的卷的文件系统的三点菜单，然后选择 *管理*。</block>
+  <block id="267c95738d47a09a9b509ffdd48c24b0" category="list-text">从“卷”选项卡中，选择表格顶部的“检查卷余额”。</block>
+  <block id="c9784b38284a9b2506bc92daf5caada4" category="list-text">在“交易量平衡”窗口中，查看以下平衡状态：</block>
+  <block id="9a3d2d6c726db403f30b520ca6d8d906" category="paragraph">当音量不平衡时，请考虑<block ref="25db360314c219183817d2ed1029436b" category="inline-xref-macro-rx"></block> 。</block>
+  <block id="ba51913935bc9e57b04a0e373c7e87f1" category="section-title">重新平衡卷容量</block>
+  <block id="81ac132d7a72ac8930eac72f996dc39f" category="paragraph">重新平衡一个或多个不平衡的卷。</block>
+  <block id="3df496910d7ade34c46b7c3c46f516a9" category="inline-xref">停止重新平衡</block>
+  <block id="f47b90b03a7f25fd35e2825621faa855" category="admonition">工作负载工厂管理员可以<block ref="6089e6bc679073f1388a01bc136ad00e" category="inline-xref-macro-rx"></block>在操作过程中。</block>
+  <block id="6884c9c0713962c7d0a4fabd1cf49a6d" category="inline-xref">检查卷的余额</block>
+  <block id="63acfaf1d07db652bff37bddaa4ba8bc" category="list-text"><block ref="65ac8887e886c8e0446817b3710e8cbe" category="inline-xref-macro-rx"></block>重新平衡卷之前。</block>
+  <block id="af7202b99122b0c2ef1b703335afeef9" category="list-text">要重新平衡卷，您必须 <block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>。如果您没有现有链接，请 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。要关联文件系统中的链接，请选择*Account name*下的*Associate link*。链接关联后、返回此操作。</block>
+  <block id="dfaf4c319f7d24ec55b76a7ae4393e62" category="list-text">最好将 FlexVol 卷全部重新平衡，以便均匀地平衡所有卷资源。取消选定的卷不会主动参与平衡过程。</block>
+  <block id="934baa9ec98e8fc4a616d393737537e5" category="open-title">FlexVol volume</block>
+  <block id="8b101e32193fcbdd503f49081b4a7e4b" category="paragraph">在 FSx for ONTAP 文件系统中，一个 FlexVol 卷可以与同一节点内的其他 FlexVol 卷进行平衡。当文件系统每个节点有多个 FlexVol 卷且选择了单个 FlexVol 卷时，该 FlexVol 卷会在所有 FlexVol 卷的上下文中进行平衡，但只允许移动选定的卷。</block>
+  <block id="6f661bbcda098033b451092f4a6ad605" category="list-text">在卷平衡窗口中，可以选择 FlexVol 平衡摘要中的“*数据分布*”来查看每个聚合的已用容量。</block>
+  <block id="9388053fc7637e1b4eeafe0e5f530ed9" category="list-text">选择“*重新平衡*”以重新平衡一个或多个不平衡的卷。</block>
+  <block id="55a113edd3b1fddca38ad33867469ee2" category="list-text">在重新平衡向导中，按照以下步骤操作。</block>
+  <block id="1b6fa01b1905bacdf0b0c88ed8c711a5" category="list-text">*最大传输速率*：可选。默认情况下处于禁用状态。启用限制可限制文件系统上卷移动的带宽、并降低传出卷复制流量的速度。</block>
+  <block id="e6cd86d61f4639c8a27006c6c29b3e9f" category="paragraph">选择 * 下一步 * 。</block>
+  <block id="914a13175eb38a00a409b234495d1ead" category="list-text">查看所有 FlexVol 卷的当前和建议布局，然后选择*下一步*。</block>
+  <block id="33b8c7e1b045d53ac3c40b2eb179b423" category="list-text">在开始重新平衡操作之前，请仔细检查将会发生什么以及注意事项。</block>
+  <block id="42562a733c7eca9d2d470234bf796a63" category="paragraph">FlexVol 卷已重新平衡。操作完成后、文件系统将被控制回原始值。</block>
+  <block id="e9db3004828d9514fafc57881dfbdbd2" category="open-title">FlexGroup 卷</block>
+  <block id="5b1fc9c914ecf6dbfaba061abccfa814" category="paragraph">数据在成员卷之间重新分布以重新平衡FlexGroup卷。根据您选择的布局，重新平衡操作可能会添加 FlexGroup 成员卷并增加已配置卷的大小。</block>
+  <block id="e0bdf1ac64eadae8c51a5f7d28c4ec5e" category="paragraph">在重新平衡期间，FlexGroup 成员卷一次移动一个。操作完成后、文件系统将被控制回原始值。</block>
+  <block id="394c3cbc7af42de2232348150c226506" category="section-title">停止卷重新平衡操作</block>
+  <block id="c371881847612e2caaaab71efa80ae17" category="paragraph">随时停止重新平衡操作；这不会造成中断。停止操作会中止正在进行的卷移动。</block>
+  <block id="8ad4014ece1ab12d9aff2e57b1c1f323" category="paragraph">您可以稍后开始另一个重新平衡操作。</block>
+  <block id="9e37c13416b5ae00943c0a3e0a5515e1" category="list-text">开始重新平衡操作后，从卷平衡页面选择*停止重新平衡*。</block>
+  <block id="e1c8bb61c19d6ae0db6ae5e69616299c" category="list-text">在停止重新平衡对话框中，选择*停止*。</block>
+  <block id="dacae3a3d22c24a7e5e2a28664e1043d" category="paragraph">卷重新平衡操作停止并且活动卷移动中止。</block>
+  <block id="7454fc4c14df2a987637928e569efe3a" category="section-title">2025年6月29日</block>
 </blocks>

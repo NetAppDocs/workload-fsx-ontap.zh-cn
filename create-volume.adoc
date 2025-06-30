@@ -26,7 +26,7 @@ FSx for ONTAP 卷以虚拟方式对数据进行分组，确定数据的存储方
 .开始之前
 创建卷之前、请查看以下前提条件：
 
-* 工作负载出厂时必须具有FSx for ONTAP文件系统。
+* 您必须在工作负载工厂控制台中拥有 FSx for ONTAP 文件系统。
 * 您必须具有Storage VM。
 * 要访问协议、请完成以下操作：
 +
@@ -58,7 +58,7 @@ NOTE: 使用来自CodeBox的Terraform时、您复制或下载的代码会隐藏 
 默认情况下、FlexVol卷模式处于选中状态。
 
 +
-FlexGroup卷大小取决于成分卷的数量。每个成分卷需要100 GiB。
+FlexGroup 卷大小取决于组成部分的数量，每个组成部分需要 100 GiB。
 
 .. *卷大小*：输入卷大小和单位。
 +
@@ -66,7 +66,7 @@ FlexGroup卷大小取决于成分卷的数量。每个成分卷需要100 GiB。
 
 .. 卷自动增长：可选启用卷自动增长功能，自动扩展卷容量，直至达到最大容量。此功能可适应不断增长的数据使用量，确保运行不中断。
 +
-指定卷的最大增长大小和单位。最大增长大小不能小于当前卷大小。
+指定卷的最大增长大小和单位。不能将最大增长大小设置为小于当前卷大小
 
 .. *标记*：您可以选择最多添加50个标记。
 
@@ -125,9 +125,35 @@ FlexGroup卷大小取决于成分卷的数量。每个成分卷需要100 GiB。
 +
 .. *存储效率*：默认启用。选择此项可禁用该功能。
 +
-可通过利用ONTAP的重复数据删除和数据压缩功能来实现存储效率。重复数据删除可消除重复的数据块。数据压缩可压缩数据块，以减少所需的物理存储量。
+ONTAP 使用重复数据删除和压缩功能实现存储效率。重复数据删除可消除重复的数据块。数据压缩可压缩数据块，以减少所需的物理存储量。
 
-.. *immutable files*：默认情况下、此功能(也称为SnapLock)处于禁用状态。启用不可删除文件可防止在指定时间段内删除或覆盖数据。只有在创建卷期间才能启用此功能。启用此功能后、将无法禁用它。这是FSx for ONTAP的一项高级功能、需要额外付费。有关详细信息、请参阅link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html["SnapLock的工作原理"^]Amazon FSx for NetApp ONTAP文档中的。
+.. *Snapshot policy*：选择快照策略以指定快照的频率和保留时间。
++
+以下是AWS的默认策略。对于自定义快照策略，您必须link:link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["关联链接"] 。
+
++
+`default`:: 此策略会按照以下计划自动创建快照、并删除最早的快照副本、以便为较新的副本腾出空间：
++
+--
+*** 每小时过五分钟创建最多六个每小时快照。
+*** 星期一到星期六午夜后10分钟最多创建两个每日快照。
+*** 每个星期日午夜后15分钟创建的每周快照数最多为两个。
++
+
+NOTE: 快照时间基于文件系统的时区、默认为协调世界时(UTC)。有关更改时区的信息、请参阅 link:https://library.netapp.com/ecmdocs/ECMP1155684/html/GUID-E26E4C94-DF74-4E31-A6E8-1D2D2287A9A1.html["显示和设置系统时区"^] NetApp支持文档中的。
+
+
+
+--
+`default-1weekly`:: 此策略的工作方式与此策略相同 `default` 、只是仅保留每周计划中的一个快照。
+`none`:: 此策略不会创建任何快照。您可以将此策略分配给卷、以防止自动创建快照。
+
+
+.. *分层策略*：为卷中存储的数据选择分层策略。
++
+使用工作负载出厂控制台创建卷时、默认分层策略为_Balanced (Auto)_。有关卷分层策略的详细信息、请参阅 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["卷存储容量"^] AWS FSx for NetApp ONTAP文档中的。请注意、工作负载工厂在工作负载工厂控制台中使用基于用例的名称来执行分层策略、并将FSx for ONTAP分层策略名称括在圆括号中。
+
+.. *immutable files*：默认情况下、此功能(也称为SnapLock)处于禁用状态。启用不可变文件可防止在一定时期内删除或覆盖数据。只有在创建卷期间才能启用此功能。启用此功能后、将无法禁用它。这是FSx for ONTAP的一项高级功能、需要额外付费。有关详细信息、请参阅link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html["SnapLock的工作原理"^]Amazon FSx for NetApp ONTAP文档中的。
 +
 启用不可更改文件功能会将此卷中的文件永久提交到不可更改的WORM (一次写入、多次读取)状态。
 
@@ -147,7 +173,7 @@ FlexGroup卷大小取决于成分卷的数量。每个成分卷需要100 GiB。
 
 
 --
-自动完成:: 您可以选择启用自动提交功能。如果文件在自动提交期限内未发生更改、则自动提交功能会将文件提交到SnapLock卷上的WORM状态。默认情况下、自动提交功能处于禁用状态。要自动提交的文件必须驻留在 SnapLock 卷上。
+自动完成:: 您可以选择启用自动提交功能。如果文件在自动提交期限内未发生更改、则自动提交功能会将文件提交到SnapLock卷上的WORM状态。默认情况下、自动提交功能处于禁用状态。您必须确保要自动提交的文件位于 SnapLock 卷上。
 卷附加模式:: 您不能修改受WORM保护的文件中的现有数据。但是、通过不可改变的文件、您可以使用WORM可附加文件来保护现有数据。例如、您可以生成日志文件或保留音频或视频流数据、同时以增量方式向这些数据写入数据。link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/worm-state.html#worm-state-append["了解有关卷附加模式的更多信息"^]在Amazon FSx for NetApp ONTAP文档中。
 +
 --
@@ -179,31 +205,15 @@ FlexGroup卷大小取决于成分卷的数量。每个成分卷需要100 GiB。
 --
 
 
-.. *Snapshot policy*：选择快照策略以指定快照的频率和保留时间。
+.. *ARP/AI*：当链接与文件系统关联时，NetApp 自主勒索软件保护与 AI (ARP/AI) 默认启用。link:https://docs.netapp.com/us-en/workload-fsx-ontap/ransomware-protection.html["了解有关 ARP/AI 的更多信息"](英文)接受陈述以继续。
 +
-以下是AWS的默认策略。对于自定义快照策略，您必须link:link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["关联链接"] 。
+如果该功能不可用，则可能是由于以下原因之一：
 
 +
-`default`:: 此策略会按照以下计划自动创建快照、并删除最早的快照副本、以便为较新的副本腾出空间：
-+
---
-*** 每小时过五分钟创建最多六个每小时快照。
-*** 星期一到星期六午夜后10分钟最多创建两个每日快照。
-*** 每个星期日午夜后15分钟创建的每周快照数最多为两个。
-+
+*** 链接与文件系统无关联。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何关联现有链接或创建并关联新链接"](英文)链接关联后、返回此操作。
+*** ARP/AI 不支持具有不可变文件的卷以及具有 iSCSI 和 NVMe 协议的卷。
+*** 文件系统已具有 ARP/AI 策略。
 
-NOTE: 快照时间基于文件系统的时区、默认为协调世界时(UTC)。有关更改时区的信息、请参阅 link:https://library.netapp.com/ecmdocs/ECMP1155684/html/GUID-E26E4C94-DF74-4E31-A6E8-1D2D2287A9A1.html["显示和设置系统时区"^] NetApp支持文档中的。
-
-
-
---
-`default-1weekly`:: 此策略的工作方式与此策略相同 `default` 、只是仅保留每周计划中的一个快照。
-`none`:: 此策略不会创建任何快照。您可以将此策略分配给卷、以防止自动创建快照。
-
-
-.. *分层策略*：为卷中存储的数据选择分层策略。
-+
-使用工作负载出厂控制台创建卷时、默认分层策略为_Balanced (Auto)_。有关卷分层策略的详细信息、请参阅 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["卷存储容量"^] AWS FSx for NetApp ONTAP文档中的。请注意、工作负载工厂在工作负载工厂控制台中使用基于用例的名称来执行分层策略、并将FSx for ONTAP分层策略名称括在圆括号中。
 
 
 
@@ -218,4 +228,4 @@ NOTE: 快照时间基于文件系统的时区、默认为协调世界时(UTC)。
 
 
 .结果
-已启动卷创建。创建后、新卷将显示在"Volumes"(卷)选项卡中。
+工作负载工厂启动卷创建。创建完成后，系统会在“卷”选项卡中显示新卷。
