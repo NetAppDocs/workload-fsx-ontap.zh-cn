@@ -1929,13 +1929,9 @@
   <block id="6250cd311debe5758acc69f81921ab78" category="paragraph">工作负载工厂支持将不可变卷从一个 FSx for ONTAP 系统复制到另一个 FSx for ONTAP 文件系统，以保护关键数据免遭意外删除或勒索软件等恶意攻击。目标卷及其主机文件系统将处于不可变状态（即锁定状态），并且在保留期结束之前，目标文件系统中的任何数据都无法修改或删除。</block>
   <block id="b6fc33d7434bb860ad528753113881b1" category="inline-link-macro">了解如何创建复制关系</block>
   <block id="d3dbddfb353eaaa957947efb04ca7013" category="paragraph"><block ref="d3dbddfb353eaaa957947efb04ca7013" category="inline-link-macro-rx"></block></block>
-  <block id="d836bf4f72557e9399ce062e72ef15f6" category="section-title">链接创建增强功能</block>
-  <block id="1f8ca754f0193efb8fdc1c63a4d96672" category="paragraph">工作负载工厂控制台中的链接创建过程进行了以下增强。</block>
   <block id="bdd7f454c54673987f53c40f8e5b8072" category="paragraph"><block ref="bdd7f454c54673987f53c40f8e5b8072" category="inline-link-macro-rx"></block></block>
   <block id="5c44c7d986372ccb1d679985b5416b64" category="section-title">在链接创建期间管理 IAM 执行角色和权限</block>
   <block id="43f8bec3c8d83ff27c8f5d629cd49d4d" category="paragraph">现在，您可以在工作负载工厂控制台中创建链接，从而管理 IAM 执行角色及其附加的权限策略。链接会在您的工作负载工厂账户与一个或多个 FSx for ONTAP 文件系统之间建立连接。您可以通过两种方式分配 IAM 执行角色和链接权限：自动分配或用户分配。在工作负载工厂中管理执行角色及其附加的权限策略意味着您无需再使用第三方代码。</block>
-  <block id="f83708b425052a7f19c02dfd5c3d0688" category="section-title">Terraform 支持链接创建</block>
-  <block id="d993aa63b5e96ec8db4090bd87d5c850" category="paragraph">您现在可以使用 Codebox 中的 Terraform 创建与 FSx for ONTAP 文件系统关联的链接。此功能适用于手动创建链接的用户。</block>
   <block id="2cb3ea55d484ee81bd75e230c32b7fcd" category="paragraph">第二代 FSx for ONTAP 文件系统是默认部署类型。当区域不支持第二代 FSx for ONTAP 文件系统时，部署类型将切换为第一代。</block>
   <block id="cc7023e1e70f83f63ba0c94135b83c2d" category="paragraph">对于高性能工作负载，或者当工作负载从小规模开始并逐步扩展到 72 GB/s 的吞吐量和 240 万 IOPS 时，建议使用此配置。</block>
   <block id="ce920fde7af8f67cbfd1ca3e8efd6b91" category="list-text">多可用性区域(Multi-AZ)部署：即使可用性区域不可用、也能持续提供数据。多可用性文件系统专为业务关键型生产工作负载而设计、这些工作负载要求共享ONTAP文件数据具有高可用性、并需要具有跨可用性区域内置复制功能的存储。</block>
@@ -1954,12 +1950,10 @@
   <block id="2c8c409e84df8a5368e9fc203dacd0e0" category="list-text">*自动*：对于自动操作，每创建 1 GiB，就会添加 3 IOPS。</block>
   <block id="080138c9fde9abc63b7003839106198b" category="list-text">*用户配置*：对于用户配置，输入 IOPS 值。</block>
   <block id="7392fd7ce1aac825ec2bdccdf93b5ad8" category="paragraph">在此工作流程中，您有两种创建链接的选项 - 自动或手动。要创建链接、您需要在AWS帐户中启动AWS CloudFormation堆栈。</block>
-  <block id="228b634c3bcbb5ddb0e529d6144522f7" category="list-text">手动：使用 Codebox 中的 CloudFormation 或 Terraform 创建手动注册的链接。代码会保留，以便您有更多时间完成操作。当与不同的团队(如安全和开发运营团队)合作时、这很有用、因为他们可能首先需要授予完成链接创建所需的权限。</block>
   <block id="2f33e5a4fe58163ac0df8f3b097df4db" category="list-text">*链接权限*：选择以下链接权限选项之一：</block>
   <block id="4c0e4494d278c08e2a1d6707604575a3" category="list-text">*自动*：选择此选项，以便 AWS CloudFormation 或 Terraform 代码自动创建 Lambda 权限策略和执行角色。</block>
   <block id="dd9c72ad3bbeb047b573638ce62d0cc6" category="list-text">*用户提供*：选择此选项可将指定的 Lambda 执行角色及其附加的策略分配给 Lambda 链接。Lambda需要以下权限。<block ref="e6b67e3118c0caaf2206ab3d3fba8d67" prefix=" " category="inline-code"></block>仅当您启用 AWS Secrets Manager 时才需要权限。</block>
   <block id="5f3b3b380e02766e8ad7eca5c6b37840" category="paragraph">在文本框中输入 Lambda 执行角色 ARN。</block>
-  <block id="cc5c21be990be307574e5fa4cb773c44" category="paragraph">使用此选项，您可以提取链接的 ARN 并在此处报告。工作负载出厂时会手动为您注册此链接。您可以使用 Codebox 中的两个基础设施即代码 (IaC) 工具创建链接：CloudFormation 或 Terraform。</block>
   <block id="e151c7c26f691694d417720f8986d3fa" category="list-text">*链接注册*：选择下拉箭头以展开有关如何从 AWS CloudFormation 服务或使用 Terraform 注册链接的说明。按照说明进行操作。</block>
   <block id="38adbad92c37166c4ce64da1eb51513b" category="inline-link-macro">创建卷</block>
   <block id="32c902b48618ff09c74311dc0eadacf8" category="paragraph">复制包含不可变文件的源卷时，目标卷和文件系统将被锁定，直到源卷中不可变文件的保留期结束。不可变文件功能在以下情况下可用： <block ref="40da211f809bc6c9e6163aa605349c18" category="inline-link-macro-rx"></block>用于 FSx for ONTAP 文件系统。</block>
@@ -1993,7 +1987,6 @@
   <block id="45e5ba6ed73eebcebdfec708c137cf22" category="list-text">在 *FSx for ONTAP* 选项卡中，选择包含要重新平衡的卷的文件系统的三点菜单，然后选择 *管理*。</block>
   <block id="267c95738d47a09a9b509ffdd48c24b0" category="list-text">从“卷”选项卡中，选择表格顶部的“检查卷余额”。</block>
   <block id="c9784b38284a9b2506bc92daf5caada4" category="list-text">在“交易量平衡”窗口中，查看以下平衡状态：</block>
-  <block id="9a3d2d6c726db403f30b520ca6d8d906" category="paragraph">当音量不平衡时，请考虑<block ref="25db360314c219183817d2ed1029436b" category="inline-xref-macro-rx"></block> 。</block>
   <block id="ba51913935bc9e57b04a0e373c7e87f1" category="section-title">重新平衡卷容量</block>
   <block id="81ac132d7a72ac8930eac72f996dc39f" category="paragraph">重新平衡一个或多个不平衡的卷。</block>
   <block id="3df496910d7ade34c46b7c3c46f516a9" category="inline-xref">停止重新平衡</block>
@@ -2022,4 +2015,8 @@
   <block id="e1c8bb61c19d6ae0db6ae5e69616299c" category="list-text">在停止重新平衡对话框中，选择*停止*。</block>
   <block id="dacae3a3d22c24a7e5e2a28664e1043d" category="paragraph">卷重新平衡操作停止并且活动卷移动中止。</block>
   <block id="7454fc4c14df2a987637928e569efe3a" category="section-title">2025年6月29日</block>
+  <block id="b1a94bb6f0b93b26134ff88823a75e78" category="list-text">手动：创建包含手动注册的链接。CloudFormation代码持续存在、让您有更多时间完成操作。当与不同的团队(如安全和开发运营团队)合作时、这很有用、因为他们可能首先需要授予完成链接创建所需的权限。</block>
+  <block id="9d1d72e4ac9c59d5a464cfdbfae095f3" category="paragraph">使用此选项、您可以从AWS CloudFormation提取链接的ARN并在此处报告。工作负载出厂时会手动为您注册此链接。</block>
+  <block id="80b014e5654af87ea5edcdf6ec223a6d" category="list-text">*自动*：选择此选项，以便 AWS CloudFormation 代码自动创建 Lambda 权限策略和执行角色。</block>
+  <block id="ff1dfe8b36206663d4bf870113dc19d6" category="paragraph">当音量不平衡时，请考虑<block ref="ef2b4a1f9f61a730aafc8bb66fd04b9b" category="inline-xref-macro-rx"></block> 。</block>
 </blocks>

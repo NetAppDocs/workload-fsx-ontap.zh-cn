@@ -61,7 +61,7 @@ NOTE: iSCSI 和 NVMe 等 SAN 卷不支持重新平衡。
 ** FlexGroup 卷
 ** FlexVol 卷
 +
-当音量不平衡时，请考虑<<Rebalance a volume,重新平衡它>> 。
+当音量不平衡时，请考虑<<重新平衡卷容量,重新平衡它>> 。
 
 
 
