@@ -102,7 +102,7 @@ sidebar:
         url: "/manage-immutable-files.html"
       - title: 管理卷标记
         url: "/manage-volume-tags.html"
-      - title: 重新平衡卷的容量
+      - title: 重新平衡卷容量
         url: "/rebalance-volume.html"
       - title: 更改层策略
         url: "/change-tiering-policy.html"

@@ -677,7 +677,6 @@
   <block id="5eb43e1edd4f0757c83c6d6f6632ff94" category="sidebar">管理和监控</block>
   <block id="8cf9dbe17cb44a10f0622b63961c131d" category="sidebar">卷管理</block>
   <block id="56994f1db86bfe709cbe47f96bde566f" category="sidebar">编辑卷自动增长</block>
-  <block id="be6125857b11bdb69d1f89bf69787f48" category="sidebar">重新平衡卷的容量</block>
   <block id="28b0bfb965f113c41530116951bfce50" category="sidebar">文件系统管理</block>
   <block id="ff117b5e42f4a60dd5b7859999c4f2bd" category="sidebar">启用自动容量管理</block>
   <block id="c7ad4dd9b2ecb508f1366110b020e001" category="sidebar">重置fsxadmin密码</block>
@@ -1410,8 +1409,6 @@
   <block id="a79cee1f678331ce4a5e786550999b02" category="paragraph">此关系将恢复、并且其状态显示为"已复制"。</block>
   <block id="26da52f61184b82e14aa7b1fa701a979" category="paragraph">自动配置的IOPS计算为每GiB三次IOPS。</block>
   <block id="924b3daa7ecef370ff9a603b3208772b" category="paragraph">如果手动配置IOPS，则可能需要在之前增加IOPS<block ref="94a3285243f3705d6ad038b61125cb2f" category="inline-link-macro-rx"></block>。</block>
-  <block id="3a3c8188eae554af0e7f07bfef2e124b" category="summary">检查并重新平衡卷的容量、以避免随着时间的推移而出现不平衡。</block>
-  <block id="8083bd6761abe4735ad26f9c18899032" category="doc">检查并重新平衡卷的容量</block>
   <block id="04533b4edf31c61772ef483585fb29cf" category="paragraph">检查FlexGroup卷容量的平衡情况包括评估成分卷的当前布局。在重新平衡卷的容量时、BlueXP  工作负载工厂会设计一个包含偶数成分卷的新成分卷布局、以便在所有HA对之间均匀分布数据。该服务将执行重新平衡计划、进而改进读取和写入操作。</block>
   <block id="eeaecacdda76be13c8594ef17a7c395c" category="list-text">FlexGroup卷平衡仅适用于使用至少两个HA对的横向扩展部署的适用于ONTAP文件系统的FSx。</block>
   <block id="a0c24c81835ca446fe958b4abdb6c08c" category="list-text">从卷选项卡中，选择表顶部的*检查FlexGroup平衡*。</block>
@@ -1932,18 +1929,13 @@
   <block id="bdd7f454c54673987f53c40f8e5b8072" category="paragraph"><block ref="bdd7f454c54673987f53c40f8e5b8072" category="inline-link-macro-rx"></block></block>
   <block id="5c44c7d986372ccb1d679985b5416b64" category="section-title">在链接创建期间管理 IAM 执行角色和权限</block>
   <block id="43f8bec3c8d83ff27c8f5d629cd49d4d" category="paragraph">现在，您可以在工作负载工厂控制台中创建链接，从而管理 IAM 执行角色及其附加的权限策略。链接会在您的工作负载工厂账户与一个或多个 FSx for ONTAP 文件系统之间建立连接。您可以通过两种方式分配 IAM 执行角色和链接权限：自动分配或用户分配。在工作负载工厂中管理执行角色及其附加的权限策略意味着您无需再使用第三方代码。</block>
-  <block id="2cb3ea55d484ee81bd75e230c32b7fcd" category="paragraph">第二代 FSx for ONTAP 文件系统是默认部署类型。当区域不支持第二代 FSx for ONTAP 文件系统时，部署类型将切换为第一代。</block>
   <block id="cc7023e1e70f83f63ba0c94135b83c2d" category="paragraph">对于高性能工作负载，或者当工作负载从小规模开始并逐步扩展到 72 GB/s 的吞吐量和 240 万 IOPS 时，建议使用此配置。</block>
   <block id="ce920fde7af8f67cbfd1ca3e8efd6b91" category="list-text">多可用性区域(Multi-AZ)部署：即使可用性区域不可用、也能持续提供数据。多可用性文件系统专为业务关键型生产工作负载而设计、这些工作负载要求共享ONTAP文件数据具有高可用性、并需要具有跨可用性区域内置复制功能的存储。</block>
   <block id="fc22ff32bfac4486f50da9af2033830e" category="paragraph">对于需要高达 6 GB/s 吞吐量或 200,000 IOPS 的工作负载，建议使用此单 HA 对配置。</block>
   <block id="87839b96284704d104c8e445d0cfb887" category="list-text">对于第一代部署，您无法在创建文件系统后减少容量。</block>
   <block id="8d4ad9a0aaca41b1aa7122cb909588a7" category="list-text">对于第二代部署，您可以在创建文件系统后增加容量。</block>
-  <block id="a2841b4c7bc0c058832e81b45f756892" category="list-text">*部署类型*：选择部署类型和文件系统生成。</block>
-  <block id="d790be978976d563ba38a969cce78e04" category="paragraph">*文件系统代数*：选择以下选项之一：** *第二代*：此配置适用于高性能工作负载，或工作负载从小规模开始，逐步扩展到 72 GB/s 吞吐量和 240 万 IOPS 的情况。** *第一代*：此配置非常适合需要高达 4 GB/s 吞吐量或 16 万 IOPS 的工作负载。第一代文件系统只能增加容量。</block>
-  <block id="0db3110a95d1dfd82b55d5dde656871c" category="paragraph">+ 第二代文件系统的可用性取决于所选区域。如果所选区域不支持第二代 FSx for ONTAP 文件系统，则部署类型将切换为第一代。</block>
   <block id="5ee057335585da70af1caca368e4e422" category="list-text">*第二代*：对于需要高达 6 GB/s 吞吐量或 200,000 IOPS 的工作负载，建议使用此单 HA 对配置。在多可用区和第二代文件系统中，容量可以根据工作负载需求增加或减少。</block>
   <block id="272021095e67d1fdf73f94aa211e4e56" category="list-text">*第一代*：此配置非常适合需要高达 4 GB/s 或 160,000 IOPS 的工作负载。第一代文件系统只能增加容量。</block>
-  <block id="912e83b52cf2a4421217bf96185e618a" category="paragraph">第二代文件系统的可用性取决于所选区域。如果所选区域不支持第二代 FSx for ONTAP 文件系统，则部署类型将切换为第一代。</block>
   <block id="7ef603b4e7f8efb6252e42ef0745f9cc" category="list-text">对于第二代部署，您可以调整容量。</block>
   <block id="6eb76be6a5409fb6f547e3cf3944cfe6" category="list-text">*每个 HA 对的吞吐容量*：选择每个 HA 对的吞吐容量。第一代文件系统仅支持一个 HA 对。</block>
   <block id="ee6e43b0904c4672da5651009001b259" category="list-text">*预配置 IOPS*：选择以下选项之一：</block>
@@ -1951,7 +1943,6 @@
   <block id="080138c9fde9abc63b7003839106198b" category="list-text">*用户配置*：对于用户配置，输入 IOPS 值。</block>
   <block id="7392fd7ce1aac825ec2bdccdf93b5ad8" category="paragraph">在此工作流程中，您有两种创建链接的选项 - 自动或手动。要创建链接、您需要在AWS帐户中启动AWS CloudFormation堆栈。</block>
   <block id="2f33e5a4fe58163ac0df8f3b097df4db" category="list-text">*链接权限*：选择以下链接权限选项之一：</block>
-  <block id="4c0e4494d278c08e2a1d6707604575a3" category="list-text">*自动*：选择此选项，以便 AWS CloudFormation 或 Terraform 代码自动创建 Lambda 权限策略和执行角色。</block>
   <block id="dd9c72ad3bbeb047b573638ce62d0cc6" category="list-text">*用户提供*：选择此选项可将指定的 Lambda 执行角色及其附加的策略分配给 Lambda 链接。Lambda需要以下权限。<block ref="e6b67e3118c0caaf2206ab3d3fba8d67" prefix=" " category="inline-code"></block>仅当您启用 AWS Secrets Manager 时才需要权限。</block>
   <block id="5f3b3b380e02766e8ad7eca5c6b37840" category="paragraph">在文本框中输入 Lambda 执行角色 ARN。</block>
   <block id="e151c7c26f691694d417720f8986d3fa" category="list-text">*链接注册*：选择下拉箭头以展开有关如何从 AWS CloudFormation 服务或使用 Terraform 注册链接的说明。按照说明进行操作。</block>
@@ -2019,4 +2010,11 @@
   <block id="9d1d72e4ac9c59d5a464cfdbfae095f3" category="paragraph">使用此选项、您可以从AWS CloudFormation提取链接的ARN并在此处报告。工作负载出厂时会手动为您注册此链接。</block>
   <block id="80b014e5654af87ea5edcdf6ec223a6d" category="list-text">*自动*：选择此选项，以便 AWS CloudFormation 代码自动创建 Lambda 权限策略和执行角色。</block>
   <block id="ff1dfe8b36206663d4bf870113dc19d6" category="paragraph">当音量不平衡时，请考虑<block ref="ef2b4a1f9f61a730aafc8bb66fd04b9b" category="inline-xref-macro-rx"></block> 。</block>
+  <block id="1abe6434c0a72292080ce57490bb16d1" category="paragraph">使用 BlueXP 工作负载工厂，您可以创建第一代和第二代 FSx for ONTAP 文件系统来添加和管理卷和附加数据服务。</block>
+  <block id="89733971c4e3e5f45999d2907d6d1c43" category="paragraph">第二代 FSx for ONTAP 文件系统是快速创建的默认部署类型，除非所选区域不支持第二代 FSx for ONTAP 文件系统。</block>
+  <block id="9f9382d36e2904b74545777af65bb3d2" category="list-text">*部署类型*：选择部署类型和文件系统生成。第二代文件系统的可用性取决于所选的区域。如果所选区域不支持第二代 FSx for ONTAP 文件系统，则部署类型将切换为第一代。</block>
+  <block id="ad25ffa35c681232ceeec02144315aa5" category="paragraph">*文件系统生成*：选择以下之一：</block>
+  <block id="19f3a3d53bb0ae9a377ecb1e961d2155" category="list-text">*第二代*：此配置适用于高性能工作负载，或当工作负载从小规模开始并逐步扩展到 72 GB/s 的吞吐量和 240 万 IOPS 时。</block>
+  <block id="2af62906cede15164d81a343aa2da6a4" category="summary">检查并重新平衡容量以避免随着时间的推移而出现不平衡。</block>
+  <block id="f778d4dac2542cbef9605e3e41c11ba2" category="doc">检查并重新平衡卷容量</block>
 </blocks>

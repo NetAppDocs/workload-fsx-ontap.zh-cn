@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: rebalance-volume.html 
 keywords: rebalance capacity, volume capacity, redistribute capacity 
-summary: 检查并重新平衡卷的容量、以避免随着时间的推移而出现不平衡。 
+summary: 检查并重新平衡容量以避免随着时间的推移而出现不平衡。 
 ---
-= 检查并重新平衡卷的容量
+= 检查并重新平衡卷容量
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

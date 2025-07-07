@@ -112,7 +112,7 @@ NOTE: 使用Connector时不支持AWS的"ConnectOR"管理器。
 
 .. *链接权限*：选择以下链接权限选项之一：
 +
-*** *自动*：选择此选项，以便 AWS CloudFormation 或 Terraform 代码自动创建 Lambda 权限策略和执行角色。
+*** *自动*：选择此选项，以便 AWS CloudFormation 代码自动创建 Lambda 权限策略和执行角色。
 *** *用户提供*：选择此选项可将指定的 Lambda 执行角色及其附加的策略分配给 Lambda 链接。Lambda需要以下权限。 `secretsmanager:GetSecretValue`仅当您启用 AWS Secrets Manager 时才需要权限。
 +
 [source, json]
