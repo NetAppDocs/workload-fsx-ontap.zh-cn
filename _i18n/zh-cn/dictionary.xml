@@ -1691,9 +1691,6 @@
   <block id="49441c63fc169d06940470ec9c0e4b1f" category="paragraph">如果内部ONTAP集群是复制关系的目标、则不支持更改快照以进行长期保留。</block>
   <block id="820e39a5de0a231b1bdee7ce11de7c77" category="summary">适用于数据库的BlueXP  工作负载工厂会扫描Microsoft SQL Server配置、提供洞察力和建议、帮助您实现卓越运营。</block>
   <block id="cf6372133f01401bdd9aefc7bead4b10" category="doc">实施架构良好的文件系统配置</block>
-  <block id="3a23bb090bb2219c1febb97610b3122a" category="paragraph">利用配置分析洞察和建议、利用BlueXP  工作负载工厂为FSx for ONTAP文件系统实施最佳实践。您可以轻松发现问题并采取措施来改进任何未针对可靠性、安全性、效率、性能和成本进行优化的系统的架构。</block>
-  <block id="7933cf24268e185cf9acf9afb0edcb26" category="paragraph">BlueXP  每天都会分析Amazon FSx for NetApp ONTAP文件系统部署配置。每日分析可提供洞察力和建议、并提供自动修复配置问题的选项、以使您的文件系统符合最佳实践。</block>
-  <block id="0ccac1a46342dcb95d1b631638c4f99e" category="paragraph">您可以选择查看有关文件系统配置问题的建议、并从工作负载出厂控制台中的存储清单中修复这些问题。</block>
   <block id="681f8e0d48f8a5609d29d038dfdb7354" category="list-text">分析的内容</block>
   <block id="ee519805bc36a437f398c40154b9f4f0" category="list-text">工作负载工厂会分析FSx for ONTAP文件系统的以下配置的架构良好状态：</block>
   <block id="9d0e9f5c0aa1e38cfaa8e64e155bc5a8" category="list-text">SSD容量阈值</block>
@@ -2017,4 +2014,10 @@
   <block id="19f3a3d53bb0ae9a377ecb1e961d2155" category="list-text">*第二代*：此配置适用于高性能工作负载，或当工作负载从小规模开始并逐步扩展到 72 GB/s 的吞吐量和 240 万 IOPS 时。</block>
   <block id="2af62906cede15164d81a343aa2da6a4" category="summary">检查并重新平衡容量以避免随着时间的推移而出现不平衡。</block>
   <block id="f778d4dac2542cbef9605e3e41c11ba2" category="doc">检查并重新平衡卷容量</block>
+  <block id="c271fb4528ce236e85fc9cf102efa8cf" category="paragraph">利用配置分析洞察和建议，利用工作负载工厂为您的 FSx for ONTAP文件系统实施最佳实践。您可以轻松查看架构完善的状态，了解配置问题，并采取措施改进任何未针对可靠性、安全性、效率、性能和成本进行优化的系统架构。</block>
+  <block id="2bab4675fc931e32d65c62820186d2e3" category="inline-link-macro">了解工作负载工厂中的配置分析和良好架构状态。</block>
+  <block id="827070c9ee124a138455bb1007f526f3" category="paragraph"><block ref="827070c9ee124a138455bb1007f526f3" category="inline-link-macro-rx"></block></block>
+  <block id="61e6079323dfdf994259df13eb1f5bea" category="paragraph">工作负载工厂每日分析Amazon FSx for NetApp ONTAP文件系统部署配置。每日分析提供架构完善的状态、见解和建议，以及自动修复配置问题的选项，确保您的文件系统符合最佳实践。</block>
+  <block id="9fa762c3e56dd52eab735970b481c743" category="paragraph">您可以选择查看文件系统配置问题的建议，并从工作负载工厂控制台中的存储清单中修复问题。</block>
+  <block id="bfebf248126ee0c8c192d7442b03e1a1" category="sidebar">查看 FSx for ONTAP文件系统的良好架构状态</block>
 </blocks>

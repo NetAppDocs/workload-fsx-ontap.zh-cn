@@ -18,6 +18,8 @@ indexpage:
       url: "/explore-savings.html"
     - title: 创建FSx for ONTAP文件系统
       url: "/create-file-system.html"
+    - title: 查看 FSx for ONTAP文件系统的良好架构状态
+      url: "/improve-configurations.html"
     - title: 创建FSx for ONTAP卷
       url: "/create-volume.html"
     - title: 保护您的数据
