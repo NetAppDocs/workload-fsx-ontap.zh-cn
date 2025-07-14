@@ -494,8 +494,6 @@
   <block id="0c2c6a9c149348bd95ea113c9e333baa" category="paragraph">或者，选择*Unlimited (无限制)*。</block>
   <block id="87684df341e5a7d9f280a7bdf2048a6e" category="section-title">链接的工作原理</block>
   <block id="5abd3a6ae198e27e4c8402463411560f" category="paragraph">链路利用AWS Lambs。在事件发生后、兰代执行代码、并自动管理该代码所需的计算资源。您创建的链接属于您的NetApp帐户、它们与AWS帐户相关联。</block>
-  <block id="ff5c41103f48a7b4755ac57734036d05" category="paragraph">创建链接后、您可以将其与一个或多个FSx for ONTAP文件系统相关联。每个文件系统只能与同一个NetApp帐户中的一个链接相关联。如果您有多个NetApp帐户、则一个文件系统可以与不同NetApp帐户下的其他链接相关联。</block>
-  <block id="7d6d7edbcee228f35d85531a33a68076" category="inline-link-macro">了解如何创建链接</block>
   <block id="66096c22a6220952b7aef731ef78c167" category="section-title">Costs</block>
   <block id="0ab8cd7f04804af6d53be93ef7bd5345" category="inline-link-macro">详细了解与使用AWS Lamb泄 压相关的成本</block>
   <block id="70f0040e444997fbb4beeeae8bd03d34" category="paragraph"><block ref="70f0040e444997fbb4beeeae8bd03d34" category="inline-link-macro-rx"></block></block>
@@ -663,7 +661,6 @@
   <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">新增功能</block>
   <block id="7aa1575aeeddba65d55707b41584cd4a" category="sidebar">使用适用于NetApp ONTAP 的Amazon FSx</block>
   <block id="2553f0a003cdfb6c46e0fb29cca1c670" category="sidebar">使用链接</block>
-  <block id="95818c359b553f6f2db093ae431dd5be" category="sidebar">链接概述</block>
   <block id="e2439a8512b353f75391ba9c346bc84d" category="sidebar">管理卷</block>
   <block id="dc88dce8ec264777b2f90ec0af744f43" category="sidebar">创建卷</block>
   <block id="8272f5b23e79d0ee33bd5151dcddc454" category="sidebar">创建Storage VM</block>
@@ -914,8 +911,6 @@
   <block id="de401cd5994804b12e8c1734d1ee027c" category="summary">工作负载工厂链接会在工作负载工厂帐户与一个或多个FSx for ONTAP文件系统之间创建信任关系和连接。</block>
   <block id="12565ed510f1f762365915b3fa807454" category="doc">了解BlueXP  工作负载出厂链接</block>
   <block id="691199ddecf65c4783496c94612dd07f" category="paragraph">您不需要链接即可开始使用工作负载工厂、但在某些情况下、您需要创建一个链接来解锁所有工作负载工厂功能和工作负载功能。</block>
-  <block id="c1dad4a74a18053a2db1d6f5da393921" category="paragraph">您可以从工作负载出厂时的FSx for ONTAP文件系统页面创建链接。<block ref="e9a88ae15a9584972e43294d65e9c8ac" category="inline-link-macro-rx"></block> 有关详细信息、请参见。</block>
-  <block id="895a7d895aa3866c9188fcd255af1541" category="paragraph">工作负载工厂需要一个链接来显示某些信息并执行某些任务。如果您尝试执行需要链接的操作、但尚未将链接与FSx for ONTAP文件系统相关联、则会显示一条消息、指出此操作需要链接。您可以添加新链接、或者将FSx for ONTAP文件系统与现有链接相关联、以便执行此操作。</block>
   <block id="20cbf23ff8204cff465470ae4144d936" category="summary">根据需要在BlueXP  工作负载出厂时管理FSx for ONTAP文件系统的备份计划。</block>
   <block id="53fe87832fd05bf7a8e9f1e1bad4aa86" category="doc">管理FSx for ONTAP文件系统的备份计划</block>
   <block id="e8333245618d8dbca5436b9e71370d58" category="paragraph">在BlueXP  工作负载出厂时管理FSx for ONTAP文件系统的备份计划。</block>
@@ -1117,18 +1112,7 @@
   <block id="e13a5649dfef3a1c76c4be8e463226d7" category="list-text">在工作负载工厂控制台的右上角，选择*Help &gt; Support*。</block>
   <block id="42236277fa3913ec4d1fd1e17b26874c" category="paragraph">在所有地区、纵向扩展配置最高支持2 Gb/秒。以下地区支持纵向扩展部署的最大吞吐量高达4 GB/秒：美国东部(俄亥俄州)地区、美国东部(弗吉尼亚)地区、美国西部(俄勒冈)地区和欧洲(爱尔兰)。</block>
   <block id="f23f9e699754fa9634675e68ddb2477a" category="list-text">对于长期保留复制关系、只有最后一个快照可供还原。</block>
-  <block id="3566e30d1125b1cc489403b83380b16e" category="list-text">显示FSx for ONTAP文件系统上安装的ONTAP版本</block>
   <block id="70b71b7616d1607e66f58defc9384bf3" category="list-text">在FSx for ONTAP文件系统上管理iSCSI卷</block>
-  <block id="dd7d7ae00fef8de94b69aa7b5b540cb1" category="list-text">卷的自动增长功能</block>
-  <block id="3351e8dc51e33708d3280516a366bf4f" category="list-text">创建和管理Snapshot策略</block>
-  <block id="bc405b20c5dce6dc67910950f2591510" category="list-text">复制关系配置</block>
-  <block id="900f24520b234a239d52bc47e673bdd5" category="list-text">FSx for ONTAP文件系统之间的卷复制</block>
-  <block id="2886577fc59b2d9df21dd1d41704de71" category="list-text">备份关系配置</block>
-  <block id="ab8c429c03a3887588677f966f3e8c48" category="list-text">将卷数据备份到云存储</block>
-  <block id="0fb8fbbbeb74e2e76be7a39d75ecdcda" category="list-text">FSx for ONTAP文件系统中的卷克隆</block>
-  <block id="981bc65604544a529c511adc06cb441f" category="list-text">直接从ONTAP显示其他指标(默认指标由Amazon CloudWatch收集)</block>
-  <block id="310e8bd2aa0fbf766664a8fadbb86083" category="list-text">管理NFS导出策略</block>
-  <block id="9d19d65b5c0b11e65c72a68e686c8efc" category="list-text">管理CIFS共享</block>
   <block id="5b4240cc70ef93fd3963a5a4a1489114" category="summary">在BlueXP  工作负载工厂中管理卷的CIFS共享包括创建、确定用户和组访问权限以及删除。</block>
   <block id="ed2b1c265309f7d9a2006128f317479e" category="paragraph">开始之前、请执行以下操作：</block>
   <block id="0162ca60ba3c63c1058d5815f318b75b" category="section-title">为卷创建CIFS共享</block>
@@ -1711,7 +1695,6 @@
   <block id="45b5dce37159255d07342e3102124571" category="list-text">选择*继续*以修复配置问题。</block>
   <block id="20086b220eeb33caf74bd6e628cfcd8c" category="section-title">AWS支持</block>
   <block id="ffe2f2a5c6f5c2a7a4d95da829cd5cb4" category="paragraph">BlueXP  工作负载工厂链接会在工作负载工厂帐户与一个或多个FSx for ONTAP文件系统之间创建信任关系和连接。这样、您就可以直接通过ONTAP REST API调用监控和管理某些文件系统功能、而这些功能不能通过Amazon FSx for ONTAP API使用。</block>
-  <block id="8f30a77efbeaeec8415337994a976197" category="paragraph">您可以使用存储在工作负载出厂凭据服务中的凭据或存储在AWS密码管理器中的凭据进行真实链接。工作负载工厂不支持更改身份验证模式。</block>
   <block id="eee5751928fa32e80cacc3177eabff02" category="section-title">对链路进行身份验证</block>
   <block id="e9efd53f2fa290402dc3f6be4a32cc68" category="paragraph">提供工作负载出厂凭据的管理用户密码或AWS机密管理器机密ARN、以将链接连接到FSx for ONTAP文件系统。</block>
   <block id="696ea928d9d3c6e9a7783d23ab82a78a" category="admonition">每个链路仅支持一种身份验证方法。例如、如果您选择使用AWS专有信息管理器进行链接身份验证、则以后无法更改此身份验证方法。</block>
@@ -2020,4 +2003,26 @@
   <block id="61e6079323dfdf994259df13eb1f5bea" category="paragraph">工作负载工厂每日分析Amazon FSx for NetApp ONTAP文件系统部署配置。每日分析提供架构完善的状态、见解和建议，以及自动修复配置问题的选项，确保您的文件系统符合最佳实践。</block>
   <block id="9fa762c3e56dd52eab735970b481c743" category="paragraph">您可以选择查看文件系统配置问题的建议，并从工作负载工厂控制台中的存储清单中修复问题。</block>
   <block id="bfebf248126ee0c8c192d7442b03e1a1" category="sidebar">查看 FSx for ONTAP文件系统的良好架构状态</block>
+  <block id="65050310e57f3790fef3c72eb48d33fe" category="section-title">为什么链接是有益的</block>
+  <block id="4e5ad1c2c7f1e4eb79418c584549c8db" category="paragraph">链接非常有用，因为它们允许工作负载工厂执行Amazon FSx for ONTAP API 原生无法执行的操作。链接支持高级ONTAP功能和自动化，从而增强 FSx for ONTAP文件系统的管理。</block>
+  <block id="abca8c391b472ef4e80c6577b5d5eb2a" category="paragraph">以下是使用链接的一些好处：</block>
+  <block id="964a29c1cbea0c1c51aa60608d960a3e" category="list-text">该链接使BlueXP能够将ONTAP命令直接发送到您的 FSx for ONTAP文件系统，从而带来 AWS 原生提供的ONTAP高级功能。</block>
+  <block id="92d3d2d26bd62a6b2959d23585ef12a2" category="list-text">链接利用 AWS Lambda 执行代码来响应事件。这种无服务器方法消除了对 VPC 中运行实例的依赖。</block>
+  <block id="e721a1904dd1a2a54d259deb8d176230" category="paragraph">创建链接后，您可以将其与一个或多个 FSx for ONTAP文件系统关联。每个文件系统只能与同一个NetApp帐户中的一个链接相关联。如果您有多个NetApp帐户、则一个文件系统可以与不同NetApp帐户下的其他链接相关联。</block>
+  <block id="f022b18c277e4963edee6e68adbb6444" category="paragraph">您可以在工作负载工厂中创建并关联来自存储工作负载的链接。</block>
+  <block id="54e67484027376a69b47aa1c0db7f038" category="paragraph">您可以使用存储在工作负载工厂凭证服务中的凭证或存储在 AWS Secrets Manager 中的凭证来验证链接。工作负载工厂不支持更改身份验证模式。</block>
+  <block id="92ed487a00f33b78311d56c6c063ea86" category="paragraph">工作负载工厂需要一个链接来显示某些信息并执行某些任务。如果您尝试执行需要链接的操作，但尚未将链接与 FSx for ONTAP文件系统关联，则工作负载工厂会通知您该操作需要链接。</block>
+  <block id="d078fe237d087bff0fe3c19efd14fa54" category="list-text">FSx for ONTAP文件系统配置的良好架构状态，可实现主动维护、可靠性和成本效益优化</block>
+  <block id="c6501747b7c38b1e25460b13a727ec7c" category="list-text">NetApp自主勒索软件防护 (ARP/AI)</block>
+  <block id="489e0dc0c162e1aff5f0f664bf2ea756" category="list-text">增强了 FSx for ONTAP文件系统的整体容量可观察性</block>
+  <block id="b97b322b8cb0f9b187eb7b966c9ff886" category="list-text">卷和存储虚拟机数据复制、管理和监控</block>
+  <block id="147d85abf5db68a53249c95e1a68cedb" category="list-text">SMB/CIFS 共享和 NFS 导出策略配置和管理</block>
+  <block id="0ff428418a3d64cc69a6ee68906a8959" category="list-text">创建和管理自定义保护 SLA 的快照策略</block>
+  <block id="c92f4938531f7fd55dc831a93892d29a" category="list-text">增强 Inode 管理以实现自动容量管理</block>
+  <block id="3b5c7e283e0b752d51311178d3fa06f1" category="list-text">容量自动增长以实现弹性扩展</block>
+  <block id="6cdde78d80d6fbbd8f3706a9bcac599e" category="list-text">克隆创建和管理，用于即时、就地数据克隆</block>
+  <block id="7cacd07dfdd5c4feadcbf23d19f9972d" category="list-text">直接从ONTAP显示其他指标，例如ONTAP版本</block>
+  <block id="30f1ae8a88bc842cdf5e493350ae7eb1" category="inline-link-macro">将链接连接到 FSx for ONTAP文件系统</block>
+  <block id="f86bb6aab3a49998f4db8fa07a49d81a" category="paragraph">了解如何<block ref="e658cbfbd30fb261626bc7c82308a713" category="inline-link-macro-rx"></block>。</block>
+  <block id="78f8c00f462b0fbe742eab283e3fdf7a" category="sidebar">了解链接</block>
 </blocks>
