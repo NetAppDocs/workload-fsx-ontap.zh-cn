@@ -148,10 +148,8 @@
   <block id="b2f3a9c80071ec30919944cb6cd21a42" category="list-text">在"Create Link"页面上、提供以下内容：</block>
   <block id="89a62ddcc9759060d903ef8b7aee42c3" category="list-text">*链接名称*：输入要用于此链接的名称。此名称在您的帐户中必须是唯一的。</block>
   <block id="68d5729d2a63e62a04de68bac212b9ab" category="list-text">*标记*：您可以选择添加要与此链接关联的任何标记、以便更轻松地对资源进行分类。例如、您可以添加一个标记、用于将此链接标识为由FSx for ONTAP文件系统使用。</block>
-  <block id="c54e90f3916f294bec1f9be7d938fba1" category="paragraph">系统会根据FSx for ONTAP文件系统自动检索AWS帐户以及帐户、位置和安全组的其他信息。</block>
   <block id="c602cdf8533ce956e9f326890f6d8723" category="list-text">选择*继续*以打开AWS管理控制台、然后登录到此FSx for ONTAP文件系统的AWS帐户。</block>
   <block id="ab44f988398acb833af7b9b2bc6c26b9" category="list-text">在Quick create堆栈页面的"Capabilities"下、选择*我确认AWS CloudFormation可能会创建IAM资源*。</block>
-  <block id="da0a73063a34bf5fda005c52ba51f931" category="paragraph">您可以从事件页面监控链路创建状态。此过程不应超过5分钟。</block>
   <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">结果</block>
   <block id="19b12f8ea4cd395e2a8c4f8e4dbac642" category="summary">为FSx for ONTAP文件系统创建复制关系、以避免在发生意外灾难时丢失数据。</block>
   <block id="ca0c3dd7dca9f636af3209d526098e1e" category="doc">创建复制关系</block>
@@ -761,7 +759,6 @@
   <block id="1ffab80b063e5f05f25ab6681156237d" category="paragraph">如果您要连接到自行管理的AD、请使用AD中的组名称。默认组为<block ref="746c2ea920930b61350130daa63e23e5" prefix=" " category="inline-code"></block>。</block>
   <block id="758ce486f132a2978be7ecfbcd518afa" category="list-text">您应考虑使用哪种链接创建选项。</block>
   <block id="6903e2b3a86228f4d258e423fb6b913a" category="open-title">自动创建</block>
-  <block id="6a97c44fefe95ac9ca6fe05e50d1729f" category="paragraph">此时将显示重定向到CloudFormation对话框、并说明如何从AWS CloudFormation服务创建链接。</block>
   <block id="a85b3f8e5456d47e8056e0372aeccb2a" category="open-title">手动创建</block>
   <block id="26e6f4cc71039ce95ddbb0acdad6891d" category="section-title">2024年9月29日</block>
   <block id="50fa5062b83d0f575448ba449245fa17" category="list-text">iSCSI协议仅适用于FlexVol卷。^1^</block>
@@ -1281,7 +1278,6 @@
   <block id="fd8693cf8f6802fd1c7d50d5742a4c71" category="section-title">Tracker中的CloudShell事件</block>
   <block id="e7a6197673267c30b5dc86e0d5f6c536" category="paragraph">现在、您可以在Tracker中跟踪CloudShell事件。</block>
   <block id="cf5df8345ca5f203e0f805460b558155" category="list-text">单可用性区域(单可用性区域、单可用性)部署：通过监控硬件故障来提供可用性、并在发生故障时自动更换基础架构组件。通过在可用性区域中自动复制数据以防止其发生组件故障、实现高持久性。</block>
-  <block id="65122529e27ab1e34a08fc55d0f38a93" category="list-text">自动：通过工作负载工厂创建具有自动注册功能的链接。自动创建的链接需要令牌才能实现工作负载工厂自动化、CloudFormation代码生命周期较短。只能使用最多六个小时。</block>
   <block id="99f375ee1d56d1983309c071fe9cb69a" category="paragraph">目标文件系统中复制的卷是数据保护(DP)卷，命名格式如下：<block ref="4b5beb37da0fa6444b7f9f92238aadb1" prefix=" " category="inline-code"></block>。</block>
   <block id="df4c98f43132ebd68d92a0c9822984df" category="list-text">在复制数据页面上的复制目标下、提供以下内容：</block>
   <block id="0cbe076a4ce5208b10cdb81c9e175006" category="list-text">*选择现有策略*：从下拉菜单中选择现有策略。</block>
@@ -1622,27 +1618,21 @@
   <block id="824994853534784eb4495b892e13b1c6" category="paragraph">如果您提供的用户不是fsxadmin用户、而稍后您需要重置fsxadmin密码、则可以从AWS控制台执行此操作。</block>
   <block id="dd34b811cd079417f985f8f56a4f1dca" category="list-text">* Storage VM凭据*：可选。输入您的用户名。密码可以特定于此文件系统、也可以使用为ONTAP凭据输入的相同密码。可以现在或稍后设置密码。</block>
   <block id="37b002845528ac0296b86d28bb71e5a5" category="doc">使用Lamba链接连接到FSx for ONTAP文件系统</block>
-  <block id="2a1f44a051d664b0361d859768b12826" category="paragraph">要执行高级ONTAP管理操作、您需要在工作负载工厂帐户与一个或多个FSx for ONTAP文件系统之间建立连接。建立连接包括关联新的和现有的Lamb编制 链路以及对链路进行身份验证。通过链接关联、您可以直接从FSx for ONTAP文件系统监控和管理某些无法通过AWS FSx for ONTAP API获得的功能。</block>
-  <block id="c51de18a298cdd25fa9e70493aefa7f4" category="paragraph">定义FSx for ONTAP文件系统时、您可以在帐户中创建链接。该链接将用于该文件系统、并且可供其他FSx for ONTAP文件系统使用。您也可以稍后关联文件系统的链接。</block>
-  <block id="e313a3c9bf44cc5cfaada2f84c946a94" category="paragraph">链路需要身份验证。您可以使用存储在工作负载出厂凭据服务中的凭据或存储在AWS密码管理器中的凭据进行真实链接。每个链路仅支持一种身份验证方法。例如、如果您选择使用AWS专有信息管理器进行链接身份验证、则以后无法更改此身份验证方法。</block>
   <block id="3909315ab3cc8353eec0cd02ce0845da" category="admonition">使用Connector时不支持AWS的"ConnectOR"管理器。</block>
   <block id="2c1b9e7969c6e96f38bd871fc9f26ae1" category="section-title">关联新链接</block>
   <block id="05a2e668e80fd3ace12e9585ebc06578" category="paragraph">关联新链接包括创建和关联。</block>
   <block id="695199449ad50832d8cff3be92e812b3" category="inline-link-macro">在工作负载出厂时添加凭据</block>
   <block id="2f1cd483ab7b6144b733f5155b2026c6" category="list-text">在*FSx for ONTAP Link*选项卡中，选择要关联链接的文件系统的三点菜单，然后选择*Associate link*。</block>
   <block id="29abae1dabc3d83e30cbe456ae214256" category="list-text">*AWS SeslogManager*：可选。允许工作负载工厂从AWS密码管理器提取FSx for ONTAP访问凭据。</block>
-  <block id="13ecd4f9bb62f6c0730c8f136a58fb36" category="paragraph">链路部署堆栈会将以下默认机密管理器ARN正则表达式添加到Lamb代 权限策略中：<block ref="218d5bbe44642244cc57db37477be310" prefix=" " category="inline-code"></block>。</block>
   <block id="de786693aed7955f1cb538f51e25f7d6" category="paragraph">您可以根据默认权限创建机密、也可以为链接策略分配自定义权限。</block>
   <block id="49af4dcead2678507453b9bff6c332f1" category="paragraph">*将VPC专用端点配置到AWS秘密管理器*默认处于禁用状态。选择此选项将使用VPC专用端点存储此密钥、而不是将其存储在本地。</block>
   <block id="c3b24be1571207cf6200f2d8b54ee7c0" category="paragraph">成功创建堆栈后、将Lamb编制ARN粘贴到文本框中。</block>
-  <block id="91744aea42b1e1eb3b5b0f486498fe3c" category="paragraph">您创建的链接与FSx for ONTAP文件系统关联。您可以执行高级ONTAP操作。</block>
   <block id="48457d7f94975228307244f863f96fee" category="section-title">将现有链接与FSx for ONTAP文件系统相关联</block>
   <block id="531d680092609d3ec7794cd6dd8c39fe" category="paragraph">创建链接后、请将其与一个或多个FSx for ONTAP文件系统相关联。</block>
   <block id="447f36846a239be6be0faf7dc1fa0364" category="list-text">在关联链接页面中，选择*关联现有链接*，选择链接，然后选择*继续*。</block>
   <block id="5b5b11575f2a0c06c832b5cbd1c6dcfe" category="list-text">选择身份验证模式。</block>
   <block id="219e99148dae7112d47eedc1f49517ae" category="list-text">Workload Factory：输入密码两次。</block>
   <block id="b9000423f3d632810a4d8c3550eb4119" category="list-text">AWS机密管理器：输入机密ARN。</block>
-  <block id="0481a079b29497027474b2f22074dd5a" category="paragraph">机密ARN必须包含以下密钥有效对：</block>
   <block id="91a73bc4f293d9fc4712c2770316ae08" category="list-text">filesystemID = FSx文件系统ID</block>
   <block id="db1e2f706f83d7a3a9a03793db05422a" category="list-text">密码= USER_password</block>
   <block id="3179fc8078925ef0503270fd907af44c" category="paragraph">此链接与FSx for ONTAP文件系统关联。您可以执行高级ONTAP操作。</block>
@@ -2035,4 +2025,17 @@
   <block id="5b4d700431157f8e7dcc17b14d365c7f" category="list-text">\\服务器</block>
   <block id="6b8258a2b9dce9918a5b42eb1c2de4c6" category="list-text">\\服务器\项目</block>
   <block id="710ecb74356fd86fc995d76f7fcb7c5c" category="list-text">\\服务器\项目\共享资源</block>
+  <block id="3195be56175905f73d7a96220c8058ac" category="paragraph">要执行高级ONTAP管理操作，请在工作负载工厂帐户和一个或多个 FSx for ONTAP文件系统之间建立连接。这涉及关联新的和现有的 Lambda 链接，并对链接进行验证。通过链接关联，您可以直接从 FSx for ONTAP文件系统监控和管理某些无法通过Amazon FSx for ONTAP API 获得的功能。</block>
+  <block id="272d4b49948c30687aaaffecca19cb82" category="paragraph">您可以在定义 FSx for ONTAP文件系统时在您的帐户中创建链接。该链接用于该文件系统，也可以用于其他 FSx for ONTAP文件系统。您还可以稍后关联文件系统的链接。</block>
+  <block id="e76c38630b92f6e32b58c439a30d6e3a" category="paragraph">链接需要验证。您可以使用存储在工作负载工厂凭证服务中的凭证或存储在 AWS Secrets Manager 中的凭证来验证链接。每个链接仅支持一种身份验证方法。例如，如果您选择使用 AWS Secrets Manager 进行链接身份验证，则以后无法更改身份验证方法。</block>
+  <block id="20f231352191b3538a4951e663663903" category="list-text">自动：通过工作负载工厂创建自动注册的链接。这需要用于工作负载工厂自动化的令牌，并且 CloudFormation 代码的生命周期很短，最多可使用六个小时。</block>
+  <block id="049f730a98eb69627912748561a543b8" category="paragraph">链接部署堆栈自动将以下默认密钥管理器 ARN 正则表达式添加到 Lambda 权限策略中：<block ref="218d5bbe44642244cc57db37477be310" prefix=" " category="inline-code"></block> 。</block>
+  <block id="2f50ceaec248a408742379493bc7731b" category="paragraph">工作负载工厂根据 FSx for ONTAP文件系统自动检索 AWS 账户、位置和安全组。</block>
+  <block id="bab25954c067653929b889d687bcb718" category="paragraph">出现“重定向到 CloudFormation”对话框并解释如何从 AWS CloudFormation 服务创建链接。</block>
+  <block id="a37cbff3921a52bcde5c7689c912e1f4" category="paragraph">您可以在事件页面上监控链接创建状态。这应该不会超过 5 分钟。</block>
+  <block id="305994fbfd694e4b407718361492a83c" category="paragraph">工作负载工厂将链接与 FSx for ONTAP文件系统关联。您可以执行高级ONTAP操作。</block>
+  <block id="9a5abe8b855a4f42f1c70c4b367d9bce" category="paragraph">确保密钥 ARN 包含以下密钥有效对，尽管 _filesystemID_ 是可选的。</block>
+  <block id="1023373ba9dff02b999882804d6dc2ef" category="list-text">文件系统ID = FSx_filesystem_id（可选）</block>
+  <block id="508e0beab9fc0c907eb4adcaa7a736f7" category="list-text">用户 = FSx_user</block>
+  <block id="0dcf8b4e3476c0545950d4d61acb625c" category="admonition">使用 AWS Secrets Manager 进行身份验证需要一个用户，可以是您提供的 _FSx_user_，也可以是在 FSx for ONTAP文件系统上创建的其他用户。默认用户是<block ref="679500f227997b45be97e3ca8115c678" prefix=" " category="inline-code"></block>如果您不提供用户。</block>
 </blocks>
