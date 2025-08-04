@@ -34,7 +34,7 @@ NOTE: 使用Connector时不支持AWS的"ConnectOR"管理器。
 在此工作流程中，您有两种创建链接的选项 - 自动或手动。要创建链接、您需要在AWS帐户中启动AWS CloudFormation堆栈。
 
 * 自动：通过工作负载工厂创建自动注册的链接。这需要用于工作负载工厂自动化的令牌，并且 CloudFormation 代码的生命周期很短，最多可使用六个小时。
-* 手动：创建包含手动注册的链接。CloudFormation代码持续存在、让您有更多时间完成操作。当与不同的团队(如安全和开发运营团队)合作时、这很有用、因为他们可能首先需要授予完成链接创建所需的权限。
+* 手动：使用 Codebox 中的 CloudFormation 或 Terraform 创建带有手动注册的链接。代码持续存在，为您提供更多时间来完成操作。这在与安全和 DevOps 等不同的团队合作时很有用，因为他们可能首先需要授予完成链接创建所需的权限。
 
 
 .开始之前
@@ -161,14 +161,14 @@ NOTE: 使用Connector时不支持AWS的"ConnectOR"管理器。
 --
 .手动创建
 --
-使用此选项、您可以从AWS CloudFormation提取链接的ARN并在此处报告。工作负载出厂时会手动为您注册此链接。
+您可以使用 Codebox 中的两个基础设施即代码 (IaC) 工具创建链接：CloudFormation 或 Terraform。使用此选项，您可以从 AWS CloudFormation 中提取链接的 ARN 并在此处报告。工作负载工厂手动为您注册链接。
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 在存储中，选择*转至存储清单*。
 . 在*FSx for ONTAP Link*选项卡中，选择要关联链接的文件系统的三点菜单，然后选择*Associate link*。
 . 在关联链接对话框中，选择*创建新链接*，然后选择*继续*。
-. 在"Create Link"页面上、提供以下内容：
+. 在创建链接页面上，从 Codebox 中选择 CloudFormation 或 Terraform，然后提供以下内容：
 +
 .. *链接名称*：输入要用于此链接的名称。此名称在您的帐户中必须是唯一的。
 .. *AWS SeslogManager*：可选。允许工作负载工厂从AWS密码管理器提取FSx for ONTAP访问凭据。
@@ -201,7 +201,7 @@ NOTE: 使用Connector时不支持AWS的"ConnectOR"管理器。
 
 
 .. *标记*：您可以选择添加要与此链接关联的任何标记、以便更轻松地对资源进行分类。例如、您可以添加一个标记、用于将此链接标识为由FSx for ONTAP文件系统使用。
-.. *链接注册*：选择下拉箭头以展开有关如何从 AWS CloudFormation 服务或使用 Terraform 注册链接的说明。按照说明进行操作。
+.. *链接注册*：选择CloudFormation或Terraform获取如何注册链接的说明，并按照说明进行操作。
 +
 请注意、在启动CloudFormation模板时、系统会向Lambdation授予三个权限。工作负载工厂在使用链接时会使用这些权限。
 

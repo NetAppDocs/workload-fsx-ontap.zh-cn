@@ -2,19 +2,19 @@
 sidebar: sidebar 
 permalink: ransomware-protection.html 
 keywords: ransomware, arp, autonomous protection, protect, security, detect, detection, restore, recover, threat, attack, suspect, anti-ransomware, entropy, abnormal volume activity, anti-ransomware, extension conformity, ransomware protection strategy 
-summary: 自主勒索软件保护可通过NAS环境中的工作负载分析来检测可能是勒索软件攻击的异常活动并发出警告。 
+summary: 'NetApp自主勒索软件防护 AI (ARP/AI) 使用 NAS 环境中的工作负载分析来检测并警告可能为勒索软件攻击的异常活动。' 
 ---
-= 利用自动防兰森保护功能保护您的数据
+= 使用NetApp自主勒索软件防护和 AI 保护您的数据
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-利用自动勒索软件保护(ARP)保护数据、此功能可在NAS (NFS/SMB)环境中使用工作负载分析来检测可能是勒索软件攻击的异常活动并发出警告。当怀疑发生攻击时、ARP还会创建新的、不可变更的快照、您可以从中还原数据。
+使用NetApp自主勒索软件防护 AI (ARP/AI) 功能保护您的数据，该功能使用 NAS (NFS/SMB) 环境中的工作负载分析来检测并警告可能为勒索软件攻击的异常活动。当怀疑受到攻击时，ARP/AI 还会创建新的、不可变的快照，您可以从中恢复数据。
 
 .关于此任务
-使用ARP防止攻击者在勒索赎金之前扣留数据的拒绝服务攻击。ARP提供基于以下各项的实时勒索软件检测：
+使用 ARP/AI 来防止拒绝服务攻击，攻击者会扣留数据直到支付赎金。  ARP/AI 提供基于以下内容的实时勒索软件检测：
 
 * 将传入数据标识为加密或纯文本。
 * 可检测以下内容的分析：
@@ -26,22 +26,22 @@ summary: 自主勒索软件保护可通过NAS环境中的工作负载分析来�
 
 
 
-在对少量文件进行加密后、ARP可以检测到大多数勒索软件攻击的蔓延、并自动采取措施保护数据、并提醒您可疑攻击正在发生。
+ARP/AI 可以在仅少量文件被加密后检测到大多数勒索软件攻击的传播，自动采取行动保护数据，并提醒您疑似攻击正在发生。
 
-ARP功能会根据Amazon FSx for NetApp ONTAP运行的ONTAP版本自动更新、因此您无需手动更新。
+ARP/AI 功能会根据Amazon FSx for NetApp ONTAP运行的ONTAP版本自动更新，因此您无需进行手动更新。
 
-学习和主动模式:: ARP首先在_leARNARNING_模式下运行、然后自动切换到_active mode_.
+学习和主动模式:: ARP/AI 首先在_学习模式_下运行，然后自动切换到_主动模式_。
 +
 --
-* *学习模式*：启用ARP时，它以_leARNing_模式运行。在学习模式下、FSx for ONTAP文件系统会根据分析区域(熵、文件扩展名类型和文件IOPS)开发警报配置文件。在文件系统在学习模式下运行ARP有足够的时间来评估工作负载特征之后、工作负载出厂会自动切换到ARP到_active mode_并 开始保护您的数据。
-* *活动模式*：ARP切换到_active mode_后、FSx for ONTAP会创建ARP/AI快照、以便在检测到威胁时保护数据。
+* *学习模式*：当您启用 ARP/AI 时，它以_学习模式_运行。在学习模式下，FSx for ONTAP文件系统根据分析区域（熵、文件扩展类型和文件 IOPS）开发警报配置文件。在文件系统以学习模式运行 ARP/AI 足够时间以评估工作负载特征后，工作负载工厂会自动切换到 ARP/AI 到_主动模式_并开始保护您的数据。
+* *主动模式*：ARP/AI 切换到_主动模式_后，如果检测到威胁，FSx for ONTAP会创建 ARP/AI 快照来保护数据。
 +
 在活动模式下、如果文件扩展名被标记为异常、则应评估警报。您可以对警报采取措施来保护您的数据、也可以将警报标记为误报。将警报标记为误报可更新警报配置文件。例如、如果警报由新文件扩展名触发、而您将警报标记为误报、则下次观察到该文件扩展名时、您不会收到警报。
 
 
 
 --
-不支持的配置:: 以下配置不支持使用ARP。
+不支持的配置:: 以下配置不支持使用 ARP/AI。
 +
 --
 * SAN/块卷
@@ -54,25 +54,56 @@ ARP功能会根据Amazon FSx for NetApp ONTAP运行的ONTAP版本自动更新、
 
 
 
-== 为文件系统启用自动防软件保护
+== 为文件系统或卷启用 ARP/AI
 
-为文件系统启用ARP可自动为所有现有NAS卷和新创建的NAS卷添加保护。
+为文件系统启用 ARP/AI 会自动为所有现有 NAS 和新创建的 NAS（NFS/SMB）卷添加保护。您还可以为单个卷启用 ARP/AI。
 
-启用ARP后、如果发生攻击且您确定攻击是真实的、BlueXP  工作负载出厂时会自动设置一个快照策略、该策略每四小时最多需要六个快照。每个快照锁定2-5天。
+启用 ARP/AI 后，如果发生攻击并且您确定攻击是真实的，工作负载工厂会自动设置快照策略，每四小时最多拍摄六次快照。每个快照锁定2-5天。
 
 .开始之前
-要为文件系统启用 ARP，您必须关联一个链接。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何关联现有链接或创建并关联新链接"](英文)链接关联后、返回此操作。
+要为文件系统或卷启用 ARP/AI，您必须关联一个链接。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何关联现有链接或创建并关联新链接"] 。链接关联后，返回此操作。
 
+[role="tabbed-block"]
+====
+.为文件系统启用 ARP/AI
+--
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 在存储中，选择*转至存储清单*。
-. 在*FSx for ARP*选项卡中，选择要启用ONTAP的文件系统的三点菜单，然后选择*Manage*。
-. 在“信息”下，选择“*自主防系统防*”旁边的铅笔图标。当鼠标悬停在“*自主防兰索保护*”行上时，下拉箭头旁边会出现铅笔图标。
-. 在"Autonomous Ransouor Protection (自主防系统防兰森保护)"对话框中、启用或禁用此功能。
+. 在 *FSx for ONTAP* 选项卡中，选择文件系统的三点菜单以启用 ARP/AI，然后选择 *管理*。
+. 在信息下，选择“自主勒索软件防护”旁边的铅笔图标。当鼠标悬停在“Autonomous Ransomware Protection”行上时，箭头旁边会出现一个铅笔图标。
+. 在NetApp自主勒索软件防护 AI (ARP/AI) 页面中，执行以下操作：
++
+.. 启用或禁用该功能。
+.. *自动创建快照*：选择要保留的最大快照数量以及拍摄快照的时间间隔。默认值为每 4 小时 6 张快照。
+.. *不可变快照*：选择默认保留期（以小时为单位）和保留不可变快照的最多天数。启用此选项可确保在指定的保留期结束之前无法删除或修改快照。
+.. *检测*：可选地，选择以下任意参数来自动扫描和检测异常。
+
+
 . 接受陈述以继续。
 . 选择*应用*以保存更改。
 
 
+--
+.为卷启用 ARP/AI
+--
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 在存储中，选择*转至存储清单*。
+. 在 *FSx for ONTAP* 选项卡中，选择文件系统的三点菜单以启用 ARP/AI，然后选择 *管理*。
+. 从“卷”选项卡中，选择卷的三点菜单以启用 ARP/AI，然后选择*数据保护操作*，然后选择*管理 ARP/AI*。
+. 在管理 ARP/AI 对话框中，执行以下操作：
++
+.. 启用或禁用该功能。
+.. *检测*：可选地，选择以下任意参数来自动扫描和检测异常。
+
+
+. 接受陈述以继续。
+. 选择*应用*以保存更改。
+
+
+--
+====
 
 
 == 验证勒索软件攻击
@@ -93,7 +124,7 @@ ARP功能会根据Amazon FSx for NetApp ONTAP运行的ONTAP版本自动更新、
 
 == 在勒索软件攻击后恢复数据
 
-如果怀疑受到攻击、系统会在该时间点创建卷快照并锁定该副本。如果稍后确认攻击、则可以使用ARP快照还原受影响的文件或整个卷。
+当怀疑受到攻击时，系统会在该时间点拍摄卷快照并锁定该副本。如果稍后确认攻击，则可以使用 ARP/AI 快照恢复受影响的文件或整个卷。
 
 在保留期限结束之前、无法删除锁定的快照。但是，如果您稍后决定将此攻击标记为误报，则锁定的副本将被删除。
 
