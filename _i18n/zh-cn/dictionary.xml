@@ -1630,7 +1630,6 @@
   <block id="69ed1cf6539793c15a93584373cddf2a" category="inline-link-macro">使用Amazon FSx for NetApp ONTAP启用多协议工作负载</block>
   <block id="5b9f6dc6990c28e364a2622ffeadc327" category="list-text">*安全模式*：对于双协议卷、请选择UNIX或NTFS安全模式。UNIX是双协议卷的默认安全模式。有关此上下文中用户映射的详细指导，请参阅AWS博客文章<block ref="2c1778bd252c045607257b2888dcb7e7" category="inline-link-macro-rx"></block>。</block>
   <block id="49441c63fc169d06940470ec9c0e4b1f" category="paragraph">如果内部ONTAP集群是复制关系的目标、则不支持更改快照以进行长期保留。</block>
-  <block id="820e39a5de0a231b1bdee7ce11de7c77" category="summary">适用于数据库的BlueXP  工作负载工厂会扫描Microsoft SQL Server配置、提供洞察力和建议、帮助您实现卓越运营。</block>
   <block id="cf6372133f01401bdd9aefc7bead4b10" category="doc">实施架构良好的文件系统配置</block>
   <block id="681f8e0d48f8a5609d29d038dfdb7354" category="list-text">分析的内容</block>
   <block id="ee519805bc36a437f398c40154b9f4f0" category="list-text">工作负载工厂会分析FSx for ONTAP文件系统的以下配置的架构良好状态：</block>
@@ -2115,4 +2114,5 @@
   <block id="eaba2a7eb36250fc59ebf37ea423ebd5" category="paragraph">当怀疑受到攻击时，系统会在该时间点拍摄卷快照并锁定该副本。如果稍后确认攻击，则可以使用 ARP/AI 快照恢复受影响的文件或整个卷。</block>
   <block id="613abd0d9da6f7ee37d283174e11fcaf" category="section-title">2025年8月3日</block>
   <block id="1595965c84afe577a4228c0f8a132a00" category="sidebar">管理 SMB/CIFS 共享</block>
+  <block id="b8bfbf72dc92e989a0b91cd409144076" category="summary">工作负载工厂扫描Amazon FSx for NetApp ONTAP配置，提供见解和建议，帮助您实现卓越运营。</block>
 </blocks>
