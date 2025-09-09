@@ -197,13 +197,8 @@
   <block id="c9f265881e56f4c52918525bdcb9205d" category="list-text">*名称*：输入Storage VM的名称。</block>
   <block id="42a49281a2c075c2004f1e73852b27e3" category="list-text">* Storage VM凭据*：为此Storage VM的用户提供密码<block ref="6173aa5206484b5224450952747c7148" prefix=" " category="inline-code"></block> 或使用文件系统的<block ref="679500f227997b45be97e3ca8115c678" prefix=" " category="inline-code"></block> 用户凭据。</block>
   <block id="34cc44a6e06f592c6033a57f8671a67a" category="list-text">*根卷安全模式*：根据访问数据的客户端类型选择根卷安全模式- UNIX (Linux客户端)、NTFS (Windows客户端)或混合。</block>
-  <block id="1bc82fa8aedf24369834db8950935e12" category="doc">从快照创建新的FSx for ONTAP卷</block>
-  <block id="94bf5ecde85890bdfbccd00fad3fbd70" category="paragraph">快照是指FSx for ONTAP卷在某个时间点创建的只读映像。从快照创建新卷后、无论卷大小如何、只需几秒钟即可创建整个卷的副本。新创建的副本表示新卷。</block>
   <block id="dd92a94c350d15b3e750c8345c72be14" category="paragraph">在从快照创建卷之前、请考虑以下限制：</block>
   <block id="aa598f48818753dcf8598b6294e34d5b" category="list-text">权限模型更改：如果使用此操作切换网络连接存储(Network-连接 存储、NAS)协议类型、则可能还会切换安全模式提供的权限模型。您可能会遇到文件访问权限问题、您只能使用NAS客户端工具的权限设置在管理员访问的情况下手动修复此问题。</block>
-  <block id="0d9c537067f7d4fbde0af7c35b682638" category="list-text">卷占用量增加：从快照创建卷后、您将拥有两个独立的卷、这两个卷都会占用主机文件系统的容量。</block>
-  <block id="749bb7d7b85b238efdd51a2af6612da7" category="list-text">选择*数据保护操作*、*快照*、然后选择*从快照创建卷*。</block>
-  <block id="7703989c08fa05b728e233f271b4650e" category="list-text">在"Create volume from a Snapshot "(从快照创建卷)对话框中、输入快照名称。</block>
   <block id="25b72c08a4a289e6b89fc38db06792a9" category="doc">创建FSx for ONTAP卷</block>
   <block id="8a1e5168feb60a6391f96310159dca9a" category="list-text">NFS：适用于Unix操作系统的文件存储协议</block>
   <block id="ec38854bd667a882fa1d0b62579b5079" category="list-text">iSCSI：块存储协议</block>
@@ -399,15 +394,11 @@
   <block id="bb6d5d351525342dd6b3cf4d15b6f298" category="list-text">*关闭案例*：提供关闭案例的详细原因，然后选择*关闭案例*。</block>
   <block id="e93217b2f709a398ce3c0fb753beb05f" category="inline-image-macro">屏幕截图、显示在表的最后一列中选择菜单后可以执行的操作。</block>
   <block id="6f7cf78e14aa346236a87d9541221fb2" category="paragraph"><block ref="6f7cf78e14aa346236a87d9541221fb2" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="0a2f587a53fd97b6d49adac14c5ef1b6" category="summary">当已用SSD存储容量超过您指定的阈值时、手动增加适用于ONTAP文件系统的FSx的SSD存储容量。</block>
   <block id="d1c1f85063b5f4742efda82442c2ddff" category="doc">增加文件系统容量</block>
   <block id="7db52e1b6d399a07ae2a24a19f03a6ad" category="inline-link-macro">启用自动容量管理功能</block>
-  <block id="bdccdc17ac819f178e84be61503a0de2" category="paragraph">增加文件系统容量会影响FSx for ONTAP文件系统的IOPS。</block>
   <block id="11df76043d9d8bb3a76f1f7e71096a92" category="inline-link-macro">配置IOPS</block>
   <block id="ffc888e5ff626bf410d67b62a9e8a9a8" category="paragraph">有关SSD存储容量限制、请参阅 <block ref="5e5311b04805e422cc2fabe002034628" category="inline-link-macro-rx"></block> AWS FSx for NetApp ONTAP文档中的。</block>
   <block id="3fa4dafc00a14f08641efa3389891289" category="inline-link-macro">禁用自动容量管理</block>
-  <block id="e58acd1760f609c958f436e6f19a798d" category="paragraph">要增加文件系统的容量，必须首先 <block ref="8c3635bc720b3de661de28059e4ae780" category="inline-link-macro-rx"></block>。</block>
-  <block id="3f43f703da21affaf8c9fe7bb0026712" category="list-text">在SSD存储大小对话框中、为*已配置容量*输入一个数字。</block>
   <block id="bb38e8f0462bc33d127ff7d217a31149" category="list-text">选择已配置容量的单位。</block>
   <block id="ceadc0f7d6f2330af477eb47568a259b" category="doc">增加卷容量</block>
   <block id="eacbf9150c5d9c7a7032185805a236b8" category="inline-link-macro">启用自动增长功能</block>
@@ -550,11 +541,7 @@
   <block id="c5cce99928ce0d8af5b82b7d22ea310e" category="list-text">*已还原卷名称*：输入已还原的卷名称。</block>
   <block id="67b0d8b6788b457b2c8385033f28756f" category="summary">当FSx for ONTAP卷包含已删除或损坏的文件时、从快照还原该卷。</block>
   <block id="c90683522eadafc05ec442d8c440363f" category="doc">从快照还原卷</block>
-  <block id="028c5ca154a90ad525b01ec66b26fa3f" category="paragraph">此操作会将数据从快照还原到新卷。</block>
   <block id="71fa8628af6f2038af0eab0c8ca9c4cf" category="paragraph">只有当卷的现有Snapshot副本已存在时、才能从快照还原卷。</block>
-  <block id="4905114f3925ed2863baa2d94439902b" category="paragraph">确保您有足够的容量来完成此操作。</block>
-  <block id="3d7743d27e7346a7094199a8317979a9" category="list-text">选择*数据保护操作*、*快照*、然后选择*从快照还原卷*。</block>
-  <block id="cd311f58436ee68a7677fa7444318b66" category="list-text">在Restore volume from a Snapshot对话框的* Snapshot name*字段中、从下拉菜单中选择要还原的快照。</block>
   <block id="dfb1565e1ec2734dcbcb24e6b43c9919" category="list-text">在*已还原卷名称*字段中、为要还原的卷输入一个唯一名称。</block>
   <block id="4f1846b15b8a356a7b4e9cd679e14ad1" category="summary">反转复制关系、以使目标卷成为源卷。</block>
   <block id="11d688dbb6757a0fe68e53ad308bce54" category="doc">反转复制关系</block>
@@ -663,10 +650,7 @@
   <block id="e5787a3a7b79c3cdbeb01e163f0a84de" category="sidebar">管理快照</block>
   <block id="af9c364e0933200b7b8c1e7e13947ccf" category="sidebar">创建快照</block>
   <block id="e807ebdf213353b8a415f991a2cade81" category="sidebar">创建快照策略</block>
-  <block id="ea8c9a66e2636ce9b98d1a110a02791e" category="sidebar">从快照创建新卷</block>
-  <block id="cb230ad17b1cab1fba2436fdf9a4222a" category="sidebar">管理对象存储的备份</block>
   <block id="c650dc131eb6eb56a3ed637559a17a3f" category="sidebar">创建手动备份</block>
-  <block id="3baac809cc5d7dd36919afed53778b41" category="sidebar">管理复制</block>
   <block id="5eb43e1edd4f0757c83c6d6f6632ff94" category="sidebar">管理和监控</block>
   <block id="8cf9dbe17cb44a10f0622b63961c131d" category="sidebar">卷管理</block>
   <block id="56994f1db86bfe709cbe47f96bde566f" category="sidebar">编辑卷自动增长</block>
@@ -682,7 +666,6 @@
   <block id="ef045d17e80274aec5be009d1f13f5a2" category="sidebar">为文件系统配置IOPS</block>
   <block id="63d5049791d9d79d86e9a108b0a999ca" category="sidebar">参考</block>
   <block id="231cf4c70d866b616c21baddaeed0696" category="sidebar">故障排除</block>
-  <block id="b39f472a8f42e6a145c20b290f2c0f7b" category="paragraph">对于文件系统、IOPS会自动 <block ref="a9cec068297d5b243eecd658574a7cef" category="inline-link-macro-rx"></block> 增加3次、而SSD容量每增加1 GiB。</block>
   <block id="c7f1094806f4a7907a28dc01a1473f90" category="inline-link-macro">了解如何使用CodeBox实现自动化</block>
   <block id="672d0efbe9223ef23c5fd7d2c7cd4a95" category="paragraph">您可以使用_Quick cre成_或_Advanced cre成_来创建FSx for ONTAP文件系统。您还可以使用CodeBox中提供的以下工具：REST API、CloudFormation和Terraform。<block ref="e0a3467dce43941c7b863cc8d6f0a62a" category="inline-link-macro-rx"></block>(英文)</block>
   <block id="11e2fb5025fdb2cb91fd04c343163328" category="admonition">使用来自CodeBox的Terraform时、您复制或下载的代码会隐藏<block ref="679500f227997b45be97e3ca8115c678" prefix=" " category="inline-code"></block> 和<block ref="6173aa5206484b5224450952747c7148" prefix=" " category="inline-code"></block> 密码。运行代码时、您需要重新输入密码。</block>
@@ -828,9 +811,6 @@
   <block id="4da97157b6693eaf9968b187d7b8259c" category="paragraph">为FSx for ONTAP文件系统创建一个Storage VM (SVM)、以便在BlueXP  工作负载工厂中以虚拟方式访问工作负载的存储和数据服务。</block>
   <block id="54f16768a20bbfb09d736f2fa0a731aa" category="paragraph">Storage VM是一种隔离的文件服务器、可用于访问工作负载出厂存储中每个工作负载的数据。每个SVM都有自己的管理凭据和端点、用于管理和访问数据。</block>
   <block id="08e2fd9fd4dc9adfe3d5f817b3499842" category="paragraph">您可以从工作负载出厂控制台创建Storage VM。您还可以使用CodeBox中提供的以下工具：REST API、CloudFormation和Terraform。<block ref="e0a3467dce43941c7b863cc8d6f0a62a" category="inline-link-macro-rx"></block>(英文)</block>
-  <block id="55a23b72fe4aee5e2f0024c790d7eaba" category="paragraph">从BlueXP  工作负载出厂时的快照创建新的FSx for ONTAP卷、以启用时间点恢复。</block>
-  <block id="8d34a33f34659b0ea11833ac0b8fac52" category="list-text">在*FSx for ONTAP选项卡中，选择包含卷快照的文件系统的三点菜单，然后选择*Manage*。</block>
-  <block id="3ce528a1818baf0bbf2f6b362b1f7d58" category="list-text">在卷选项卡中、选择包含要创建卷的快照的卷的三点菜单。</block>
   <block id="96a5899d90dd9b81319f168f67bcb5ae" category="summary">要在BlueXP  工作负载出厂时删除文件系统、必须先删除与该文件系统关联的任何卷、Storage VM或复制关系。</block>
   <block id="378213b58b31bfb9d173e8b2ad3c0968" category="doc">在BlueXP  工作负载出厂时删除文件系统</block>
   <block id="a3101c3638d17143df93e5cfcc3c3a0a" category="list-text">在*FSx for FS*选项卡中，选择要删除的ONTAP for ONTAP文件系统的三点菜单。</block>
@@ -869,10 +849,7 @@
   <block id="b136689ec8046bd4fb76df787393258d" category="list-text">在_Automate模式下、您可以直接从工作负载工厂部署FSx for ONTAP文件系统。您还可以从代码框窗口复制内容、并使用其中一种代码框方法部署系统。</block>
   <block id="42342e81c625fd1c1141771fe2b6b202" category="summary">NetApp以多种方式为工作负载工厂及其云服务提供支持。全天候提供丰富的免费自助支持选项，例如知识库（ KB ）文章和社区论坛。您的支持注册包括通过 Web 服务单提供的远程技术支持。</block>
   <block id="cf0e6c8d239f09812e12102f2415bb94" category="doc">获取有关适用于工作负载工厂的FSx for ONTAP的帮助</block>
-  <block id="4788b71d4c5e86a9696627d3c900127a" category="doc">在BlueXP  工作负载出厂时增加文件系统容量</block>
   <block id="9d5344a986b0470d38d0c3e88e507b26" category="paragraph">或者、您也可以<block ref="2bbbc5acd5fd256837600f63916b0e57" category="inline-link-macro-rx"></block>让工作负载工厂为您管理文件系统容量。</block>
-  <block id="1eacd22d13fd6fa8174d7a166e0e9e6b" category="list-text">在*FSx for FS* ONTAP选项卡中，选择要增加容量的文件系统的三点菜单。</block>
-  <block id="b809bcb34d202de3370d7e6db448a949" category="list-text">在“信息”下，选择*Capacity Distribution *旁边的铅笔图标。当鼠标悬停在*Capacity Distribution *行上时，下拉箭头旁边将显示铅笔图标。</block>
   <block id="56878af0f0856af0f2eb7d58b284ec98" category="summary">随时手动增加BlueXP  工作负载出厂时卷的卷容量。</block>
   <block id="9a043b713e882184d11ad1a7919816bc" category="doc">在BlueXP  工作负载出厂时增加卷容量</block>
   <block id="9aebf119a4043534b3bad38302a5a426" category="paragraph">随时在BlueXP  工作负载出厂时手动增加卷的卷容量。</block>
@@ -964,8 +941,6 @@
   <block id="a961210a0ba733961532745ff6f57f44" category="paragraph">在BlueXP  工作负载出厂时、您可以将卷从备份还原到AWS帐户中的任何FSx for ONTAP文件系统。</block>
   <block id="81d97c35dd4fb198942dc29738189b53" category="list-text">从*卷*选项卡中，选择要从备份中还原的卷的三点菜单。</block>
   <block id="f77361b272ce81d8275727f7b1a756a8" category="list-text">选择 * 还原 * 。</block>
-  <block id="c044800449646a715ebe323cce453c98" category="doc">在BlueXP  工作负载出厂时从快照还原卷</block>
-  <block id="52f33bacfd6c28493dc1bdae553bb3cd" category="paragraph">在BlueXP  工作负载出厂时、如果FSx for ONTAP卷包含已删除或损坏的文件、则可以从快照还原该卷。</block>
   <block id="e17e241599862dc1177ef32c2eeba1d6" category="list-text">从*卷*选项卡中，选择要从快照还原的卷的三点菜单。</block>
   <block id="ce4e51fb870a92120876371d3bddc3aa" category="doc">在BlueXP  工作负载出厂时反转复制关系</block>
   <block id="b3c4745e4516364034e0070ca832f670" category="paragraph">在BlueXP  工作负载出厂时反转复制关系、以使目标卷成为源卷。</block>
@@ -1259,9 +1234,6 @@
   <block id="78c187892204fa9a888a00a5635447c9" category="list-text">可选：启用不可删除的快照。</block>
   <block id="bac08643512e190f9a6a6c2a8e9b983b" category="list-text">选择*启用不可更改的快照*以防止在保留期间删除此策略中创建的快照。</block>
   <block id="4e41f89501d754d5c6885a51e74ac5f0" category="list-text">以小时、天、月或年为单位设置*保留期限*。</block>
-  <block id="58defc647621cf2147bca50eba3d13f5" category="summary">在BlueXP  工作负载出厂时为Storage VM创建自定义快照策略。</block>
-  <block id="2a07132290664925d6acf392c1b389ba" category="doc">在BlueXP  工作负载出厂时为Storage VM创建Snapshot策略</block>
-  <block id="2f8e07938edc25be83cf584fa9baa96b" category="paragraph">在BlueXP  工作负载出厂时为Storage VM创建自定义快照策略。快照策略用于定义系统如何为Storage VM创建快照。您可以为FSx for ONTAP文件系统中的Storage VM创建快照策略。您还可以在多个Storage VM之间共享此策略。</block>
   <block id="cf6066b0e9e3a71171e38923cf6da6f9" category="list-text">在文件系统概述中，选择*Storage VMS*选项卡。</block>
   <block id="f74e735c048e3c0f84c80e2fade1fb56" category="list-text">从*Storage VMS*选项卡中，为要使用计划快照保护的卷选择三点菜单，然后依次选择*Advanced Actions*和*Manage Snapshot Policies*。</block>
   <block id="c92307c84c3661374297e6b2cb6a8af4" category="list-text">在Snapshot策略管理页面上，选择*Create Snapshot policy*。</block>
@@ -1271,16 +1243,10 @@
   <block id="c4f08518809bffff8a2b5046db374241" category="list-text">可选：为所需的任何计划启用*不可变更快照*，为每个计划设置*保留期限*，然后接受该语句以继续。</block>
   <block id="fbe63591e4efcbefdcee988dc8bc46ae" category="paragraph">启用不可删除的快照会锁定此快照策略中的所有快照、以防止在保留期间删除这些快照。</block>
   <block id="67e792ffec4a29b646fa11aff1d8c441" category="list-text">*跨Storage VM*共享*：默认启用。启用后、快照策略将在文件系统中的所有Storage VM之间共享。禁用可为单个Storage VM创建快照策略。</block>
-  <block id="bcdd10c1cff7243af519e9d8eec8dbd8" category="paragraph">此时将创建Snapshot策略。</block>
   <block id="c30e0acb90fa2137d90a80462f560839" category="list-text">在*FSx for FS* ONTAP选项卡中，选择包含要创建快照的卷的文件系统的三点菜单，然后选择*Manage*。</block>
   <block id="fefc3b8b375d96e8bf83d73c262aab57" category="list-text">从*卷*选项卡中，选择要使用快照保护的卷的三点菜单。</block>
-  <block id="f01fa636d7ab2112e7dd3793a4da0345" category="list-text">选择*数据保护操作*、*快照*，然后选择*创建快照*。</block>
-  <block id="84c4fbf0889e2d552cef58742fbb6561" category="list-text">在Create a Snapshot对话框的*Snapshot name*字段中输入快照名称。</block>
-  <block id="6ed24439c49aa780b53884f3cee8e455" category="list-text">可选：使快照不可更改、以防止快照在保留期间被删除。</block>
-  <block id="497a3a6d6896389f61471114110cc7fe" category="list-text">启用*不可变更快照*。</block>
   <block id="be418a0bf2ad3249acf7833b04db3bd5" category="list-text">将*保留期限*设置为小时数、天数、月数或年数。</block>
   <block id="6612ee3812a7ecc1b61dc6f585b1c26f" category="list-text">接受有关不可变更快照的语句。</block>
-  <block id="a07e25b28678b53fe808a082369fda80" category="paragraph">此卷具有一个Snapshot副本。</block>
   <block id="86ee35c0029c920dce9ef56d88935e8e" category="paragraph">卷可能会使用以下协议：</block>
   <block id="8feb9be2f7d30e723f1c8aa899250dae" category="list-text">*块访问*：允许运行关键业务应用程序的主机使用iSCSI协议访问卷。只有当文件系统横向扩展部署包含六个或更少的HA对时、才能使用块访问。</block>
   <block id="f122287653386d74229199bd670f4990" category="list-text">保留期限有两项设置-_保留 策略_和_保留 期限_。retri力policy_定义 了文件在不可固定的WORM状态下保留多长时间。您可以指定自己的保留策略或使用默认保留策略(未指定)、即30年。最小值和最大值_保留期限_用于定义允许锁定文件的时间范围。</block>
@@ -2115,4 +2081,94 @@
   <block id="613abd0d9da6f7ee37d283174e11fcaf" category="section-title">2025年8月3日</block>
   <block id="1595965c84afe577a4228c0f8a132a00" category="sidebar">管理 SMB/CIFS 共享</block>
   <block id="b8bfbf72dc92e989a0b91cd409144076" category="summary">工作负载工厂扫描Amazon FSx for NetApp ONTAP配置，提供见解和建议，帮助您实现卓越运营。</block>
+  <block id="d1e5e17e5a4cb355117a41318746c4a4" category="doc">存储库存报告增强功能</block>
+  <block id="b749705b43261f48fe8b1309cb366d90" category="paragraph">工作负载工厂增强了针对 FSx for ONTAP文件系统报告的数据。  FSx for ONTAP库存页面的可下载报告包括以下新列：</block>
+  <block id="c61468edc77ab93ea17568f678793bdd" category="list-text">SSD已用：显示已使用的SSD容量值</block>
+  <block id="a1a4ea0fabd62225adb4786dd703d1a7" category="list-text">SSD 利用率：显示 SSD 容量的使用百分比</block>
+  <block id="c016cb9916988a0ea698d070fd6b702a" category="list-text">吞吐量利用率：显示过去 30 天的平均和峰值利用率</block>
+  <block id="197af635c10bcbf35ba56184f54cb088" category="list-text">IO 利用率：显示过去 30 天的平均和峰值 IO 利用率</block>
+  <block id="92bce71ffaebc031ec78d565e6ad7032" category="list-text">CPU 利用率：显示过去 30 天的平均和峰值 CPU 利用率</block>
+  <block id="95851c89a4d869fdb94916625564bb6c" category="section-title">快照管理增强功能</block>
+  <block id="fbb3322fb25c1109310e7be3bcc20fd5" category="paragraph">工作负载工厂对查看卷快照详细信息和管理卷快照做出了多项增强。这些增强功能使您更容易了解快照的状态并保护您的数据。</block>
+  <block id="3ecb130f0ffe2d8e485cb11c629b90b5" category="inline-image-macro">屏幕截图显示了 FSx for ONTAP卷菜单的基本操作，然后查看卷详细信息。</block>
+  <block id="d26eb7e0d00b2e5069d790d2b9be49ba" category="paragraph"><block ref="d26eb7e0d00b2e5069d790d2b9be49ba" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="cb34ab44253ae9c736786f23dc173879" category="paragraph">“保护”选项卡下的“卷详细信息”中显示其他项目：</block>
+  <block id="6d4b26be686dd37e202e23010a22bf04" category="list-text">快照策略名称</block>
+  <block id="a81cec6ec43470b1419a033e0457112d" category="list-text">快照空间预留</block>
+  <block id="c04d4554f0391d80036dceaa0e930ee2" category="list-text">快照空间预留容量</block>
+  <block id="06fd2134099fd30808caa961b2bc9b21" category="inline-image-macro">屏幕截图显示了 FSx for ONTAP卷的详细信息，其中“保护”选项卡处于打开状态。</block>
+  <block id="b52491919b24cba6fd1efad7447c7798" category="paragraph"><block ref="b52491919b24cba6fd1efad7447c7798" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e987130d3b26cda391ff2f1e5149f444" category="paragraph">可以从卷访问新的快照管理屏幕；它提供有关卷的快照策略的信息，并包含包含所有卷快照的表。该表显示以下快照详细信息：创建时间、大小、到期时间、不可变快照保护和标签。从管理屏幕，您可以更改卷的快照策略，手动创建快照以及编辑、访问、恢复和删除快照。</block>
+  <block id="ad8f55b88a50703984e58a23e36e9026" category="inline-image-macro">显示管理快照屏幕的屏幕截图。</block>
+  <block id="404a59509c6a806310ecbd1d601e0ee6" category="paragraph"><block ref="404a59509c6a806310ecbd1d601e0ee6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="52574bdc9ce79e7e568096fa39264d72" category="section-title">SSD 存储容量可减少</block>
+  <block id="0cc6e64eaa35165d8791def1903c483a" category="paragraph">工作负载工厂支持减少第一代和第二代文件系统的固态硬盘 (SSD) 容量。利用弹性文件系统容量，您可以动态调整文件系统的容量以满足工作负载的需求。</block>
+  <block id="298ae1d1e13ebe1f0f22936b7ea9ce33" category="inline-link-macro">调整文件系统容量</block>
+  <block id="6b4be3b501bf6ae8984293c02d4d610b" category="paragraph"><block ref="6b4be3b501bf6ae8984293c02d4d610b" category="inline-link-macro-rx"></block></block>
+  <block id="14fc4cc175abaf53d8e3d6a080ba96e8" category="summary">为工作负载工厂中的存储虚拟机创建自定义快照策略。</block>
+  <block id="12b776fb2d015f7638890feb17b66bf6" category="doc">为工作负载工厂中的存储虚拟机创建快照策略</block>
+  <block id="2908297e977ab153ee0bec5fba041d6f" category="paragraph">为工作负载工厂中的存储虚拟机创建自定义快照策略，以管理快照的创建和保留。快照策略定义了系统如何为存储虚拟机创建快照。您可以为 FSx for ONTAP文件系统中的存储虚拟机创建快照策略。您还可以在多个存储虚拟机之间共享该策略。</block>
+  <block id="1528c852e43be2a99e8719b76138fb44" category="list-text">选择*数据保护操作*，然后选择*管理快照*。</block>
+  <block id="f4a331106cfb59d634afb478ec8cfccb" category="list-text">在管理快照页面中，选择*创建快照*。</block>
+  <block id="75aba4f0296caf05917e327be4ed5543" category="list-text">在创建快照对话框中，执行以下操作：</block>
+  <block id="0322f0a521f84e22afd1df9ed7f765db" category="list-text">在“*快照名称*”字段中输入快照名称。</block>
+  <block id="4c01998cfbe91538bc592922c3e8734f" category="list-text">或者，选择一个标签或创建一个新标签。</block>
+  <block id="923a0a2b244437dc531c8a64263b0020" category="list-text">可选：*使此快照不可变*，以防止快照在保留期内被删除。</block>
+  <block id="f7485ffd44c64cac23a73493d66e3cf4" category="summary">手动调整 FSx for ONTAP文件系统的 SSD 存储容量，以满足具有不同活动工作集的基于项目的工作负载的需求。</block>
+  <block id="f091318898763a58ec22bd1c8c205e0b" category="doc">在工作负载工厂中调整文件系统容量</block>
+  <block id="36ce9e23b4485aac42f272cf012cfd85" category="paragraph">手动调整 FSx for ONTAP文件系统的固态硬盘 (SSD) 存储容量，以满足具有不同活动工作集的基于项目的工作负载的需求。</block>
+  <block id="383573d373c886b1029b549fd3ab5636" category="paragraph">当使用的 SSD 存储容量超过您指定的阈值时，增加 FSx for ONTAP文件系统的 SSD 存储容量，或者在工作集不活动时减少 SSD 存储容量，以提高成本效率。</block>
+  <block id="3c600356591a28f18cc21513190e4cb5" category="paragraph">利用弹性文件系统容量，您可以动态调整文件系统的容量以满足工作负载的需求。</block>
+  <block id="33f1d74921ddc533e52016f4d1a89af9" category="paragraph">调整文件系统容量会影响 FSx for ONTAP文件系统的 IOPS。</block>
+  <block id="fa86270fd952d04b42ae4b5586eabdef" category="paragraph">当你自动<block ref="a9cec068297d5b243eecd658574a7cef" category="inline-link-macro-rx"></block>对于文件系统，SSD 容量每增加或减少 1 GiB，IOPS 就会增加或减少 3 IOPS。</block>
+  <block id="7c4988a80f96ebde3a91c80963bb725d" category="paragraph">要调整文件系统的容量，必须先<block ref="8c3635bc720b3de661de28059e4ae780" category="inline-link-macro-rx"></block>。</block>
+  <block id="c58a7814e09e2136ba19c01a85ca87cb" category="list-text">从仪表板中选择*调整 SSD 容量*。</block>
+  <block id="22bc230291a62283fe347ecaef11e64d" category="list-text">选择您要调整容量的文件系统，然后选择*继续*。</block>
+  <block id="c68dcfd2e9aa85bd2ccb1ef7efb36856" category="paragraph">*潜在节省*是减少容量的建议。</block>
+  <block id="ab60333415618ec9fe15bd79adf222ee" category="list-text">在调整 SSD 容量对话框中，输入 *预配置容量* 的数字。</block>
+  <block id="a7c0ac9b435ae713a713a271638a992c" category="summary">编辑快照设置、启用目录访问和删除快照以管理工作负载工厂中的快照和数据保护。</block>
+  <block id="3893740c49122217b62d6529f246ffc7" category="doc">管理 FSx for ONTAP卷的快照</block>
+  <block id="57e53df8f66509e4ecdabdca5294937b" category="section-title">编辑快照</block>
+  <block id="5c5cf4cdf8dd88c1f0fa6aea2ecac35e" category="paragraph">编辑快照的名称、标签和保留期。如果快照尚未变为不可变的，您可以使快照变为不可变的。</block>
+  <block id="c0f24431ed90baa037117b26a5a22d22" category="list-text">从“*Volumes*”选项卡中，选择要编辑快照的卷的三点菜单。</block>
+  <block id="a8221bf4844208248f5cb74e74c739fd" category="list-text">在管理快照页面中，选择要编辑的快照的三点菜单，然后选择*编辑*。</block>
+  <block id="bea584725867b5b5e974a646929f56b4" category="list-text">在编辑快照对话框中，您可以编辑以下内容：</block>
+  <block id="22d1cb21d295d88b771f81456e349920" category="list-text">更改名称。</block>
+  <block id="3cdc796d3f8c10c8504e7f62ac85a560" category="list-text">更改标签。</block>
+  <block id="c51b9f8bfc3d25cb60ce2f85fa473dab" category="list-text">更改保留期。</block>
+  <block id="a461891ce745b6e53163499dd6a76301" category="paragraph">如果快照已经不可变，则无法编辑此设置。</block>
+  <block id="56581c15d8f7e3ec52e678e2807f1810" category="section-title">访问快照</block>
+  <block id="1733a9f5d8e959e38355a0dbe35d5065" category="paragraph">启用快照目录访问，让用户能够自主访问快照。</block>
+  <block id="85e036beddd0153b2b24fc252c5930af" category="list-text">从“*Volumes*”选项卡中，选择要访问快照的卷的三点菜单。</block>
+  <block id="5221d99ac8e89eb52e64918972f35b5a" category="list-text">在管理快照页面中，选择要访问的快照的三点菜单，然后选择*访问*。</block>
+  <block id="07c4a8c1c625be343c227870575c8d87" category="list-text">在访问快照对话框中，选择*启用快照目录访问*以访问此卷快照和该卷的所有快照。</block>
+  <block id="b222a1837d5e9867712802dd2a235a98" category="list-text">对于 NFS 卷：选择 *NFS 访问路径* 以查看快照的 NFS 路径。</block>
+  <block id="3dae4cd8dcc7270203f2f8ea0d079815" category="list-text">对于 SMB/CIFS 卷：选择 *SMB 访问路径* 以查看快照的 SMB 路径。</block>
+  <block id="8695344671e89445641e5521e94e092a" category="list-text">复制访问路径。</block>
+  <block id="f4b128dfa4315b7560d911b08c3653c2" category="section-title">从快照恢复数据</block>
+  <block id="05f173e81abaca211df63916cfac7a74" category="paragraph">您可以选择将数据从快照恢复到现有卷或新卷。</block>
+  <block id="6520c3672c5d01c2976ef1980c6c4f4b" category="paragraph"><block ref="6520c3672c5d01c2976ef1980c6c4f4b" category="inline-link-macro-rx"></block></block>
+  <block id="efb44cfe1d5b8d9954ea045385675c66" category="section-title">删除快照</block>
+  <block id="6dbf69edbee88e5a8078a8a4e008a3b8" category="paragraph">删除快照以释放空间。</block>
+  <block id="65231a1c4b836cdc3226241028b6f5c1" category="paragraph">不可变快照在保留期结束前不能被删除。</block>
+  <block id="ea6e0fbfc66a50ad275a34ced4baee30" category="list-text">从“*Volumes*”选项卡中，选择要删除快照的卷的三点菜单。</block>
+  <block id="18c5c678d2db682d1c0c828b0712359a" category="list-text">在管理快照页面中，选择要删除的快照的三点菜单，然后选择*删除*。</block>
+  <block id="89e6716d68072489564767a766ad91b4" category="list-text">在删除快照对话框中，输入“delete”。</block>
+  <block id="6b7a52834d577f2e4ac4d587036728f4" category="list-text">选择*删除*确认删除。</block>
+  <block id="30f60d67f457bb040dffde52197a54da" category="list-title">相关信息</block>
+  <block id="6d2771dfb9453c665603cef4b0fbb11a" category="list-text"><block ref="6d2771dfb9453c665603cef4b0fbb11a" category="inline-link-macro-rx"></block></block>
+  <block id="83920bb8c8a04a2372e330bd4db6becc" category="list-text"><block ref="83920bb8c8a04a2372e330bd4db6becc" category="inline-link-macro-rx"></block></block>
+  <block id="2e5c50a11ce0216fa9a931d0e31f38fb" category="list-text"><block ref="2e5c50a11ce0216fa9a931d0e31f38fb" category="inline-link-macro-rx"></block></block>
+  <block id="5555c9991f89f798392b8981015a49d6" category="doc">从工作负载工厂中的快照还原卷</block>
+  <block id="fedae93e45eef0cf99ae9d3e2dbff802" category="paragraph">在工作负载工厂中，您可以将数据从快照恢复到现有卷或新卷。当卷包含已删除或损坏的文件时，还原操作可以实现时间点恢复。</block>
+  <block id="d53b53fb3880fbcc2120f4ebdcb4b727" category="paragraph">从快照创建新卷会在几秒钟内复制整个卷，与卷大小无关。新创建的副本代表一个新卷。</block>
+  <block id="22509908f6a972a65b5370b282ed646c" category="list-text">增加卷消耗：从快照创建卷后，您将拥有两个独立的卷，并且都消耗主机文件系统的容量。确保您有足够的容量来完成此操作。</block>
+  <block id="8babf692a891c5060bb678dacf1bb2ad" category="list-text">在管理快照页面中，选择要恢复的快照的三点菜单，然后选择*恢复*。</block>
+  <block id="0c5f6f3cf9344efbd61695ffdf90106f" category="list-text">在从快照还原卷对话框中，从以下选项中进行选择：</block>
+  <block id="63421d2e7769a33701821702ab1b0be8" category="list-text">切换选择*恢复为新卷*。</block>
+  <block id="2321232f7bb400db057064cec47f4904" category="list-text">将数据从快照恢复到现有卷。此操作将永久删除快照创建时间后修改的任何数据。</block>
+  <block id="b271a75b2d121a8cb5f59ae458394323" category="section-title">2025年9月9日</block>
+  <block id="62486fa65fc31c383ace8989549632ad" category="sidebar">使用快照</block>
+  <block id="b8d3d1ca4d4975c76eec10109e85c77f" category="sidebar">使用备份到对象存储</block>
+  <block id="fe355a62d144a6a42805c3eb5698310a" category="sidebar">使用复制</block>
 </blocks>

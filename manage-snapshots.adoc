@@ -1,0 +1,103 @@
+---
+sidebar: sidebar 
+permalink: manage-snapshots.html 
+keywords: snapshot, snapshots, manage snapshots, edit snapshots, access snapshots, delete snapshots, remove snapshots 
+summary: 编辑快照设置、启用目录访问和删除快照以管理工作负载工厂中的快照和数据保护。 
+---
+= 管理 FSx for ONTAP卷的快照
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+编辑快照设置、启用目录访问和删除快照以管理工作负载工厂中的快照和数据保护。
+
+
+
+== 编辑快照
+
+编辑快照的名称、标签和保留期。如果快照尚未变为不可变的，您可以使快照变为不可变的。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 在*存储*中，选择*转至存储清单*。
+. 在*FSx for ONTAP选项卡中，选择包含卷的文件系统的三点菜单，然后选择*Manage*。
+. 在文件系统概述中，选择*Volumes*选项卡。
+. 从“*Volumes*”选项卡中，选择要编辑快照的卷的三点菜单。
+. 选择*数据保护操作*，然后选择*管理快照*。
+. 在管理快照页面中，选择要编辑的快照的三点菜单，然后选择*编辑*。
+. 在编辑快照对话框中，您可以编辑以下内容：
++
+.. 更改名称。
+.. 更改标签。
+.. 更改保留期。
+.. 可选：*使此快照不可变*，以防止快照在保留期内被删除。
++
+如果快照已经不可变，则无法编辑此设置。
+
++
+接受有关不可变更快照的语句。
+
+
+
+. 选择 * 应用 * 。
+
+
+
+
+== 访问快照
+
+启用快照目录访问，让用户能够自主访问快照。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 在*存储*中，选择*转至存储清单*。
+. 在*FSx for ONTAP选项卡中，选择包含卷的文件系统的三点菜单，然后选择*Manage*。
+. 在文件系统概述中，选择*Volumes*选项卡。
+. 从“*Volumes*”选项卡中，选择要访问快照的卷的三点菜单。
+. 选择*数据保护操作*，然后选择*管理快照*。
+. 在管理快照页面中，选择要访问的快照的三点菜单，然后选择*访问*。
+. 在访问快照对话框中，选择*启用快照目录访问*以访问此卷快照和该卷的所有快照。
++
+** 对于 NFS 卷：选择 *NFS 访问路径* 以查看快照的 NFS 路径。
+** 对于 SMB/CIFS 卷：选择 *SMB 访问路径* 以查看快照的 SMB 路径。
+
+
+. 复制访问路径。
+. 选择 * 应用 * 。
+
+
+
+
+== 从快照恢复数据
+
+您可以选择将数据从快照恢复到现有卷或新卷。
+
+link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_snapshot-mgmt/restore-volume-from-snapshot.html["从快照还原卷"]
+
+
+
+== 删除快照
+
+删除快照以释放空间。
+
+不可变快照在保留期结束前不能被删除。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 在*存储*中，选择*转至存储清单*。
+. 在*FSx for ONTAP选项卡中，选择包含卷的文件系统的三点菜单，然后选择*Manage*。
+. 在文件系统概述中，选择*Volumes*选项卡。
+. 从“*Volumes*”选项卡中，选择要删除快照的卷的三点菜单。
+. 选择*数据保护操作*，然后选择*管理快照*。
+. 在管理快照页面中，选择要删除的快照的三点菜单，然后选择*删除*。
+. 在删除快照对话框中，输入“delete”。
+. 选择*删除*确认删除。
+
+
+.相关信息
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-snapshot.html["创建快照"]
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-snapshot-policy.html["创建快照策略"]
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/restore-volume-from-snapshot.html["从快照还原卷"]
+

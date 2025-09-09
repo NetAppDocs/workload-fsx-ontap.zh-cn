@@ -53,7 +53,7 @@ sidebar:
       entries:
       - title: 数据保护概述
         url: "/data-protection-overview.html"
-      - title: 管理快照
+      - title: 使用快照
         entries:
         - title: 创建快照
           url: "/create-snapshot.html"
@@ -61,15 +61,13 @@ sidebar:
           url: "/create-snapshot-policy.html"
         - title: 从快照还原卷
           url: "/restore-volume-from-snapshot.html"
-        - title: 从快照创建新卷
-          url: "/create-volume-from-snapshot.html"
-      - title: 管理对象存储的备份
+      - title: 使用备份到对象存储
         entries:
         - title: 创建手动备份
           url: "/create-backup.html"
         - title: 从备份还原卷
           url: "/restore-from-backup.html"
-      - title: 管理复制
+      - title: 使用复制
         entries:
         - title: 创建复制关系
           url: "/create-replication.html"
@@ -145,6 +143,8 @@ sidebar:
           url: "/manage-snapshot-policy.html"
         - title: 启用和编辑快照以进行长期保留
           url: "/enable-snapshots-long-term.html"
+        - title: 管理快照
+          url: "/manage-snapshots.html"
       - title: 备份
         entries:
         - title: 管理FSx for ONTAP备份计划
