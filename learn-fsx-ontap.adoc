@@ -70,9 +70,17 @@ AWS会维护您的FSx for ONTAP帐户、而不是工作负载工厂。请参阅 
 
 
 
-== 支持的区域
+== 区域
 
-https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/["查看支持的 Amazon 地区。"^]
+所有支持 FSx for ONTAP 的商业区域都支持工作负载工厂。link:https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/["查看支持的 Amazon 地区。"^]
+
+以下 AWS 区域不受支持：
+
+* 中国地区
+* GovCloud（美国）区域
+* 秘密云
+* 绝密云
+
 
 
 

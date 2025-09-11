@@ -450,9 +450,7 @@
   <block id="a5a980f3518b6bdf573ccca8b4570aaa" category="list-text">*Codebox*：为开发人员提供FSx for ONTAP操作的代码查看器、用于复制和下载的代码模板以及用于代码重复使用的自动化目录。</block>
   <block id="20b4f77bd00b4f63a49ec8e08f3bf6a6" category="section-title">成本</block>
   <block id="2f00f54e8e91e47bd247b06a51824fb0" category="inline-link-macro">Amazon FSx for NetApp ONTAP的定价</block>
-  <block id="8c4b25218155a1fdb972f4169855d04f" category="section-title">支持的区域</block>
   <block id="d5b1044cbc510048a5dac270bde89ed5" category="inline-link">查看支持的 Amazon 地区。</block>
-  <block id="ee9b3af8630059982f4d1dd2fd3834a3" category="paragraph"><block ref="ee9b3af8630059982f4d1dd2fd3834a3" category="inline-link-rx"></block></block>
   <block id="20c404f3ca0633629eee9b1b4ccd6737" category="section-title">获取帮助</block>
   <block id="da444b283df699667b2316206972bdfe" category="paragraph">适用于NetApp ONTAP 的Amazon FSX是AWS第一方解决方案。如有与您的FSx for ONTAP文件系统、基础架构或使用此服务的任何解决方案相关的问题或技术支持问题、请使用AWS管理控制台中的支持中心创建AWS支持案例。选择 "FSX for ONTAP " 服务和相应的类别。提供创建 AWS 支持案例所需的其余信息。</block>
   <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">法律声明</block>
@@ -2162,7 +2160,6 @@
   <block id="5555c9991f89f798392b8981015a49d6" category="doc">从工作负载工厂中的快照还原卷</block>
   <block id="fedae93e45eef0cf99ae9d3e2dbff802" category="paragraph">在工作负载工厂中，您可以将数据从快照恢复到现有卷或新卷。当卷包含已删除或损坏的文件时，还原操作可以实现时间点恢复。</block>
   <block id="d53b53fb3880fbcc2120f4ebdcb4b727" category="paragraph">从快照创建新卷会在几秒钟内复制整个卷，与卷大小无关。新创建的副本代表一个新卷。</block>
-  <block id="22509908f6a972a65b5370b282ed646c" category="list-text">增加卷消耗：从快照创建卷后，您将拥有两个独立的卷，并且都消耗主机文件系统的容量。确保您有足够的容量来完成此操作。</block>
   <block id="8babf692a891c5060bb678dacf1bb2ad" category="list-text">在管理快照页面中，选择要恢复的快照的三点菜单，然后选择*恢复*。</block>
   <block id="0c5f6f3cf9344efbd61695ffdf90106f" category="list-text">在从快照还原卷对话框中，从以下选项中进行选择：</block>
   <block id="63421d2e7769a33701821702ab1b0be8" category="list-text">切换选择*恢复为新卷*。</block>
@@ -2171,4 +2168,13 @@
   <block id="62486fa65fc31c383ace8989549632ad" category="sidebar">使用快照</block>
   <block id="b8d3d1ca4d4975c76eec10109e85c77f" category="sidebar">使用备份到对象存储</block>
   <block id="fe355a62d144a6a42805c3eb5698310a" category="sidebar">使用复制</block>
+  <block id="044dbc650d6316ed90f739b69dfff7ee" category="section-title">区域支持</block>
+  <block id="468469fded9ecf5cf0e132a6daa62d32" category="paragraph">以下 AWS 区域不受支持：</block>
+  <block id="cc6dcf46ebcb08f1caa420526cc0ab18" category="list-text">中国地区</block>
+  <block id="1411debdb32e6b128ca27ec92a708cbd" category="list-text">GovCloud（美国）区域</block>
+  <block id="ecd96786b112acf6970d6aaf3be575ca" category="list-text">秘密云</block>
+  <block id="151ef168e17772f7a361db78a0c86552" category="list-text">绝密云</block>
+  <block id="5948f3347ebc02ebc690227c059661e1" category="section-title">区域</block>
+  <block id="dbd9df55416d4512d3fcb441aced88b3" category="paragraph">所有支持 FSx for ONTAP 的商业区域都支持工作负载工厂。<block ref="c26e1d6730022abf3c378cf0c0cad7af" category="inline-link-macro-rx"></block></block>
+  <block id="186585d175a4fff1722ac82a5520c584" category="paragraph">以下 AWS 区域不受支持：</block>
 </blocks>
