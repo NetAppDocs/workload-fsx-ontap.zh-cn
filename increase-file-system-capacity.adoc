@@ -17,6 +17,9 @@ summary: 手动调整 FSx for ONTAP文件系统的 SSD 存储容量，以满足�
 
 或者、您也可以link:enable-auto-capacity-management.html["启用自动容量管理功能"]让工作负载工厂为您管理文件系统容量。
 
+
+NOTE: 仅第二代文件系统支持减少 SSD 存储容量。
+
 .关于此任务
 利用弹性文件系统容量，您可以动态调整文件系统的容量以满足工作负载的需求。
 
