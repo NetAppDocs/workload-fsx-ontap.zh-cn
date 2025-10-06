@@ -1,17 +1,17 @@
 ---
 sidebar: sidebar 
 permalink: create-file-system.html 
-keywords: create, FSx file system, ONTAP file system, workload factory, storage 
-summary: 使用BlueXP  工作负载工厂、您可以创建适用于ONTAP文件系统的FSx、以添加和管理卷以及其他数据服务。 
+keywords: create, FSx file system, ONTAP file system, Workload Factory, storage 
+summary: 使用NetApp Workload Factory，您可以创建 FSx for ONTAP文件系统来添加和管理卷和其他数据服务。 
 ---
-= 在BlueXP  工作负载出厂时为ONTAP文件系统创建FSx
+= 在NetApp Workload Factory 中创建 FSx for ONTAP文件系统
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-使用 BlueXP 工作负载工厂，您可以创建第一代和第二代 FSx for ONTAP 文件系统来添加和管理卷和附加数据服务。
+使用NetApp Workload Factory，您可以创建第一代和第二代 FSx for ONTAP文件系统来添加和管理卷和其他数据服务。
 
 .关于此任务
 在创建文件系统过程中会创建Storage VM和安全组。
@@ -19,7 +19,7 @@ summary: 使用BlueXP  工作负载工厂、您可以创建适用于ONTAP文件
 .开始之前
 在创建FSx for ONTAP文件系统之前、您需要：
 
-* IAM角色的ARN、为工作负载工厂提供创建FSx for ONTAP文件系统所需的权限。link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["了解如何为AWS帐户授予权限"^](英文)
+* IAM 角色的 ARN，该角色为 Workload Factory 提供创建 FSx for ONTAP文件系统所需的权限。link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["了解如何为AWS帐户授予权限"^] 。
 * 要为其创建 FSX for ONTAP 实例的区域和 VPC 信息。
 
 
@@ -42,14 +42,14 @@ NOTE: 使用来自CodeBox的Terraform时、您复制或下载的代码会隐藏 
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在存储中，选择*Create FSx for FS* ONTAP。
+. 在存储磁贴中，选择*创建 FSx for ONTAP*。
 . 在"Create FSx for ONTAP (创建FSx for Windows)"页面上、选择*快速创建*。
 +
 您也可以加载已保存的配置。
 
 . 在文件系统常规配置下、提供以下内容：
 +
-.. *AWS凭据*：选择在工作负载出厂时添加AWS凭据、或在无凭据的情况下继续操作。
+.. *AWS 凭证*：选择在 Workload Factory 中添加 AWS 凭证或继续不使用凭证。
 .. *文件系统名称*：输入文件系统的名称。
 .. *区域和VPC*：为文件系统选择区域和VPC。
 .. *部署类型*：选择部署类型。
@@ -114,14 +114,14 @@ NOTE: 使用来自CodeBox的Terraform时、您复制或下载的代码会隐藏 
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在存储中，选择*Create FSx for FS* ONTAP。
+. 在存储磁贴中，选择*创建 FSx for ONTAP*。
 . 在"Create FSx for ONTAP (创建FSx for Windows)"页面上、选择*高级创建*。
 +
 您也可以加载已保存的配置。
 
 . 在文件系统常规配置下、提供以下内容：
 +
-.. *AWS凭据*：选择在工作负载出厂时添加AWS凭据、或在无凭据的情况下继续操作。
+.. *AWS 凭证*：选择在 Workload Factory 中添加 AWS 凭证或继续不使用凭证。
 .. *文件系统名称*：输入文件系统的名称。
 .. *区域和VPC*：为文件系统选择区域和VPC。
 .. *部署类型*：选择部署类型和文件系统生成。第二代文件系统的可用性取决于所选的区域。如果所选区域不支持第二代 FSx for ONTAP 文件系统，则部署类型将切换为第一代。

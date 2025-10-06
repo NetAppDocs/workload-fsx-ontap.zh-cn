@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: edit-volume-autogrow.html 
 keywords: volume autogrow, increase volume capacity, enable autogrow 
-summary: 启用卷自动增长以让工作负载工厂为您管理卷容量。您可以随时将其禁用。 
+summary: 启用卷自动增长以让 Workload Factory 为您管理卷容量。您可以随时禁用它。 
 ---
-= 在工作负载工厂中启用卷自动增长
+= 在 Workload Factory 中启用卷自动增长
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-启用卷自动增长以让工作负载工厂为您管理卷容量。您可以随时将其禁用。
+启用卷自动增长以让 Workload Factory 为您管理卷容量。您可以随时禁用它。
 
 (可选)您可以随时使用手动增加卷的卷容量 link:increase-volume-capacity.html["增加卷容量功能"]。
 
@@ -23,10 +23,11 @@ NOTE: iSCSI卷不支持卷自动增长。
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在存储中，选择*转至存储清单*。
-. 在FSx for ONTAP选项卡中，选择包含要更新的卷的文件系统的三点菜单，然后选择*Manage*。
+. 在存储图块中，选择*转到存储*。
+. 从存储菜单中，选择 *FSx for ONTAP*。
+. 从 *FSx for ONTAP* 中，选择要更新卷的文件系统的操作菜单，然后选择 *管理*。
 . 从文件系统概述中，选择*Volumes*选项卡。
-. 从卷选项卡中、选择要修改的卷对应的三点菜单。
+. 从卷选项卡中，选择要修改的卷的操作菜单。
 . 选择*基本操作*，然后选择*设置卷自动增长*。
 . 在“设置自动增长”对话框中，启用卷自动增长功能，以自动扩展卷容量，直至达到最大大小。此功能可适应不断增长的数据使用量，确保操作不间断。
 +

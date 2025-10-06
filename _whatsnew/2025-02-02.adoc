@@ -6,7 +6,7 @@
 
 === BlueXP  工作负载出厂控制台中的CloudShell
 
-CloudShell是一种嵌入式命令行界面功能、可在BlueXP  工作负载工厂中用于存储。您可以使用CloudShell在类似于Shell的环境中的工作负载出厂控制台中从多个会话创建、共享和执行ONTAP或AWS命令行界面命令。
+CloudShell 是BlueXP workload factory中用于存储的嵌入式 CLI 功能。您可以使用 CloudShell 在 Workload Factory 控制台内类似 shell 的环境中从多个会话创建、共享和执行ONTAP或 AWS CLI 命令。
 
 link:https://docs.netapp.com/us-en/workload-setup-admin/use-cloudshell.html["详细了解BlueXP  工作负载工厂中的CloudShell"]
 
@@ -16,7 +16,7 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/use-cloudshell.html["详
 
 现在、您可以从BlueXP  工作负载工厂的存储将FSx for ONTAP清单数据下载到Microsoft Excel或CSV文件中。
 
-image:screenshot-fsx-inventory-download.png["BlueXP  工作负载工厂中的存储的屏幕截图、其中显示了用于下载FSx for ONTAP文件系统清单数据的新下载按钮。"]
+image:screenshot-fsx-inventory-download.png["BlueXP workload factory中的存储屏幕截图，显示了用于下载 FSx for ONTAP文件系统库存数据的新下载按钮。"]
 
 
 
@@ -59,7 +59,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/monitor-operations.html["�
 
 === 支持适用于NetApp ONTAP文件系统的第二代Amazon FSx
 
-现在、您可以在BlueXP  工作负载工厂中对NetApp ONTAP第二代文件系统使用Amazon FSx。FSx for ONTAP第二代单AZ文件系统由多达12个HA对提供支持、可提供高达72 Gbps的吞吐量和240、000次SSD IOPS。FSx for ONTAP第二代Multi-AZ文件系统由一个HA对提供支持、可提供6 Gbps的吞吐量和200、000次SSD IOPS。
+您现在可以在NetApp Workload Factory 中使用Amazon FSx for NetApp ONTAP第二代文件系统。  FSx for ONTAP第二代单可用区文件系统由多达 12 个 HA 对提供支持，可提供高达 72 GBps 的吞吐容量和 2,400,000 SSD IOPS。  FSx for ONTAP第二代多可用区文件系统由一个 HA 对提供支持，可提供 6 GBps 的吞吐容量和 200,000 SSD IOPS。
 
 * link:https://docs.netapp.com/us-en/workload-fsx-ontap/add-ha-pairs.html["添加高可用性对"]
 * link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html["Amazon FSx for NetApp ONTAP的配额和限制"^]

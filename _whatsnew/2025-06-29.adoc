@@ -14,7 +14,7 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.
 
 === 存储仪表板增强功能
 
-工作负载工厂控制台中的存储控制面板新增了节省机会卡片。控制面板顶部的卡片显示在 Amazon Elastic Block Store (EBS)、Amazon FSx for Windows File Server 和 Amazon Elastic File Systems (EFS) 上运行的存储环境的节省机会数量。控制面板底部新增了三张卡片，按 Amazon 存储服务（EBS、FSx for Windows File Server 和 EFS）显示节省机会。您可以从所有卡片中更详细地了解节省机会。
+Workload Factory 控制台中的存储仪表板包含用于节省机会的新卡。仪表板顶部的卡片显示在 Amazon Elastic Block Store (EBS)、 Amazon FSx for Windows File Server 和 Amazon Elastic File Systems (EFS) 上运行的存储环境的节省机会数量。在仪表板的底部，三张新卡片显示了亚马逊存储服务的节省机会 - EBS、FSx for Windows File Server 和 EFS。您可以从所有卡中更详细地探索省钱机会。
 
 通过 FSx for ONTAP 保护覆盖率卡和复制关系健康卡，您可以调查 FSx for ONTAP 文件系统中是否存在任何部分受保护的卷，以及调查复制关系的问题。在这两种情况下，您都可以采取措施来解决问题。
 
@@ -22,21 +22,21 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.
 
 === 音量选项卡增强功能
 
-工作负载工厂控制台中的“卷”选项卡已得到增强，可提供更全面的 FSx for ONTAP 文件系统视图。增强功能包括新增 SSD 容量、容量池以及 NetApp 自主勒索软件防护 AI (ARP/AI) 卡。这些卡汇总了文件系统中所有卷的容量利用率和 ARP/AI 防护功能。
+Workload Factory 控制台中的“卷”选项卡已得到增强，可提供 FSx for ONTAP文件系统的更全面的视图。增强功能包括用于 SSD 容量、容量池和带有 AI 的NetApp自主勒索软件防护 (ARP/AI) 的新卡。这些卡片总结了文件系统中所有卷的容量利用率和 ARP/AI 保护。
 
 
 
 === 支持适用于NetApp ONTAP文件系统的第二代Amazon FSx
 
-工作负载工厂现已支持第二代 Amazon FSx for NetApp ONTAP 文件系统。您可以在工作负载工厂控制台中创建、管理和监控第二代文件系统。所有新的商业区域均受支持。
+工作负载工厂现在支持第二代Amazon FSx for NetApp ONTAP文件系统。您可以在 Workload Factory 控制台中创建、管理和监控第二代文件系统。所有新的商业区域均受支持。
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-file-system.html["在工作负载工厂中创建第二代文件系统"]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-file-system.html["在 Workload Factory 中创建第二代文件系统"]
 
 
 
 === FlexVol 卷支持重新平衡卷容量
 
-FlexVol 卷可在工作负载工厂控制台中发现。您可以检查 FlexVol 卷的平衡情况，并在新文件的添加和文件增长导致不平衡时重新平衡 FlexVol 卷以重新分配容量。
+FlexVol卷可在 Workload Factory 控制台中发现。您可以检查FlexVol卷的平衡情况，并在由于新文件的添加和文件增长而导致不平衡情况随时间推移而出现时，重新平衡FlexVol卷以重新分配容量。
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/rebalance-volume.html["重新平衡 FlexVol 卷的容量"]
 
@@ -44,15 +44,15 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/rebalance-volume.html["重
 
 === 术语更新
 
-在工作负载工厂控制台中，“自主勒索软件防护”(ARP) 一词已更新为“带 AI 的 NetApp 自主勒索软件防护”(ARP/AI)。
+在 Workload Factory 控制台中，“自主勒索软件防护”(ARP) 一词已更新为“带有 AI 的NetApp自主勒索软件防护”(ARP/AI)。
 
 
 
 === 新卷默认启用 ARP/AI
 
-在工作负载工厂控制台中创建新卷时，如果文件系统具有 ARP/AI 策略，则 NetApp 自主勒索软件防护 AI (ARP/AI) 将默认启用。这意味着该卷将使用 AI 驱动的检测和响应功能自动防御勒索软件攻击。
+当您在 Workload Factory 控制台中创建新卷时，如果文件系统具有 ARP/AI 策略，则默认启用带有 AI (ARP/AI) 的NetApp自主勒索软件防护。这意味着该卷可以使用人工智能驱动的检测和响应功能自动防御勒索软件攻击。
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-volume.html["在工作负载工厂中创建卷"]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-volume.html["在 Workload Factory 中创建卷"]
 
 
 
@@ -66,6 +66,6 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-replication.html["�
 
 === 在链接创建期间管理 IAM 执行角色和权限
 
-现在，您可以在工作负载工厂控制台中创建链接，从而管理 IAM 执行角色及其附加的权限策略。链接会在您的工作负载工厂账户与一个或多个 FSx for ONTAP 文件系统之间建立连接。您可以通过两种方式分配 IAM 执行角色和链接权限：自动分配或用户分配。在工作负载工厂中管理执行角色及其附加的权限策略意味着您无需再使用第三方代码。
+现在，您可以在 Workload Factory 控制台中创建链接时管理 IAM 执行角色及其附加的权限策略。链接在您的 Workload Factory 帐户和一个或多个 FSx for ONTAP文件系统之间建立连接。您有两种选择来分配 IAM 执行角色和链接权限 - 自动或用户提供。在 Workload Factory 中管理执行角色及其附加的权限策略意味着您不再需要使用第三方代码。
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["使用Lamba链接连接到FSx for ONTAP文件系统"]

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: manage-backup-schedule.html 
 keywords: backup schedule, backup policy, update backups, update backup schedule, FSx for ONTAP backup 
-summary: 根据需要在BlueXP  工作负载出厂时管理FSx for ONTAP文件系统的备份计划。 
+summary: 在需要时管理NetApp Workload Factory 中 FSx for ONTAP文件系统的备份计划。 
 ---
 = 管理FSx for ONTAP文件系统的备份计划
 :allow-uri-read: 
@@ -11,12 +11,13 @@ summary: 根据需要在BlueXP  工作负载出厂时管理FSx for ONTAP文件�
 
 
 [role="lead"]
-在BlueXP  工作负载出厂时管理FSx for ONTAP文件系统的备份计划。
+在NetApp Workload Factory 中管理 FSx for ONTAP文件系统的备份计划。
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在存储中，选择*转至存储清单*。
-. 在*FSx for FS* ONTAP选项卡中，选择要更新备份计划的文件系统的三点菜单，然后选择*Manage*。
+. 在存储图块中，选择*转到存储*。
+. 从存储菜单中，选择 *FSx for ONTAP*。
+. 从 *FSx for ONTAP* 中，选择要更新备份计划的文件系统的操作菜单，然后选择 *管理*。
 . 在信息下，选择*FSx for ONTAP backup*旁边的铅笔图标。当鼠标悬停在*FSx for ONTAP backup*行上时，下拉箭头旁边会出现铅笔图标。
 . 在*FSx for ONTAP backup*对话框中，提供以下内容：
 +

@@ -4,7 +4,7 @@ permalink: cascade-replication.html
 keywords: replicate, cascade, cascade replication, cascade deployment, data protection, volume replication, replicate data protection volume 
 summary: 复制数据保护卷或级联卷数据复制、将数据保护扩展到三级系统或迁移数据。 
 ---
-= 在BlueXP  工作负载出厂时复制数据保护卷
+= 在NetApp Workload Factory 中复制数据保护卷
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
@@ -14,7 +14,7 @@ summary: 复制数据保护卷或级联卷数据复制、将数据保护扩展�
 复制数据保护卷或级联卷数据复制、将数据保护扩展到三级系统或迁移数据。
 
 .关于此任务
-BlueXP  工作负载工厂支持复制数据保护卷、也称为_级 联部署_。级联部署_由一系列关系组成、其中、一个源卷镜像到一个二级卷(第一个跃点)、而该二级卷镜像到一个三级卷(第二个跃点)。如果二级卷不可用，您可以同步主卷和三级卷之间的关系，而无需执行新的基线传输。
+NetApp Workload Factory 支持复制数据保护卷，也称为_级联部署_。 _级联部署_由一系列关系组成，其中源卷镜像到辅助卷（第一跳），辅助卷镜像到第三卷（第二跳）。如果辅助卷不可用，您可以同步主卷和三级卷之间的关系，而无需执行新的基线传输。
 
 对于运行ONTAP 9.6及更高版本的ONTAP文件系统、FSx支持此功能。请参阅 link:https://docs.netapp.com/us-en/ontap/data-protection/compatible-ontap-versions-snapmirror-concept.html#snapmirror-disaster-recovery-relationships["兼容ONTAP版本的ONTAP文档"^]。
 
@@ -30,8 +30,9 @@ BlueXP  工作负载工厂支持复制数据保护卷、也称为_级 联部署
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在存储中，选择*转至存储清单*。
-. 在*FSx for FS* ONTAP选项卡中，选择包含要复制的卷的文件系统的三点菜单，然后选择*Manage*。
+. 在存储图块中，选择*转到存储*。
+. 从存储菜单中，选择 *FSx for ONTAP*。
+. 从 *FSx for ONTAP* 中，选择包含要复制的卷的文件系统的操作菜单，然后选择 *管理*。
 . 从文件系统概述中，选择*Volumes*选项卡。
 . 在卷表中、选择一个或多个数据保护卷(DP/复制的卷)、然后选择*复制数据*。
 . 在复制数据页面上的复制目标下、提供以下内容：
@@ -39,7 +40,7 @@ BlueXP  工作负载工厂支持复制数据保护卷、也称为_级 联部署
 .. *FSx for ONTAP file system*：为目标FSx for ONTAP文件系统选择ONTAP文件系统的凭据、区域和FSx名称。
 .. * Storage VM名称*：从下拉菜单中选择Storage VM。
 .. *卷名*：目标卷名称将自动生成，格式如下 `{OriginalVolumeName}_copy`。您可以使用自动生成的卷名称或输入其他卷名称。
-.. *用例*：选择以下复制用例之一。根据所选的使用情形、工作负载出厂时会根据最佳实践使用建议的值填充表单。您可以接受建议的值、也可以在填写表单后进行更改。
+.. *用例*：选择以下其中一个用例进行复制。根据所选的用例，Workload Factory 会根据最佳实践在表单中填写推荐值。您可以接受建议的值，也可以在填写表格时进行更改。
 +
 *** 迁移：将数据传输到目标FSx for ONTAP文件系统
 *** 热灾难恢复：确保关键工作负载的高可用性和快速灾难恢复
@@ -54,10 +55,10 @@ BlueXP  工作负载工厂支持复制数据保护卷、也称为_级 联部署
 
 .. *分层策略*：为目标卷中存储的数据选择分层策略。对于您选择的使用情形、此层策略默认为建议的层策略。
 +
-使用工作负载出厂控制台创建卷时、默认分层策略为_Balanced (Auto)_。有关卷分层策略的详细信息、请参阅 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["卷存储容量"^] AWS FSx for NetApp ONTAP文档中的。请注意、工作负载工厂在工作负载工厂控制台中使用基于用例的名称来执行分层策略、并将FSx for ONTAP分层策略名称括在圆括号中。
+使用 Workload Factory 控制台创建卷时，_平衡（自动）_ 是默认分层策略。有关卷分层策略的更多信息，请参阅link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["卷存储容量"^]在 AWS FSx for NetApp ONTAP文档中。请注意，工作负载工厂在工作负载工厂控制台中使用基于用例的名称来制定分层策略，并在括号中包含 FSx for ONTAP分层策略名称。
 
 +
-如果您选择了迁移用例、则工作负载出厂时会自动选择将源卷的分层策略复制到目标卷。您可以取消选择以复制此层策略、并选择一个适用于选定进行复制的卷的层策略。
+如果您选择了迁移用例，Workload Factory 会自动选择将源卷的分层策略复制到目标卷。您可以取消选择复制分层策略并选择适用于选择进行复制的卷的分层策略。
 
 .. *最大传输速率*：选择*受限*并输入最大传输速率(MB/秒)或者，选择*Unlimited (无限制)*。
 +

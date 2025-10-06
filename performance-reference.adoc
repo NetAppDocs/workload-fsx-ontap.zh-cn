@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: performance-reference.html 
 keywords: performance, FSx for ONTAP performance 
-summary: 提供了BlueXP  工作负载工厂中FSx for ONTAP的性能参考。 
+summary: NetApp Workload Factory 中提供了 FSx for ONTAP的性能参考。 
 ---
-= BlueXP  工作负载工厂中FSx for ONTAP的性能
+= NetApp Workload Factory 中 FSx for ONTAP的性能
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

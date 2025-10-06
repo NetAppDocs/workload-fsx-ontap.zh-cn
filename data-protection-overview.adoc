@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: data-protection-overview.html 
 keywords: overview 
-summary: FSx for ONTAP支持快照、具有 AI 的NetApp Autonomous Ransomware、卷复制以及BlueXP workload factory中的备份。 
+summary: FSx for ONTAP支持快照、具有 AI 的NetApp Autonomous Ransomware、卷复制以及NetApp Workload Factory 中的备份。 
 ---
-= BlueXP  Workload Factory中的数据保护类型
+= NetApp Workload Factory 中的数据保护类型
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
@@ -75,6 +75,7 @@ FSx for ONTAP提供了多个数据保护选项、这些选项可以结合使用�
 
 请考虑以下保护工作负载数据的建议。
 
+* 使用卷复制进行灾难恢复：如果您的应用程序需要较低的 RTO，请考虑使用卷复制将您的数据复制到另一个区域。
 * 将卷备份与快照结合使用：将这两项功能结合使用可确保您能够从快照还原文件、并在卷丢失时使用备份执行完整备份。
 * 定义卷备份策略：确保备份策略满足公司对备份期限和频率的要求。建议为每个卷至少保留两个每日备份。
 * 定义快照计划：较早的快照不太可能用于还原数据。我们建议您定义一个快照计划、该计划应考虑保留旧快照的回报递减以及额外快照容量的成本。

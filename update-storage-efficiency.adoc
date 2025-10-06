@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: update-storage-efficiency.html 
 keywords: storage efficiency change, update storage efficiency 
-summary: 在BlueXP  工作负载出厂时、您可以在创建卷后更新存储效率设置。 
+summary: 在NetApp Workload Factory 中，您可以在创建卷后更新存储效率设置。 
 ---
 = 更新卷的存储效率设置
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 在BlueXP  工作负载出厂时、您可以在创建卷后更新存�
 
 
 [role="lead"]
-在BlueXP  工作负载出厂时、您可以在创建卷后更新存储效率设置。
+在NetApp Workload Factory 中，您可以在创建卷后更新存储效率设置。
 
 .关于此任务
 存储效率功能包括重复数据删除、数据压缩和数据缩减、可在FlexVol volume上实现最佳空间节省。重复数据删除可消除重复的数据块。数据压缩可压缩数据块，以减少所需的物理存储量。数据缩减可在更少的空间中存储更多数据，以提高存储效率。
@@ -22,10 +22,11 @@ summary: 在BlueXP  工作负载出厂时、您可以在创建卷后更新存�
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在存储中，选择*转至存储清单*。
-. 在*FSx for FS* ONTAP选项卡中，选择包含要更新的卷的文件系统的三点菜单，然后选择*Manage*。
+. 在存储图块中，选择*转到存储*。
+. 从存储菜单中，选择 *FSx for ONTAP*。
+. 从 *FSx for ONTAP* 中，选择要更新卷的文件系统的操作菜单，然后选择 *管理*。
 . 从文件系统概述中，选择*Volumes*选项卡。
-. 从卷选项卡中、选择要更改分层策略的卷的三点菜单。
+. 从“卷”选项卡中，选择要更改分层策略的卷的操作菜单。
 . 选择*高级操作*，然后选择*设置存储效率*。
 . 选择启用或禁用卷存储效率。
 . 选择*Apply*以保存更改。

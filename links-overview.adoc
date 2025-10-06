@@ -2,28 +2,28 @@
 sidebar: sidebar 
 permalink: links-overview.html 
 keywords: links, accounts, lambda 
-summary: 工作负载工厂链接会在工作负载工厂帐户与一个或多个FSx for ONTAP文件系统之间创建信任关系和连接。 
+summary: Workload Factory 链接在 Workload Factory 帐户和一个或多个 FSx for ONTAP文件系统之间创建信任关系和连接。 
 ---
-= 了解BlueXP  工作负载出厂链接
+= 了解有关NetApp Workload Factory 链接的信息
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-BlueXP  工作负载工厂链接会在工作负载工厂帐户与一个或多个FSx for ONTAP文件系统之间创建信任关系和连接。这样、您就可以直接通过ONTAP REST API调用监控和管理某些文件系统功能、而这些功能不能通过Amazon FSx for ONTAP API使用。
+NetApp Workload Factory 链接在 Workload Factory 帐户和一个或多个 FSx for ONTAP文件系统之间创建信任关系和连接。这使您可以直接从ONTAP REST API 调用监控和管理某些文件系统功能，而这些功能无法通过Amazon FSx for ONTAP API 获得。
 
-您不需要链接即可开始使用工作负载工厂、但在某些情况下、您需要创建一个链接来解锁所有工作负载工厂功能和工作负载功能。
+您不需要链接即可开始使用 Workload Factory，但在某些情况下，您需要创建链接来解锁所有 Workload Factory 功能和工作负载能力。
 
 
 
 == 为什么链接是有益的
 
-链接非常有用，因为它们允许工作负载工厂执行Amazon FSx for ONTAP API 原生无法执行的操作。链接支持高级ONTAP功能和自动化，从而增强 FSx for ONTAP文件系统的管理。
+链接很有用，因为它们允许 Workload Factory 执行通过Amazon FSx for ONTAP API 本身无法执行的操作。链接支持高级ONTAP功能和自动化，从而增强 FSx for ONTAP文件系统的管理。
 
 以下是使用链接的一些好处：
 
-* 该链接使BlueXP能够将ONTAP命令直接发送到您的 FSx for ONTAP文件系统，从而带来 AWS 原生提供的ONTAP高级功能。
+* 该链接使NetApp控制台能够将ONTAP命令直接发送到您的 FSx for ONTAP文件系统，从而带来 AWS 原生提供的ONTAP高级功能。
 * 链接利用 AWS Lambda 执行代码来响应事件。这种无服务器方法消除了对 VPC 中运行实例的依赖。
 
 
@@ -37,13 +37,13 @@ BlueXP  工作负载工厂链接会在工作负载工厂帐户与一个或多�
 
 您可以在工作负载工厂中创建并关联来自存储工作负载的链接。
 
-您可以使用存储在工作负载工厂凭证服务中的凭证或存储在 AWS Secrets Manager 中的凭证来验证链接。工作负载工厂不支持更改身份验证模式。
+您可以使用存储在 Workload Factory 凭证服务中的凭证或存储在 AWS Secrets Manager 中的凭证来验证链接。工作负载工厂不支持更改身份验证模式。
 
 
 
 == Costs
 
-Lamb荷 执行的每个事务都会产生费用。由于Lamb荷 充当两个系统之间的代理、因此、当Lamb荷 向文件系统上的ONTAP REST API发送请求以及将响应发送回工作负载出厂时、会产生费用。
+Lambda 执行的每笔交易都会产生费用。由于 Lambda 充当两个系统之间的代理，因此当 Lambda 向文件系统上的ONTAP REST API 发送请求时以及将响应发送回 Workload Factory 时都会产生费用。
 
 link:https://aws.amazon.com/lambda/pricing/["详细了解与使用AWS Lamb泄 压相关的成本"^]
 
@@ -51,7 +51,7 @@ link:https://aws.amazon.com/lambda/pricing/["详细了解与使用AWS Lamb泄 �
 
 == 需要链接时
 
-工作负载工厂需要一个链接来显示某些信息并执行某些任务。如果您尝试执行需要链接的操作，但尚未将链接与 FSx for ONTAP文件系统关联，则工作负载工厂会通知您该操作需要链接。
+工作负载工厂需要一个链接来显示一些信息并执行一些任务。如果您尝试执行需要链接的操作，但尚未将链接与 FSx for ONTAP文件系统关联，则 Workload Factory 会通知您该操作需要链接。
 
 需要链接的功能包括：
 

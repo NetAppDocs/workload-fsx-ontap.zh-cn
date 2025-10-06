@@ -4,14 +4,14 @@ permalink: reverse-replication.html
 keywords: reverse replication, change replication 
 summary: 反转复制关系、以使目标卷成为源卷。 
 ---
-= 在BlueXP  工作负载出厂时反转复制关系
+= 在NetApp Workload Factory 中反转复制关系
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-在BlueXP  工作负载出厂时反转复制关系、以使目标卷成为源卷。
+在NetApp Workload Factory 中反转复制关系，以便目标卷成为源卷。
 
 以下各项支持反向操作：
 
@@ -32,10 +32,11 @@ NOTE: 系统不会保留从上次数据复制到源卷被禁用这段时间写�
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在存储中，选择*转至存储清单*。
-. 在*FSx for FS* ONTAP选项卡中，选择要更新的文件系统的三点菜单，然后选择*Manage*。
+. 在存储图块中，选择*转到存储*。
+. 从存储菜单中，选择 *FSx for ONTAP*。
+. 从 *FSx for ONTAP* 中，选择要更新的文件系统的操作菜单，然后选择 *管理*。
 . 从文件系统概述中，选择*复制关系*选项卡。
-. 在复制关系选项卡中、选择要反转的复制关系的三点菜单。
+. 在复制关系选项卡中，选择要逆转的复制关系的操作菜单。
 . 选择*反向关系*。
 . 在“反向关系”对话框中，选择“*反向*”。
 

@@ -4,14 +4,14 @@ permalink: split-cloned-volume.html
 keywords: split clone volume, FlexVol volume 
 summary: 将克隆FlexVol volume从其父卷中拆分、使此克隆成为正常的读/写FlexVol volume。 
 ---
-= 在BlueXP  工作负载出厂时拆分克隆的卷
+= 在NetApp Workload Factory 中拆分克隆卷
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-将克隆的FlexVol volume从其父卷中拆分、使此克隆在BlueXP  工作负载出厂时成为正常读/写FlexVol volume。
+将克隆的FlexVol volume与其父卷分离，使克隆成为NetApp Workload Factory 中的正常读/写FlexVol volume。
 
 拆分期间、可以访问克隆和父级上的数据。拆分过程仅更新元数据、并且所需的IO极少。不会复制任何数据块。
 
@@ -35,9 +35,11 @@ summary: 将克隆FlexVol volume从其父卷中拆分、使此克隆成为正常
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在存储中，选择*转至存储清单*。
-. 选择*卷*选项卡。
-. 在卷选项卡中、选择要拆分的克隆卷所在卷的三点菜单。
+. 在存储图块中，选择*转到存储*。
+. 从存储菜单中，选择 *FSx for ONTAP*。
+. 从 *FSx for ONTAP* 中，选择要拆分的卷克隆的文件系统的操作菜单，然后选择 *管理*。
+. 从文件系统概述中，选择*Volumes*选项卡。
+. 在“卷”选项卡中，选择要拆分的克隆卷的操作菜单。
 . 选择*数据保护操作*，然后选择*拆分克隆的卷*。
 . 在“拆分卷”对话框中，选择*Delete*。
 

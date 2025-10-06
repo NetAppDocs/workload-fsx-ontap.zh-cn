@@ -2,18 +2,21 @@
 sidebar: sidebar 
 permalink: create-volume.html 
 keywords: create volume, FSx for ONTAP volume 
-summary: 设置 FSx for ONTAP 文件系统后，在工作负载工厂中创建 FSx for ONTAP 卷。 
+summary: 设置 FSx for ONTAP文件系统后，在 Workload Factory 中创建 FSx for ONTAP卷。 
 ---
-= 在工作负载工厂中创建 FSx for ONTAP 卷
+= 在 Workload Factory 中创建 FSx for ONTAP卷
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-设置 FSx for ONTAP 文件系统后，在工作负载工厂中创建 FSx for ONTAP 卷作为用于对数据进行分组的虚拟资源。
+设置 FSx for ONTAP文件系统后，在 Workload Factory 中创建 FSx for ONTAP卷作为用于分组数据的虚拟资源。
 
-.关于此任务
+
+
+== 关于此任务
+
 FSx for ONTAP 卷以虚拟方式对数据进行分组，确定数据的存储方式，并确定对数据的访问类型。卷不会占用文件系统存储容量。存储在卷中的数据主要占用SSD存储。根据卷的分层策略、数据可能还会占用容量池存储。您可以在创建卷时设置其大小、并可稍后更改其大小。
 
 卷可能会使用以下协议：
@@ -23,10 +26,36 @@ FSx for ONTAP 卷以虚拟方式对数据进行分组，确定数据的存储方
 * iSCSI：块存储协议
 
 
-.开始之前
+
+
+=== 音量设置详情
+
+.不可变文件
+此功能也称为SnapLock，默认情况下处于禁用状态。启用不可变文件可防止在一定时期内删除或覆盖数据。仅在创建卷期间才可以启用此功能。该功能一旦启用，就无法禁用。这是 FSx for ONTAP的一项高级功能，需要额外收费。更多信息，请参阅link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html["SnapLock的工作原理"^]在Amazon FSx for NetApp ONTAP文档中。
+
+* *保留模式*：您可以从两种保留模式中选择 - _企业_或_合规_。
++
+** 在_Enterprise模式(不可更改的文件或SnapLock)下、管理员可以在文件保留期间删除该文件。
+** 在_Compliance模式下、无法在WORM文件的保留期限到期之前将其删除。同样、在卷中所有文件的保留期限到期之前、无法删除不可更改的卷。
+
+
+* *保留期*：保留期有两种设置 - _保留策略_和_保留期_。 _保留策略_定义了文件在不可变的 WORM 状态下保留多长时间。您可以指定自己的保留策略，也可以使用默认保留策略（未指定），即 30 年。最小和最大保留期定义了锁定文件允许的时间范围。
++
+
+NOTE: 即使保留期限到期、您也无法修改WORM文件。您只能将其删除或设置新的保留期限以重新启用WORM保护。
+
+* *自动提交*：您可以选择启用自动提交功能。如果文件在自动提交期间没有发生变化，则自动提交功能会将文件提交到SnapLock卷上的 WORM 状态。默认情况下，自动提交功能是禁用的。您必须确保要自动提交的文件位于SnapLock卷上。
+* *特权删除*： SnapLock管理员可以在SnapLock Enterprise卷上启用特权删除，以允许在文件保留期到期之前删除文件。默认情况下，此功能处于禁用状态。
+* *卷附加模式*：您无法修改受 WORM 保护的文件中现有数据。但是，不可变文件允许您使用 WORM 可附加文件来维护对现有数据的保护。例如，您可以生成日志文件或保存音频或视频流数据，同时以增量方式向其中写入数据。link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/worm-state.html#worm-state-append["了解有关卷附加模式的更多信息"^]在Amazon FSx for NetApp ONTAP文档中。
+
+
+
+
+== 开始之前
+
 创建卷之前、请查看以下前提条件：
 
-* 您必须在工作负载工厂控制台中拥有 FSx for ONTAP 文件系统。
+* 您必须在 Workload Factory 控制台中拥有 FSx for ONTAP文件系统。
 * 您必须具有Storage VM。
 * 要访问协议、请完成以下操作：
 +
@@ -47,8 +76,9 @@ NOTE: 使用来自CodeBox的Terraform时、您复制或下载的代码会隐藏 
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在存储中，选择*转至存储清单*。
-. 在*FSx for ONTAP选项卡中，选择要创建卷的文件系统的三点菜单，然后选择*Create volume*。
+. 在存储图块中，选择*转到存储*。
+. 从存储菜单中，选择 *FSx for ONTAP*。
+. 从 *FSx for ONTAP* 中，选择要在其中创建卷的文件系统的操作菜单，然后选择 *创建卷*。
 . 在Create volume页面上的General Details下、提供以下详细信息：
 +
 .. *卷名称*：输入卷的名称。
@@ -79,46 +109,29 @@ FlexGroup 卷大小取决于组成部分的数量，每个组成部分需要 100
 +
 填写以下字段以设置对卷的文件访问权限。
 
+
+
+.. *NFS导出策略*：提供以下详细信息以提供NFS访问：
 +
-.... *NFS导出策略*：提供以下详细信息以提供NFS访问：
-+
-..... *访问控制*：从下拉菜单中选择*自定义导出策略*、*现有导出策略*或*无法访问卷*。
-..... *导出策略名称*:
+... *访问控制*：从下拉菜单中选择*自定义导出策略*、*现有导出策略*或*无法访问卷*。
+... *导出策略名称*:
 +
 如果选择了自定义导出策略、请从下拉菜单中选择现有策略名称。
 
 +
 如果选择了现有导出策略、请输入新的策略名称。
 
-..... *添加导出策略规则*：对于自定义导出策略、您可以选择向策略中添加导出策略规则。
+... *添加导出策略规则*：对于自定义导出策略、您可以选择向策略中添加导出策略规则。
 
 
-.... *SMB/CIFS 共享*：提供以下内容：
+.. *SMB/CIFS 共享*：提供以下内容：
 +
-..... *名称*：输入 SMB/CIFS 共享名称以提供访问权限。
-..... *路径*：使用默认卷名定义路径或提供内部目录的共享。
+... *名称*：输入 SMB/CIFS 共享名称以提供访问权限。
+... *权限*：选择“完全控制”、“读/写”、“读取”或“无访问权限”，然后输入用户或组，以分号(;)分隔。用户或组区分大小写、必须使用"域\用户名"格式包含用户的域。
+
+
+.. *安全模式*：对于双协议卷、请选择UNIX或NTFS安全模式。UNIX是双协议卷的默认安全模式。有关此上下文中用户映射的详细指导，请参阅AWS博客文章link:https://aws.amazon.com/blogs/storage/enabling-multiprotocol-workloads-with-amazon-fsx-for-netapp-ontap["使用Amazon FSx for NetApp ONTAP启用多协议工作负载"^]。
 +
-卷名的有效路径输入（例如“avocado”）如下：
-
-+
-****** /牛油果
-****** /鳄梨/文件夹
-****** /鳄梨/文件夹/子文件夹
-****** /鳄梨/文件名
-+
-共享名称的有效路径输入（例如“服务器”）如下：
-
-****** \\服务器
-****** \\服务器\项目
-****** \\服务器\项目\共享资源
-
-
-..... *权限*：选择“完全控制”、“读/写”、“读取”或“无访问权限”，然后输入用户或组，以分号(;)分隔。用户或组区分大小写、必须使用"域\用户名"格式包含用户的域。
-
-
-.... *安全模式*：对于双协议卷、请选择UNIX或NTFS安全模式。UNIX是双协议卷的默认安全模式。有关此上下文中用户映射的详细指导，请参阅AWS博客文章link:https://aws.amazon.com/blogs/storage/enabling-multiprotocol-workloads-with-amazon-fsx-for-netapp-ontap["使用Amazon FSx for NetApp ONTAP启用多协议工作负载"^]。
-
-
 *** *块访问*：允许运行关键业务应用程序的主机使用iSCSI协议访问卷。只有当文件系统横向扩展部署包含六个或更少的HA对时、才能使用块访问。
 +
 填写以下字段以设置对卷的块访问。
@@ -134,6 +147,13 @@ FlexGroup 卷大小取决于组成部分的数量，每个组成部分需要 100
 
 
 
+
+
+.. *S3 端点*：可选地，附加一个 S3 端点以通过 AWS S3 API 访问驻留在 NFS 或 SMB/CIFS 卷上的 FSx for ONTAP文件系统数据。仅支持文件访问类型。提供以下详细信息：
++
+*** *S3 端点名称*：输入 S3 端点的名称。
+*** *用户*：选择有权访问该卷的现有用户或创建新用户。
+*** *用户类型*：选择*UNIX*或*Windows*作为用户类型。
 
 
 
@@ -168,33 +188,10 @@ NOTE: 快照时间基于文件系统的时区、默认为协调世界时(UTC)。
 
 .. *分层策略*：为卷中存储的数据选择分层策略。
 +
-使用工作负载出厂控制台创建卷时、默认分层策略为_Balanced (Auto)_。有关卷分层策略的详细信息、请参阅 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["卷存储容量"^] AWS FSx for NetApp ONTAP文档中的。请注意、工作负载工厂在工作负载工厂控制台中使用基于用例的名称来执行分层策略、并将FSx for ONTAP分层策略名称括在圆括号中。
+使用 Workload Factory 控制台创建卷时，_平衡（自动）_ 是默认分层策略。有关卷分层策略的更多信息，请参阅link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["卷存储容量"^]在 AWS FSx for NetApp ONTAP文档中。请注意，工作负载工厂在工作负载工厂控制台中使用基于用例的名称来制定分层策略，并在括号中包含 FSx for ONTAP分层策略名称。
 
-.. *immutable files*：默认情况下、此功能(也称为SnapLock)处于禁用状态。启用不可变文件可防止在一定时期内删除或覆盖数据。只有在创建卷期间才能启用此功能。启用此功能后、将无法禁用它。这是FSx for ONTAP的一项高级功能、需要额外付费。有关详细信息、请参阅link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html["SnapLock的工作原理"^]Amazon FSx for NetApp ONTAP文档中的。
+.. *不可变文件*：启用不可变文件功能将永久地将此卷中的文件提交到不可变的 WORM（一次写入多次读取）状态。提供以下详细信息：
 +
-启用不可更改文件功能会将此卷中的文件永久提交到不可更改的WORM (一次写入、多次读取)状态。
-
-+
-保留模式:: 您可以从两种保留模式中进行选择-_Enterprise或_Compliance。
-+
---
-*** 在_Enterprise模式(不可更改的文件或SnapLock)下、管理员可以在文件保留期间删除该文件。
-*** 在_Compliance模式下、无法在WORM文件的保留期限到期之前将其删除。同样、在卷中所有文件的保留期限到期之前、无法删除不可更改的卷。
-
-
---
-保留期限:: 保留期限有两项设置-_保留 策略_和_保留 期限_。retri力policy_定义 了文件在不可固定的WORM状态下保留多长时间。您可以指定自己的保留策略或使用默认保留策略(未指定)、即30年。最小值和最大值_保留期限_用于定义允许锁定文件的时间范围。
-+
---
-注意:: 即使保留期限到期、您也无法修改WORM文件。您只能将其删除或设置新的保留期限以重新启用WORM保护。
-
-
---
-自动完成:: 您可以选择启用自动提交功能。如果文件在自动提交期限内未发生更改、则自动提交功能会将文件提交到SnapLock卷上的WORM状态。默认情况下、自动提交功能处于禁用状态。您必须确保要自动提交的文件位于 SnapLock 卷上。
-卷附加模式:: 您不能修改受WORM保护的文件中的现有数据。但是、通过不可改变的文件、您可以使用WORM可附加文件来保护现有数据。例如、您可以生成日志文件或保留音频或视频流数据、同时以增量方式向这些数据写入数据。link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/worm-state.html#worm-state-append["了解有关卷附加模式的更多信息"^]在Amazon FSx for NetApp ONTAP文档中。
-+
---
-.不可配置文件的步骤
 ... 选择以启用由SnapLock提供支持的*不可更改文件*。
 ... 选中相应框以同意并继续。
 ... 选择 * 启用 * 。
@@ -216,10 +213,8 @@ NOTE: 快照时间基于文件系统的时区、默认为协调世界时(UTC)。
 
 
 ... *AutoCommit *：禁用或启用自动提交。如果启用了自动提交、请设置自动提交期限。
+... *特权删除*：禁用或启用。如果启用特权删除， SnapLock管理员可以在文件保留期到期之前删除该文件。
 ... *卷附加模式*：禁用或启用。用于向WORM文件添加新内容。
-
-
---
 
 
 .. *ARP/AI*：当链接与文件系统关联时，NetApp 自主勒索软件保护与 AI (ARP/AI) 默认启用。link:https://docs.netapp.com/us-en/workload-fsx-ontap/ransomware-protection.html["了解有关 ARP/AI 的更多信息"](英文)接受陈述以继续。

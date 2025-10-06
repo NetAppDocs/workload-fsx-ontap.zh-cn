@@ -11,7 +11,7 @@ summary: 为适用于ONTAP文件系统的FSx自动配置或手动配置SSD IOPS�
 
 
 [role="lead"]
-在BlueXP  工作负载工厂为适用于ONTAP文件系统的FSx自动配置或手动配置SSD IOPS。
+在NetApp Workload Factory 中为 FSx for ONTAP文件系统自动配置或手动配置 SSD IOPS。
 
 .关于此任务
 您可以为FSx文件系统启用SSD IOPS自动配置、也可以手动配置IOPS。
@@ -24,8 +24,9 @@ summary: 为适用于ONTAP文件系统的FSx自动配置或手动配置SSD IOPS�
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在存储中，选择*转至存储清单*。
-. 在*FSx for IOP*选项卡中，选择要配置ONTAP的文件系统的三点菜单，然后选择*Manage*。
+. 在存储图块中，选择*转到存储*。
+. 从存储菜单中，选择 *FSx for ONTAP*。
+. 从 *FSx for ONTAP* 中，选择要配置 IOPS 的文件系统的操作菜单，然后选择 *管理*。
 . 在"Information"(信息)下、选择鼠标悬停在*IOPS分配*行上时显示在下拉箭头旁边的铅笔图标。
 . 在Provisioned IOPS对话框中、选择*自动*或*用户配置*。
 . 如果选择*用户配置*，请输入所需的*IOPS值*。

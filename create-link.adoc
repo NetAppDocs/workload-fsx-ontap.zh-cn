@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: create-link.html 
 keywords: connect, connection, link, lambda link, associate link, create link, authenticate link 
-summary: 您可以创建和管理链接、以便在BlueXP  工作负载工厂帐户与一个或多个FSx for ONTAP文件系统之间提供信任关系和连接。 
+summary: 您可以创建和管理链接，以在NetApp Workload Factory 帐户和一个或多个 FSx for ONTAP文件系统之间提供信任关系和连接。 
 ---
 = 使用Lamba链接连接到FSx for ONTAP文件系统
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 您可以创建和管理链接、以便在BlueXP  工作负载工厂�
 
 
 [role="lead"]
-要执行高级ONTAP管理操作，请在工作负载工厂帐户和一个或多个 FSx for ONTAP文件系统之间建立连接。这涉及关联新的和现有的 Lambda 链接，并对链接进行验证。通过链接关联，您可以直接从 FSx for ONTAP文件系统监控和管理某些无法通过Amazon FSx for ONTAP API 获得的功能。
+要执行高级ONTAP管理操作，请在您的 Workload Factory 帐户和一个或多个 FSx for ONTAP文件系统之间建立连接。这涉及关联新的和现有的 Lambda 链接，并对链接进行验证。通过链接关联，您可以直接从 FSx for ONTAP文件系统监控和管理某些无法通过Amazon FSx for ONTAP API 获得的功能。
 
 link:links-overview.html["了解有关链接的更多信息"](英文)
 
@@ -20,7 +20,7 @@ link:links-overview.html["了解有关链接的更多信息"](英文)
 
 您可以在定义 FSx for ONTAP文件系统时在您的帐户中创建链接。该链接用于该文件系统，也可以用于其他 FSx for ONTAP文件系统。您还可以稍后关联文件系统的链接。
 
-链接需要验证。您可以使用存储在工作负载工厂凭证服务中的凭证或存储在 AWS Secrets Manager 中的凭证来验证链接。每个链接仅支持一种身份验证方法。例如，如果您选择使用 AWS Secrets Manager 进行链接身份验证，则以后无法更改身份验证方法。
+链接需要验证。您可以使用存储在 Workload Factory 凭证服务中的凭证或存储在 AWS Secrets Manager 中的凭证来验证链接。每个链接仅支持一种身份验证方法。例如，如果您选择使用 AWS Secrets Manager 进行链接身份验证，则以后无法更改身份验证方法。
 
 
 NOTE: 使用Connector时不支持AWS的"ConnectOR"管理器。
@@ -33,16 +33,16 @@ NOTE: 使用Connector时不支持AWS的"ConnectOR"管理器。
 
 在此工作流程中，您有两种创建链接的选项 - 自动或手动。要创建链接、您需要在AWS帐户中启动AWS CloudFormation堆栈。
 
-* 自动：通过工作负载工厂创建自动注册的链接。这需要用于工作负载工厂自动化的令牌，并且 CloudFormation 代码的生命周期很短，最多可使用六个小时。
+* 自动：通过 Workload Factory 创建自动注册的链接。自动创建的链接需要用于 Workload Factory 自动化的令牌，并且 CloudFormation 代码是短暂的。最多只能使用六个小时。
 * 手动：使用 Codebox 中的 CloudFormation 或 Terraform 创建带有手动注册的链接。代码持续存在，为您提供更多时间来完成操作。这在与安全和 DevOps 等不同的团队合作时很有用，因为他们可能首先需要授予完成链接创建所需的权限。
 
 
 .开始之前
 * 您应考虑使用哪种链接创建选项。
-* 您需要在工作负载工厂中至少有一个FSx for ONTAP文件系统。要发现或创建 FSx for ONTAP 文件系统，您必须拥有一个具有 FSx for ONTAP 实例权限的 AWS 账户，并且link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html#overview["在工作负载出厂时添加凭据"^]具有存储管理的_只读_或_读/写_权限。
+* 您需要在 Workload Factory 中至少有一个 FSx for ONTAP文件系统。要发现或创建 FSx for ONTAP文件系统，您必须拥有一个具有 FSx for ONTAP实例权限的 AWS 账户，并且link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html#overview["在 Workload Factory 中添加凭证"^]具有存储管理的_只读_或_读/写_权限。
 * 必须在与 FSx for ONTAP 文件系统关联的安全组中打开以下端口以实现链路连接。
 +
-** 对于工作负载工厂控制台：端口 443 (HTTPS)
+** 对于 Workload Factory 控制台：端口 443 (HTTPS)
 ** 对于 CloudShell：端口 22 (SSH)
 
 
@@ -90,17 +90,18 @@ NOTE: 使用Connector时不支持AWS的"ConnectOR"管理器。
 ====
 .自动创建
 --
-使用CloudFormation在工作负载工厂中自动创建和注册链接。
+使用 CloudFormation 在 Workload Factory 内自动创建并注册链接。
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在存储中，选择*转至存储清单*。
-. 在*FSx for ONTAP Link*选项卡中，选择要关联链接的文件系统的三点菜单，然后选择*Associate link*。
+. 在存储图块中，选择*转到存储*。
+. 从存储菜单中，选择 *FSx for ONTAP*。
+. 从 *FSx for ONTAP* 中，选择要关联链接的文件系统的操作菜单，然后选择 *关联链接*。
 . 在关联链接对话框中，选择*创建新链接*，然后选择*继续*。
 . 在"Create Link"页面上、提供以下内容：
 +
 .. *链接名称*：输入要用于此链接的名称。此名称在您的帐户中必须是唯一的。
-.. *AWS SeslogManager*：可选。允许工作负载工厂从AWS密码管理器提取FSx for ONTAP访问凭据。
+.. *AWS Secrets Manager*：可选。允许 Workload Factory 从您的 AWS Secrets Manager 获取 FSx for ONTAP访问凭证。
 +
 链接部署堆栈自动将以下默认密钥管理器 ARN 正则表达式添加到 Lambda 权限策略中： `arn:aws:secretsmanager:<link_deployment_region>:<link_deployment_account_id>:secret:FSxSecret*` 。
 
@@ -155,7 +156,7 @@ NOTE: 使用Connector时不支持AWS的"ConnectOR"管理器。
 +
 您可以在事件页面上监控链接创建状态。这应该不会超过 5 分钟。
 
-. 返回到工作负载出厂界面、您将看到此链接与FSx for ONTAP文件系统关联。
+. 返回 Workload Factory 界面，您将看到该链接与 FSx for ONTAP文件系统相关联。
 
 
 --
@@ -165,13 +166,14 @@ NOTE: 使用Connector时不支持AWS的"ConnectOR"管理器。
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在存储中，选择*转至存储清单*。
-. 在*FSx for ONTAP Link*选项卡中，选择要关联链接的文件系统的三点菜单，然后选择*Associate link*。
+. 在存储图块中，选择*转到存储*。
+. 从存储菜单中，选择 *FSx for ONTAP*。
+. 从 *FSx for ONTAP* 中，选择要关联链接的文件系统的 actionsenu，然后选择 *Associate link*。
 . 在关联链接对话框中，选择*创建新链接*，然后选择*继续*。
 . 在创建链接页面上，从 Codebox 中选择 CloudFormation 或 Terraform，然后提供以下内容：
 +
 .. *链接名称*：输入要用于此链接的名称。此名称在您的帐户中必须是唯一的。
-.. *AWS SeslogManager*：可选。允许工作负载工厂从AWS密码管理器提取FSx for ONTAP访问凭据。
+.. *AWS Secrets Manager*：可选。允许 Workload Factory 从您的 AWS Secrets Manager 获取 FSx for ONTAP访问凭证。
 +
 链接部署堆栈自动将以下默认密钥管理器 ARN 正则表达式添加到 Lambda 权限策略中： `arn:aws:secretsmanager:<link_deployment_region>:<link_deployment_account_id>:secret:FSxSecret*` 。
 
@@ -222,7 +224,7 @@ NOTE: 使用Connector时不支持AWS的"ConnectOR"管理器。
 +
 您可以在事件页面上监控链接创建状态。这应该不会超过 5 分钟。
 
-. 返回到工作负载出厂界面、您将看到此链接与FSx for ONTAP文件系统关联。
+. 返回 Workload Factory 界面，您将看到该链接与 FSx for ONTAP文件系统相关联。
 
 
 --
@@ -238,8 +240,9 @@ NOTE: 使用Connector时不支持AWS的"ConnectOR"管理器。
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在存储中，选择*转至存储清单*。
-. 在*FSx for ONTAP Link*选项卡中，选择要关联链接的文件系统的三点菜单，然后选择*Associate link*。
+. 在存储图块中，选择*转到存储*。
+. 从存储菜单中，选择 *FSx for ONTAP*。
+. 从 *FSx for ONTAP* 中，选择要关联链接的文件系统的操作菜单，然后选择 *关联链接*。
 . 在关联链接页面中，选择*关联现有链接*，选择链接，然后选择*继续*。
 . 选择身份验证模式。
 +

@@ -2,24 +2,24 @@
 sidebar: sidebar 
 permalink: delete-file-system.html 
 keywords: file system, delete file system, file system deletion 
-summary: 要在BlueXP  工作负载出厂时删除文件系统、必须先删除与该文件系统关联的任何卷、Storage VM或复制关系。 
+summary: 要删除NetApp Workload Factory 中的文件系统，您必须首先删除与该文件系统关联的任何卷、存储虚拟机或复制关系。 
 ---
-= 在BlueXP  工作负载出厂时删除文件系统
+= 在NetApp Workload Factory 中删除文件系统
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-要在BlueXP  工作负载出厂时删除文件系统、必须先删除与该文件系统关联的任何卷、Storage VM或复制关系。
+要删除NetApp Workload Factory 中的文件系统，您必须首先删除与该文件系统关联的任何卷、存储虚拟机或复制关系。
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在存储中，选择*转至存储清单*。
-. 在*FSx for FS*选项卡中，选择要删除的ONTAP for ONTAP文件系统的三点菜单。
+. 从存储菜单中，选择 *FSx for ONTAP*。
+. 从 *FSx for ONTAP* 中，选择要删除的 FSx for ONTAP文件系统的操作菜单。
 . 选择 * 管理 * 。
-. 在*Overview*选项卡中，选择三点菜单。
+. 在“*概述*”选项卡中，选择操作菜单。
 . 选择 * 删除 * 。
 . 在删除FSx for ONTAP文件系统对话框中、输入要删除的FSx for ONTAP文件系统的名称。
-. 选择 * 删除 * 。
+. 选择*删除*进行确认。
 

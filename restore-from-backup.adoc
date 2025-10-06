@@ -4,23 +4,24 @@ permalink: restore-from-backup.html
 keywords: restore backup, new volume, volume restoration, backup 
 summary: 将卷从备份还原到AWS帐户中的任何FSx for ONTAP文件系统。 
 ---
-= 在BlueXP  工作负载出厂时从备份还原卷
+= 从NetApp Workload Factory 中的备份还原卷
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-在BlueXP  工作负载出厂时、您可以将卷从备份还原到AWS帐户中的任何FSx for ONTAP文件系统。
+在NetApp Workload Factory 中，您可以将卷从备份还原到 AWS 账户中的任何 FSx for ONTAP文件系统。
 
 工作负载出厂时会确定您是否有足够的容量用于还原、如果没有、则会自动添加SSD存储层容量。
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在存储中，选择*转至存储清单*。
-. 在*FSx for ONTAP选项卡中，选择包含卷的文件系统的三点菜单，然后选择*Manage*。
+. 在存储图块中，选择*转到存储*。
+. 从存储菜单中，选择 *FSx for ONTAP*。
+. 从 *FSx for ONTAP* 中，选择带有卷的文件系统的操作菜单，然后选择 *管理*。
 . 在文件系统概述中，选择*Volumes*选项卡。
-. 从*卷*选项卡中，选择要从备份中还原的卷的三点菜单。
+. 从“*Volumes*”选项卡中，选择要从备份中恢复的卷的操作菜单。
 . 选择*数据保护操作*、* FSx for ONTAP backup*、然后选择*从备份还原*。
 . 在Restore from a backup对话框中、提供以下内容：
 +
@@ -35,8 +36,8 @@ summary: 将卷从备份还原到AWS帐户中的任何FSx for ONTAP文件系统�
 当文件系统容量受限时、可能会发生以下情况：
 
 +
-** 还原操作可能会将已用容量推送到您指定的阈值以上。您可以完成还原操作。考虑link:increase-file-system-capacity.html["手动添加SSD存储层容量"]或选择工作负载出厂时自动添加SSD存储层容量。
-** 还原需要额外的SSD容量。您必须为工作负载出厂设置选择以自动添加SSD存储层容量、然后才能继续操作。
+** 恢复可能会使已用容量超过您指定的阈值。即可完成还原操作。考虑link:increase-file-system-capacity.html["手动添加SSD存储层容量"]或者选择 Workload Factory 自动添加 SSD 存储层容量。
+** 恢复需要额外的 SSD 容量。您必须选择 Workload Factory 自动添加 SSD 存储层容量才能继续。
 
 
 . 选择 * 还原 * 。

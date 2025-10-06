@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: add-ha-pairs.html 
 keywords: add high-availability pairs, add HA pairs, add HA pair, add high-availability pair, scale out, file system, fsx for ontap 
-summary: 在BlueXP  工作负载出厂时向文件系统添加高可用性对、以横向扩展文件系统。 
+summary: 将高可用性对添加到NetApp Workload Factory 中的文件系统以扩展文件系统。 
 ---
-= 将HA对添加到BlueXP  工作负载出厂时的文件系统
+= 在NetApp Workload Factory 中将 HA 对添加到文件系统
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-添加高可用性(HA)对、在BlueXP  工作负载工厂横向扩展FSx for ONTAP第二代单可用性文件系统、以提高性能和容量。与第一代文件系统相比、这种扩展可为您提供更高的性能可扩展性和灵活性。
+添加高可用性 (HA) 对以在NetApp Workload Factory 中扩展 FSx for ONTAP第二代单可用区文件系统，从而提高性能和容量。与第一代文件系统相比，这种扩展为您提供了更高的性能可扩展性和灵活性。
 
 .关于此任务
 新的HA对将使用相同的SKU和相同的容量添加到每个HA对。
@@ -43,8 +43,9 @@ summary: 在BlueXP  工作负载出厂时向文件系统添加高可用性对�
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在存储中，选择*转至存储清单*。
-. 在*FSx for ONTAP HA*选项卡的*Information*下，选择*HA P对*旁边的铅笔图标。
+. 在存储图块中，选择*转到存储*。
+. 从存储菜单中，选择 *FSx for ONTAP*。
+. 从 *信息* 下的 *FSx for ONTAP* 中，选择 *HA 对* 旁边的铅笔图标。
 . 在*添加HA对*对话框中，选择要添加到文件系统的HA对的数量。
 . 选择*添加*以确认添加HA对。
 

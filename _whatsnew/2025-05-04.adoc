@@ -44,7 +44,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-volume.html["创建
 
 ==== 支持从FSx for ONTAP反向复制到内部
 
-现在、可以从FSx for ONTAP文件系统从工作负载出厂控制台向内部ONTAP集群进行反向复制。
+现在可以从 Workload Factory 控制台内将 FSx for ONTAP文件系统反向复制到本地ONTAP集群。
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/reverse-replication.html["反向复制"]
 
@@ -124,4 +124,4 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/restore-from-backup.html["
 
 === 更新了权限术语
 
-工作负载工厂用户界面和文档现在使用“只读”来指代读取权限，使用“读/写”来指代自动化权限。
+Workload Factory 用户界面和文档现在使用“只读”来指代读取权限，使用“读/写”来指代自动化权限。

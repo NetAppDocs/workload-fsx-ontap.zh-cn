@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: clone-volume.html 
 keywords: clone volume, clone, clone data 
-summary: 在 BlueXP 工作负载工厂中克隆一个卷，以制作原始卷的读/写卷进行测试。 
+summary: 在NetApp Workload Factory 中克隆一个卷，以制作原始卷的读/写卷进行测试。 
 ---
-= 在BlueXP  工作负载出厂时克隆卷
+= 在NetApp Workload Factory 中克隆卷
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-在 BlueXP 工作负载工厂中克隆一个卷，以制作原始卷的读/写卷进行测试。
+在NetApp Workload Factory 中克隆一个卷，以制作原始卷的读/写卷进行测试。
 
 克隆反映数据的当前时间点状态。您还可以使用克隆为其他用户授予对数据的访问权限，而不授予他们对生产数据的访问权限。
 
@@ -24,10 +24,11 @@ summary: 在 BlueXP 工作负载工厂中克隆一个卷，以制作原始卷的
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 从存储中选择*转至存储清单*。
-. 在*FSx for FS*选项卡中，选择包含要克隆的卷的ONTAP for ONTAP文件系统的三点菜单，然后选择*Manage*。
+. 在存储图块中，选择*转到存储*。
+. 从存储菜单中，选择 *FSx for ONTAP*。
+. 从 *FSx for ONTAP* 中，选择包含要克隆的卷的 FSx for ONTAP文件系统的操作菜单，然后选择 *管理*。
 . 从文件系统的概述选项卡中，选择*卷*选项卡。
-. 在卷选项卡中、选择要克隆的卷的三点菜单。
+. 在“卷”选项卡中，选择要克隆的卷的操作菜单。
 . 选择*数据保护操作*，然后选择*克隆卷*。
 . 在克隆卷对话框中、输入卷克隆的名称。
 . 选择 * 克隆 * 。

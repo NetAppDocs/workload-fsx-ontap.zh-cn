@@ -1,9 +1,9 @@
-= 适用于Amazon FSx for NetApp ONTAP的工作负载工厂初始版本
+= Amazon FSx for NetApp ONTAP的 Workload Factory 初始版本
 :allow-uri-read: 
 
 
 
 
-=== 适用于Amazon FSx for NetApp ONTAP的工作负载工厂初始版本
+=== Amazon FSx for NetApp ONTAP的 Workload Factory 初始版本
 
 Amazon FSx for NetApp ONTAP现已在BlueXP  工作负载工厂正式上市。

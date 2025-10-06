@@ -11,17 +11,18 @@ summary: 将Storage VM复制到另一个FSx for ONTAP文件系统可在数据丢
 
 
 [role="lead"]
-将Storage VM复制到BlueXP  工作负载工厂中的另一个FSx for ONTAP文件系统、可在数据丢失时提供数据访问保护层。此操作会将一个Storage VM中的所有卷复制到另一个FSx for ONTAP文件系统。
+在NetApp Workload Factory 中将存储虚拟机复制到另一个 FSx for ONTAP文件系统可在数据丢失时提供数据访问的保护层。此操作将一个存储虚拟机中的所有卷复制到另一个 FSx for ONTAP文件系统。
 
 .开始之前
 要将存储虚拟机复制到另一个 FSx for ONTAP 文件系统，您必须关联一个链接。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何关联现有链接或创建并关联新链接"](英文)链接关联后、返回此操作。
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在存储中，选择*转至存储清单*。
-. 在*FSx for Storage VM*选项卡中，选择包含要复制的ONTAP的文件系统的三点菜单，然后选择*Manage*。
+. 在存储图块中，选择*转到存储*。
+. 从存储菜单中，选择 *FSx for ONTAP*。
+. 从 *FSx for ONTAP* 中，选择要复制存储虚拟机的文件系统的操作菜单，然后选择 *管理*。
 . 从文件系统概述中，选择*Storage VMS*选项卡。
-. 从Storage VM选项卡中、选择要为其复制SVM的Storage VM的三点菜单。
+. 从“存储虚拟机”选项卡中，选择要为其复制 SVM 的存储虚拟机的操作菜单。
 . 选择*复本Storage VM*。
 . 在创建复制页面上的复制目标下、提供以下内容：
 +
@@ -30,7 +31,7 @@ summary: 将Storage VM复制到另一个FSx for ONTAP文件系统可在数据丢
 .. *卷名*：目标卷名称将自动生成，格式如下 `{OriginalVolumeName}_copy`。
 .. *分层策略*：为目标卷中存储的数据选择分层策略。
 +
-_Auto_是使用工作负载工厂FSx for ONTAP用户界面创建卷时的默认分层策略。有关卷分层策略的详细信息、请参阅 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["卷存储容量"^]AWS FSx for NetApp ONTAP文档中的。
+使用 Workload Factory FSx for ONTAP用户界面创建卷时，_Auto_ 是默认分层策略。有关卷分层策略的更多信息，请参阅link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["卷存储容量"^]在 AWS FSx for NetApp ONTAP文档中。
 
 .. *最大传输速率*：选择*受限*并输入最大传输速率(MB/秒)或者，选择*Unlimited (无限制)*。
 +

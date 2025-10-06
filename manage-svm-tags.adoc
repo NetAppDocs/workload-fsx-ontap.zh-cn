@@ -4,21 +4,22 @@ permalink: manage-svm-tags.html
 keywords: edit storage vm tags, vm tags, svm tags 
 summary: 随时为Storage VM添加、更新或删除Storage VM标记。 
 ---
-= 在BlueXP  工作负载工厂中管理Storage VM标记
+= 在NetApp Workload Factory 中管理存储虚拟机标签
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-标记可以帮助您对资源进行分类。您可以随时在BlueXP  工作负载工厂中为Storage VM添加、编辑和删除标记。
+标签可以帮助您对资源进行分类。您可以随时在NetApp Workload Factory 中添加、编辑和删除存储虚拟机的标签。
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在存储中，选择*转至存储清单*。
-. 在*FSx for Storage VM*选项卡中，选择包含要更新的ONTAP的文件系统的三点菜单，然后选择*Manage*。
+. 在存储图块中，选择*转到存储*。
+. 从存储菜单中，选择 *FSx for ONTAP*。
+. 从 *FSx for ONTAP* 中，选择要更新的存储虚拟机的文件系统的操作菜单，然后选择 *管理*。
 . 从文件系统概述中，选择*Storage VMS*选项卡。
-. 从Storage VM选项卡中、选择要编辑其标记的Storage VM的三点菜单。
+. 从“存储虚拟机”选项卡中，选择要编辑标签的存储虚拟机的操作菜单。
 . 选择*编辑Storage VM标记*。
 . 在编辑Storage VM标记页面上、添加、编辑或删除标记。
 +

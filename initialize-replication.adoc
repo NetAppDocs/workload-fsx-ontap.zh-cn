@@ -4,14 +4,14 @@ permalink: initialize-replication.html
 keywords: initialize replication, begin replication, start replication 
 summary: 初始化源卷和目标卷之间的复制关系。 
 ---
-= 在BlueXP  工作负载出厂时初始化复制关系
+= 在NetApp Workload Factory 中初始化复制关系
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-初始化源卷和目标卷之间的复制关系、以传输快照以及BlueXP  工作负载出厂时的所有数据块。
+初始化源卷和目标卷之间的复制关系，以传输NetApp Workload Factory 中的快照和所有数据块。
 
 .关于此任务
 初始化会执行_baseline传输：创建源卷的快照、然后将该快照及其引用的所有数据块传输到目标卷。
@@ -21,10 +21,11 @@ summary: 初始化源卷和目标卷之间的复制关系。
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在存储中，选择*转至存储清单*。
-. 在*FSx for FS* ONTAP选项卡中，选择要更新的文件系统的三点菜单，然后选择*Manage*。
+. 在存储图块中，选择*转到存储*。
+. 从存储菜单中，选择 *FSx for ONTAP*。
+. 从 *FSx for ONTAP* 中，选择要更新的文件系统的操作菜单，然后选择 *管理*。
 . 从文件系统概述中，选择*复制关系*选项卡。
-. 在复制关系选项卡中、选择要初始化的复制关系的三点菜单。
+. 在复制关系选项卡中，选择要初始化的复制关系的操作菜单。
 . 选择*初始化*。
 . 在初始化关系对话框中，选择*Initi起 始化*。
 

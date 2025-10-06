@@ -63,7 +63,7 @@ summary: 已知限制确定了本产品版本不支持的平台、设备或功�
 
 == Storage VM
 
-每个SKU的Storage VM数量是有限的。工作负载工厂不支持创建超出限制的Storage VM。^1^
+每个 SKU 的存储虚拟机数量是有限的。  Workload Factory 不支持创建超出限制的存储虚拟机。^1^
 
 有关每个文件系统的最大SVM数量、请参见 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html#max-svms["管理FSx for ONTAP Storage Virtual Machine"^] AWS文档中的。
 
@@ -117,7 +117,7 @@ System Manager不支持FSx for ONTAP连接的链接。
 
 == AWS支持
 
-使用Connector时不支持AWS的"ConnectOR"管理器。
+使用控制台代理时不支持 AWS Secrets Manager。
 
 注意：
 

@@ -4,7 +4,7 @@ permalink: manage-immutable-files.html
 keywords: enable immutable files, disable immutable files, lock files, unlock files 
 summary: 启用此功能后、您可以更新某些不可更改的文件设置。 
 ---
-= 在BlueXP  工作负载工厂中管理卷的不可配置文件
+= 在NetApp Workload Factory 中管理卷的不可变文件
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
@@ -17,9 +17,10 @@ summary: 启用此功能后、您可以更新某些不可更改的文件设置�
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在存储中，选择*转至存储清单*。
-. 选择*卷*选项卡。
-. 在卷选项卡中、选择要克隆的卷的三点菜单。
+. 在存储图块中，选择*转到存储*。
+. 从存储菜单中，选择 *FSx for ONTAP*。
+. 从 *FSx for ONTAP* 中，选择要更新卷的文件系统的操作菜单，然后选择 *管理*。
+. 在“卷”选项卡中，选择要克隆的卷的操作菜单。
 . 选择*数据保护操作*，然后选择*管理不可更改的文件*。
 . 在管理不可更改文件页面上、您可以更新以下内容：
 +
@@ -35,6 +36,7 @@ summary: 启用此功能后、您可以更新某些不可更改的文件设置�
 
 
 ** *自动提交*：启用或禁用自动将在自动提交期间未修改的文件提交到WORM的功能。
+** *特权删除*：启用或禁用该功能。启用该功能允许SnapLock管理员删除未过期的 WORM 卷。此功能仅在企业保留模式下受支持。
 ** *卷附加模式*：启用或禁用此功能。启用卷附加模式后、您可以向WORM文件添加新内容。
 
 

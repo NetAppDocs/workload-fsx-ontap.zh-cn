@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: use-onprem-data.html 
 keywords: use, detect, replicate, remove, on-premises, ONTAP cluster, on-premises cluster, ONTAP 
-summary: 在BlueXP  工作负载工厂中发现和复制内部ONTAP数据、以便用于丰富AI知识库。 
+summary: 在NetApp Workload Factory 中发现并复制本地ONTAP数据，以便用于丰富 AI 知识库。 
 ---
-= 在BlueXP  工作负载工厂中使用内部ONTAP集群数据
+= 在NetApp Workload Factory 中使用本地ONTAP集群数据
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-在BlueXP  工作负载工厂中发现和复制内部ONTAP数据、以便用于丰富AI知识库。
+在NetApp Workload Factory 中发现并复制本地ONTAP数据，以便用于丰富 AI 知识库。
 
 .关于此任务
 要使用内部ONTAP集群中的数据、您首先需要发现内部ONTAP集群。发现内部ONTAP集群后、您可以在以下任何使用情形中使用这些数据。
@@ -31,7 +31,7 @@ summary: 在BlueXP  工作负载工厂中发现和复制内部ONTAP数据、以
 
 == 发现内部 ONTAP 集群
 
-在BlueXP  工作负载工厂中发现内部ONTAP集群、以便将数据复制到Amazon FSx for NetApp ONTAP文件系统。
+在NetApp Workload Factory 中发现本地ONTAP集群，以便您可以将数据复制到Amazon FSx for NetApp ONTAP文件系统。
 
 .开始之前
 开始之前、请确保您已具备以下条件：
@@ -48,13 +48,13 @@ image:screenshot-on-prem-connectivity.png["屏幕截图、显示应如何将内�
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在存储中，选择*转至存储清单*。
+. 在存储图块中，选择*转到存储*。
 . 选择*内部部署ONTAP *选项卡。
 . 选择*发现*。
 . 查看前提条件并选择*Next*。
 . 在"Discover ONTAP On-sremises (发现内部部署)"页面上、在*集群配置*下提供以下内容：
 +
-.. *链接*：选择链接。该链路将与内部集群关联、以便在集群和工作负载工厂之间建立连接。
+.. *链接*：选择一个链接。该链接将与内部部署集群相关联，以在集群和工作负载工厂之间建立连接。
 +
 如果尚未创建链接、请按照说明进行操作、然后返回到此操作并选择此链接。
 
@@ -84,8 +84,8 @@ image:screenshot-on-prem-connectivity.png["屏幕截图、显示应如何将内�
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在存储中，选择*转至存储清单*。
-. 选择*内部部署ONTAP *选项卡。
+. 在存储图块中，选择*转到存储*。
+. 从存储菜单中，选择 *On-premises ONTAP*。
 . 要按Storage VM查找卷、您可以从下拉列表中*选择Storage VM*。
 . 选择一个或多个要复制的卷、然后选择*复制*。
 . 在创建复制页面上的复制目标下、提供以下内容：
@@ -95,7 +95,7 @@ image:screenshot-on-prem-connectivity.png["屏幕截图、显示应如何将内�
 .. *卷名*：目标卷名称将自动生成，格式如下 `{OriginalVolumeName}_copy`。您可以使用自动生成的卷名称或输入其他卷名称。
 .. *分层数据*：为目标卷中存储的数据选择分层策略。
 +
-*** *Auto*：使用工作负载工厂FSx for ONTAP用户界面创建卷时的默认分层策略。在特定时间段内将所有冷数据(包括用户数据和快照)分层到容量池存储层。
+*** *自动*：使用 Workload Factory FSx for ONTAP用户界面创建卷时的默认分层策略。将包括用户数据和快照在内的所有冷数据分层到容量池存储层，保存特定时间段。
 *** *仅Snapshot *：将仅Snapshot数据分层到容量池存储层。
 *** *无*：将卷的所有数据保留在主存储层上。
 *** *全部*：将所有用户数据和快照数据标记为冷数据、并将其存储在容量池存储层中。
@@ -140,20 +140,20 @@ image:screenshot-on-prem-connectivity.png["屏幕截图、显示应如何将内�
 
 
 
-== 从BlueXP  工作负载出厂时删除内部ONTAP集群
+== 从NetApp Workload Factory 中删除本地ONTAP集群
 
-根据需要从BlueXP  工作负载出厂时删除内部ONTAP集群。
+需要时从NetApp Workload Factory 中删除本地ONTAP集群。
 
 .开始之前
 您必须link:delete-replication.html["删除所有现有复制关系"]先对内部ONTAP集群中的所有卷执行此操作、然后才能删除此集群、这样就不会保留任何已断开的关系。
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在存储中，选择*转至存储清单*。
-. 选择*内部部署ONTAP *选项卡。
+. 在存储图块中，选择*转到存储*。
+. 从存储菜单中，选择 *On-premises ONTAP*。
 . 选择要删除的内部ONTAP集群。
-. 选择三点菜单，然后选择*Remove from Workload Factory。
+. 选择操作菜单并选择*从工作负载工厂中删除*。
 
 
 .结果
-内部ONTAP集群已从BlueXP  工作负载出厂时删除。
+本地ONTAP集群已从NetApp Workload Factory 中删除。

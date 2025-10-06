@@ -2,38 +2,38 @@
 sidebar: sidebar 
 permalink: quick-start.html 
 keywords: Amazon FSx for NetApp ONTAP, fsx, netapp, quick, get started, install, deploy, setup, launch, requirements, prerequisites, credentials, permissions, policy 
-summary: 只需几个步骤、即可在BlueXP  工作负载工厂开始使用FSx for ONTAP。 
+summary: 只需几个步骤，即可在NetApp Workload Factory 中开始使用 FSx for ONTAP 。 
 ---
-= BlueXP  工作负载工厂中适用于NetApp ONTAP的Amazon FSx快速入门
+= NetApp Workload Factory 中Amazon FSx for NetApp ONTAP的快速入门
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-借助BlueXP  工作负载工厂中的Amazon FSx for NetApp ONTAP、您可以立即在_BASIC模式下开始使用。
+借助NetApp Workload Factory 中的Amazon FSx for NetApp ONTAP ，您可以立即以_基本_模式开始使用。
 
-如果要使用工作负载工厂创建文件系统、管理资源等、您可以通过几个步骤开始操作。在这种情况下、您需要AWS帐户和凭据才能开始使用。
+如果您想使用 Workload Factory 来创建文件系统、管理资源等，只需几个步骤即可开始。在这种情况下，您需要一个 AWS 账户和凭证才能开始使用。
 
 请按照以下步骤开始操作。
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一个"]登录到工作负载工厂
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一个"]登录工作负载工厂
 [role="quick-margin-para"]
-您需要 link:https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html["在Workload Factory中设置一个帐户"^] 和 link:https://console.workloads.netapp.com["登录"^]
+你需要link:https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html["在 Workload Factory 上创建一个帐户"^]和link:https://console.workloads.netapp.com["登录"^]
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["两个"] 添加凭据和权限
 [role="quick-margin-para"]
 在 _basic_、_read-only_ 和 _read/write_ 之间进行选择link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["操作模式"^]
 
 [role="quick-margin-para"]
-如果您选择在_BASIC模式下运行、则无需再继续操作。您可以开始使用适用于FSx for ONTAP的工作负载工厂复制部分完成的代码示例。
+如果您选择以基本模式操作，则无需再进行任何操作。您可以开始使用 Workload Factory for FSx for ONTAP复制部分完成的代码示例。
 
 [role="quick-margin-para"]
 如果您在“只读”或“读/写”模式下操作，则需要link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["手动向帐户添加凭据"^]其中包括选择工作负载功能（例如数据库和 AI）以及创建 IAM 策略以确保您拥有以_只读_或_读/写_模式操作的正确权限。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三个"] 创建文件系统
 [role="quick-margin-para"]
-您将创建FSx文件系统、以开始在工作负载工厂管理存储和FSx for ONTAP资源。在的link:https://console.workloads.netapp.com["工作负载出厂控制台"^]存储中，选择*Create file system*。link:create-file-system.html["了解如何创建文件系统"](英文)
+您将创建一个 FSx 文件系统来开始在 Workload Factory 中管理您的存储和 FSx for ONTAP资源。在link:https://console.workloads.netapp.com["工作负载工厂控制台"^]在存储中，选择*创建文件系统*。link:create-file-system.html["了解如何创建文件系统"] 。
 
 [role="quick-margin-para"]
 您还可以从存储节省计算器开始、将Amazon Elel生 块存储、El生 性文件系统和FSx for Windows文件服务器存储环境的成本与FSx for ONTAP的成本进行比较。 link:explore-savings.html["利用存储节省计算器了解节省量。"]

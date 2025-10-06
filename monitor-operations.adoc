@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: monitor-operations.html 
 keywords: monitor databases, monitor jobs, track storage jobs, track jobs 
-summary: 在适用于存储的BlueXP  工作负载工厂中、使用跟踪器跟踪FSx for ONTAP、凭据和链接操作、并监控作业进度。 
+summary: 跟踪 FSx for ONTAP、凭证和链接操作，并使用NetApp Workload Factory for Storage 中的 Tracker 监控作业进度。 
 ---
-= 在BlueXP  工作负载工厂中使用Tracker监控存储操作
+= 使用NetApp Workload Factory 中的 Tracker 监控存储操作
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-在BlueXP  工作负载工厂中使用跟踪器监控和跟踪FSx for ONTAP的执行情况、凭据和链路操作、并监控任务进度。
+监控和跟踪 FSx for ONTAP、凭证和链接操作的执行情况，并使用NetApp Workload Factory 中的 Tracker 监控任务进度。
 
 .关于此任务
 Workload Factory提供了一种监控功能、可用于监控和跟踪FSx for ONTAP的进度和状态、凭据和链接操作、查看操作任务和子任务的详细信息以及诊断任何问题或故障。
@@ -42,12 +42,12 @@ Tracker支持两个级别的监控、具体取决于操作。每个任务(例如
 
 == 跟踪和监控操作
 
-使用跟踪器在BlueXP  中跟踪和监控操作。
+使用 Tracker 跟踪和监控NetApp控制台中的操作。
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在存储中，选择*转至存储清单*。
-. 从存储清单中，选择帐户设置菜单，然后选择*Tracker。
+. 在存储图块中，选择*转到存储*。
+. 从存储菜单中，选择*管理*，然后选择*链接*。
 +
 image:screenshot-menu-tracker-option.png["帐户设置菜单的屏幕截图、突出显示了Tracker选项。"]
 
@@ -62,7 +62,7 @@ image:screenshot-menu-tracker-option.png["帐户设置菜单的屏幕截图、�
 
 .步骤
 . 在Tracker中、选择一个任务。
-. 选择三点菜单，然后选择*查看API请求*。
+. 选择操作菜单，然后选择*查看 API 请求*。
 
 
 
@@ -76,7 +76,7 @@ NOTE: 失败的操作仅允许重试x次。
 
 .步骤
 . 在Tracker中、选择失败的操作。
-. 选择三点菜单，然后选择*Retry*。
+. 选择操作菜单，然后选择*重试*。
 
 
 .结果
@@ -90,7 +90,7 @@ NOTE: 失败的操作仅允许重试x次。
 
 .步骤
 . 在Tracker中、选择失败的操作。
-. 选择三点菜单，然后选择*编辑并重试*。
+. 选择操作菜单，然后选择*编辑并重试*。
 +
 系统会将您重定向到操作页面、您可以在其中编辑参数并重试此操作。
 

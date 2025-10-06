@@ -33,7 +33,7 @@ ARP/AI 功能会根据Amazon FSx for NetApp ONTAP运行的ONTAP版本自动更�
 学习和主动模式:: ARP/AI 首先在_学习模式_下运行，然后自动切换到_主动模式_。
 +
 --
-* *学习模式*：当您启用 ARP/AI 时，它以_学习模式_运行。在学习模式下，FSx for ONTAP文件系统根据分析区域（熵、文件扩展类型和文件 IOPS）开发警报配置文件。在文件系统以学习模式运行 ARP/AI 足够时间以评估工作负载特征后，工作负载工厂会自动切换到 ARP/AI 到_主动模式_并开始保护您的数据。
+* *学习模式*：当您启用 ARP/AI 时，它以_学习模式_运行。在学习模式下，FSx for ONTAP文件系统根据分析区域（熵、文件扩展类型和文件 IOPS）开发警报配置文件。在文件系统以学习模式运行 ARP/AI 足够时间以评估工作负载特征后，Workload Factory 会自动切换到 ARP/AI 到_主动模式_并开始保护您的数据。
 * *主动模式*：ARP/AI 切换到_主动模式_后，如果检测到威胁，FSx for ONTAP会创建 ARP/AI 快照来保护数据。
 +
 在活动模式下、如果文件扩展名被标记为异常、则应评估警报。您可以对警报采取措施来保护您的数据、也可以将警报标记为误报。将警报标记为误报可更新警报配置文件。例如、如果警报由新文件扩展名触发、而您将警报标记为误报、则下次观察到该文件扩展名时、您不会收到警报。
@@ -58,7 +58,7 @@ ARP/AI 功能会根据Amazon FSx for NetApp ONTAP运行的ONTAP版本自动更�
 
 为文件系统启用 ARP/AI 会自动为所有现有 NAS 和新创建的 NAS（NFS/SMB）卷添加保护。您还可以为单个卷启用 ARP/AI。
 
-启用 ARP/AI 后，如果发生攻击并且您确定攻击是真实的，工作负载工厂会自动设置快照策略，每四小时最多拍摄六次快照。每个快照锁定2-5天。
+启用 ARP/AI 后，如果发生攻击并且您确定攻击是真实的，Workload Factory 会自动设置快照策略，每四小时最多拍摄六次快照。每个快照锁定2-5天。
 
 .开始之前
 要为文件系统或卷启用 ARP/AI，您必须关联一个链接。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何关联现有链接或创建并关联新链接"] 。链接关联后，返回此操作。
@@ -69,8 +69,9 @@ ARP/AI 功能会根据Amazon FSx for NetApp ONTAP运行的ONTAP版本自动更�
 --
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在存储中，选择*转至存储清单*。
-. 在 *FSx for ONTAP* 选项卡中，选择文件系统的三点菜单以启用 ARP/AI，然后选择 *管理*。
+. 在存储图块中，选择*转到存储*。
+. 从存储菜单中，选择 *FSx for ONTAP*。
+. 从 *FSx for ONTAP* 中，选择文件系统的操作菜单以启用 ARP/AI，然后选择 *管理*。
 . 在信息下，选择“自主勒索软件防护”旁边的铅笔图标。当鼠标悬停在“Autonomous Ransomware Protection”行上时，箭头旁边会出现一个铅笔图标。
 . 在NetApp自主勒索软件防护 AI (ARP/AI) 页面中，执行以下操作：
 +
@@ -89,9 +90,10 @@ ARP/AI 功能会根据Amazon FSx for NetApp ONTAP运行的ONTAP版本自动更�
 --
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在存储中，选择*转至存储清单*。
-. 在 *FSx for ONTAP* 选项卡中，选择文件系统的三点菜单以启用 ARP/AI，然后选择 *管理*。
-. 从“卷”选项卡中，选择卷的三点菜单以启用 ARP/AI，然后选择*数据保护操作*，然后选择*管理 ARP/AI*。
+. 在存储图块中，选择*转到存储*。
+. 从存储菜单中，选择 *FSx for ONTAP*。
+. 从 *FSx for ONTAP* 中，选择文件系统的操作菜单以启用 ARP/AI，然后选择 *管理*。
+. 从“卷”选项卡中，选择卷的操作菜单以启用 ARP/AI，然后选择*数据保护操作*，然后选择*管理 ARP/AI*。
 . 在管理 ARP/AI 对话框中，执行以下操作：
 +
 .. 启用或禁用该功能。
@@ -112,7 +114,9 @@ ARP/AI 功能会根据Amazon FSx for NetApp ONTAP运行的ONTAP版本自动更�
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在存储中，选择*转至存储清单*。
+. 在存储图块中，选择*转到存储*。
+. 从存储菜单中，选择 *FSx for ONTAP*。
+. 从 *FSx for ONTAP* 中，选择要验证勒索软件攻击的文件系统。
 . 从文件系统概述中，选择*Volumes*选项卡。
 . 从"Autonomous Ranso器 保护"磁贴中选择*分析攻击*。
 . 下载攻击事件报告以查看是否有任何文件或文件夹被泄露、然后确定是否发生了攻击。
@@ -132,7 +136,9 @@ ARP/AI 功能会根据Amazon FSx for NetApp ONTAP运行的ONTAP版本自动更�
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在存储中，选择*转至存储清单*。
+. 在存储图块中，选择*转到存储*。
+. 从存储菜单中，选择 *FSx for ONTAP*。
+. 从 *FSx for ONTAP* 中，选择要恢复数据的文件系统。
 . 从文件系统概述中，选择*Volumes*选项卡。
 . 从"Autonomous Ranso器 保护"磁贴中选择*分析攻击*。
 . 如果发生了攻击，请为表中的卷选择*实际攻击*。
