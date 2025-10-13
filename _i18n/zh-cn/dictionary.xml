@@ -2163,7 +2163,6 @@
   <block id="0b9457a2973ff10b39045b865037dcb8" category="list-text">从 *FSx for ONTAP* 中，选择包含要重新平衡的卷的文件系统的操作菜单，然后选择 *管理*。</block>
   <block id="bf1c457139c3a04a33b336ab43865dad" category="admonition">Workload Factory 管理员可以<block ref="6089e6bc679073f1388a01bc136ad00e" category="inline-xref-macro-rx"></block>在操作过程中。</block>
   <block id="59dfa377d2b15b40ba2bddd83dcb5c53" category="list-text">从 *FSx for ONTAP* 中，选择包含要重新平衡的卷的文件系统的操作菜单，然后选择 *管理*。</block>
-  <block id="2465211fab7d73457701958a158bbf39" category="list-text">在*存储*中，选择*转到存储</block>
   <block id="fbf1bac8c72be0440c190a08fabc8dc0" category="paragraph">在NetApp Workload Factory 中将存储虚拟机复制到另一个 FSx for ONTAP文件系统可在数据丢失时提供数据访问的保护层。此操作将一个存储虚拟机中的所有卷复制到另一个 FSx for ONTAP文件系统。</block>
   <block id="e42fc3e4b35126c00393bef5dd43abb0" category="list-text">从 *FSx for ONTAP* 中，选择要复制存储虚拟机的文件系统的操作菜单，然后选择 *管理*。</block>
   <block id="f762650128ec007cd0d70b6659361ba3" category="list-text">从“存储虚拟机”选项卡中，选择要为其复制 SVM 的存储虚拟机的操作菜单。</block>
@@ -2238,4 +2237,9 @@
   <block id="3c031b939f6ec312ee601d021e7a6644" category="sidebar">NetApp控制台</block>
   <block id="cc58d3a9b2264c4fd8cb1d3f61b90bdc" category="sidebar">NetApp数据服务</block>
   <block id="aea7c72083066ee89008056089d95877" category="sidebar">发现并查看缓存卷</block>
+  <block id="ea7d4002457b002b29ca2cb9a498c0bc" category="section-title">存储的新通知</block>
+  <block id="ba72fdb3bdfd568a9dee9e12c3566da1" category="paragraph">工作负载工厂通知服务包括存储自动容量管理的成功和失败通知。</block>
+  <block id="28a2c493e9a663d617e582302e1bcf28" category="inline-link-macro">BlueXP workload factory的通知</block>
+  <block id="165f0ade723f657a5d7981bfecbfc75a" category="paragraph"><block ref="165f0ade723f657a5d7981bfecbfc75a" category="inline-link-macro-rx"></block></block>
+  <block id="419085fd5f19a39001679a5f52b0acdf" category="list-text">在“存储”中，选择“转到存储”</block>
 </blocks>
