@@ -30,8 +30,8 @@ link:configuration-analysis.html["了解 Workload Factory 中的配置分析和�
 工作负载工厂会分析FSx for ONTAP文件系统的以下配置的架构良好状态：
 
 * 可靠性：SSD 容量阈值、计划的本地快照、FSx for ONTAP备份、远程数据复制以及长期保留的数据可靠性
-* 安全性： NetApp自主勒索软件防护与人工智能 (ARP/AI)
-* 卓越运营：存储效率、自动容量管理和卷文件容量利用率阈值
+* 安全性： NetApp自主勒索软件防护（具备 AI 功能，即 ARP/AI）和卷未经授权访问防护
+* 卓越运营：自动容量管理、卷文件容量利用率阈值以及卷利用率接近饱和
 * 成本优化：存储效率和数据分层
 
 
@@ -42,7 +42,7 @@ link:configuration-analysis.html["了解 Workload Factory 中的配置分析和�
 您可以修复 FSx for ONTAP文件系统或文件系统中选定卷的配置问题。您可以选择一个或多个要修复的配置。
 
 .开始之前
-* 您必须拥有具有_只读_或_读/写_权限的凭据。link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["了解如何在AWS帐户中授予权限"^](英文)
+* 你必须link:link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["授予 _操作和修复_ 权限"^]在您的 AWS 账户中。
 * 修复过程可能会导致实例停机或服务中断。在选择修复配置问题之前，请务必仔细查看每条建议。
 * link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["使用链接连接到 FSx for ONTAP文件系统"]对您的文件系统资源进行最全面的分析。
 

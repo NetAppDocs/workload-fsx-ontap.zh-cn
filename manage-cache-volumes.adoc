@@ -1,0 +1,121 @@
+---
+sidebar: sidebar 
+permalink: manage-cache-volumes.html 
+keywords: cache volumes, manage cache, FSx for ONTAP cache 
+summary: 根据需要，在NetApp Workload Factory中管理 FSx for ONTAP文件系统的缓存卷。 
+---
+= 管理 FSx for ONTAP文件系统的缓存卷
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+通过NetApp Workload Factory控制台，您可以管理 FSx for ONTAP文件系统的缓存卷。管理任务包括编辑缓存名称、增加缓存容量、编辑导出策略、更改缓存方法、预填充缓存以及在不再需要时删除缓存卷。
+
+.关于此任务
+您无需离开NetApp Workload Factory控制台即可管理与缓存关系关联的缓存卷。
+
+.开始之前
+* 您必须关联一个链接来管理缓存卷和关系。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何关联现有链接或创建并关联新链接"]。链接关联后，返回此操作。
+* 您必须拥有一个已存在的缓存卷才能进行编辑。
+
+
+
+
+== 编辑缓存卷名称
+
+您可以随时更改现有缓存卷的名称。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 在存储图块中，选择*转到存储*。
+. 从存储菜单中，选择 FSx for ONTAP。
+. 在 FSx for ONTAP中，选择包含缓存卷的文件系统的操作菜单，然后选择“管理”。
+. 从文件系统概览中，选择“缓存关系”选项卡。
+. 选择要修改的缓存卷的操作菜单，然后选择“编辑缓存名称”。
+. 在“编辑缓存名称”对话框中，输入缓存卷的新名称，然后选择“应用”。
+
+
+
+
+== 增加缓存卷的容量
+
+如果需要增加现有缓存卷的容量，您可以随时进行增加。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 在存储图块中，选择*转到存储*。
+. 从存储菜单中，选择 FSx for ONTAP。
+. 在 FSx for ONTAP中，选择包含缓存卷的文件系统的操作菜单，然后选择“管理”。
+. 从文件系统概览中，选择“缓存关系”选项卡。
+. 选择要修改的缓存卷的操作菜单，然后选择“增加缓存容量”。
+. 在“增加缓存容量”对话框中，按百分比或单位输入缓存容量的新值，然后选择“应用”。
+
+
+
+
+== 编辑缓存卷导出策略
+
+更改现有缓存卷的挂载路径或导出策略。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 在存储图块中，选择*转到存储*。
+. 从存储菜单中，选择 FSx for ONTAP。
+. 在 FSx for ONTAP中，选择包含缓存卷的文件系统的操作菜单，然后选择“管理”。
+. 从文件系统概览中，选择“缓存关系”选项卡。
+. 选择要修改的缓存卷的操作菜单，然后选择“编辑导出策略”。
+. 在“编辑导出策略”对话框中，更改挂载路径或选择不同的导出策略来分配给缓存卷。
+. 选择 * 应用 * 。
+
+
+
+
+== 更改缓存卷的缓存方法
+
+将现有缓存卷的缓存方法或模式更改为写回或写绕。
+
+详细了解link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/using-flexcache.html["写入模式"^]。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 在存储图块中，选择*转到存储*。
+. 从存储菜单中，选择 FSx for ONTAP。
+. 在 FSx for ONTAP中，选择包含缓存卷的文件系统的操作菜单，然后选择“管理”。
+. 从文件系统概览中，选择“缓存关系”选项卡。
+. 选择要修改的缓存卷的操作菜单，然后选择“更改缓存方法”。
+. 在“更改缓存方法”对话框中，选择新的缓存方法，然后选择“应用”。
+
+
+
+
+== 预先填充缓存卷
+
+在请求缓存数据之前，先用源卷中的数据预先填充缓存卷，以加快对缓存数据的访问速度。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 在存储图块中，选择*转到存储*。
+. 从存储菜单中，选择 FSx for ONTAP。
+. 在 FSx for ONTAP中，选择包含缓存卷的文件系统的操作菜单，然后选择“管理”。
+. 从文件系统概览中，选择“缓存关系”选项卡。
+. 选择要修改的缓存卷的操作菜单，然后选择“预填充缓存”。
+. 在“*预填充缓存*”对话框中，指定要用于预填充的数据集路径，然后选择“应用”。
+
+
+
+
+== 删除缓存卷
+
+删除缓存卷会删除源卷和缓存卷之间的缓存关系。删除后，缓存数据将不再可用。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 在存储图块中，选择*转到存储*。
+. 从存储菜单中，选择 FSx for ONTAP。
+. 在 FSx for ONTAP中，选择包含缓存卷的文件系统的操作菜单，然后选择“管理”。
+. 从文件系统概览中，选择“缓存关系”选项卡。
+. 选择要删除的缓存卷的操作菜单，然后选择“删除缓存卷”。
+. 在“删除缓存卷”对话框中，确认删除，然后选择“删除”。
+

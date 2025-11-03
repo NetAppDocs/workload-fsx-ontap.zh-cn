@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+permalink: create-cyber-vault.html 
+keywords: create cyber vault, volume cyber vault, protect data cyber vault, cyber vault setup 
+summary: 了解NetApp网络保险库以及如何实施网络保险库架构，以保护您的数据免受勒索软件和网络威胁的侵害。 
+---
+= 使用网络安全保险库保护您的数据。
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+网络保险库卷是一个隔离的、安全的存储位置，用于存储数据的备份副本，保护数据免受勒索软件攻击和其他网络威胁。作为创建保险库的一部分，您将创建一个网络保险库卷，禁用所有客户端协议，并在源卷和网络保险库卷之间建立复制关系，并在网络保险库卷上创建不可变快照。
+
+.什么是网络保险库？
+网络保险库是一种特定的数据保护技术，涉及将关键数据存储在与主要 IT 基础设施分开的隔离环境中。
+
+网络金库是一个“物理隔离”的、不可更改的、不可抹除的数据存储库，它不受影响主网络的威胁（例如恶意软件、勒索软件，甚至是内部威胁）的影响。利用不可更改且不可删除的快照可以实现网络保险库。
+
+使用传统方法的气隙备份涉及创建空间并物理分离主媒体和辅助媒体。通过将媒体移出现场和/或切断连接，不良行为者就无法访问数据。这可以保护数据，但会导致恢复时间变慢。
+
+.FSx for ONTAP网络保险库
+支持将Amazon FSx for NetApp ONTAP用作网络安全保险库的源和目标。
+
+.实施
+Workload Factory 提供创建网络安全架构方面的帮助。当您联系NetApp表示有兴趣实施网络安全保险库后， NetApp专家会与您联系，讨论您的需求。
+
+请发送电子邮件至ng-FSx-CyberVault@netapp.com以开始使用。
+
+.相关信息
+有关网络保险库以及如何搭建此架构的更多信息，请参阅……link:https://docs.netapp.com/us-en/netapp-solutions-dataops/cyber-vault/ontap-cyber-vault-overview.html["ONTAP网络保险库文档"^] 。

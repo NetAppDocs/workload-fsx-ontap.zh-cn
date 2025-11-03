@@ -284,8 +284,6 @@
   <block id="856fd7298379e6a75a221ebc3af9cdec" category="list-text">选择*编辑Storage VM标记*。</block>
   <block id="14d8aa612c687d8708f6fefc5f554d22" category="list-text">在编辑Storage VM标记页面上、添加、编辑或删除标记。</block>
   <block id="2d1066d1fee53e98224fefca16751fd3" category="paragraph">一个Storage VM最多可以应用50个标记。</block>
-  <block id="edd5da19d30912fca4670982f9aef531" category="inline-link-macro">增加卷容量功能</block>
-  <block id="f9e4840a1cf1ddb5632e031e0334acb9" category="paragraph">(可选)您可以随时使用手动增加卷的卷容量 <block ref="11462b2e1fd0bd94e3dc25fc7f04c4ba" category="inline-link-macro-rx"></block>。</block>
   <block id="2332ee8494d2f8246a961c95630281a2" category="admonition">iSCSI卷不支持卷自动增长。</block>
   <block id="3d7b2807e22b58e985dfcb21a31b176e" category="summary">标记可以帮助您对资源进行分类。您可以随时为FSx for ONTAP卷添加、编辑和删除卷标记。</block>
   <block id="c966edae1d484c4f3e557d47709e08a1" category="list-text">选择*基本操作*，然后选择*编辑卷标记*。</block>
@@ -384,13 +382,7 @@
   <block id="ffc888e5ff626bf410d67b62a9e8a9a8" category="paragraph">有关SSD存储容量限制、请参阅 <block ref="5e5311b04805e422cc2fabe002034628" category="inline-link-macro-rx"></block> AWS FSx for NetApp ONTAP文档中的。</block>
   <block id="3fa4dafc00a14f08641efa3389891289" category="inline-link-macro">禁用自动容量管理</block>
   <block id="bb38e8f0462bc33d127ff7d217a31149" category="list-text">选择已配置容量的单位。</block>
-  <block id="ceadc0f7d6f2330af477eb47568a259b" category="doc">增加卷容量</block>
   <block id="eacbf9150c5d9c7a7032185805a236b8" category="inline-link-macro">启用自动增长功能</block>
-  <block id="61912f548f2af8c04ce8d9e84cdfcebf" category="paragraph">对于iSCSI LUN、此操作会增加主机LUN的大小。容量增加后、按照主机操作系统提供的过程发现LUN的新大小并扩展LUN的文件系统。</block>
-  <block id="edd00e1c6dfe245ca67fb40d38a8f612" category="list-text">选择*基本操作*，然后选择*增加卷容量*。</block>
-  <block id="4b3ec30c73a77c948a926f5f261f219f" category="list-text">在增加卷容量对话框中、提供以下内容：</block>
-  <block id="8ba1ce8b4c03e2fec48c757cacb814de" category="list-text">选择更大的大小。</block>
-  <block id="0268e0733e81d9eec7959c020c7609fb" category="list-text">如果需要、请更换装置。</block>
   <block id="26f68296f7b3ad0f394e89c82f5ea642" category="summary">初始化源卷和目标卷之间的复制关系。</block>
   <block id="45df433d6d3e94a4c9cb03d82b93e7fa" category="doc">初始化复制关系</block>
   <block id="42812c21ac1eee37a9ac12cf59634ce6" category="paragraph">初始化会执行_baseline传输：创建源卷的快照、然后将该快照及其引用的所有数据块传输到目标卷。</block>
@@ -492,7 +484,6 @@
   <block id="0d6187a6dbf87b209ebf23f8fee502f9" category="inline-link-macro">登录</block>
   <block id="aada29daee1d64ed0fe907043855cb7e" category="inline-image-macro">两个</block>
   <block id="27c19be9febabd1e2fb82d7a39784f2d" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block> 添加凭据和权限</block>
-  <block id="ba8b072b83c1e6db56e40bf48ddb0871" category="inline-link-macro">操作模式</block>
   <block id="ce8e7e98b5597e78e8fd7d6bc94729cb" category="inline-link-macro">手动向帐户添加凭据</block>
   <block id="ca8a2087e5557e317599344687a57391" category="inline-image-macro">三个</block>
   <block id="8c163240a45cebe17c44b7359252c96a" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> 创建文件系统</block>
@@ -741,7 +732,6 @@
   <block id="c853397a437814fc2251c95bdf57909f" category="list-text">在“删除关系”对话框中，选择*Delete*。</block>
   <block id="ad1d6a18c0d830b44dfe2e6a96d2807d" category="list-text">(可选)选择*备份卷*以在删除前备份卷。</block>
   <block id="136dc09835924029e4299fa28f17233d" category="list-text">选择 * 继续 * 。</block>
-  <block id="bd0cd4a796621f54f57afed7ce044b14" category="doc">为FSx for ONTAP文件系统启用自动容量管理</block>
   <block id="37315e43d6c90fe6798b7397bf15ebae" category="list-text">在“Information (信息)”下，选择“*Automatic Capacity management (自动容量管理)”旁边的铅笔图标。当鼠标悬停在*Automatic Capacity management *行上时，下拉箭头旁边将显示铅笔图标。</block>
   <block id="c5c6c97593c886ac31454d1f10313b78" category="list-text">选择启用按钮以*启用自动容量管理*。</block>
   <block id="759c5ad2620497fe90dc2bc5e085c8c0" category="summary">启用快照以实现长期保留、这样您就可以复制特定快照以实现长期灾难恢复。</block>
@@ -1007,7 +997,6 @@
   <block id="71377237946a16cc4981e8007b83be9b" category="list-text">选择 * 启用 * 。</block>
   <block id="427c298c7e18f9930012cc8fc9c01fcd" category="summary">在FSx for ONTAP文件系统中删除不再需要的卷并释放空间。此操作不可逆。</block>
   <block id="c6e676032b22d8e639d8347f2bfe87d5" category="list-text">不可修改的文件和快照：在保留期限结束之前、无法删除包含不可修改的文件和快照的卷。</block>
-  <block id="c8b905c92d0173f2a57027886d96ccda" category="paragraph">每30分钟对FSx for ONTAP文件系统进行一次扫描、以确定是否需要添加增量存储并检查卷中的可用卷索引节点或最大文件和文件夹数、以便其计数根据配置的自动容量管理阈值增加。</block>
   <block id="c19ec77905390b48637066dbfe338f41" category="paragraph">每30分钟执行一次文件系统扫描、以确定文件系统是否需要额外容量。</block>
   <block id="db95f08d46f6135faf16036ec8d0bee1" category="paragraph">了解通过使用Amazon Elecic Block Store (EBS)、Elecic File System (EFS)和FSx for Windows File Server和FSx for NetApp ONTAP为存储工作负载节省的空间。</block>
   <block id="40042d0ee93698f3f63a7f8a3f2c9c1f" category="paragraph">手动时<block ref="a9cec068297d5b243eecd658574a7cef" category="inline-link-macro-rx"></block>、您可能需要增加IOPS分配以支持增加的文件系统容量。</block>
@@ -1128,9 +1117,6 @@
   <block id="24249670ae7cb490931a0cfb669e35fb" category="list-text">归档：复制数据以实现长期存储和合规性</block>
   <block id="6311ae17c1ee52b36e68aaf4ad066387" category="list-text">其他</block>
   <block id="181b737a36ca59661f38fe5373437f6a" category="list-text">*分层策略*：为目标卷中存储的数据选择分层策略。对于您选择的使用情形、此层策略默认为建议的层策略。</block>
-  <block id="70790f6319078f7b58ce5d5adf8b27ed" category="list-text">*阈值增加*：输入FSx for ONTAP文件系统的最大大小。</block>
-  <block id="83b9d06ffc256e2f2bbc40862d118517" category="list-text">*增量增加*：输入用于增量增加容量的百分比。</block>
-  <block id="67cfcc957e64e9b21fe6f9036930ba34" category="list-text">可选：启用自动索引节点管理、通过将索引节点(文件)数量增加到允许的限制来确保每个卷的文件容量可以纵向扩展。</block>
   <block id="db54384248c75c5896f34bcb0879b66c" category="section-title">2025年3月30日</block>
   <block id="4992f7a0d7d6ee4776bb87ff9118642c" category="section-title">用于创建文件系统的安全组详细信息</block>
   <block id="b7cc50bb665bb63168fb8d2e9eebaedc" category="paragraph">在FSx for ONTAP文件系统创建过程中会创建一个安全组。现在、您可以查看安全组详细信息、包括协议、端口和角色。</block>
@@ -1318,7 +1304,6 @@
   <block id="396928510e06818ef017921022cce2af" category="list-text">数据分层</block>
   <block id="aff279b636a9024db3b44375d88e80eb" category="list-text">计划的本地快照</block>
   <block id="887673b402c7bbc141e56321e277605f" category="list-text">远程数据复制</block>
-  <block id="2f5c8a4d7476b305dbc46e2886046e37" category="inline-link-macro">了解如何在AWS帐户中授予权限</block>
   <block id="c9e425055996f71ecfc858708d926276" category="paragraph">此建议说明了未优化配置的最佳实践和潜在陷阱。</block>
   <block id="8e369a2580b67427ac856eea6e4e3eb6" category="list-text">选择*修复*。</block>
   <block id="fe5f70c74405942514095d724e090b64" category="paragraph">如果可以选择*查看和修复*、请选择要修复的受影响卷。</block>
@@ -1422,11 +1407,7 @@
   <block id="58107709be0f763204df69a361ef7fe0" category="list-text">当启用自动容量管理时，需要一个链接来确保卷 inode 随着存储容量一起增加。</block>
   <block id="4aa37f4d9a391345e9a54c68333e2503" category="section-title">2025年6月3日</block>
   <block id="0592779b8245b0df30d4f675dd276086" category="list-text">暂停和恢复复制：您可以暂停(暂停)从源卷到目标卷的计划复制更新、然后在准备就绪后恢复复制计划。在暂停期间，源卷和目标卷变得独立，并且目标卷从只读转换为读/写。</block>
-  <block id="20f8a84eb910bbd8af91b95f380d163c" category="inline-link-macro">授予只读权限</block>
-  <block id="4548f94159b489b0c24b45e3a301c68c" category="list-text">您必须拥有具有_只读_或_读/写_权限的凭据。<block ref="2022cabf257ab03f558a69fe97667e91" category="inline-link-macro-rx"></block>(英文)</block>
   <block id="896d6bec42b8c83090c4e03345712729" category="paragraph">暂停复制关系以停止从源卷到目标卷的计划复制更新。目标卷从只读过渡到读/写。这两个卷仍会共享最新的复制快照作为新基线、以供日后重新同步时使用。</block>
-  <block id="b91aff97cc4dadbca9539fae72dedecc" category="paragraph">在 _basic_、_read-only_ 和 _read/write_ 之间进行选择<block ref="a1a436caedec06006ef5b76c82a83b04" category="inline-link-macro-rx"></block></block>
-  <block id="b31987b3ffb35fe02be38fe9d8e701f1" category="paragraph">如果您在“只读”或“读/写”模式下操作，则需要<block ref="bb44378f07a38aa36833bde05fae1b5d" category="inline-link-macro-rx"></block>其中包括选择工作负载功能（例如数据库和 AI）以及创建 IAM 策略以确保您拥有以_只读_或_读/写_模式操作的正确权限。</block>
   <block id="2423cc9c7b9124d70e9fba7ab98b53df" category="doc">全新精心设计的分析和问题修复支持</block>
   <block id="b03b65ae167fa7999b9020739117ae19" category="paragraph">FSx for ONTAP 文件系统的自动容量管理现在作为配置分析包含在精心设计的状态仪表板中。</block>
   <block id="f2be69b635c39988351f6636a52c66bd" category="list-text">自动容量管理</block>
@@ -1446,7 +1427,6 @@
   <block id="0152fea6b73cbe86540a93515bf61029" category="paragraph">以下是AWS的默认策略。对于自定义快照策略，您必须<block ref="6ac03ad394740d642419d1159fa121ff" category="inline-link-macro-rx"></block> 。</block>
   <block id="2b34fc0bead4dcf64099078fdaf86d69" category="paragraph">要启用卷自动增长，您必须关联一个链接。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>(英文)链接关联后、返回此操作。</block>
   <block id="f8e03e36604030c79d6107b800f61804" category="list-text">为了确保卷 inode 随着存储容量的增加，您必须关联一个链接。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>(英文)链接关联后、返回此操作。</block>
-  <block id="837d97ffb35ee510b7ad737132bf4645" category="paragraph">要增加卷容量，必须关联链接。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>(英文)链接关联后、返回此操作。</block>
   <block id="2c793b5b15ea565983390f5625f7b85b" category="inline-link-macro">创建并关联链接</block>
   <block id="d2daf1f2c560c48cb1e86e38214b4f9f" category="paragraph"><block ref="97608ab403cabf20e3bcac439aacde61" category="inline-link-macro-rx"></block> 或 <block ref="cd9ae14bef62d063a73930ad8837c0cf" category="inline-link-macro-rx"></block>。</block>
   <block id="facdbacecd0a382dee80b9b865bb8503" category="paragraph">要显示现有的快照策略，您必须关联一个链接。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>(英文)链接关联后、返回此操作。</block>
@@ -1876,7 +1856,6 @@
   <block id="43b56786015efd5716b466b10628735f" category="summary">NetApp Workload Factory 定期分析Amazon FSx for NetApp ONTAP文件系统配置，以确定是否存在任何问题。</block>
   <block id="25c58ec67af5ce4deef895fad9566aa0" category="paragraph">NetApp Workload Factory 定期分析Amazon FSx for NetApp ONTAP文件系统配置，以确定是否存在任何问题。当发现问题时，Workload Factory 会向您展示问题所在，并解释需要进行哪些更改以确保您的文件系统存储达到最佳性能、成本效益并符合最佳实践。</block>
   <block id="b0a0826c5a9c2b2e6c919de33e89dbfe" category="paragraph">在文件系统级别的 Workload Factory 控制台中，列出了所有 FSx for ONTAP文件系统的良好架构状态。架构良好的状态分为“问题”、“未分析”或“架构良好”。选择良好架构状态会将您重定向到文件系统内的良好架构状态选项卡，您可以在其中找到良好架构分数、配置类别以及文件系统的所有配置。</block>
-  <block id="e51fec3467af5113a01bcde93071f103" category="paragraph">为了进行完整的文件系统分析，您必须关联一个链接。链路连接让 Workload Factory 可以分析所有文件系统配置，如数据保护和性能。</block>
   <block id="93482e0e05af93f1f57953ff700f65af" category="summary">在NetApp Workload Factory 中为 FSx for ONTAP文件系统中的存储虚拟机配置和更新 Active Directory。</block>
   <block id="b517cd494437c46f189031b81fe054d1" category="list-text">从 *FSx for ONTAP* 中，选择要更新的存储虚拟机的文件系统的操作菜单，然后选择 *管理*。</block>
   <block id="55713424abf36138f2e5576255ae328d" category="list-text">从“存储虚拟机”选项卡中，选择要为其配置 Active Directory 的存储虚拟机的操作菜单。</block>
@@ -1887,7 +1866,6 @@
   <block id="cc481e5a678e1d84e7207782a75f9a18" category="summary">使用NetApp Workload Factory，您可以创建 FSx for ONTAP文件系统来添加和管理卷和其他数据服务。</block>
   <block id="9b19e4522ce9145cc667b5fcceaba11d" category="doc">在NetApp Workload Factory 中创建 FSx for ONTAP文件系统</block>
   <block id="ebb1274f47205fb0c6d6d8988b0944b0" category="paragraph">使用NetApp Workload Factory，您可以创建第一代和第二代 FSx for ONTAP文件系统来添加和管理卷和其他数据服务。</block>
-  <block id="3dea7c5f73758b891c81f43eb58f840c" category="list-text">IAM 角色的 ARN，该角色为 Workload Factory 提供创建 FSx for ONTAP文件系统所需的权限。<block ref="582f3532371a870cf4bd6406f93d26de" category="inline-link-macro-rx"></block> 。</block>
   <block id="ddf59bcbb71271f59e400a7e3d03e5e5" category="list-text">在存储磁贴中，选择*创建 FSx for ONTAP*。</block>
   <block id="cf8254c1af160e61f04022f6a69ab935" category="list-text">*AWS 凭证*：选择在 Workload Factory 中添加 AWS 凭证或继续不使用凭证。</block>
   <block id="d1b55cbdf6e8ca176a53229f6dc39afc" category="summary">您可以创建和管理链接，以在NetApp Workload Factory 帐户和一个或多个 FSx for ONTAP文件系统之间提供信任关系和连接。</block>
@@ -1895,7 +1873,6 @@
   <block id="8525c310ff1b921b05db83eb21ea6be7" category="paragraph">链接需要验证。您可以使用存储在 Workload Factory 凭证服务中的凭证或存储在 AWS Secrets Manager 中的凭证来验证链接。每个链接仅支持一种身份验证方法。例如，如果您选择使用 AWS Secrets Manager 进行链接身份验证，则以后无法更改身份验证方法。</block>
   <block id="fa1694d04e308a581d5d23c44b278491" category="list-text">自动：通过 Workload Factory 创建自动注册的链接。自动创建的链接需要用于 Workload Factory 自动化的令牌，并且 CloudFormation 代码是短暂的。最多只能使用六个小时。</block>
   <block id="d6305b17d1542122d978c37db15fd5d3" category="inline-link-macro">在 Workload Factory 中添加凭证</block>
-  <block id="1858e6285c0971e6fe3339eff4e673ac" category="list-text">您需要在 Workload Factory 中至少有一个 FSx for ONTAP文件系统。要发现或创建 FSx for ONTAP文件系统，您必须拥有一个具有 FSx for ONTAP实例权限的 AWS 账户，并且<block ref="a253a365fdf90416889360c06d5b56a2" category="inline-link-macro-rx"></block>具有存储管理的_只读_或_读/写_权限。</block>
   <block id="3b6158401b21fd0fabd6f75b8d9c8c23" category="list-text">对于 Workload Factory 控制台：端口 443 (HTTPS)</block>
   <block id="e07190df7367fb116bdd913bfce43fbe" category="paragraph">使用 CloudFormation 在 Workload Factory 内自动创建并注册链接。</block>
   <block id="40be05127ecd2439f7ee7256f055873a" category="list-text">从 *FSx for ONTAP* 中，选择要关联链接的文件系统的操作菜单，然后选择 *关联链接*。</block>
@@ -1979,9 +1956,6 @@
   <block id="c39b3cbd986af96ef05b9724f0b92e6b" category="summary">启用卷自动增长以让 Workload Factory 为您管理卷容量。您可以随时禁用它。</block>
   <block id="467fbaad5c04b9212fefde208c6fce39" category="doc">在 Workload Factory 中启用卷自动增长</block>
   <block id="c7cb41d0ae0beeca525b094df6834ee5" category="list-text">从卷选项卡中，选择要修改的卷的操作菜单。</block>
-  <block id="209ff7e6ecbe3110db7702a1025e561e" category="summary">启用此功能后，Workload Factory 可以根据容量需求随时间的变化自动向 FSx for ONTAP文件系统添加增量存储。</block>
-  <block id="02d33101545a159bdb205d55a080cd8f" category="paragraph">启用自动容量管理后， NetApp Workload Factory 可以根据容量需求随时间的变化自动向 FSx for ONTAP文件系统添加增量存储。此外，启用此功能无需手动监控容量，并可降低影响应用程序数据读写的风险。</block>
-  <block id="31612d3d4964dbcf536191df411871dc" category="list-text">您必须拥有 Workload Factory 中具有读/写权限的凭据才能完成此任务。</block>
   <block id="700ddd4e501b4b63ce13f0a4091d97c3" category="list-text">从 *FSx for ONTAP* 中，选择文件系统的操作菜单以启用自动容量管理。</block>
   <block id="a2f3bd55649066a9bad9a42a8df63f08" category="paragraph">在NetApp Workload Factory 中，您可以启用快照进行长期保留，这样您就可以复制特定快照以进行长期灾难恢复。</block>
   <block id="116537ad3a8e9d253ab6c2cf9b1375c4" category="list-text">从 *FSx for ONTAP* 中，选择要更新的文件系统的操作，然后选择 *管理*。</block>
@@ -1993,7 +1967,6 @@
   <block id="4642e285e7941ecca45c4f489b87f287" category="list-text">在存储图块中，选择 *探索节省*，然后选择 *Amazon Elastic Block Store (EBS)*。</block>
   <block id="5235f3c9988274bcb10c4b2ad1e8abc2" category="list-text">在存储磁贴中，选择 *探索节省*，然后选择 * Amazon FSx for Windows File Server*。</block>
   <block id="65fa6947c889eb884d3db5954face1ff" category="list-text">在存储磁贴中，选择 *探索节省*，然后选择 *Amazon Elastic File System (EFS)*。</block>
-  <block id="fa43e9d68125b28fd0b5f3f2a0f08266" category="paragraph">为了使 Workload Factory 能够检测您 AWS 账户中的 Amazon Elastic Block Store (EBS)、Elastic File System (EFS) 和 FSx for Windows File Server 存储环境，请确保<block ref="13ae78c09f3df6bcab328a886064dd51" category="inline-link-macro-rx"></block>在您的 AWS 账户中。</block>
   <block id="32ded30570ff532ec17d74df7689f0d7" category="list-text">从存储菜单中，选择*探索节省*。</block>
   <block id="08b129d5d0d4acb7990365d6ce9f2c5f" category="list-text">*选定的文件系统*</block>
   <block id="11ed0b3202d6d086758a8d450bf14383" category="list-text">在自动化模式下，您可以直接从 Workload Factory 部署 FSx for ONTAP文件系统。您还可以从 Codebox 窗口复制内容并使用其中一种 Codebox 方法部署系统。</block>
@@ -2019,8 +1992,6 @@
   <block id="f899a571558dc3581836d9ffe17218ed" category="paragraph">链接连接允许 Workload Factory 扫描性能、数据保护和配置方面的问题。<block ref="f06ee96e93460df1397f1b3b70044a3e" category="inline-link-macro-rx"></block>对您的文件系统资源进行最全面的分析。</block>
   <block id="efa540b6730dc694889e9447404ff68a" category="paragraph">您可以选择查看文件系统配置问题的建议，并在 Workload Factory 控制台中修复存储问题。</block>
   <block id="73b9ca32e75f36a5247f70e0ac6f7034" category="list-text">可靠性：SSD 容量阈值、计划的本地快照、FSx for ONTAP备份、远程数据复制以及长期保留的数据可靠性</block>
-  <block id="e05ad8318dcdb75b0f56aa3a9ae7a086" category="list-text">安全性： NetApp自主勒索软件防护与人工智能 (ARP/AI)</block>
-  <block id="fcb4f17380114485bf72087c9adb81e3" category="list-text">卓越运营：存储效率、自动容量管理和卷文件容量利用率阈值</block>
   <block id="24ef9c1deb4b27b9f21ac5bafe0b447a" category="list-text">成本优化：存储效率和数据分层</block>
   <block id="f4620ec86c292b6ceff91a8418771488" category="list-text">修复过程可能会导致实例停机或服务中断。在选择修复配置问题之前，请务必仔细查看每条建议。</block>
   <block id="bdcff0916b9de421b3f836810688eb67" category="list-text"><block ref="f06ee96e93460df1397f1b3b70044a3e" category="inline-link-macro-rx"></block>对您的文件系统资源进行最全面的分析。</block>
@@ -2032,12 +2003,7 @@
   <block id="29c336c9b670f37c678bc693dcbf0271" category="list-text">对于一个卷：选择操作菜单，然后选择*重新激活卷*。</block>
   <block id="97ab4fe470265bac6bd7eeb0ab6bda75" category="doc">在 Workload Factory 中调整文件系统容量</block>
   <block id="e916aa8237833ef72c75def81e289920" category="paragraph">或者，您可以<block ref="2bbbc5acd5fd256837600f63916b0e57" category="inline-link-macro-rx"></block>因此 Workload Factory 会为您管理文件系统容量。</block>
-  <block id="95ac9df142a7e6c7792a69682f381505" category="summary">随时手动增加NetApp Workload Factory 中卷的卷容量。</block>
-  <block id="1e243240457d81990143c1a64eae70f5" category="doc">增加NetApp Workload Factory 中的卷容量</block>
-  <block id="fc9ec781843f39a08c97d2ebfe397bfa" category="paragraph">在NetApp Workload Factory 中随时手动增加卷的卷容量。</block>
   <block id="39b152c5585fc0bf22a04de0cc07dff1" category="paragraph">或者，您可以<block ref="e5ea0961d6c7f5be0b804e74d995de2b" category="inline-link-macro-rx"></block>让 Workload Factory 为您管理卷容量。</block>
-  <block id="cc478f41af3ed4f56398aad5a69f46c3" category="list-text">从“卷”选项卡中，选择要增加容量的卷的操作菜单。</block>
-  <block id="ae026ff2589ac9280b905644404ee447" category="list-text">选择*增加*以应用更改。</block>
   <block id="2ee765f12c6b1a8ffcd478e2ea34f09b" category="doc">在NetApp Workload Factory 中初始化复制关系</block>
   <block id="ddc0042b887590b7a2423362f6c3455b" category="paragraph">初始化源卷和目标卷之间的复制关系，以传输NetApp Workload Factory 中的快照和所有数据块。</block>
   <block id="e7fac383dedc147790819a6b6ec1ca87" category="list-text">在复制关系选项卡中，选择要初始化的复制关系的操作菜单。</block>
@@ -2150,7 +2116,6 @@
   <block id="3d784fb83da69a092542ad97e84229a1" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block>登录工作负载工厂</block>
   <block id="e3f4d5b3a0d16b68c0f95c7031bbab0f" category="inline-link-macro">在 Workload Factory 上创建一个帐户</block>
   <block id="21f5ea0bd2c3e06693357df598869216" category="paragraph">你需要<block ref="9144f2d687cdfc71041a1a85068f8ab7" category="inline-link-macro-rx"></block>和<block ref="10204cc30f2f30795b6ce82a21da7b1a" category="inline-link-macro-rx"></block></block>
-  <block id="fad2f7a49be756f98f3e7a34ef811e09" category="paragraph">如果您选择以基本模式操作，则无需再进行任何操作。您可以开始使用 Workload Factory for FSx for ONTAP复制部分完成的代码示例。</block>
   <block id="8fd935558171bd50056871ef9ee7bd05" category="inline-link-macro">工作负载工厂控制台</block>
   <block id="42417c07633018b12e0946c06afcf181" category="paragraph">您将创建一个 FSx 文件系统来开始在 Workload Factory 中管理您的存储和 FSx for ONTAP资源。在<block ref="ed002915dbbbf90a20b3d8fdf4cc2390" category="inline-link-macro-rx"></block>在存储中，选择*创建文件系统*。<block ref="1f3b8beb11bf530a33922b2af302faf4" category="inline-link-macro-rx"></block> 。</block>
   <block id="189c3af86554306ea0fe0a97bba45b30" category="list-text">*学习模式*：当您启用 ARP/AI 时，它以_学习模式_运行。在学习模式下，FSx for ONTAP文件系统根据分析区域（熵、文件扩展类型和文件 IOPS）开发警报配置文件。在文件系统以学习模式运行 ARP/AI 足够时间以评估工作负载特征后，Workload Factory 会自动切换到 ARP/AI 到_主动模式_并开始保护您的数据。</block>
@@ -2242,4 +2207,160 @@
   <block id="28a2c493e9a663d617e582302e1bcf28" category="inline-link-macro">BlueXP workload factory的通知</block>
   <block id="165f0ade723f657a5d7981bfecbfc75a" category="paragraph"><block ref="165f0ade723f657a5d7981bfecbfc75a" category="inline-link-macro-rx"></block></block>
   <block id="419085fd5f19a39001679a5f52b0acdf" category="list-text">在“存储”中，选择“转到存储”</block>
+  <block id="e36df438b5b93dceba2c7403d4b29005" category="doc">缓存卷管理</block>
+  <block id="97da28c7fc13e427cbb28f833b8e7e6e" category="paragraph">您可以在 Workload Factory 控制台中执行以下缓存卷管理操作：</block>
+  <block id="705987d425caa32725844671dba5db96" category="list-text">编辑缓存名称</block>
+  <block id="fb7f41847231da20e771064f5b566df4" category="list-text">增加缓存卷的容量</block>
+  <block id="64fe5cd33226afdb2a1244ea9e67be19" category="list-text">编辑缓存卷的挂载路径或导出策略</block>
+  <block id="322c847779d1746b4e7d66ee05dcefcd" category="list-text">更改缓存卷的缓存方法或模式</block>
+  <block id="13c47466230be92e5e3aa6588809aeac" category="list-text">预先填充缓存卷</block>
+  <block id="52fc772a9179443c2c2ba75c94518e8f" category="list-text">删除缓存卷</block>
+  <block id="7826298c658de05b150f4b10fc144ea2" category="inline-link-macro">管理缓存卷</block>
+  <block id="9223fd31c285815a2492912ef49bdbbb" category="paragraph"><block ref="9223fd31c285815a2492912ef49bdbbb" category="inline-link-macro-rx"></block></block>
+  <block id="7c0216aac73557cb5845492aebaeab8a" category="section-title">可自动进行 inode 管理</block>
+  <block id="31dcfbe8cd69ef4085402c0f104858cd" category="paragraph">您可以启用自动 inode 管理，而无需启用自动容量管理。</block>
+  <block id="71e9d4ada3104308778ade0ba22de28d" category="inline-link-macro">启用自动 inode 管理</block>
+  <block id="c38d477b997e2c8216a0b40479691f29" category="paragraph"><block ref="c38d477b997e2c8216a0b40479691f29" category="inline-link-macro-rx"></block></block>
+  <block id="22fcde27b4672d89a21e10e9be49cdee" category="section-title">容量和 inode 使用情况的阈值警告设置</block>
+  <block id="cc72208ba5327054f030d802d324477c" category="inline-link-macro">NetApp Workload Factory通知服务</block>
+  <block id="f1ff66cdf2af497189be6ebd8f6e5fcd" category="paragraph">容量和 inode 使用情况均有阈值警告。您可以在启用自动容量或 inode 管理时设置这些阈值。要使用此设置，您需要使用以下方式配置通知：<block ref="52b0820c6dc6b8d67591785df8b1a634" category="inline-link-macro-rx"></block> 。</block>
+  <block id="76170a72d0c8b98ef012c3b57dc6dbe8" category="section-title">容量减少可用</block>
+  <block id="26b07c7813c6a780d507b42d999b4792" category="paragraph">您可以在NetApp Workload Factory中减小 NFS 和 SMB/CIFS 卷的大小。此功能允许您减小不再需要的卷的大小，从而更好地管理存储资源。</block>
+  <block id="fcbcb93b74f64a75b2b710bb8328b4e0" category="inline-link-macro">减少体积</block>
+  <block id="e1b7073be30c28b07f5c847e0a1b56ed" category="paragraph"><block ref="e1b7073be30c28b07f5c847e0a1b56ed" category="inline-link-macro-rx"></block></block>
+  <block id="f09c98d35d5b89f3f833636d36ca3283" category="section-title">增强型 FSx for ONTAP资源状态</block>
+  <block id="9d017083ba2041742b1b85bbb1a846c4" category="paragraph">Workload Factory 增强了“配置错误”资源状态，使其包含对资源实际问题的解释。</block>
+  <block id="48707dc4d2e44fe9cf85834f27b932e8" category="paragraph">Workload Factory 会分析您的 FSx for ONTAP文件系统，以识别以下配置：</block>
+  <block id="04cc0a87491bd184b66866438266882a" category="list-text">卷利用率接近满：检查是否有任何卷已使用 80% 或以上的文件容量。这有助于您确定可能需要额外产能的销量。</block>
+  <block id="39e165c09308fcda245787c3a6d7bf78" category="list-text">未经授权访问卷：检查是否可以使用 NFS 或 SMB/CIFS 挂载路径访问 iSCSI 卷，并允许您删除对卷的未经授权访问，以避免安全风险。</block>
+  <block id="bfd11f24993c810a26cdef233ebbdfb6" category="section-title">Workload Factory for Storage 的权限变更</block>
+  <block id="bdc39f4be3514cc2cad7e4ca6cba0988" category="paragraph">Workload Factory 可以更清晰地说明执行特定操作所需的权限，并允许您精细地选择所需的权限。添加凭据时，您将有三个权限选项可供选择，而不是之前的权限模型（_只读_和_读/写_）。新的权限模型将权限策略分解如下：</block>
+  <block id="f9113d285c58dd831a3240c5b41a6f84" category="list-text">查看、规划和分析：查看 FSx for ONTAP文件系统，了解系统运行状况，获取系统架构完善的分析，并探索节省成本的方法。</block>
+  <block id="a45538554e2c413a5e22df853abb4d27" category="list-text">_操作和修复_：执行操作任务，例如调整文件系统容量和修复文件系统配置问题。</block>
+  <block id="036d0224d85e6a18c7e85f034ace65c1" category="list-text">文件系统创建和删除：创建和删除ONTAP文件系统和存储虚拟机的 FSx。</block>
+  <block id="c1c8be0a907c363e6506c96d16870672" category="paragraph">添加凭据时，您可以根据要授予 Workload Factory 的访问级别，选择一个或多个权限策略。</block>
+  <block id="b20b01e02162a68002ca1747d1bd3c10" category="inline-link-macro">Workload Factory 权限参考</block>
+  <block id="444b052e3d1349e221d4ceb42e6c1cf7" category="paragraph"><block ref="444b052e3d1349e221d4ceb42e6c1cf7" category="inline-link-macro-rx"></block></block>
+  <block id="c4a6983274098ca737ffda27862010ea" category="section-title">FSx 的ONTAP网络保险库支持</block>
+  <block id="4a3b498d2b39740971d75ebbab434a8f" category="paragraph">您可以使用 FSx for ONTAP作为网络保险库架构中的源或目标来创建网络保险库。网络保险库为存储关键数据提供安全隔离的环境，保护数据免受勒索软件和其他网络威胁的侵害。</block>
+  <block id="4bc6d1e741e4c817c4985300ec66b77f" category="inline-link-macro">使用 FSx 为ONTAP设置网络保险库</block>
+  <block id="545bd81803e837dd73a7bceb1a798b8a" category="paragraph"><block ref="545bd81803e837dd73a7bceb1a798b8a" category="inline-link-macro-rx"></block></block>
+  <block id="443d77d8a4d29940f1da82d57cf91d7b" category="summary">您可以随时在NetApp Workload Factory中手动调整卷的容量。</block>
+  <block id="9506827488d3f10bebcc3d5a3e5f83f8" category="doc">在NetApp Workload Factory中调整卷容量</block>
+  <block id="2d6396444f6d2c33e9a33bc98d74a44b" category="paragraph">随时可通过NetApp Workload Factory控制台手动调整卷的容量。</block>
+  <block id="fa091ab3e96a1d7a44f1f7c711636fb7" category="paragraph">您可以通过增加或减少卷的已配置大小来调整卷容量。下表显示了不同体积类型的最小和最大体积尺寸：</block>
+  <block id="fc18634852d4299cd5f8c7ad55ddefbe" category="cell">卷类型</block>
+  <block id="9dba50d3a2c2f26daddbf9d144c49772" category="cell">大小上限</block>
+  <block id="acfc7717e24258e6355ba4036bf1654d" category="cell">最小大小</block>
+  <block id="7af205ff6788e684be8673a5559a8399" category="cell">20 MiB</block>
+  <block id="4dd4655034851cefb46869bef690cc22" category="cell">300 TiB</block>
+  <block id="b5f7116243418c9289af58601bd22424" category="cell">800 GiB</block>
+  <block id="9010e525ec80d0fdea3d56191f64ce39" category="cell">2 PiB</block>
+  <block id="08842901b516656f4ce72eb7f4f5c0d1" category="paragraph">对于 iSCSI LUN，增加卷的大小也会增加主机 LUN 的大小。增加卷容量后，请按照主机操作系统提供的步骤查找 LUN 的新大小并扩展 LUN 的文件系统。</block>
+  <block id="f4d84340dd6fee1664a29cabc2ba8c39" category="paragraph">仅 NFS 和 SMB/CIFS 卷支持减小卷大小。</block>
+  <block id="2880a60b72532c629f0cc885860ca8e5" category="paragraph">要调整音量容量，必须关联一个链接。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>。链接关联后，返回此操作。</block>
+  <block id="57730f251586648892ae3bf2485f043e" category="list-text">在“卷”选项卡中，选择要调整容量的卷的操作菜单。</block>
+  <block id="4e54161de298fea40a1792b1351b1789" category="list-text">选择*基本操作*，然后选择*调整容量*。</block>
+  <block id="4fbd17d05637f9e5fed62de5f827a895" category="list-text">在“调整卷容量”对话框中，设置“已配置容量”和单位。</block>
+  <block id="6a6abbaa1bbd0c301b070b7a1615b31d" category="list-text">选择“调整”以应用更改。</block>
+  <block id="25e79c779a2e15c96afc5b7555e58a60" category="list-text"><block ref="25e79c779a2e15c96afc5b7555e58a60" category="inline-link-macro-rx"></block></block>
+  <block id="018b5169ae450db66c30a726fbd7e178" category="inline-link-macro">在工作负载工厂中重新平衡容量</block>
+  <block id="6ab1a086826b377aebef1904415ab23c" category="list-text"><block ref="6ab1a086826b377aebef1904415ab23c" category="inline-link-macro-rx"></block></block>
+  <block id="ccfc2060f8f316d0ccd33b0289111a38" category="paragraph">要进行完整的文件系统分析，必须执行以下操作：</block>
+  <block id="f95f58d64ce974b5c7aac839966c9c9b" category="list-text">关联链接。链路连接使 Workload Factory 能够分析所有文件系统配置，例如数据保护和性能。</block>
+  <block id="64aefaaa1ffe9f3b50d13850f89ff59a" category="list-text">在您的 AWS 账户中授予_查看、规划和分析_权限。</block>
+  <block id="582f3532371a870cf4bd6406f93d26de" category="paragraph"><block ref="582f3532371a870cf4bd6406f93d26de" category="inline-link-macro-rx"></block></block>
+  <block id="7335bfe9e44aaa30f676443b169c4028" category="summary">了解NetApp网络保险库以及如何实施网络保险库架构，以保护您的数据免受勒索软件和网络威胁的侵害。</block>
+  <block id="82f3873908ce87878ae918ed0d960883" category="doc">使用网络安全保险库保护您的数据。</block>
+  <block id="c20c451e413ebde26a765cbbc0c15afc" category="paragraph">网络保险库卷是一个隔离的、安全的存储位置，用于存储数据的备份副本，保护数据免受勒索软件攻击和其他网络威胁。作为创建保险库的一部分，您将创建一个网络保险库卷，禁用所有客户端协议，并在源卷和网络保险库卷之间建立复制关系，并在网络保险库卷上创建不可变快照。</block>
+  <block id="d825eb03b1924c3d41f95d2810515203" category="paragraph-title">什么是网络保险库？</block>
+  <block id="2712d3844c4c3f6fae0cd10b9d646084" category="paragraph">网络保险库是一种特定的数据保护技术，涉及将关键数据存储在与主要 IT 基础设施分开的隔离环境中。</block>
+  <block id="61e7cd4643e82d4dae37197f961a9d95" category="paragraph">网络金库是一个“物理隔离”的、不可更改的、不可抹除的数据存储库，它不受影响主网络的威胁（例如恶意软件、勒索软件，甚至是内部威胁）的影响。利用不可更改且不可删除的快照可以实现网络保险库。</block>
+  <block id="bb393d57385c8b74901eb02a39ed13dc" category="paragraph">使用传统方法的气隙备份涉及创建空间并物理分离主媒体和辅助媒体。通过将媒体移出现场和/或切断连接，不良行为者就无法访问数据。这可以保护数据，但会导致恢复时间变慢。</block>
+  <block id="b84e00df342c7bef670fd67bcf1093fc" category="paragraph-title">FSx for ONTAP网络保险库</block>
+  <block id="75ef547803457d883c1ab7eec9dd8c12" category="paragraph">支持将Amazon FSx for NetApp ONTAP用作网络安全保险库的源和目标。</block>
+  <block id="b672f52ade975e864ae6b58722c03689" category="paragraph-title">实施</block>
+  <block id="e8e8dcbe97676a6fe5760aae822c6e61" category="paragraph">Workload Factory 提供创建网络安全架构方面的帮助。当您联系NetApp表示有兴趣实施网络安全保险库后， NetApp专家会与您联系，讨论您的需求。</block>
+  <block id="9577a31ea32e2c5b58950150698f2a07" category="paragraph">请发送电子邮件至ng-FSx-CyberVault@netapp.com以开始使用。</block>
+  <block id="a9541230016fd9f6de7895f1a32b75fb" category="inline-link-macro">ONTAP网络保险库文档</block>
+  <block id="eac9e4c62fd872313a45023cb8fd31ec" category="paragraph">有关网络保险库以及如何搭建此架构的更多信息，请参阅……<block ref="5ee11ce3f9bfc218d47e808a1ac01a55" category="inline-link-macro-rx"></block> 。</block>
+  <block id="18e03b41df425134308f1975a1972f8e" category="list-text">具有创建和删除文件系统权限的凭据，用于创建ONTAP文件系统的 FSx。<block ref="582f3532371a870cf4bd6406f93d26de" category="inline-link-macro-rx"></block>。</block>
+  <block id="4c4658c6e6bcc607d3d1e8c00d38f9b6" category="list-text">Workload Factory 中至少需要一个 FSx for ONTAP文件系统。要发现 FSx for ONTAP文件系统，您必须拥有一个具有 FSx for ONTAP实例权限的 AWS 账户，并且<block ref="a253a365fdf90416889360c06d5b56a2" category="inline-link-macro-rx"></block>具有存储管理的_查看、规划和分析_权限。</block>
+  <block id="8763b09bbcb06ec11c1d0d3331ba74f4" category="paragraph"><block ref="8763b09bbcb06ec11c1d0d3331ba74f4" category="inline-link-macro-rx"></block></block>
+  <block id="05fbfa43ca52b70a735d4a870f0f8f6d" category="inline-link-macro">调节音量容量功能</block>
+  <block id="8f764b06860786fe5978951124c18450" category="paragraph">您也可以随时使用以下方法手动增加卷的容量：<block ref="e78173f6bdea353abf41de50dd00987d" category="inline-link-macro-rx"></block> 。</block>
+  <block id="ad5ba1f7c14b2135486dafc0e40196ac" category="summary">启用此功能后，Workload Factory 可以根据容量需求随时间的变化，自动向 FSx for ONTAP文件系统添加增量存储或 inode。</block>
+  <block id="251a3ffdc6a0761b01f0ace790d97c6d" category="doc">启用文件系统的自动容量和 inode 管理</block>
+  <block id="80d103a4c479f8e38dc6456e91cb1909" category="paragraph">启用自动容量和 inode 管理后， NetApp Workload Factory可以根据容量需求随时间的变化，自动向 FSx for ONTAP文件系统添加增量存储或 inode。此外，启用此功能后，就无需手动监控容量和 inode 了。</block>
+  <block id="296d96c707449b84b0b4b3f02a91bc6c" category="paragraph">每 30 分钟对 FSx for ONTAP文件系统进行一次扫描，以确定是否需要添加增量存储，并检查可用的卷 inode、卷中文件和文件夹的最大数量，以便根据配置的自动容量管理阈值增加其计数。</block>
+  <block id="e1d481cddc46ccb42fc6f59c020f5ce1" category="paragraph">启用自动容量管理，自动增加存储空间，直至达到 FSx for ONTAP文件系统的最大容量限制。</block>
+  <block id="7950e88c4d4bc489666a4af446a7d303" category="inline-link-macro">使用_查看、规划和分析_权限策略授予凭据</block>
+  <block id="37d3a1150da64094460d233181c8c83e" category="list-text">你必须<block ref="1773ab1fe4aa6a3e5fc61d86a29970f0" category="inline-link-macro-rx"></block>在 Workload Factory 中完成此任务。</block>
+  <block id="650ad6fb48eb81eacfa521124d1dc357" category="list-text">*警告阈值*：将警告阈值设置为低于触发工作负载工厂通知服务的阈值增加值。默认值为 70%。</block>
+  <block id="8ec47943fca737be2b087573534a2057" category="inline-link-macro">启用工作负载工厂通知服务</block>
+  <block id="60c52248134394a776265c66248137a8" category="paragraph">只有在您满足以下条件时，警告阈值设置才可用：<block ref="e500d492a56da387ccd67dac5045b171" category="inline-link-macro-rx"></block> 。</block>
+  <block id="4e88714beba53ff4a9a4132c11a62597" category="list-text">*阈值增加*：输入 FSx for ONTAP文件系统的最大百分比增加值。默认值为 80%。</block>
+  <block id="d12b629d9480f34a15d23dec455a9519" category="paragraph">这是工作负载工厂触发作业以增加容量的阈值。例如，如果文件系统达到 80% 的容量，则 Workload Factory 将增加容量。</block>
+  <block id="6e90c3bb0026fc33efcead3220266e2d" category="list-text">*增量增加*：输入增量增加产能的百分比。默认值为 10%。</block>
+  <block id="d978b96a75b32e336ed3b9754090bb19" category="paragraph">这是每次达到阈值时我们增加产能的百分比。例如，如果文件系统已使用 80%，并且增量设置为 10%，则 Workload Factory 会将容量增加 10%。</block>
+  <block id="91702a6000d20d7ffbea5fe3ad5f99fa" category="paragraph">启用自动 inode 管理，确保每个卷的文件容量通过增加 inode（文件）的数量来扩展，直至达到允许的限制。</block>
+  <block id="e5896468cb243b3cd2e0e75b0ca7173d" category="admonition">*Terraform 用户*：Terraform 有一个限制，要求所有操作都必须在 Terraform 内部完成。  Terraform 不支持 inode 管理，但您可以在 Workload Factory 控制台中启用自动 inode 管理。</block>
+  <block id="0a0054f32c5856b9e4d1227d3aff2de3" category="list-text">要自动管理卷 inode，必须关联一个链接。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>。链接关联后，返回此操作。</block>
+  <block id="2dc6db0702897622d8829494f1d3b37f" category="inline-link-macro">启用工作负载工厂通知服务</block>
+  <block id="8166fa3c69aeeb513514d7132a126f1d" category="list-text">可以通过设置_警告阈值_来设置自动 inode 管理，该阈值会触发 Workload Factory 通知服务的通知。要使用此功能，您必须<block ref="92ba022a113ba350cc22eb4ba703843c" category="inline-link-macro-rx"></block>第一的。</block>
+  <block id="6e5f35050440735f1d3c74313b13121b" category="list-text">在 *FSx for ONTAP* 中，选择文件系统的操作菜单以启用自动 inode 管理。</block>
+  <block id="d1f7d48753d7c7d412198e99284c77c4" category="list-text">在“信息”下，选择“自动 inode 管理”旁边的铅笔图标。当鼠标悬停在“自动 inode 管理”行上时，下拉箭头旁边会出现铅笔图标。</block>
+  <block id="a05c0bd49dd6b14a547123422c9700bf" category="list-text">在“自动 inode 管理”对话框中，提供以下信息：</block>
+  <block id="ba34a0ebba4d6c09a70fb5064686c0d0" category="list-text">选择启用按钮以*启用自动 inode 管理*。</block>
+  <block id="0b346179a77894b7baa7b4fb9ec8a20b" category="paragraph">或者，禁用该功能。如果需要增加 inode 的数量，必须先禁用自动 inode 管理。</block>
+  <block id="589d329d581786f947071a398183e0b2" category="list-text">*阈值增加*：输入每个卷的 inode（文件）数量的最大百分比增加量。默认值为 80%。</block>
+  <block id="304c69e0afb53f4cc8629f5fbc0057bb" category="list-text">*增量增加*：输入增量增加 inode（文件）数量的百分比。默认值为 10%。</block>
+  <block id="3d85ed6e3650fdb2521f4d9f31df975f" category="paragraph">每 30 分钟进行一次文件系统扫描，以确定每个卷是否需要额外的 inode（文件）。</block>
+  <block id="af7c77855745c2192ad309cfc11ed68c" category="inline-link-macro">授予_查看、规划和分析_权限</block>
+  <block id="00a34d80b9c8f1d9c82e222ff89f622f" category="paragraph">为了让 Workload Factory 能够检测到您 AWS 账户中的 Amazon Elastic Block Store (EBS)、Elastic File System (EFS) 和 FSx for Windows File Server 存储环境，请确保：<block ref="74a62493240df6cc0643a248f282a25a" category="inline-link-macro-rx"></block>在您的 AWS 账户中。</block>
+  <block id="c72cfdac6d94ccc9f462d05de25df6f6" category="list-text">安全性： NetApp自主勒索软件防护（具备 AI 功能，即 ARP/AI）和卷未经授权访问防护</block>
+  <block id="191b6288ea89d5cc022ea3d3d9ed8eeb" category="list-text">卓越运营：自动容量管理、卷文件容量利用率阈值以及卷利用率接近饱和</block>
+  <block id="79e27ec6fe4e85288757fae779bab815" category="inline-link-macro">授予 _操作和修复_ 权限</block>
+  <block id="052dbb930400a0ed10fd9a2369d6e91b" category="list-text">你必须<block ref="31bad9d191bee3fabcae484ca4efec82" category="inline-link-macro-rx"></block>在您的 AWS 账户中。</block>
+  <block id="8397e16109313045973558b01bfb9915" category="list-text">iSCSI 卷不支持减小卷大小。</block>
+  <block id="00e4e6045ee76f2899377d5370d56a36" category="summary">根据需要，在NetApp Workload Factory中管理 FSx for ONTAP文件系统的缓存卷。</block>
+  <block id="77202d5f206e842a17a7c71e4612af8c" category="doc">管理 FSx for ONTAP文件系统的缓存卷</block>
+  <block id="6d6084417b916dd2a1b60499b04dad76" category="paragraph">通过NetApp Workload Factory控制台，您可以管理 FSx for ONTAP文件系统的缓存卷。管理任务包括编辑缓存名称、增加缓存容量、编辑导出策略、更改缓存方法、预填充缓存以及在不再需要时删除缓存卷。</block>
+  <block id="c0c5d63ff1a1fe8bf6fe4f26c7af37c8" category="paragraph">您无需离开NetApp Workload Factory控制台即可管理与缓存关系关联的缓存卷。</block>
+  <block id="fe39e5a751393e260c8760e626d46663" category="list-text">您必须关联一个链接来管理缓存卷和关系。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>。链接关联后，返回此操作。</block>
+  <block id="2923b8d05b469dec564ede3ae38cab32" category="list-text">您必须拥有一个已存在的缓存卷才能进行编辑。</block>
+  <block id="9741f5c69b66c193b24db8c6b064d449" category="section-title">编辑缓存卷名称</block>
+  <block id="dd9dbeec9d1d47721414517e8ceb1003" category="paragraph">您可以随时更改现有缓存卷的名称。</block>
+  <block id="f56869ff02af98281054d2801d07131c" category="list-text">从存储菜单中，选择 FSx for ONTAP。</block>
+  <block id="71286a348d305558651d594ffb0b7b61" category="list-text">在 FSx for ONTAP中，选择包含缓存卷的文件系统的操作菜单，然后选择“管理”。</block>
+  <block id="91c9dd0465d889c4cd7dcd9d00c3cff9" category="list-text">从文件系统概览中，选择“缓存关系”选项卡。</block>
+  <block id="704333b75cf6acba4392d7ad809dfb1d" category="list-text">选择要修改的缓存卷的操作菜单，然后选择“编辑缓存名称”。</block>
+  <block id="19b0e87ba7ed54521f11cd8489003533" category="list-text">在“编辑缓存名称”对话框中，输入缓存卷的新名称，然后选择“应用”。</block>
+  <block id="f25e64c5391d2a162a25bbb460a7f886" category="paragraph">如果需要增加现有缓存卷的容量，您可以随时进行增加。</block>
+  <block id="dc97b6b6257816c273cb4b23c4be1923" category="list-text">选择要修改的缓存卷的操作菜单，然后选择“增加缓存容量”。</block>
+  <block id="1a6d17f42b3c06ad6ef47079b2b7d2bf" category="list-text">在“增加缓存容量”对话框中，按百分比或单位输入缓存容量的新值，然后选择“应用”。</block>
+  <block id="d34bce37c8d5cf5a3814d3185867c80e" category="section-title">编辑缓存卷导出策略</block>
+  <block id="3591b370a6ba1fccb018417aa452f30e" category="paragraph">更改现有缓存卷的挂载路径或导出策略。</block>
+  <block id="19bb8592aa45eac21fc3a0ff7043f17f" category="list-text">选择要修改的缓存卷的操作菜单，然后选择“编辑导出策略”。</block>
+  <block id="a23d30d9dbd5b5de5e3ee67a9ded5242" category="list-text">在“编辑导出策略”对话框中，更改挂载路径或选择不同的导出策略来分配给缓存卷。</block>
+  <block id="7f7e450958b0a4653cfea4189d6ed995" category="section-title">更改缓存卷的缓存方法</block>
+  <block id="3e5271b8379ddcabf8c8d8673b311437" category="paragraph">将现有缓存卷的缓存方法或模式更改为写回或写绕。</block>
+  <block id="cabfeb9da681d3ace757106e0813cd8f" category="inline-link-macro">写入模式</block>
+  <block id="38fdf5539761bcae25e0fc465e40d97f" category="paragraph">详细了解<block ref="956f54ba6b1d39caea9bd76790adf811" category="inline-link-macro-rx"></block>。</block>
+  <block id="a3e52bd74056f56571702f1d78113945" category="list-text">选择要修改的缓存卷的操作菜单，然后选择“更改缓存方法”。</block>
+  <block id="0ec532fce8b15ab5badcbf1146af5bef" category="list-text">在“更改缓存方法”对话框中，选择新的缓存方法，然后选择“应用”。</block>
+  <block id="aef7f37d9224e6cdc84773fd0752841c" category="paragraph">在请求缓存数据之前，先用源卷中的数据预先填充缓存卷，以加快对缓存数据的访问速度。</block>
+  <block id="03b8e2cae40fcbf80cad40862d5d0025" category="list-text">选择要修改的缓存卷的操作菜单，然后选择“预填充缓存”。</block>
+  <block id="d451f44672ea0a78b72fd7dd794c481e" category="list-text">在“*预填充缓存*”对话框中，指定要用于预填充的数据集路径，然后选择“应用”。</block>
+  <block id="0eb48cd23b461a05c76d8f751c427193" category="paragraph">删除缓存卷会删除源卷和缓存卷之间的缓存关系。删除后，缓存数据将不再可用。</block>
+  <block id="9bed233fd25bae0dceb43f72350d951b" category="list-text">选择要删除的缓存卷的操作菜单，然后选择“删除缓存卷”。</block>
+  <block id="c150fc012517f3e827497fc4aa6b609a" category="list-text">在“删除缓存卷”对话框中，确认删除，然后选择“删除”。</block>
+  <block id="51bf12717b370e03e3310859db67cac6" category="inline-link-macro">权限策略</block>
+  <block id="1b9d0264ffd97a37d34b3626026426a0" category="paragraph">选择<block ref="7dcfcf538adde0d607dcea20e99b9fe9" category="inline-link-macro-rx"></block>满足您的需求。</block>
+  <block id="d15741d42f2a6f5f82721fc70d54b6a4" category="paragraph">如果您选择不授予权限，您可以开始使用适用于ONTAP的 FSx Workload Factory 来复制部分完成的代码示例。</block>
+  <block id="38c4c72673e051381c12c32e1dd20f50" category="paragraph">如果您选择授予权限，您需要……<block ref="bb44378f07a38aa36833bde05fae1b5d" category="inline-link-macro-rx"></block>这包括选择工作负载功能（例如数据库和人工智能），以及创建所需权限的 IAM 策略。</block>
+  <block id="2afa479317acb4455a0a649aab2944d1" category="section-title">2025年11月2日</block>
+  <block id="2d7b297cbb6cd40fb509f94fc82809d8" category="sidebar">创建网络保险库以保护数据</block>
+  <block id="77323f759a4ed2ac40e1bf8211da2f5f" category="sidebar">调整音量容量</block>
+  <block id="aadb016687f81f1f6f82a4c97ba651ed" category="sidebar">启用自动容量和 inode 管理</block>
 </blocks>

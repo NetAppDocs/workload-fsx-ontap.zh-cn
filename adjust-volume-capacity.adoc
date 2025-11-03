@@ -1,0 +1,53 @@
+---
+sidebar: sidebar 
+permalink: adjust-volume-capacity.html 
+keywords: increase capacity, volume capacity 
+summary: 您可以随时在NetApp Workload Factory中手动调整卷的容量。 
+---
+= 在NetApp Workload Factory中调整卷容量
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+随时可通过NetApp Workload Factory控制台手动调整卷的容量。
+
+或者，您可以link:edit-volume-autogrow.html["启用自动增长功能"]让 Workload Factory 为您管理卷容量。
+
+.关于此任务
+您可以通过增加或减少卷的已配置大小来调整卷容量。下表显示了不同体积类型的最小和最大体积尺寸：
+
+[cols="1,1,1"]
+|===
+| 卷类型 | 大小上限 | 最小大小 
+
+
+| FlexVol volume | 20 MiB | 300 TiB 
+
+
+| FlexGroup 卷 | 800 GiB | 2 PiB 
+|===
+对于 iSCSI LUN，增加卷的大小也会增加主机 LUN 的大小。增加卷容量后，请按照主机操作系统提供的步骤查找 LUN 的新大小并扩展 LUN 的文件系统。
+
+仅 NFS 和 SMB/CIFS 卷支持减小卷大小。
+
+.开始之前
+要调整音量容量，必须关联一个链接。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何关联现有链接或创建并关联新链接"]。链接关联后，返回此操作。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 在存储图块中，选择*转到存储*。
+. 从存储菜单中，选择 *FSx for ONTAP*。
+. 从 *FSx for ONTAP* 中，选择要更新卷的文件系统的操作菜单，然后选择 *管理*。
+. 从文件系统概述中，选择*Volumes*选项卡。
+. 在“卷”选项卡中，选择要调整容量的卷的操作菜单。
+. 选择*基本操作*，然后选择*调整容量*。
+. 在“调整卷容量”对话框中，设置“已配置容量”和单位。
+. 选择“调整”以应用更改。
+
+
+.相关信息
+* link:edit-volume-autogrow.html["在 Workload Factory 中启用卷自动增长"]
+* link:rebalance-volume.html["在工作负载工厂中重新平衡容量"]
+

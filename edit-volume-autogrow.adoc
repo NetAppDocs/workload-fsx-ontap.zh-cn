@@ -13,7 +13,7 @@ summary: 启用卷自动增长以让 Workload Factory 为您管理卷容量。�
 [role="lead"]
 启用卷自动增长以让 Workload Factory 为您管理卷容量。您可以随时禁用它。
 
-(可选)您可以随时使用手动增加卷的卷容量 link:increase-volume-capacity.html["增加卷容量功能"]。
+您也可以随时使用以下方法手动增加卷的容量：link:adjust-volume-capacity.html["调节音量容量功能"] 。
 
 
 NOTE: iSCSI卷不支持卷自动增长。
