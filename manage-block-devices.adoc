@@ -1,0 +1,60 @@
+---
+sidebar: sidebar 
+permalink: manage-block-devices.html 
+keywords: block devices, manage luns, manage iscsi 
+summary: 在NetApp Workload Factory中管理 FSx for ONTAP文件系统的块设备。 
+---
+= 管理 FSx for ONTAP文件系统的块设备
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+通过NetApp Workload Factory控制台，您可以管理 FSx for ONTAP文件系统的块设备。管理任务包括查看块设备详细信息和增加容量。
+
+.关于此任务
+块设备，或称 LUN（逻辑单元号），是 SAN 环境中包含文件系统的卷，可通过网络被主机访问。
+
+您可以管理使用 iSCSI 协议的ONTAP文件系统的 FSx 块设备。
+
+.开始之前
+* 您必须关联一个链接才能管理块设备。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何关联现有链接或创建并关联新链接"]。关联链接后，返回此操作。
+* 您必须拥有一个已存在的块设备才能查看和管理它。
+
+
+
+
+== 查看块设备详情
+
+随时查看现有块设备的详细信息。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 在存储图块中，选择*转到存储*。
+. 从存储菜单中，选择 *FSx for ONTAP*。
+. 从 *FSx for ONTAP* 中选择 *块设备* 选项卡。
+. 导航至块设备的操作菜单，然后选择*查看详细信息*。
++
+显示块设备的常规详细信息、功耗、访问权限和保护信息。
+
+
+
+
+
+== 增加块设备的容量
+
+随时增加现有块设备的容量。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 在存储图块中，选择*转到存储*。
+. 从存储菜单中，选择 *FSx for ONTAP*。
+. 从 *FSx for ONTAP* 中选择 *块设备* 选项卡。
+. 导航至块设备的操作菜单，然后选择“增加容量”。
+. 输入块状设备的新容量并选择单位。
+. 选择“增加”以应用更改。
+
+
+
+NOTE: 增加块设备的大小后，按照主机操作系统提供的步骤来发现块设备的新大小，并扩展其上的文件系统。

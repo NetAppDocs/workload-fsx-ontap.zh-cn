@@ -1,0 +1,39 @@
+---
+sidebar: sidebar 
+permalink: track-costs.html 
+keywords: cost, consumption, Cost Explorer 
+summary: 在NetApp Workload Factory中跟踪 FSx for ONTAP文件系统资源的成本。 
+---
+= 在NetApp Workload Factory中跟踪资源成本
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用NetApp Workload Factory以统一视图跟踪 FSx for ONTAP文件系统的成本和使用情况。成本数据有助于您有效管理预算和优化资源。  AWS Cost Explorer 提供成本数据。
+
+.关于此任务
+使用以下权限从 AWS Cost Explorer 提取 FSx for ONTAP文件系统资源的成本和使用情况数据：
+
+* `ce:GetCostAndUsage`
+* `ce:GetTags`
+
+
+.开始之前
+link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["使用_查看、规划和分析_权限策略授予凭据"^]在 Workload Factory 中跟踪 FSx 的ONTAP成本。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 在存储图块中，选择*转到存储*。
+. 从存储菜单中，选择“成本”。
+. 在“成本”页面上，通过提供以下信息来筛选 FSx for ONTAP资源的成本和容量数据：
++
+.. *AWS 账户*：选择要查看成本数据的账户。
+.. *凭证*：选择具有_查看、规划和分析_权限的凭证。
+.. *区域*：选择要查看成本数据的 AWS 区域。
+.. *成本数据范围*：选择要查看的成本数据的时间范围。
+
+
+. 查看 FSx for ONTAP资源的*成本详情*。
+

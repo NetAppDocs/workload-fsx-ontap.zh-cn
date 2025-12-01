@@ -8,8 +8,6 @@
 
 读取模式可用于 Workload Factory 中的存储管理。读取模式通过添加只读权限增强了基本模式的体验，以便基础设施即代码模板填充您的特定变量。基础设施即代码模板可以直接从您的 AWS 账户执行，而无需向 Workload Factory 提供任何修改权限。
 
-link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["了解有关读取模式的更多信息"]
-
 
 
 === 支持在删除卷之前备份

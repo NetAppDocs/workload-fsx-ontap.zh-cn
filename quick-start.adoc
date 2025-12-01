@@ -23,7 +23,7 @@ summary: 只需几个步骤，即可在NetApp Workload Factory 中开始使用 F
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["两个"] 添加凭据和权限
 [role="quick-margin-para"]
-选择link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["权限策略"^]满足您的需求。
+选择link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html["权限策略"^]满足您的需求。
 
 [role="quick-margin-para"]
 如果您选择不授予权限，您可以开始使用适用于ONTAP的 FSx Workload Factory 来复制部分完成的代码示例。
