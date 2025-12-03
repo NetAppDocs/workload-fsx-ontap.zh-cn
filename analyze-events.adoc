@@ -19,7 +19,7 @@ summary: 分析NetApp Workload Factory for FSx for ONTAP中的 EMS 事件。
 
 存储管理员通常只有在客户投诉后才会响应 FSx for ONTAP EMS 事件，或者通过创建自定义脚本和警报来响应。这种被动应对方式会减慢问题解决速度，增加停机时间，并降低运营效率。
 
-事件分析器提取 FSx for ONTAP EMS 事件并对其进行分析，以帮助您维护 FSx for ONTAP文件系统的健康状况和性能。
+事件分析器提取 FSx for ONTAP EMS 事件并对其进行分析，以帮助您维护 FSx for ONTAP文件系统的健康状况和性能。Workload Factory 仅显示最近 72 小时内发生的事件。
 
 主要优势包括：
 
@@ -51,13 +51,13 @@ link:https://aws.amazon.com/bedrock/pricing/["Amazon Bedrock 定价"^]
 
 要使用事件分析器，您必须满足以下先决条件：
 
-* 你必须link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["授予_查看、规划和分析_权限"^]在您的 AWS 账户中查看 FSx for ONTAP文件系统的事件。
+* 你必须link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["授予 _操作和修复_ 权限"^]在您的 AWS 账户中查看 FSx for ONTAP文件系统的事件。
 * 你必须link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["使用链接连接到 FSx for ONTAP文件系统"]使用EMS事件分析器。
 * 您还需要满足以下要求。分析日志错误时，系统会提示您完成这些步骤。
 +
-** *亚马逊基岩激活*
+** *亚马逊基岩模型*
 +
-事件分析器使用 Amazon Bedrock API 为 FSx for ONTAP事件提供基于 AI 的见解。
+事件分析器使用您的 Amazon Bedrock API 为 FSx for ONTAP事件提供基于 AI 的见解。
 
 +
 推荐模型：亚马逊基岩模型（anthropic.claude-sonnet-4-20250514-v1:0）。您必须提供所选区域中此模型的推理配置文件 ARN。
@@ -78,7 +78,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解�
 +
 这些权限使 Workload Factory 能够调用 Bedrock 模型，以便主动进行错误调查和补救指导。该配置文件还能确保安全地访问人工智能，从而提供定制化的洞察。
 
-*** 与 Workload Factory 关联的 AWS 凭证： `bedrock:GetFoundationModelAvailability`和 `bedrock:ListInferenceProfiles`权限
+*** 与 Workload Factory 关联的 AWS 凭证： `bedrock:GetInferenceProfile`和 `bedrock:ListInferenceProfiles`权限
 +
 这些权限用于验证模型的可用性。
 
@@ -97,12 +97,10 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解�
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 在存储图块中，选择*转到存储*。
-. 从“存储”菜单中，选择“分析”。
-. 在“分析”屏幕中，选择包含要分析的 FSx for ONTAP文件系统的 AWS 账户、凭证和区域。
-+
-仅支持在屏幕上显示事件的ONTAP文件系统的 FSx。
-
+. 从存储菜单中，选择 *FSx for ONTAP*。
+. 选择要分析的 FSx for ONTAP文件系统，然后选择“管理”。
+. 选择“分析”选项卡。
 . 如有需要，请按照屏幕提示完成*AI 分析设置要求*，以满足任何缺失的先决条件。
-. 找到要分析的 FSx for ONTAP文件系统，然后选择“查看事件”。
+. 选择“分析”。
 . 请查看详细的活动信息。
 

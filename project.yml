@@ -95,7 +95,7 @@ sidebar:
         url: "/configuration-analysis.html"
       - title: 实施架构良好的文件系统配置
         url: "/improve-configurations.html"
-    - title: 分析 FSx 中的ONTAP事件
+    - title: 分析 FSx 中的ONTAP EMS 事件
       url: "/analyze-events.html"
     - title: 卷管理
       entries:

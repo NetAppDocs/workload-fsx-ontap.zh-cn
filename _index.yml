@@ -12,18 +12,26 @@ indexpage:
       url: "/learn-fsx-ontap.html"
     - title: 快速入门
       url: "/quick-start.html"
+    - title: 创建FSx for ONTAP文件系统
+      url: "/create-file-system.html"
   - title: 使用FSx for ONTAP
     links:
     - title: 了解节省量
       url: "/explore-savings.html"
-    - title: 创建FSx for ONTAP文件系统
-      url: "/create-file-system.html"
-    - title: 查看 FSx for ONTAP文件系统的良好架构状态
-      url: "/improve-configurations.html"
-    - title: 创建FSx for ONTAP卷
-      url: "/create-volume.html"
+    - title: 跟踪 FSx for ONTAP资源的成本和使用情况
+      url: "/track-costs.html"
+    - title: 使用链接连接到文件系统
+      url: "/create-link.html"
     - title: 保护您的数据
       url: "/data-protection-overview.html"
+  - title: 管理和监控
+    links:
+    - title: 使用Tracker监控操作
+      url: "/monitor-operations.html"
+    - title: 查看 FSx for ONTAP文件系统的良好架构状态
+      url: "/improve-configurations.html"
+    - title: 分析 FSx 中的ONTAP EMS 事件
+      url: "/analyze-events.html"
   - title: 知识和支持
     links:
     - title: 注册以获得支持
