@@ -241,5 +241,8 @@ NOTE: 快照时间基于文件系统的时区、默认为协调世界时(UTC)。
 . 选择 * 创建 * 。
 
 
-.结果
-工作负载工厂启动卷创建。创建完成后，系统会在“卷”选项卡中显示新卷。
+.相关信息
+* link:adjust-volume-capacity.html["调整工作负载工厂的容量"]
+* link:change-tiering-policy.html["在工作负载工厂中更改容量分层策略"]
+* link:manage-s3-access-points.html["在工作负载工厂中管理 S3 访问点"]
+

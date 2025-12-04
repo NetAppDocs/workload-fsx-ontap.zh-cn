@@ -1472,7 +1472,6 @@
   <block id="9e46846308a6940deed12bb97a4f8290" category="list-text">链接与文件系统无关联。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>(英文)链接关联后、返回此操作。</block>
   <block id="7c3e31cda0e937f8fa1edeeb89e9fe70" category="list-text">ARP/AI 不支持具有不可变文件的卷以及具有 iSCSI 和 NVMe 协议的卷。</block>
   <block id="df1195db43983cb33962d0fe23f28da4" category="list-text">文件系统已具有 ARP/AI 策略。</block>
-  <block id="0bce1227be581635db9bb209f22cf4e6" category="paragraph">工作负载工厂启动卷创建。创建完成后，系统会在“卷”选项卡中显示新卷。</block>
   <block id="817a91472106a30911a7a081b0284ff7" category="paragraph">检查 FlexVol 或 FlexGroup 卷容量的平衡，并重新平衡卷容量，以将文件均匀分布在节点中的所有 FlexVol 卷或所有组成部分之间，以便所有节点都参与单个 FlexGroup 卷的工作负载。</block>
   <block id="46119f30376fd007e4806359f116810d" category="paragraph">FlexVol 卷和 FlexGroup 卷支持重新平衡卷容量。当由于添加新文件和文件增长而导致逐渐出现不平衡时、重新平衡卷会重新分布容量。手动启动重新平衡操作后、我们会选择文件并自动无中断地移动它们。卷传输操作会占用文件系统资源。</block>
   <block id="bbf6fdac51a56da72339e09ef6a7537c" category="paragraph">每种卷类型和重新平衡操作均有不同，如下所示。</block>
@@ -2467,4 +2466,29 @@
   <block id="f553bab80aec86e43829abd15b816ce5" category="section-title">Amazon S3 访问点限制</block>
   <block id="19dc991ee5919c74b5a565fe2ea70176" category="paragraph">每个存储虚拟机的 S3 访问点数量上限为 4,000 个。</block>
   <block id="ef6c8d59ba70b1efd5437dd31e63efcb" category="section-title">2025年12月4日</block>
+  <block id="bf9dc967c38bf5f6366aea1d464016b5" category="inline-link-macro">使用 S3 接入点创建卷</block>
+  <block id="9650d80f3b4a8975eb2cc3145efe97fd" category="list-text"><block ref="9650d80f3b4a8975eb2cc3145efe97fd" category="inline-link-macro-rx"></block></block>
+  <block id="3e2c74c8c2d6921bd86b94a0e3ce7846" category="inline-link-macro">管理卷的 S3 访问点</block>
+  <block id="bec075d59b91517943ea96b4d56e06de" category="list-text"><block ref="bec075d59b91517943ea96b4d56e06de" category="inline-link-macro-rx"></block></block>
+  <block id="a008e298246d26d679639f7bc96ba6ac" category="inline-link-macro">调整工作负载工厂的容量</block>
+  <block id="6397bacd7d32cf08e4bf24faa5700a5a" category="list-text"><block ref="6397bacd7d32cf08e4bf24faa5700a5a" category="inline-link-macro-rx"></block></block>
+  <block id="d8774a6076f48d902ee122d2219887a0" category="inline-link-macro">在工作负载工厂中更改容量分层策略</block>
+  <block id="15edb6ed53ce8a32fd0631a4517d7fc7" category="list-text"><block ref="15edb6ed53ce8a32fd0631a4517d7fc7" category="inline-link-macro-rx"></block></block>
+  <block id="d628678d4875b2f8f6ea7ca8dab6ade0" category="inline-link-macro">在工作负载工厂中管理 S3 访问点</block>
+  <block id="81cca59ad3bedd27880ab1c747ae8b70" category="list-text"><block ref="81cca59ad3bedd27880ab1c747ae8b70" category="inline-link-macro-rx"></block></block>
+  <block id="e89e0732eb8fbeb9c1bb216d5b1fe2c8" category="summary">在NetApp Workload Factory中管理卷的 S3 访问点。</block>
+  <block id="7caacaed323c9582bdf146f33b338930" category="doc">在NetApp Workload Factory中管理卷的 S3 访问点</block>
+  <block id="c03be794767b179eaf0a48a2bc06884b" category="paragraph">在NetApp Workload Factory中管理卷的 S3 访问点。您可以使用 Workload Factory 控制台将 S3 访问点分配给现有卷或删除 S3 访问点。</block>
+  <block id="1f26d72d95cf276540f7a69b509645fe" category="paragraph">您必须拥有一个已存在的包含 S3 接入点的卷。</block>
+  <block id="be929bcd251acd28106548a34c8a067b" category="list-text">从 *FSx for ONTAP* 中选择要更新的卷的文件系统的操作菜单，然后选择 *管理*。</block>
+  <block id="7fcc02a075c6d0b859fd9a03f5250e5f" category="list-text">在“卷”选项卡中，选择要管理 S3 接入点的卷的操作菜单，然后选择“高级操作”，再选择“管理 S3 接入点”。</block>
+  <block id="056da7279a8392afebe1b20256f8656b" category="list-text">在“管理 S3 接入点”页面上，您可以创建和附加接入点或删除现有接入点。</block>
+  <block id="4dc9fa88ed74bd072e88bad92a1f17c6" category="open-title">创建 S3 访问点并将其附加到现有卷</block>
+  <block id="c57302a0d02305ff8c144fb37bb2fab9" category="list-text">选择“创建并连接 S3 接入点”。</block>
+  <block id="e979f8982cafd5647560686a5ec74a2a" category="list-text">在“创建并连接 S3 接入点”对话框中，提供以下信息：</block>
+  <block id="0802ef324b114effd397e5e5ac619733" category="list-text">选择“创建并附加”。</block>
+  <block id="f4e2e090f540d174d8e07c3527c25962" category="open-title">从卷中删除现有的 S3 访问点</block>
+  <block id="a87127d2d5ce747338342d2d926d9cc4" category="list-text">选择要删除的 S3 接入点的操作菜单，然后选择“分离”。</block>
+  <block id="8d755d1f354bf995e33c13051ecdaeca" category="list-text">在“分离并移除 S3 接入点”对话框中，选择“分离并移除”以从卷中删除 S3 接入点。</block>
+  <block id="f994c7e71102a3d5ed7af5975abfaa09" category="sidebar">管理 S3 访问点</block>
 </blocks>

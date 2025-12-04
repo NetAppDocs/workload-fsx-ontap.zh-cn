@@ -1,0 +1,52 @@
+---
+sidebar: sidebar 
+permalink: manage-s3-access-points.html 
+keywords: S3, s3, access points, manage access points, change access points, update access points, modify access points 
+summary: 在NetApp Workload Factory中管理卷的 S3 访问点。 
+---
+= 在NetApp Workload Factory中管理卷的 S3 访问点
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+在NetApp Workload Factory中管理卷的 S3 访问点。您可以使用 Workload Factory 控制台将 S3 访问点分配给现有卷或删除 S3 访问点。
+
+.开始之前
+您必须拥有一个已存在的包含 S3 接入点的卷。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 在存储图块中，选择*转到存储*。
+. 从存储菜单中，选择 *FSx for ONTAP*。
+. 从 *FSx for ONTAP* 中选择要更新的卷的文件系统的操作菜单，然后选择 *管理*。
+. 从文件系统概述中，选择*Volumes*选项卡。
+. 在“卷”选项卡中，选择要管理 S3 接入点的卷的操作菜单，然后选择“高级操作”，再选择“管理 S3 接入点”。
+. 在“管理 S3 接入点”页面上，您可以创建和附加接入点或删除现有接入点。
++
+[role="tabbed-block"]
+====
+.创建 S3 访问点并将其附加到现有卷
+--
+.. 选择“创建并连接 S3 接入点”。
+.. 在“创建并连接 S3 接入点”对话框中，提供以下信息：
++
+*** *S3接入点名称*：输入S3接入点的名称。
+*** *用户*：选择有权访问该卷的现有用户或创建新用户。
+*** *用户类型*：选择*UNIX*或*Windows*作为用户类型。
+
+
+.. 选择“创建并附加”。
+
+
+--
+.从卷中删除现有的 S3 访问点
+--
+.. 选择要删除的 S3 接入点的操作菜单，然后选择“分离”。
+.. 在“分离并移除 S3 接入点”对话框中，选择“分离并移除”以从卷中删除 S3 接入点。
+
+
+--
+====
+
