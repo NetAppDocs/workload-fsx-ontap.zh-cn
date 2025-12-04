@@ -120,6 +120,12 @@ System Manager不支持FSx for ONTAP连接的链接。
 
 使用控制台代理时不支持 AWS Secrets Manager。
 
+
+
+== Amazon S3 访问点限制
+
+每个存储虚拟机的 S3 访问点数量上限为 4,000 个。
+
 注意：
 
 . 适用于Amazon FSx for NetApp ONTAP
