@@ -58,3 +58,9 @@ summary: 在NetApp Workload Factory中管理 FSx for ONTAP文件系统的块设�
 
 
 NOTE: 增加块设备的大小后，按照主机操作系统提供的步骤来发现块设备的新大小，并扩展其上的文件系统。
+
+
+
+== 相关信息
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-block-device.html["为ONTAP文件系统的 FSx 创建块设备"]

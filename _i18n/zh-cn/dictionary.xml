@@ -71,8 +71,6 @@
   <block id="d41d8cd98f00b204e9800998ecf8427e" category="summary"></block>
   <block id="85a0e511a99369efd5c47890a946947b" category="doc">配置和更新Storage VM的Active Directory</block>
   <block id="c19f2fad6f0110c3951bd583edb5371f" category="paragraph">配置和更新Storage VM的Active Directory的步骤相同。</block>
-  <block id="3a7b10a42e70c562594e7593e84cfb0d" category="list-text">从文件系统概述中，选择*Storage VMS*选项卡。</block>
-  <block id="584856da16c520c5370d79f390f47426" category="list-text">选择*管理AD配置*。</block>
   <block id="dcfecf722762bfcce19242fd2e38a2c2" category="list-text">在管理AD配置页面上、提供以下内容：</block>
   <block id="a531f5a3e49319a6c1b23021b5a27417" category="list-text">*要加入的Active Directory域*：输入Active Directory的完全限定域名(FQDN)。</block>
   <block id="194331d5ecf77bf506c810edab0a3cc7" category="list-text">*DNS IP地址*：最多输入三个IP地址，以逗号分隔。</block>
@@ -188,7 +186,6 @@
   <block id="bc7303a544a54859ef646aaae48578a5" category="paragraph">通过SVM、在访问FSx for ONTAP中的数据时、客户端和工作站会使用SVM的端点(IP地址)挂载SVM托管的卷、CIFS或SMB共享或iSCSI LUN。</block>
   <block id="0be7879371b03da9f3e439c5431f1db2" category="inline-link-macro">管理FSx for ONTAP Storage Virtual Machine</block>
   <block id="cbddd6713cb3317df938ea4a6fd2cd84" category="paragraph">验证每个文件系统支持的Storage VM数量。有关每个文件系统的最大SVM数量、请参见 <block ref="17ef0d7491a925205e8443311f7ef122" category="inline-link-macro-rx"></block> AWS文档中的。</block>
-  <block id="cdbc38b99c6a38c90c6623e1ac73a0fd" category="list-text">在Storage VM页面上的Storage VM配置下、提供以下内容：</block>
   <block id="c9f265881e56f4c52918525bdcb9205d" category="list-text">*名称*：输入Storage VM的名称。</block>
   <block id="42a49281a2c075c2004f1e73852b27e3" category="list-text">* Storage VM凭据*：为此Storage VM的用户提供密码<block ref="6173aa5206484b5224450952747c7148" prefix=" " category="inline-code"></block> 或使用文件系统的<block ref="679500f227997b45be97e3ca8115c678" prefix=" " category="inline-code"></block> 用户凭据。</block>
   <block id="34cc44a6e06f592c6033a57f8671a67a" category="list-text">*根卷安全模式*：根据访问数据的客户端类型选择根卷安全模式- UNIX (Linux客户端)、NTFS (Windows客户端)或混合。</block>
@@ -280,7 +277,6 @@
   <block id="4d07a6e16a1c8ad6e621cc84eb969e7e" category="list-text">FSx for ONTAP备份：FSx for ONTAP备份副本将保留、您仍可使用它们。</block>
   <block id="c54ab0793e326deff351b944ad70d29c" category="list-text">选择*基本操作*，然后选择*删除卷*。</block>
   <block id="321fbbd6f40d9b084f632750d5190dc8" category="summary">随时为Storage VM添加、更新或删除Storage VM标记。</block>
-  <block id="856fd7298379e6a75a221ebc3af9cdec" category="list-text">选择*编辑Storage VM标记*。</block>
   <block id="14d8aa612c687d8708f6fefc5f554d22" category="list-text">在编辑Storage VM标记页面上、添加、编辑或删除标记。</block>
   <block id="2d1066d1fee53e98224fefca16751fd3" category="paragraph">一个Storage VM最多可以应用50个标记。</block>
   <block id="2332ee8494d2f8246a961c95630281a2" category="admonition">iSCSI卷不支持卷自动增长。</block>
@@ -492,11 +488,9 @@
   <block id="89568baf7659b31a2110d1de7f69778d" category="paragraph">通过存储清单中的文件系统，您可以 <block ref="41a32458a6146c3b772c57ac70acc68e" category="inline-link-macro-rx"></block>管理FSx for ONTAP文件系统，并为资源设置数据保护。</block>
   <block id="a509c58d8659a3366f3053048526e6ec" category="summary">将Storage VM复制到另一个FSx for ONTAP文件系统可在数据丢失时提供一个数据访问保护层。</block>
   <block id="ec42d150d63ba9d69905da61ff84b59b" category="doc">将Storage VM复制到另一个FSx for ONTAP文件系统</block>
-  <block id="068ecbcf009e32427973dc04a3628cb7" category="list-text">选择*复本Storage VM*。</block>
   <block id="0e752dc97b5515d4bd6d0ef6482c2342" category="paragraph">Storage VM中的所有卷都会复制到目标文件系统。</block>
   <block id="ff40dc19143c531bc7b8a932c148a848" category="list-text">选择*Reset fsxadmin password*。</block>
   <block id="edacd360980e63a5f2e01df2fa59b050" category="list-text">在"Reset fsxadmin password"对话框中、输入新的fsxadmin密码并重新输入以进行确认。</block>
-  <block id="3930015dcc2810869591e35a2b5d714b" category="list-text">选择 * 重置密码 * 。</block>
   <block id="0828ddc896996b7d41cc9ceb1e453764" category="list-text">在重置密码对话框中、提供以下内容：</block>
   <block id="8d54082fcba7dd82063ffe4497f8c70d" category="list-text">*新密码*：输入Storage VM的新密码。</block>
   <block id="ebb4bf732c3ade314c393d5284af8715" category="list-text">*确认密码*：再次输入新密码进行确认。</block>
@@ -699,7 +693,6 @@
   <block id="71083868a2ec5abfee9a2647a74612c0" category="list-text">FSx for ONTAP选项卡：显示您当前拥有的适用于ONTAP文件系统的FSx。</block>
   <block id="1113c9108b3e58789456954d1c2ea9c2" category="list-text">Explore savings选项卡：显示Elabic Block Store、FSx for Windows File Server和Elabic File Systems存储系统。然后、您可以通过将这些系统与FSx for ONTAP进行比较来了解节省的空间。</block>
   <block id="fa8dc6e67f45bcde58853510e56ce6a1" category="list-text">从文件系统的概述选项卡中，选择*卷*选项卡。</block>
-  <block id="8c9880429b2df2018a366dbb14193026" category="list-text">从文件系统的概述选项卡中、选择*存储VMS*选项卡。</block>
   <block id="d9f5899ddcae7952c9df69e075c822e2" category="section-title">2024年11月3日</block>
   <block id="ddeb24aeadcd9bd34930d38c34152c03" category="paragraph">Amazon FSx for NetApp ONTAP现已在BlueXP  工作负载工厂正式上市。</block>
   <block id="03b2cfc949418819e16b1dc5fa3660ae" category="list-text"><block ref="03b2cfc949418819e16b1dc5fa3660ae" category="inline-link-macro-rx"></block></block>
@@ -1412,7 +1405,6 @@
   <block id="3cb1fda07c1d6b96bda1c65f1996fc1f" category="list-text">要创建自定义快照策略，您必须关联一个链接。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>(英文)链接关联后、返回此操作。</block>
   <block id="d49502975428f953533ab14ab9c02a5b" category="paragraph">您必须关联一个链接才能创建卷的手动快照。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>(英文)链接关联后、返回此操作。</block>
   <block id="6234e99ad9e8c051d4afaa47c5d4ff82" category="list-text">要配置对卷的访问，您必须关联一个链接。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>(英文)链接关联后、返回此操作。</block>
-  <block id="0152fea6b73cbe86540a93515bf61029" category="paragraph">以下是AWS的默认策略。对于自定义快照策略，您必须<block ref="6ac03ad394740d642419d1159fa121ff" category="inline-link-macro-rx"></block> 。</block>
   <block id="2b34fc0bead4dcf64099078fdaf86d69" category="paragraph">要启用卷自动增长，您必须关联一个链接。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>(英文)链接关联后、返回此操作。</block>
   <block id="f8e03e36604030c79d6107b800f61804" category="list-text">为了确保卷 inode 随着存储容量的增加，您必须关联一个链接。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>(英文)链接关联后、返回此操作。</block>
   <block id="2c793b5b15ea565983390f5625f7b85b" category="inline-link-macro">创建并关联链接</block>
@@ -1845,7 +1837,6 @@
   <block id="b0a0826c5a9c2b2e6c919de33e89dbfe" category="paragraph">在文件系统级别的 Workload Factory 控制台中，列出了所有 FSx for ONTAP文件系统的良好架构状态。架构良好的状态分为“问题”、“未分析”或“架构良好”。选择良好架构状态会将您重定向到文件系统内的良好架构状态选项卡，您可以在其中找到良好架构分数、配置类别以及文件系统的所有配置。</block>
   <block id="93482e0e05af93f1f57953ff700f65af" category="summary">在NetApp Workload Factory 中为 FSx for ONTAP文件系统中的存储虚拟机配置和更新 Active Directory。</block>
   <block id="b517cd494437c46f189031b81fe054d1" category="list-text">从 *FSx for ONTAP* 中，选择要更新的存储虚拟机的文件系统的操作菜单，然后选择 *管理*。</block>
-  <block id="55713424abf36138f2e5576255ae328d" category="list-text">从“存储虚拟机”选项卡中，选择要为其配置 Active Directory 的存储虚拟机的操作菜单。</block>
   <block id="e2978ebf10a51b553f9a074316b27b79" category="summary">在定期备份之外，在NetApp Workload Factory 中创建卷的手动备份。</block>
   <block id="54fe537cb8aa5bbba8b6f2002f13d69c" category="doc">在NetApp Workload Factory 中创建卷的手动备份</block>
   <block id="4f43be2165dfc12e9cac6220645b9996" category="paragraph">在NetApp Workload Factory 中定期备份之外创建卷的手动备份。</block>
@@ -1880,7 +1871,6 @@
   <block id="673f61d59e74b38d8158f8338fec1e4b" category="paragraph">为 FSx for ONTAP文件系统创建存储虚拟机 (SVM)，以虚拟方式访问NetApp Workload Factory 中工作负载的存储和数据服务。</block>
   <block id="0f54202fd3d9422accef6305efaf73a6" category="paragraph">存储虚拟机是独立的文件服务器，您可以使用它来访问工作负载工厂存储中每个工作负载的数据。每个 SVM 都有自己的管理凭据和端点，用于管理和访问数据。</block>
   <block id="176a501864ff4c70a2c1b132289ccad0" category="paragraph">您可以从 Workload Factory 控制台创建存储虚拟机。您还可以使用 Codebox 中提供的以下工具：REST API、CloudFormation 和 Terraform。<block ref="e0a3467dce43941c7b863cc8d6f0a62a" category="inline-link-macro-rx"></block> 。</block>
-  <block id="5a2fcba235cbe9725acb555b8a1ff973" category="list-text">从 *FSx for ONTAP* 中，选择要为其创建存储 VM 的文件系统的操作菜单，然后选择 *创建存储 VM*。</block>
   <block id="2c1104e8d18fa2476c3ec5d972050908" category="summary">设置 FSx for ONTAP文件系统后，在 Workload Factory 中创建 FSx for ONTAP卷。</block>
   <block id="b576330956781fec1fe9e230ce503cdc" category="doc">在 Workload Factory 中创建 FSx for ONTAP卷</block>
   <block id="d2c9fde6d19778c0e3d1e865ed1f22a8" category="paragraph">设置 FSx for ONTAP文件系统后，在 Workload Factory 中创建 FSx for ONTAP卷作为用于分组数据的虚拟资源。</block>
@@ -1911,7 +1901,6 @@
   <block id="1c9d39dfea82aa323f287c11668fb9ab" category="paragraph">删除NetApp Workload Factory 中的复制关系。当您删除复制关系时，它会删除源卷和目标卷之间的复制关系。删除复制关系后，两个卷将继续独立存在，并保留其包含的当前数据。</block>
   <block id="06a91edaa8e77e04dfd0ccc1dee5a6c7" category="list-text">在复制关系选项卡中，选择要删除的复制关系的操作菜单。</block>
   <block id="ce1de3f28d8568be87cdce779516de02" category="doc">在NetApp Workload Factory 中删除存储虚拟机</block>
-  <block id="17a5fbc49fda805ff4e98fd7a9af355a" category="list-text">在“存储虚拟机”选项卡中，选择要为其配置 Active Directory 的存储虚拟机的操作菜单。</block>
   <block id="d287f4840c4e2956b3e030d276822021" category="doc">在NetApp Workload Factory 中删除卷</block>
   <block id="5d2b2d216923f677893f0a068bc1b92f" category="list-text">从 *FSx for ONTAP* 中，选择要删除卷的文件系统的操作，然后选择 *管理*。</block>
   <block id="1235950c75ed0fc0a7588ccae6518e39" category="list-text">从“卷”选项卡中，选择要删除的卷的操作菜单。</block>
@@ -2074,7 +2063,6 @@
   <block id="f1275ed085039c3832dda6dfba0ad9f2" category="list-text">在管理快照页面中，选择要删除的快照的操作菜单，然后选择*删除*。</block>
   <block id="b8b31b5d8488dcb7ebd8c2bb9ba38f50" category="doc">在NetApp Workload Factory 中管理存储虚拟机标签</block>
   <block id="0c950433d94be139f73fb59247d857a5" category="paragraph">标签可以帮助您对资源进行分类。您可以随时在NetApp Workload Factory 中添加、编辑和删除存储虚拟机的标签。</block>
-  <block id="9407fd42d3f2176c45d9212981f7f058" category="list-text">从“存储虚拟机”选项卡中，选择要编辑标签的存储虚拟机的操作菜单。</block>
   <block id="558281a06321bc8c7b90d170a463683f" category="doc">在NetApp Workload Factory 中管理卷标签</block>
   <block id="693a8f663c39ae53134101e5d974fda8" category="paragraph">标签可以帮助您对资源进行分类。您可以随时在NetApp Workload Factory 中为 FSx for ONTAP卷添加、编辑和删除卷标签。</block>
   <block id="ff53601e946713a2f9385573998c76d7" category="list-text">从“卷”选项卡中，选择要修改标签的卷的操作菜单。</block>
@@ -2114,7 +2102,6 @@
   <block id="59dfa377d2b15b40ba2bddd83dcb5c53" category="list-text">从 *FSx for ONTAP* 中，选择包含要重新平衡的卷的文件系统的操作菜单，然后选择 *管理*。</block>
   <block id="fbf1bac8c72be0440c190a08fabc8dc0" category="paragraph">在NetApp Workload Factory 中将存储虚拟机复制到另一个 FSx for ONTAP文件系统可在数据丢失时提供数据访问的保护层。此操作将一个存储虚拟机中的所有卷复制到另一个 FSx for ONTAP文件系统。</block>
   <block id="e42fc3e4b35126c00393bef5dd43abb0" category="list-text">从 *FSx for ONTAP* 中，选择要复制存储虚拟机的文件系统的操作菜单，然后选择 *管理*。</block>
-  <block id="f762650128ec007cd0d70b6659361ba3" category="list-text">从“存储虚拟机”选项卡中，选择要为其复制 SVM 的存储虚拟机的操作菜单。</block>
   <block id="60de20bb9aba6d637fe2c39698d63a93" category="paragraph">使用 Workload Factory FSx for ONTAP用户界面创建卷时，_Auto_ 是默认分层策略。有关卷分层策略的更多信息，请参阅<block ref="de51d392f5d252a956349995f441f55c" category="inline-link-macro-rx"></block>在 AWS FSx for NetApp ONTAP文档中。</block>
   <block id="00e61784b4c0263d643d339751f948b5" category="summary">必要时重置NetApp Workload Factory 中的 fsxadmin 密码。</block>
   <block id="49504d649db43bbd86ff76609ad14e6b" category="doc">在NetApp Workload Factory 中重置 fsxadmin 密码</block>
@@ -2125,8 +2112,6 @@
   <block id="423500f4bc14c3ceee3a5af733bedd61" category="summary">必要时重置NetApp Workload Factory 中存储虚拟机的密码。</block>
   <block id="3c483a45ab5fea02162be0b6c6004287" category="doc">在NetApp Workload Factory 中重置存储虚拟机密码</block>
   <block id="bff8efadf7143427c1acb1b9e3330d81" category="list-text">从存储中，选择*转到存储*。</block>
-  <block id="b3dd19bbbe1cbd4f108d8e41f40c783e" category="list-text">从 *FSx for ONTAP* 中，选择要更新的存储 VM 的 FSx for ONTAP文件系统的操作菜单，然后选择 *管理*。</block>
-  <block id="b841fe8526d10304e2b38270715c1b84" category="list-text">在“存储虚拟机”选项卡中，选择要重置密码的存储虚拟机的操作菜单。</block>
   <block id="398b64d3ae2c039c62637d684fcbe30d" category="doc">从NetApp Workload Factory 中的备份还原卷</block>
   <block id="19002cddfac8e15ce79f8ccad53b74e6" category="paragraph">在NetApp Workload Factory 中，您可以将卷从备份还原到 AWS 账户中的任何 FSx for ONTAP文件系统。</block>
   <block id="de32db8377dafaed047e32a0f5c78af1" category="list-text">从“*Volumes*”选项卡中，选择要从备份中恢复的卷的操作菜单。</block>
@@ -2491,4 +2476,68 @@
   <block id="a87127d2d5ce747338342d2d926d9cc4" category="list-text">选择要删除的 S3 接入点的操作菜单，然后选择“分离”。</block>
   <block id="8d755d1f354bf995e33c13051ecdaeca" category="list-text">在“分离并移除 S3 接入点”对话框中，选择“分离并移除”以从卷中删除 S3 接入点。</block>
   <block id="f994c7e71102a3d5ed7af5975abfaa09" category="sidebar">管理 S3 访问点</block>
+  <block id="bc5d3bf99236801351dc3a2d7c20aed7" category="paragraph">Workload Factory 会分析您的 FSx for ONTAP文件系统，以识别以下配置：</block>
+  <block id="afc7c7589e5f20d86c03b5e089bbad6b" category="list-text">NetApp自主勒索软件防护 (ARP/AI) 已禁用（包括块设备）：检查块设备卷上的 ARP/AI 是否已禁用</block>
+  <block id="2270e6ac2c31be458c93c87db612a494" category="list-text">缓存关系写入模式：检查写入模式是否最适合缓存卷工作负载。</block>
+  <block id="2125a9a589f0bc57c38acf63f5ffb150" category="list-text">删除不必要的备份：检查备份是否已过期或不再需要，以便删除以降低成本。</block>
+  <block id="5e3b7f958129022f75fe2931c55615b2" category="section-title">问我关于人工智能助手首页集成的问题</block>
+  <block id="65bcc541760e8f25e0281edbfdfbf7f3" category="paragraph">Workload Factory 控制台主页嵌入了 Ask me AI 助手，使您可以询问有关您自己的存储环境的问题，直接从您的环境中获取个性化见解，并参考以前的对话。您可以与“问我”进行交互，以了解您的工作负载、解决问题并了解更多关于工作负载工厂的信息——所有这些都无需离开控制台。</block>
+  <block id="270dd22752e2f3f31c99a49ff489774e" category="section-title">在 Lambda 链接资源中采用 IAM 用户主体权限策略</block>
+  <block id="75141a4e46e0a646f4c8379f8d5e7b52" category="paragraph">用于连接 Workload Factory 帐户和一个或多个 FSx for ONTAP文件系统以执行高级ONTAP操作的 Lambda 链接，现在使用 IAM 用户主体进行基于资源的策略权限。此项变更使 AWS 资源访问与行业最佳实践更加一致。</block>
+  <block id="b0dd04cf44137b432a8f89cb4f3c9919" category="section-title">为 EMS 事件的 AI 分析器添加了分析屏幕</block>
+  <block id="5cd27690d7988b2c3f04768e500459bb" category="paragraph">存储菜单中新增了“分析”屏幕。从此屏幕，您可以使用适用于ONTAP EMS 事件功能的 FSx AI 分析器。</block>
+  <block id="a9b4b239246fd03c03ac43e963075319" category="section-title">NetApp Workload Factory中的块设备增强功能</block>
+  <block id="6ef37e3f05edf0fb9740ef851722a8f3" category="paragraph">针对块设备进行了以下增强。</block>
+  <block id="0a32dfaa27bfe59db7152c5c5da72282" category="section-title">创建块设备</block>
+  <block id="8e8c152eb29cb88d5d80a375d44aee87" category="paragraph">NetApp Workload Factory支持在 FSx for ONTAP文件系统上使用 iSCSI 协议创建块设备，以便您可以从 Workload Factory 控制台更好地支持您的业务线 (LOB) 应用程序。</block>
+  <block id="0b5d1c04d20d94c2a21dacfa53d7354d" category="section-title">块设备管理增强功能</block>
+  <block id="e578bac1e9f39054ae2eb2b16d807f71" category="inline-link-macro">管理块设备</block>
+  <block id="e16cdf4dbd146007b4b40124e28ca1a2" category="paragraph">NetApp Workload Factory包含以下增强功能： <block ref="b08ca4e282a45fe2e49c9a019646bd36" category="inline-link-macro-rx"></block>。您现在可以从 Workload Factory 控制台执行以下任务：</block>
+  <block id="f8b3baca819978515d628c6a5881eb4e" category="list-text">管理客户端访问权限</block>
+  <block id="5338dad31c000cc89dea6cc573f1a242" category="list-text">归档块设备数据</block>
+  <block id="88073627bb09173d8e0b3fa15a27725b" category="list-text">删除块设备</block>
+  <block id="3c4600754ec66ef615c303417126da12" category="section-title">支持包含块设备的FlexVol卷上的 ARP/AI</block>
+  <block id="3043237188bfe3f198084dbfe55d05c0" category="inline-link-macro">NetApp自主勒索软件防护（AI 防护，ARP/AI）</block>
+  <block id="34f4bbf8697d1205da43ee612001efe7" category="paragraph">您可以启用 <block ref="028271ae216dacdd20feb47aea2c131d" category="inline-link-macro-rx"></block> 在包含块设备的FlexVol卷上。启用 ARP/AI 可以利用人工智能检测勒索软件攻击，并有助于数据恢复。</block>
+  <block id="71a3ae3af23eb1b872f9026901ca4187" category="list-text">在“存储虚拟机”下的文件系统概览中，选择“管理”。</block>
+  <block id="3e723486c5a3951bcc9cc4e9b31c7a1b" category="list-text">在“管理存储虚拟机”屏幕上，选择要为其配置 Active Directory 的存储虚拟机的操作菜单，然后选择“基本操作”&gt;“管理 AD 配置”。</block>
+  <block id="3d19aa5c03e04bba25fa64fb693e9f98" category="summary">创建块设备以支持您的业务线 (LOB) 应用需求。</block>
+  <block id="3c1e85123bd6f772d273b23b09a26e74" category="doc">在NetApp Workload Factory中为文件系统创建块设备</block>
+  <block id="7d004b13cdadf8e9ba5aa6e7fd56c9c9" category="paragraph">NetApp Workload Factory仅支持块设备的FlexVol卷。您可以使用 iSCSI 协议创建块设备。</block>
+  <block id="454897ca790322f298897b4fdfc33941" category="paragraph">块大小必须小于可用的FlexVol volume大小。</block>
+  <block id="fb02a89efec565f92916696e97a69514" category="list-text">您必须关联链接才能创建块设备。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>。关联链接后，返回此操作。</block>
+  <block id="b517955ef14866b28544f7b2807b497d" category="list-text">选择“创建块设备”。</block>
+  <block id="c494d1f97c8af593b2547e971cde7048" category="list-text">在“音量详情”下，执行以下操作：</block>
+  <block id="28d37ed4396c69863c777832e2dc985a" category="list-text">*卷名*：请选择以下选项之一。</block>
+  <block id="def02085a38e856b98b13e533d3b840f" category="list-text">创建一个新卷并输入卷名称。</block>
+  <block id="e5113669fd2a554528c1fff4b4a28162" category="list-text">选择一个现有卷。</block>
+  <block id="f879102f0ab70ffbcdaf5ea3b09693dd" category="list-text">*存储虚拟机*：选择一个存储虚拟机。</block>
+  <block id="0bd1c4c69e2f0fa0ace2c5a2bc4bfb4f" category="list-text">*音量样式*：默认音量样式为* FlexVol*。</block>
+  <block id="c68f7e5abbdc5e2d69f2654296febb52" category="list-text">*体积大小*：输入体积大小并选择单位。每个FlexVol volume的最大容量为 100 TiB。</block>
+  <block id="f0ddb24224adb11c4c26879e00143b36" category="list-text">*卷自动增长*：您可以选择启用卷自动增长功能，使卷在达到容量上限时自动增加大小。最大生长尺寸为 300 TiB。</block>
+  <block id="ad2ab5f2c7e10afc96bd0e17739e1986" category="list-text">*标签*：您可以选择添加标签，以帮助组织和分类您的积木设备。</block>
+  <block id="66849c76f9938572ebbf346d93c18eea" category="list-text">在“阻止设备详细信息”下，执行以下操作：</block>
+  <block id="a585842d038e5160ebfc3806b62044a6" category="list-text">*块设备名称*：输入块设备的名称。</block>
+  <block id="6d73923747600d8280fb309f7bb705ea" category="list-text">*块设备大小*：输入块设备的大小并选择单位。块设备的大小必须小于可用卷的大小。</block>
+  <block id="e9e005dffa12441a25899a863e99f0fa" category="list-text">在“访问权限”下，执行以下操作：</block>
+  <block id="d4a692c93d71fdee64560b6ac04e9714" category="list-text">*iSCSI 配置*：请选择以下选项之一。</block>
+  <block id="d9f80ec4d13936fdba78b793f44c184c" category="list-text">*创建新的启动器组*：提供主机操作系统、启动器组名称，并添加一个或多个 iSCSI 限定名称 (IQN) 主机启动器。</block>
+  <block id="104d3f014c0f2ca8498a2aa9f78b1864" category="list-text">*映射现有启动器组*：选择一个现有启动器组，提供主机操作系统，然后选择一个或多个 iSCSI 限定名称 (IQN) 主机启动器。</block>
+  <block id="db784c6694930c54da9655a9d31c365a" category="list-text">在“效率与保护”项下，执行以下操作：</block>
+  <block id="8cbc6c14a0474488d906dfdd17ce79c4" category="paragraph">以下是 AWS 的默认策略。要显示现有的快照策略，您必须 <block ref="6ac03ad394740d642419d1159fa121ff" category="inline-link-macro-rx"></block>。</block>
+  <block id="4dd81c3ec298b3b3b12adbd43350c454" category="paragraph">使用 Workload Factory 控制台创建卷时，默认分层策略为 _Balanced (Auto)_。有关容量分层策略的更多信息，请参阅 <block ref="de51d392f5d252a956349995f441f55c" category="inline-link-macro-rx"></block> 在 AWS FSx for NetApp ONTAP文档中。请注意，Workload Factory 在 Workload Factory 控制台中使用基于用例的名称来定义分层策略，并在括号中包含 FSx for ONTAP分层策略名称。</block>
+  <block id="eafa5af121307f6008fad4d24d6d9f14" category="list-text">ARP/AI 不支持包含不可变文件的卷和使用 NVMe 协议的卷。</block>
+  <block id="78b92538a82bd788a456f9cf838a5c11" category="paragraph"><block ref="78b92538a82bd788a456f9cf838a5c11" category="inline-link-macro-rx"></block></block>
+  <block id="1e3a8de3c21016b6778340215e821fb6" category="list-text">从 *FSx for ONTAP* 中选择文件系统的操作菜单，然后选择 *管理*。</block>
+  <block id="96271eab8824304349d49f716ef08b72" category="list-text">在文件系统概览的“存储虚拟机”下，选择“创建存储虚拟机”。</block>
+  <block id="355a4219717415b19bc0cfb3a299f9a8" category="list-text">在“创建存储虚拟机”页面的“存储虚拟机配置”下，提供以下信息：</block>
+  <block id="3b097ea48314307e283cb12e56ebf242" category="list-text">在“管理存储虚拟机”屏幕上，选择要删除的存储虚拟机的操作菜单。</block>
+  <block id="add6edc9de6a44472705a7a46e4fd5c2" category="inline-link-macro">为ONTAP文件系统的 FSx 创建块设备</block>
+  <block id="a795e8e784620e60993a8b9e17168564" category="paragraph"><block ref="a795e8e784620e60993a8b9e17168564" category="inline-link-macro-rx"></block></block>
+  <block id="6a3dc4143a7da62f8900b495e210893d" category="list-text">在“管理存储虚拟机”屏幕上，选择要编辑标签的存储虚拟机的操作菜单，然后选择“基本操作”&gt;“编辑存储虚拟机标签”。</block>
+  <block id="e8b970818f72fb7cf471fb0f9361d2fb" category="list-text">在“管理存储虚拟机”屏幕上，选择要为其复制 SVM 的存储虚拟机的操作菜单，然后选择“高级操作”&gt;“复制存储虚拟机”。</block>
+  <block id="f7c0292ee19b0ef8ab597e8587b490f2" category="list-text">从 *FSx for ONTAP* 中选择要重置存储 VM 密码的文件系统的操作菜单，然后选择 *管理*。</block>
+  <block id="d303726d253e10ceb3c3a9904bc4c18f" category="list-text">在“管理存储虚拟机”屏幕上，选择要重置密码的存储虚拟机的操作菜单，然后选择“基本操作”&gt;“重置密码”。</block>
+  <block id="334f5b13a66630c66877aaf36ce24673" category="section-title">2026年1月4日</block>
+  <block id="04c5d70ed6312687a1e39677346bbaff" category="sidebar">创建块设备</block>
 </blocks>

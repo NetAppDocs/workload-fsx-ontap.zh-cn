@@ -51,6 +51,8 @@ sidebar:
         url: "/create-volume.html"
       - title: 访问您的数据
         url: "/access-data.html"
+    - title: 创建块设备
+      url: "/create-block-device.html"
     - title: 创建Storage VM
       url: "/create-storage-vm.html"
     - title: 保护您的数据

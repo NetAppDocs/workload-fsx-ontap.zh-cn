@@ -168,7 +168,7 @@ ONTAP 使用重复数据删除和压缩功能实现存储效率。重复数据�
 
 .. *Snapshot policy*：选择快照策略以指定快照的频率和保留时间。
 +
-以下是AWS的默认策略。对于自定义快照策略，您必须link:link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["关联链接"] 。
+以下是 AWS 的默认策略。要显示现有的快照策略，您必须 link:link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["关联链接"]。
 
 +
 `default`:: 此策略会按照以下计划自动创建快照、并删除最早的快照副本、以便为较新的副本腾出空间：
@@ -190,7 +190,7 @@ NOTE: 快照时间基于文件系统的时区、默认为协调世界时(UTC)。
 
 .. *分层策略*：为卷中存储的数据选择分层策略。
 +
-使用 Workload Factory 控制台创建卷时，_平衡（自动）_ 是默认分层策略。有关卷分层策略的更多信息，请参阅link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["卷存储容量"^]在 AWS FSx for NetApp ONTAP文档中。请注意，工作负载工厂在工作负载工厂控制台中使用基于用例的名称来制定分层策略，并在括号中包含 FSx for ONTAP分层策略名称。
+使用 Workload Factory 控制台创建卷时，默认分层策略为 _Balanced (Auto)_。有关容量分层策略的更多信息，请参阅 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["卷存储容量"^] 在 AWS FSx for NetApp ONTAP文档中。请注意，Workload Factory 在 Workload Factory 控制台中使用基于用例的名称来定义分层策略，并在括号中包含 FSx for ONTAP分层策略名称。
 
 .. *不可变文件*：启用不可变文件功能将永久地将此卷中的文件提交到不可变的 WORM（一次写入多次读取）状态。提供以下详细信息：
 +

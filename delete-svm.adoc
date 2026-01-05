@@ -25,8 +25,8 @@ summary: '从FSx for ONTAP文件系统配置中删除不再需要的Storage VM (
 . 在存储图块中，选择*转到存储*。
 . 从存储菜单中，选择 *FSx for ONTAP*。
 . 从 *FSx for ONTAP* 中，选择要更新的文件系统的操作菜单，然后选择 *管理*。
-. 从文件系统概述中，选择*Storage VMS*选项卡。
-. 在“存储虚拟机”选项卡中，选择要为其配置 Active Directory 的存储虚拟机的操作菜单。
+. 在“存储虚拟机”下的文件系统概览中，选择“管理”。
+. 在“管理存储虚拟机”屏幕上，选择要删除的存储虚拟机的操作菜单。
 . 选择*删除Storage VM*。
 . 在删除Storage VM对话框中、键入"delete"以删除此Storage VM。
 . 选择*删除*进行确认。
