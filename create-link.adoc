@@ -43,7 +43,7 @@ NOTE: 使用Connector时不支持AWS的"ConnectOR"管理器。
 * 必须在与 FSx for ONTAP 文件系统关联的安全组中打开以下端口以实现链路连接。
 +
 ** 对于 Workload Factory 控制台：端口 443 (HTTPS)
-** 对于 CloudShell：端口 22 (SSH)
+** 用于ONTAP应急管理系统 (EMS) 事件分析的 CloudShell 和 FSx：端口 22 (SSH)
 
 
 * 使用CloudFormation堆栈添加链接时、您的AWS帐户必须具有以下权限：
