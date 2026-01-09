@@ -2,7 +2,7 @@
 :allow-uri-read: 
 
 
-. 在"Create FSx for ONTAP (创建FSx for Windows)"页面上、选择*高级创建*。
+. 在“为ONTAP文件系统创建 FSx”页面上，选择“高级创建”。
 +
 您也可以加载已保存的配置。
 

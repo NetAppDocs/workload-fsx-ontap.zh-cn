@@ -36,12 +36,9 @@ NOTE: 仅第二代文件系统支持减少 SSD 存储容量。
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在存储图块中，选择*转到存储*。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
 . 从仪表板中选择*调整 SSD 容量*。
 . 选择您要调整容量的文件系统，然后选择*继续*。
-+
-*潜在节省*是减少容量的建议。
-
 . 在调整 SSD 容量对话框中，输入 *预配置容量* 的数字。
 . 选择已配置容量的单位。
 . 选择 * 应用 * 。

@@ -48,7 +48,7 @@ image:screenshot-on-prem-connectivity.png["屏幕截图、显示应如何将内�
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在存储图块中，选择*转到存储*。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
 . 选择*内部部署ONTAP *选项卡。
 . 选择*发现*。
 . 查看前提条件并选择*Next*。
@@ -84,7 +84,7 @@ image:screenshot-on-prem-connectivity.png["屏幕截图、显示应如何将内�
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在存储图块中，选择*转到存储*。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
 . 从存储菜单中，选择 *On-premises ONTAP*。
 . 要按Storage VM查找卷、您可以从下拉列表中*选择Storage VM*。
 . 选择一个或多个要复制的卷、然后选择*复制*。
@@ -149,7 +149,7 @@ image:screenshot-on-prem-connectivity.png["屏幕截图、显示应如何将内�
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在存储图块中，选择*转到存储*。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
 . 从存储菜单中，选择 *On-premises ONTAP*。
 . 选择要删除的内部ONTAP集群。
 . 选择操作菜单并选择*从工作负载工厂中删除*。

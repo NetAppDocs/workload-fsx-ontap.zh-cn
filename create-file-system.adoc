@@ -42,8 +42,9 @@ NOTE: 使用来自CodeBox的Terraform时、您复制或下载的代码会隐藏 
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在存储磁贴中，选择*创建 FSx for ONTAP*。
-. 在"Create FSx for ONTAP (创建FSx for Windows)"页面上、选择*快速创建*。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
+. 从存储控制面板中，选择“创建文件系统”。
+. 在创建 FSx for ONTAP文件系统页面上，选择*快速创建*。
 +
 您也可以加载已保存的配置。
 
@@ -115,7 +116,7 @@ NOTE: 使用来自CodeBox的Terraform时、您复制或下载的代码会隐藏 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 在存储磁贴中，选择*创建 FSx for ONTAP*。
-. 在"Create FSx for ONTAP (创建FSx for Windows)"页面上、选择*高级创建*。
+. 在“为ONTAP文件系统创建 FSx”页面上，选择“高级创建”。
 +
 您也可以加载已保存的配置。
 

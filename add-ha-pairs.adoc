@@ -43,7 +43,7 @@ summary: 将高可用性对添加到NetApp Workload Factory 中的文件系统�
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在存储图块中，选择*转到存储*。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
 . 从存储菜单中，选择 *FSx for ONTAP*。
 . 从 *信息* 下的 *FSx for ONTAP* 中，选择 *HA 对* 旁边的铅笔图标。
 . 在*添加HA对*对话框中，选择要添加到文件系统的HA对的数量。

@@ -78,7 +78,7 @@ NOTE: 使用来自CodeBox的Terraform时、您复制或下载的代码会隐藏 
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在存储图块中，选择*转到存储*。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
 . 从存储菜单中，选择 *FSx for ONTAP*。
 . 从 *FSx for ONTAP* 中，选择要在其中创建卷的文件系统的操作菜单，然后选择 *创建卷*。
 . 在Create volume页面上的General Details下、提供以下详细信息：
@@ -168,7 +168,7 @@ ONTAP 使用重复数据删除和压缩功能实现存储效率。重复数据�
 
 .. *Snapshot policy*：选择快照策略以指定快照的频率和保留时间。
 +
-以下是 AWS 的默认策略。要显示现有的快照策略，您必须 link:link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["关联链接"]。
+以下是 AWS 的默认策略。要显示现有的快照策略，您必须 link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["关联链接"]。
 
 +
 `default`:: 此策略会按照以下计划自动创建快照、并删除最早的快照副本、以便为较新的副本腾出空间：

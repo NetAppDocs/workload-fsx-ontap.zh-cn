@@ -4,14 +4,14 @@ permalink: manage-block-devices.html
 keywords: block devices, manage luns, manage iscsi 
 summary: 在NetApp Workload Factory中管理 FSx for ONTAP文件系统的块设备。 
 ---
-= 管理 FSx for ONTAP文件系统的块设备
+= 在NetApp Workload Factory中管理文件系统的块设备
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-通过NetApp Workload Factory控制台，您可以管理 FSx for ONTAP文件系统的块设备。管理任务包括查看块设备详细信息和增加容量。
+通过NetApp Workload Factory控制台，您可以管理 FSx for ONTAP文件系统的块设备。管理任务包括查看块设备详细信息、增加容量、管理客户端访问、归档块设备数据和删除块设备。
 
 .关于此任务
 块设备，或称 LUN（逻辑单元号），是 SAN 环境中包含文件系统的卷，可通过网络被主机访问。
@@ -31,7 +31,7 @@ summary: 在NetApp Workload Factory中管理 FSx for ONTAP文件系统的块设�
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在存储图块中，选择*转到存储*。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
 . 从存储菜单中，选择 *FSx for ONTAP*。
 . 从 *FSx for ONTAP* 中选择 *块设备* 选项卡。
 . 导航至块设备的操作菜单，然后选择*查看详细信息*。
@@ -48,7 +48,7 @@ summary: 在NetApp Workload Factory中管理 FSx for ONTAP文件系统的块设�
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在存储图块中，选择*转到存储*。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
 . 从存储菜单中，选择 *FSx for ONTAP*。
 . 从 *FSx for ONTAP* 中选择 *块设备* 选项卡。
 . 导航至块设备的操作菜单，然后选择“增加容量”。
@@ -58,6 +58,63 @@ summary: 在NetApp Workload Factory中管理 FSx for ONTAP文件系统的块设�
 
 
 NOTE: 增加块设备的大小后，按照主机操作系统提供的步骤来发现块设备的新大小，并扩展其上的文件系统。
+
+
+
+== 管理块设备的客户端访问权限
+
+您可以随时通过创建 igroup、添加或删除块设备和主机发起程序来管理现有块设备的客户端访问权限。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
+. 从存储菜单中，选择 *FSx for ONTAP*。
+. 从 *FSx for ONTAP* 中选择 *块设备* 选项卡。
+. 导航至块设备的操作菜单，然后选择“管理客户端访问”。
+. 如果不存在 igroup，请选择“创建 igroup”创建一个新的 igroup，然后执行以下操作：
++
+.. *块设备名称*：请输入块设备名称。您可以选择多个块设备与 igroup 关联。
+.. *操作系统类型*：选择操作系统类型。
+.. *igroup 名称*：请输入 igroup 名称。
+.. *igroup 描述*：可选，输入 igroup 描述。
+.. *主机发起程序*：输入一个或多个主机发起程序。这些发起程序必须遵循 iSCSI 合格 (IQN) 格式。
+.. 选择 * 创建 * 。
+
+
+. 如果 igroup 已存在，请选择“编辑客户端访问”以向 igroup 添加或删除块设备和主机发起程序，然后选择“应用”。
+
+
+
+
+== 将孤立块设备的数据归档
+
+不再映射到客户端或连续七天未使用的块设备将被归类为孤立块设备。您可以将孤立块设备的数据归档到容量池层，以回收 SSD 容量。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
+. 从存储菜单中，选择 *FSx for ONTAP*。
+. 从 *FSx for ONTAP* 中选择 *块设备* 选项卡。
+. 在“孤立设备”下，选择“查看和回收容量”。
+. 在“回收未使用的块设备空间”屏幕上，选择一个或多个块设备来归档数据并回收容量。
+. 选择“存档”。
+
+
+
+
+== 删除块设备
+
+不再映射到客户端或连续七天未使用的块设备将被归类为孤立块设备。此操作会取消映射并删除选定的块设备。如果主机FlexVol volume不包含任何块设备，Workload Factory 也会将其删除。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
+. 从存储菜单中，选择 *FSx for ONTAP*。
+. 从 *FSx for ONTAP* 中选择 *块设备* 选项卡。
+. 在“孤立设备”下，选择“查看和回收容量”。
+. 在“回收未使用的块设备空间”屏幕上，选择一个或多个块设备来归档数据并回收容量。
+. 选择 * 删除 * 。
+
 
 
 

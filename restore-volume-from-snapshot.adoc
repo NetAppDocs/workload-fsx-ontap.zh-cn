@@ -27,7 +27,7 @@ summary: 当FSx for ONTAP卷包含已删除或损坏的文件时、从快照还�
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在*存储*中，选择*转到存储*。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
 . 从存储菜单中，选择 *FSx for ONTAP*。
 . 从 *FSx for ONTAP* 中，选择带有卷的文件系统的操作菜单，然后选择 *管理*。
 . 在文件系统概述中，选择*Volumes*选项卡。

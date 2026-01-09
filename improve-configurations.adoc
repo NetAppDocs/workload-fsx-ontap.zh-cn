@@ -30,10 +30,9 @@ link:configuration-analysis.html["了解 Workload Factory 中的配置分析和�
 工作负载工厂会分析FSx for ONTAP文件系统的以下配置的架构良好状态：
 
 * 可靠性：SSD 容量阈值、计划的本地快照、FSx for ONTAP备份、远程数据复制以及长期保留的数据可靠性
-* 安全性： NetApp自主勒索软件防护（具备 AI 功能，即 ARP/AI）和卷未经授权访问防护
-* 卓越运营：自动容量管理、卷文件容量利用率阈值以及卷利用率接近饱和
-* 成本优化：存储效率、数据分层和不必要的快照删除
-* 性能优化： FlexGroup卷重新平衡
+* 安全性： NetApp自主勒索软件防护（含 AI 功能，ARP/AI 已禁用）以及对卷的未经授权访问
+* 卓越运营：自动容量管理、卷文件容量利用率阈值、卷利用率接近满值以及缓存关系写入模式
+* 成本优化：提高存储效率、数据分层、删除不必要的快照和备份
 
 
 
@@ -50,7 +49,7 @@ link:configuration-analysis.html["了解 Workload Factory 中的配置分析和�
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在存储图块中，选择*转到存储*。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
 . 从存储菜单中，选择 *FSx for ONTAP*。
 . 从 *FSx for ONTAP* 中，选择要更新的文件系统的操作菜单，然后选择 *管理*。
 . 从 FSx for ONTAP文件系统概览导航到 *Well-architected status* 选项卡。
@@ -84,7 +83,7 @@ link:configuration-analysis.html["了解 Workload Factory 中的配置分析和�
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在存储图块中，选择*转到存储*。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
 . 从存储菜单中，选择 *FSx for ONTAP*。
 . 从 *FSx for ONTAP* 中，选择文件系统的操作菜单，然后选择 *管理*。
 . 从 FSx for ONTAP文件系统概览导航到 *Well-architected status* 选项卡。
@@ -97,7 +96,7 @@ link:configuration-analysis.html["了解 Workload Factory 中的配置分析和�
 --
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在存储图块中，选择*转到存储*。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
 . 从存储菜单中，选择 *FSx for ONTAP*。
 . 从 *FSx for ONTAP* 中，选择文件系统的操作菜单，然后选择 *管理*。
 . 从 FSx for ONTAP文件系统概览导航到 *Well-architected status* 选项卡。
@@ -131,7 +130,7 @@ link:configuration-analysis.html["了解 Workload Factory 中的配置分析和�
 --
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在存储图块中，选择*转到存储*。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
 . 从存储菜单中，选择 *FSx for ONTAP*。
 . 从 *FSx for ONTAP* 中，选择文件系统的 actionsenu，然后选择 *Manage*。
 . 从 FSx for ONTAP文件系统概览导航到 *Well-architected status* 选项卡。
@@ -144,7 +143,7 @@ link:configuration-analysis.html["了解 Workload Factory 中的配置分析和�
 --
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在存储图块中，选择*转到存储*。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
 . 从存储菜单中，选择 *FSx for ONTAP*。
 . 从 *FSx for ONTAP* 中，选择文件系统的操作菜单，然后选择 *管理*。
 . 从 FSx for ONTAP文件系统概览导航到 *Well-architected status* 选项卡。

@@ -2,7 +2,7 @@
 :allow-uri-read: 
 
 
-. 在"Create FSx for ONTAP (创建FSx for Windows)"页面上、选择*快速创建*。
+. 在创建 FSx for ONTAP文件系统页面上，选择*快速创建*。
 +
 您也可以加载已保存的配置。
 

@@ -38,13 +38,15 @@ ARP/AI 功能会根据Amazon FSx for NetApp ONTAP运行的ONTAP版本自动更�
 +
 在活动模式下、如果文件扩展名被标记为异常、则应评估警报。您可以对警报采取措施来保护您的数据、也可以将警报标记为误报。将警报标记为误报可更新警报配置文件。例如、如果警报由新文件扩展名触发、而您将警报标记为误报、则下次观察到该文件扩展名时、您不会收到警报。
 
++
+包含块设备的FlexVol卷以活动模式启动 ARP/AI。
+
 
 
 --
 不支持的配置:: 以下配置不支持使用 ARP/AI。
 +
 --
-* SAN/块卷
 * iSCSI 卷
 * NVMe卷
 
@@ -69,7 +71,7 @@ ARP/AI 功能会根据Amazon FSx for NetApp ONTAP运行的ONTAP版本自动更�
 --
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在存储图块中，选择*转到存储*。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
 . 从存储菜单中，选择 *FSx for ONTAP*。
 . 从 *FSx for ONTAP* 中，选择文件系统的操作菜单以启用 ARP/AI，然后选择 *管理*。
 . 在信息下，选择“自主勒索软件防护”旁边的铅笔图标。当鼠标悬停在“Autonomous Ransomware Protection”行上时，箭头旁边会出现一个铅笔图标。
@@ -90,7 +92,7 @@ ARP/AI 功能会根据Amazon FSx for NetApp ONTAP运行的ONTAP版本自动更�
 --
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在存储图块中，选择*转到存储*。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
 . 从存储菜单中，选择 *FSx for ONTAP*。
 . 从 *FSx for ONTAP* 中，选择文件系统的操作菜单以启用 ARP/AI，然后选择 *管理*。
 . 从“卷”选项卡中，选择卷的操作菜单以启用 ARP/AI，然后选择*数据保护操作*，然后选择*管理 ARP/AI*。
@@ -114,7 +116,7 @@ ARP/AI 功能会根据Amazon FSx for NetApp ONTAP运行的ONTAP版本自动更�
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在存储图块中，选择*转到存储*。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
 . 从存储菜单中，选择 *FSx for ONTAP*。
 . 从 *FSx for ONTAP* 中，选择要验证勒索软件攻击的文件系统。
 . 从文件系统概述中，选择*Volumes*选项卡。
@@ -136,7 +138,7 @@ ARP/AI 功能会根据Amazon FSx for NetApp ONTAP运行的ONTAP版本自动更�
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在存储图块中，选择*转到存储*。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
 . 从存储菜单中，选择 *FSx for ONTAP*。
 . 从 *FSx for ONTAP* 中，选择要恢复数据的文件系统。
 . 从文件系统概述中，选择*Volumes*选项卡。

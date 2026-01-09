@@ -17,7 +17,7 @@ summary: 根据需要更新NetApp Workload Factory 中 FSx for ONTAP文件系统
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在存储图块中，选择*转到存储*。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
 . 从存储菜单中，选择 *FSx for ONTAP*。
 . 从 *FSx for ONTAP* 中，选择要更新吞吐量容量的文件系统的操作菜单，然后选择 *管理*。
 . 在信息下，选择*吞吐量*旁边的铅笔图标。鼠标悬停在*吞吐量*行上时，下拉箭头旁边将显示铅笔图标。

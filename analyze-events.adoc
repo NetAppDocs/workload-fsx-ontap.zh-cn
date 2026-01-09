@@ -101,11 +101,13 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解�
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在存储图块中，选择*转到存储*。
-. 从存储菜单中，选择 *FSx for ONTAP*。
-. 选择要分析的 FSx for ONTAP文件系统，然后选择“管理”。
-. 选择“分析”选项卡。
-. 如有需要，请按照屏幕提示完成*AI 分析设置要求*，以满足任何缺失的先决条件。
-. 选择“分析”。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
+. 从“存储”菜单中，选择“分析”。
+. 在“分析”屏幕中，选择包含要分析的 FSx for ONTAP文件系统的 AWS 账户、凭证和区域。
++
+仅支持在屏幕上显示事件的ONTAP文件系统的 FSx。
+
+. 如有需要，请按照屏幕提示完成 AI 分析设置要求，以满足任何缺失的先决条件。
+. 找到要分析的 FSx for ONTAP文件系统，然后选择“查看事件”。
 . 请查看详细的活动信息。
 

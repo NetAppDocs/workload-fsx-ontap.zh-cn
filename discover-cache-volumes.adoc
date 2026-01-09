@@ -29,7 +29,7 @@ link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/using-flexcache.html["了
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在存储图块中，选择*转到存储*。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
 . 从存储菜单中，选择 *FSx for ONTAP*。
 . 从 *FSx for ONTAP* 中，选择 *Cache relationships* 选项卡。
 . 您的缓存卷出现在表中。该表包含有关每个缓存卷的以下信息：

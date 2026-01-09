@@ -29,7 +29,7 @@ summary: 根据需要，在NetApp Workload Factory中管理 FSx for ONTAP文件�
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在存储图块中，选择*转到存储*。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
 . 从存储菜单中，选择 FSx for ONTAP。
 . 在 FSx for ONTAP中，选择包含缓存卷的文件系统的操作菜单，然后选择“管理”。
 . 从文件系统概览中，选择“缓存关系”选项卡。
@@ -45,7 +45,7 @@ summary: 根据需要，在NetApp Workload Factory中管理 FSx for ONTAP文件�
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在存储图块中，选择*转到存储*。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
 . 从存储菜单中，选择 FSx for ONTAP。
 . 在 FSx for ONTAP中，选择包含缓存卷的文件系统的操作菜单，然后选择“管理”。
 . 从文件系统概览中，选择“缓存关系”选项卡。
@@ -61,7 +61,7 @@ summary: 根据需要，在NetApp Workload Factory中管理 FSx for ONTAP文件�
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在存储图块中，选择*转到存储*。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
 . 从存储菜单中，选择 FSx for ONTAP。
 . 在 FSx for ONTAP中，选择包含缓存卷的文件系统的操作菜单，然后选择“管理”。
 . 从文件系统概览中，选择“缓存关系”选项卡。
@@ -80,7 +80,7 @@ summary: 根据需要，在NetApp Workload Factory中管理 FSx for ONTAP文件�
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在存储图块中，选择*转到存储*。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
 . 从存储菜单中，选择 FSx for ONTAP。
 . 在 FSx for ONTAP中，选择包含缓存卷的文件系统的操作菜单，然后选择“管理”。
 . 从文件系统概览中，选择“缓存关系”选项卡。
@@ -96,7 +96,7 @@ summary: 根据需要，在NetApp Workload Factory中管理 FSx for ONTAP文件�
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在存储图块中，选择*转到存储*。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
 . 从存储菜单中，选择 FSx for ONTAP。
 . 在 FSx for ONTAP中，选择包含缓存卷的文件系统的操作菜单，然后选择“管理”。
 . 从文件系统概览中，选择“缓存关系”选项卡。
@@ -112,7 +112,7 @@ summary: 根据需要，在NetApp Workload Factory中管理 FSx for ONTAP文件�
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在存储图块中，选择*转到存储*。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
 . 从存储菜单中，选择 FSx for ONTAP。
 . 在 FSx for ONTAP中，选择包含缓存卷的文件系统的操作菜单，然后选择“管理”。
 . 从文件系统概览中，选择“缓存关系”选项卡。

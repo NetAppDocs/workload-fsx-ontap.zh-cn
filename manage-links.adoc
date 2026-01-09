@@ -56,7 +56,7 @@ NOTE: 每个链路仅支持一种身份验证方法。例如、如果您选择�
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在存储图块中，选择*转到存储*。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
 . 从存储菜单中，选择 *FSx for ONTAP*。
 . 从 *FSx for ONTAP* 中，选择要关联链接的文件系统的操作菜单，然后选择 *管理*。
 . 在文件系统概述中，选择*鉴定链接*。
@@ -80,7 +80,7 @@ NOTE: 每个链路仅支持一种身份验证方法。例如、如果您选择�
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在存储图块中，选择*转到存储*。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
 . 从存储菜单中，选择 *FSx for ONTAP*。
 . 从 *FSx for ONTAP* 中，选择要关联链接的文件系统的操作菜单，然后选择 *管理*。
 . 在文件系统概述中，选择*更新密码*。
@@ -101,7 +101,7 @@ NOTE: 每个链路仅支持一种身份验证方法。例如、如果您选择�
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在存储图块中，选择*转到存储*。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
 . 从存储菜单中，选择*管理*，然后选择*链接*。
 +
 现有链接出现在链接页面上。
