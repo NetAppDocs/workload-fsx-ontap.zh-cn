@@ -1240,7 +1240,6 @@
   <block id="824994853534784eb4495b892e13b1c6" category="paragraph">如果您提供的用户不是fsxadmin用户、而稍后您需要重置fsxadmin密码、则可以从AWS控制台执行此操作。</block>
   <block id="dd34b811cd079417f985f8f56a4f1dca" category="list-text">* Storage VM凭据*：可选。输入您的用户名。密码可以特定于此文件系统、也可以使用为ONTAP凭据输入的相同密码。可以现在或稍后设置密码。</block>
   <block id="37b002845528ac0296b86d28bb71e5a5" category="doc">使用Lamba链接连接到FSx for ONTAP文件系统</block>
-  <block id="3909315ab3cc8353eec0cd02ce0845da" category="admonition">使用Connector时不支持AWS的"ConnectOR"管理器。</block>
   <block id="2c1b9e7969c6e96f38bd871fc9f26ae1" category="section-title">关联新链接</block>
   <block id="05a2e668e80fd3ace12e9585ebc06578" category="paragraph">关联新链接包括创建和关联。</block>
   <block id="de786693aed7955f1cb538f51e25f7d6" category="paragraph">您可以根据默认权限创建机密、也可以为链接策略分配自定义权限。</block>
@@ -2560,4 +2559,5 @@
   <block id="2c77adf5fa1de4ed37a6e14d2212f074" category="list-text">选择“存档”。</block>
   <block id="b06e53572a17ccf08cb282ac59af4b93" category="paragraph">不再映射到客户端或连续七天未使用的块设备将被归类为孤立块设备。此操作会取消映射并删除选定的块设备。如果主机FlexVol volume不包含任何块设备，Workload Factory 也会将其删除。</block>
   <block id="33e155c9d3cab85dd1499ba63bd9d34d" category="paragraph">包含块设备的FlexVol卷以活动模式启动 ARP/AI。</block>
+  <block id="aca2e051b8b58a53ee4cf20a78bdde8a" category="list-text">该链接必须能够连接到以下端点：\ https://api.workloads.netapp.com.基于 Web 的控制台通过与 Workload Factory API 交互来管理和操作 FSx for ONTAP工作负载。</block>
 </blocks>
