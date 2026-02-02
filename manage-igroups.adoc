@@ -1,0 +1,69 @@
+---
+sidebar: sidebar 
+permalink: manage-igroups.html 
+keywords: igroup, manage igroups, manage client access, delete igroup 
+summary: 在 NetApp Workload Factory 中管理 FSx for ONTAP 文件系统的 igroup。 
+---
+= 在 NetApp Workload Factory 中管理文件系统的 igroup
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用 NetApp Workload Factory 控制台管理 igroup 并控制 FSx for ONTAP 块设备的客户端访问。您可以查看 igroup 详细信息、管理客户端访问权限和删除 igroup。
+
+.开始之前
+* 您必须关联链接才能管理 igroups。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何关联现有链接或创建并关联新链接"]。关联链接后，返回此操作。
+* 您必须有一个现有的 igroup 才能查看和管理。
+
+
+
+
+== 管理 igroup 的客户端访问
+
+您可以随时管理现有 igroup 的客户端访问权限。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
+. 从存储菜单中，选择 *FSx for ONTAP*。
+. 从 *FSx for ONTAP* 中选择 *块设备* 选项卡。
+. 选择资源类型 *Initiator groups (igroups)* 以查看现有 igroups。
+. 转到块设备的操作菜单，然后选择 *管理客户端访问权限*。
+. 查看为 igroup 显示的客户端访问详细信息。
+. 要更改客户端访问权限，请选择 *Edit client access*。
+. 在 *编辑客户端访问权限* 对话框中，您可以编辑以下内容：
++
+** *igroup name*
+** *igroup 描述*
+** *Storage VM 名称*
+** *块设备名称*
+** *操作系统类型*
+** *主机启动器*
+
+
+. 选择 * 应用 * 。
+
+
+
+
+== 删除 igroup
+
+您可以在不再需要现有的 igroup 时将其删除。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
+. 从存储菜单中，选择 *FSx for ONTAP*。
+. 从 *FSx for ONTAP* 中选择 *块设备* 选项卡。
+. 选择资源类型 *Initiator groups (igroups)* 以查看现有 igroups。
+. 导航到块设备的操作菜单，然后选择 *Delete initiator group*。
+. 在 Delete initiator group (igroup) 对话框中，键入"delete"以确认要删除该 igroup，然后选择 *Delete*。
+
+
+
+
+== 相关信息
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-igroup.html["为 FSx for ONTAP 文件系统创建 igroup"]

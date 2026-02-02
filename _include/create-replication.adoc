@@ -2,8 +2,6 @@
 :allow-uri-read: 
 
 
-. * Storage VM名称*：从下拉菜单中选择Storage VM。您选择的存储虚拟机是此复制关系中所有选定卷的目标。
-. *卷名*：目标卷名称将自动生成，格式如下 `{OriginalVolumeName}_copy`。您可以使用自动生成的卷名称或输入其他卷名称。
 . *用例*：选择以下其中一个用例进行复制。根据所选的用例，Workload Factory 会根据最佳实践在表单中填写推荐值。您可以接受建议的值，也可以在填写表格时进行更改。
 +
 ** 迁移：将数据传输到目标FSx for ONTAP文件系统
@@ -28,6 +26,9 @@
 
 
 
+. *FSx for ONTAP file system*：为目标FSx for ONTAP文件系统选择ONTAP文件系统的凭据、区域和FSx名称。
+. * Storage VM名称*：从下拉菜单中选择Storage VM。您选择的存储虚拟机是此复制关系中所有选定卷的目标。
+. *卷名*：目标卷名称将自动生成，格式如下 `{OriginalVolumeName}_copy`。您可以使用自动生成的卷名称或输入其他卷名称。
 . *分层策略*：为目标卷中存储的数据选择分层策略。对于您选择的使用情形、此层策略默认为建议的层策略。
 +
 使用 Workload Factory 控制台创建卷时，_平衡（自动）_ 是默认分层策略。有关卷分层策略的更多信息，请参阅link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["卷存储容量"^]在 AWS FSx for NetApp ONTAP文档中。请注意，工作负载工厂在工作负载工厂控制台中使用基于用例的名称来制定分层策略，并在括号中包含 FSx for ONTAP分层策略名称。
@@ -62,4 +63,14 @@ NOTE: 长期保留需要匹配的源标签和目标标签。如果需要、工�
 ** *Snapshot策略*：在表中，选择快照策略频率和要保留的副本数。您可以选择多个快照策略。
 
 
+. *S3 访问点*：可选地，通过 AWS S3 API 连接 S3 访问点，以访问驻留在 NFS 或 SMB/CIFS 卷上的 FSx for ONTAP文件系统数据。仅支持文件访问类型。提供以下详细信息：
++
+** *S3接入点名称*：输入S3接入点的名称。
+** *用户*：选择有权访问该卷的现有用户或创建新用户。
+** *用户类型*：选择*UNIX*或*Windows*作为用户类型。
+** *网络配置*：选择 *Internet* 或 *Virtual private cloud (VPC)*。您选择的网络类型决定了接入点是可从互联网访问还是仅限于特定的 VPC。
+** *启用元数据*：启用元数据会创建一个 S3 表，其中包含 S3 访问点可访问的所有对象，可用于审计、治理、自动、分析和优化。启用元数据会产生额外的 AWS 成本。有关详细信息，请参见 link:https://aws.amazon.com/s3/pricing/["Amazon S3 定价文档"^]。
+
+
+. *S3 接入点标签*：您最多可以添加 50 个标签（可选）。
 

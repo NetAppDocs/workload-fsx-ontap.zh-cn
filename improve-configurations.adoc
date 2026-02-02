@@ -17,7 +17,10 @@ summary: 工作负载工厂扫描Amazon FSx for NetApp ONTAP配置，提供见�
 
 link:configuration-analysis.html["了解 Workload Factory 中的配置分析和良好架构状态。"]
 
-.关于此任务
+
+
+== 关于此任务
+
 工作负载工厂每日分析Amazon FSx for NetApp ONTAP文件系统部署配置。每日分析提供架构完善的状态、见解和建议，以及自动修复配置问题的选项，确保您的文件系统符合最佳实践。
 
 链接连接允许 Workload Factory 扫描性能、数据保护和配置方面的问题。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["使用链接连接到 FSx for ONTAP文件系统"]对您的文件系统资源进行最全面的分析。
@@ -31,8 +34,17 @@ link:configuration-analysis.html["了解 Workload Factory 中的配置分析和�
 
 * 可靠性：SSD 容量阈值、计划的本地快照、FSx for ONTAP备份、远程数据复制以及长期保留的数据可靠性
 * 安全性： NetApp自主勒索软件防护（含 AI 功能，ARP/AI 已禁用）以及对卷的未经授权访问
-* 卓越运营：自动容量管理、卷文件容量利用率阈值、卷利用率接近满值以及缓存关系写入模式
-* 成本优化：提高存储效率、数据分层、删除不必要的快照和备份
+* 卓越运营：自动容量管理、卷文件容量利用率阈值、卷利用率接近满、缓存关系写入模式、优化缓存卷大小和卷逻辑容量报告
+* 成本优化：存储效率、数据分层、不必要的快照和备份删除以及孤立的块设备
+
+
+
+
+== 开始之前
+
+* 您必须在 AWS 帐户中link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["授予 _操作和修复_ 权限"^]。
+* 修复过程可能会导致实例停机或服务中断。在选择修复配置问题之前，请务必仔细查看每条建议。
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["使用链接连接到 FSx for ONTAP文件系统"]对您的文件系统资源进行最全面的分析。
 
 
 
@@ -41,20 +53,11 @@ link:configuration-analysis.html["了解 Workload Factory 中的配置分析和�
 
 您可以修复 FSx for ONTAP文件系统或文件系统中选定卷的配置问题。您可以选择一个或多个要修复的配置。
 
-.开始之前
-* 你必须link:link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["授予 _操作和修复_ 权限"^]在您的 AWS 账户中。
-* 修复过程可能会导致实例停机或服务中断。在选择修复配置问题之前，请务必仔细查看每条建议。
-* link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["使用链接连接到 FSx for ONTAP文件系统"]对您的文件系统资源进行最全面的分析。
-
-
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
-. 从存储菜单中，选择 *FSx for ONTAP*。
-. 从 *FSx for ONTAP* 中，选择要更新的文件系统的操作菜单，然后选择 *管理*。
-. 从 FSx for ONTAP文件系统概览导航到 *Well-architected status* 选项卡。
-. 或者，按类别、子类别、状态、严重性和标签过滤配置问题。
-. 对于任何配置，选择“查看建议”。请务必仔细阅读该建议。
+. 从 Storage 菜单中，选择 *Well-architected*。
+. 为任何配置选择 *View issues*。请务必仔细阅读建议。
 +
 此建议说明了未优化配置的最佳实践和潜在陷阱。
 
@@ -79,16 +82,16 @@ link:configuration-analysis.html["了解 Workload Factory 中的配置分析和�
 ====
 .取消文件系统的配置分析
 --
-关闭以无限期停止 FSx for ONTAP文件系统的配置分析。您可以在需要时重新开始分析。
-
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
-. 从存储菜单中，选择 *FSx for ONTAP*。
-. 从 *FSx for ONTAP* 中，选择文件系统的操作菜单，然后选择 *管理*。
-. 从 FSx for ONTAP文件系统概览导航到 *Well-architected status* 选项卡。
-. 在*配置*下，确定您想要关闭的配置并选择*关闭*。
-. 选择“*Dismiss*”即可停止配置分析。
+. 从 Storage 菜单中，选择 *Well-architected*。
+. 为任何配置选择 *View issues*。请务必仔细阅读建议。
++
+此建议说明了未优化配置的最佳实践和潜在陷阱。
+
+. 在"配置"下，确定不适用于您的环境的配置，然后选择 *关闭*。
+. 在 Dismiss configuration 对话框中，选择 *Dismiss* 停止配置分析。
 
 
 --
@@ -97,10 +100,8 @@ link:configuration-analysis.html["了解 Workload Factory 中的配置分析和�
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
-. 从存储菜单中，选择 *FSx for ONTAP*。
-. 从 *FSx for ONTAP* 中，选择文件系统的操作菜单，然后选择 *管理*。
-. 从 FSx for ONTAP文件系统概览导航到 *Well-architected status* 选项卡。
-. 在*配置*下，确定要关闭的选定卷的配置，然后选择*查看并修复*。
+. 从 Storage 菜单中，选择 *Well-architected*。
+. 在"配置"下，确定要为所选卷解除的配置，然后选择 *查看并修复*。
 . 确定要从配置分析中忽略的卷。
 +
 ** 对于一个卷：选择操作菜单，然后选择*关闭卷*。
@@ -131,10 +132,8 @@ link:configuration-analysis.html["了解 Workload Factory 中的配置分析和�
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
-. 从存储菜单中，选择 *FSx for ONTAP*。
-. 从 *FSx for ONTAP* 中，选择文件系统的 actionsenu，然后选择 *Manage*。
-. 从 FSx for ONTAP文件系统概览导航到 *Well-architected status* 选项卡。
-. 在*配置*旁边，选择*已消除的配置*。
+. 从 Storage 菜单中，选择 *Well-architected*。
+. 选择 *Dismissed configurations*。
 . 确定您想要重新激活的配置并选择*重新激活*。
 
 
@@ -144,13 +143,11 @@ link:configuration-analysis.html["了解 Workload Factory 中的配置分析和�
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
-. 从存储菜单中，选择 *FSx for ONTAP*。
-. 从 *FSx for ONTAP* 中，选择文件系统的操作菜单，然后选择 *管理*。
-. 从 FSx for ONTAP文件系统概览导航到 *Well-architected status* 选项卡。
-. 在*配置*下，确定要为选定卷重新激活的配置，然后选择*查看并修复*。
+. 从 Storage 菜单中，选择 *Well-architected*。
+. 选择 *Dismissed configurations*。
 . 从配置分析中识别要重新激活的卷。
 +
-** 对于一个卷：选择操作菜单，然后选择*重新激活卷*。
+** 对于一个卷：选择操作菜单，然后选择 *重新激活卷*。
 ** 对于多个卷：选择卷，然后选择批量操作旁边的*重新激活*。
 
 

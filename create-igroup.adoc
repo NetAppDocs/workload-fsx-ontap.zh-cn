@@ -1,0 +1,44 @@
+---
+sidebar: sidebar 
+permalink: create-igroup.html 
+keywords: create initiator group, create igroup, iscsi protocol 
+summary: 创建启动器组，以管理对 NetApp Workload Factory 中块设备的主机访问。 
+---
+= 在 NetApp Workload Factory 中为文件系统创建启动程序组
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用 NetApp Workload Factory 创建启动器组并管理对 SAN 块设备的主机访问。
+
+.关于此任务
+启动器组或 igroups 将块设备（LUN）连接到允许访问它们的计算资源。与 NFS 或 CIFS 不同，在 NFS 或 CIFS 中，卷可以广泛访问，用户权限控制访问，而块存储权限则在计算机级别运行。通常，一次只能有一个系统访问一个块设备。
+
+igroup 充当块存储的权限层。当服务器连接到存储系统时，它会使用其 iSCSI qualified (IQN) 主机启动器来标识自己。如果该 IQN 属于一个或多个 igroup，则服务器将获得对与这些 igroup 关联的所有 LUN 的访问权限。iSCSI 正常工作需要 igroup 和 iSCSI 主机连接。
+
+.开始之前
+您必须关联一个链接以创建 igroups。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何关联现有链接或创建并关联新链接"]。关联链接后，返回此操作。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 在存储图块中，选择*转到存储*。
+. 从存储菜单中，选择 *FSx for ONTAP*。
+. 从 *FSx for ONTAP* 中选择 *块设备* 选项卡。
+. 选择资源类型 *Create initiator group*，然后选择 *Create igroup*。
+. 在 *Create initiator group* 对话框中，执行以下操作：
++
+** *igroup name*：输入启动器组的名称。
+** *igroup description*：（可选）输入启动程序组的描述。
+** *Storage VM 名称*：为启动程序组选择 Storage VM。
+** *Block device name*：选择一个或多个块设备与启动器组关联。列出的块设备是尚未映射到主机启动器的设备。
+** *操作系统类型*：选择 Linux、VMware 或 Windows 作为操作系统类型。
+** *主机启动程序*：将一个或多个 iSCSI 合格 (IQN) 主机启动程序添加到启动程序组。
+
+
+. 选择 * 创建 * 。
+
+
+.相关信息
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-igroups.html["管理 FSx for ONTAP 文件系统的 igroups"]

@@ -11,10 +11,58 @@ summary: 在NetApp Workload Factory中管理卷的 S3 访问点。
 
 
 [role="lead"]
-在NetApp Workload Factory中管理卷的 S3 访问点。您可以使用 Workload Factory 控制台将 S3 访问点分配给现有卷或删除 S3 访问点。
+在 NetApp Workload Factory 中管理卷的 S3 访问点。您可以使用 Workload Factory 控制台将 S3 访问点分配给现有卷、查看 S3 存储桶的详细信息、对现有访问点进行更改或删除 S3 访问点。
+
+.关于此任务
+Amazon FSx for NetApp ONTAP 支持对 NFS 和 SMB 文件系统的 S3 数据访问，使其能够与数十种基于 S3 的 AWS 服务（如 Amazon Bedrock、SageMaker、Athena、AWS Glue 等）集成。您可以将 AWS 服务连接到所有对象存储数据。
+
+通过将 S3 接入点附加到 FSx for ONTAP 文件系统中的 NFS 和 SMB 卷，任何 AWS 服务都可以像在 S3 存储桶中一样访问存储在这些卷中的文件。附加接入点时，您需要定义其唯一 ID，指定文件访问类型（UNIX 或 Windows），并添加用户名以授权接入点的文件访问请求。
+
+连接 S3 访问点后，它将显示在 AWS Management Console 中，并具有唯一的访问点别名。此别名用作提供给您要连接的 AWS 服务的 S3 存储桶名称。例如，您可以将别名提供给 Amazon Bedrock 知识库，然后它将使用 FSx for ONTAP 卷中的文件为查询提供上下文相关的答案。
+
+您可以将多个 S3 访问点连接到单个 FSx for ONTAP 卷，每个访问点都有其独特的访问级别，允许您根据需要连接到任意数量的 AWS 服务。
 
 .开始之前
-您必须拥有一个已存在的包含 S3 接入点的卷。
+请确保满足以下要求：
+
+* 您必须拥有一个已存在的包含 S3 接入点的卷。
+* 必须link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["使用 _operations and remediation_ 权限策略授予凭据"^]在 Workload Factory 中才能完成此任务。
+
+
+
+
+== 创建 S3 访问点并将其附加到现有卷
+
+创建 S3 访问点并将其连接到 NetApp Workload Factory 中的现有卷。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
+. 从存储菜单中，选择 *FSx for ONTAP*。
+. 从 *FSx for ONTAP* 中，选择要更新卷的文件系统。
+. 从文件系统概述中，选择*Volumes*选项卡。
+. 在“卷”选项卡中，选择要管理 S3 接入点的卷的操作菜单，然后选择“高级操作”，再选择“管理 S3 接入点”。
+. 选择“创建并连接 S3 接入点”。
+. 在“创建并连接 S3 接入点”对话框中，提供以下信息：
++
+** *S3接入点名称*：输入S3接入点的名称。
+** *用户*：选择有权访问该卷的现有用户或创建新用户。
+** *用户类型*：选择*UNIX*或*Windows*作为用户类型。
+** *启用元数据目录*：选择以启用卷上的元数据，以生成 S3 访问点可访问的所有对象的元数据清单。此功能会产生 AWS 的 S3 请求成本。
+
+
+. 选择“创建并附加”。
+
+
+
+
+== 查看详细信息
+
+在未启用元数据的情况下，别名、ARN 和 S3 URI 是可用的接入点详细信息。
+
+在卷上启用元数据后，您可以查看连接到卷的现有 S3 访问点的访问点、库存表和表存储桶详细信息。还提供了指向 AWS Management Console 中库存表的链接。
+
+接入点详细信息可复制用于其他应用程序。
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
@@ -23,30 +71,57 @@ summary: 在NetApp Workload Factory中管理卷的 S3 访问点。
 . 从 *FSx for ONTAP* 中选择要更新的卷的文件系统的操作菜单，然后选择 *管理*。
 . 从文件系统概述中，选择*Volumes*选项卡。
 . 在“卷”选项卡中，选择要管理 S3 接入点的卷的操作菜单，然后选择“高级操作”，再选择“管理 S3 接入点”。
-. 在“管理 S3 接入点”页面上，您可以创建和附加接入点或删除现有接入点。
-+
-[role="tabbed-block"]
-====
-.创建 S3 访问点并将其附加到现有卷
---
-.. 选择“创建并连接 S3 接入点”。
-.. 在“创建并连接 S3 接入点”对话框中，提供以下信息：
-+
-*** *S3接入点名称*：输入S3接入点的名称。
-*** *用户*：选择有权访问该卷的现有用户或创建新用户。
-*** *用户类型*：选择*UNIX*或*Windows*作为用户类型。
+. 在 *管理 S3 接入点* 屏幕中，选择操作菜单，然后选择 *查看详细信息*。
 
 
-.. 选择“创建并附加”。
 
 
---
-.从卷中删除现有的 S3 访问点
---
-.. 选择要删除的 S3 接入点的操作菜单，然后选择“分离”。
-.. 在“分离并移除 S3 接入点”对话框中，选择“分离并移除”以从卷中删除 S3 接入点。
+== 编辑访问点
+
+更改附加到卷的现有 S3 访问点的用户和用户类型。您还可以启用或禁用访问点的元数据。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
+. 从存储菜单中，选择 *FSx for ONTAP*。
+. 从 *FSx for ONTAP* 中选择要更新的卷的文件系统的操作菜单，然后选择 *管理*。
+. 从文件系统概述中，选择*Volumes*选项卡。
+. 在“卷”选项卡中，选择要管理 S3 接入点的卷的操作菜单，然后选择“高级操作”，再选择“管理 S3 接入点”。
+. 在*管理 S3 接入点*屏幕中，选择操作菜单，然后选择*编辑接入点*。
+. 进行更新，然后选择 *Apply*。
 
 
---
-====
+
+
+== 管理 S3 接入点标签
+
+为连接到卷的现有 S3 访问点添加或删除标记。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
+. 从存储菜单中，选择 *FSx for ONTAP*。
+. 从 *FSx for ONTAP* 中选择要更新的卷的文件系统的操作菜单，然后选择 *管理*。
+. 从文件系统概述中，选择*Volumes*选项卡。
+. 在“卷”选项卡中，选择要管理 S3 接入点的卷的操作菜单，然后选择“高级操作”，再选择“管理 S3 接入点”。
+. 在 *管理 S3 接入点* 屏幕中，选择操作菜单，然后选择 *管理标签*。
+. 在"管理 S3 接入点标记"对话框中，您最多可以为 S3 接入点添加 50 个标记或删除标记。
+. 选择 * 应用 * 。
+
+
+
+
+== 从卷中删除现有的 S3 访问点
+
+从 NetApp Workload Factory 中的卷删除现有 S3 访问点。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
+. 从存储菜单中，选择 *FSx for ONTAP*。
+. 从 *FSx for ONTAP* 中选择要更新的卷的文件系统的操作菜单，然后选择 *管理*。
+. 从文件系统概述中，选择*Volumes*选项卡。
+. 在“卷”选项卡中，选择要管理 S3 接入点的卷的操作菜单，然后选择“高级操作”，再选择“管理 S3 接入点”。
+. 选择要删除的 S3 接入点的操作菜单，然后选择“分离”。
+. 在“分离并移除 S3 接入点”对话框中，选择“分离并移除”以从卷中删除 S3 接入点。
 

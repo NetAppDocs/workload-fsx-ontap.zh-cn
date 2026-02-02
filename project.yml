@@ -51,8 +51,12 @@ sidebar:
         url: "/create-volume.html"
       - title: 访问您的数据
         url: "/access-data.html"
-    - title: 创建块设备
-      url: "/create-block-device.html"
+    - title: 创建块存储资源
+      entries:
+      - title: 创建 igroup
+        url: "/create-igroup.html"
+      - title: 创建块设备
+        url: "/create-block-device.html"
     - title: 创建Storage VM
       url: "/create-storage-vm.html"
     - title: 保护您的数据
@@ -127,8 +131,10 @@ sidebar:
         url: "/split-cloned-volume.html"
       - title: 删除卷
         url: "/delete-volume.html"
-    - title: 块设备管理
+    - title: 块存储管理
       entries:
+      - title: 管理 igroup
+        url: "/manage-igroups.html"
       - title: 管理块设备
         url: "/manage-block-devices.html"
     - title: 文件系统管理

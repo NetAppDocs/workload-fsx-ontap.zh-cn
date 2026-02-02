@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: create-replication.html 
-keywords: replication, replicate 
+keywords: replication, replicate, data protection, disaster recovery, data loss 
 summary: 为FSx for ONTAP文件系统创建复制关系、以避免在发生意外灾难时丢失数据。 
 ---
 = 在NetApp Workload Factory 中创建复制关系
@@ -11,27 +11,33 @@ summary: 为FSx for ONTAP文件系统创建复制关系、以避免在发生意�
 
 
 [role="lead"]
-在NetApp Workload Factory 中为 FSx for ONTAP文件系统创建复制关系，以避免在发生不可预见的灾难时丢失数据。
+在 NetApp Workload Factory 中为 FSx for ONTAP 文件系统创建复制关系，以避免发生意外灾难时的数据丢失。支持在两个 FSx for ONTAP 文件系统之间以及 Cloud Volumes ONTAP 或本地 ONTAP 系统与 FSx for ONTAP 文件系统之间进行复制。
 
 .关于此任务
-复制是一个额外的数据保护层、在数据所在区域发生灾难时、这一点至关重要。如果使用跨区域复制、则可以避免数据丢失。
+如果数据所在的区域发生灾难，复制可增加数据丢失保护。
 
-此操作将为FSx for ONTAP文件系统中的一个或所有源卷创建复制关系。
+此操作为 FSx for ONTAP 文件系统、本地 ONTAP 系统或 Cloud Volumes ONTAP 系统中的源卷创建复制关系。
 
 目标文件系统中复制的卷是数据保护(DP)卷，命名格式如下： `{OriginalVolumeName}_copy`。
 
-复制包含不可变文件的源卷时，目标卷和文件系统将被锁定，直到源卷中不可变文件的保留期结束。不可变文件功能在以下情况下可用： link:create-volume.html["创建卷"]用于 FSx for ONTAP 文件系统。
+使用不可变文件复制源卷时，目标卷和文件系统将保持锁定状态，直到源卷中不可变文件的保留期结束。当您 link:create-volume.html["创建卷"] FSx for ONTAP 文件系统时，不可变文件功能可用。
 
+[NOTE]
+====
+* 使用 iSCSI 或 NVMe 协议的块卷不支持复制。
+* 您可以复制一个源(读/写)卷或一个数据保护(DP)卷。支持级联复制、但第三个跃点不支持。详细了解 link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_cascade-replication/cascade-replication.html["级联复制"^]。
+
+
+====
 .开始之前
-开始之前、请确保满足以下前提条件。
+在开始之前请考虑以下事项。
 
-* 您的存储中必须有两个可用的文件系统才能创建复制关系。
-* 用于复制关系的两个文件系统必须具有关联的链接。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何关联现有链接或创建并关联新链接"](英文)链接关联后、返回此操作。
+* 您必须有一个 FSx for ONTAP 文件系统才能用于复制关系中的目标。
+* 用于复制关系的 FSx for ONTAP 文件系统必须具有相关联的链接。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何关联现有链接或创建并关联新链接"]。关联链接后，返回此操作。
+* 对于从本地 ONTAP 系统复制到 FSx for ONTAP 文件系统，请确保您已发现本地 ONTAP 系统。
 
 
-要复制文件系统中的选定卷或复制所有卷、请完成以下步骤。
-
-您可以复制一个源(读/写)卷或一个数据保护(DP)卷。支持级联复制、但第三个跃点不支持。详细了解 link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_cascade-replication/cascade-replication.html["级联复制"^]。
+按照以下步骤复制文件系统中的特定卷或所有卷。
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
@@ -49,9 +55,6 @@ summary: 为FSx for ONTAP文件系统创建复制关系、以避免在发生意�
 
 . 在复制数据页面上的复制目标下、提供以下内容：
 +
-.. *FSx for ONTAP file system*：为目标FSx for ONTAP文件系统选择ONTAP文件系统的凭据、区域和FSx名称。
-.. * Storage VM名称*：从下拉菜单中选择Storage VM。您选择的存储虚拟机是此复制关系中所有选定卷的目标。
-.. *卷名*：目标卷名称将自动生成，格式如下 `{OriginalVolumeName}_copy`。您可以使用自动生成的卷名称或输入其他卷名称。
 .. *用例*：选择以下其中一个用例进行复制。根据所选的用例，Workload Factory 会根据最佳实践在表单中填写推荐值。您可以接受建议的值，也可以在填写表格时进行更改。
 +
 *** 迁移：将数据传输到目标FSx for ONTAP文件系统
@@ -76,6 +79,9 @@ summary: 为FSx for ONTAP文件系统创建复制关系、以避免在发生意�
 
 
 
+.. *FSx for ONTAP file system*：为目标FSx for ONTAP文件系统选择ONTAP文件系统的凭据、区域和FSx名称。
+.. * Storage VM名称*：从下拉菜单中选择Storage VM。您选择的存储虚拟机是此复制关系中所有选定卷的目标。
+.. *卷名*：目标卷名称将自动生成，格式如下 `{OriginalVolumeName}_copy`。您可以使用自动生成的卷名称或输入其他卷名称。
 .. *分层策略*：为目标卷中存储的数据选择分层策略。对于您选择的使用情形、此层策略默认为建议的层策略。
 +
 使用 Workload Factory 控制台创建卷时，_平衡（自动）_ 是默认分层策略。有关卷分层策略的更多信息，请参阅link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["卷存储容量"^]在 AWS FSx for NetApp ONTAP文档中。请注意，工作负载工厂在工作负载工厂控制台中使用基于用例的名称来制定分层策略，并在括号中包含 FSx for ONTAP分层策略名称。
@@ -114,6 +120,16 @@ NOTE: 长期保留需要匹配的源标签和目标标签。如果需要、工�
 *** *Snapshot策略*：在表中，选择快照策略频率和要保留的副本数。您可以选择多个快照策略。
 
 
+.. *S3 访问点*：可选地，通过 AWS S3 API 连接 S3 访问点，以访问驻留在 NFS 或 SMB/CIFS 卷上的 FSx for ONTAP文件系统数据。仅支持文件访问类型。提供以下详细信息：
++
+*** *S3接入点名称*：输入S3接入点的名称。
+*** *用户*：选择有权访问该卷的现有用户或创建新用户。
+*** *用户类型*：选择*UNIX*或*Windows*作为用户类型。
+*** *网络配置*：选择 *Internet* 或 *Virtual private cloud (VPC)*。您选择的网络类型决定了接入点是可从互联网访问还是仅限于特定的 VPC。
+*** *启用元数据*：启用元数据会创建一个 S3 表，其中包含 S3 访问点可访问的所有对象，可用于审计、治理、自动、分析和优化。启用元数据会产生额外的 AWS 成本。有关详细信息，请参见 link:https://aws.amazon.com/s3/pricing/["Amazon S3 定价文档"^]。
+
+
+.. *S3 接入点标签*：您最多可以添加 50 个标签（可选）。
 
 
 
