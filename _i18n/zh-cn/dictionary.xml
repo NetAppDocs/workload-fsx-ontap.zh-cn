@@ -390,7 +390,6 @@
   <block id="2204b0f79985b7b0565114e8305937a5" category="section-title">Storage VM</block>
   <block id="b1c8cb58e124bead4ca2e09fa1c20c9b" category="paragraph">有关每个文件系统的最大SVM数量、请参见 <block ref="17ef0d7491a925205e8443311f7ef122" category="inline-link-macro-rx"></block> AWS文档中的。</block>
   <block id="3a448e496404b548627a97fc00da8e23" category="section-title">iSCSI协议支持</block>
-  <block id="53c858a11ae23c19aee107fb913f096a" category="list-text">每个卷只能配置一个LUN。</block>
   <block id="7e7397a7b79323762c61941fc0e6b5f9" category="section-title">数据保护</block>
   <block id="3625bed0ef82516150cc87137582e2b5" category="list-text">无法删除快照。</block>
   <block id="fa0b5078a184e3a9f13892acdade9375" category="list-text">复制文件系统时、文件系统中的所有卷都会使用相同的复制策略。</block>
@@ -723,8 +722,6 @@
   <block id="0e42938784ca54b8dc455284578841f0" category="list-text">在初始化关系对话框中，选择*Initi起 始化*。</block>
   <block id="478b776fc28a60e8545a858eb7ca9a3e" category="summary">已知限制确定了本产品版本不支持的平台、设备或功能、或者这些平台、设备或功能无法与产品正确交互操作。</block>
   <block id="bd2e4cb8c94783198db1a525a87ae34a" category="doc">Amazon FSx for NetApp ONTAP的已知限制</block>
-  <block id="26ed02718973e705cd69ee6e109400e0" category="section-title">System Manager</block>
-  <block id="9ee31cf2622a4d1606ccae84e2ba0742" category="paragraph">System Manager不支持FSx for ONTAP连接的链接。</block>
   <block id="384c5c520d0877aaaaed76d75d973d99" category="list-text">*存储成本比较计算器*：将您的Amazon Elelic Block Store (EBS)、Elelic File System (EFS)和FSx for Windows File Server存储成本与FSx for ONTAP进行比较。通过计算器、您可以查看FSx for ONTAP存储配置如何提供潜在的节省、并计划迁移到FSx for ONTAP存储。</block>
   <block id="f6858e5eadd0ed940450d85121838545" category="list-text">*Workload Factory用户界面*:提供_Quick cree_和_Advanced cree_部署模式选项。Quick create包含适用于您的存储配置的AWS、NetApp和行业标准最佳实践。</block>
   <block id="53fe87832fd05bf7a8e9f1e1bad4aa86" category="doc">管理FSx for ONTAP文件系统的备份计划</block>
@@ -2513,7 +2510,6 @@
   <block id="69fa9c087519616c715c1ff5cb8799b4" category="paragraph">存储管理员通常仅在客户投诉后或通过维护自定义脚本和警报来响应 FSx for ONTAP EMS 事件。这种被动方法可以降低效率、延迟问题解决并增加停机时间。</block>
   <block id="ea0503aedfe2585b2372e8f13d9a188b" category="inline-link-macro">使用链接连接到文件系统</block>
   <block id="9d2246fd849af6e6265f4bfd88a1fae2" category="inline-link-macro">授予 _view、planning 和 analysis_ 权限</block>
-  <block id="2647b280de36025cc715dd5e1d5ccecf" category="paragraph">事件分析器自动从 FSx for ONTAP 文件系统中提取错误、警告和紧急 EMS 事件。您可以通过 <block ref="f91a3df34ad8b434c845af1c5c4599e2" category="inline-link-macro-rx"></block> 和通过 <block ref="f7fcd176fbc4e82ec30b37b672d1e76e" category="inline-link-macro-rx"></block> 在您的 AWS 账户中查看这些事件。事件在移除前显示 72 小时。</block>
   <block id="0ee3fcfb10a8d4af3c7cb550b6d9bc38" category="paragraph">借助 Amazon Bedrock 集成，Workload Factory 使用人工智能来分析事件并提供可操作的见解，以维护 FSx for ONTAP 文件系统的运行状况和性能。</block>
   <block id="721c487e9ac5dc5fc37d25389a9c0866" category="list-text">高级故障排除：AI 自动识别、分析并提供见解，以修复 FSx for ONTAP EMS 事件，减少手动调查时间。</block>
   <block id="90fff3808b87c7068de0570f6b4692b6" category="list-text">最佳实践补救：事件分析器提供清晰、可操作的步骤来解决 FSx for ONTAP EMS 事件。</block>
@@ -2553,11 +2549,9 @@
   <block id="76f77cbc01f0341dffcaaa5f6236eb73" category="section-title">存储中可用的 S3 存储桶详细信息</block>
   <block id="c203e76297d071e4d8256e073c93dafb" category="paragraph">为 S3 接入点启用元数据后，NetApp Workload Factory 会自动扫描您的 AWS S3 存储桶并填充 S3 表，为您提供所有对象、其元数据、属性和标记的清晰快照。访问这些详细信息可帮助您保持对自己负责的数据的控制、可见性和可信度，同时减少运营开销。</block>
   <block id="cc7664945c125a51dd2e69095c8f8200" category="inline-link-macro">查看 FSx for ONTAP 文件系统中 S3 接入点的详细信息</block>
-  <block id="dd52e33b4320b655cb69fb76bc1e345f" category="paragraph"><block ref="dd52e33b4320b655cb69fb76bc1e345f" category="inline-link-macro-rx"></block></block>
   <block id="2249107cb1f4c202ef0253c53bcff598" category="section-title">S3 接入点的其他管理操作</block>
   <block id="bf44c4671ee3bfbc818d505bb9a0e59a" category="paragraph">NetApp Workload Factory 为 S3 接入点提供额外的管理操作。您可以查看接入点详细信息、修改现有 S3 接入点以及从 NetApp Workload Factory 界面添加或删除 S3 接入点标签，从而简化您的对象存储管理任务。</block>
   <block id="366c32f0cbb2503b337e243eaa8c42b5" category="inline-link-macro">在 NetApp Workload Factory 中管理 S3 接入点</block>
-  <block id="d9ec48855b13e13fd489d2442f822e4d" category="paragraph"><block ref="d9ec48855b13e13fd489d2442f822e4d" category="inline-link-macro-rx"></block></block>
   <block id="e593953aaf04eebecfe2e26326145784" category="list-text">优化缓存卷大小：检查是否在缓存卷上启用了卷自动大小调整和清理功能，以保持最佳大小，并将缓存集中在热数据上，以实现最高效率。</block>
   <block id="00e21b809963a2e31abfc13c3aea34b6" category="list-text">孤立块设备：建议存档块设备数据或删除连续七天未使用的块设备。</block>
   <block id="a872ae5d7fdb75042465788519d63c35" category="list-text">Storage VM 逻辑报告：检查 Storage VM 的默认报告设置是否设置为逻辑，从而更好地了解卷级别的存储使用情况。</block>
@@ -2566,13 +2560,10 @@
   <block id="2f09b86fd82a1603b2104c3d565e4187" category="list-text">存储效率：显示已用和可用存储容量；已用容量按 SSD 和容量池存储层细分。</block>
   <block id="075b9a975b25dba22b299c4edaf12834" category="list-text">受保护的设备：显示具有快照、远程复制、NetApp Autonomous Ransomware Protection (ARP/AI) 和备份的数据块设备的百分比。</block>
   <block id="46dd61e303a77cea00fc631287dfeab6" category="inline-link-macro">为未使用的块设备回收空间</block>
-  <block id="8e8a93bbbd6df5c04a7668748139ce7a" category="list-text">孤立设备：显示连续七天未使用的任何块设备，帮助您有效识别和管理未使用的资源。从这里，您可以<block ref="ddc66f326affa5fcec5ab8f0c0c76e68" category="inline-link-macro-rx"></block>。</block>
   <block id="9ebda12d23b72f4bdda3cbbcd05e0817" category="section-title">支持启动程序组创建和管理</block>
   <block id="de002c21193de456c56ce9ccecfc09ab" category="paragraph">NetApp Workload Factory 支持为 FSx for ONTAP 文件系统中的块存储创建和管理启动程序组 (igroups)。启动程序组将块设备 (LUN) 连接到允许访问它们的计算资源，为 SAN 环境中的块存储提供权限层。</block>
   <block id="e477df666bb45ae0a1fda1f7058551a2" category="inline-link-macro">在 NetApp Workload Factory 中创建启动程序组</block>
-  <block id="5e85fc9bd832f8bc5366f7ffe4912a99" category="list-text"><block ref="5e85fc9bd832f8bc5366f7ffe4912a99" category="inline-link-macro-rx"></block></block>
   <block id="8933129f9a07c1370a31a0b9f2e53018" category="inline-link-macro">管理 NetApp Workload Factory 中的现有启动程序组</block>
-  <block id="b241a4baaecab76fcbba49cd24dc9185" category="list-text"><block ref="b241a4baaecab76fcbba49cd24dc9185" category="inline-link-macro-rx"></block></block>
   <block id="185698e1c6b71d12cf578fc402c84407" category="summary">创建启动器组，以管理对 NetApp Workload Factory 中块设备的主机访问。</block>
   <block id="b99c94539727b97b20142c5b655d47f4" category="doc">在 NetApp Workload Factory 中为文件系统创建启动程序组</block>
   <block id="7fa60554ae8bd6b13d23cabdd189c7c5" category="paragraph">使用 NetApp Workload Factory 创建启动器组并管理对 SAN 块设备的主机访问。</block>
@@ -2663,4 +2654,10 @@
   <block id="d8ad6fc6096c88d41f98b91f0043eebe" category="sidebar">创建 igroup</block>
   <block id="9a6576dfb2c795711c67df7e1a5b076a" category="sidebar">块存储管理</block>
   <block id="e77c03d49e828607828412709552dbd6" category="sidebar">管理 igroup</block>
+  <block id="fdb38c6259208c2509d21f6a3f0beb02" category="paragraph"><block ref="fdb38c6259208c2509d21f6a3f0beb02" category="inline-link-macro-rx"></block></block>
+  <block id="cc97dddf7d9715fea79ba3e831f0fbca" category="paragraph"><block ref="cc97dddf7d9715fea79ba3e831f0fbca" category="inline-link-macro-rx"></block></block>
+  <block id="b55768d72b4883d58308aa15e30fc7ab" category="list-text">孤立设备：显示连续七天未使用的任何块设备，帮助您有效识别和管理未使用的资源。从这里，您可以<block ref="88cbe2cfb6c92276ca9f0b27df016fa5" category="inline-link-macro-rx"></block>。</block>
+  <block id="0352f037ca8dfca49383ddb908805d9a" category="list-text"><block ref="0352f037ca8dfca49383ddb908805d9a" category="inline-link-macro-rx"></block></block>
+  <block id="0a17c703284dc61149bdaf13e30980de" category="list-text"><block ref="0a17c703284dc61149bdaf13e30980de" category="inline-link-macro-rx"></block></block>
+  <block id="df267252f2595421cf837794528f006f" category="paragraph">事件分析器会自动从 FSx for ONTAP 文件系统中提取错误、警报和紧急 EMS 事件。您可以通过 <block ref="f91a3df34ad8b434c845af1c5c4599e2" category="inline-link-macro-rx"></block> 和通过 <block ref="f7fcd176fbc4e82ec30b37b672d1e76e" category="inline-link-macro-rx"></block> 在您的 AWS 账户中查看这些事件。事件在移除前显示 72 小时。</block>
 </blocks>
