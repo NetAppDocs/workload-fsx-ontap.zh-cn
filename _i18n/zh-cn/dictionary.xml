@@ -2580,9 +2580,6 @@
   <block id="283119ca74749a876a6dfcb0c6968a8c" category="list-text">*主机启动程序*：将一个或多个 iSCSI 合格 (IQN) 主机启动程序添加到启动程序组。</block>
   <block id="8298e20d0a9a0a5f92a40700ffa7ff7e" category="inline-link-macro">管理 FSx for ONTAP 文件系统的 igroups</block>
   <block id="22774fb9e9e4a2ed10c53dba9c6a522f" category="paragraph"><block ref="22774fb9e9e4a2ed10c53dba9c6a522f" category="inline-link-macro-rx"></block></block>
-  <block id="ce4c42b6f5a833fc926c27c3d1ca424a" category="paragraph">在 NetApp Workload Factory 中为 FSx for ONTAP 文件系统创建复制关系，以避免发生意外灾难时的数据丢失。支持在两个 FSx for ONTAP 文件系统之间以及 Cloud Volumes ONTAP 或本地 ONTAP 系统与 FSx for ONTAP 文件系统之间进行复制。</block>
-  <block id="e8d6717f6adc0d18b1ec64c39c57b7be" category="paragraph">如果数据所在的区域发生灾难，复制可增加数据丢失保护。</block>
-  <block id="e481f3e818c1bf548144dff8b6c46360" category="paragraph">此操作为 FSx for ONTAP 文件系统、本地 ONTAP 系统或 Cloud Volumes ONTAP 系统中的源卷创建复制关系。</block>
   <block id="578ca57adcfb8fa2a5c899374a2f5732" category="paragraph">使用不可变文件复制源卷时，目标卷和文件系统将保持锁定状态，直到源卷中不可变文件的保留期结束。当您 <block ref="40da211f809bc6c9e6163aa605349c18" category="inline-link-macro-rx"></block> FSx for ONTAP 文件系统时，不可变文件功能可用。</block>
   <block id="30965461c316b499ed01c7f92f651051" category="list-text">使用 iSCSI 或 NVMe 协议的块卷不支持复制。</block>
   <block id="36e75a4b793293fd1dde9fdc618c8431" category="list-text">您必须有一个 FSx for ONTAP 文件系统才能用于复制关系中的目标。</block>
@@ -2660,4 +2657,8 @@
   <block id="0352f037ca8dfca49383ddb908805d9a" category="list-text"><block ref="0352f037ca8dfca49383ddb908805d9a" category="inline-link-macro-rx"></block></block>
   <block id="0a17c703284dc61149bdaf13e30980de" category="list-text"><block ref="0a17c703284dc61149bdaf13e30980de" category="inline-link-macro-rx"></block></block>
   <block id="df267252f2595421cf837794528f006f" category="paragraph">事件分析器会自动从 FSx for ONTAP 文件系统中提取错误、警报和紧急 EMS 事件。您可以通过 <block ref="f91a3df34ad8b434c845af1c5c4599e2" category="inline-link-macro-rx"></block> 和通过 <block ref="f7fcd176fbc4e82ec30b37b672d1e76e" category="inline-link-macro-rx"></block> 在您的 AWS 账户中查看这些事件。事件在移除前显示 72 小时。</block>
+  <block id="8115d76153f9adbfd582019025403480" category="paragraph">在 NetApp Workload Factory 中为 FSx for ONTAP 文件系统创建复制关系，以避免发生意外灾难时的数据丢失。支持在两个 FSx for ONTAP 文件系统之间以及本地 ONTAP 系统和 FSx for ONTAP 文件系统之间进行复制。</block>
+  <block id="d8d2b7ae69d9c4bdf4c6f9dbea6cbace" category="paragraph">如果灾难影响到您的区域，复制可以保护您的数据。</block>
+  <block id="3894b1835f2c953d5ab4246fe8da430b" category="paragraph">此操作为 FSx for ONTAP 文件系统或本地 ONTAP 系统中的源卷创建复制关系。</block>
+  <block id="0aa7d11dc16260c47faf9d5b0b642366" category="paragraph">在开始之前，请查看这些要求。</block>
 </blocks>

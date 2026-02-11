@@ -11,12 +11,12 @@ summary: 为FSx for ONTAP文件系统创建复制关系、以避免在发生意�
 
 
 [role="lead"]
-在 NetApp Workload Factory 中为 FSx for ONTAP 文件系统创建复制关系，以避免发生意外灾难时的数据丢失。支持在两个 FSx for ONTAP 文件系统之间以及 Cloud Volumes ONTAP 或本地 ONTAP 系统与 FSx for ONTAP 文件系统之间进行复制。
+在 NetApp Workload Factory 中为 FSx for ONTAP 文件系统创建复制关系，以避免发生意外灾难时的数据丢失。支持在两个 FSx for ONTAP 文件系统之间以及本地 ONTAP 系统和 FSx for ONTAP 文件系统之间进行复制。
 
 .关于此任务
-如果数据所在的区域发生灾难，复制可增加数据丢失保护。
+如果灾难影响到您的区域，复制可以保护您的数据。
 
-此操作为 FSx for ONTAP 文件系统、本地 ONTAP 系统或 Cloud Volumes ONTAP 系统中的源卷创建复制关系。
+此操作为 FSx for ONTAP 文件系统或本地 ONTAP 系统中的源卷创建复制关系。
 
 目标文件系统中复制的卷是数据保护(DP)卷，命名格式如下： `{OriginalVolumeName}_copy`。
 
@@ -30,7 +30,7 @@ summary: 为FSx for ONTAP文件系统创建复制关系、以避免在发生意�
 
 ====
 .开始之前
-在开始之前请考虑以下事项。
+在开始之前，请查看这些要求。
 
 * 您必须有一个 FSx for ONTAP 文件系统才能用于复制关系中的目标。
 * 用于复制关系的 FSx for ONTAP 文件系统必须具有相关联的链接。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何关联现有链接或创建并关联新链接"]。关联链接后，返回此操作。
