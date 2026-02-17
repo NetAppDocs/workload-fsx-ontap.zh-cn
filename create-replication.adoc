@@ -54,7 +54,7 @@ Workload Factory 支持以下存储系统之间的迁移复制。
 要迁移存储 VM 数据和配置设置，必须完成两个操作。
 
 . <<创建复制关系,创建复制关系>>，选择 *Migration* 作为用例，然后选择 *Replicate storage VM configuration*。
-. <<Cut over replication,切换复制>> 将数据和配置设置从源文件系统永久迁移到目标 FSx for ONTAP 文件系统。
+. <<切换复制以用于迁移用例,切换复制以用于迁移用例>> 将数据和配置设置从源文件系统永久迁移到目标 FSx for ONTAP 文件系统。
 
 
 

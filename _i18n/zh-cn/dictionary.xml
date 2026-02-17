@@ -2680,8 +2680,6 @@
   <block id="9b03bdd83a5017b3aa998f32e7ad219f" category="list-text">第二代到第二代</block>
   <block id="04e64253a4742b9534714d0147f467f6" category="paragraph">要迁移存储 VM 数据和配置设置，必须完成两个操作。</block>
   <block id="59835e5fb082d065015e2824a515a5b7" category="list-text"><block ref="75331dd4d9fa346165fac294e4e498ee" category="inline-xref-macro-rx"></block>，选择 *Migration* 作为用例，然后选择 *Replicate storage VM configuration*。</block>
-  <block id="db529797694203560d43ab415a6dd52d" category="inline-xref">切换复制</block>
-  <block id="4ff5e77c5ed7650b96676675b9d3eb18" category="list-text"><block ref="76a1fb9977d9fe48f9a1edf04990b3a3" category="inline-xref-macro-rx"></block> 将数据和配置设置从源文件系统永久迁移到目标 FSx for ONTAP 文件系统。</block>
   <block id="4031de6ffffe0beb0671ccd52a118661" category="paragraph">在两个 FSx for ONTAP 文件系统之间，或在本地 ONTAP 系统和 FSx for ONTAP 文件系统之间复制数据。</block>
   <block id="66de39f46af06b661b7bce68c01c8e61" category="list-text">不支持对处于可用、已创建或配置错误以外的状态以及 ONTAP 版本不兼容的卷执行复制。</block>
   <block id="cbcff6555c8b07eb6add33653d3ab030" category="list-text">对于迁移用例，请确保在使用存储 VM 数据和配置设置创建复制关系之前，卷的最后一次复制在过去 24 小时内完成。</block>
@@ -2699,4 +2697,5 @@
   <block id="9b9935ad5969c28de13381a2e512b47c" category="paragraph">注:</block>
   <block id="9d7213e75b44382027a2100eae065746" category="list-text">在复制 Storage VM 数据和配置设置时，反向复制不可用。</block>
   <block id="fb042b7b99959e391eeb7c417511098a" category="section-title">2026 年 2 月 16 日</block>
+  <block id="df319eebb5e9e4cde194e1e976bf0795" category="list-text"><block ref="7a9cdee14fa6d629f0d48ed18525f6a5" category="inline-xref-macro-rx"></block> 将数据和配置设置从源文件系统永久迁移到目标 FSx for ONTAP 文件系统。</block>
 </blocks>
