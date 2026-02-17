@@ -19,11 +19,14 @@ summary: 启用快照以实现长期保留、这样您就可以复制特定快�
 
 如果内部ONTAP集群是复制关系的目标、则不支持更改快照以进行长期保留。
 
+
+NOTE: 复制 Storage VM 数据和配置设置时，编辑长期保留不可用。
+
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
 . 从存储菜单中，选择 *FSx for ONTAP*。
-. 从 *FSx for ONTAP* 中，选择要更新的文件系统的操作，然后选择 *管理*。
+. 从 *FSx for ONTAP* 中，选择要更新的文件系统的操作菜单，然后选择 *管理*。
 . 从文件系统概述中，选择*复制关系*选项卡。
 . 在复制关系选项卡中，选择要更改的复制关系计划的操作菜单。
 . 选择*编辑长期保留*。

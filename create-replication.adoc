@@ -4,23 +4,26 @@ permalink: create-replication.html
 keywords: replication, replicate, data protection, disaster recovery, data loss 
 summary: 为FSx for ONTAP文件系统创建复制关系、以避免在发生意外灾难时丢失数据。 
 ---
-= 在NetApp Workload Factory 中创建复制关系
+= 在 NetApp Workload Factory 中将数据复制到 FSx for ONTAP
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-在 NetApp Workload Factory 中为 FSx for ONTAP 文件系统创建复制关系，以避免发生意外灾难时的数据丢失。支持在两个 FSx for ONTAP 文件系统之间以及本地 ONTAP 系统和 FSx for ONTAP 文件系统之间进行复制。
+在 NetApp Workload Factory 中为 FSx for ONTAP 文件系统创建复制关系，以避免在发生意外灾难时丢失数据。可以在两个 FSx for ONTAP 文件系统之间复制数据，也可以在本地 ONTAP 系统和 FSx for ONTAP 文件系统之间复制数据。
 
-.关于此任务
-如果灾难影响到您的区域，复制可以保护您的数据。
+对于存储 VM 迁移，必须在创建复制关系后立即完成切换操作。
 
-此操作为 FSx for ONTAP 文件系统或本地 ONTAP 系统中的源卷创建复制关系。
+
+
+== 关于此任务
+
+如果灾难影响到您的区域，复制可保护您的数据；它也可用于迁移目的。
 
 目标文件系统中复制的卷是数据保护(DP)卷，命名格式如下： `{OriginalVolumeName}_copy`。
 
-使用不可变文件复制源卷时，目标卷和文件系统将保持锁定状态，直到源卷中不可变文件的保留期结束。当您 link:create-volume.html["创建卷"] FSx for ONTAP 文件系统时，不可变文件功能可用。
+如果使用不可变文件复制源卷，则目标卷和文件系统将保持锁定状态，直到源卷的保留期结束。当您 link:create-volume.html["创建卷"] FSx for ONTAP 文件系统时，不可变文件功能可用。
 
 [NOTE]
 ====
@@ -29,21 +32,52 @@ summary: 为FSx for ONTAP文件系统创建复制关系、以避免在发生意�
 
 
 ====
+
+
+=== 迁移使用案例
+
+选择迁移用例时，可以选择复制单个存储 VM 的存储 VM 数据和配置设置。在同时迁移数据和配置设置时，请确保该卷的最后一次复制在过去 24 小时内完成。必须选择同一存储 VM 中的所有卷才能使用此功能。所有卷的分层策略默认为源卷的分层策略，建议用于迁移用例。
+
+Workload Factory 支持以下存储系统之间的迁移复制。
+
+* 本地 ONTAP 系统和适用于 ONTAP 的 FSx 文件系统
+* Cloud Volumes ONTAP 和 FSx for ONTAP 文件系统
+* 适用于 ONTAP 和适用于 ONTAP 文件系统的 FSx
++
+** 第一代到第一代
+** 第一代到第二代
+** 第二代到第二代
+
+
+
+
+要迁移存储 VM 数据和配置设置，必须完成两个操作。
+
+. <<创建复制关系,创建复制关系>>，选择 *Migration* 作为用例，然后选择 *Replicate storage VM configuration*。
+. <<Cut over replication,切换复制>> 将数据和配置设置从源文件系统永久迁移到目标 FSx for ONTAP 文件系统。
+
+
+
+
+== 创建复制关系
+
+在两个 FSx for ONTAP 文件系统之间，或在本地 ONTAP 系统和 FSx for ONTAP 文件系统之间复制数据。
+
 .开始之前
 在开始之前，请查看这些要求。
 
 * 您必须有一个 FSx for ONTAP 文件系统才能用于复制关系中的目标。
 * 用于复制关系的 FSx for ONTAP 文件系统必须具有相关联的链接。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何关联现有链接或创建并关联新链接"]。关联链接后，返回此操作。
 * 对于从本地 ONTAP 系统复制到 FSx for ONTAP 文件系统，请确保您已发现本地 ONTAP 系统。
+* 不支持对处于可用、已创建或配置错误以外的状态以及 ONTAP 版本不兼容的卷执行复制。
+* 对于迁移用例，请确保在使用存储 VM 数据和配置设置创建复制关系之前，卷的最后一次复制在过去 24 小时内完成。
 
-
-按照以下步骤复制文件系统中的特定卷或所有卷。
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
 . 从存储菜单中，选择 *FSx for ONTAP*。
-. 从 *FSx for ONTAP* 中，选择包含要复制的卷的文件系统的操作菜单，然后选择 *管理*。
+. 从 *FSx for ONTAP* 中，选择包含要复制的卷的文件系统。
 . 复制文件系统中的所有卷或复制选定卷。
 +
 ** 复制文件系统中的所有卷：从文件系统概述中，选择*复制数据*。
@@ -58,6 +92,9 @@ summary: 为FSx for ONTAP文件系统创建复制关系、以避免在发生意�
 .. *用例*：选择以下其中一个用例进行复制。根据所选的用例，Workload Factory 会根据最佳实践在表单中填写推荐值。您可以接受建议的值，也可以在填写表格时进行更改。
 +
 *** 迁移：将数据传输到目标FSx for ONTAP文件系统
++
+*复制存储 VM 配置*：可选择复制单个存储 VM 的存储 VM 数据和配置设置。在同时迁移数据和配置设置时，请确保该卷的最后一次复制在过去 24 小时内完成。必须选择同一存储 VM 中的所有卷才能使用此功能。所有卷的分层策略默认为源卷的分层策略，建议用于迁移用例。
+
 *** 热灾难恢复：确保关键工作负载的高可用性和快速灾难恢复
 *** 冷灾难恢复或归档灾难恢复：
 +
@@ -139,3 +176,36 @@ NOTE: 长期保留需要匹配的源标签和目标标签。如果需要、工�
 
 .结果
 复制关系显示在目标FSx for ONTAP文件系统的*复制关系*选项卡中。
+
+如果您创建了用于迁移的复制关系，则必须切换所有卷及其关联的存储 VM，以完成将存储 VM 数据和配置设置迁移到目标 FSx for ONTAP 文件系统。
+
+
+
+== 切换复制以用于迁移用例
+
+为迁移用例创建复制关系后，必须切换复制以完成将存储 VM 数据和配置设置迁移到目标 FSx for ONTAP 文件系统。切换复制会将数据和存储 VM 配置设置从源文件系统永久迁移到目标 FSx for ONTAP 文件系统。在切换期间，数据会进行最后一次复制。切换完成后，系统会删除源卷。您无法撤消此操作。
+
+.开始之前
+在开始之前，请查看这些要求。
+
+* 在切换复制之前，请停止对 Storage VM 的任何客户端访问。
+* 在切换复制之前，请确保所有源卷均未提供任何数据。
+* 在切换复制之前，请确保数据在源卷和目标卷之间同步。
+* 用于复制关系的 FSx for ONTAP 文件系统必须具有相关联的链接。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何关联现有链接或创建并关联新链接"]。关联链接后，返回此操作。
+
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
+. 从存储菜单中，选择 *FSx for ONTAP*。
+. 从 *FSx for ONTAP* 中，选择包含要复制的卷的文件系统。
+. 选择 *Replication relationships* 选项卡。
+. 在复制关系表中，选择要切换的复制关系，然后选择 *Cut over replication* 。
+. 查看"切换复制"对话框中的信息，然后键入 _cut over_ 确认。
+
+
+. 选择 *Cut over*。
+
+
+.结果
+切换后，源卷将被删除，目标卷变为读/写。切换后，您可以link:change-tiering-policy.html["修改分层策略"]目标卷。

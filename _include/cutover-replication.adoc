@@ -1,0 +1,10 @@
+= 
+:allow-uri-read: 
+
+
+. 从存储菜单中，选择 *FSx for ONTAP*。
+. 从 *FSx for ONTAP* 中，选择包含要复制的卷的文件系统。
+. 选择 *Replication relationships* 选项卡。
+. 在复制关系表中，选择要切换的复制关系，然后选择 *Cut over replication* 。
+. 查看"切换复制"对话框中的信息，然后键入 _cut over_ 确认。
+
