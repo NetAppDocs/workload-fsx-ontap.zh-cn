@@ -86,9 +86,9 @@ NOTE: 增加块设备的大小后，按照主机操作系统提供的步骤来�
 
 
 
-== 将孤立块设备的数据归档
+== 存档非活动块设备的数据
 
-不再映射到客户端或连续七天未使用的块设备将被归类为孤立块设备。您可以将孤立块设备的数据归档到容量池层，以回收 SSD 容量。
+不再映射到客户端或连续七天未使用的块设备被归类为非活动块设备。您可以将非活动块设备的数据存档到容量池层以回收 SSD 容量。
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
@@ -104,7 +104,7 @@ NOTE: 增加块设备的大小后，按照主机操作系统提供的步骤来�
 
 == 删除块设备
 
-不再映射到客户端或连续七天未使用的块设备将被归类为孤立块设备。此操作会取消映射并删除选定的块设备。如果主机FlexVol volume不包含任何块设备，Workload Factory 也会将其删除。
+不再映射到客户端或连续七天未使用的块设备被归类为非活动块设备。此操作取消映射并删除选定的块设备。如果主机 FlexVol 卷不包含任何块设备，Workload Factory 也会删除它。
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。

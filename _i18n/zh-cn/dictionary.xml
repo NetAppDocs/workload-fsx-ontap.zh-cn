@@ -2496,12 +2496,9 @@
   <block id="e220387578f5151d1653ad1ff2b5a002" category="list-text">*igroup 描述*：可选，输入 igroup 描述。</block>
   <block id="d719073ebb477e6cf9934f806cd15577" category="list-text">*主机发起程序*：输入一个或多个主机发起程序。这些发起程序必须遵循 iSCSI 合格 (IQN) 格式。</block>
   <block id="2614a90f09c2b1321e872a7622f7f888" category="list-text">如果 igroup 已存在，请选择“编辑客户端访问”以向 igroup 添加或删除块设备和主机发起程序，然后选择“应用”。</block>
-  <block id="b637e46326ea8277194ab0d5f5de8b3d" category="section-title">将孤立块设备的数据归档</block>
-  <block id="3c464f9d7ea4cd3d820898f4b25e6832" category="paragraph">不再映射到客户端或连续七天未使用的块设备将被归类为孤立块设备。您可以将孤立块设备的数据归档到容量池层，以回收 SSD 容量。</block>
   <block id="68d85c073028f0fd978bc424d69ee8fd" category="list-text">在“孤立设备”下，选择“查看和回收容量”。</block>
   <block id="f6841052bd0d86548318f9b2df118ea3" category="list-text">在“回收未使用的块设备空间”屏幕上，选择一个或多个块设备来归档数据并回收容量。</block>
   <block id="2c77adf5fa1de4ed37a6e14d2212f074" category="list-text">选择“存档”。</block>
-  <block id="b06e53572a17ccf08cb282ac59af4b93" category="paragraph">不再映射到客户端或连续七天未使用的块设备将被归类为孤立块设备。此操作会取消映射并删除选定的块设备。如果主机FlexVol volume不包含任何块设备，Workload Factory 也会将其删除。</block>
   <block id="33e155c9d3cab85dd1499ba63bd9d34d" category="paragraph">包含块设备的FlexVol卷以活动模式启动 ARP/AI。</block>
   <block id="aca2e051b8b58a53ee4cf20a78bdde8a" category="list-text">该链接必须能够连接到以下端点：\ https://api.workloads.netapp.com.基于 Web 的控制台通过与 Workload Factory API 交互来管理和操作 FSx for ONTAP工作负载。</block>
   <block id="ae7bbdf37f2fa18593f3db57d284b5eb" category="paragraph">使用 NetApp Workload Factory 中的智能事件分析器快速识别并解决 FSx for ONTAP 文件系统问题。事件分析器利用 Agentic AI 与 Amazon Bedrock 集成，自动提取和分析 FSx for ONTAP Event Management System (EMS) 事件。</block>
@@ -2551,7 +2548,6 @@
   <block id="bf44c4671ee3bfbc818d505bb9a0e59a" category="paragraph">NetApp Workload Factory 为 S3 接入点提供额外的管理操作。您可以查看接入点详细信息、修改现有 S3 接入点以及从 NetApp Workload Factory 界面添加或删除 S3 接入点标签，从而简化您的对象存储管理任务。</block>
   <block id="366c32f0cbb2503b337e243eaa8c42b5" category="inline-link-macro">在 NetApp Workload Factory 中管理 S3 接入点</block>
   <block id="e593953aaf04eebecfe2e26326145784" category="list-text">优化缓存卷大小：检查是否在缓存卷上启用了卷自动大小调整和清理功能，以保持最佳大小，并将缓存集中在热数据上，以实现最高效率。</block>
-  <block id="00e21b809963a2e31abfc13c3aea34b6" category="list-text">孤立块设备：建议存档块设备数据或删除连续七天未使用的块设备。</block>
   <block id="a872ae5d7fdb75042465788519d63c35" category="list-text">Storage VM 逻辑报告：检查 Storage VM 的默认报告设置是否设置为逻辑，从而更好地了解卷级别的存储使用情况。</block>
   <block id="40fbd58cc84d2567a5be7db0e1e48224" category="section-title">用于块设备的附加卡</block>
   <block id="e1d58576240df6c3acc0d5f3067d6468" category="paragraph">在存储工作负载的块设备选项卡中添加了三张新卡，以便快速了解块设备的使用情况和保护状态：</block>
@@ -2584,7 +2580,6 @@
   <block id="ba1072e8c0845f82f77ef660d46bde4a" category="list-text">对于从本地 ONTAP 系统复制到 FSx for ONTAP 文件系统，请确保您已发现本地 ONTAP 系统。</block>
   <block id="45eea8cd3d88c48d8f4826a6be39d707" category="list-text">*S3 接入点标签*：您最多可以添加 50 个标签或删除标签。</block>
   <block id="66d540c0d4f07e9992cf6e0ac1083e36" category="list-text">卓越运营：自动容量管理、卷文件容量利用率阈值、卷利用率接近满、缓存关系写入模式、优化缓存卷大小和卷逻辑容量报告</block>
-  <block id="cf0e722b11c4855de7e43d714e007581" category="list-text">成本优化：存储效率、数据分层、不必要的快照和备份删除以及孤立的块设备</block>
   <block id="357d9dd76af15c8aaf8f09990a2846a9" category="list-text">您必须在 AWS 帐户中<block ref="6f74e2a9589a6666ba7fdb81dabfc5eb" category="inline-link-macro-rx"></block>。</block>
   <block id="8c8656579a32ab7e80c68b10832337bb" category="list-text">从 Storage 菜单中，选择 *Well-architected*。</block>
   <block id="4f5fc99db78476b3b87fbb795ab55b26" category="list-text">为任何配置选择 *View issues*。请务必仔细阅读建议。</block>
@@ -2649,7 +2644,6 @@
   <block id="e77c03d49e828607828412709552dbd6" category="sidebar">管理 igroup</block>
   <block id="fdb38c6259208c2509d21f6a3f0beb02" category="paragraph"><block ref="fdb38c6259208c2509d21f6a3f0beb02" category="inline-link-macro-rx"></block></block>
   <block id="cc97dddf7d9715fea79ba3e831f0fbca" category="paragraph"><block ref="cc97dddf7d9715fea79ba3e831f0fbca" category="inline-link-macro-rx"></block></block>
-  <block id="b55768d72b4883d58308aa15e30fc7ab" category="list-text">孤立设备：显示连续七天未使用的任何块设备，帮助您有效识别和管理未使用的资源。从这里，您可以<block ref="88cbe2cfb6c92276ca9f0b27df016fa5" category="inline-link-macro-rx"></block>。</block>
   <block id="0352f037ca8dfca49383ddb908805d9a" category="list-text"><block ref="0352f037ca8dfca49383ddb908805d9a" category="inline-link-macro-rx"></block></block>
   <block id="0a17c703284dc61149bdaf13e30980de" category="list-text"><block ref="0a17c703284dc61149bdaf13e30980de" category="inline-link-macro-rx"></block></block>
   <block id="df267252f2595421cf837794528f006f" category="paragraph">事件分析器会自动从 FSx for ONTAP 文件系统中提取错误、警报和紧急 EMS 事件。您可以通过 <block ref="f91a3df34ad8b434c845af1c5c4599e2" category="inline-link-macro-rx"></block> 和通过 <block ref="f7fcd176fbc4e82ec30b37b672d1e76e" category="inline-link-macro-rx"></block> 在您的 AWS 账户中查看这些事件。事件在移除前显示 72 小时。</block>
@@ -2698,4 +2692,10 @@
   <block id="9d7213e75b44382027a2100eae065746" category="list-text">在复制 Storage VM 数据和配置设置时，反向复制不可用。</block>
   <block id="fb042b7b99959e391eeb7c417511098a" category="section-title">2026 年 2 月 16 日</block>
   <block id="df319eebb5e9e4cde194e1e976bf0795" category="list-text"><block ref="7a9cdee14fa6d629f0d48ed18525f6a5" category="inline-xref-macro-rx"></block> 将数据和配置设置从源文件系统永久迁移到目标 FSx for ONTAP 文件系统。</block>
+  <block id="3ecf18c09ae5a2bd1855ba6515de6cd7" category="list-text">非活动块设备：建议存档块设备数据，或删除连续七天未使用的块设备。</block>
+  <block id="3310dcc189ef22670c22a32bdf58f0c9" category="list-text">孤立设备：显示连续七天未使用的任何块设备，帮助您有效识别和管理未使用的资源。从这里，您可以<block ref="5d1d66741e880017163f47d5a2557cb1" category="inline-link-macro-rx"></block>。</block>
+  <block id="628b46b908bfc92bdcca823a9f84cd05" category="list-text">成本优化：存储效率、数据分层、不必要的快照和备份删除以及非活动块设备</block>
+  <block id="958926cf6ac067918ae80f7f610d415a" category="section-title">存档非活动块设备的数据</block>
+  <block id="d37c72ca2c27b8b48a724120cf91c835" category="paragraph">不再映射到客户端或连续七天未使用的块设备被归类为非活动块设备。您可以将非活动块设备的数据存档到容量池层以回收 SSD 容量。</block>
+  <block id="01b51d5b9524250e9003d631e9e3f35b" category="paragraph">不再映射到客户端或连续七天未使用的块设备被归类为非活动块设备。此操作取消映射并删除选定的块设备。如果主机 FlexVol 卷不包含任何块设备，Workload Factory 也会删除它。</block>
 </blocks>
