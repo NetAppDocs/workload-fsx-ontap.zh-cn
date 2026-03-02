@@ -133,16 +133,14 @@ sidebar:
         url: "/delete-volume.html"
     - title: 块存储管理
       entries:
-      - title: 管理 igroup
-        url: "/manage-igroups.html"
-      - title: 管理块设备
-        url: "/manage-block-devices.html"
+      - title: 管理块存储
+        url: "/manage-block-storage.html"
     - title: 文件系统管理
       entries:
-      - title: 调整文件系统容量
+      - title: 手动调整文件系统容量
         url: "/increase-file-system-capacity.html"
-      - title: 启用自动容量和 inode 管理
-        url: "/enable-auto-capacity-management.html"
+      - title: 自动管理文件系统容量
+        url: "/manage-capacity-automatically.html"
       - title: 管理文件系统标签
         url: "/manage-fsx-tags.html"
       - title: 重置fsxadmin密码

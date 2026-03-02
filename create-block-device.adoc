@@ -107,4 +107,4 @@ NOTE: 快照时间基于文件系统的时区、默认为协调世界时(UTC)。
 
 
 .相关信息
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-block-devices.html["管理 FSx for ONTAP文件系统的块设备"]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-block-storage.html["管理 FSx for ONTAP 文件系统的块存储"]
