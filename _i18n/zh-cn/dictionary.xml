@@ -83,11 +83,8 @@
   <block id="ef13ae21eedaa1ecccd02fb7ddd30bb1" category="list-text">*Delegated administrators group*：(可选)输入委派的文件系统管理员组。</block>
   <block id="85912990c5413ea32362225e50fc2629" category="paragraph">如果您使用的是AWS Managed Microsoft AD、则必须指定一个组、例如AWS Delegated FSx Administrators、AWS Delegated Administrators或具有对OU的委派权限的自定义组。</block>
   <block id="3fd21f2222285241b7bbfebc4759ab56" category="paragraph">如果您要加入自行管理的广告、请使用广告中的组名称。默认组为<block ref="746c2ea920930b61350130daa63e23e5" prefix=" " category="inline-code"></block>。</block>
-  <block id="6705427f56dd0e2d84c82d8ce7b8e137" category="paragraph">FSx for ONTAP备份按卷进行、因此每个备份仅包含特定卷中的数据。</block>
-  <block id="5d34cf2e67586f6adc1c52bd11363230" category="paragraph">FSx for ONTAP备份是增量备份、这意味着仅保存卷上在最近一次备份之后发生更改的数据。这样可以最大限度地减少创建备份所需的时间以及备份所需的存储、从而避免重复数据、从而节省存储成本。</block>
   <block id="ad999f7438a6c6743b334836cd6d2765" category="paragraph">要备份卷、卷和文件系统都必须具有足够的可用SSD存储容量来存储备份快照。创建备份快照时、快照占用的额外存储容量不会导致卷的SSD存储利用率超过98%。如果发生这种情况、备份将失败。</block>
   <block id="a7e91b4f0b8cb9a002ae712f6a8e8856" category="list-text">在文件系统概述中，选择*Volumes*选项卡。</block>
-  <block id="c90eb480f69fa94333471c53a08ebfb9" category="list-text">选择*数据保护操作*、* FSx for ONTAP backup*、然后选择*手动备份*。</block>
   <block id="efb6cdeb8b2e5095e65f43be813e1f3d" category="list-text">在手动备份对话框中、输入备份的名称。</block>
   <block id="2fdd0cbe402a8ae2149e0cdf4e1d9b9c" category="doc">创建FSx for ONTAP文件系统</block>
   <block id="d0e7f7527c3a0ceae557c9f12bb1d5e7" category="paragraph">在创建FSx for ONTAP文件系统之前、您需要：</block>
@@ -124,7 +121,6 @@
   <block id="adf3b9421185cf4dc6b3d80fb9c26d9b" category="list-text">*加密*：从下拉列表中选择加密密钥名称。</block>
   <block id="909443f15178d32af4981d109af80748" category="list-text">在文件系统详细信息下、提供以下内容：</block>
   <block id="31846199ab330eacea22764e7bc1ab7a" category="list-text">在备份和维护下、提供以下内容：</block>
-  <block id="5a7b83bad76b38a063667e0b80bd78d6" category="list-text">*FSx for ONTAP Backup*：默认情况下启用每日自动备份。如果需要、请禁用。</block>
   <block id="f009614070b8aab7ff6edcea9473b3dc" category="list-text">*自动备份保留期限*：输入自动备份的保留天数。</block>
   <block id="1972e6c134f87506bf46fce45a157104" category="list-text">*每日自动备份窗口*:选择*No Preferences*(已为您选择每日备份开始时间)或*Select start time for daily backups*并指定开始时间。</block>
   <block id="86405f997495dd34a1622331050968f1" category="list-text">*每周维护窗口*:选择*No Preferences*(为您选择每周维护窗口开始时间)或*Select start time for 30 minute每周维护窗口*并指定开始时间。</block>
@@ -176,7 +172,6 @@
   <block id="736ef7205c037a078bc461f368c6a21f" category="doc">为FSx for ONTAP卷创建手动快照</block>
   <block id="5b10cd7d19a8a16358cb05922f38a69e" category="paragraph">快照是卷的资源、是数据的即时捕获、只会为修改后的数据占用空间。由于数据会随时间发生变化、因此、随着快照的使用时间的推移、快照通常会占用更多的空间。</block>
   <block id="bbc11127132b3f6e8be58ad79bf66689" category="paragraph">FSx for ONTAP卷使用写时即时复制、因此快照中任何未经修改的文件不会占用卷的任何容量。</block>
-  <block id="4eb3a89899e681d1b9380bde026db85c" category="admonition">快照不是数据的副本。如果要创建数据副本、请考虑使用FSx for ONTAP备份或卷复制功能。</block>
   <block id="644e775d0497e56fe0475dde3829ce1e" category="doc">为FSx for ONTAP文件系统创建Storage VM</block>
   <block id="bc7303a544a54859ef646aaae48578a5" category="paragraph">通过SVM、在访问FSx for ONTAP中的数据时、客户端和工作站会使用SVM的端点(IP地址)挂载SVM托管的卷、CIFS或SMB共享或iSCSI LUN。</block>
   <block id="0be7879371b03da9f3e439c5431f1db2" category="inline-link-macro">管理FSx for ONTAP Storage Virtual Machine</block>
@@ -269,7 +264,6 @@
   <block id="8e9a64bda9d21f945b6489df2e7946e1" category="doc">删除卷</block>
   <block id="c4037415f2f0cfbaf2d8633bef548eca" category="paragraph">删除卷之前、请考虑以下事项：</block>
   <block id="7ba3b681b508a24c70a973831af6f1ad" category="list-text">本地快照：与此FSx for ONTAP文件系统关联的所有快照都将被永久删除。</block>
-  <block id="4d07a6e16a1c8ad6e621cc84eb969e7e" category="list-text">FSx for ONTAP备份：FSx for ONTAP备份副本将保留、您仍可使用它们。</block>
   <block id="c54ab0793e326deff351b944ad70d29c" category="list-text">选择*基本操作*，然后选择*删除卷*。</block>
   <block id="321fbbd6f40d9b084f632750d5190dc8" category="summary">随时为Storage VM添加、更新或删除Storage VM标记。</block>
   <block id="14d8aa612c687d8708f6fefc5f554d22" category="list-text">在编辑Storage VM标记页面上、添加、编辑或删除标记。</block>
@@ -488,7 +482,6 @@
   <block id="ebb4bf732c3ade314c393d5284af8715" category="list-text">*确认密码*：再次输入新密码进行确认。</block>
   <block id="8b0e8407f70ad599b0ea28ad2aba3c8d" category="summary">将卷从备份还原到AWS帐户中的任何FSx for ONTAP文件系统。</block>
   <block id="669e24f4895025d47b6321e03f0890e4" category="doc">从备份还原卷</block>
-  <block id="04b1c243101a3b35e04f4796a82296b7" category="list-text">选择*数据保护操作*、* FSx for ONTAP backup*、然后选择*从备份还原*。</block>
   <block id="954f91e5419aff167b9c5ff119492972" category="list-text">在Restore from a backup对话框中、提供以下内容：</block>
   <block id="1db91acefbe1be544aa103101dea1eea" category="list-text">*目标文件系统*：从下拉菜单中选择目标文件系统。</block>
   <block id="dce3fffc0f825635bb1abc80d4fad0d8" category="list-text">*目标Storage VM*：从下拉菜单中选择目标Storage VM。</block>
@@ -561,7 +554,6 @@
   <block id="fa6e79d91adacad3ba5d3684079b4ea1" category="summary">Amazon FSx for NetApp ONTAP文档包含故障排除主题、供您参考。</block>
   <block id="025110220989dd80d639c418b593cad3" category="inline-link-macro">对Amazon FSx for NetApp ONTAP进行故障排除</block>
   <block id="aa3f4a232768328d892056c200f23b5f" category="paragraph">有关详细信息、请参见 <block ref="39d4d71bb679e33c9314f282da47094c" category="inline-link-macro-rx"></block> 。</block>
-  <block id="c3b25a5d5a44f6b35c6e6497598499eb" category="list-text">在*FSx for ONTAP backup*对话框中，提供以下内容：</block>
   <block id="fb4531252f707fbda1308840e3c7d6af" category="summary">随时手动更新复制关系中源卷和目标卷之间传输的快照数据。</block>
   <block id="9ff8251e97123d13337c62b2b74bbe1e" category="doc">更新复制关系中的快照数据</block>
   <block id="fa0604fd5c522ae5ab642bebf836c3d0" category="list-text">选择*立即更新*。</block>
@@ -722,7 +714,6 @@
   <block id="384c5c520d0877aaaaed76d75d973d99" category="list-text">*存储成本比较计算器*：将您的Amazon Elelic Block Store (EBS)、Elelic File System (EFS)和FSx for Windows File Server存储成本与FSx for ONTAP进行比较。通过计算器、您可以查看FSx for ONTAP存储配置如何提供潜在的节省、并计划迁移到FSx for ONTAP存储。</block>
   <block id="f6858e5eadd0ed940450d85121838545" category="list-text">*Workload Factory用户界面*:提供_Quick cree_和_Advanced cree_部署模式选项。Quick create包含适用于您的存储配置的AWS、NetApp和行业标准最佳实践。</block>
   <block id="53fe87832fd05bf7a8e9f1e1bad4aa86" category="doc">管理FSx for ONTAP文件系统的备份计划</block>
-  <block id="4a74309dc15865035b8b93cec28f2a96" category="list-text">在信息下，选择*FSx for ONTAP backup*旁边的铅笔图标。当鼠标悬停在*FSx for ONTAP backup*行上时，下拉箭头旁边会出现铅笔图标。</block>
   <block id="9f16bb4c9cbb656a02f2d0ac20ae70a8" category="list-text">*每日自动备份*：启用或禁用此功能。如果禁用此功能，请选择*Apply*。如果启用了此功能、请完成以下步骤。</block>
   <block id="1b7732fda3ed237c994a5ac55fb150ea" category="list-text">*每日自动备份窗口*:选择*No Preferences*(已为您选择每日备份开始时间)或*Select start time for daily backups*并指定开始时间。</block>
   <block id="eeba2ebb020e2a04f72c79660c1af4c0" category="inline-link-macro">增加文件系统容量</block>
@@ -738,7 +729,6 @@
   <block id="1bab530ca9dd117d24aa1c1510692003" category="doc">适用于NetApp ONTAP 的Amazon FSX的新增功能</block>
   <block id="d151342d67a639e871ca8c57524ca7f8" category="sidebar">管理卷标记</block>
   <block id="11c0aa7596d4f4521c9a98f708c34cc4" category="sidebar">管理Storage VM标记</block>
-  <block id="e4b304b6d81189c09bd7e999a18522e8" category="sidebar">管理FSx for ONTAP备份计划</block>
   <block id="c4f10a04f7aa75535a8a0475261393eb" category="doc">适用于ONTAP文件系统的横向扩展FSx的块存储</block>
   <block id="152983842f852ef5bae46ac675caec95" category="paragraph">现在、如果使用的是最多包含6个HA对的横向扩展文件系统部署、则可以通过FSx for ONTAP配置块存储。</block>
   <block id="8cce6f6c21973d5dff1898076cddb209" category="paragraph"><block ref="8cce6f6c21973d5dff1898076cddb209" category="inline-link-macro-rx"></block></block>
@@ -1215,16 +1205,6 @@
   <block id="3583e4a3e4e2e122cff65b8ad9045348" category="list-text">主动可观察性</block>
   <block id="16fcd85dc9469370b62b4b46381f8e2a" category="list-text">从洞察力到行动</block>
   <block id="7a3fc3cf12e9da54628c7311398bee5c" category="list-text">AWS架构完善的Framework Advisor</block>
-  <block id="fc34f37e0124ad3486b3476b4c3bf8ba" category="section-title">架构良好的状态</block>
-  <block id="a64cfe5c8ae4b3445ff288e9acf4b12e" category="list-text">精心设计的得分</block>
-  <block id="3ae4c18410c2fa4fdf19fa3a943ef362" category="list-text">得分包括当前分析的所有配置、并以百分比形式显示。25%的分数表示25%的文件系统配置设计良好。</block>
-  <block id="a4394e01049a42d14bd6258585de98b7" category="list-text">配置类别</block>
-  <block id="d24dfe9869a3af3c94d86b476bc18a3d" category="list-text">文件系统配置会根据AWS精心设计的框架的以下五大支柱按类别进行组织。</block>
-  <block id="b88f659b2eb7813471f331b19c9d7f02" category="list-text">_Reliability _：确保工作负载正确一致地执行其预期功能、即使发生中断也是如此。例如、FSx for ONTAP备份就是一个配置示例。</block>
-  <block id="6a940b53f011e22baccafe058e7df66e" category="list-text">_Security_：强调通过风险评估和缓解策略保护数据、系统和资产。</block>
-  <block id="d5f464c28ed994054fe98db4934a7da1" category="list-text">_卓越运营_：专注于提供最优架构和业务价值。</block>
-  <block id="03be89b5f488a61c9b35832aa58745c1" category="list-text">_成本优化_：旨在提供业务价值、同时最大程度地降低成本。</block>
-  <block id="49c47aadfeff1e01313108c157d381b4" category="list-text">_Performance效率_：侧重于高效利用资源来满足系统要求、并在需求变化时保持最佳性能。</block>
   <block id="3f6f8b4e204fd3aa39cac35661de164d" category="section-title">分析要求</block>
   <block id="02f2e108af721f7fc825883d8811e77a" category="list-text">* ONTAP凭据*：可选。输入您的ONTAP用户名和密码。可以现在或稍后设置密码。</block>
   <block id="824994853534784eb4495b892e13b1c6" category="paragraph">如果您提供的用户不是fsxadmin用户、而稍后您需要重置fsxadmin密码、则可以从AWS控制台执行此操作。</block>
@@ -1803,15 +1783,11 @@
   <block id="21c979f4327cd67644d8ab5b64a762c7" category="doc">在NetApp Workload Factory 中克隆卷</block>
   <block id="6681a3fb664c63dc897bbc8182969165" category="list-text">从 *FSx for ONTAP* 中，选择包含要克隆的卷的 FSx for ONTAP文件系统的操作菜单，然后选择 *管理*。</block>
   <block id="6b74b1eeb944b58dcf027766f050311f" category="list-text">在“卷”选项卡中，选择要克隆的卷的操作菜单。</block>
-  <block id="43b56786015efd5716b466b10628735f" category="summary">NetApp Workload Factory 定期分析Amazon FSx for NetApp ONTAP文件系统配置，以确定是否存在任何问题。</block>
-  <block id="25c58ec67af5ce4deef895fad9566aa0" category="paragraph">NetApp Workload Factory 定期分析Amazon FSx for NetApp ONTAP文件系统配置，以确定是否存在任何问题。当发现问题时，Workload Factory 会向您展示问题所在，并解释需要进行哪些更改以确保您的文件系统存储达到最佳性能、成本效益并符合最佳实践。</block>
-  <block id="b0a0826c5a9c2b2e6c919de33e89dbfe" category="paragraph">在文件系统级别的 Workload Factory 控制台中，列出了所有 FSx for ONTAP文件系统的良好架构状态。架构良好的状态分为“问题”、“未分析”或“架构良好”。选择良好架构状态会将您重定向到文件系统内的良好架构状态选项卡，您可以在其中找到良好架构分数、配置类别以及文件系统的所有配置。</block>
   <block id="93482e0e05af93f1f57953ff700f65af" category="summary">在NetApp Workload Factory 中为 FSx for ONTAP文件系统中的存储虚拟机配置和更新 Active Directory。</block>
   <block id="b517cd494437c46f189031b81fe054d1" category="list-text">从 *FSx for ONTAP* 中，选择要更新的存储虚拟机的文件系统的操作菜单，然后选择 *管理*。</block>
   <block id="e2978ebf10a51b553f9a074316b27b79" category="summary">在定期备份之外，在NetApp Workload Factory 中创建卷的手动备份。</block>
   <block id="54fe537cb8aa5bbba8b6f2002f13d69c" category="doc">在NetApp Workload Factory 中创建卷的手动备份</block>
   <block id="4f43be2165dfc12e9cac6220645b9996" category="paragraph">在NetApp Workload Factory 中定期备份之外创建卷的手动备份。</block>
-  <block id="54c39ca8203b6aca3fa33c7e87a0ede7" category="list-text">从“*Volumes*”选项卡中，选择要备份的卷的操作。</block>
   <block id="cc481e5a678e1d84e7207782a75f9a18" category="summary">使用NetApp Workload Factory，您可以创建 FSx for ONTAP文件系统来添加和管理卷和其他数据服务。</block>
   <block id="9b19e4522ce9145cc667b5fcceaba11d" category="doc">在NetApp Workload Factory 中创建 FSx for ONTAP文件系统</block>
   <block id="ebb1274f47205fb0c6d6d8988b0944b0" category="paragraph">使用NetApp Workload Factory，您可以创建第一代和第二代 FSx for ONTAP文件系统来添加和管理卷和其他数据服务。</block>
@@ -2740,4 +2716,74 @@
   <block id="f9b8d8043e7f357d7b5805e6dfd01b25" category="sidebar">管理块存储</block>
   <block id="90fbacfd00a759e142437ac247a4317c" category="sidebar">手动调整文件系统容量</block>
   <block id="241296c9db6f3205e0e5738da7ec12ef" category="sidebar">自动管理文件系统容量</block>
+  <block id="62790b093d67bd09f77b7088f1cf32a6" category="list-text">*卷备份*：默认情况下启用每日自动备份。如果需要，请禁用。</block>
+  <block id="94a3e141996b9431c4516ae849425040" category="summary">NetApp Workload Factory 定期分析 Amazon FSx for NetApp ONTAP 文件系统配置，以确定是否存在任何配置问题。</block>
+  <block id="eb2b721313223c7264abb769bf627d20" category="paragraph">NetApp Workload Factory 定期分析 Amazon FSx for NetApp ONTAP 文件系统配置，以确定是否存在任何配置问题。当发现问题时，Workload Factory 会向您展示问题所在，并解释需要更改的内容，以确保您的文件系统存储实现最佳性能、成本效益和符合最佳实践。</block>
+  <block id="9ffdb95250e26c7a6b468126ac7c75b0" category="section-title">工作原理</block>
+  <block id="2888fa977354ad1bf513fa2f17fdd7df" category="paragraph">Workload Factory 每天分析在 Amazon FSx for NetApp ONTAP 文件系统部署上运行的工作负载。该分析提供了精心设计的状态、见解和建议。</block>
+  <block id="678b83ba882b41e4bae10f8e48f4a766" category="paragraph">每日分析完成后，配置在 Well-architected 仪表板中显示为"优化"或"未优化"。您可以找到总优化分数、按类别划分的配置问题以及配置问题和建议列表。您可以查看配置问题的建议。有些问题可以由 Workload Factory 自动修复，而其他问题则需要手动干预。在这种情况下，Workload Factory 会提供详细说明，以帮助您实施建议的更改。</block>
+  <block id="1fab3ff575faec37f5f5855ba6c44e9b" category="paragraph">您可以忽略不适用于您环境的配置分析。这样可以避免不必要的警报和不准确的优化结果。当您忽略特定配置分析时，Workload Factory 不将配置包含在总优化分数中。</block>
+  <block id="ee25e0b6cd574166f206b4c5b7f02df3" category="section-title">为什么很重要</block>
+  <block id="1ae45cc8915c23757127ca10c1cc4000" category="paragraph">Workload Factory 通过将持续评估与建议见解和补救措施相结合，将最佳实践应用于大型存储、数据库和 VMware 环境。在 Workload Factory 控制台中应用的自动修复可减少人为错误，确保统一管理，并保持整个工作负载基础架构的性能和可靠性。</block>
+  <block id="c6ee17dfa8bb85cfb470ccbc889f031c" category="section-title">存储工作负载的最佳实践和建议</block>
+  <block id="9302fb8b1312c354620e74d118c4a66d" category="paragraph">Workload Factory 评估存储配置，以提供 ONTAP 配置最佳实践的深入视图，并符合 AWS Well-Architected Framework。评估还提出了改进和修复建议。</block>
+  <block id="ffd9fc00ab43b8283346c6266e00d684" category="paragraph">架构完善的分析将配置归类为框架的以下支柱：_reliability_、_security_、_operational excellence_、_cost optimization_ 和 _performance efficiency_。</block>
+  <block id="820b8f74ad843d1574106ec4cadfc07e" category="section-title">可靠性</block>
+  <block id="32293fdcb7dff0798e6d06da4b108ce6" category="paragraph">可靠性可确保工作负载正确、一致地执行其预期功能，即使在发生中断时也是如此。</block>
+  <block id="8994ec75ad87cef8edf4cf8eae6b4e4c" category="list-text">*安排卷备份*</block>
+  <block id="3bacc0d1986b203b432f61110667b3d7" category="paragraph">备份卷有助于支持数据保留和合规性需求。使用卷备份为数据设置自动备份和保留。</block>
+  <block id="277088f7a0bc1d2b0023dc08b1d30e37" category="list-text">*计划本地快照*</block>
+  <block id="ce36269ae95cd0ab7422d78bb843b720" category="paragraph">安排本地快照以实现高效备份和快速恢复。快照是卷的即时时间点图像。</block>
+  <block id="b34347ddf6e48f7eb5aee09d6f7b92a6" category="list-text">*跨区域复制*</block>
+  <block id="152d89843ca63a94df485f882e2be60d" category="paragraph">跨区域复制可确保将您的数据复制到另一个 AWS 区域，从而提高数据的持久性和可用性。Workload Factory 建议设置跨区域复制，以帮助灾难恢复和合规性。</block>
+  <block id="1efec9308ce64129e1db77dd8baa679c" category="list-text">*设置数据复制*</block>
+  <block id="793435fc062d4d74518687597c405959" category="paragraph">为了扩展数据可靠性，可以将数据复制到同一区域或另一区域的 FSx for ONTAP 文件系统。设置数据复制以支持跨文件系统的迁移、灾难恢复和长期保留。</block>
+  <block id="4776b32ae8a508cea6dc14786e7b1d3f" category="list-text">*提高 SSD 容量阈值*</block>
+  <block id="e48d5f7bfc0f630823696ef4d2f1861d" category="paragraph">SSD 存储层容量不应超过 80% 的持续利用率。这可能会影响对容量池存储层的数据读取和写入，并影响文件系统的吞吐量容量。容量不足可能会导致数据卷变为只读，并且尝试写入新数据的服务可能会失败。</block>
+  <block id="52dcb980883fc7c1570f6f9c4c6e4f47" category="list-text">*匹配标签以确保数据可靠性*</block>
+  <block id="6b684c41f8808f2d21748ed56ee909d7" category="paragraph">源卷的快照策略标签和复制策略标签必须匹配，以确保数据可靠性。</block>
+  <block id="ec75a1c7b766068775fc7894ddaf83e4" category="list-text">*增加文件容量阈值*</block>
+  <block id="0d73092e450f3018847f6e8ff85e28c0" category="paragraph">应提高文件容量阈值，以避免达到卷容量限制。低文件容量（索引节点）阻止向卷写入其他数据。Workload Factory 建议持续保持可用文件容量利用率低于 80%。需要可用的文件容量才能在卷中创建新文件。</block>
+  <block id="2fae32629d4ef4fc6341f1751b405e45" category="section-title">安全性</block>
+  <block id="7d7265a6929882bb433fc74e8bee871a" category="paragraph">安全强调通过风险评估和缓解策略保护数据、系统和资产。</block>
+  <block id="6b164cf17f1cd008f12b094341cb3264" category="list-text">*启用 ARP/AI*</block>
+  <block id="3c93b584a7552b941c7752fec865d7f1" category="paragraph">NetApp Autonomous Ransomware Protection with AI (ARP/AI) 有助于保护您的卷免受勒索软件威胁。Workload Factory 建议为所有卷启用 ARP/AI。</block>
+  <block id="1218a704bef91508c259c867ba832d76" category="list-text">*未经授权访问卷*</block>
+  <block id="0f47a13bb4c0929efc89421b05c0e209" category="paragraph">使用 iSCSI 服务应用程序数据的卷不应允许并行 NAS 访问。Workload Factory 建议通过 iSCSI 协议访问的卷应限制使用任何其他协议。</block>
+  <block id="17d2a91a4f3c01de4c2f05b2242e49d3" category="section-title">卓越运营</block>
+  <block id="aae272278ce139a51849ab88adc7d597" category="paragraph">卓越运营侧重于提供最佳架构和业务价值。</block>
+  <block id="2e8c868875c81824742ded82e0ff9518" category="list-text">*启用自动容量管理*</block>
+  <block id="c2af0d35add26707ebd7d7030d750beb" category="paragraph">应启用自动容量管理，以定期确保 SSD 层不超过阈值。</block>
+  <block id="32438b829cdc61174e9727896ad00733" category="list-text">*卷容量利用率阈值*</block>
+  <block id="938de8c74e8e4f67c370d24df8ab0411" category="paragraph">Workload Factory 建议卷容量在持续的基础上不超过 80% 的利用率。这可能会影响对应用程序的数据读取和写入。卷容量增加可以是手动的，也可以使用卷自动增长功能自动增加。</block>
+  <block id="900f4b8178b38a2b7075005f38bd4a08" category="list-text">*卷利用率接近满*</block>
+  <block id="1771306e58ae20ceab27a04d0b17adcd" category="paragraph">当卷接近满容量时，Workload Factory 建议采取措施增加卷容量，以避免潜在的应用程序中断。</block>
+  <block id="dea8be5f351d7ba412ea10951c1fe16c" category="list-text">*缓存关系写入模式*</block>
+  <block id="a58ce95d0ee8f9d592643a6f31d60878" category="paragraph">为了获得最佳性能，Workload Factory 建议使用最适合您的工作负载的缓存关系写入模式。写入绕行模式为具有小文件的读取密集型工作负载提供更好的性能，而写回模式为具有大文件的写入密集型工作负载提供更好的性能。</block>
+  <block id="3a3b30a3337caa5b953626eb873e3e6b" category="list-text">*优化缓存卷大小*</block>
+  <block id="3f8b3943fba700ffad94c47ef4638509" category="paragraph">Workload Factory 建议在缓存卷上启用卷自动调整大小和清理，以保持最佳大小，并将缓存集中在热数据上，以实现最高效率。</block>
+  <block id="a49bf929860657a29ec7b321ff7a63ba" category="list-text">*Storage VM 逻辑报告*</block>
+  <block id="7edda8ec9be79d47927f4aa7e27bd776" category="paragraph">Workload Factory 建议将存储虚拟机的默认报告设置设置为逻辑，以便更好地了解卷级别的存储使用情况。</block>
+  <block id="a39ae09f8be4327fc176cfeb76a0e366" category="section-title">成本优化</block>
+  <block id="394c926099d3d2cf7e0d7477f17faf38" category="paragraph">成本优化可帮助您在保持低成本的同时为业务创造最大价值。</block>
+  <block id="ff879d0ae47ba423426718c1437f43bc" category="list-text">*通过冷数据分层优化 TCO*</block>
+  <block id="3fa1db8a8be8ef91cca2bf931c2698f3" category="paragraph">应启用冷数据分层以降低 SSD 存储层利用率。建议对每个卷应用分层策略。FSx for ONTAP 持续扫描数据以检测冷数据，并将其无中断地移动到容量存储池层。</block>
+  <block id="7cee9f2699d966625a5743c41334d168" category="list-text">*启用存储效率*</block>
+  <block id="4ac28dca7ab7f0f38a67c27c947662d5" category="paragraph">应启用存储效率功能 - 数据缩减、压缩和重复数据删除 - 以优化存储利用率并降低 SSD 层成本。</block>
+  <block id="fed8dca8f704b8520ccccb85704d4336" category="list-text">*不必要的快照和备份删除*</block>
+  <block id="0c3c1c3be816da545548a0d1ddb8eab2" category="paragraph">应删除不再需要的快照和备份，以降低成本。</block>
+  <block id="c359614024935abd3712075452782fa3" category="list-text">*非活动块设备*</block>
+  <block id="934ae55c0ac8033312b0dd4fc00ad677" category="paragraph">在块设备未使用七天后，Workload Factory 建议归档块设备数据或删除未使用的块设备以降低成本。</block>
+  <block id="f915580ac605b8302594b2e8b9e200c4" category="list-text">*未充分利用的 SSD 容量*</block>
+  <block id="20f19e4030e406a0bbc3f71b51e9b885" category="paragraph">未充分利用的 SSD 容量层可能会产生不必要的成本。Workload Factory 建议减少 SSD 层容量，同时保持高于当前已用容量的 20% 可用空间缓冲区。缩减操作可能需要几个小时到几天，在此期间不支持其他文件系统操作。</block>
+  <block id="3224742265d3111d23b216e2a1d3036c" category="paragraph">卷备份是按卷进行的，因此每个备份仅包含特定卷中的数据。</block>
+  <block id="9b1c40247bbd6b430d06045ce9149bf4" category="paragraph">卷备份是增量的，这意味着只有在最近一次备份后更改的卷上的数据才会被保存。这样可以最大限度地减少创建备份所需的时间和备份所需的存储空间，从而通过不复制数据来节省存储成本。</block>
+  <block id="40e95cbe82fc979afaca404d45ab88c7" category="list-text">从 *Volumes* 选项卡中，选择要备份的卷的操作菜单。</block>
+  <block id="0b3a2f729072cb80e423288abd69fa27" category="list-text">选择 *Data protection actions*、*Volume backups*，然后选择 *Manual backup*。</block>
+  <block id="108be83f8740c01bf49fb6d51d4b134e" category="admonition">快照不是数据的副本。如果要复制数据，请考虑使用卷备份或卷复制功能。</block>
+  <block id="d6a7c6eb08e4e62d76793fd3d8b368d4" category="list-text">卷备份：卷备份副本将保留，您仍然可以使用它们。</block>
+  <block id="e18aace8bf973f70c990d2b81fcba316" category="list-text">在信息下，选择 *Volume backups* 旁边的铅笔图标。当鼠标悬停在 *Volume backups* 行上时，铅笔图标会出现在下拉箭头旁边。</block>
+  <block id="8650af0fa3c7b902ba6a94894d28c472" category="list-text">在 *Volume backups* 对话框中，提供以下内容：</block>
+  <block id="5e9b88efcc8c9692790f512327a22476" category="list-text">选择 *Data protection actions*、*Volume backups*，然后选择 *Restore from a backup*。</block>
+  <block id="6eb18ebccbf4fe18669aca55778990e0" category="sidebar">管理卷备份计划</block>
 </blocks>

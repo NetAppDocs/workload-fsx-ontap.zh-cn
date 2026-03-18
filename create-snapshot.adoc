@@ -18,7 +18,7 @@ summary: 在NetApp Workload Factory 中创建 FSx for ONTAP卷的手动快照。
 FSx for ONTAP卷使用写时即时复制、因此快照中任何未经修改的文件不会占用卷的任何容量。
 
 
-NOTE: 快照不是数据的副本。如果要创建数据副本、请考虑使用FSx for ONTAP备份或卷复制功能。
+NOTE: 快照不是数据的副本。如果要复制数据，请考虑使用卷备份或卷复制功能。
 
 .开始之前
 您必须关联一个链接才能创建卷的手动快照。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何关联现有链接或创建并关联新链接"](英文)链接关联后、返回此操作。
