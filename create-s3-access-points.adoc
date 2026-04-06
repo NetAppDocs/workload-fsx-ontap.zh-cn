@@ -1,0 +1,60 @@
+---
+sidebar: sidebar 
+permalink: create-s3-access-points.html 
+keywords: S3, s3, access points, manage access points, change access points, update access points, modify access points 
+summary: 在 NetApp Workload Factory 中为卷创建 S3 访问点。 
+---
+= 在 NetApp Workload Factory 中为卷创建 S3 访问点
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+在 NetApp Workload Factory 中为卷创建和附加 S3 访问点。
+
+.关于此任务
+Amazon FSx for NetApp ONTAP 允许 NFS 和 SMB 文件系统访问 S3 数据并连接到 Amazon Bedrock、SageMaker、Athena、AWS Glue 等 AWS 服务。您可以将 AWS 服务连接到所有对象存储数据。
+
+将 S3 接入点连接到 FSx for ONTAP 文件系统中的 NFS 和 SMB 卷，以便 AWS 服务像在 S3 存储桶中一样访问文件。连接接入点时，请定义唯一 ID，选择文件访问类型（UNIX 或 Windows），并添加用于访问授权的用户名。
+
+连接 S3 访问点后，它会以唯一的别名显示在 AWS Management Console 中。使用此别名作为 AWS 服务（例如 Amazon Bedrock）的 S3 存储桶名称，以访问 FSx for ONTAP 卷中的文件。
+
+您可以将多个 S3 接入点连接到单个 FSx for ONTAP 卷，每个接入点都具有唯一的访问级别，以连接到多个 AWS 服务。
+
+.开始之前
+开始之前，请完成以下要求。
+
+* 您必须具有带有 S3 访问点的现有卷。link:create-volume.html["使用 S3 访问点创建卷"]
+* 必须link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["使用 _operations and remediation_ 权限策略授予凭据"^]在 Workload Factory 中才能完成此任务。
+
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
+. 从存储菜单中，选择 *FSx for ONTAP*。
+. 从 *FSx for ONTAP* 中，选择要更新卷的文件系统。
+. 从文件系统概述中，选择*Volumes*选项卡。
+. 从卷选项卡中，选择要使用的卷的操作菜单，然后选择 *高级操作*，然后选择 *管理 S3 访问点*。
+. 在"管理 S3 接入点"页面上，选择*创建并连接 S3 接入点*。
+. 在 *创建并附加 S3 接入点* 页面上，提供以下信息：
++
+** *S3接入点名称*：输入S3接入点的名称。
+** *用户*：选择有权访问该卷的现有用户或创建新用户。
+** *用户类型*：选择*UNIX*或*Windows*作为用户类型。
+** *网络配置*：选择*互联网*或*虚拟私有云 (VPC)*。您选择的网络类型决定了接入点是可从互联网访问还是仅限于特定的 VPC。要使用 Journal 表功能，您必须选择*互联网*作为网络配置。
+** *库存表*：可选。需要 `getObject`权限。启用卷上的库存表以生成 S3 访问点可访问的所有对象的元数据，并产生 AWS S3 请求成本。有关详细信息，请参见link:https://aws.amazon.com/s3/pricing/["Amazon S3 定价文档"^]。表格每 24 小时更新一次。
+** *S3 接入点标签*：您最多可以添加 50 个标签或删除标签。
+
+
+. 选择 * 创建 * 。
+
+
+.相关信息
+您可以选择将日志表功能与 Workload Factory 中的 S3 访问点一起使用。日志表基础架构可捕获并存储跨 Amazon FSx for ONTAP 卷访问点的用户访问事件和对象操作的审核日志。要启用日志表功能，您必须设置必要的 AWS 基础架构，包括 AWS CloudTrail、AWS CloudWatch、AWS S3 存储桶、AWS CloudWatch 日志组以及 AWS Identity and Access Management (IAM) 角色和策略。link:setup-journal-table.adoc["设置 NetApp Workload Factory 的日记表基础结构"^]。
+
+其他相关主题：
+
+* link:edit-s3-access-points.html["在 NetApp Workload Factory 中编辑卷的 S3 访问点"]
+* link:delete-s3-access-points.html["删除 NetApp Workload Factory 中卷的 S3 访问点"]
+

@@ -1,0 +1,39 @@
+---
+sidebar: sidebar 
+permalink: view-s3-details.html 
+keywords: S3, s3, access points, manage access points, change access points, update access points, modify access points 
+summary: 查看 NetApp Workload Factory 中卷的 S3 访问点的详细信息。 
+---
+= 查看 NetApp Workload Factory 中卷的 S3 访问点的详细信息
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+查看 S3 接入点详细信息，如别名、ARN 和 S3 URI。启用库存和日记表后，您可以查看跨 S3 访问点的用户访问事件和对象操作的元数据和审计日志。
+
+.关于此任务
+当在卷上启用清单表时，您可以查看连接到卷的现有 S3 访问点的访问点、清单表和表存储桶详细信息。系统还提供到 AWS Management Console 中清单表的链接。
+
+启用日志表后，Workload Factory 将在表中的访问点上生成日志供您参考。该表包括 CloudTrail 事件、跟踪（AWS 活动的记录）、CloudTrail 过滤器、CloudWatch 日志组等。
+
+您可以复制访问点详细信息以用于其他应用程序。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
+. 从存储菜单中，选择 *FSx for ONTAP*。
+. 从 *FSx for ONTAP* 中，选择具有要查看其详细信息的卷的文件系统。
+. 从文件系统概述中，选择*Volumes*选项卡。
+. 从 Volumes 选项卡中，选择要查看其详细信息的卷的操作菜单，然后选择 *Advanced actions*，然后选择 *View details*。
++
+详细信息显示在四个选项卡下：*Access point*、*Inventory table*、*Journal table* 和 *Table bucket*。
+
+. 如果已启用库存或日记帐表的状态，但缺少 `get:Object`权限，请按照对话框中的说明添加所需的权限。
+. 当日记账表状态为挂起时，您必须提供 CloudTrail ARN 才能将日记账表连接到创建的基础设施。按照说明使用 AWS CLI 或 AWS 管理控制台部署 CloudFormation 堆栈，然后返回 Workload Factory 控制台输入 CloudTrail ARN。
+
+
+.相关信息
+* link:setup-journal-table.html["在 NetApp Workload Factory 中设置日记表基础结构并排除日记表设置问题。"]
+

@@ -126,7 +126,17 @@ sidebar:
       - title: 管理 SMB/CIFS 共享
         url: "/manage-cifs-share.html"
       - title: 管理 S3 访问点
-        url: "/manage-s3-access-points.html"
+        entries:
+        - title: 创建并连接 S3 接入点
+          url: "/create-s3-access-points.html"
+        - title: 编辑 S3 接入点
+          url: "/edit-s3-access-points.html"
+        - title: 设置日志表基础架构
+          url: "/setup-journal-table.html"
+        - title: 查看有关 S3 接入点的详细信息
+          url: "/view-s3-details.html"
+        - title: 删除 S3 访问点
+          url: "/delete-s3-access-points.html"
       - title: 拆分克隆的卷
         url: "/split-cloned-volume.html"
       - title: 删除卷
@@ -209,8 +219,6 @@ sidebar:
       url: "/support-registration.html"
     - title: 获取帮助
       url: "/get-help.html"
-    - title: 故障排除
-      url: "/troubleshooting.html"
   - title: 法律声明
     url: "/legal-notices.html"
 product-family:

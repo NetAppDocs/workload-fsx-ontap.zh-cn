@@ -1,0 +1,30 @@
+---
+sidebar: sidebar 
+permalink: edit-s3-access-points.html 
+keywords: S3, s3, access points, manage access points, change access points, update access points, modify access points 
+summary: 在 NetApp Workload Factory 中编辑卷的 S3 访问点。 
+---
+= 在 NetApp Workload Factory 中编辑卷的 S3 访问点
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+更新 NetApp Workload Factory 中卷的 S3 访问点详细信息和管理标记。
+
+您还可以启用或禁用接入点的*库存表*。库存表会为 S3 接入点可访问的所有对象生成元数据，并产生 AWS S3 请求成本。有关详细信息，请参见 link:https://aws.amazon.com/s3/pricing/["Amazon S3 定价文档"^]。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
+. 从存储菜单中，选择 *FSx for ONTAP*。
+. 从 *FSx for ONTAP* 中选择要更新的卷的文件系统的操作菜单，然后选择 *管理*。
+. 从文件系统概述中，选择*Volumes*选项卡。
+. 从 Volumes 选项卡中，选择要编辑其 S3 访问点的卷的操作菜单，然后选择 *Advanced actions*，然后选择 *Manage S3 access points*。
+. 在*管理 S3 接入点*屏幕中，选择操作菜单，然后选择*编辑接入点*。
+. 进行更新，然后选择 *Apply*。
++
+要为日志表功能设置基础架构，您必须选择 *Internet* 作为 S3 访问端点的网络配置。link:setup-journal-table.adoc["了解如何为 NetApp Workload Factory 设置日志表基础结构"].
+
+

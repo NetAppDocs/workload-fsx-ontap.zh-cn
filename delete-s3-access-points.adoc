@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: delete-s3-access-points.html 
+keywords: S3, s3, access points, delete access points, remove access points 
+summary: 在 NetApp Workload Factory 中删除卷的 S3 访问点。 
+---
+= 删除 NetApp Workload Factory 中卷的 S3 访问点
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+从 NetApp Workload Factory 中的卷删除现有 S3 访问点。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
+. 从存储菜单中，选择 *FSx for ONTAP*。
+. 从 *FSx for ONTAP* 中选择要更新的卷的文件系统的操作菜单，然后选择 *管理*。
+. 从文件系统概述中，选择*Volumes*选项卡。
+. 从"卷"选项卡中，选择要为其管理 S3 接入点的卷的操作菜单，然后选择 *高级操作*，然后选择 *管理 S3 接入点*。
+. 选择要删除的 S3 接入点的操作菜单，然后选择 *Delete*。
+. 在*删除 S3 接入点*对话框中，选择*删除*以从卷中删除 S3 接入点。
++
+Workload Factory 不会删除库存或日记表，但您可以从 AWS 管理控制台手动删除它们。
+
+

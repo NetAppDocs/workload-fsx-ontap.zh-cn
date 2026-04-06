@@ -190,7 +190,6 @@
   <block id="62e91320f9cdbfe080b1002592de785b" category="list-text">*卷名称*：输入卷的名称。</block>
   <block id="b2e658eb3f11776899234dd87caf3823" category="list-text">* Storage VM名称*：(可选)输入Storage VM名称。</block>
   <block id="71a8fe56183b62227c11ca4ce811f166" category="list-text">*卷样式*：选择* FlexVol *或* FlexGroup *卷。</block>
-  <block id="cb69a576eebf4d27436ae39122a9562c" category="paragraph">默认情况下、FlexVol卷模式处于选中状态。</block>
   <block id="ffe3253d848af0e44a26ba39fba69329" category="list-text">*卷大小*：输入卷大小和单位。</block>
   <block id="b46ad6f5a61764c118c979f2583ab630" category="paragraph">(可选)启用卷自动增长。当您选择*文件访问*作为卷访问类型时，此选项可用。</block>
   <block id="53ebc36ae845935202fde349f39b2e17" category="list-text">在"Access"(仅适用于具有关联链接的文件系统)下、提供以下详细信息：</block>
@@ -220,7 +219,6 @@
   <block id="bbcc4e18576e310acdd3a82682875a7f" category="list-text">此策略的工作方式与此策略相同<block ref="c21f969b5f03d33d43e04f8f136e7682" prefix=" " category="inline-code"></block> 、只是仅保留每周计划中的一个快照。</block>
   <block id="e3944f065f8a736803ad0b4de4b49f84" category="list-text">此策略不会创建任何快照。您可以将此策略分配给卷、以防止自动创建快照。</block>
   <block id="b206a5f8985f80349f02e0144a4a341d" category="list-text">*分层策略*：为卷中存储的数据选择分层策略。</block>
-  <block id="057899be9192508684a0a7c0ddce247b" category="list-text">在高级配置下、提供以下内容：</block>
   <block id="31bc68ca566d500bf92a8cab85ec5ae3" category="list-text">*接合路径*：在Storage VM的命名空间中输入卷的挂载位置。默认接合路径为<block ref="efef91582c9b0099c391a47d56e741d2" prefix=" " category="inline-code"></block>。</block>
   <block id="a481fc89f2e7d4e062f18bfa2b0d4c70" category="list-text">*聚合列表*：仅适用于FlexGroup卷。添加或删除聚合。最小聚合数为1。</block>
   <block id="688711a00683b1f80450615a64ae5765" category="list-text">*成分卷数*：仅适用于FlexGroup卷。输入每个聚合的成分卷数。每个成分卷需要100 GiB。</block>
@@ -550,9 +548,6 @@
   <block id="201080500e946070a2e4873042507c77" category="paragraph">确认将向NetApp提交您的请求、并建议您创建NetApp 支持站点 帐户。</block>
   <block id="cc8b0535948da368f832027c19b7f853" category="list-text">请务必复制上面用于序列号字段的帐户序列号(960xxxx)。这样可以加快帐户处理速度。</block>
   <block id="684375e279a289295b72a006d93e2c4c" category="paragraph">在此过程中、NetApp应与您联系。这是针对新用户的一次性入职练习。</block>
-  <block id="fa6e79d91adacad3ba5d3684079b4ea1" category="summary">Amazon FSx for NetApp ONTAP文档包含故障排除主题、供您参考。</block>
-  <block id="025110220989dd80d639c418b593cad3" category="inline-link-macro">对Amazon FSx for NetApp ONTAP进行故障排除</block>
-  <block id="aa3f4a232768328d892056c200f23b5f" category="paragraph">有关详细信息、请参见 <block ref="39d4d71bb679e33c9314f282da47094c" category="inline-link-macro-rx"></block> 。</block>
   <block id="fb4531252f707fbda1308840e3c7d6af" category="summary">随时手动更新复制关系中源卷和目标卷之间传输的快照数据。</block>
   <block id="9ff8251e97123d13337c62b2b74bbe1e" category="doc">更新复制关系中的快照数据</block>
   <block id="fa0604fd5c522ae5ab642bebf836c3d0" category="list-text">选择*立即更新*。</block>
@@ -593,7 +588,6 @@
   <block id="267e5e88580f97af56a5fa2b981a6a67" category="sidebar">性能管理</block>
   <block id="ef045d17e80274aec5be009d1f13f5a2" category="sidebar">为文件系统配置IOPS</block>
   <block id="63d5049791d9d79d86e9a108b0a999ca" category="sidebar">参考</block>
-  <block id="231cf4c70d866b616c21baddaeed0696" category="sidebar">故障排除</block>
   <block id="c7f1094806f4a7907a28dc01a1473f90" category="inline-link-macro">了解如何使用CodeBox实现自动化</block>
   <block id="672d0efbe9223ef23c5fd7d2c7cd4a95" category="paragraph">您可以使用_Quick cre成_或_Advanced cre成_来创建FSx for ONTAP文件系统。您还可以使用CodeBox中提供的以下工具：REST API、CloudFormation和Terraform。<block ref="e0a3467dce43941c7b863cc8d6f0a62a" category="inline-link-macro-rx"></block>(英文)</block>
   <block id="11e2fb5025fdb2cb91fd04c343163328" category="admonition">使用来自CodeBox的Terraform时、您复制或下载的代码会隐藏<block ref="679500f227997b45be97e3ca8115c678" prefix=" " category="inline-code"></block> 和<block ref="6173aa5206484b5224450952747c7148" prefix=" " category="inline-code"></block> 密码。运行代码时、您需要重新输入密码。</block>
@@ -1414,7 +1408,6 @@
   <block id="dd9c72ad3bbeb047b573638ce62d0cc6" category="list-text">*用户提供*：选择此选项可将指定的 Lambda 执行角色及其附加的策略分配给 Lambda 链接。Lambda需要以下权限。<block ref="e6b67e3118c0caaf2206ab3d3fba8d67" prefix=" " category="inline-code"></block>仅当您启用 AWS Secrets Manager 时才需要权限。</block>
   <block id="5f3b3b380e02766e8ad7eca5c6b37840" category="paragraph">在文本框中输入 Lambda 执行角色 ARN。</block>
   <block id="38adbad92c37166c4ce64da1eb51513b" category="inline-link-macro">创建卷</block>
-  <block id="1626bc194a1c6fb76d8a47eba39add09" category="paragraph">FlexGroup 卷大小取决于组成部分的数量，每个组成部分需要 100 GiB。</block>
   <block id="f80d67f0a6951b3f6c1185e7c7f39c30" category="paragraph">指定卷的最大增长大小和单位。不能将最大增长大小设置为小于当前卷大小</block>
   <block id="d932719afe063ca8fcfe0eb63f1b6ec9" category="paragraph">ONTAP 使用重复数据删除和压缩功能实现存储效率。重复数据删除可消除重复的数据块。数据压缩可压缩数据块，以减少所需的物理存储量。</block>
   <block id="9d083d8cac2f7524236aec0400de23bf" category="inline-link-macro">了解有关 ARP/AI 的更多信息</block>
@@ -2074,7 +2067,6 @@
   <block id="fb9b6bbcab5fb396a13f67594a0ba1ee" category="list-text">请务必复制上面用于序列号字段的NetApp帐户序列号 (960xxxx)。这将加快账户处理速度。</block>
   <block id="40eff8559acd41057187b6cb11fa1919" category="list-text">完成以下步骤，将您的新 NSS 帐户与您的NetApp控制台登录关联<block ref="2f3aba04ec49ee5f0573a6c80a1b9df2" category="inline-xref-macro-rx"></block>。</block>
   <block id="f335678326583cea28377216c5515221" category="paragraph">拥有NetApp支持站点帐户后，请按照以下步骤将该帐户与您的NetApp控制台登录关联<block ref="2f3aba04ec49ee5f0573a6c80a1b9df2" category="inline-xref-macro-rx"></block>。</block>
-  <block id="2b769f5862082021bf11a857697aa4ce" category="doc">NetApp Workload Factory 中 FSx for ONTAP的故障排除</block>
   <block id="fbd561748c9b594e4d65b8ccf21f5769" category="paragraph">复制关系具有设定的复制计划，但您可以随时手动更新NetApp Workload Factory 中源卷和目标卷之间传输的快照数据。</block>
   <block id="1d27ede7e22b617fbd392a02ca413a78" category="list-text">在复制关系选项卡中，选择要更新的复制关系的操作菜单。</block>
   <block id="0b81b68aa4b4da3fc81b7541c9557525" category="summary">在NetApp Workload Factory 中，您可以在创建卷后更新存储效率设置。</block>
@@ -2338,16 +2330,7 @@
   <block id="15edb6ed53ce8a32fd0631a4517d7fc7" category="list-text"><block ref="15edb6ed53ce8a32fd0631a4517d7fc7" category="inline-link-macro-rx"></block></block>
   <block id="d628678d4875b2f8f6ea7ca8dab6ade0" category="inline-link-macro">在工作负载工厂中管理 S3 访问点</block>
   <block id="81cca59ad3bedd27880ab1c747ae8b70" category="list-text"><block ref="81cca59ad3bedd27880ab1c747ae8b70" category="inline-link-macro-rx"></block></block>
-  <block id="e89e0732eb8fbeb9c1bb216d5b1fe2c8" category="summary">在NetApp Workload Factory中管理卷的 S3 访问点。</block>
-  <block id="7caacaed323c9582bdf146f33b338930" category="doc">在NetApp Workload Factory中管理卷的 S3 访问点</block>
-  <block id="1f26d72d95cf276540f7a69b509645fe" category="paragraph">您必须拥有一个已存在的包含 S3 接入点的卷。</block>
   <block id="be929bcd251acd28106548a34c8a067b" category="list-text">从 *FSx for ONTAP* 中选择要更新的卷的文件系统的操作菜单，然后选择 *管理*。</block>
-  <block id="7fcc02a075c6d0b859fd9a03f5250e5f" category="list-text">在“卷”选项卡中，选择要管理 S3 接入点的卷的操作菜单，然后选择“高级操作”，再选择“管理 S3 接入点”。</block>
-  <block id="4dc9fa88ed74bd072e88bad92a1f17c6" category="open-title">创建 S3 访问点并将其附加到现有卷</block>
-  <block id="c57302a0d02305ff8c144fb37bb2fab9" category="list-text">选择“创建并连接 S3 接入点”。</block>
-  <block id="e979f8982cafd5647560686a5ec74a2a" category="list-text">在“创建并连接 S3 接入点”对话框中，提供以下信息：</block>
-  <block id="0802ef324b114effd397e5e5ac619733" category="list-text">选择“创建并附加”。</block>
-  <block id="f4e2e090f540d174d8e07c3527c25962" category="open-title">从卷中删除现有的 S3 访问点</block>
   <block id="f994c7e71102a3d5ed7af5975abfaa09" category="sidebar">管理 S3 访问点</block>
   <block id="bc5d3bf99236801351dc3a2d7c20aed7" category="paragraph">Workload Factory 会分析您的 FSx for ONTAP文件系统，以识别以下配置：</block>
   <block id="afc7c7589e5f20d86c03b5e089bbad6b" category="list-text">NetApp自主勒索软件防护 (ARP/AI) 已禁用（包括块设备）：检查块设备卷上的 ARP/AI 是否已禁用</block>
@@ -2432,13 +2415,11 @@
   <block id="c7d27c61cfd9d94c94e936b1785769dd" category="section-title">管理块设备的客户端访问权限</block>
   <block id="679f0d3f635a07fd97dff3c93833dc50" category="paragraph">您可以随时通过创建 igroup、添加或删除块设备和主机发起程序来管理现有块设备的客户端访问权限。</block>
   <block id="ac40a086c14a9eef79fce5123e9bd49c" category="list-text">导航至块设备的操作菜单，然后选择“管理客户端访问”。</block>
-  <block id="2ea858957b4333f86af5869e62f5efe5" category="list-text">如果不存在 igroup，请选择“创建 igroup”创建一个新的 igroup，然后执行以下操作：</block>
   <block id="d66126919f51b95d3c2330d837b5f66c" category="list-text">*块设备名称*：请输入块设备名称。您可以选择多个块设备与 igroup 关联。</block>
   <block id="e29d6df132d9efce7dfdd9c017453c6a" category="list-text">*操作系统类型*：选择操作系统类型。</block>
   <block id="7d73711421384d2485630673ab93b662" category="list-text">*igroup 名称*：请输入 igroup 名称。</block>
   <block id="e220387578f5151d1653ad1ff2b5a002" category="list-text">*igroup 描述*：可选，输入 igroup 描述。</block>
   <block id="d719073ebb477e6cf9934f806cd15577" category="list-text">*主机发起程序*：输入一个或多个主机发起程序。这些发起程序必须遵循 iSCSI 合格 (IQN) 格式。</block>
-  <block id="2614a90f09c2b1321e872a7622f7f888" category="list-text">如果 igroup 已存在，请选择“编辑客户端访问”以向 igroup 添加或删除块设备和主机发起程序，然后选择“应用”。</block>
   <block id="68d85c073028f0fd978bc424d69ee8fd" category="list-text">在“孤立设备”下，选择“查看和回收容量”。</block>
   <block id="f6841052bd0d86548318f9b2df118ea3" category="list-text">在“回收未使用的块设备空间”屏幕上，选择一个或多个块设备来归档数据并回收容量。</block>
   <block id="2c77adf5fa1de4ed37a6e14d2212f074" category="list-text">选择“存档”。</block>
@@ -2484,11 +2465,8 @@
   <block id="b04638337aac148655a104c2db6c4766" category="section-title">Storage 中的 S3 接入点增强功能</block>
   <block id="f76e736f45740f58cc12ec666b824eb2" category="paragraph">对 NetApp Workload Factory 的存储工作负载中的 S3 接入点管理功能进行了几项增强。您可以输入 S3 接入点的网络配置详细信息，并添加 S3 接入点标签。其他增强功能包括查看 S3 存储区详细信息以及为管理 S3 接入点执行更多操作的功能。</block>
   <block id="76f77cbc01f0341dffcaaa5f6236eb73" category="section-title">存储中可用的 S3 存储桶详细信息</block>
-  <block id="c203e76297d071e4d8256e073c93dafb" category="paragraph">为 S3 接入点启用元数据后，NetApp Workload Factory 会自动扫描您的 AWS S3 存储桶并填充 S3 表，为您提供所有对象、其元数据、属性和标记的清晰快照。访问这些详细信息可帮助您保持对自己负责的数据的控制、可见性和可信度，同时减少运营开销。</block>
-  <block id="cc7664945c125a51dd2e69095c8f8200" category="inline-link-macro">查看 FSx for ONTAP 文件系统中 S3 接入点的详细信息</block>
   <block id="2249107cb1f4c202ef0253c53bcff598" category="section-title">S3 接入点的其他管理操作</block>
   <block id="bf44c4671ee3bfbc818d505bb9a0e59a" category="paragraph">NetApp Workload Factory 为 S3 接入点提供额外的管理操作。您可以查看接入点详细信息、修改现有 S3 接入点以及从 NetApp Workload Factory 界面添加或删除 S3 接入点标签，从而简化您的对象存储管理任务。</block>
-  <block id="366c32f0cbb2503b337e243eaa8c42b5" category="inline-link-macro">在 NetApp Workload Factory 中管理 S3 接入点</block>
   <block id="e593953aaf04eebecfe2e26326145784" category="list-text">优化缓存卷大小：检查是否在缓存卷上启用了卷自动大小调整和清理功能，以保持最佳大小，并将缓存集中在热数据上，以实现最高效率。</block>
   <block id="a872ae5d7fdb75042465788519d63c35" category="list-text">Storage VM 逻辑报告：检查 Storage VM 的默认报告设置是否设置为逻辑，从而更好地了解卷级别的存储使用情况。</block>
   <block id="40fbd58cc84d2567a5be7db0e1e48224" category="section-title">用于块设备的附加卡</block>
@@ -2545,30 +2523,17 @@
   <block id="a7d242b126bf6ced54231e71dba71bda" category="list-text">在 Delete initiator group (igroup) 对话框中，键入"delete"以确认要删除该 igroup，然后选择 *Delete*。</block>
   <block id="4d7b443b927537bbc33ca3690bbcaed1" category="inline-link-macro">为 FSx for ONTAP 文件系统创建 igroup</block>
   <block id="34fc9e9b0a58447e45d29d99c376a3ec" category="paragraph"><block ref="34fc9e9b0a58447e45d29d99c376a3ec" category="inline-link-macro-rx"></block></block>
-  <block id="1ef8cc6eec11f56d70880a4ca54620d0" category="paragraph">在 NetApp Workload Factory 中管理卷的 S3 访问点。您可以使用 Workload Factory 控制台将 S3 访问点分配给现有卷、查看 S3 存储桶的详细信息、对现有访问点进行更改或删除 S3 访问点。</block>
-  <block id="d33d3fec0d0cc42bf9722d3406ba5aa2" category="paragraph">请确保满足以下要求：</block>
   <block id="69b8b9524d643674b889fa70c17e1cc8" category="inline-link-macro">使用 _operations and remediation_ 权限策略授予凭据</block>
   <block id="8c378042ad1ba655fb1f5cd941dc98b6" category="list-text">必须<block ref="c6ffb720e530188ab1b1bff284837062" category="inline-link-macro-rx"></block>在 Workload Factory 中才能完成此任务。</block>
-  <block id="f1834a86a3431bfc71aeab4c9747192d" category="paragraph">创建 S3 访问点并将其连接到 NetApp Workload Factory 中的现有卷。</block>
   <block id="0a76b0d6a11006d8a1c5f62db933ddb6" category="list-text">从 *FSx for ONTAP* 中，选择要更新卷的文件系统。</block>
-  <block id="6e9783376d951cfd780e9fdb67a0f02c" category="section-title">查看详细信息</block>
-  <block id="6210aebae6ddd596486bcb13eb5ef89a" category="list-text">在 *管理 S3 接入点* 屏幕中，选择操作菜单，然后选择 *查看详细信息*。</block>
-  <block id="6ed5516949fd4560f1570e0f701efbac" category="section-title">编辑访问点</block>
-  <block id="803c8783e877d292e1c22e5a3d7cd78a" category="paragraph">更改附加到卷的现有 S3 访问点的用户和用户类型。您还可以启用或禁用访问点的元数据。</block>
   <block id="37068c532170e23c2a91d4d23699dd31" category="list-text">在*管理 S3 接入点*屏幕中，选择操作菜单，然后选择*编辑接入点*。</block>
   <block id="076804dea9fcf3467cf7c699f9811498" category="list-text">进行更新，然后选择 *Apply*。</block>
-  <block id="e41ac5d896a0e6edc27784d233dfbc29" category="section-title">管理 S3 接入点标签</block>
-  <block id="287f73523996b72469d9fd36d0cb155c" category="paragraph">为连接到卷的现有 S3 访问点添加或删除标记。</block>
-  <block id="6e5f33fd29d5f7477e4a80a8769b962b" category="list-text">在 *管理 S3 接入点* 屏幕中，选择操作菜单，然后选择 *管理标签*。</block>
-  <block id="3fa8b09c93230485435b89bed0fa2e87" category="list-text">在"管理 S3 接入点标记"对话框中，您最多可以为 S3 接入点添加 50 个标记或删除标记。</block>
   <block id="f6e1df464413e09857979a0ca8b75a4b" category="paragraph">从 NetApp Workload Factory 中的卷删除现有 S3 访问点。</block>
   <block id="d1fabbd85b7cc34641739e525d26f652" category="section-title">2026 年 2 月 1 日</block>
   <block id="2855f13e1a4620842b40a36c5090209b" category="sidebar">创建块存储资源</block>
   <block id="d8ad6fc6096c88d41f98b91f0043eebe" category="sidebar">创建 igroup</block>
   <block id="9a6576dfb2c795711c67df7e1a5b076a" category="sidebar">块存储管理</block>
   <block id="e77c03d49e828607828412709552dbd6" category="sidebar">管理 igroup</block>
-  <block id="fdb38c6259208c2509d21f6a3f0beb02" category="paragraph"><block ref="fdb38c6259208c2509d21f6a3f0beb02" category="inline-link-macro-rx"></block></block>
-  <block id="cc97dddf7d9715fea79ba3e831f0fbca" category="paragraph"><block ref="cc97dddf7d9715fea79ba3e831f0fbca" category="inline-link-macro-rx"></block></block>
   <block id="0352f037ca8dfca49383ddb908805d9a" category="list-text"><block ref="0352f037ca8dfca49383ddb908805d9a" category="inline-link-macro-rx"></block></block>
   <block id="0a17c703284dc61149bdaf13e30980de" category="list-text"><block ref="0a17c703284dc61149bdaf13e30980de" category="inline-link-macro-rx"></block></block>
   <block id="df267252f2595421cf837794528f006f" category="paragraph">事件分析器会自动从 FSx for ONTAP 文件系统中提取错误、警报和紧急 EMS 事件。您可以通过 <block ref="f91a3df34ad8b434c845af1c5c4599e2" category="inline-link-macro-rx"></block> 和通过 <block ref="f7fcd176fbc4e82ec30b37b672d1e76e" category="inline-link-macro-rx"></block> 在您的 AWS 账户中查看这些事件。事件在移除前显示 72 小时。</block>
@@ -2609,8 +2574,6 @@
   <block id="782b2627ed10262abe4e368b33d508dc" category="list-text">在切换复制之前，请确保所有源卷均未提供任何数据。</block>
   <block id="dda7c50cacac64812ef938f4d803c3a5" category="list-text">在切换复制之前，请确保数据在源卷和目标卷之间同步。</block>
   <block id="882f34227a47a95827c88036c610642f" category="list-text">选择 *Cut over*。</block>
-  <block id="7b626244b5e77ec8426207a79760602c" category="inline-link-macro">修改分层策略</block>
-  <block id="10356b2b96c443d8a19edb3095962df2" category="paragraph">切换后，源卷将被删除，目标卷变为读/写。切换后，您可以<block ref="3a64959985d458e07b4f09b2f2e0e438" category="inline-link-macro-rx"></block>目标卷。</block>
   <block id="51123444304b31165de4e3a52117437d" category="admonition">复制 Storage VM 数据和配置设置时，编辑长期保留不可用。</block>
   <block id="f08a7d33d3e9fe4faf87ad7235d0c02a" category="list-text">一个 FSx for ONTAP 文件系统和一个本地 ONTAP 系统</block>
   <block id="9b9935ad5969c28de13381a2e512b47c" category="paragraph">注:</block>
@@ -2623,7 +2586,6 @@
   <block id="3d8f5698e4ea8cae76ec64ff32d1aa8a" category="list-text">人工智能 (AI) 和机器学习 (ML)：将您的本地 ONTAP 数据复制到 FSx for ONTAP 并创建 S3 接入点以支持云中的 AI 和 ML 培训</block>
   <block id="911879fb512486e8b5af8019b65a8205" category="list-text">*启用库存表*：在卷上启用库存表时，系统会为 S3 访问点可访问的所有对象生成元数据，并产生 AWS S3 请求成本。有关详细信息，请参见 <block ref="af9c8757ba81fcc825b028513d05dce7" category="inline-link-macro-rx"></block>。</block>
   <block id="aa72376768d67d3c8a77216621fb5316" category="paragraph"><block ref="aa72376768d67d3c8a77216621fb5316" category="inline-link-macro-rx"></block></block>
-  <block id="b810156a51d2ff011de686d088c6dcce" category="list-text">孤立设备：显示连续七天未使用的任何块设备，帮助您有效识别和管理未使用的资源。从这里，您可以<block ref="04044e5382e57a877bbf97c227fa9ee4" category="inline-link-macro-rx"></block>。</block>
   <block id="b4faaa513060331f5bb7705e042e49cd" category="list-text">未充分利用的 SSD 容量：检查 SSD 容量层是否未充分利用，并建议降低 SSD 容量以优化成本。</block>
   <block id="01b065251159f3c3b86f7d49511f1bf7" category="list-text">计划卷备份：Workload Factory 改进了配置建议，并添加了打开 FSx for ONTAP 备份或 AWS Backup 的选项。FSx for ONTAP 备份将默认策略应用于文件系统中的所有卷，创建保存长达 90 天的每日备份。借助 AWS Backup，您可以为备份计划中的每个卷选择不同的保留期。</block>
   <block id="9ad8abc81514723f5439d23cac33f67b" category="section-title">Workload Factory 支持 AI 和 ML 复制用例</block>
@@ -2633,7 +2595,6 @@
   <block id="42fe2ab7947c044bb47fb357526022c2" category="section-title">编辑现有 S3 接入点</block>
   <block id="33c5aa1872cfcc4e8c7c5850619e6f87" category="paragraph">您可以更改附加到卷的现有 S3 访问点的用户和用户类型。您还可以启用或禁用访问点的元数据。</block>
   <block id="7525bd4fe22d4a212fea8807fb8d750b" category="inline-link-macro">在 NetApp Workload Factory 中编辑 S3 访问端点</block>
-  <block id="88d72467009c25b9669edfef18e21df3" category="paragraph"><block ref="88d72467009c25b9669edfef18e21df3" category="inline-link-macro-rx"></block></block>
   <block id="692b5b6f757e38d7e4d1dd3f957a20f0" category="section-title">已添加块存储图</block>
   <block id="55d6cb6b45d9aaa08c53b22b5ac8a617" category="paragraph">如果您使用块存储，则可以查看块存储图，以可视化块设备如何连接到节点和 igroup。该图可帮助您了解和管理块存储。</block>
   <block id="e852955e53f52fa18c0de4a24d22f4af" category="inline-link-macro">在 NetApp Workload Factory 中管理块存储</block>
@@ -2652,7 +2613,6 @@
   <block id="3b40a61896ac7bb071b70913553072f1" category="inline-link-macro">管理 FSx for ONTAP 文件系统的块存储</block>
   <block id="72a58cc21323626d7784d44077612a4a" category="paragraph"><block ref="72a58cc21323626d7784d44077612a4a" category="inline-link-macro-rx"></block></block>
   <block id="16f2ae5a8a2de6f12ddc298127a4ddb7" category="list-text">可靠性：SSD 容量阈值、计划的本地快照、计划的卷备份、远程数据复制和数据可靠性，以实现长期保留</block>
-  <block id="b6680821568b93d1977b91f8852a2201" category="list-text">成本优化：存储效率、数据分层、不必要的快照和备份删除、非活动块设备以及未充分利用的 SSD 容量</block>
   <block id="cfcff7e4ca0a4496f029a99d812c3cb3" category="doc">在 Workload Factory 中手动调整文件系统容量</block>
   <block id="59f5126fcebfa1b4b592a46994a99827" category="paragraph">当使用量超过指定阈值时，增加 SSD 存储容量。当您不使用工作集以节省资金时，降低 SSD 存储容量。</block>
   <block id="eb6c620cfb7e9a2b2d272cbd7de4add5" category="inline-link-macro">启用自动容量管理</block>
@@ -2702,14 +2662,10 @@
   <block id="d38a17b6c80e0c89c1d9fcf60a993290" category="paragraph">将 S3 接入点连接到 FSx for ONTAP 文件系统中的 NFS 和 SMB 卷，以便 AWS 服务像在 S3 存储桶中一样访问文件。连接接入点时，请定义唯一 ID，选择文件访问类型（UNIX 或 Windows），并添加用于访问授权的用户名。</block>
   <block id="050fbf0b45be1573711ea227653f0c71" category="paragraph">连接 S3 访问点后，它会以唯一的别名显示在 AWS Management Console 中。使用此别名作为 AWS 服务（例如 Amazon Bedrock）的 S3 存储桶名称，以访问 FSx for ONTAP 卷中的文件。</block>
   <block id="5fdffd86a20eb0d0630a1c07876def30" category="paragraph">您可以将多个 S3 接入点连接到单个 FSx for ONTAP 卷，每个接入点都具有唯一的访问级别，以连接到多个 AWS 服务。</block>
-  <block id="2b66ddc2a8e489f0bdc3cdbd31ddcb5b" category="list-text">从 Volumes 选项卡中，选择要管理其 S3 访问点的卷的操作菜单，然后选择 *Advanced actions*，然后选择 *Manage S3 access points*。</block>
-  <block id="dd3517c1da70fae4b3b5b4c3901aeaef" category="paragraph">未启用库存表时，您可以查看别名、ARN 和 S3 URI 作为访问点详细信息。</block>
-  <block id="77bfd97469b79623f26d2442c8591082" category="paragraph">在卷上启用库存表后，您可以查看连接到卷的现有 S3 访问点的访问点、库存表和表存储桶详细信息。系统还提供了 AWS Management Console 中库存表的链接。</block>
   <block id="a0433002dc542bdc0aaeba81d4c088db" category="paragraph">您可以复制访问点详细信息以用于其他应用程序。</block>
   <block id="08995153fcac85dd0ea3390effc2faf7" category="list-text">从"卷"选项卡中，选择要为其管理 S3 接入点的卷的操作菜单，然后选择 *高级操作*，然后选择 *管理 S3 接入点*。</block>
   <block id="e017a7ea48404bb134394eb7fe78d1af" category="list-text">选择要删除的 S3 接入点的操作菜单，然后选择 *Delete*。</block>
   <block id="95922585c37177ee9b8a541e7e22ca06" category="list-text">在*删除 S3 接入点*对话框中，选择*删除*以从卷中删除 S3 接入点。</block>
-  <block id="495751a17f4061798aca8d3f98638c0c" category="paragraph">Workload Factory 控制台不会删除元数据，但您可以将其从 AWS 管理控制台中删除。</block>
   <block id="4aa1f4ce7ff97e69b143fbe399631234" category="section-title">2026 年 3 月 1 日</block>
   <block id="f9b8d8043e7f357d7b5805e6dfd01b25" category="sidebar">管理块存储</block>
   <block id="90fbacfd00a759e142437ac247a4317c" category="sidebar">手动调整文件系统容量</block>
@@ -2786,4 +2742,264 @@
   <block id="6eb18ebccbf4fe18669aca55778990e0" category="sidebar">管理卷备份计划</block>
   <block id="0961e27231cdfd5dc9ef441903dabe01" category="doc">Amazon FSx for NetApp ONTAP 在 NetApp Workload Factory 中的已知限制</block>
   <block id="b6a0b5ebabfe42c8ed27e9b4c0efda76" category="paragraph">已知限制指出本产品版本不支持的平台、设备或功能，或与其无法正常互操作的平台、设备或功能。以下限制仅适用于 Amazon FSx for NetApp ONTAP 在 NetApp Workload Factory 中的使用。请仔细查看这些限制。</block>
+  <block id="373a2f1d901c2d939efc602830f01830" category="paragraph">新的 Inventory 表自动扫描您的 AWS S3 存储桶并填充 S3 表，为您提供所有对象、其元数据、属性和标签的清晰快照。访问这些详细信息有助于您保持对自己负责的数据的控制、可见性和可信度，同时减少运营开销。您可以在创建和连接 S3 接入点或编辑现有接入点时打开此功能。</block>
+  <block id="89431b722804b6b5729917d710d8bca9" category="inline-link-macro">在 NetApp Workload Factory 中为卷创建并附加 S3 访问点</block>
+  <block id="479e84ecf4496e9113dbf4e4caa47328" category="paragraph"><block ref="479e84ecf4496e9113dbf4e4caa47328" category="inline-link-macro-rx"></block></block>
+  <block id="0695b468968701e6133374525567ebb8" category="list-text">非活动块设备：显示连续七天未使用的任何块设备，帮助您有效识别和管理未使用的资源。从这里，您可以<block ref="04044e5382e57a877bbf97c227fa9ee4" category="inline-link-macro-rx"></block>。</block>
+  <block id="0ba338e49aa7425a86cae293804b2d70" category="paragraph"><block ref="0ba338e49aa7425a86cae293804b2d70" category="inline-link-macro-rx"></block></block>
+  <block id="97c89cdac712f1b76105f91dee0572f0" category="paragraph">Workload Factory 分析您的 FSx for ONTAP 文件系统中的*非活动 NAS 卷*。配置分析可识别未主动使用的 NAS 卷，并建议采取措施来优化存储利用率和降低成本。</block>
+  <block id="8fed534b92837766d0beda280a6179f0" category="inline-link-macro">为 ONTAP 文件系统实施架构良好的 FSx</block>
+  <block id="aa9fc3ddfcff516e1422d829fd2d4138" category="paragraph"><block ref="aa9fc3ddfcff516e1422d829fd2d4138" category="inline-link-macro-rx"></block></block>
+  <block id="51d8364219eb8c2bcde5564c48004466" category="section-title">S3 接入点的日志表功能</block>
+  <block id="5693755c177f4efee6db3867cf164616" category="paragraph">日志表功能提供了一种大规模管理 FSx ONTAP S3 对象存储的方法，允许您轻松审核存储桶中对象的用户访问事件和操作。使用 Workload Factory，您可以设置存储桶和 S3 表的自动扫描，以保留事件记录，显示所有对象、其详细信息和用户操作。</block>
+  <block id="f5605effc9ff1f2b6b56333b91b9188b" category="inline-link-macro">设置 NetApp Workload Factory 的日记表基础结构</block>
+  <block id="15ee03197182e575bb603c90e93b0f1d" category="paragraph"><block ref="15ee03197182e575bb603c90e93b0f1d" category="inline-link-macro-rx"></block></block>
+  <block id="7a492c4bebdd8855719e33759860ec85" category="section-title">支持管理现有的 igroups</block>
+  <block id="8770963e84c3458575dd2cb30097ea59" category="paragraph">Workload Factory 支持管理现有的 igroups。您可以添加或删除块设备和主机启动器，以便按时交付部署的工作负载。</block>
+  <block id="fb848967e18d6d577c43fdac12d36dae" category="section-title">支持为 FlexVol 卷指定聚合</block>
+  <block id="d5df323db0a76ed62a683b9faace70ee" category="paragraph">Workload Factory 支持在选定的聚合上创建 FlexVol 卷。这允许您在所有文件系统资源之间分配容量和性能负载。</block>
+  <block id="dfe0bf59b17a7c242e3e57ed9983cadf" category="inline-link-macro">在 NetApp Workload Factory 中创建 FlexVol volume</block>
+  <block id="438b9ce1f05f60505d31940eb7d80713" category="paragraph"><block ref="438b9ce1f05f60505d31940eb7d80713" category="inline-link-macro-rx"></block></block>
+  <block id="934fd3399568391e103ee0d773bf954d" category="list-text">*非活动 NAS 卷*</block>
+  <block id="ad888b2fc1946f3bc7c47013f4399476" category="paragraph">配置分析可识别未主动使用的 NAS 卷，并建议删除或归档这些卷以降低成本。</block>
+  <block id="27bbb381f95a5892aac5e6fa577ad167" category="list-text">*聚合名称*：选择聚合来托管新卷。</block>
+  <block id="bbe174274b18d7c6c98e45b8076c38f3" category="paragraph">切换后，源 Storage VM 脱机。</block>
+  <block id="aadb221d48ad5912d16ae10d1a2f7515" category="inline-link-macro">修改分层策略</block>
+  <block id="de12e179e610f435272079f58d2c6bf8" category="paragraph"><block ref="7a3d97c05742e0c35a808e39b9ae9bf1" category="inline-link-macro-rx"></block> 切换后的目标卷。</block>
+  <block id="9991602752d2f7a5f66a5872be6ec903" category="summary">在 NetApp Workload Factory 中为卷创建 S3 访问点。</block>
+  <block id="66c9abf800da7c775d1c85a15372ac8a" category="doc">在 NetApp Workload Factory 中为卷创建 S3 访问点</block>
+  <block id="d5f104656aed233be9a593de789bbebd" category="paragraph">在 NetApp Workload Factory 中为卷创建和附加 S3 访问点。</block>
+  <block id="9dcfa34c623752899d0cd665d6921df4" category="paragraph">开始之前，请完成以下要求。</block>
+  <block id="a3e0a4d34abe4cb6242fd1657cb155d4" category="inline-link-macro">使用 S3 访问点创建卷</block>
+  <block id="6f6ccfdfe231ae2138827786254112c2" category="list-text">您必须具有带有 S3 访问点的现有卷。<block ref="c7b581e6d0e133046496fe0baeb0e257" category="inline-link-macro-rx"></block></block>
+  <block id="450d84b08c6958224dd89ed70bc5e196" category="list-text">从卷选项卡中，选择要使用的卷的操作菜单，然后选择 *高级操作*，然后选择 *管理 S3 访问点*。</block>
+  <block id="1ab0f92903be1ffc4bfffd2b16c9822b" category="list-text">在"管理 S3 接入点"页面上，选择*创建并连接 S3 接入点*。</block>
+  <block id="d4e1585a083abcd993be7dae0c424273" category="list-text">在 *创建并附加 S3 接入点* 页面上，提供以下信息：</block>
+  <block id="8f3e222b23e17bc1bb1082500f8b04e5" category="list-text">*网络配置*：选择*互联网*或*虚拟私有云 (VPC)*。您选择的网络类型决定了接入点是可从互联网访问还是仅限于特定的 VPC。要使用 Journal 表功能，您必须选择*互联网*作为网络配置。</block>
+  <block id="4b0fad635cf8179faf708fd1c02a8c74" category="list-text">*库存表*：可选。需要<block ref="7bc9c2ce1ace9cb69dc8583727298aa5" prefix=" " category="inline-code"></block>权限。启用卷上的库存表以生成 S3 访问点可访问的所有对象的元数据，并产生 AWS S3 请求成本。有关详细信息，请参见<block ref="af9c8757ba81fcc825b028513d05dce7" category="inline-link-macro-rx"></block>。表格每 24 小时更新一次。</block>
+  <block id="138bd218889d182c485797c551c9e401" category="paragraph">您可以选择将日志表功能与 Workload Factory 中的 S3 访问点一起使用。日志表基础架构可捕获并存储跨 Amazon FSx for ONTAP 卷访问点的用户访问事件和对象操作的审核日志。要启用日志表功能，您必须设置必要的 AWS 基础架构，包括 AWS CloudTrail、AWS CloudWatch、AWS S3 存储桶、AWS CloudWatch 日志组以及 AWS Identity and Access Management (IAM) 角色和策略。<block ref="86eb473c6e9139cc69adeb6635c94df0" category="inline-link-macro-rx"></block>。</block>
+  <block id="ded1ddb4cefc23e05b9056875b8f60f2" category="paragraph">其他相关主题：</block>
+  <block id="ce2c045b9972b366e21ce322585243c1" category="inline-link-macro">在 NetApp Workload Factory 中编辑卷的 S3 访问点</block>
+  <block id="6ab180dbd7d796cef71ba054a1f9dfbe" category="list-text"><block ref="6ab180dbd7d796cef71ba054a1f9dfbe" category="inline-link-macro-rx"></block></block>
+  <block id="9487230e4f8371a9b9f378d1d39b9ee9" category="inline-link-macro">删除 NetApp Workload Factory 中卷的 S3 访问点</block>
+  <block id="947655aca5d5b945e754b785894bd687" category="list-text"><block ref="947655aca5d5b945e754b785894bd687" category="inline-link-macro-rx"></block></block>
+  <block id="8a1536ab9b29e8a78ccc890fc9c2f457" category="list-text">_FlexVol volume_ 是 ONTAP 中的一种逻辑存储类型，允许您管理数据。FlexVol 卷可以在同一存储虚拟机 (SVM) 中的聚合或节点之间移动，而不会中断客户端访问。默认情况下会选择 FlexVol 卷样式。</block>
+  <block id="2725753901ab5f4d4cb3e6f957b07d14" category="list-text">_FlexGroup_ 卷是一种横向扩展 NAS 容器，可提供高性能以及自动负载分配和可扩展性。它由几个成员卷（成分）组成，这些成员卷是透明地共享流量的基础 FlexVol 卷。</block>
+  <block id="f5f0f9ccd160bcb2aece2a01ea2af06c" category="paragraph">+ FlexGroup 卷大小取决于成分数量，每个成分需要 100 GiB。</block>
+  <block id="5c02d2d98076787a0793a0f4e49b2a25" category="list-text">在高级配置下，输入以下详细信息。此部分下的字段因您选择的卷样式而异。</block>
+  <block id="5695b68c52927a5c6607b4889a131e0c" category="list-text">*聚合名称*：仅适用于 FlexVol 卷。选择聚合来托管新卷。</block>
+  <block id="c7fd6103a481528ad5b9c60b269f1ab2" category="summary">在 NetApp Workload Factory 中删除卷的 S3 访问点。</block>
+  <block id="465c16b78dbf848c4ef504aabfafa05b" category="doc">删除 NetApp Workload Factory 中卷的 S3 访问点</block>
+  <block id="c2e690e1e88bf68a1329d006ca0abba1" category="paragraph">Workload Factory 不会删除库存或日记表，但您可以从 AWS 管理控制台手动删除它们。</block>
+  <block id="601896e24afca68bcb4b7e50c7a3fd9a" category="summary">在 NetApp Workload Factory 中编辑卷的 S3 访问点。</block>
+  <block id="d2352112ab40045cec0375e016ea4229" category="doc">在 NetApp Workload Factory 中编辑卷的 S3 访问点</block>
+  <block id="4f2481bead84c7e45263bffec42a080f" category="paragraph">更新 NetApp Workload Factory 中卷的 S3 访问点详细信息和管理标记。</block>
+  <block id="a2872fa19a103aff070420e355911099" category="paragraph">您还可以启用或禁用接入点的*库存表*。库存表会为 S3 接入点可访问的所有对象生成元数据，并产生 AWS S3 请求成本。有关详细信息，请参见 <block ref="af9c8757ba81fcc825b028513d05dce7" category="inline-link-macro-rx"></block>。</block>
+  <block id="fdc1e49b1bc817c660403950b89e1054" category="list-text">从 Volumes 选项卡中，选择要编辑其 S3 访问点的卷的操作菜单，然后选择 *Advanced actions*，然后选择 *Manage S3 access points*。</block>
+  <block id="c0945892db5abb8e13b1125b34afb488" category="inline-link-macro">了解如何为 NetApp Workload Factory 设置日志表基础结构</block>
+  <block id="ad40f635e61a919e5fb283214c26e631" category="paragraph">要为日志表功能设置基础架构，您必须选择 *Internet* 作为 S3 访问端点的网络配置。<block ref="4575008aa3349eefa1ff140f7e1ef1a5" category="inline-link-macro-rx"></block>.</block>
+  <block id="bd01d52efa7861fe563eb75b30ae42db" category="list-text">成本优化：存储效率、数据分层、不必要的快照和备份删除、非活动块设备、未充分利用的 SSD 容量和非活动 NAS 卷</block>
+  <block id="e5eaf9094fc3ae9a063c974472917f15" category="list-text">如果不存在 igroup，请通过选择 *Map igroup &gt; Create igroup* 创建一个新的 igroup，然后执行以下操作：</block>
+  <block id="cd7bfadfb1480ea2e4e23f8c5b8ec668" category="list-text">如果已存在 igroup，请选择 *映射 igroup &gt; 映射现有 igroup* 以从 igroup 中添加或删除块设备和主机启动器，然后选择 *映射*。</block>
+  <block id="cc3aa8207a3047098fb0a9e50930dc27" category="summary">在 NetApp Workload Factory 中为 S3 访问点设置日志表基础架构。</block>
+  <block id="4869b41fa1d8d8c7a4ca3326d581a992" category="doc">设置 NetApp Workload Factory 的日志表基础结构</block>
+  <block id="fb84b838e667358e5556cb53ea951043" category="paragraph">设置日志表基础架构，以捕获和存储跨 Amazon FSx for ONTAP 卷访问点的用户访问事件和对象操作的审计日志。需要执行几个步骤来为 AWS 服务设置基础架构，如 AWS CloudTrail、AWS CloudWatch、AWS S3 存储桶、AWS CloudWatch 日志组、AWS Identity and Access Management (IAM) 和 AWS S3 Tables，以便日志事件正确通过管道传输并由 Workload Factory 读取。</block>
+  <block id="480173409cda6dfbfe14f44d35e908ef" category="paragraph">日志表功能捕获受监控 FSx for ONTAP S3 访问点的 S3 数据平面事件（PutObject、GetObject、DeleteObject 等）。它使用部署到您的 AWS 账户中的 AWS 服务链。正确设置基础架构后，它将连接到 FSx for ONTAP 卷访问点，并建立在日志表中捕获用户访问和对象操作审核事件的管道。</block>
+  <block id="3e1f0faf43de8e4b1f92a2dcb1cd6512" category="paragraph">下表列出了作为基础架构一部分的 AWS 服务、它们各自的资源名称模式以及服务在管道中的用途。</block>
+  <block id="6ce50df88b622198e679f77e2c9b34f2" category="cell">AWS 服务</block>
+  <block id="a8cf084e0995da67b2530fe5fd33f3eb" category="cell">资源名称模式</block>
+  <block id="261addf78c7b2c961032b3dd08ba0b1f" category="cell">目的</block>
+  <block id="8679a1944db93938a65e47107be5d2b8" category="cell">AWS CloudFormation</block>
+  <block id="08d96c4fa5b18191111c42c8d3e0fff0" category="cell">netapp-metadata-*</block>
+  <block id="d109a8ce6dc5f1fa8e43b69a51f12dc6" category="cell">将所有基础架构部署为堆栈</block>
+  <block id="dacc597de1ff25fe3f4c99ddca3ee24e" category="cell">AWS S3 存储桶</block>
+  <block id="cdb69dc2853537d31a07fbf7dfab6757" category="cell">netapp-metadata-cloudtrail-events-logs-{uuid}</block>
+  <block id="960ce1851018d0db921178419d194461" category="cell">存储原始 CloudTrail 日志文件</block>
+  <block id="26ca9b29af36f84c577a85a80a58a381" category="cell">AWS CloudTrail</block>
+  <block id="1bf2c526fba25615493648244da21313" category="cell">netapp-metadata-journal-data-events-trail-{uuid}</block>
+  <block id="66b6d6563a2c7baf57554c386fa898cf" category="cell">捕获特定接入点的 S3 数据事件</block>
+  <block id="54c46974005cb6a579c5f80a0d1f4236" category="cell">AWS CloudWatch 日志组</block>
+  <block id="a09d9836c7e975f3fc3dcbf1bd450af3" category="cell">netapp-metadata-journal-data-events-{uuid}</block>
+  <block id="7bc3a60483fc66e99b403f789205c302" category="cell">以结构化日志条目的形式接收 CloudTrail 事件</block>
+  <block id="bef5f130edd0f036b2ca659d3295d5c7" category="cell">IAM 角色</block>
+  <block id="c54e5f47607237dd23ffa87810586d1a" category="list-text">netapp-metadata-cloudtrail-cw-role-{uuid}</block>
+  <block id="884ec9e905762feedf1cbfd3a6cc2a81" category="list-text">netapp-metadata-s3table-integration-role-{uuid}</block>
+  <block id="ed429e87b8f48521ace6c236f70941c6" category="cell">主动集成</block>
+  <block id="0d9f475bc36a861d305105af0c166782" category="cell">ObservabilityAdmin</block>
+  <block id="dbfaee866f5b9a3c2aa7c2a6a2ead2a2" category="cell">S3TableIntegration</block>
+  <block id="f553a2ab7ae4ae018c2e96c7445b107c" category="cell">将 CloudWatch 日志桥接到 S3 Tables 表中</block>
+  <block id="8fd20e70f8cfe7b4bb7cfbbdab188f28" category="cell">S3 表</block>
+  <block id="69a6da8e3057b2fc397a8583020cfbf2" category="cell">aws-cloudwatch bucket → logs.aws_cloudtrail__data</block>
+  <block id="bcc7da78895c21f670e81ed8a262f465" category="cell">以 Iceberg 格式存储结构化、可查询的 CloudTrail 事件</block>
+  <block id="879dd7a9b77ace45aca7823b176d494e" category="paragraph">{uuid} 是创建模板时生成的随机 8 个字符的标识符。</block>
+  <block id="b3cf46a72aa2712b902917aa8edd528b" category="paragraph">要启用日志表功能，请执行以下步骤：</block>
+  <block id="7dd5f4cb0a5173bab714471707528207" category="list-text">具有 S3 访问点的现有卷。<block ref="c7b581e6d0e133046496fe0baeb0e257" category="inline-link-macro-rx"></block></block>
+  <block id="5bfdf0b458e21e7b279a700232966f84" category="inline-link-macro">编辑 S3 接入点的网络配置</block>
+  <block id="874a559cddbe3d880b3b3f030a4107c5" category="list-text">将 S3 访问端点的网络配置设置为 *Internet*。<block ref="d4dbc6ef9541fd6cdb144f928aed07a9" category="inline-link-macro-rx"></block>。</block>
+  <block id="a8679885e73648ab5faedee9828c5b82" category="inline-link-macro">授予 _operations and remediation_ 权限</block>
+  <block id="10265503ad4154aa0d463ede0d207291" category="list-text"><block ref="a7a3720492cd37e2e97b596f29b12116" category="inline-link-macro-rx"></block> 到您的 Workload Factory 凭据。</block>
+  <block id="72f26542288a74925afe209f90721746" category="list-text">将以下 IAM 策略权限添加到用于运行 CloudFormation 部署的 AWS 账户，以设置 Journal 表。</block>
+  <block id="8a3af9acf77bc2d1c523769ccfb9d02a" category="example-title">日志表设置的 IAM 策略权限</block>
+  <block id="4b4299209f4cfca6b0ced53fbb875922" category="section-title">设置日志表基础架构</block>
+  <block id="43ec6f35ca2ab03a81f2ea216fb53592" category="paragraph">设置基础设施以从日志表中的 S3 访问点捕获 AWS 服务事件。</block>
+  <block id="6c6bdb9e64962766080b453ac5399c0b" category="list-text">在 *编辑 S3 接入点* 对话框中，确保网络配置设置为 *Internet*。</block>
+  <block id="81d0eefd16c03b5f5ec8e749720517e4" category="list-text">按照对话框中的说明设置日记表功能的基础架构。</block>
+  <block id="99efbd47a50ba6f535a8200791561bb3" category="list-text">下载 CloudFormation 模板。</block>
+  <block id="2f6dabbdb98dce21d04afe199ae5f5ea" category="list-text">在 AWS 帐户中部署 CloudFormation 堆栈。</block>
+  <block id="c1d628e3526732a7df245aa48d5c48a1" category="list-text">将模板 JSON 保存到文件。</block>
+  <block id="6933cc8b32b041ef9586d20cb2dcd2e6" category="list-text">使用 AWS CLI 或 AWS 管理控制台部署模板。</block>
+  <block id="5cb966e5247c525746877f0025dfe7e6" category="list-text">等待堆栈达到 <block ref="4d1e1d4a1296383246ae7a9a73103a7f" prefix=" " category="inline-code"></block> 状态。</block>
+  <block id="cf199e47a86606d6a3d6fb37f9b27c49" category="list-text">从堆栈输出中获取 CloudTrail ARN。</block>
+  <block id="34847192ce0b60124e0f7168d1583693" category="list-text">返回到 Workload Factory 控制台并返回到卷以管理 S3 访问点。</block>
+  <block id="ce70b2050a1073565c099a6fbd3b065f" category="list-text">从卷操作菜单中选择 *查看详细信息*。</block>
+  <block id="9382fbb062e863792dfd15cbe61c84e7" category="list-text">在 *Journal table* 选项卡中，输入 CloudTrail ARN。</block>
+  <block id="adb49c9f19393797db3a880e8a584bdf" category="inline-xref">对日志表的基础设施设置进行故障排除</block>
+  <block id="1e39bd1a00a790bdc9da556553475561" category="paragraph">如果任何步骤失败，<block ref="e13861f05778285d9b52658ff8c7a4e4" category="inline-xref-macro-rx"></block> 或联系 NetApp 支持人员以获得帮助。</block>
+  <block id="080a5a3e40ce46b4145a580d7b2f73b1" category="section-title">对日志表的基础设施设置进行故障诊断</block>
+  <block id="104419ea1730bd4a3aa0c64a52b07bdb" category="paragraph">您可以使用 AWS 管理控制台或 AWS CLI 对 CloudFormation 堆栈部署期间的故障及其创建的资源进行故障排除。</block>
+  <block id="a6e5ed0cef87feff8ebec1aded14f069" category="paragraph">解决此问题后，请再次提交 CloudTrail ARN 以重新启动日记账表设置。</block>
+  <block id="eb3ade3351abab40569af496936c9233" category="section-title">常见 CloudFormation 部署失败</block>
+  <block id="0dfe55c5ca2a84937a86a09887f27d09" category="section-title">IAM 权限不足</block>
+  <block id="2aa89303e835424a2cbec47a2984fc6d" category="paragraph">部署角色/用户需要一组特定的权限。有关完整策略，请参阅 <block ref="3744d798ea179f12a35f01ad2377ca14" category="inline-xref-macro-rx"></block>。</block>
+  <block id="ff4581318d257964b332c15c8c5d0203" category="paragraph">如果堆栈因 <block ref="cbcc0759909213e7cdba1f0cbf253126" prefix=" " category="inline-code"></block> 或 <block ref="871b8552f8bb64f4bc348f239b580097" prefix=" " category="inline-code"></block> 错误而失败，请检查堆栈事件，并在 <block ref="b5d355fec3069ae353fa2ccfd2b7230d" prefix=" " category="inline-code"></block> 字段中查找缺少的权限。</block>
+  <block id="09b3ca5533ed443e260c98ab00ff3b54" category="section-title">CloudTrail 限制</block>
+  <block id="d4a5bda661968689c309e4b5638b449f" category="paragraph">AWS 强制执行每个区域 5 条跟踪路径的默认限制。如果帐户已有 5 个轨迹，则 <block ref="3dd7fd672908a85d60b0dab857b9aae6" prefix=" " category="inline-code"></block> 资源将失败：超出最大轨迹数 (5)。您可以使用以下命令检查区域级别的轨迹数量：</block>
+  <block id="349124f192f2fae86b306946ded74f66" category="list-title">解决方案选项</block>
+  <block id="a2ebaca53dc16344da545f5f09909cf3" category="list-text">选项 1：删除该区域中未使用的跟踪以腾出空间。</block>
+  <block id="6cc90dcd18b526d1d0b82f26c13c8001" category="list-text">选项 2：使用现有路径。在再次部署 CloudFormation 堆栈之前，请从模板中删除 <block ref="42a534cc1039d65526d6e1e32221e571" prefix=" " category="inline-code"></block>、<block ref="0486802ddfa776141e49f23c0da359c3" prefix=" " category="inline-code"></block>、<block ref="3b87876334e530cfca7a489521608c5a" prefix=" " category="inline-code"></block> 和 <block ref="5a80676cbbbff2ba0a66f1a049a6f4bc" prefix=" " category="inline-code"></block> 资源。然后在启动步骤中传递现有跟踪的 ARN。现有跟踪必须配置 CloudWatch 日志组，与日志组关联的 S3TableIntegration，并记录数据事件。</block>
+  <block id="82c0016f5a4395118d57dbad88a0dd78" category="section-title">S3 表集成已存在</block>
+  <block id="d76ebd11f350fad0f23d59f8223cb050" category="paragraph">如果帐户已具有 aws_cloudtrail 数据源的 S3TableIntegration，则 LogsToS3TableIntegration 资源将失败。</block>
+  <block id="b5a4b64b2aa505bd7c11f79b8a9f458d" category="paragraph-title">解决方法</block>
+  <block id="31a5513bd3f88e5d174c548c5d2ef475" category="paragraph">在再次部署 CloudFormation 堆栈之前，请从模板中删除 <block ref="381eb029c83231e2cd5d11cb6b1263de" prefix=" " category="inline-code"></block> 和 <block ref="7d656f1698c163699e7ddd7dad92d20d" prefix=" " category="inline-code"></block> 资源。只要您为 aws_cloudtrail 数据事件配置现有集成，系统就会自动使用该集成。</block>
+  <block id="aee0800db72b1ecc5f7164b83e954a01" category="paragraph">要检查现有集成：</block>
+  <block id="3895643f8d2c137f3b955c39e2e201da" category="section-title">S3 存储桶名称已存在</block>
+  <block id="5a6ae38ee8f24c3794ec9a0816e9eb69" category="paragraph">存储桶名称<block ref="cdb69dc2853537d31a07fbf7dfab6757" prefix=" " category="inline-code"></block>是全局唯一的。如果发生冲突，请重新请求模板以获取新的 UUID。</block>
+  <block id="a0495ad17b794a5010e57547a919c710" category="section-title">IAM 角色已存在</block>
+  <block id="c37edadecc507cdab971e11e67ed8b57" category="paragraph">如果之前的部分部署留下了具有<block ref="08d96c4fa5b18191111c42c8d3e0fff0" prefix=" " category="inline-code"></block>名称模式的 IAM 角色，则堆栈将在角色创建时失败。首先删除孤立角色：</block>
+  <block id="55b93fa687702387be9d297169c296d2" category="section-title">启用日记表后失败</block>
+  <block id="881de5afa89439976c3434ce287ec4c2" category="paragraph">提交 CloudTrail ARN 后，Workload Factory 通过自动发送 _seed_ 或测试事件来验证整个资源管道。如果成功，种子事件将到达 S3 Tables 表中。测试大约需要 10 分钟。</block>
+  <block id="57ae3dab0bbc63364ba791755305ea7c" category="paragraph">如果测试验证失败，您可能会收到以下错误消息之一：</block>
+  <block id="e20cbb947afcf84cf58de1358ee1068d" category="cell">错误消息</block>
+  <block id="7277de5f2ed6f17c61f1f25594591a82" category="cell">含义</block>
+  <block id="71d9363aa200e5d6b1483674cbfeae3d" category="cell">未在 {bucket} 中创建表 aws_cloudtrail__data。验证 s3table 权限。</block>
+  <block id="32fece5df4fecfd00ae2b345328ebf70" category="cell">S3TableIntegration 未创建 CloudWatch-managed 表。CloudWatch 日志和 S3 表之间的管道已中断。</block>
+  <block id="668b0fbd371f31b34fd0a515830f7b37" category="cell">表存在，但日记账种子事件未出现。验证 CloudTrail 和 CloudWatch 权限。</block>
+  <block id="ecbcb2d5385478ad81dabfb0f4ab49ca" category="cell">该表存在，但特定的种子事件从未到达。CloudTrail 和 S3 Tables 表之间的管道已断开。</block>
+  <block id="09a9ba4aed38541d2db585d9af87ee80" category="cell">无法启动日志设置。...</block>
+  <block id="b438b0bb3583c8372563f1600bb752ac" category="cell">后台种子/轮询流程期间出错。有关详细信息，请查看尾部消息。</block>
+  <block id="874aa46aa7bff3cd7406845ddfe7ec3a" category="paragraph-title">解决步骤</block>
+  <block id="97d91b5bc1070913cafc109a679f4010" category="paragraph">当日志到达 FAILED 时，通过管道阶段跟踪种子事件，以准确识别其停止的位置。每个步骤都映射到由模板创建的特定 AWS 资源。</block>
+  <block id="18a2ae1fb26af8f92d55adc4b65e8290" category="list-text">检查 CloudTrail S3 Bucket。</block>
+  <block id="3359efe5d8da87f977eb88c9627599a3" category="paragraph">该跟踪将原始事件日志写入 S3 存储桶<block ref="fa0a08bf0287e3558d34ed7f39ef0c18" prefix=" " category="inline-code"></block>。查找最近的日志文件。</block>
+  <block id="74c5d257e55cddf9dc4e42ea5da78be1" category="paragraph">如果不存在日志文件，则 CloudTrail 不会捕获事件。请检查以下内容：</block>
+  <block id="a3f42d0fd09319a415334959ee0fdf43" category="list-text">跟踪正在记录 <block ref="9588023fb5490571cd5e166d4fb845ec" prefix="(" category="inline-code"></block>)</block>
+  <block id="6034fec4ec3760aac22f338aacdf6f80" category="list-text">高级事件选择器包括正确的接入点 ARN</block>
+  <block id="a9d7518dcf9e4b0776909f6ee0d5e277" category="list-text">高级事件选择器包括 <block ref="8c9637acdb24718ffd8530639b23ec2f" prefix=" " category="inline-code"></block> 和 <block ref="1efcab11a55e39809ed4739b2cad52e6" prefix=" " category="inline-code"></block> 的筛选器</block>
+  <block id="a448581897f558c44c39151f81a700cd" category="list-text">检查 CloudWatch 日志组。</block>
+  <block id="69052e40a21cf07938062dc4e53e51b7" category="paragraph">该跟踪还向 CloudWatch 日志组提供事件。日志组名称以 <block ref="75aaaa6def99fdfbcb66a1f2475e97fd" prefix=" " category="inline-code"></block> 开头。</block>
+  <block id="ce0e87e82f8d4f23d5a4c37389a92104" category="list-text">如果日志组为空，则 CloudTrail 不会将事件传递到 CloudWatch。检查 <block ref="5a80676cbbbff2ba0a66f1a049a6f4bc" prefix=" " category="inline-code"></block> IAM 角色是否存在，是否具有 <block ref="9294f7e303ba3ddc420e24b7e47eab2c" prefix=" " category="inline-code"></block> 和 <block ref="3ba3376e55a3bdd26ed9c2519b4b9e6a" prefix=" " category="inline-code"></block> 权限，以及跟踪是否配置了正确的 <block ref="0690e7e714fe324377f54309182bb16b" prefix=" " category="inline-code"></block> 和 <block ref="6fc05480186b087fe531c37b0a014cec" prefix=" " category="inline-code"></block>。</block>
+  <block id="64e40540a992f6c227488e364d03ca83" category="list-text">如果种子事件出现在日志组中，则问题在下游 — 继续执行步骤 3。</block>
+  <block id="28ace9ce6c794d9e4e4720a56ea24e5c" category="list-text">检查 S3 Tables 表 <block ref="2c2c37985634e28bc5d99984a53d7b37" prefix="(" category="inline-code"></block>）。</block>
+  <block id="d88ed1c5cea3096d335f8ac296b07ad9" category="paragraph">S3TableIntegration 会自动创建一个名为 aws-cloudwatch 的表存储桶，并填充 logs.aws_cloudtrail__data 处的表。此表仅在第一个事件流过后才会创建。</block>
+  <block id="69d1ebe089e7ee7091ba937331471da7" category="list-text">如果 aws-cloudwatch 表存储桶不存在，则<block ref="7d656f1698c163699e7ddd7dad92d20d" prefix=" " category="inline-code"></block>缺少权限。它需要<block ref="00246fed3ef66165d3ba3d6bfdd371cc" prefix=" " category="inline-code"></block>、<block ref="82242c740e8fb14071b4907c5f9796aa" prefix=" " category="inline-code"></block>和<block ref="b0a6eb48f73351a252096302ea696228" prefix=" " category="inline-code"></block>——所有范围均为<block ref="be3e806fd006ff77fc6f5df51b0b15fc" prefix=" " category="inline-code"></block>。</block>
+  <block id="4cbe6af7965ecc41148f2f932fa3c00a" category="list-text">如果表存储桶存在但<block ref="b1f2a28029574848e2434a748ff62c91" prefix=" " category="inline-code"></block>不存在，则集成不会路由事件。集成必须显示<block ref="3f8d62dd572d46eacdb644bc7dd5a773" prefix=" " category="inline-code"></block>并包含<block ref="2a562909c4995db56ef8bf77c1dd2947" prefix=" " category="inline-code"></block>作为日志源。</block>
+  <block id="31f70976094cbc00378315152e208476" category="list-text">如果该表存在但种子事件不在其中，则该事件可能仍在传输中。S3 Tables 摄取有一些延迟。再等几分钟。如果 15-20 分钟后仍未显示，则集成可能会中断。</block>
+  <block id="ccc135431e07764b8b70db477f74d247" category="list-text">直接查询种子事件。</block>
+  <block id="fd041db7c2772c6b04caa39367714c83" category="list-text">在 AWS 管理控制台中打开 S3 Tables。</block>
+  <block id="ffb4bafe4deefe3efb2537959dd77fc0" category="list-text">导航到 aws-cloudwatch 表存储桶 → aws_cloudtrail__data 表，然后使用 *Preview* 按钮直接在浏览器中运行快速查询。</block>
+  <block id="dcbbd0b7f6de94cefc0f1d9997be5055" category="list-text">如果事件存在于表中，但日志仍显示<block ref="b9e14d9b2886bcff408b85aefa780419" prefix=" " category="inline-code"></block>，则可能在事件到达之前轮询窗口已过期。</block>
+  <block id="92254d246118fa5399d3859349adf6c6" category="inline-xref">启动日志表设置</block>
+  <block id="35d86d167f6b9d35a772dbcf9a7c9f08" category="paragraph">解决问题后，返回 Workload Factory 控制台。通过再次提交 Trail ARN 来重试 <block ref="c5fcc47ac12a05dd4c0f04f5c2336d01" category="inline-xref-macro-rx"></block>。</block>
+  <block id="b2547e14f7d714181a745f654128a3b3" category="list-text">如果设置继续失败，请联系 NetApp 支持以获得帮助。</block>
+  <block id="810181631483521b4977c3caefad85b1" category="section-title">日记表设置的权限引用</block>
+  <block id="0cec117b5b4db2a8973e274cd81d053c" category="paragraph">部署 CloudFormation 堆栈以启用 Journal 表功能的 IAM 角色需要以下权限。请参阅 <block ref="3744d798ea179f12a35f01ad2377ca14" category="inline-xref-macro-rx"></block> 以获取具有所需权限的可复制 JSON 策略。</block>
+  <block id="d0423a5ad6ad03a5309cfb5cebda08c6" category="section-title">堆栈操作</block>
+  <block id="ed5dea09095f671b801bee34ea28a319" category="cell">权限</block>
+  <block id="be8545ae7ab0276e15898aae7acfbd7a" category="cell">资源</block>
+  <block id="91164770fc34b877cc56ccaf61d6eee8" category="cell">为什么</block>
+  <block id="6ccfab5404f73a6b0bacb222665e72d7" category="cell">cloudformation：CreateStack</block>
+  <block id="5053fe952165ea085a46bcb9738b0ee7" category="cell">arn:aws:cloudformation:*:*:stack/netapp-metadata-*/*</block>
+  <block id="0ce910ff5d5bb901cb52c6d55b780310" category="cell">创建堆栈</block>
+  <block id="f404fc6d0850472807e4fcd86203a313" category="cell">cloudformation：DescribeStacks</block>
+  <block id="3dbc9fe0eeb9cf87ea850bc6f5eff9df" category="cell">监控堆栈状态</block>
+  <block id="da044dbe1821a39f63f98e823344b062" category="cell">cloudformation：DescribeStackEvents</block>
+  <block id="924fe230741efe6d0c6ec61fa965cfed" category="cell">诊断资源级故障 cloudformation:GetTemplateSummary * 预检模板验证</block>
+  <block id="92fbbd5478621cf8f70624389759b44c" category="section-title">CloudTrail</block>
+  <block id="cea2689ef0cfba4faf16baec914e3c15" category="cell">cloudtrail：CreateTrail</block>
+  <block id="556d5bb69b65d50075a09a028fdc6ee6" category="cell">arn:aws:cloudtrail:*:*:trail/netapp-metadata-*</block>
+  <block id="fba1f9e04005a1c87f4c392c74a06cf0" category="cell">创建路径</block>
+  <block id="0d5b0b239bbd6239c00d900ec3ec62fe" category="cell">cloudtrail：StartLogging</block>
+  <block id="c218ee1f0300a1c69a0f97d6d2872fde" category="cell">启用日志记录</block>
+  <block id="4a1eb91814ee961864b614589f0138ef" category="cell">cloudtrail：AddTags</block>
+  <block id="f6b5a2e7a02d0e507846c6b134a09574" category="cell">应用识别标签</block>
+  <block id="89aa68fffda7d587077f8069ae60e59f" category="cell">cloudtrail：PutEventSelectors</block>
+  <block id="90ba3828cc3d219ca2729b513bca36e5" category="cell">配置数据事件捕获</block>
+  <block id="ec0eeb3f4d79ae881dd378823884b3fa" category="cell">cloudtrail：DescribeTrails</block>
+  <block id="3389dae361af79b04c9c8e7057f60cc6" category="cell">*</block>
+  <block id="641ee695f3b7fd9d4b5a39e82ae7d2c1" category="cell">解析堆栈输出的跟踪 ARN</block>
+  <block id="e2ab7c65b21ed8cc1c3b642b5e36429e" category="section-title">S3</block>
+  <block id="d0e4bee632dc55607e492853b76d8194" category="cell">s3：CreateBucket</block>
+  <block id="e9ce2b97e7a7127b4ba5bd9ba11548f1" category="cell">arn:aws:s3:::netapp-metadata-*</block>
+  <block id="3b7aa575d0f171a194ad74f241764046" category="cell">创建 CloudTrail 日志桶</block>
+  <block id="4b9c42bf1853fa25d534302dbc43f035" category="cell">s3：PutBucketPolicy</block>
+  <block id="f6ff4374754cdfb9764e89358c6f937a" category="cell">允许 CloudTrail 写入日志</block>
+  <block id="f7e22455b86c7ea94ba86cc949d37161" category="cell">s3：PutBucketTagging</block>
+  <block id="41dff7155cc7aeb11c06434f6a450bb3" category="section-title">身份与访问管理</block>
+  <block id="3b8d1aa9f2727ee5948e48b70e7ea00b" category="cell">iam：CreateRole</block>
+  <block id="9437ab907170f0c3bc599aca914b6164" category="cell">arn:aws:iam::*:role/netapp-metadata-*</block>
+  <block id="9bdb3bfe2aa8daa3a7d0ae0042ae07ae" category="cell">创建两个 IAM 角色</block>
+  <block id="a6e64d0684dcf803ad58d40684383bb9" category="cell">iam：PutRolePolicy</block>
+  <block id="6c909cd008777d24aebff08499a3146b" category="cell">附加内联策略</block>
+  <block id="7f862a4b8fc22b0af5dda5c9ababa346" category="cell">iam：TagRole</block>
+  <block id="9dcf380856979ca5b723d30e996e1f95" category="cell">iam：GetRole</block>
+  <block id="5a75ea23f120d0e764f419a06826ac37" category="cell">确认角色处于活动状态</block>
+  <block id="f6ae0a8a1321975a6474722dcafe1322" category="cell">iam:PassRole</block>
+  <block id="861c0a280cc43cd23d3971f9ac4a1cb0" category="cell">arn:aws:iam::*:role/netapp-metadata-* (条件：PassedToService = cloudtrail.amazonaws.com, logs.amazonaws.com)</block>
+  <block id="5000d87838eb7e94d812ed5f6d18896c" category="cell">将角色传递给 CloudTrail 和 CloudWatch Logs</block>
+  <block id="a8c600be214ced26950e704d39c3ca21" category="section-title">CloudWatch 日志</block>
+  <block id="4011ea392d4bd2f3136eea1bbb00683d" category="cell">logs：CreateLogGroup</block>
+  <block id="ba643d240ea518faad40426a1f54ef42" category="cell">arn:aws:logs:*:*:log-group:netapp-metadata-*</block>
+  <block id="8fa369fb6ddf5fdad9cc1d944b8a818b" category="cell">创建日志组</block>
+  <block id="7a9b9ad62305b466cf303f08fa08127f" category="cell">日志：DeleteLogGroup</block>
+  <block id="2a5778b1dcf8d129409861f984d9b3cb" category="cell">创建失败时清理日志组</block>
+  <block id="9c72603737d6e2074ae7fab048b5d3d1" category="cell">日志：PutRetentionPolicy</block>
+  <block id="c74bf2009d8f729c1aa55fdf8dfaa80c" category="cell">设置 30 天保留期</block>
+  <block id="dc344e1b51ae9e5aff7a5efaf286df5a" category="cell">日志：TagResource</block>
+  <block id="5ed87b55605578a6bca78a049d6afb0f" category="cell">logs:将源关联到 S3 表集成</block>
+  <block id="aa5547149267bde3159275741ad451a4" category="cell">将 CloudTrail 源链接到 S3 Tables</block>
+  <block id="99a70cb6d5b807589a0a1aa9bbcfea7d" category="cell">日志：DescribeLogGroups</block>
+  <block id="498608f8d83df246026e7cd4bb58df5e" category="cell">检查日志组是否存在</block>
+  <block id="069eff0bd2f373ac9bbcdfbfa4931470" category="cell">logs:列出 S3 表集成的来源</block>
+  <block id="64d515eca6e1dbad68b5cae6d11ad480" category="cell">确认集成关联</block>
+  <block id="95afe0df7096b504cd3d5d80bd97eb75" category="cell">observabilityadmin:CreateS3TableIntegration</block>
+  <block id="6a825d68a19916ea8e00b8e3abef5385" category="cell">创建 CloudWatch → S3 Tables 桥</block>
+  <block id="2175594d7fe808b3bdd968869b5bc7c7" category="cell">observabilityadmin:GetS3TableIntegration</block>
+  <block id="be2f330d2e5db93e954568e0985de050" category="cell">确认集成处于活动状态</block>
+  <block id="6d4aadc33145ce0baf8ff11f6fb18474" category="cell">observabilityadmin：TagResource</block>
+  <block id="127621ab6b40d381b424cf9ede76795c" category="cell">observabilityadmin：ListTagsForResource</block>
+  <block id="d2bf8d4292916f6760d456561e3ed9b8" category="cell">漂移检测</block>
+  <block id="00246fed3ef66165d3ba3d6bfdd371cc" category="cell">s3tables：CreateTableBucket</block>
+  <block id="be3e806fd006ff77fc6f5df51b0b15fc" category="cell">arn:aws:s3tables:*:*:bucket/aws-cloudwatch</block>
+  <block id="e627f0f312d7a03630a01f865738f445" category="cell">创建 S3 Tables 存储桶（通过集成角色）</block>
+  <block id="82242c740e8fb14071b4907c5f9796aa" category="cell">s3tables：PutTableBucketEncryption</block>
+  <block id="4da06b5b2b57a157e92fb5c3213bbf50" category="cell">设置 AES256 加密</block>
+  <block id="b0a6eb48f73351a252096302ea696228" category="cell">s3tables：PutTableBucketPolicy</block>
+  <block id="b1ad085edd3140c672ff2109d9242452" category="cell">允许 CloudWatch Logs 访问</block>
+  <block id="4d565cafb7f83c16708d52b5ab6f97af" category="summary">查看 NetApp Workload Factory 中卷的 S3 访问点的详细信息。</block>
+  <block id="0508a20ce5214e259576cd4e33683ed1" category="doc">查看 NetApp Workload Factory 中卷的 S3 访问点的详细信息</block>
+  <block id="b83eea7e75edc796e98ee57692e03801" category="paragraph">查看 S3 接入点详细信息，如别名、ARN 和 S3 URI。启用库存和日记表后，您可以查看跨 S3 访问点的用户访问事件和对象操作的元数据和审计日志。</block>
+  <block id="cf3c11cd7ad93f5d574a0699e780188f" category="paragraph">当在卷上启用清单表时，您可以查看连接到卷的现有 S3 访问点的访问点、清单表和表存储桶详细信息。系统还提供到 AWS Management Console 中清单表的链接。</block>
+  <block id="5a8fb625347b548bdba1297afcb24588" category="paragraph">启用日志表后，Workload Factory 将在表中的访问点上生成日志供您参考。该表包括 CloudTrail 事件、跟踪（AWS 活动的记录）、CloudTrail 过滤器、CloudWatch 日志组等。</block>
+  <block id="b7371f693c4933ae68bcd3c1e54d8f2c" category="list-text">从 *FSx for ONTAP* 中，选择具有要查看其详细信息的卷的文件系统。</block>
+  <block id="595b711bbed1bfb14aeeae9906c0c67a" category="list-text">从 Volumes 选项卡中，选择要查看其详细信息的卷的操作菜单，然后选择 *Advanced actions*，然后选择 *View details*。</block>
+  <block id="9f4713f4c145950631eb9253132c7ada" category="paragraph">详细信息显示在四个选项卡下：*Access point*、*Inventory table*、*Journal table* 和 *Table bucket*。</block>
+  <block id="4b00d53749c72d6e6e220e24c308c29e" category="list-text">如果已启用库存或日记帐表的状态，但缺少<block ref="c38e323a00a79423dcc6c063c22b63fc" prefix=" " category="inline-code"></block>权限，请按照对话框中的说明添加所需的权限。</block>
+  <block id="9b2b2c4b41fe590fbaaf09e74f892891" category="list-text">当日记账表状态为挂起时，您必须提供 CloudTrail ARN 才能将日记账表连接到创建的基础设施。按照说明使用 AWS CLI 或 AWS 管理控制台部署 CloudFormation 堆栈，然后返回 Workload Factory 控制台输入 CloudTrail ARN。</block>
+  <block id="372a7f52608ee07741b6f86a497e9fd1" category="inline-link-macro">在 NetApp Workload Factory 中设置日记表基础结构并排除日记表设置问题。</block>
+  <block id="f33f64df042b527511c8608dc9749078" category="list-text"><block ref="f33f64df042b527511c8608dc9749078" category="inline-link-macro-rx"></block></block>
+  <block id="7f65119c79afd09b7f99936d13e97909" category="section-title">2026 年 4 月 6 日</block>
+  <block id="df9cb9b9a707c3ace18761ef83751ee6" category="sidebar">创建并连接 S3 接入点</block>
+  <block id="087b2bf3ee9925d6feea388b7dfd398a" category="sidebar">编辑 S3 接入点</block>
+  <block id="462be4711361458eea73842ce954eb91" category="sidebar">查看有关 S3 接入点的详细信息</block>
+  <block id="bc8efabe5bb393ec04bcc82dbbfe36c2" category="sidebar">删除 S3 访问点</block>
 </blocks>
