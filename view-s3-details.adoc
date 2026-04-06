@@ -35,5 +35,5 @@ summary: 查看 NetApp Workload Factory 中卷的 S3 访问点的详细信息。
 
 
 .相关信息
-* link:setup-journal-table.html["在 NetApp Workload Factory 中设置日记表基础结构并排除日记表设置问题。"]
+* link:setup-journal-table.html["设置日志表基础架构"]
 

@@ -25,6 +25,6 @@ summary: 在 NetApp Workload Factory 中编辑卷的 S3 访问点。
 . 在*管理 S3 接入点*屏幕中，选择操作菜单，然后选择*编辑接入点*。
 . 进行更新，然后选择 *Apply*。
 +
-要为日志表功能设置基础架构，您必须选择 *Internet* 作为 S3 访问端点的网络配置。link:setup-journal-table.adoc["了解如何为 NetApp Workload Factory 设置日志表基础结构"].
+要为日志表功能设置基础架构，您必须选择 *Internet* 作为 S3 访问端点的网络配置。link:setup-journal-table.html["了解如何为 NetApp Workload Factory 设置日志表基础结构"]。
 
 

@@ -59,7 +59,7 @@ summary: 在 NetApp Workload Factory 中为 S3 访问点设置日志表基础架
 要启用日志表功能，请执行以下步骤：
 
 * 具有 S3 访问点的现有卷。link:create-volume.html["使用 S3 访问点创建卷"]
-* 将 S3 访问端点的网络配置设置为 *Internet*。link:edit-s3-access-point.adoc["编辑 S3 接入点的网络配置"]。
+* 将 S3 访问端点的网络配置设置为 *Internet*。link:edit-s3-access-points.html["编辑 S3 接入点的网络配置"]。
 * link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["授予 _operations and remediation_ 权限"^] 到您的 Workload Factory 凭据。
 * 将以下 IAM 策略权限添加到用于运行 CloudFormation 部署的 AWS 账户，以设置 Journal 表。
 +
@@ -201,7 +201,7 @@ summary: 在 NetApp Workload Factory 中为 S3 访问点设置日志表基础架
 . 选择 * 应用 * 。
 
 
-如果任何步骤失败，<<Troubleshoot the infrastructure setup,对日志表的基础设施设置进行故障排除>> 或联系 NetApp 支持人员以获得帮助。
+如果任何步骤失败，<<对日志表的基础设施设置进行故障诊断,对日志表的基础设施设置进行故障排除>> 或联系 NetApp 支持人员以获得帮助。
 
 
 
