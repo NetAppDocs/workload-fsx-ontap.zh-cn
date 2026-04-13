@@ -1941,7 +1941,6 @@
   <block id="df22e5c72d75cea7ae766daf660bd529" category="summary">在需要时管理NetApp Workload Factory 中 FSx for ONTAP文件系统的备份计划。</block>
   <block id="be1c92aa6bef23dd57df3395c46827bb" category="paragraph">在NetApp Workload Factory 中管理 FSx for ONTAP文件系统的备份计划。</block>
   <block id="93ae473ca3e8f97f82687e6f98eab1da" category="list-text">从 *FSx for ONTAP* 中，选择要更新备份计划的文件系统的操作菜单，然后选择 *管理*。</block>
-  <block id="da0f0bd52c148eab60b2dfefe8e25fa3" category="summary">在 Workload Factory 中管理卷的 SMB/CIFS 共享包括创建、确定用户和组访问以及删除。</block>
   <block id="f73fd134806728f0a5ac79982e11ead7" category="doc">在 Workload Factory 中管理卷的 SMB/CIFS 共享</block>
   <block id="c69f3e9214ff94aa0825993b6fb1b85a" category="paragraph">在 Workload Factory 中管理卷的 SMB/CIFS 共享包括创建 SMB/CIFS 共享、确定授予访问权限的用户和组以及授予他们的权限级别以及删除 SMB/CIFS 共享。</block>
   <block id="4b898528f057698b461041b6d7447cfe" category="list-text">从“卷”选项卡中，选择要更改 SMB 共享的卷的操作菜单。</block>
@@ -3001,4 +3000,7 @@
   <block id="58ff05ec25b45f54f79eb1afc9e31b9c" category="list-text">将 S3 访问端点的网络配置设置为 *Internet*。<block ref="f5b1c6fb53ebc8db45e1c55bd4e00f01" category="inline-link-macro-rx"></block>。</block>
   <block id="559b775ce267386e1398935c6753e6f3" category="paragraph">如果任何步骤失败，<block ref="05993fa90b9226bcf7edb149f0761729" category="inline-xref-macro-rx"></block> 或联系 NetApp 支持人员以获得帮助。</block>
   <block id="e520cc743022825140834d2b02cc8cba" category="list-text"><block ref="e520cc743022825140834d2b02cc8cba" category="inline-link-macro-rx"></block></block>
+  <block id="d08fabf4c0fdff2290096692a4ffa28a" category="section-title">块设备的上次访问时间</block>
+  <block id="fa4bdc942217a8579f785220b2742233" category="paragraph">Workload Factory 报告块设备的最后访问时间。时间基于您上次在 Workload Factory 中访问 igroup 的时间。了解每个块设备的上次使用时间，可以优化资源。</block>
+  <block id="9b6ea8e99ee787981ebaca2de09e7c7f" category="summary">在 Workload Factory 中管理卷的 SMB 或 CIFS 共享包括创建、确定用户和组访问权限以及删除。</block>
 </blocks>
