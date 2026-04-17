@@ -2492,7 +2492,6 @@
   <block id="54d026e00002c68ee50033dbd7e53e6f" category="list-text">*操作系统类型*：选择 Linux、VMware 或 Windows 作为操作系统类型。</block>
   <block id="283119ca74749a876a6dfcb0c6968a8c" category="list-text">*主机启动程序*：将一个或多个 iSCSI 合格 (IQN) 主机启动程序添加到启动程序组。</block>
   <block id="30965461c316b499ed01c7f92f651051" category="list-text">使用 iSCSI 或 NVMe 协议的块卷不支持复制。</block>
-  <block id="36e75a4b793293fd1dde9fdc618c8431" category="list-text">您必须有一个 FSx for ONTAP 文件系统才能用于复制关系中的目标。</block>
   <block id="66aa1d91f89810f078327deb1e1fc2c8" category="list-text">用于复制关系的 FSx for ONTAP 文件系统必须具有相关联的链接。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>。关联链接后，返回此操作。</block>
   <block id="ba1072e8c0845f82f77ef660d46bde4a" category="list-text">对于从本地 ONTAP 系统复制到 FSx for ONTAP 文件系统，请确保您已发现本地 ONTAP 系统。</block>
   <block id="45eea8cd3d88c48d8f4826a6be39d707" category="list-text">*S3 接入点标签*：您最多可以添加 50 个标签或删除标签。</block>
@@ -2548,18 +2547,13 @@
   <block id="33039f37667143e740ae3514cd2b2eea" category="inline-link-macro">切换 Storage VM 及其复制卷</block>
   <block id="94a0fe38d823039ecf92cb309a897fe3" category="paragraph">要使用此功能，<block ref="0ec91e6ac67cf0fd5240ce60db83aa2f" category="inline-link-macro-rx"></block> 并选择 *Migration* 作为用例。要完成迁移过程，您必须 <block ref="6174d071c9787b2abffa64516d72a11a" category="inline-link-macro-rx"></block> 立即将数据和存储 VM 配置设置永久迁移到目标 FSx for ONTAP 文件系统。</block>
   <block id="c199ce03db0c7f011f771c344a7289f8" category="doc">在 NetApp Workload Factory 中将数据复制到 FSx for ONTAP</block>
-  <block id="551568dcc628854d053d3d2a37a4cfbe" category="paragraph">在 NetApp Workload Factory 中为 FSx for ONTAP 文件系统创建复制关系，以避免在发生意外灾难时丢失数据。可以在两个 FSx for ONTAP 文件系统之间复制数据，也可以在本地 ONTAP 系统和 FSx for ONTAP 文件系统之间复制数据。</block>
-  <block id="f009487bcbb1861316ff956fce5c3ac3" category="paragraph">对于存储 VM 迁移，必须在创建复制关系后立即完成切换操作。</block>
   <block id="c328c31ba33353824ccfc6e82f5a8ca8" category="paragraph">如果灾难影响到您的区域，复制可保护您的数据；它也可用于迁移目的。</block>
   <block id="75ba895a2e374208ae80d98ebcf116ba" category="paragraph">如果使用不可变文件复制源卷，则目标卷和文件系统将保持锁定状态，直到源卷的保留期结束。当您 <block ref="40da211f809bc6c9e6163aa605349c18" category="inline-link-macro-rx"></block> FSx for ONTAP 文件系统时，不可变文件功能可用。</block>
   <block id="ed5b7e4aa04c57efe98d70f7ef15379d" category="section-title">迁移使用案例</block>
-  <block id="943bab906fe3e90d4f3eb004f330f122" category="paragraph">选择迁移用例时，可以选择复制单个存储 VM 的存储 VM 数据和配置设置。在同时迁移数据和配置设置时，请确保该卷的最后一次复制在过去 24 小时内完成。必须选择同一存储 VM 中的所有卷才能使用此功能。所有卷的分层策略默认为源卷的分层策略，建议用于迁移用例。</block>
-  <block id="1666b76635bd7b8ba7032286416076a1" category="paragraph">Workload Factory 支持以下存储系统之间的迁移复制。</block>
   <block id="c9bc20a670a5e3835c0109ab8efaf03d" category="list-text">本地 ONTAP 系统和适用于 ONTAP 的 FSx 文件系统</block>
   <block id="355385ffc49e40e0caaabbd4b1ef6737" category="list-text">Cloud Volumes ONTAP 和 FSx for ONTAP 文件系统</block>
   <block id="507884c25618fc114f4becd877e50dd8" category="list-text">适用于 ONTAP 和适用于 ONTAP 文件系统的 FSx</block>
   <block id="811a8960cadc3b9f9379096dc8b6b831" category="list-text">第一代到第一代</block>
-  <block id="023f8d09179a05ce990eeb5697e1ecd6" category="list-text">第一代到第二代</block>
   <block id="9b03bdd83a5017b3aa998f32e7ad219f" category="list-text">第二代到第二代</block>
   <block id="04e64253a4742b9534714d0147f467f6" category="paragraph">要迁移存储 VM 数据和配置设置，必须完成两个操作。</block>
   <block id="59835e5fb082d065015e2824a515a5b7" category="list-text"><block ref="75331dd4d9fa346165fac294e4e498ee" category="inline-xref-macro-rx"></block>，选择 *Migration* 作为用例，然后选择 *Replicate storage VM configuration*。</block>
@@ -2568,7 +2562,6 @@
   <block id="cbcff6555c8b07eb6add33653d3ab030" category="list-text">对于迁移用例，请确保在使用存储 VM 数据和配置设置创建复制关系之前，卷的最后一次复制在过去 24 小时内完成。</block>
   <block id="41ad46bbff5ae50ffe14d0bdc1b66775" category="paragraph">如果您创建了用于迁移的复制关系，则必须切换所有卷及其关联的存储 VM，以完成将存储 VM 数据和配置设置迁移到目标 FSx for ONTAP 文件系统。</block>
   <block id="f2ce5ba0f770aa8ae822f79404813d99" category="section-title">切换复制以用于迁移用例</block>
-  <block id="794cfa9c47742057e71b100968214bfd" category="paragraph">为迁移用例创建复制关系后，必须切换复制以完成将存储 VM 数据和配置设置迁移到目标 FSx for ONTAP 文件系统。切换复制会将数据和存储 VM 配置设置从源文件系统永久迁移到目标 FSx for ONTAP 文件系统。在切换期间，数据会进行最后一次复制。切换完成后，系统会删除源卷。您无法撤消此操作。</block>
   <block id="aed0e194718db8e0128d88b14756819e" category="list-text">在切换复制之前，请停止对 Storage VM 的任何客户端访问。</block>
   <block id="782b2627ed10262abe4e368b33d508dc" category="list-text">在切换复制之前，请确保所有源卷均未提供任何数据。</block>
   <block id="dda7c50cacac64812ef938f4d803c3a5" category="list-text">在切换复制之前，请确保数据在源卷和目标卷之间同步。</block>
@@ -2761,7 +2754,6 @@
   <block id="934fd3399568391e103ee0d773bf954d" category="list-text">*非活动 NAS 卷*</block>
   <block id="ad888b2fc1946f3bc7c47013f4399476" category="paragraph">配置分析可识别未主动使用的 NAS 卷，并建议删除或归档这些卷以降低成本。</block>
   <block id="27bbb381f95a5892aac5e6fa577ad167" category="list-text">*聚合名称*：选择聚合来托管新卷。</block>
-  <block id="bbe174274b18d7c6c98e45b8076c38f3" category="paragraph">切换后，源 Storage VM 脱机。</block>
   <block id="aadb221d48ad5912d16ae10d1a2f7515" category="inline-link-macro">修改分层策略</block>
   <block id="de12e179e610f435272079f58d2c6bf8" category="paragraph"><block ref="7a3d97c05742e0c35a808e39b9ae9bf1" category="inline-link-macro-rx"></block> 切换后的目标卷。</block>
   <block id="9991602752d2f7a5f66a5872be6ec903" category="summary">在 NetApp Workload Factory 中为卷创建 S3 访问点。</block>
@@ -3003,4 +2995,34 @@
   <block id="d08fabf4c0fdff2290096692a4ffa28a" category="section-title">块设备的上次访问时间</block>
   <block id="fa4bdc942217a8579f785220b2742233" category="paragraph">Workload Factory 报告块设备的最后访问时间。时间基于您上次在 Workload Factory 中访问 igroup 的时间。了解每个块设备的上次使用时间，可以优化资源。</block>
   <block id="9b6ea8e99ee787981ebaca2de09e7c7f" category="summary">在 Workload Factory 中管理卷的 SMB 或 CIFS 共享包括创建、确定用户和组访问权限以及删除。</block>
+  <block id="8e3a7eb1ad6884834be95dd2aaf56b7b" category="paragraph">在 NetApp Workload Factory 中为 FSx for ONTAP 文件系统创建复制关系，以避免在发生意外灾难时丢失数据。您可以在两个 FSx for ONTAP 文件系统之间复制数据，也可以在本地 ONTAP 系统和 FSx for ONTAP 文件系统之间复制数据。</block>
+  <block id="6763c800441eccc6184c1709964c26be" category="paragraph">对于存储 VM 迁移，请在创建复制关系后立即完成切换操作。</block>
+  <block id="3ff25ab258de4c80bbe3f420e00a3c7e" category="paragraph">对于迁移，您可以选择复制一个存储 VM 的存储 VM 数据和配置设置。如果同时迁移数据和配置设置，请确保卷的上次复制在过去 24 小时内完成。您必须选择同一存储 VM 中的所有卷才能使用此功能。所有卷的分层策略默认为源卷的分层策略，建议用于迁移使用情形。</block>
+  <block id="a4b076b073df12f01e734ba016dbebd2" category="paragraph">Workload Factory 支持以下存储系统之间的存储虚拟机的迁移复制。</block>
+  <block id="5d7e49f428c9183384f592ccb040ea68" category="list-text">确保有一个 FSx for ONTAP 文件系统可用于复制关系中的目标。</block>
+  <block id="cda193309e00fad10e2bff9e77570610" category="paragraph">为迁移用例创建复制关系后，必须切换复制，以完成将存储 VM 数据和配置设置迁移到目标 FSx for ONTAP 文件系统。切换复制将数据和存储 VM 配置设置从源文件系统永久迁移到目标 FSx for ONTAP 文件系统。在切换期间，数据会进行最后一次复制。切换开始时，源存储 VM 会脱机。</block>
+  <block id="ed57615365ad2815423480008d91d450" category="section-title">规划切换操作</block>
+  <block id="fa425772bf4dc1e54c8368c2b99d4b1b" category="paragraph">在规划迁移用例的切换操作时，请考虑以下内容。</block>
+  <block id="d77811034f737ab45ed7ddebe9c096fd" category="inline-xref">切换后更新配置设置</block>
+  <block id="6ceb7ae37e1ac2ec5ebe38f0e5082457" category="list-text">*存储虚拟机配置设置*：切换操作不会将所有存储虚拟机配置设置迁移到目标存储虚拟机。例如，iSCSI、广播域 MTU 和 DNS 设置不会迁移。切换后在目标存储虚拟机上手动更新这些设置。有关更多详细信息，请参阅 <block ref="af05d35e02c20d22f4e6b1df9b57e0a2" category="inline-xref-macro-rx"></block> 节。</block>
+  <block id="dddf91d5ccee3135470e6089b62618ba" category="list-text">*克隆*：克隆作为单个卷进行迁移，因此将占用目标 FSx for ONTAP 文件系统上的更多空间。考虑在切换之前删除克隆，以避免增加目标容量。</block>
+  <block id="233115f3ed74b7b4516b8f0a1efbaedf" category="list-text">*缓存卷*：适用于 ONTAP FlexCache 9.17.x 或更低版本。包含缓存卷的源存储 VM 不支持切换。在切换之前删除 ONTAP FlexCache 关系，以避免迁移失败。</block>
+  <block id="03c85e91696d00a533c3da3b08434532" category="list-text">*AWS S3 接入点*：具有 S3 接入点的卷不支持迁移使用情形的切换复制。从源卷中删除 S3 接入点以避免迁移失败。</block>
+  <block id="849ee629a3b8f33b04a9b242a47e3d59" category="list-text">*ONTAP S3 配置*：具有 ONTAP S3 配置的 vserver 不支持迁移用例的切换复制。删除 ONTAP S3 配置，包括 vserver 上的对象存储服务器、存储桶、用户、组或策略，以避免迁移失败。</block>
+  <block id="ab3171de62100468c23112d3fda9227b" category="list-text">*LUN 序列号和 iSCSI 目标 IQN*：LUN 序列号和 iSCSI 目标 IQN 在切换期间发生变化。</block>
+  <block id="3021805b6a1038ca60c0a0b6321eeb81" category="list-text">以下端口必须在与 FSx for ONTAP 文件系统关联的安全组中打开以实现链路连接：端口 443 (HTTPS) 和端口 22 (SSH)。</block>
+  <block id="02fd7814960d61424a4fd3855641dc2c" category="paragraph">启动切换后，源 Storage VM 脱机。</block>
+  <block id="50bcde92265e7e0cb3fefb5c2e45d7fd" category="paragraph">切换迁移用例的复制后，在目标 Storage VM 上更新以下 Storage VM 配置设置。</block>
+  <block id="2a6f3123e92916a549d4843b0432ee15" category="list-text">对于 iSCSI：</block>
+  <block id="6620d06a6f36ee92ee8c0b9c206e5932" category="list-text">重新创建 igroup</block>
+  <block id="1d215d1d64ff0e5459b1b60c4e0f0ba2" category="list-text">更新 LUN 映射</block>
+  <block id="22c26e33ed22192caefb59eb41da6dd7" category="list-text">登录到每个 SAN 客户端并更新新目标的 iSCSI/MPIO 设置并删除旧的 vserver 目标 IP</block>
+  <block id="add6659449d7aeb40a4dd48b3f75db00" category="list-text">验证广播域 MTU 设置是否符合预期</block>
+  <block id="cd823c1632b612f3a00bc9cf049ef97b" category="list-text">验证 DNS 设置是否符合预期</block>
+  <block id="b33f176ae89f054db5b204e18e50bedb" category="list-text">如果源存储虚拟机中有缓存卷，则重新创建缓存关系（ONTAP FlexCache 关系）。</block>
+  <block id="ff8ef958a372588abade913f254e0f32" category="inline-link-macro">初始化复制</block>
+  <block id="9b8bc21c3f17473ed3febb96f530e881" category="list-text"><block ref="bdf3316336626320bcd98c3905d159fa" category="inline-link-macro-rx"></block> 用于新的复制关系。</block>
+  <block id="8b4df8663b05f7e02f9d177bf6bddcf9" category="section-title">Storage VM 迁移复制的限制</block>
+  <block id="0b341938774d016fc95976391165da81" category="list-text">Workload Factory 不支持在第一代和第二代 FSx for ONTAP 文件系统之间对存储 VM 进行迁移复制。</block>
+  <block id="5599690d98e9754752709f4613760d6e" category="list-text">具有 S3 访问点或 ONTAP S3 配置（包括 vserver 上的对象存储服务器、存储区、用户、组或策略）的卷不支持切换复制。</block>
 </blocks>
