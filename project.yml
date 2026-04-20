@@ -79,10 +79,8 @@ sidebar:
           url: "/restore-from-backup.html"
       - title: 使用复制
         entries:
-        - title: 创建复制关系
+        - title: 复制数据
           url: "/create-replication.html"
-        - title: 初始化复制关系
-          url: "/initialize-replication.html"
       - title: 利用自主防兰森保护功能保护数据
         url: "/ransomware-protection.html"
       - title: 克隆卷
