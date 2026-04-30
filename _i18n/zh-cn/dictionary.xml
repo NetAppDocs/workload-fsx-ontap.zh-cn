@@ -2551,7 +2551,6 @@
   <block id="507884c25618fc114f4becd877e50dd8" category="list-text">适用于 ONTAP 和适用于 ONTAP 文件系统的 FSx</block>
   <block id="811a8960cadc3b9f9379096dc8b6b831" category="list-text">第一代到第一代</block>
   <block id="9b03bdd83a5017b3aa998f32e7ad219f" category="list-text">第二代到第二代</block>
-  <block id="4031de6ffffe0beb0671ccd52a118661" category="paragraph">在两个 FSx for ONTAP 文件系统之间，或在本地 ONTAP 系统和 FSx for ONTAP 文件系统之间复制数据。</block>
   <block id="66de39f46af06b661b7bce68c01c8e61" category="list-text">不支持对处于可用、已创建或配置错误以外的状态以及 ONTAP 版本不兼容的卷执行复制。</block>
   <block id="cbcff6555c8b07eb6add33653d3ab030" category="list-text">对于迁移用例，请确保在使用存储 VM 数据和配置设置创建复制关系之前，卷的最后一次复制在过去 24 小时内完成。</block>
   <block id="41ad46bbff5ae50ffe14d0bdc1b66775" category="paragraph">如果您创建了用于迁移的复制关系，则必须切换所有卷及其关联的存储 VM，以完成将存储 VM 数据和配置设置迁移到目标 FSx for ONTAP 文件系统。</block>
@@ -2988,7 +2987,6 @@
   <block id="d08fabf4c0fdff2290096692a4ffa28a" category="section-title">块设备的上次访问时间</block>
   <block id="fa4bdc942217a8579f785220b2742233" category="paragraph">Workload Factory 报告块设备的最后访问时间。时间基于您上次在 Workload Factory 中访问 igroup 的时间。了解每个块设备的上次使用时间，可以优化资源。</block>
   <block id="9b6ea8e99ee787981ebaca2de09e7c7f" category="summary">在 Workload Factory 中管理卷的 SMB 或 CIFS 共享包括创建、确定用户和组访问权限以及删除。</block>
-  <block id="8e3a7eb1ad6884834be95dd2aaf56b7b" category="paragraph">在 NetApp Workload Factory 中为 FSx for ONTAP 文件系统创建复制关系，以避免在发生意外灾难时丢失数据。您可以在两个 FSx for ONTAP 文件系统之间复制数据，也可以在本地 ONTAP 系统和 FSx for ONTAP 文件系统之间复制数据。</block>
   <block id="3ff25ab258de4c80bbe3f420e00a3c7e" category="paragraph">对于迁移，您可以选择复制一个存储 VM 的存储 VM 数据和配置设置。如果同时迁移数据和配置设置，请确保卷的上次复制在过去 24 小时内完成。您必须选择同一存储 VM 中的所有卷才能使用此功能。所有卷的分层策略默认为源卷的分层策略，建议用于迁移使用情形。</block>
   <block id="a4b076b073df12f01e734ba016dbebd2" category="paragraph">Workload Factory 支持以下存储系统之间的存储虚拟机的迁移复制。</block>
   <block id="5d7e49f428c9183384f592ccb040ea68" category="list-text">确保有一个 FSx for ONTAP 文件系统可用于复制关系中的目标。</block>
@@ -3028,4 +3026,6 @@
   <block id="d0d09a499e6cdf9f1d34c4e5929c7f4d" category="section-title">步骤 3：为迁移用例切换复制</block>
   <block id="09b43c18bbbe0ab926e24296d842bf9b" category="paragraph">为迁移用例创建复制关系后，必须切换复制，以完成将存储 VM 数据和配置设置迁移到目标 FSx for ONTAP 文件系统。切换复制将数据和存储 VM 配置设置从源文件系统永久迁移到目标 FSx for ONTAP 文件系统。在切换期间，数据会进行最后一次复制。切换开始时，源存储 VM 会脱机。</block>
   <block id="3d7746b6894a23aa721b9d2b99f0bff4" category="list-text">*复制版本支持*：源和目标存储系统必须具有相同的主要 ONTAP 版本。例如，如果源系统运行的是 ONTAP 版本 9.18.1，则目标系统也必须运行 9.18.1 版本。</block>
+  <block id="28cd2b513c45599c0ed271171a723fae" category="paragraph">在 NetApp Workload Factory 中复制数据，以便在数据所在区域发生灾难时防止数据丢失。FSx for ONTAP 文件系统与本地 ONTAP 系统或 Cloud Volumes ONTAP 之间支持数据复制。</block>
+  <block id="388c14942d26a5119b21a74fab9025a3" category="paragraph">在两个 FSx for ONTAP 文件系统之间、本地 ONTAP 系统和 FSx for ONTAP 文件系统之间，或者 Cloud Volumes ONTAP 和 FSx for ONTAP 文件系统之间复制数据。</block>
 </blocks>
