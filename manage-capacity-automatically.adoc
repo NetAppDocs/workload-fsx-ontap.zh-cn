@@ -27,9 +27,9 @@ summary: 启用此功能后，Workload Factory 可以根据容量需求随时间
 
 
 
-== 启用自动容量管理
+== 启用自动容量管理和容量通知
 
-启用自动容量管理，自动增加存储空间，直至达到 FSx for ONTAP文件系统的最大容量限制。
+启用自动容量管理，以自动添加增量存储，直至达到 FSx for ONTAP 文件系统的最大大小限制。设置通知，以便在文件系统达到特定容量阈值时收到警报。
 
 .开始之前
 开始之前、请考虑以下事项：
@@ -43,66 +43,43 @@ summary: 启用此功能后，Workload Factory 可以根据容量需求随时间
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
 . 从存储菜单中，选择 *FSx for ONTAP*。
-. 从 *FSx for ONTAP* 中，选择文件系统的操作菜单以启用自动容量管理。
-. 选择 * 管理 * 。
-. 在信息下方，选择 *Capacity management* 旁边的铅笔图标。当您将鼠标悬停在 *Capacity management* 行上时，铅笔图标会出现在下拉箭头旁边。
-. 在 *容量管理* 对话框中，提供以下内容：
+. 从 *FSx for ONTAP* 中，选择要启用自动容量的文件系统。
+. 在自动容量管理卡中，选择 *管理*。
+. 选择容量管理方法。选项是增量模式和自适应模式。
 +
-.. *凭据*：从下拉菜单中选择具有_Autome_权限的凭据。
-.. 选择启用按钮以*启用自动容量管理*。
+** *增量*：在阈值处将容量增加固定数量。
 +
-或者、也可以禁用此功能。如果需要增加文件系统容量、则必须先禁用自动容量管理。
+*** *阈值*：设置低于增量增加的阈值以触发来自 Workload Factory 通知服务的通知。默认值为 70%。
++
+只有在您 link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html["启用工作负载工厂通知服务"^] 时，阈值设置才可用。
 
-.. *Mode*：选择自动管理容量的模式。选项是增量模式和自适应模式。
-+
-*** *增量模式*：在阈值处将容量增加固定数量。
-+
-**** *警告阈值*：将警告阈值设置为低于触发工作负载工厂通知服务的阈值增加值。默认值为 70%。
-+
-只有在您满足以下条件时，警告阈值设置才可用：link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html["启用工作负载工厂通知服务"^] 。
-
-**** *阈值增加*：输入 FSx for ONTAP文件系统的最大百分比增加值。默认值为 80%。
+*** *增量增加*：输入 FSx for ONTAP 文件系统的最大百分比增加。默认值为 80%。
 +
 这是 Workload Factory 触发作业以增加容量的阈值。例如，如果文件系统达到 80% 的容量，则 Workload Factory 会增加容量。
 
 
 
-*** *Adaptive mode*：根据历史数据预测和更改容量。
+** *Adaptive*：根据历史数据预测和更改容量。
 +
-**** *分析周期*：以小时为单位设置分析周期，以确定容量预测需要考虑多少历史数据。默认为 120 小时。
-**** *计划缓冲时间*：以小时为单位设置缓冲时间，以确保在实际需要之前增加容量。默认时间为 48 小时。
+*** *Look-back*：以小时为单位设置分析周期，以确定容量预测需要考虑多少历史数据。默认为 120 小时。
+*** *提前计划*：以小时为单位设置缓冲时间，以确保在实际需要之前增加容量。默认时间为 48 小时。
 
 
 
 
+. 选择 *Enable automatic capacity management* 和凭据 _view, planning, and analysis_ 权限。
++
+或者、也可以禁用此功能。如果需要增加文件系统容量、则必须先禁用自动容量管理。
 
+. 选择 *启用容量通知* 可在容量达到您设置的阈值时以及每当 Workload Factory 执行自动容量增加时打开通知。默认值为 70%。
++
+仅当您 link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html["启用工作负载工厂通知服务"^] 和启用了自动容量管理时，容量通知设置才可用。
 
 . 选择 * 应用 * 。
 
 
 .结果
 每 30 分钟进行一次文件系统扫描，以确定其是否需要额外容量。
-
-
-
-== 启用容量通知
-
-设置通知，以便在文件系统达到特定容量阈值时获取警报。
-
-.开始之前
-您必须link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html["启用工作负载工厂通知服务"^]才能使用此功能。
-
-.步骤
-. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
-. 从存储菜单中，选择 *FSx for ONTAP*。
-. 从 *FSx for ONTAP* 中，选择文件系统的操作菜单以启用自动容量管理。
-. 选择 * 管理 * 。
-. 在信息下方，选择 *Capacity management* 旁边的铅笔图标。当您将鼠标悬停在 *Capacity management* 行上时，铅笔图标会出现在下拉箭头旁边。
-. 在 *容量管理* 对话框中，选择 *启用容量通知* ，以便在容量达到阈值时以及每当 Workload Factory 执行自动容量增加时打开通知。
-. 设置 *Notification threshold* ，以便在文件系统达到一定容量百分比时接收通知。默认值为 70%。
-. 选择 * 应用 * 。
-
 
 
 

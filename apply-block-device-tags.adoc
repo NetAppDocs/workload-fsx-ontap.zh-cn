@@ -1,0 +1,40 @@
+---
+sidebar: sidebar 
+permalink: apply-block-device-tags.html 
+keywords: tags, EC2 tags, ONTAP tags, block storage tags, apply tags to block devices 
+summary: 将 ONTAP 级别的标签自动应用于您的块设备，以便在 NetApp Workload Factory 中进行资源管理。 
+---
+= 将 ONTAP 级别的标签应用于 NetApp Workload Factory 中的块设备
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用 NetApp Workload Factory 的本机 EC2 用户数据脚本在 AWS EC2 实例部署期间自动创建和标记块设备。从 AWS EC2 控制台部署 EC2 实例时，将 EC2 用户数据脚本添加到启动实例向导模板。部署后，Workload Factory 使用从脚本收集的元数据将 ONTAP 级别的标签应用于您的块设备。这些标签可帮助您查看使用每个块设备的主机，以便在进行故障排除或审核时快速将使用情况与负责的主机相关联。
+
+.关于此任务
+EC2 用户数据脚本创建块设备，并在 EC2 实例部署期间将 ONTAP 级别的 EC2 标签应用于块设备。
+
+应用于块设备的 _EC2 tag_ 包含 EC2 名称、EC2 ID 和 EC2 实例中块设备的挂载路径。
+
+.步骤
+. 按照 link:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-instance-wizard.html["启动 EC2 实例的 Amazon Elastic Compute Cloud 说明"] 使用 AWS EC2 控制台中的启动实例向导进行操作。
+. 将 EC2 用户数据脚本添加到启动实例向导模板，以自动创建和标记块设备。
++
+转到我们的 GitHub 存储库 FSx-ONTAP-sample-scripts 以获取link:https://github.com/NetApp/FSx-ONTAP-samples-scripts/tree/main/Management-Utilities/ec2-user-data-iscsi-create-and-mount["EC2 用户数据脚本"]。
+
+. 启动实例。
++
+EC2 用户数据脚本自动将 ONTAP 级别的标签应用于 EC2 实例上托管的新块存储设备。
+
+. 对于现有的 EC2 实例，用户数据脚本仅在重新启动后生效。
+
+
+.结果
+EC2 标签出现在相关 FSx for ONTAP 文件系统的块设备表中。
+
+.相关信息
+* link:create-igroup.html["在 NetApp Workload Factory 中为文件系统创建启动程序组 (igroup)"]
+* link:manage-block-storage.html["在 NetApp Workload Factory 中管理文件系统的块存储"]
+

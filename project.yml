@@ -43,14 +43,12 @@ sidebar:
         url: "/create-link.html"
       - title: 管理链接
         url: "/manage-links.html"
+    - title: 创建卷
+      url: "/create-volume.html"
     - title: 发现并查看缓存卷
       url: "/discover-cache-volumes.html"
-    - title: 管理卷
-      entries:
-      - title: 创建卷
-        url: "/create-volume.html"
-      - title: 访问您的数据
-        url: "/access-data.html"
+    - title: 访问您的数据
+      url: "/access-data.html"
     - title: 创建块存储资源
       entries:
       - title: 创建 igroup
@@ -143,6 +141,8 @@ sidebar:
       entries:
       - title: 管理块存储
         url: "/manage-block-storage.html"
+      - title: 将标签应用于块设备
+        url: "/apply-block-device-tags.html"
     - title: 文件系统管理
       entries:
       - title: 手动调整文件系统容量
