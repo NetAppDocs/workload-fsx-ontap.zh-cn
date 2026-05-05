@@ -3018,7 +3018,6 @@
   <block id="949772caeac38120e37726672f87e673" category="inline-link-macro">用于为块设备分配标签的 EC2 用户数据脚本</block>
   <block id="f253e6c2e63632a5f1a7ef4fe6522c2f" category="paragraph"><block ref="f253e6c2e63632a5f1a7ef4fe6522c2f" category="inline-link-macro-rx"></block></block>
   <block id="607326d3637e008b134e64f39d8da723" category="section-title">适用于 ONTAP 文件系统的 FSx 容量趋势</block>
-  <block id="f9fdfcc52193908a516c0b9d7964af8e" category="paragraph">直接从 FSx for ONTAP 文件系统的概述中了解 SSD 容量趋势。新的容量管理卡可全面了解上个月的使用趋势。该分析包括实际使用的容量和分配的容量之间的比较，以便对资源利用率进行明确评估。</block>
   <block id="9fe282a2158bc82a938a6290a314ca79" category="inline-link-macro">在 NetApp Workload Factory 中自动管理容量</block>
   <block id="9ab7147fcc802f47be068771ba492092" category="paragraph"><block ref="9ab7147fcc802f47be068771ba492092" category="inline-link-macro-rx"></block></block>
   <block id="408971f10d86e5c4321ade595b2c0c02" category="summary">将 ONTAP 级别的标签自动应用于您的块设备，以便在 NetApp Workload Factory 中进行资源管理。</block>
@@ -3067,4 +3066,8 @@
   <block id="8da70820bee8cb0d257b3ee6f7436e40" category="paragraph">仅当您 <block ref="e500d492a56da387ccd67dac5045b171" category="inline-link-macro-rx"></block> 和启用了自动容量管理时，容量通知设置才可用。</block>
   <block id="3be044b694628f6e958377c22febfacd" category="section-title">2026 年 5 月 3 日</block>
   <block id="4ccd08ccc04cf1986a6dc1a2de287f72" category="sidebar">将标签应用于块设备</block>
+  <block id="596e30b7050101709ce0d710420e77a7" category="paragraph">直接从适用于 ONTAP 文件系统的 FSx 概述中了解 SSD 容量趋势。新的容量管理卡显示了上个月的使用趋势。该分析比较了实际容量和分配容量，便于评估资源使用情况。</block>
+  <block id="deede3cf7f18c08613ec53890188368e" category="section-title">FSx for ONTAP 文件系统架构良好状态的 PDF 报告</block>
+  <block id="09731bdb23a8e229cca44808afd3eb18" category="inline-link-macro">在 NetApp Workload Factory 中查看 FSx for ONTAP 文件系统的良好架构状态。</block>
+  <block id="bf36e3bb684711138abb04e7f7f95c1a" category="paragraph">分析后，您可以下载 FSx for ONTAP 文件系统架构良好状态的 PDF 报告，用于记录或与您的团队共享。<block ref="8f1fbab727bbab0e7967c959283750c4" category="inline-link-macro-rx"></block></block>
 </blocks>
