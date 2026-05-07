@@ -2975,7 +2975,6 @@
   <block id="ed57615365ad2815423480008d91d450" category="section-title">规划切换操作</block>
   <block id="fa425772bf4dc1e54c8368c2b99d4b1b" category="paragraph">在规划迁移用例的切换操作时，请考虑以下内容。</block>
   <block id="d77811034f737ab45ed7ddebe9c096fd" category="inline-xref">切换后更新配置设置</block>
-  <block id="6ceb7ae37e1ac2ec5ebe38f0e5082457" category="list-text">*存储虚拟机配置设置*：切换操作不会将所有存储虚拟机配置设置迁移到目标存储虚拟机。例如，iSCSI、广播域 MTU 和 DNS 设置不会迁移。切换后在目标存储虚拟机上手动更新这些设置。有关更多详细信息，请参阅 <block ref="af05d35e02c20d22f4e6b1df9b57e0a2" category="inline-xref-macro-rx"></block> 节。</block>
   <block id="dddf91d5ccee3135470e6089b62618ba" category="list-text">*克隆*：克隆作为单个卷进行迁移，因此将占用目标 FSx for ONTAP 文件系统上的更多空间。考虑在切换之前删除克隆，以避免增加目标容量。</block>
   <block id="233115f3ed74b7b4516b8f0a1efbaedf" category="list-text">*缓存卷*：适用于 ONTAP FlexCache 9.17.x 或更低版本。包含缓存卷的源存储 VM 不支持切换。在切换之前删除 ONTAP FlexCache 关系，以避免迁移失败。</block>
   <block id="03c85e91696d00a533c3da3b08434532" category="list-text">*AWS S3 接入点*：具有 S3 接入点的卷不支持迁移使用情形的切换复制。从源卷中删除 S3 接入点以避免迁移失败。</block>
@@ -3070,4 +3069,8 @@
   <block id="deede3cf7f18c08613ec53890188368e" category="section-title">FSx for ONTAP 文件系统架构良好状态的 PDF 报告</block>
   <block id="09731bdb23a8e229cca44808afd3eb18" category="inline-link-macro">在 NetApp Workload Factory 中查看 FSx for ONTAP 文件系统的良好架构状态。</block>
   <block id="bf36e3bb684711138abb04e7f7f95c1a" category="paragraph">分析后，您可以下载 FSx for ONTAP 文件系统架构良好状态的 PDF 报告，用于记录或与您的团队共享。<block ref="8f1fbab727bbab0e7967c959283750c4" category="inline-link-macro-rx"></block></block>
+  <block id="6279c641e85ceb888c688f0c728cd930" category="list-text">请务必打开 TCP 端口 11105 和 11105，以实现存储系统之间的安全数据传输和管理。</block>
+  <block id="eeb77472aa3a83d51f0873ec83e22572" category="list-text">*Storage VM 配置设置*：</block>
+  <block id="0abde7f01f46e5ae295493bf4b280687" category="list-text">切换操作不会将所有存储虚拟机配置设置迁移到目标存储虚拟机。例如，iSCSI、广播域 MTU 和 DNS 设置不会迁移。切换后在目标存储虚拟机上手动更新这些设置。有关更多详细信息，请参阅 <block ref="af05d35e02c20d22f4e6b1df9b57e0a2" category="inline-xref-macro-rx"></block> 节。</block>
+  <block id="893700039eb02078c7602e997d7f9922" category="list-text">如果您的存储 VM 使用域隧道身份验证，请在开始迁移之前在目标文件系统上设置并启用域隧道。</block>
 </blocks>
