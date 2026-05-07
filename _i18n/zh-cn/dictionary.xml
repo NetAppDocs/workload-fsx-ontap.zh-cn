@@ -3069,8 +3069,8 @@
   <block id="deede3cf7f18c08613ec53890188368e" category="section-title">FSx for ONTAP 文件系统架构良好状态的 PDF 报告</block>
   <block id="09731bdb23a8e229cca44808afd3eb18" category="inline-link-macro">在 NetApp Workload Factory 中查看 FSx for ONTAP 文件系统的良好架构状态。</block>
   <block id="bf36e3bb684711138abb04e7f7f95c1a" category="paragraph">分析后，您可以下载 FSx for ONTAP 文件系统架构良好状态的 PDF 报告，用于记录或与您的团队共享。<block ref="8f1fbab727bbab0e7967c959283750c4" category="inline-link-macro-rx"></block></block>
-  <block id="6279c641e85ceb888c688f0c728cd930" category="list-text">请务必打开 TCP 端口 11105 和 11105，以实现存储系统之间的安全数据传输和管理。</block>
   <block id="eeb77472aa3a83d51f0873ec83e22572" category="list-text">*Storage VM 配置设置*：</block>
   <block id="0abde7f01f46e5ae295493bf4b280687" category="list-text">切换操作不会将所有存储虚拟机配置设置迁移到目标存储虚拟机。例如，iSCSI、广播域 MTU 和 DNS 设置不会迁移。切换后在目标存储虚拟机上手动更新这些设置。有关更多详细信息，请参阅 <block ref="af05d35e02c20d22f4e6b1df9b57e0a2" category="inline-xref-macro-rx"></block> 节。</block>
   <block id="893700039eb02078c7602e997d7f9922" category="list-text">如果您的存储 VM 使用域隧道身份验证，请在开始迁移之前在目标文件系统上设置并启用域隧道。</block>
+  <block id="ec76bc02c6a3a5c32e0e22c2926d0319" category="list-text">请务必打开 TCP 端口 11104 和 11105，以实现存储系统之间的安全数据传输和管理。</block>
 </blocks>
