@@ -3073,4 +3073,5 @@
   <block id="0abde7f01f46e5ae295493bf4b280687" category="list-text">切换操作不会将所有存储虚拟机配置设置迁移到目标存储虚拟机。例如，iSCSI、广播域 MTU 和 DNS 设置不会迁移。切换后在目标存储虚拟机上手动更新这些设置。有关更多详细信息，请参阅 <block ref="af05d35e02c20d22f4e6b1df9b57e0a2" category="inline-xref-macro-rx"></block> 节。</block>
   <block id="893700039eb02078c7602e997d7f9922" category="list-text">如果您的存储 VM 使用域隧道身份验证，请在开始迁移之前在目标文件系统上设置并启用域隧道。</block>
   <block id="ec76bc02c6a3a5c32e0e22c2926d0319" category="list-text">请务必打开 TCP 端口 11104 和 11105，以实现存储系统之间的安全数据传输和管理。</block>
+  <block id="8ee47478c07b40fab9e5a6a34028629c" category="list-text">打开 TCP 端口 11104 和 11105，以实现存储系统之间的安全数据传输和管理。ICMP 是可选的，但可以帮助进行网络检查和故障排除。</block>
 </blocks>
