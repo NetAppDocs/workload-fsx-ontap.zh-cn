@@ -76,7 +76,7 @@ summary: 编辑快照设置、启用目录访问和删除快照以管理 Workloa
 
 您可以选择将数据从快照恢复到现有卷或新卷。
 
-link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_snapshot-mgmt/restore-volume-from-snapshot.html["从快照还原卷"]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/restore-volume-from-snapshot.html["从快照还原卷"]
 
 
 

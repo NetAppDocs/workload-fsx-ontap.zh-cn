@@ -1224,7 +1224,6 @@
   <block id="ecc4c534126952c05eb3829106343643" category="list-text">此密钥不包含用于文件系统身份验证的有效ONTAP凭据。</block>
   <block id="b94462bb135856834e40d9c982dbbc8b" category="paragraph">*解决方案*：提供可在AWS密码管理器中对ONTAP文件系统FSx进行身份验证的凭据。</block>
   <block id="db02b80a9dd5a7c959ec87fdf41baa91" category="inline-link-macro">级联复制</block>
-  <block id="cb7048e2d3bbe74eff8dc77537e6b3cb" category="paragraph">您可以复制一个源(读/写)卷或一个数据保护(DP)卷。支持级联复制、但第三个跃点不支持。详细了解 <block ref="70f3f574eb9d2048e3113fc3bf26173a" category="inline-link-macro-rx"></block>。</block>
   <block id="a9349d3c10a82990ac0a1fc539e5f621" category="list-text">复制文件系统中的所有卷或复制选定卷。</block>
   <block id="ccbd024216a98284de9e40d4f35c7a8e" category="list-text">复制文件系统中的所有卷：从文件系统概述中，选择*复制数据*。</block>
   <block id="8c2ef6be41e1306ff1553a6b77895cad" category="list-text">要复制选定卷：从文件系统概述中，选择*Volumes*选项卡。</block>
@@ -1535,7 +1534,6 @@
   <block id="743828d5c9c11b38d3dbbf76d787f497" category="section-title">增强 SMB/CIFS 共享创建和管理</block>
   <block id="421075462886e558113f14b52fe22487" category="paragraph">您现在可以创建指向卷内的目录的 SMB/CIFS 共享。在卷内，您将能够看到存在哪些共享、共享指向哪里以及授予特定用户和组的权限。</block>
   <block id="4662a232249c09ca958781da08211b0c" category="paragraph">对于数据保护卷，创建 SMB/CIFS 共享的流程现在包括创建到卷的连接路径以用于安装目的。</block>
-  <block id="5f08db4267e771ad7b348d338d92e0e6" category="paragraph"><block ref="5f08db4267e771ad7b348d338d92e0e6" category="inline-link-macro-rx"></block></block>
   <block id="952da3361b1e3ca5daa8c23a39780e18" category="list-text">手动：使用 Codebox 中的 CloudFormation 或 Terraform 创建带有手动注册的链接。代码持续存在，为您提供更多时间来完成操作。这在与安全和 DevOps 等不同的团队合作时很有用，因为他们可能首先需要授予完成链接创建所需的权限。</block>
   <block id="d244d1524bd960c99e9fef848ac5ce4a" category="paragraph">您可以使用 Codebox 中的两个基础设施即代码 (IaC) 工具创建链接：CloudFormation 或 Terraform。使用此选项，您可以从 AWS CloudFormation 中提取链接的 ARN 并在此处报告。工作负载工厂手动为您注册链接。</block>
   <block id="272404907923a583d38661d1f77a2a8c" category="list-text">在创建链接页面上，从 Codebox 中选择 CloudFormation 或 Terraform，然后提供以下内容：</block>
@@ -1665,7 +1663,6 @@
   <block id="8695344671e89445641e5521e94e092a" category="list-text">复制访问路径。</block>
   <block id="f4b128dfa4315b7560d911b08c3653c2" category="section-title">从快照恢复数据</block>
   <block id="05f173e81abaca211df63916cfac7a74" category="paragraph">您可以选择将数据从快照恢复到现有卷或新卷。</block>
-  <block id="6520c3672c5d01c2976ef1980c6c4f4b" category="paragraph"><block ref="6520c3672c5d01c2976ef1980c6c4f4b" category="inline-link-macro-rx"></block></block>
   <block id="efb44cfe1d5b8d9954ea045385675c66" category="section-title">删除快照</block>
   <block id="6dbf69edbee88e5a8078a8a4e008a3b8" category="paragraph">删除快照以释放空间。</block>
   <block id="65231a1c4b836cdc3226241028b6f5c1" category="paragraph">不可变快照在保留期结束前不能被删除。</block>
@@ -2371,7 +2368,6 @@
   <block id="d9f80ec4d13936fdba78b793f44c184c" category="list-text">*创建新的启动器组*：提供主机操作系统、启动器组名称，并添加一个或多个 iSCSI 限定名称 (IQN) 主机启动器。</block>
   <block id="104d3f014c0f2ca8498a2aa9f78b1864" category="list-text">*映射现有启动器组*：选择一个现有启动器组，提供主机操作系统，然后选择一个或多个 iSCSI 限定名称 (IQN) 主机启动器。</block>
   <block id="db784c6694930c54da9655a9d31c365a" category="list-text">在“效率与保护”项下，执行以下操作：</block>
-  <block id="8cbc6c14a0474488d906dfdd17ce79c4" category="paragraph">以下是 AWS 的默认策略。要显示现有的快照策略，您必须 <block ref="6ac03ad394740d642419d1159fa121ff" category="inline-link-macro-rx"></block>。</block>
   <block id="4dd81c3ec298b3b3b12adbd43350c454" category="paragraph">使用 Workload Factory 控制台创建卷时，默认分层策略为 _Balanced (Auto)_。有关容量分层策略的更多信息，请参阅 <block ref="de51d392f5d252a956349995f441f55c" category="inline-link-macro-rx"></block> 在 AWS FSx for NetApp ONTAP文档中。请注意，Workload Factory 在 Workload Factory 控制台中使用基于用例的名称来定义分层策略，并在括号中包含 FSx for ONTAP分层策略名称。</block>
   <block id="eafa5af121307f6008fad4d24d6d9f14" category="list-text">ARP/AI 不支持包含不可变文件的卷和使用 NVMe 协议的卷。</block>
   <block id="1e3a8de3c21016b6778340215e821fb6" category="list-text">从 *FSx for ONTAP* 中选择文件系统的操作菜单，然后选择 *管理*。</block>
@@ -3072,6 +3068,7 @@
   <block id="eeb77472aa3a83d51f0873ec83e22572" category="list-text">*Storage VM 配置设置*：</block>
   <block id="0abde7f01f46e5ae295493bf4b280687" category="list-text">切换操作不会将所有存储虚拟机配置设置迁移到目标存储虚拟机。例如，iSCSI、广播域 MTU 和 DNS 设置不会迁移。切换后在目标存储虚拟机上手动更新这些设置。有关更多详细信息，请参阅 <block ref="af05d35e02c20d22f4e6b1df9b57e0a2" category="inline-xref-macro-rx"></block> 节。</block>
   <block id="893700039eb02078c7602e997d7f9922" category="list-text">如果您的存储 VM 使用域隧道身份验证，请在开始迁移之前在目标文件系统上设置并启用域隧道。</block>
-  <block id="ec76bc02c6a3a5c32e0e22c2926d0319" category="list-text">请务必打开 TCP 端口 11104 和 11105，以实现存储系统之间的安全数据传输和管理。</block>
   <block id="8ee47478c07b40fab9e5a6a34028629c" category="list-text">打开 TCP 端口 11104 和 11105，以实现存储系统之间的安全数据传输和管理。ICMP 是可选的，但可以帮助进行网络检查和故障排除。</block>
+  <block id="fa8b213a52b4f0e35de875db4340e809" category="paragraph"><block ref="fa8b213a52b4f0e35de875db4340e809" category="inline-link-macro-rx"></block></block>
+  <block id="e9df00e078102fb55394d13dad9115a4" category="paragraph">您可以复制一个源（读/写）卷或一个数据保护（DP）卷。支持级联复制，但不支持第三个跃点。详细了解<block ref="a7ce0f55df6d6b86426266d8a7eeb328" category="inline-link-macro-rx"></block>。</block>
 </blocks>

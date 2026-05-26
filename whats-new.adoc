@@ -647,7 +647,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["使用La
 
 对于数据保护卷，创建 SMB/CIFS 共享的流程现在包括创建到卷的连接路径以用于安装目的。
 
-link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_grogu-5684-wa-dismiss/manage-cifs-share.html#create-a-cifs-share-for-a-volume["为卷创建CIFS共享"]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-cifs-share.html#create-a-cifs-share-for-a-volume["为卷创建CIFS共享"]
 
 
 
