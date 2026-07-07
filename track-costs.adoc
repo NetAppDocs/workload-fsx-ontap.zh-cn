@@ -2,38 +2,78 @@
 sidebar: sidebar 
 permalink: track-costs.html 
 keywords: cost, consumption, Cost Explorer 
-summary: 在NetApp Workload Factory中跟踪 FSx for ONTAP文件系统资源的成本。 
+summary: 在 NetApp Workload Factory 中跟踪 FSx for ONTAP 文件系统资源的成本并生成报告。 
 ---
-= 在NetApp Workload Factory中跟踪资源成本
+= 在 NetApp Workload Factory 中跟踪成本并获取资源报告
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-使用NetApp Workload Factory以统一视图跟踪 FSx for ONTAP文件系统的成本和使用情况。成本数据有助于您有效管理预算和优化资源。  AWS Cost Explorer 提供成本数据。
+在 NetApp Workload Factory 控制台的综合视图中跟踪 FSx for ONTAP 文件系统的成本和使用情况。成本数据可帮助您有效管理预算和优化资源。Workload Factory 还为您的 FSx for ONTAP 文件系统资源生成成本报告，您可以与利益相关者共享这些报告。
 
-.关于此任务
-使用以下权限从 AWS Cost Explorer 提取 FSx for ONTAP文件系统资源的成本和使用情况数据：
 
-* `ce:GetCostAndUsage`
-* `ce:GetTags`
 
+== 关于此任务
+
+Workload Factory 通过从 AWS Cost Explorer 获取成本数据，跟踪 FSx for ONTAP 文件系统成本和使用情况。跟踪以下成本详细信息：使用类型、使用 SKU、部署类型、使用情况和总成本。
+
+对于唯一资源，Workload Factory 通过将实际性能层使用量、分配给已调配但未使用空间的性能层成本的比例份额、按容量分配的性能分配和容量池使用量相结合来计算成本。每个组件乘以该维度的单位价格，并将结果相加以确定每个资源的总成本。
+
+在成本仪表板中，您可以按 AWS 账户、凭据、一个或多个区域和时间范围筛选成本和使用数据，以便了解您的 FSx for ONTAP 文件系统消耗情况。数据始终按月显示。
+
+我们使用以下权限从 AWS Cost Explorer 获取 FSx for ONTAP 文件系统资源的成本和使用数据： `ce:GetCostAndUsage`and `ce:GetTags`。我们使用 AWS 成本 API 和我们的估算来计算总成本。`
+
+AWS 分配标记键和标记键值添加了额外的过滤层，以精确定位特定成本。_tag_ 由一个键和一个值组成。要按标记键和标记键值进行筛选，请将标记分配给 FSx for ONTAP 文件系统。 link:https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html["详细了解 AWS 成本分配标签。"^]
+
+除了成本仪表板中显示的成本数据之外，还可以为 FSx for ONTAP 文件系统资源生成成本报告。成本报告中的数据显示特定文件系统和卷的信息。该报告是可下载的 PDF 文件，您可以与利益相关者共享。
+
+
+
+== 跟踪成本
+
+Workload Factory 控制台成本仪表板中显示的成本基于 AWS Cost Explorer 的数据，每 24 小时更新一次。
 
 .开始之前
-link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["使用_查看、规划和分析_权限策略授予凭据"^]在 Workload Factory 中跟踪 FSx 的ONTAP成本。
+请确保满足以下要求：
+
+* 您必须link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["使用_查看、规划和分析_权限策略授予凭据"^]才能在 Workload Factory 中跟踪 FSx for ONTAP 的成本。
+* 要按 AWS 分配标记进行筛选，请确保您的 FSx for ONTAP 文件系统已为其分配了标记。
+
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
 . 从存储菜单中，选择“成本”。
-. 在“成本”页面上，通过提供以下信息来筛选 FSx for ONTAP资源的成本和容量数据：
+. 从成本仪表板中，通过提供以下内容过滤 FSx for ONTAP 资源的成本和容量数据：
 +
 .. *AWS 账户*：选择要查看成本数据的账户。
 .. *凭证*：选择具有_查看、规划和分析_权限的凭证。
 .. *区域*：选择要查看成本数据的 AWS 区域。
 .. *成本数据范围*：选择要查看的成本数据的时间范围。
+.. *分配标记密钥*：（可选）选择分配标记密钥及其值，以生成与 AWS 标记关联的所有 FSx for ONTAP 文件系统的详细成本报告。
+.. *分配标记值*：（可选）选择与分配标记键关联的分配标记键值，以生成与 AWS 标记关联的所有 FSx for ONTAP 文件系统的详细成本报告。
 
 
 . 查看 FSx for ONTAP资源的*成本详情*。
 
+
+
+
+== 为您的 FSx for ONTAP 资源生成成本报告
+
+为特定 FSx for ONTAP 文件系统资源生成成本报告，以便与利益相关者共享。
+
+.步骤
+. 在费用控制面板中，选择*Generate report*。
+. 在 Report（报告）屏幕中，提供以下信息：
++
+.. *文件系统*：选择要包含在报告中的一个或多个 FSx for ONTAP 文件系统。
+.. *Volume*：（可选）选择要包含在报告中的一个或多个卷。
+
+
+
+
+.结果
+PDF 报告已生成，可以下载。

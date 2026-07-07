@@ -75,10 +75,8 @@ sidebar:
           url: "/create-backup.html"
         - title: 从备份还原卷
           url: "/restore-from-backup.html"
-      - title: 使用复制
-        entries:
-        - title: 复制数据
-          url: "/create-replication.html"
+      - title: 复制数据
+        url: "/create-replication.html"
       - title: 利用自主防兰森保护功能保护数据
         url: "/ransomware-protection.html"
       - title: 克隆卷
@@ -105,6 +103,8 @@ sidebar:
         url: "/edit-volume-autogrow.html"
       - title: 调整音量容量
         url: "/adjust-volume-capacity.html"
+      - title: 设置卷延迟阈值
+        url: "/set-volume-latency-thresholds.html"
       - title: 重新平衡卷容量
         url: "/rebalance-volume.html"
       - title: 管理不可配置文件
@@ -185,20 +185,10 @@ sidebar:
         entries:
         - title: 复制数据保护卷
           url: "/cascade-replication.html"
-        - title: 反转复制关系
-          url: "/reverse-replication.html"
-        - title: 更改源卷的复制计划
-          url: "/change-replication-schedule.html"
-        - title: 限制复制关系的最大传输速率
-          url: "/limit-transfer-rate.html"
-        - title: 手动更新复制关系中的快照数据
-          url: "/update-snapshot-replication.html"
-        - title: 暂停和恢复复制关系
-          url: "/pause-resume-replication.html"
-        - title: 停止复制关系
-          url: "/stop-replication.html"
-        - title: 删除复制关系
-          url: "/delete-replication.html"
+        - title: 跟踪复制延迟
+          url: "/track-replication-delays.html"
+        - title: 管理复制关系
+          url: "/manage-replication.html"
     - title: 性能管理
       entries:
       - title: 为文件系统配置IOPS

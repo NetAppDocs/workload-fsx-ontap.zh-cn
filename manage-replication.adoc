@@ -1,0 +1,211 @@
+---
+sidebar: sidebar 
+permalink: manage-replication.html 
+keywords: replication management, manage replication, pause replication, stop replication, break replication, delete replication, track replication, change replication schedule, limit replication transfer rate, reverse replication 
+summary: 在 NetApp Workload Factory 中管理复制关系。 
+---
+= 在 NetApp Workload Factory 中管理您的复制关系
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+在 NetApp Workload Factory 中管理您的复制关系。您可以暂停、恢复、还原、停止和删除源卷和目标卷之间的复制关系。您还可以更改源卷的复制计划，并限制复制关系的最大传输速率。
+
+
+
+== 更改源卷的复制计划
+
+更改NetApp Workload Factory 中复制关系中源卷的复制计划。
+
+选择将源卷中的快照传输到复制的卷的频率、以匹配所需的点目标(RPO)。
+
+如果内部ONTAP集群是复制关系的目标、则不支持更改复制计划。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
+. 从存储菜单中，选择 *FSx for ONTAP*。
+. 从 *FSx for ONTAP* 中，选择要更新的文件系统的操作菜单，然后选择 *管理*。
+. 从文件系统概述中，选择*复制关系*选项卡。
+. 在复制关系选项卡中，选择要更改的复制关系计划的操作菜单。
+. 选择*编辑复制间隔*。
+. 在编辑复制间隔对话框中、选择从源卷传输快照的频率。您可以选择以下频率：
++
+** 每 5 分钟
+** 每小时
+** 每8小时
+** 每天
+** 每周
+
+
+. 选择 * 应用 * 。
+
+
+
+
+== 限制复制关系的最大传输速率
+
+限制最大传输速率是可选的、但建议这样做。如果没有限制、网络和应用程序性能可能会下降。
+
+或者、对于关键工作负载(例如、主要用于灾难恢复的工作负载)、我们建议对用于ONTAP文件系统的FSx使用无限传输速率。
+
+.开始之前
+请考虑为复制分配多少带宽。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
+. 从存储菜单中，选择 *FSx for ONTAP*。
+. 从 *FSx for ONTAP* 中，选择要更新的文件系统的操作菜单，然后选择 *管理*。
+. 从文件系统概述中，选择*复制关系*选项卡。
+. 在复制关系选项卡中，选择复制关系的操作菜单来限制最大传输速率。
+. 选择*编辑最大传输速率*。
+. 在编辑最大传输速率对话框中，选择*Limited*，然后输入最大传输速率(MB/秒)
++
+或者，选择*Unlimited (无限制)*。
+
+. 选择 * 应用 * 。
+
+
+
+
+== 手动更新复制关系中的快照数据
+
+复制关系具有设定的复制计划，但您可以随时手动更新NetApp Workload Factory 中源卷和目标卷之间传输的快照数据。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
+. 从存储菜单中，选择 *FSx for ONTAP*。
+. 从 *FSx for ONTAP* 中，选择要更新的文件系统的操作菜单，然后选择 *管理*。
+. 从文件系统概述中，选择*复制关系*选项卡。
+. 在复制关系选项卡中，选择要更新的复制关系的操作菜单。
+. 选择 *Update*。
+. 在更新对话框中，选择*更新*。
+
+
+
+
+== 暂停复制关系
+
+暂停复制关系以停止从源卷到目标卷的计划复制更新。目标卷从只读过渡到读/写。这两个卷仍会共享最新的复制快照作为新基线、以供日后重新同步时使用。
+
+.开始之前
+如果在传输进行中暂停、则传输不会受到影响、关系将变为"暂停"、直到传输完成为止。如果当前传输已被禁止、则它现在是将来的传输、不会重新启动。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
+. 从存储菜单中，选择 *FSx for ONTAP*。
+. 从 *FSx for ONTAP* 中，选择要更新的文件系统的操作菜单，然后选择 *管理*。
+. 从文件系统概述中，选择*复制关系*选项卡。
+. 在复制关系选项卡中，选择要暂停的复制关系的操作菜单。
+. 选择*暂停(暂停)*。
+. 在“*置于两国间的关系”对话框中，选择“*置于两国间的关系”。
+
+
+.结果
+此关系将暂停、并且其状态显示为"Paused"。
+
+
+
+== 恢复已暂停的复制关系
+
+当您恢复复制关系时，将删除在复制停止期间对目标卷所做的任何更改。目标卷从读/写转换为只读，并以计划的复制间隔再次从源卷接收更新。
+
+
+NOTE: 系统不会保留从上次数据复制到源卷被禁用这段时间写入原始源卷的任何数据。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
+. 从存储菜单中，选择 *FSx for ONTAP*。
+. 从 *FSx for ONTAP* 中，选择要更新的文件系统的操作菜单，然后选择 *管理*。
+. 从文件系统概述中，选择*复制关系*选项卡。
+. 在复制关系选项卡中，选择要恢复的复制关系的操作菜单。
+. 选择*恢复*。
+. 在“恢复关系”对话框中，选择*Resume*。
+
+
+.结果
+此关系将恢复、并且其状态显示为"已复制"。
+
+
+
+== 反转复制关系
+
+反转复制关系、以使目标卷成为源卷。
+
+以下各项支持反向操作：
+
+* 两个FSx、用于ONTAP文件系统
+* 一个 FSx for ONTAP 文件系统和一个本地 ONTAP 系统
+
+
+停止复制并对目标卷进行更改后、您可以将这些更改复制回源卷。在灾难恢复场景中、此过程很常见、在此场景中、您在目标卷上运行了一段时间、并希望切换卷的角色。
+
+反转并恢复复制时、它会切换卷的源角色和目标角色；目标卷将成为新的源卷、而源卷将成为新的目标卷。反向操作还会使用新源卷的内容覆盖新目标卷的内容。如果反转复制两次、则会重新建立原始复制方向。
+
+[]
+====
+注:
+
+* 系统不会保留从上次数据复制到源卷被禁用这段时间写入原始源卷的任何数据。
+* 在复制 Storage VM 数据和配置设置时，反向复制不可用。
+
+
+====
+.开始之前
+确保您知道源卷和目标卷的当前和未来角色、因为新目标卷上的更改会被新源卷覆盖。如果使用不当、可能会发生意外数据丢失。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
+. 从存储菜单中，选择 *FSx for ONTAP*。
+. 从 *FSx for ONTAP* 中，选择要更新的文件系统的操作菜单，然后选择 *管理*。
+. 从文件系统概述中，选择*复制关系*选项卡。
+. 在复制关系选项卡中，选择要逆转的复制关系的操作菜单。
+. 选择*反向关系*。
+. 在“反向关系”对话框中，选择“*反向*”。
+
+
+
+
+== 停止复制关系
+
+停止NetApp Workload Factory 中的复制关系。当您停止复制关系时，从源卷到目标卷的计划复制更新将暂停。目标卷从只读转换为读/写。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
+. 从存储菜单中，选择 *FSx for ONTAP*。
+. 从 *FSx for ONTAP* 中，选择要更新的文件系统的操作菜单，然后选择 *管理*。
+. 从文件系统概述中，选择*复制关系*选项卡。
+. 在复制关系选项卡中，选择要停止的复制关系的操作菜单。
+. 选择*中断*。
+. 在中断复制对话框中，选择*故障*。
+
+
+.结果
+卷的复制状态将更改为*已断开*。目标卷将变为可写。
+
+
+
+== 删除复制关系
+
+删除NetApp Workload Factory 中的复制关系。当您删除复制关系时，它会删除源卷和目标卷之间的复制关系。删除复制关系后，两个卷将继续独立存在，并保留其包含的当前数据。
+
+删除复制关系时、FSx for ONTAP还会删除源卷和目标卷的通用复制快照。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
+. 从存储菜单中，选择 *FSx for ONTAP*。
+. 从 *FSx for ONTAP* 中，选择要更新的文件系统的操作菜单，然后选择 *管理*。
+. 从文件系统概述中，选择*复制关系*选项卡。
+. 在复制关系选项卡中，选择要删除的复制关系的操作菜单。
+. 选择 * 删除 * 。
+. 在“删除关系”对话框中，选择*Delete*。
+

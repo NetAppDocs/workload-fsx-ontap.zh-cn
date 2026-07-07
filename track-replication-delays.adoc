@@ -1,0 +1,43 @@
+---
+sidebar: sidebar 
+permalink: track-replication-delays.html 
+keywords: replication, track replication, replication lag, replication delay, delay, monitor replication, replication threshold, lag notification 
+summary: 启用跟踪以监控帐户中所有复制关系的延迟。 
+---
+= 跟踪复制延迟
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+启用跟踪以监控整个帐户的复制延迟。当延迟超过设定的阈值时，Workload Factory 将提醒您。默认情况下，阈值为复制间隔的 150%，以允许正常传输时间并减少误报。您可以调整阈值以匹配您的 RPO，并在延迟超过阈值时收到通知。您还可以将数据导出为 CSV 文件以进行进一步分析。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
+. 从存储菜单中，选择 *FSx for ONTAP*。
+. 从 *FSx for ONTAP* 中，选择要更新的文件系统的操作菜单，然后选择 *管理*。
+. 从文件系统概述中，选择*复制关系*选项卡。
+. 选择*启用跟踪*。
+. 在 Enable replication lag history 对话框中，选择 *Enable*。
+. 返回复制延迟历史记录图块，选择*自定义阈值*以设置首选阈值。
+. 在"自定义延迟时间阈值"对话框中，输入以小时和分钟为单位的阈值。
+. （可选）选择 *Enable lag time notifications* 以在复制延迟超过阈值时接收通知。
++
+通知会通过电子邮件发送，其中包括：
+
++
+** 源文件系统
+** 源卷
+** 目标文件系统
+** 目标卷
+** 超出滞后时间阈值
+** 链接到复制关系
+
+
+. 选择 * 应用 * 。
+
+
+.相关信息
+link:manage-replication.html["管理复制关系"^]

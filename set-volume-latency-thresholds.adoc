@@ -1,0 +1,59 @@
+---
+sidebar: sidebar 
+permalink: set-volume-latency-thresholds.html 
+keywords: latency, latency thresholds, alerts, volume latency, read latency, write latency 
+summary: 设置卷的延迟阈值，以便在读取或写入延迟超过指定值时接收警报。 
+---
+= 在 NetApp Workload Factory 中设置卷延迟阈值
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+设置卷的延迟阈值，以便在读取或写入延迟超过指定值时接收警报。
+
+.关于此任务
+您可以按卷配置延迟阈值，以监控性能并在延迟值超过定义的限制时接收警报。Workload Factory 监控读取和写入延迟，并在超出任一阈值时生成警报。
+
+设置延迟阈值时，Workload Factory 会监控以下内容：
+
+* *Read latency*：当读取操作超过指定阈值（以毫秒为单位）时触发警报。
+* *写入延迟*：当写入操作超过指定阈值（以毫秒为单位）时触发警报。
+
+
+延迟监控使用以下默认参数：
+
+* *IOPS 阈值*：100 IOPS（读取和写入）
+* *时间范围*：10 分钟
+
+
+当超过延迟阈值且在指定时间范围内达到 IOPS 阈值时，将生成警报。
+
+
+NOTE: 您可以在没有链接连接的情况下查看延迟事件并接收警报。但是，要分析事件并获得基于人工智能的见解和建议，您必须 link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["使用链接连接到文件系统"]。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
+. 从存储菜单中，选择 *FSx for ONTAP*。
+. 从 *FSx for ONTAP* 中，选择要配置卷的文件系统的操作菜单，然后选择 *Manage*。
+. 从文件系统概述中，选择*Volumes*选项卡。
+. 从"卷"选项卡中，选择要为其设置延迟阈值的卷的操作菜单。
+. 选择*警报操作*，然后选择*设置延迟阈值*。
+. 在"设置延迟阈值"对话框中，配置以下内容：
++
+.. *Read latency*：输入读取操作的阈值，以毫秒 (ms) 为单位。
+.. *写入延迟*：输入写入操作的阈值，以毫秒 (ms) 为单位。
+
+
+. 选择*保存*以应用延迟阈值。
+
+
+.结果
+Workload Factory 监控卷，并在读取或写入延迟超过配置的阈值时生成警报。您可以从 link:analyze-events.html["分析屏幕"] 查看延迟事件。
+
+.相关信息
+* link:analyze-events.html["在 NetApp Workload Factory 中分析 FSx for ONTAP 事件"]
+* link:adjust-volume-capacity.html["调整工作负载工厂的容量"]
+
