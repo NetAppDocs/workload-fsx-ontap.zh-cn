@@ -79,8 +79,8 @@ NOTE: 使用来自CodeBox的Terraform时、您复制或下载的代码会隐藏 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
-. 从存储菜单中，选择 *FSx for ONTAP*。
-. 从 *FSx for ONTAP* 中，选择要在其中创建卷的文件系统的操作菜单，然后选择 *创建卷*。
+. 在存储菜单中，选择*Volume explorer*。
+. 在*卷资源管理器*中，选择*创建卷*。
 . 在Create volume页面上的General Details下、提供以下详细信息：
 +
 .. *卷名称*：输入卷的名称。
@@ -230,7 +230,7 @@ NOTE: 快照时间基于文件系统的时区、默认为协调世界时(UTC)。
 
 +
 *** 链接与文件系统无关联。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何关联现有链接或创建并关联新链接"](英文)链接关联后、返回此操作。
-*** ARP/AI 不支持具有不可变文件的卷以及具有 iSCSI 和 NVMe 协议的卷。
+*** ARP/AI 不支持具有不可变文件的卷和具有 NVMe 协议的卷。从 ONTAP 9.17.1 开始支持 iSCSI 卷。
 *** 文件系统已具有 ARP/AI 策略。
 
 
