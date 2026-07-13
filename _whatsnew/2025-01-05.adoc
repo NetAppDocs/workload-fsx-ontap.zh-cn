@@ -4,6 +4,7 @@
 
 
 
+[[volume-cifs-share-enhancements]]
 === 卷CIFS共享增强功能
 
 以下增强功能可用于在BlueXP  工作负载工厂中管理Amazon FSx for ONTAP文件系统中卷的CIFS共享：

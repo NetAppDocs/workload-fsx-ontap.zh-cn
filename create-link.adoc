@@ -27,6 +27,7 @@ NOTE: 使用控制台代理时不支持 AWS Secrets Manager。
 
 
 
+[[associate-a-new-link]]
 == 关联新链接
 
 关联新链接包括创建和关联。
@@ -234,6 +235,7 @@ Workload Factory 将链接与 FSx for ONTAP 文件系统关联。您可以执行
 
 
 
+[[associate-an-existing-link-with-an-fsx-for-ontap-file-system]]
 == 将现有链接与FSx for ONTAP文件系统相关联
 
 创建链接后、请将其与一个或多个FSx for ONTAP文件系统相关联。
@@ -274,6 +276,7 @@ link:links-overview.html#when-a-link-is-required["了解有关链接的更多信
 
 
 
+[[troubleshoot-issues-with-aws-secrets-manager-link-authentication]]
 == 对AWS的"Links Manager"链接身份验证问题进行故障排除
 
 问题描述:: 此链接缺少检索密钥的权限。

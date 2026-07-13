@@ -22,6 +22,7 @@ summary: 在 Workload Factory 中管理 FSx for ONTAP卷的快照策略。快照
 
 
 
+[[change-a-snapshot-policy]]
 == 更改快照策略
 
 您可以更改要保留的快照策略名称、计划和副本数、以及启用或禁用不可变快照。无法在Storage VM之间启用或禁用策略共享。此选项仅在创建Snapshot策略期间可用。
@@ -45,6 +46,7 @@ summary: 在 Workload Factory 中管理 FSx for ONTAP卷的快照策略。快照
 
 
 
+[[enable-immutable-snapshots]]
 == 启用不可变更的快照
 
 锁定快照、防止在保留期间将其删除。
@@ -74,6 +76,7 @@ summary: 在 Workload Factory 中管理 FSx for ONTAP卷的快照策略。快照
 
 
 
+[[assign-a-snapshot-policy-to-a-volume]]
 == 将快照策略分配给卷
 
 您可以将快照策略分配给单个卷、以便为该卷创建计划快照。
@@ -100,6 +103,7 @@ summary: 在 Workload Factory 中管理 FSx for ONTAP卷的快照策略。快照
 
 
 
+[[remove-a-snapshot-policy-from-a-volume]]
 == 从卷中删除Snapshot策略
 
 从卷中删除快照策略、因为您不再需要此卷的快照、或者您要删除分配给多个卷的快照策略。对于<<删除快照策略,删除Snapshot策略>>已分配给多个卷的、您必须手动将其从所有卷中删除。
@@ -123,6 +127,7 @@ summary: 在 Workload Factory 中管理 FSx for ONTAP卷的快照策略。快照
 
 
 
+[[delete-a-snapshot-policy]]
 == 删除快照策略
 
 删除不再需要的快照策略。

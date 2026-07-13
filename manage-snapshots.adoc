@@ -15,6 +15,7 @@ summary: 编辑快照设置、启用目录访问和删除快照以管理 Workloa
 
 
 
+[[edit-a-snapshot]]
 == 编辑快照
 
 编辑快照的名称、标签和保留期。如果快照尚未变为不可变的，您可以使快照变为不可变的。
@@ -47,6 +48,7 @@ summary: 编辑快照设置、启用目录访问和删除快照以管理 Workloa
 
 
 
+[[access-a-snapshot]]
 == 访问快照
 
 启用快照目录访问，让用户能够自主访问快照。
@@ -72,6 +74,7 @@ summary: 编辑快照设置、启用目录访问和删除快照以管理 Workloa
 
 
 
+[[restore-data-from-a-snapshot]]
 == 从快照恢复数据
 
 您可以选择将数据从快照恢复到现有卷或新卷。
@@ -80,6 +83,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/restore-volume-from-snapsh
 
 
 
+[[delete-a-snapshot]]
 == 删除快照
 
 删除快照以释放空间。

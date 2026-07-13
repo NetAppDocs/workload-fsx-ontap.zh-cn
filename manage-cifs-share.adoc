@@ -22,6 +22,7 @@ summary: 在 Workload Factory 中管理卷的 SMB 或 CIFS 共享包括创建、
 
 
 
+[[create-an-smbcifs-share-for-a-volume]]
 == 为卷创建 SMB/CIFS 共享
 
 按照步骤为卷创建 SMB/CIFS 共享。
@@ -63,6 +64,7 @@ summary: 在 Workload Factory 中管理卷的 SMB 或 CIFS 共享包括创建、
 
 
 
+[[change-an-smbcifs-share-for-a-volume]]
 == 更改卷的 SMB/CIFS 共享
 
 按照步骤更改卷的 SMB/CIFS 共享设置。
@@ -84,6 +86,7 @@ summary: 在 Workload Factory 中管理卷的 SMB 或 CIFS 共享包括创建、
 
 
 
+[[delete-an-smbcifs-share-for-a-volume]]
 == 删除卷的 SMB/CIFS 共享
 
 按照步骤删除卷的 SMB/CIFS 共享。

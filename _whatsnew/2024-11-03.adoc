@@ -4,6 +4,7 @@
 
 
 
+[[tab-views-in-storage-inventory]]
 === 存储清单中的选项卡视图
 
 存储清单已更新为双选项卡视图：

@@ -4,6 +4,7 @@
 
 
 
+[[volume-autogrow-enhancement]]
 === 卷自动增长增强
 
 现在，您可以设置卷的自动增长大小，以便卷大小可以超出业务需求和应用程序要求的预配置大小。
@@ -12,6 +13,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/edit-volume-autogrow.html[
 
 
 
+[[well-architected-analysis-update]]
 === 架构完善的分析更新
 
 工作负载工厂现在会分析您的 FSx for ONTAP 文件系统，以检查是否正在利用存储效率，包括数据压缩、压缩和重复数据删除。存储效率衡量文件系统利用可用空间的效率。
@@ -20,12 +22,14 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.htm
 
 
 
+[[storage-dashboard-enhancements]]
 === 存储仪表板增强功能
 
 从今天开始，当您从 Workload Factory 控制台打开存储工作负载时，您将看到*仪表板*。新设计的仪表板提供了 FSx for ONTAP系统的整体视图，包括文件系统数量、SSD 总容量、结构良好的状态概览、数据保护概览和复制关系健康状况。
 
 
 
+[[volumes-tab-enhancements]]
 === 卷选项卡增强功能
 
 存储工作负载对工作负载工厂控制台中 FSx for ONTAP文件系统内的卷选项卡进行了增强。增强功能包括：
@@ -36,6 +40,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.htm
 
 
 
+[[storage-efficiencies-update-for-volume-creation]]
 === 卷创建的存储效率更新
 
 创建新卷时，默认启用存储效率，包括数据压缩、压缩和重复数据删除。

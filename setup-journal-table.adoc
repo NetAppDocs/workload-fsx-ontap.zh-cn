@@ -15,6 +15,7 @@ summary: 在 NetApp Workload Factory 中为 S3 访问点设置日志表基础架
 
 
 
+[[about-this-task]]
 == 关于此任务
 
 日志表功能捕获受监控 FSx for ONTAP S3 访问点的 S3 数据平面事件（PutObject、GetObject、DeleteObject 等）。它使用部署到您的 AWS 账户中的 AWS 服务链。正确设置基础架构后，它将连接到 FSx for ONTAP 卷访问点，并建立在日志表中捕获用户访问和对象操作审核事件的管道。
@@ -54,6 +55,7 @@ summary: 在 NetApp Workload Factory 中为 S3 访问点设置日志表基础架
 
 
 
+[[before-you-begin]]
 == 开始之前
 
 要启用日志表功能，请执行以下步骤：
@@ -172,6 +174,7 @@ summary: 在 NetApp Workload Factory 中为 S3 访问点设置日志表基础架
 
 
 
+[[set-up-the-journal-table-infrastructure]]
 == 设置日志表基础架构
 
 设置基础设施以从日志表中的 S3 访问点捕获 AWS 服务事件。
@@ -205,6 +208,7 @@ summary: 在 NetApp Workload Factory 中为 S3 访问点设置日志表基础架
 
 
 
+[[troubleshoot-the-infrastructure-setup-for-the-journal-table]]
 == 对日志表的基础设施设置进行故障诊断
 
 您可以使用 AWS 管理控制台或 AWS CLI 对 CloudFormation 堆栈部署期间的故障及其创建的资源进行故障排除。
@@ -213,6 +217,7 @@ summary: 在 NetApp Workload Factory 中为 S3 访问点设置日志表基础架
 
 
 
+[[common-cloudformation-deployment-failures]]
 === 常见 CloudFormation 部署失败
 
 
@@ -278,6 +283,7 @@ aws iam delete-role \
 ----
 
 
+[[failures-after-journal-table-enablement]]
 === 启用日记表后失败
 
 提交 CloudTrail ARN 后，Workload Factory 通过自动发送 _seed_ 或测试事件来验证整个资源管道。如果成功，种子事件将到达 S3 Tables 表中。测试大约需要 10 分钟。
@@ -348,12 +354,14 @@ S3TableIntegration 会自动创建一个名为 aws-cloudwatch 的表存储桶，
 
 
 
+[[permissions-reference-for-the-journal-table-setup]]
 == 日记表设置的权限引用
 
 部署 CloudFormation 堆栈以启用 Journal 表功能的 IAM 角色需要以下权限。请参阅 <<开始之前,开始之前>> 以获取具有所需权限的可复制 JSON 策略。
 
 
 
+[[stack-operations]]
 === 堆栈操作
 
 [cols="1,1,1"]
@@ -371,6 +379,7 @@ S3TableIntegration 会自动创建一个名为 aws-cloudwatch 的表存储桶，
 |===
 
 
+[[cloudtrail]]
 === CloudTrail
 
 [cols="1,1,1"]
@@ -394,6 +403,7 @@ S3TableIntegration 会自动创建一个名为 aws-cloudwatch 的表存储桶，
 |===
 
 
+[[s3]]
 === S3
 
 [cols="1,1,1"]
@@ -411,6 +421,7 @@ S3TableIntegration 会自动创建一个名为 aws-cloudwatch 的表存储桶，
 |===
 
 
+[[iam]]
 === 身份与访问管理
 
 [cols="1,1,1"]
@@ -434,6 +445,7 @@ S3TableIntegration 会自动创建一个名为 aws-cloudwatch 的表存储桶，
 |===
 
 
+[[cloudwatch-logs]]
 === CloudWatch 日志
 
 [cols="1,1,1"]
@@ -463,6 +475,7 @@ S3TableIntegration 会自动创建一个名为 aws-cloudwatch 的表存储桶，
 |===
 
 
+[[observabilityadmin]]
 === ObservabilityAdmin
 
 [cols="1,1,1"]
@@ -483,6 +496,7 @@ S3TableIntegration 会自动创建一个名为 aws-cloudwatch 的表存储桶，
 |===
 
 
+[[s3-tables]]
 === S3 表
 
 [cols="1,1,1"]

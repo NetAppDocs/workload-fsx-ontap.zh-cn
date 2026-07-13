@@ -4,6 +4,7 @@
 
 
 
+[[enhancements-to-replication-relationships-tab]]
 === 复制关系选项卡的增强功能
 
 我们在复制关系表中添加了几个新列，以便在“复制关系”选项卡中为您提供有关复制关系的更多信息。该表现在包含以下列：
@@ -17,6 +18,7 @@
 
 
 
+[[enhancements-to-netapp-autonomous-ransomware-protection-with-ai-arpai]]
 === NetApp自主勒索软件防护 AI (ARP/AI) 增强功能
 
 此版本引入了更新的术语“带有 AI 的NetApp自主勒索软件防护 (ARP/AI)”，以更好地反映人工智能在我们的勒索软件防护功能中的集成。
@@ -33,6 +35,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/ransomware-protection.html
 
 
 
+[[well-architected-analysis-updates]]
 === 精心设计的分析更新
 
 工作负载工厂现在分析您的 FSx for ONTAP文件系统的以下配置：
@@ -45,6 +48,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.htm
 
 
 
+[[dismiss-a-configuration-from-the-well-architected-analysis]]
 === 从结构良好的分析中排除配置
 
 您现在可以从精心设计的分析中消除一个或多个配置。这使您可以忽略目前不想解决的特定配置。
@@ -53,6 +57,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.htm
 
 
 
+[[terraform-support-for-link-creation]]
 === Terraform 支持链接创建
 
 您现在可以使用 Codebox 中的 Terraform 创建与 FSx for ONTAP文件系统关联的链接。此功能适用于手动创建链接的用户。
@@ -61,6 +66,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["使用La
 
 
 
+[[new-region-support-for-exploring-savings-in-storage]]
 === 探索存储节省的新区域支持
 
 现支持以下新区域来探索 Amazon Elastic Block Store (EBS)、FSx for Windows File Server 和 Elastic File Systems (EFS) 的节省：
@@ -71,6 +77,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["使用La
 
 
 
+[[enhancements-to-smbcifs-shares-creation-and-management]]
 === 增强 SMB/CIFS 共享创建和管理
 
 您现在可以创建指向卷内的目录的 SMB/CIFS 共享。在卷内，您将能够看到存在哪些共享、共享指向哪里以及授予特定用户和组的权限。

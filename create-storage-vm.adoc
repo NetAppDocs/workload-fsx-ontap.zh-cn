@@ -23,6 +23,7 @@ summary: '您可以创建 FSx for ONTAP存储虚拟机 (SVM)，为NetApp Workloa
 
 
 
+[[create-a-storage-vm]]
 == 创建Storage VM
 
 您可以从 Workload Factory 控制台创建存储虚拟机。您还可以使用 Codebox 中提供的以下工具：REST API、CloudFormation 和 Terraform。link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["了解如何使用CodeBox实现自动化"^] 。

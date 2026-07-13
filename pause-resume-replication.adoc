@@ -23,6 +23,7 @@ summary: 暂停和恢复复制关系、以便目标卷成为源卷。
 
 
 
+[[pause-a-replication-relationship]]
 == 暂停复制关系
 
 .步骤
@@ -41,6 +42,7 @@ summary: 暂停和恢复复制关系、以便目标卷成为源卷。
 
 
 
+[[resume-a-paused-replication-relationship]]
 == 恢复已暂停的复制关系
 
 恢复复制关系后、在复制停止期间对目标卷所做的任何更改都将被删除。

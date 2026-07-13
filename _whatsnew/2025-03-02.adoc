@@ -4,6 +4,7 @@
 
 
 
+[[automatic-capacity-management-improvements]]
 === 自动容量管理改进
 
 启用自动容量管理后、BlueXP  Workload Factory现在会每30分钟检查一次文件系统是否达到其容量阈值、而不是每2小时检查一次。
@@ -12,12 +13,14 @@
 
 
 
+[[immutable-snapshots]]
 === 不可变更的快照
 
 现在、您可以锁定快照、使其在特定保留期限内不可改变。锁定可防止未经授权的访问和恶意删除快照。您可以在创建快照策略期间、创建手动快照时以及创建快照之后启用不可变快照。
 
 
 
+[[immutable-files-update]]
 === 更新不可更改的文件
 
 现在、您可以对不可变文件配置进行以下更改：保留策略、保留期限、自动提交期限和卷附加模式。
@@ -26,6 +29,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-immutable-files.htm
 
 
 
+[[data-replication-enhancements]]
 === 数据复制增强功能
 
 * 跨帐户复制：BlueXP  工作负载出厂控制台支持在两个AWS帐户之间进行复制以及复制管理。
@@ -37,6 +41,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/pause-resume-replication.h
 
 
 
+[[cloudshell-events-in-tracker]]
 === Tracker中的CloudShell事件
 
 现在、您可以在Tracker中跟踪CloudShell事件。

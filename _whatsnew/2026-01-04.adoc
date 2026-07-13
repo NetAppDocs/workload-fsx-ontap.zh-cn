@@ -4,6 +4,7 @@
 
 
 
+[[well-architected-analysis-updates]]
 === 精心设计的分析更新
 
 Workload Factory 会分析您的 FSx for ONTAP文件系统，以识别以下配置：
@@ -17,24 +18,28 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.htm
 
 
 
+[[ask-me-ai-assistant-home-page-integration]]
 === 问我关于人工智能助手首页集成的问题
 
 Workload Factory 控制台主页嵌入了 Ask me AI 助手，使您可以询问有关您自己的存储环境的问题，直接从您的环境中获取个性化见解，并参考以前的对话。您可以与“问我”进行交互，以了解您的工作负载、解决问题并了解更多关于工作负载工厂的信息——所有这些都无需离开控制台。
 
 
 
+[[use-of-iam-user-principal-in-lambda-link-resource-based-permission-policies]]
 === 在 Lambda 链接资源中采用 IAM 用户主体权限策略
 
 用于连接 Workload Factory 帐户和一个或多个 FSx for ONTAP文件系统以执行高级ONTAP操作的 Lambda 链接，现在使用 IAM 用户主体进行基于资源的策略权限。此项变更使 AWS 资源访问与行业最佳实践更加一致。
 
 
 
+[[analysis-screen-added-for-the-ai-analyzer-for-ems-events]]
 === 为 EMS 事件的 AI 分析器添加了分析屏幕
 
 存储菜单中新增了“分析”屏幕。从此屏幕，您可以使用适用于ONTAP EMS 事件功能的 FSx AI 分析器。
 
 
 
+[[block-device-enhancements-in-netapp-workload-factory]]
 === NetApp Workload Factory中的块设备增强功能
 
 针对块设备进行了以下增强。

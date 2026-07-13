@@ -4,6 +4,7 @@
 
 
 
+[[new-well-architected-analysis-and-support-for-fixing-issues]]
 === 全新精心设计的分析和问题修复支持
 
 FSx for ONTAP 文件系统的自动容量管理现在作为配置分析包含在精心设计的状态仪表板中。
