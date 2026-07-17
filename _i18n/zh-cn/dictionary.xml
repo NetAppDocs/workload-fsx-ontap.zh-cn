@@ -3054,9 +3054,6 @@
   <block id="46d1548637c7b145aedaf16fc4982ded" category="paragraph"><block ref="46d1548637c7b145aedaf16fc4982ded" category="inline-link-macro-rx"></block></block>
   <block id="6935aa37908b8d3e8e6495adec301374" category="section-title">设置卷延迟阈值</block>
   <block id="8d36c5c4d1b5b3180db932fcf4bd5e3b" category="paragraph">现在，您可以按卷配置延迟阈值，以便在读取或写入延迟超过定义的限制时监控性能并接收警报。延迟监控可帮助您在影响工作负载之前主动识别性能问题。</block>
-  <block id="da6f5bf8aee08ef83468ad38ab52796b" category="doc">适用于所有 FSx for ONTAP 系统的全新架构良好的仪表板</block>
-  <block id="7fca025a8bf1b5d72a149731d5c88125" category="paragraph">现在，可以从 NetApp Workload Factory 中新的架构完善仪表板对 FSx for ONTAP 文件系统进行架构完善分析。新仪表板在一个位置集中显示跨帐户和区域的所有文件系统及其配置。当您从文件系统访问*架构完善*选项卡时，会出现弹出通知。在 Workload Factory 的左侧导航菜单中选择*架构完善*，即可访问新仪表板。</block>
-  <block id="b09ad8a2ad81c470093e9c74313ea0c2" category="paragraph">您仍然可以访问特定文件系统的良好架构分析，也可以通过 Storage 中的 *Well-architected* 菜单选项进行访问。</block>
   <block id="efbeddc0347a679a438120189b77f860" category="section-title">卷资源管理器</block>
   <block id="3e1cc7f8632eafd5f69d910c06db3aa4" category="paragraph">卷资源管理器为您提供了 NetApp Workload Factory 中所有卷的简单可搜索视图。快速查看哪些卷提供数据块或文件工作负载。查看每个卷的逻辑大小、物理已用容量，以及它是否使用存储效率功能（压缩、重复数据删除和压缩）。按名称、状态（可用/失败）、延迟、大小、已用容量和保护功能进行筛选和排序。</block>
   <block id="3a410df7dfc102007ea8a7569fdb1810" category="section-title">针对复制延迟增强的电子邮件通知</block>
@@ -3205,4 +3202,6 @@
   <block id="64e991d759281e91a768b558639fb387" category="paragraph">由于系统会识别受影响的文件和攻击时间，因此您可以仅从可用快照中恢复受影响的文件，而无需还原整个卷。</block>
   <block id="16f2ae5a8a2de6f12ddc298127a4ddb7" category="list-text">可靠性：SSD 容量阈值、计划的本地快照、计划的卷备份、远程数据复制和数据可靠性，以实现长期保留</block>
   <block id="d2eebd4f9400b9bd2c04860c048de241" category="paragraph">启用跟踪以监控整个帐户的复制延迟。当延迟超过设定的阈值时，Workload Factory 将提醒您。默认情况下，阈值为复制间隔的 150%，以允许正常传输时间并减少误报。您可以调整阈值以匹配您的 RPO，并在延迟超过阈值时收到通知。</block>
+  <block id="842065a36dace972d6dab0c170421bd1" category="section-title">卷和块设备的工作负载标记</block>
+  <block id="47c38c6a3d7e96ce1b3b2519a980f283" category="paragraph">工作负载工厂现在通过其主要工作负载或应用程序识别和标记卷和块设备。您可以分配预定义的工作负载标记（如 Microsoft SQL Server 或 Oracle Database），或为应用程序创建自定义标记。标记可以应用于单个资源，也可以由连接的存储资源继承。这有助于使存储配置与工作负载要求保持一致，了解事件影响，并更有效地进行故障排除。</block>
 </blocks>
