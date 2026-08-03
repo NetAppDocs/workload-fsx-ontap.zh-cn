@@ -57,7 +57,7 @@ link:https://aws.amazon.com/lambda/pricing/["详细了解与使用AWS Lamb泄 �
 [[when-a-link-is-required]]
 == 需要链接时
 
-工作负载工厂需要一个链接来显示一些信息并执行一些任务。如果您尝试执行需要链接的操作，但尚未将链接与 FSx for ONTAP文件系统关联，则 Workload Factory 会通知您该操作需要链接。
+Workload Factory 需要一个链接来显示一些信息和执行一些任务。如果您尝试执行需要链接的操作，但尚未将链接与 FSx for ONTAP 文件系统关联，则 Workload Factory 会通知您该操作需要链接。
 
 需要链接的功能包括：
 

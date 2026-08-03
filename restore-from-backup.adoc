@@ -13,7 +13,7 @@ summary: 将卷从备份还原到AWS帐户中的任何FSx for ONTAP文件系统�
 [role="lead"]
 在NetApp Workload Factory 中，您可以将卷从备份还原到 AWS 账户中的任何 FSx for ONTAP文件系统。
 
-工作负载出厂时会确定您是否有足够的容量用于还原、如果没有、则会自动添加SSD存储层容量。
+Workload Factory 确定您是否有足够的容量进行还原，如果没有，则可以自动添加 SSD 存储层容量。
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。

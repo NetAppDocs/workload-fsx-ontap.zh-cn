@@ -14,7 +14,7 @@ summary: 跟踪 FSx for ONTAP、凭证和链接操作，并使用NetApp Workload
 监控和跟踪 FSx for ONTAP、凭证和链接操作的执行情况，并使用NetApp Workload Factory 中的 Tracker 监控任务进度。
 
 .关于此任务
-Workload Factory提供了一种监控功能、可用于监控和跟踪FSx for ONTAP的进度和状态、凭据和链接操作、查看操作任务和子任务的详细信息以及诊断任何问题或故障。
+Workload Factory 提供了 Tracker（一种监控功能），让您可以监控和跟踪 FSx for ONTAP、凭据和链接操作的进度与状态，查看操作任务和子任务的详细信息，并诊断任何问题或故障。
 
 Tracker提供了多种操作。您可以按时间范围(过去24小时、7天、14天或30天)、工作负载、状态和用户筛选作业；使用搜索功能查找作业；以及将作业表下载为CSV文件。您可以随时刷新Tracker。您可以快速重试失败的操作、也可以编辑失败操作的参数并重试此操作。
 

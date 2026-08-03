@@ -135,7 +135,7 @@ Workload Factory 支持以下存储系统之间的存储虚拟机的迁移复制
 .. *卷名*：目标卷名称将自动生成，格式如下 `{OriginalVolumeName}_copy`。您可以使用自动生成的卷名称或输入其他卷名称。
 .. *分层策略*：为目标卷中存储的数据选择分层策略。对于您选择的使用情形、此层策略默认为建议的层策略。
 +
-使用 Workload Factory 控制台创建卷时，_平衡（自动）_ 是默认分层策略。有关卷分层策略的更多信息，请参阅link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["卷存储容量"^]在 AWS FSx for NetApp ONTAP文档中。请注意，工作负载工厂在工作负载工厂控制台中使用基于用例的名称来制定分层策略，并在括号中包含 FSx for ONTAP分层策略名称。
+使用 Workload Factory 控制台创建卷时，默认分层策略为 _Balanced (Auto)_。有关容量分层策略的更多信息，请参阅 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["卷存储容量"^] 在 AWS FSx for NetApp ONTAP文档中。请注意，Workload Factory 在 Workload Factory 控制台中使用基于用例的名称来定义分层策略，并在括号中包含 FSx for ONTAP分层策略名称。
 
 +
 如果您选择了迁移用例，Workload Factory 会自动选择将源卷的分层策略复制到目标卷。您可以取消选择复制分层策略并选择适用于选择进行复制的卷的分层策略。
