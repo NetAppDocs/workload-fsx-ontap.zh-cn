@@ -3133,7 +3133,6 @@
   <block id="b26629c4d0db7a100913103c2501115d" category="section-title">工作负载标记和人工智能功能</block>
   <block id="c6e3575ea0e96a40eeea1698ed97e99f" category="paragraph">当管理员禁用 AI 功能时，不会标记工作负载。如果在 Workload Factory 帐户设置中关闭了 AI 功能，则标记服务将不会识别或分类存储资源上的工作负载。</block>
   <block id="9801425a2145ab6ed5aa12b9446c905c" category="inline-link-macro">了解 AI 管理</block>
-  <block id="cbbc45b1bedc18c950d2da6ef1fe1f43" category="paragraph"><block ref="40737cbe54dcebc9ef5c68ebf72b8d96" category="inline-link-macro-rx"></block>。</block>
   <block id="39cf1aaf3e84c5c49c930c5bfe27e098" category="section-title">探索节省快照计算改进</block>
   <block id="a4f25c93cc96e84a15a9a235f569bbe2" category="paragraph">探索节省功能现在使用一致的快照容量计算，因此 FSx for ONTAP 节省估算可正确考虑额外的快照容量池要求。</block>
   <block id="e14c4b029cabd340fe3b6c67835e9927" category="inline-link-macro">了解如何在 Amazon Elastic Block Store、FSx for Windows File Server 和 Elastic File System 上为您的存储环境节省成本。</block>
@@ -3249,4 +3248,5 @@
   <block id="2f8586eac80bb95b25809876eb97f99a" category="paragraph">Workload Factory 确定您是否有足够的容量进行还原，如果没有，则可以自动添加 SSD 存储层容量。</block>
   <block id="4fd22cd0c1b62f84962ef1e8ffd9c966" category="paragraph">启用跟踪以监控整个帐户的复制延迟。当延迟超过设定的阈值时，Workload Factory 将提醒您。默认情况下，阈值为复制间隔的 150%，以允许正常传输时间并减少误报。您可以调整阈值以匹配您的 RPO，并在延迟超过阈值时收到通知。您还可以将数据导出为 CSV 文件以进行进一步分析。</block>
   <block id="adf6bc23c10d536eed25c42f34ba48e8" category="section-title">2026年8月2日</block>
+  <block id="bb971caaebe9e5940267caf457500810" category="paragraph"><block ref="247b746a5e5f871115d636673a8fd3a7" category="inline-link-macro-rx"></block>。</block>
 </blocks>
