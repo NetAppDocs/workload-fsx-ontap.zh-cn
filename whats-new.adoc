@@ -88,6 +88,13 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/explore-savings.html["了�
 
 
 
+[[ontap-features-displayed-in-volumes-explorer]]
+=== 卷资源管理器中显示的 ONTAP 功能
+
+卷资源管理器现在在卷表中包含 ONTAP 功能。这些功能可更详细地了解卷的配置和状态，例如保护范围、自主勒索软件保护 (ARP/AI) 状态、存储效率、分层策略和卷自动增长。
+
+
+
 [[05-july-2026]]
 == 2026年7月5日
 

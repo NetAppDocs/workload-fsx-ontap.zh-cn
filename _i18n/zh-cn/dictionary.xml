@@ -755,8 +755,6 @@
   <block id="b755b7c9e5db773b9578d24d7b40b61d" category="list-text">选择*Apply*以保存更改。</block>
   <block id="124cb3fd3d0a35a1abf1c0f90f37e8a9" category="paragraph">要使用内部ONTAP集群中的数据、您首先需要发现内部ONTAP集群。发现内部ONTAP集群后、您可以在以下任何使用情形中使用这些数据。</block>
   <block id="2a3b399798aa16ecfbc1425cc560bfad" category="list-text">使用情形</block>
-  <block id="ef63a3d009f11deff50f4dc327b32173" category="list-text">请注意、这一系列任务的重点是GenAI工作负载的主要用例。</block>
-  <block id="809c357d304bbfa1cd4446574b270af8" category="inline-link-macro">丰富AI知识库</block>
   <block id="f15192f8afdcf438f7b1ccf0cda2b436" category="list-text">*备份和迁移到云*：复制到FSx for ONTAP文件系统的内部ONTAP卷数据可用作云中的备份。</block>
   <block id="5b5a84720ff8905504e8a45fbc52fb73" category="list-text">*数据分层*：复制后、不常访问的内部ONTAP卷数据可以从SSD存储层分层到容量池存储层。</block>
   <block id="4185f116d64b1130e6f9ba4250b147fa" category="paragraph">开始之前、请确保您已具备以下条件：</block>
@@ -1289,7 +1287,6 @@
   <block id="897bea1a5ca479178427004f773ee72e" category="list-text">(可选)在重新平衡之前下载卷移动列表。</block>
   <block id="703547df715082455f8920d78fe90a30" category="list-text">选择*重新平衡*。</block>
   <block id="eaaaf380859de755a58a543fbffc3d8a" category="paragraph"><block ref="eaaaf380859de755a58a543fbffc3d8a" category="inline-link-macro-rx"></block></block>
-  <block id="1418bddde60a7d4a1fbd71041ef29d36" category="list-text">*GenAI工作负载*：将内部部署的ONTAP卷数据复制到FSx for ONTAP文件系统中，以便可以将这些数据用于<block ref="8b94b70e10f0f6c7944c9419ec9922bc" category="inline-link-macro-rx"></block>。</block>
   <block id="7583f12b4559f6687c67d8588da1e2f7" category="doc">卷自动增长增强</block>
   <block id="b57fe4f5ee65a0e01f61993297811ebf" category="paragraph">现在，您可以设置卷的自动增长大小，以便卷大小可以超出业务需求和应用程序要求的预配置大小。</block>
   <block id="9f1effd9ace68ca00fe9e9e3c024b362" category="inline-link-macro">启用卷自动增长</block>
@@ -1997,7 +1994,6 @@
   <block id="0b81b68aa4b4da3fc81b7541c9557525" category="summary">在NetApp Workload Factory 中，您可以在创建卷后更新存储效率设置。</block>
   <block id="0254d70b292c2efb3924bc70f603207a" category="summary">根据需要更新NetApp Workload Factory 中 FSx for ONTAP文件系统的吞吐容量。</block>
   <block id="5b7dc0f0cef1ddf767dff9731a57d8a4" category="list-text">从 *FSx for ONTAP* 中，选择要更新吞吐量容量的文件系统的操作菜单，然后选择 *管理*。</block>
-  <block id="be31b62eb26bc544ed1c2919a1a354d8" category="summary">在NetApp Workload Factory 中发现并复制本地ONTAP数据，以便用于丰富 AI 知识库。</block>
   <block id="5811115476eeb3b923e56f3b218e8861" category="doc">在NetApp Workload Factory 中使用本地ONTAP集群数据</block>
   <block id="5433703774e7ff1a361e7a705d25ba42" category="paragraph">在NetApp Workload Factory 中发现本地ONTAP集群，以便您可以将数据复制到Amazon FSx for NetApp ONTAP文件系统。</block>
   <block id="cab5c35909125289d94f24cfb933bb6d" category="list-text">*链接*：选择一个链接。该链接将与内部部署集群相关联，以在集群和工作负载工厂之间建立连接。</block>
@@ -3152,8 +3148,6 @@
   <block id="8215457eb88ef1fb110b79579b908e3d" category="paragraph">您可以忽略不适用于您环境的配置分析。这样可以避免不必要的警报和不准确的优化结果。</block>
   <block id="8817b0c6f0795c52cab62044416eee8a" category="inline-link-macro">详细了解自定义规则</block>
   <block id="821af7226458ea25572e88e8ab2026e4" category="paragraph">您还可以用简单的语言创建自定义规则，以根据组织的标准和 NetApp 最佳实践验证您的环境。通过试运行测试规则，然后安排它们在您的环境中运行。<block ref="ce039b478eb432b675a03c04866f31ab" category="inline-link-macro-rx"></block>。</block>
-  <block id="8be08850265c9930c26a8e5b28183a2e" category="paragraph">您还可以用简单的语言创建自定义规则，以根据组织的标准和 NetApp 最佳实践验证您的环境。通过试运行测试规则，然后安排它们在您的环境中运行。</block>
-  <block id="7c24f3892a999a3e8d688cabe068b17a" category="paragraph"><block ref="ce039b478eb432b675a03c04866f31ab" category="inline-link-macro-rx"></block>。</block>
   <block id="782a430d789ff1db80e40fbe9c0be819" category="paragraph">精心设计的仪表板根据 ONTAP 最佳实践和 AWS Well-Architected Framework 评估存储配置。该评估还提出了改进和修复建议。</block>
   <block id="790f31a1565b039a710f1ff6cd60e24a" category="list-text">*卷备份*</block>
   <block id="ca512a483bb26b1b253abc6b2cc463bd" category="list-text">*Snapshot 策略*</block>
@@ -3249,4 +3243,7 @@
   <block id="4fd22cd0c1b62f84962ef1e8ffd9c966" category="paragraph">启用跟踪以监控整个帐户的复制延迟。当延迟超过设定的阈值时，Workload Factory 将提醒您。默认情况下，阈值为复制间隔的 150%，以允许正常传输时间并减少误报。您可以调整阈值以匹配您的 RPO，并在延迟超过阈值时收到通知。您还可以将数据导出为 CSV 文件以进行进一步分析。</block>
   <block id="adf6bc23c10d536eed25c42f34ba48e8" category="section-title">2026年8月2日</block>
   <block id="bb971caaebe9e5940267caf457500810" category="paragraph"><block ref="247b746a5e5f871115d636673a8fd3a7" category="inline-link-macro-rx"></block>。</block>
+  <block id="935b1e26eff078e94b224d92e0db898a" category="section-title">卷资源管理器中显示的 ONTAP 功能</block>
+  <block id="2d4406cf931edb2fbd5ab72e7eb07c66" category="paragraph">卷资源管理器现在在卷表中包含 ONTAP 功能。这些功能可更详细地了解卷的配置和状态，例如保护范围、自主勒索软件保护 (ARP/AI) 状态、存储效率、分层策略和卷自动增长。</block>
+  <block id="5800d9f6c1560d9eaf8bc5fbacb4698b" category="summary">在 NetApp Workload Factory 中发现和复制本地 ONTAP 数据，以便将其用作云中的备份。</block>
 </blocks>
