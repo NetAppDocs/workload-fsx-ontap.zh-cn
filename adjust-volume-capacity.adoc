@@ -38,10 +38,8 @@ summary: 您可以随时在NetApp Workload Factory中手动调整卷的容量。
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
-. 从存储菜单中，选择 *FSx for ONTAP*。
-. 从 *FSx for ONTAP* 中，选择要更新卷的文件系统的操作菜单，然后选择 *管理*。
-. 从文件系统概述中，选择*Volumes*选项卡。
-. 在“卷”选项卡中，选择要调整容量的卷的操作菜单。
+. 在存储菜单中，选择*Volumes explorer*。
+. 选择要修改的卷对应的操作菜单。
 . 选择*基本操作*，然后选择*调整容量*。
 . 在“调整卷容量”对话框中，设置“已配置容量”和单位。
 . 选择“调整”以应用更改。

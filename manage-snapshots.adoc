@@ -23,10 +23,8 @@ summary: 编辑快照设置、启用目录访问和删除快照以管理 Workloa
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
-. 从存储菜单中，选择 *FSx for ONTAP*。
-. 从 *FSx for ONTAP* 中，选择带有卷的文件系统的操作菜单，然后选择 *管理*。
-. 在文件系统概述中，选择*Volumes*选项卡。
-. 从“*Volumes*”选项卡中，选择要编辑快照的卷的操作菜单。
+. 在存储菜单中，选择*Volumes explorer*。
+. 选择要编辑快照的卷的操作菜单。
 . 选择*数据保护操作*，然后选择*管理快照*。
 . 在“管理快照”页面中，选择要编辑的快照的操作菜单，然后选择“*编辑*”。
 . 在编辑快照对话框中，您可以编辑以下内容：
@@ -56,10 +54,8 @@ summary: 编辑快照设置、启用目录访问和删除快照以管理 Workloa
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
-. 从存储菜单中，选择 *FSx for ONTAP*。
-. 从 *FSx for ONTAP* 中，选择带有卷的文件系统的操作菜单，然后选择 *管理*。
-. 在文件系统概述中，选择*Volumes*选项卡。
-. 从“*Volumes*”选项卡中，选择要访问的快照的卷的操作菜单。
+. 在存储菜单中，选择*Volumes explorer*。
+. 选择具有要访问的快照的卷的操作菜单。
 . 选择*数据保护操作*，然后选择*管理快照*。
 . 从管理快照页面中，选择要访问的快照的操作菜单，然后选择*访问*。
 . 在访问快照对话框中，选择*启用快照目录访问*以访问此卷快照和该卷的所有快照。
@@ -93,10 +89,8 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/restore-volume-from-snapsh
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
-. 从存储菜单中，选择 *FSx for ONTAP*。
-. 从 *FSx for ONTAP* 中，选择带有卷的文件系统的操作菜单，然后选择 *管理*。
-. 在文件系统概述中，选择*Volumes*选项卡。
-. 从“*Volumes*”选项卡中，选择要删除快照的卷的操作菜单。
+. 在存储菜单中，选择*Volumes explorer*。
+. 选择要删除快照的卷的操作菜单。
 . 选择*数据保护操作*，然后选择*管理快照*。
 . 在管理快照页面中，选择要删除的快照的操作菜单，然后选择*删除*。
 . 在删除快照对话框中，输入“delete”。

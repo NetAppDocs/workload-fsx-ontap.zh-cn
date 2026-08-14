@@ -83,8 +83,8 @@ NOTE: 使用来自CodeBox的Terraform时、您复制或下载的代码会隐藏 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
-. 在存储菜单中，选择*Volume explorer*。
-. 在*卷资源管理器*中，选择*创建卷*。
+. 在存储菜单中，选择*Volumes explorer*。
+. 选择*创建卷*。
 . 在Create volume页面上的General Details下、提供以下详细信息：
 +
 .. *卷名称*：输入卷的名称。

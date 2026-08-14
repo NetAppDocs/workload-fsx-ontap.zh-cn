@@ -36,10 +36,8 @@ NOTE: 您可以在没有链接连接的情况下查看延迟事件并接收警�
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
-. 从存储菜单中，选择 *FSx for ONTAP*。
-. 从 *FSx for ONTAP* 中，选择要配置卷的文件系统的操作菜单，然后选择 *Manage*。
-. 从文件系统概述中，选择*Volumes*选项卡。
-. 从"卷"选项卡中，选择要为其设置延迟阈值的卷的操作菜单。
+. 在存储菜单中，选择*Volumes explorer*。
+. 选择要为其设置延迟阈值的卷的操作菜单。
 . 选择*警报操作*，然后选择*设置延迟阈值*。
 . 在"设置延迟阈值"对话框中，配置以下内容：
 +

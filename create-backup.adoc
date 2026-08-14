@@ -24,10 +24,8 @@ summary: 在定期备份之外，在NetApp Workload Factory 中创建卷的手�
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
-. 从存储菜单中，选择 *FSx for ONTAP*。
-. 从 *FSx for ONTAP* 中，选择带有卷的文件系统的操作菜单，然后选择 *管理*。
-. 在文件系统概述中，选择*Volumes*选项卡。
-. 从 *Volumes* 选项卡中，选择要备份的卷的操作菜单。
+. 在存储菜单中，选择*Volumes explorer*。
+. 选择要备份的卷的操作菜单。
 . 选择 *Data protection actions*、*Volume backups*，然后选择 *Manual backup*。
 . 在手动备份对话框中、输入备份的名称。
 . 选择*备份*。
