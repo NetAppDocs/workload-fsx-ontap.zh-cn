@@ -131,10 +131,7 @@
   <block id="8997880c88dd70fe80799ee97bb7ac0c" category="doc">创建链接</block>
   <block id="6015cd2e9e5bc5b037ad456163cc26cb" category="inline-link-macro">了解有关链接的更多信息</block>
   <block id="95254aef509d2d84e8ee7dd3052d1b61" category="paragraph"><block ref="97608ab403cabf20e3bcac439aacde61" category="inline-link-macro-rx"></block>(英文)</block>
-  <block id="5c6789e8d71e288316c129b90f0a025e" category="paragraph">链接利用AWS Lambode执行代码以响应事件、并自动管理该代码所需的计算资源。您创建的链接属于您的NetApp帐户、它们与AWS帐户相关联。</block>
   <block id="22cc060f8b88cfca4c298ec0a9aae3fa" category="list-text">使用CloudFormation堆栈添加链接时、您的AWS帐户必须具有以下权限：</block>
-  <block id="53bee45613e420a1313f02fc8a36b1b1" category="list-text">在关联链接对话框中，选择*创建新链接*，然后选择*继续*。</block>
-  <block id="b2f3a9c80071ec30919944cb6cd21a42" category="list-text">在"Create Link"页面上、提供以下内容：</block>
   <block id="89a62ddcc9759060d903ef8b7aee42c3" category="list-text">*链接名称*：输入要用于此链接的名称。此名称在您的帐户中必须是唯一的。</block>
   <block id="68d5729d2a63e62a04de68bac212b9ab" category="list-text">*标记*：您可以选择添加要与此链接关联的任何标记、以便更轻松地对资源进行分类。例如、您可以添加一个标记、用于将此链接标识为由FSx for ONTAP文件系统使用。</block>
   <block id="c602cdf8533ce956e9f326890f6d8723" category="list-text">选择*继续*以打开AWS管理控制台、然后登录到此FSx for ONTAP文件系统的AWS帐户。</block>
@@ -1192,7 +1189,6 @@
   <block id="de786693aed7955f1cb538f51e25f7d6" category="paragraph">您可以根据默认权限创建机密、也可以为链接策略分配自定义权限。</block>
   <block id="49af4dcead2678507453b9bff6c332f1" category="paragraph">*将VPC专用端点配置到AWS秘密管理器*默认处于禁用状态。选择此选项将使用VPC专用端点存储此密钥、而不是将其存储在本地。</block>
   <block id="48457d7f94975228307244f863f96fee" category="section-title">将现有链接与FSx for ONTAP文件系统相关联</block>
-  <block id="531d680092609d3ec7794cd6dd8c39fe" category="paragraph">创建链接后、请将其与一个或多个FSx for ONTAP文件系统相关联。</block>
   <block id="447f36846a239be6be0faf7dc1fa0364" category="list-text">在关联链接页面中，选择*关联现有链接*，选择链接，然后选择*继续*。</block>
   <block id="5b5b11575f2a0c06c832b5cbd1c6dcfe" category="list-text">选择身份验证模式。</block>
   <block id="219e99148dae7112d47eedc1f49517ae" category="list-text">Workload Factory：输入密码两次。</block>
@@ -1208,7 +1204,6 @@
   <block id="ee67bf640d0b52ba5e821e265b1eacf5" category="paragraph">*分辨率*：提供正确的密钥ARN。</block>
   <block id="0733070c151f197e780e335f701571f1" category="list-text">机密格式不正确。</block>
   <block id="6ef3be28f69c1735acc5b68f50b352ab" category="paragraph">*分辨率*：转到AWS的"27.0"选项并编辑格式。</block>
-  <block id="63659b054a6e69260ce9e4a4634e56e0" category="paragraph">此密钥应包含以下有效密钥对：</block>
   <block id="ecc4c534126952c05eb3829106343643" category="list-text">此密钥不包含用于文件系统身份验证的有效ONTAP凭据。</block>
   <block id="b94462bb135856834e40d9c982dbbc8b" category="paragraph">*解决方案*：提供可在AWS密码管理器中对ONTAP文件系统FSx进行身份验证的凭据。</block>
   <block id="db02b80a9dd5a7c959ec87fdf41baa91" category="inline-link-macro">级联复制</block>
@@ -1370,7 +1365,6 @@
   <block id="2c8c409e84df8a5368e9fc203dacd0e0" category="list-text">*自动*：对于自动操作，每创建 1 GiB，就会添加 3 IOPS。</block>
   <block id="080138c9fde9abc63b7003839106198b" category="list-text">*用户配置*：对于用户配置，输入 IOPS 值。</block>
   <block id="2f33e5a4fe58163ac0df8f3b097df4db" category="list-text">*链接权限*：选择以下链接权限选项之一：</block>
-  <block id="dd9c72ad3bbeb047b573638ce62d0cc6" category="list-text">*用户提供*：选择此选项可将指定的 Lambda 执行角色及其附加的策略分配给 Lambda 链接。Lambda需要以下权限。<block ref="e6b67e3118c0caaf2206ab3d3fba8d67" prefix=" " category="inline-code"></block>仅当您启用 AWS Secrets Manager 时才需要权限。</block>
   <block id="5f3b3b380e02766e8ad7eca5c6b37840" category="paragraph">在文本框中输入 Lambda 执行角色 ARN。</block>
   <block id="38adbad92c37166c4ce64da1eb51513b" category="inline-link-macro">创建卷</block>
   <block id="f80d67f0a6951b3f6c1185e7c7f39c30" category="paragraph">指定卷的最大增长大小和单位。不能将最大增长大小设置为小于当前卷大小</block>
@@ -1459,11 +1453,8 @@
   <block id="5b4d700431157f8e7dcc17b14d365c7f" category="list-text">\\服务器</block>
   <block id="6b8258a2b9dce9918a5b42eb1c2de4c6" category="list-text">\\服务器\项目</block>
   <block id="710ecb74356fd86fc995d76f7fcb7c5c" category="list-text">\\服务器\项目\共享资源</block>
-  <block id="272d4b49948c30687aaaffecca19cb82" category="paragraph">您可以在定义 FSx for ONTAP文件系统时在您的帐户中创建链接。该链接用于该文件系统，也可以用于其他 FSx for ONTAP文件系统。您还可以稍后关联文件系统的链接。</block>
   <block id="049f730a98eb69627912748561a543b8" category="paragraph">链接部署堆栈自动将以下默认密钥管理器 ARN 正则表达式添加到 Lambda 权限策略中：<block ref="218d5bbe44642244cc57db37477be310" prefix=" " category="inline-code"></block> 。</block>
   <block id="bab25954c067653929b889d687bcb718" category="paragraph">出现“重定向到 CloudFormation”对话框并解释如何从 AWS CloudFormation 服务创建链接。</block>
-  <block id="a37cbff3921a52bcde5c7689c912e1f4" category="paragraph">您可以在事件页面上监控链接创建状态。这应该不会超过 5 分钟。</block>
-  <block id="9a5abe8b855a4f42f1c70c4b367d9bce" category="paragraph">确保密钥 ARN 包含以下密钥有效对，尽管 _filesystemID_ 是可选的。</block>
   <block id="1023373ba9dff02b999882804d6dc2ef" category="list-text">文件系统ID = FSx_filesystem_id（可选）</block>
   <block id="508e0beab9fc0c907eb4adcaa7a736f7" category="list-text">用户 = FSx_user</block>
   <block id="0dcf8b4e3476c0545950d4d61acb625c" category="admonition">使用 AWS Secrets Manager 进行身份验证需要一个用户，可以是您提供的 _FSx_user_，也可以是在 FSx for ONTAP文件系统上创建的其他用户。默认用户是<block ref="679500f227997b45be97e3ca8115c678" prefix=" " category="inline-code"></block>如果您不提供用户。</block>
@@ -1501,7 +1492,6 @@
   <block id="421075462886e558113f14b52fe22487" category="paragraph">您现在可以创建指向卷内的目录的 SMB/CIFS 共享。在卷内，您将能够看到存在哪些共享、共享指向哪里以及授予特定用户和组的权限。</block>
   <block id="4662a232249c09ca958781da08211b0c" category="paragraph">对于数据保护卷，创建 SMB/CIFS 共享的流程现在包括创建到卷的连接路径以用于安装目的。</block>
   <block id="952da3361b1e3ca5daa8c23a39780e18" category="list-text">手动：使用 Codebox 中的 CloudFormation 或 Terraform 创建带有手动注册的链接。代码持续存在，为您提供更多时间来完成操作。这在与安全和 DevOps 等不同的团队合作时很有用，因为他们可能首先需要授予完成链接创建所需的权限。</block>
-  <block id="272404907923a583d38661d1f77a2a8c" category="list-text">在创建链接页面上，从 Codebox 中选择 CloudFormation 或 Terraform，然后提供以下内容：</block>
   <block id="1ca9512c09f6b26312a475fda293b54a" category="list-text">*链接注册*：选择CloudFormation或Terraform获取如何注册链接的说明，并按照说明进行操作。</block>
   <block id="aeb7b1f8e40a81f588a0d8770c9826d3" category="list-text">SMB/CIFS：Windows操作系统的文件存储协议</block>
   <block id="77e7ba17717c79352c95d49bede81697" category="list-text">您必须为所选协议（SMB/CIFS、NFS 或 iSCSI）配置访问权限。</block>
@@ -2987,7 +2977,6 @@
   <block id="e97bbb69ec6bcd2c1b3d761224ed4559" category="admonition">AWS GovCloud 帐户不支持自动创建链接。</block>
   <block id="d37d952a78337c053485a61317b953df" category="list-text">*AWS Secrets Manager*：始终为 GovCloud 账户启用。其他账户可选。允许 Workload Factory 从 AWS Secrets Manager 获取 FSx for ONTAP 访问凭据。</block>
   <block id="f3a06ea1d47de2a4216fe3fd53364d24" category="list-text">*用户提供的*：选择此选项可将指定的 Lambda 执行角色及其附加策略分配给 Lambda 链接。Lambda 权限策略需要以下权限。<block ref="e6b67e3118c0caaf2206ab3d3fba8d67" prefix=" " category="inline-code"></block> 权限仅在使用 AWS Secrets Manager 时才需要。</block>
-  <block id="687e9c397e4fb6b561e735147b5af100" category="paragraph">请注意，启动 CloudFormation 模板时会向 Lambda 授予三个权限。Workload Factory 在使用链接时使用这些权限。</block>
   <block id="1425c9b22ae63851bbaa938ebc0a967d" category="list-text">成功创建堆栈后，将 Lambda ARN 粘贴到 Workload Factory 控制台的文本框中。Workload Factory 基于 FSx for ONTAP 文件系统自动检索 AWS 帐户、位置和安全组。</block>
   <block id="47dfa5e12270c73140e2f3dc8b32a020" category="paragraph">Workload Factory 将链接与 FSx for ONTAP 文件系统关联。您可以执行高级 ONTAP 操作。</block>
   <block id="eb3eec333eedf15738e12e55e183cdb7" category="paragraph"><block ref="c7c8a4154bf78f63993b7572e6143221" category="inline-link-macro-rx"></block>。</block>
@@ -3246,4 +3235,24 @@
   <block id="12a6e2d4c91a43e9ac81b18d2fd28a4a" category="list-text">选择要为其设置延迟阈值的卷的操作菜单。</block>
   <block id="388a60e15f099855100226e2026dc1cd" category="list-text">选择要拆分的克隆卷所在卷的操作菜单。</block>
   <block id="3b4ba83afa209df4541afdb1c96a15f9" category="list-text">选择要更新存储效率设置的卷的操作菜单。</block>
+  <block id="c329a6ebc8c0891e88889203e3e31c39" category="doc">可从链接页面创建链接</block>
+  <block id="ef8e743556b96fe2947729361cb5835f" category="paragraph">现在，除了 FSx for ONTAP 库存页面和文件系统概述页面之外，您还可以直接从"管理"菜单中的"链接"页面创建链接。</block>
+  <block id="b65fab1584e1a15fb6cd01b1fb573a1f" category="inline-link-macro">详细了解如何创建链接</block>
+  <block id="2fb8fbf9eac6cb7cdbca3e8cae581dd0" category="paragraph"><block ref="ac8902bc899b18c41d3bea9bfd9e1e86" category="inline-link-macro-rx"></block>。</block>
+  <block id="eb72702456cb13d975ccfacb15b610d0" category="paragraph">链接使用 AWS Lambda 执行代码以响应事件并自动管理该代码所需的计算资源。您创建的链接是您 NetApp 帐户的一部分，它们与 AWS 帐户相关联。</block>
+  <block id="de753f9064c7210624293a7c1d1e13f9" category="paragraph">您可以在定义 FSx for ONTAP 文件系统时在帐户中创建链接。您可以使用该文件系统的链接，也可以将其用于其他 FSx for ONTAP 文件系统。您也可以稍后为文件系统关联链接。</block>
+  <block id="36c518eb88267ad8a7105893fd209a46" category="list-text">在"Administration"菜单中，选择"Links"。</block>
+  <block id="892be23a9211e0d2e6a0d60b06507944" category="list-text">在"链接"页面上，选择*创建并关联*。</block>
+  <block id="cb045f0740ec2fb29d2864d6c52abff5" category="list-text">在关联链接对话框中，选择要与链接关联的文件系统，然后选择*继续*。</block>
+  <block id="a9dc1217e276dbbc98e08e5bf8b4e0bd" category="list-text">选择*创建新链接*，然后选择*继续*。</block>
+  <block id="eaa9de7b48a473b999b69f05d59df6c2" category="list-text">在创建链接页面上，选择*自动创建*，然后提供以下内容：</block>
+  <block id="0a447482fbe2f57253df6484a37127e2" category="list-text">*用户提供的执行角色*：选择此选项可将指定的 Lambda 执行角色及其附加策略分配给 Lambda 链接。Lambda 权限策略需要以下权限。仅当您启用了 AWS Secrets Manager 时，才需要 <block ref="e6b67e3118c0caaf2206ab3d3fba8d67" prefix=" " category="inline-code"></block> 权限。</block>
+  <block id="4e4d4587b3d4f525dd0bfabd81edb7d7" category="paragraph">启动时，CloudFormation 模板会向 Lambda 授予三项权限。Workload Factory 在使用链接时会使用这些权限。</block>
+  <block id="6f0344b8291b1471c971ba88374dce8a" category="paragraph">您可以在"事件"页面上监控链接创建状态。这应该不超过五分钟。</block>
+  <block id="7b8171c19525234afed5066a22d0bdbe" category="list-text">在"创建链接"页面上，选择"手动创建"，然后从"代码框"中选择 CloudFormation 或 Terraform。</block>
+  <block id="bf419e3bcb855d67fd85a99f9a55eb97" category="list-text">在详细信息和凭据下，提供以下内容：</block>
+  <block id="0b1685216b81bbd8b7a0d6bb09435f98" category="paragraph">创建链接后，将其与一个或多个 FSx for ONTAP 文件系统关联。</block>
+  <block id="64c7a4783273d9e14ea971d0631f7ac8" category="paragraph">验证密钥 ARN 是否包含以下键值对，但 _filesystemID_ 是可选的。</block>
+  <block id="669b6152234fe8c12012646b005a7d2f" category="paragraph">密钥应包含以下键值对：</block>
+  <block id="1641126472d40ab162e3acf05ac611ba" category="section-title">2026年8月30日</block>
 </blocks>
