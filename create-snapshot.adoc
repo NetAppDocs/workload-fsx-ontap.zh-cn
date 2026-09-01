@@ -4,7 +4,7 @@ permalink: create-snapshot.html
 keywords: create snapshot, snapshot 
 summary: 在NetApp Workload Factory 中创建 FSx for ONTAP卷的手动快照。快照是卷内容的某个时间点的版本。 
 ---
-= 为FSx for ONTAP卷创建手动快照
+= 在 NetApp Workload Factory 中创建卷的按需快照
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

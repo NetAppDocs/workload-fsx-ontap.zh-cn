@@ -4,7 +4,7 @@ permalink: rebalance-volume.html
 keywords: rebalance capacity, volume capacity, redistribute capacity 
 summary: 检查并重新平衡容量以避免随着时间的推移而出现不平衡。 
 ---
-= 检查并重新平衡卷容量
+= 在 NetApp Workload Factory 中检查并重新平衡卷容量
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

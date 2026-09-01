@@ -4,7 +4,7 @@ permalink: configure-active-directory.html
 keywords: configure AD, configure active directory, update ad, edit active directory 
 summary: 在NetApp Workload Factory 中为 FSx for ONTAP文件系统中的存储虚拟机配置和更新 Active Directory。 
 ---
-= 配置和更新Storage VM的Active Directory
+= 在 NetApp Workload Factory 中为存储 VM 配置和更新 AD
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

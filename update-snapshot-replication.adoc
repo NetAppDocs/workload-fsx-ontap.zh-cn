@@ -4,7 +4,7 @@ permalink: update-snapshot-replication.html
 keywords: update snapshot data, replication 
 summary: 随时手动更新复制关系中源卷和目标卷之间传输的快照数据。 
 ---
-= 更新复制关系中的快照数据
+= 在 NetApp Workload Factory 中更新复制快照数据
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

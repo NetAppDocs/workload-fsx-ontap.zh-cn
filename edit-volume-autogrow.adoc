@@ -4,7 +4,7 @@ permalink: edit-volume-autogrow.html
 keywords: volume autogrow, increase volume capacity, enable autogrow 
 summary: 启用卷自动增长以让 Workload Factory 为您管理卷容量。您可以随时禁用它。 
 ---
-= 在 Workload Factory 中启用卷自动增长
+= 在 NetApp Workload Factory 中启用卷自动增长
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

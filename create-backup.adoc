@@ -4,7 +4,7 @@ permalink: create-backup.html
 keywords: create backup, volume backup, back up a volume, FSx for ONTAP backup, manual backup 
 summary: 在定期备份之外，在NetApp Workload Factory 中创建卷的手动备份。 
 ---
-= 在NetApp Workload Factory 中创建卷的手动备份
+= 在 NetApp Workload Factory 中创建卷的按需备份
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

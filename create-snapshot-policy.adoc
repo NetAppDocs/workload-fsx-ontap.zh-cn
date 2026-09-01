@@ -4,7 +4,7 @@ permalink: create-snapshot-policy.html
 keywords: create 
 summary: 在 Workload Factory 中为存储虚拟机创建自定义快照策略。 
 ---
-= 在 Workload Factory 中为存储虚拟机创建快照策略
+= 在 NetApp Workload Factory 中为 Storage VM 创建快照策略
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

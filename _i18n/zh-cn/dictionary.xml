@@ -166,7 +166,6 @@
   <block id="dbdb6569199d0b92d1e8203557e17927" category="list-text">在使用快照之前、请考虑以下有关快照容量的信息：</block>
   <block id="93500ef3c4b6b914f591d40fa8709533" category="list-text">对于大多数数据集、额外的20%容量足以将快照保留长达四周。随着数据变得越来越陈旧、使用它进行恢复的可能性也会降低。</block>
   <block id="e6b293eb079603bb103c925cf228700c" category="list-text">覆盖快照中的所有数据会占用大量卷容量、而这些容量会考虑在配置卷容量中。</block>
-  <block id="736ef7205c037a078bc461f368c6a21f" category="doc">为FSx for ONTAP卷创建手动快照</block>
   <block id="5b10cd7d19a8a16358cb05922f38a69e" category="paragraph">快照是卷的资源、是数据的即时捕获、只会为修改后的数据占用空间。由于数据会随时间发生变化、因此、随着快照的使用时间的推移、快照通常会占用更多的空间。</block>
   <block id="bbc11127132b3f6e8be58ad79bf66689" category="paragraph">FSx for ONTAP卷使用写时即时复制、因此快照中任何未经修改的文件不会占用卷的任何容量。</block>
   <block id="644e775d0497e56fe0475dde3829ce1e" category="doc">为FSx for ONTAP文件系统创建Storage VM</block>
@@ -544,7 +543,6 @@
   <block id="cc8b0535948da368f832027c19b7f853" category="list-text">请务必复制上面用于序列号字段的帐户序列号(960xxxx)。这样可以加快帐户处理速度。</block>
   <block id="684375e279a289295b72a006d93e2c4c" category="paragraph">在此过程中、NetApp应与您联系。这是针对新用户的一次性入职练习。</block>
   <block id="fb4531252f707fbda1308840e3c7d6af" category="summary">随时手动更新复制关系中源卷和目标卷之间传输的快照数据。</block>
-  <block id="9ff8251e97123d13337c62b2b74bbe1e" category="doc">更新复制关系中的快照数据</block>
   <block id="fa0604fd5c522ae5ab642bebf836c3d0" category="list-text">选择*立即更新*。</block>
   <block id="241ea6618170a92484ea213e4cade854" category="doc">更新文件系统的吞吐量容量</block>
   <block id="6cc2a35072ede8f6e3bef70bce54ed8c" category="paragraph">有关吞吐量容量限制、请参阅 <block ref="5e5311b04805e422cc2fabe002034628" category="inline-link-macro-rx"></block> AWS FSx for NetApp ONTAP文档中的。</block>
@@ -742,7 +740,6 @@
   <block id="037fbb0239239f2168489bba99e09b67" category="list-text">*导出PDF*</block>
   <block id="10acfa1cd5e4b3b5f4da60bba2257672" category="list-text">*通过电子邮件发送*</block>
   <block id="3902a76bb589f831b404ce1ec9865654" category="list-text">*查看计算结果*</block>
-  <block id="b31795226510baf520db5a5e2287b56e" category="doc">更新卷的存储效率设置</block>
   <block id="07834469705cb1cae603dc37fac50539" category="paragraph">存储效率功能包括重复数据删除、数据压缩和数据缩减、可在FlexVol volume上实现最佳空间节省。重复数据删除可消除重复的数据块。数据压缩可压缩数据块，以减少所需的物理存储量。数据缩减可在更少的空间中存储更多数据，以提高存储效率。</block>
   <block id="6949ed855da826654fa3e3a2e2a18279" category="paragraph">如果您在创建卷时选择不启用存储效率、则可以随时启用此设置、以节省潜在的空间和成本。</block>
   <block id="3561512c31eaec9705db4d98de971d93" category="paragraph">无论您启用还是禁用存储效率、卷都会使用精简配置。</block>
@@ -1424,7 +1421,6 @@
   <block id="ad25ffa35c681232ceeec02144315aa5" category="paragraph">*文件系统生成*：选择以下之一：</block>
   <block id="19f3a3d53bb0ae9a377ecb1e961d2155" category="list-text">*第二代*：此配置适用于高性能工作负载，或当工作负载从小规模开始并逐步扩展到 72 GB/s 的吞吐量和 240 万 IOPS 时。</block>
   <block id="2af62906cede15164d81a343aa2da6a4" category="summary">检查并重新平衡容量以避免随着时间的推移而出现不平衡。</block>
-  <block id="f778d4dac2542cbef9605e3e41c11ba2" category="doc">检查并重新平衡卷容量</block>
   <block id="bfebf248126ee0c8c192d7442b03e1a1" category="sidebar">查看 FSx for ONTAP文件系统的良好架构状态</block>
   <block id="65050310e57f3790fef3c72eb48d33fe" category="section-title">为什么链接是有益的</block>
   <block id="abca8c391b472ef4e80c6577b5d5eb2a" category="paragraph">以下是使用链接的一些好处：</block>
@@ -1524,7 +1520,6 @@
   <block id="b01b37af09f4438a0edf536fee6ee774" category="paragraph">按照步骤删除卷的 SMB/CIFS 共享。</block>
   <block id="dc782d3e46ef3bd4b9ae294af16366b0" category="paragraph">删除 SMB/CIFS 共享将使任何想要挂载它的用户都无法使用它并且无法访问它。</block>
   <block id="73d6e57b628ed920f4ce69e52d8df9d7" category="list-text">在删除 SMB/CIFS 共享对话框中，选择*删除*确认删除。</block>
-  <block id="998611c020287338b0e962b507511c46" category="doc">使用NetApp自主勒索软件防护和 AI 保护您的数据</block>
   <block id="1dee40f78f31696a01245dd5be3f3382" category="paragraph">使用 ARP/AI 来防止拒绝服务攻击，攻击者会扣留数据直到支付赎金。  ARP/AI 提供基于以下内容的实时勒索软件检测：</block>
   <block id="87a09ae23e8a5437f45a7f7430ba7565" category="paragraph">ARP/AI 可以在仅少量文件被加密后检测到大多数勒索软件攻击的传播，自动采取行动保护数据，并提醒您疑似攻击正在发生。</block>
   <block id="3d892826b81878b82d3bd5353e94ce1a" category="paragraph">ARP/AI 功能会根据Amazon FSx for NetApp ONTAP运行的ONTAP版本自动更新，因此您无需进行手动更新。</block>
@@ -1694,7 +1689,6 @@
   <block id="93482e0e05af93f1f57953ff700f65af" category="summary">在NetApp Workload Factory 中为 FSx for ONTAP文件系统中的存储虚拟机配置和更新 Active Directory。</block>
   <block id="b517cd494437c46f189031b81fe054d1" category="list-text">从 *FSx for ONTAP* 中，选择要更新的存储虚拟机的文件系统的操作菜单，然后选择 *管理*。</block>
   <block id="e2978ebf10a51b553f9a074316b27b79" category="summary">在定期备份之外，在NetApp Workload Factory 中创建卷的手动备份。</block>
-  <block id="54fe537cb8aa5bbba8b6f2002f13d69c" category="doc">在NetApp Workload Factory 中创建卷的手动备份</block>
   <block id="4f43be2165dfc12e9cac6220645b9996" category="paragraph">在NetApp Workload Factory 中定期备份之外创建卷的手动备份。</block>
   <block id="cc481e5a678e1d84e7207782a75f9a18" category="summary">使用NetApp Workload Factory，您可以创建 FSx for ONTAP文件系统来添加和管理卷和其他数据服务。</block>
   <block id="9b19e4522ce9145cc667b5fcceaba11d" category="doc">在NetApp Workload Factory 中创建 FSx for ONTAP文件系统</block>
@@ -1712,7 +1706,6 @@
   <block id="939a8d22db4ccfbdde48d35119ad37a3" category="list-text">*AWS Secrets Manager*：可选。允许 Workload Factory 从您的 AWS Secrets Manager 获取 FSx for ONTAP访问凭证。</block>
   <block id="7580bfe7832e708a7a254e231956ba42" category="list-text">返回 Workload Factory 界面，您将看到该链接与 FSx for ONTAP文件系统相关联。</block>
   <block id="3d607d93b8532423a7bbebf948091168" category="summary">在 Workload Factory 中为存储虚拟机创建自定义快照策略。</block>
-  <block id="0e4f989c75a10776b672b4a9f108bfc9" category="doc">在 Workload Factory 中为存储虚拟机创建快照策略</block>
   <block id="ab9a6ebd2e1e5562fa11ba5a014fc247" category="paragraph">为工作负载工厂中的存储虚拟机创建自定义快照策略，以管理快照的创建和保留。快照策略定义了系统如何为存储虚拟机创建快照。您可以为 FSx for ONTAP文件系统中的存储虚拟机创建快照策略。您还可以在多个存储虚拟机之间共享该策略。</block>
   <block id="ab208b31e3a136f0c6135fb0336e666b" category="list-text">从“*存储虚拟机*”选项卡中，选择要使用计划快照保护的卷的操作菜单，然后选择“*高级操作*”，再选择“*管理快照策略*”。</block>
   <block id="639d2937555bcb4f73e857db43a5af09" category="summary">在NetApp Workload Factory 中创建 FSx for ONTAP卷的手动快照。快照是卷内容的某个时间点的版本。</block>
@@ -1753,7 +1746,6 @@
   <block id="ce1de3f28d8568be87cdce779516de02" category="doc">在NetApp Workload Factory 中删除存储虚拟机</block>
   <block id="d287f4840c4e2956b3e030d276822021" category="doc">在NetApp Workload Factory 中删除卷</block>
   <block id="d3642378f76a85654ded51afcb1ef1e1" category="summary">无需离开NetApp Workload Factory 控制台即可发现并查看与缓存关系关联的缓存卷。</block>
-  <block id="6941de74744e8105d82d9020761bcfab" category="doc">在 Workload Factory 中发现缓存卷</block>
   <block id="48a0f6fd350fab8343613dcbe8a68778" category="paragraph">无需离开NetApp Workload Factory 控制台即可发现并查看与缓存关系关联的缓存卷。缓存关系也称为ONTAP FlexCache关系。  Workload Factory 使用FlexCache技术发现现​​有的缓存关系，FlexCache 技术是NetApp ONTAP 的远程缓存功能，可加速数据访问，减少 WAN 延迟、带宽和读取密集型工作负载的成本，尤其是在客户端需要重复访问相同数据的情况下。</block>
   <block id="375aaa96b221ad9d77959705c31cbabf" category="inline-link-macro">了解有关使用FlexCache复制数据的更多信息。</block>
   <block id="3ab5391ad1cf79099e8de83d067b33e6" category="paragraph"><block ref="3ab5391ad1cf79099e8de83d067b33e6" category="inline-link-macro-rx"></block></block>
@@ -1844,7 +1836,6 @@
   <block id="df22e5c72d75cea7ae766daf660bd529" category="summary">在需要时管理NetApp Workload Factory 中 FSx for ONTAP文件系统的备份计划。</block>
   <block id="be1c92aa6bef23dd57df3395c46827bb" category="paragraph">在NetApp Workload Factory 中管理 FSx for ONTAP文件系统的备份计划。</block>
   <block id="93ae473ca3e8f97f82687e6f98eab1da" category="list-text">从 *FSx for ONTAP* 中，选择要更新备份计划的文件系统的操作菜单，然后选择 *管理*。</block>
-  <block id="f73fd134806728f0a5ac79982e11ead7" category="doc">在 Workload Factory 中管理卷的 SMB/CIFS 共享</block>
   <block id="c69f3e9214ff94aa0825993b6fb1b85a" category="paragraph">在 Workload Factory 中管理卷的 SMB/CIFS 共享包括创建 SMB/CIFS 共享、确定授予访问权限的用户和组以及授予他们的权限级别以及删除 SMB/CIFS 共享。</block>
   <block id="4b898528f057698b461041b6d7447cfe" category="list-text">从“卷”选项卡中，选择要更改 SMB 共享的卷的操作菜单。</block>
   <block id="52b572ba9057fb19fd2333ef3f707bd0" category="list-text">在 *FSx for ONTAP* 选项卡中，选择要更新卷的文件系统的操作菜单，然后选择 *管理*。</block>
@@ -1852,7 +1843,6 @@
   <block id="0b83e178116e79ce2a76377c2fe4e4ed" category="doc">在NetApp Workload Factory 中管理卷的不可变文件</block>
   <block id="6dc7abcdf6f4b84a36a87f40f2787a33" category="list-text">*特权删除*：启用或禁用该功能。启用该功能允许SnapLock管理员删除未过期的 WORM 卷。此功能仅在企业保留模式下受支持。</block>
   <block id="a1212a4e5f083322acc45c56b9938112" category="summary">您可以查看与您的帐户关联的链接、更新链接身份验证的密码以及删除NetApp Workload Factory 中的链接。</block>
-  <block id="62f72fd04830d29db75ec05c5541e42e" category="doc">管理工作负载工厂链接</block>
   <block id="83dfd07dca3a04ca19cdc3262cb17df4" category="paragraph">管理与您的 Workload Factory 帐户关联的链接。您可以查看与 FSx for ONTAP文件系统关联的链接、提供用于链接身份验证的密码以及从 Workload Factory 控制台中删除链接。</block>
   <block id="2042c96024e7e8a46d1497c843c76da6" category="list-text">从存储菜单中，选择*管理*，然后选择*链接*。</block>
   <block id="50e87fbed332b782c23eefcd063c29f3" category="paragraph">现有链接出现在链接页面上。</block>
@@ -1929,7 +1919,6 @@
   <block id="19002cddfac8e15ce79f8ccad53b74e6" category="paragraph">在NetApp Workload Factory 中，您可以将卷从备份还原到 AWS 账户中的任何 FSx for ONTAP文件系统。</block>
   <block id="e8c0bed13dff2e82ae3fd20a79157041" category="list-text">恢复可能会使已用容量超过您指定的阈值。即可完成还原操作。考虑<block ref="e41647392a26a0e6b166f921fc9cbdef" category="inline-link-macro-rx"></block>或者选择 Workload Factory 自动添加 SSD 存储层容量。</block>
   <block id="2235d115064fc8246f43d55ab62b045c" category="list-text">恢复需要额外的 SSD 容量。您必须选择 Workload Factory 自动添加 SSD 存储层容量才能继续。</block>
-  <block id="fa6f999947ca23d9e3e71b237b583528" category="doc">从 Workload Factory 中的快照还原卷</block>
   <block id="d3a96b67aa0602273a39c3df984573da" category="paragraph">在 Workload Factory 中，您可以将数据从快照恢复到现有卷或新卷。当卷包含已删除或损坏的文件时，还原操作可以实现时间点恢复。</block>
   <block id="eae1ab715619b3c7c75c3c94c00fe8a7" category="list-text">从“*Volumes*”选项卡中，选择要从快照还原的卷的操作菜单。</block>
   <block id="fd2a512a440fa903a2db9a227f9c67d9" category="list-text">在“管理快照”页面中，选择要恢复的快照的操作菜单，然后选择“*恢复*”。</block>
@@ -2040,7 +2029,6 @@
   <block id="64aefaaa1ffe9f3b50d13850f89ff59a" category="list-text">在您的 AWS 账户中授予_查看、规划和分析_权限。</block>
   <block id="582f3532371a870cf4bd6406f93d26de" category="paragraph"><block ref="582f3532371a870cf4bd6406f93d26de" category="inline-link-macro-rx"></block></block>
   <block id="7335bfe9e44aaa30f676443b169c4028" category="summary">了解NetApp网络保险库以及如何实施网络保险库架构，以保护您的数据免受勒索软件和网络威胁的侵害。</block>
-  <block id="82f3873908ce87878ae918ed0d960883" category="doc">使用网络安全保险库保护您的数据。</block>
   <block id="c20c451e413ebde26a765cbbc0c15afc" category="paragraph">网络保险库卷是一个隔离的、安全的存储位置，用于存储数据的备份副本，保护数据免受勒索软件攻击和其他网络威胁。作为创建保险库的一部分，您将创建一个网络保险库卷，禁用所有客户端协议，并在源卷和网络保险库卷之间建立复制关系，并在网络保险库卷上创建不可变快照。</block>
   <block id="d825eb03b1924c3d41f95d2810515203" category="paragraph-title">什么是网络保险库？</block>
   <block id="2712d3844c4c3f6fae0cd10b9d646084" category="paragraph">网络保险库是一种特定的数据保护技术，涉及将关键数据存储在与主要 IT 基础设施分开的隔离环境中。</block>
@@ -2446,7 +2434,6 @@
   <block id="df84e5c661ad9c55d4921f236021aac2" category="paragraph"><block ref="df84e5c661ad9c55d4921f236021aac2" category="inline-link-macro-rx"></block></block>
   <block id="3b40a61896ac7bb071b70913553072f1" category="inline-link-macro">管理 FSx for ONTAP 文件系统的块存储</block>
   <block id="72a58cc21323626d7784d44077612a4a" category="paragraph"><block ref="72a58cc21323626d7784d44077612a4a" category="inline-link-macro-rx"></block></block>
-  <block id="cfcff7e4ca0a4496f029a99d812c3cb3" category="doc">在 Workload Factory 中手动调整文件系统容量</block>
   <block id="59f5126fcebfa1b4b592a46994a99827" category="paragraph">当使用量超过指定阈值时，增加 SSD 存储容量。当您不使用工作集以节省资金时，降低 SSD 存储容量。</block>
   <block id="eb6c620cfb7e9a2b2d272cbd7de4add5" category="inline-link-macro">启用自动容量管理</block>
   <block id="ecc53408400ad50b32a298b084aaab6c" category="paragraph">或者，您可以<block ref="3b9a1990588be58052dffdfdaa494467" category="inline-link-macro-rx"></block>，以便 Workload Factory 为您管理文件系统容量。</block>
@@ -2469,7 +2456,6 @@
   <block id="6a7ad49263c3fc8c151eb65f1806da11" category="paragraph">块设备或 LUN（逻辑单元编号）是 SAN 环境中具有文件系统的卷，可供主机通过网络访问。</block>
   <block id="b8566093dc7e8e13804760276e46227b" category="admonition">增加块设备大小后，请按照主机操作系统提供的步骤来发现新大小并扩展文件系统。</block>
   <block id="5604a07573c6d426e93e84ff1a6bd366" category="paragraph">未映射到客户端或七天未使用的块设备是非活动的块设备。此操作取消映射并删除选定的块设备。如果主机 FlexVol 卷不包含任何块设备，Workload Factory 将删除它。</block>
-  <block id="1abbae8f95c05dac2b36d51f50eb87ac" category="doc">在 Workload Factory 中自动管理文件系统容量和 inode</block>
   <block id="d5d9ee8255b76e97868c3facadf58360" category="paragraph">启用容量管理让 NetApp Workload Factory 能够随着容量需求随时间变化，自动向 FSx for ONTAP 文件系统添加增量存储。此外，启用此功能无需手动监控容量。</block>
   <block id="b5750806a6c2de28360d7b511ba01b0c" category="paragraph">系统每 30 分钟扫描一次 FSx for ONTAP 文件系统。它检查是否需要添加增量存储，并验证可用的卷 inode。计数根据自动容量管理阈值增加。</block>
   <block id="7bdf690b1d068245416e9f5cbb766f44" category="paragraph">启用 inode 管理允许 NetApp Workload Factory 在容量需求变化时自动将增量 inode 添加到 FSx for ONTAP 文件系统。此功能无需手动监控 inode。</block>
@@ -2526,7 +2512,6 @@
   <block id="8650af0fa3c7b902ba6a94894d28c472" category="list-text">在 *Volume backups* 对话框中，提供以下内容：</block>
   <block id="5e9b88efcc8c9692790f512327a22476" category="list-text">选择 *Data protection actions*、*Volume backups*，然后选择 *Restore from a backup*。</block>
   <block id="6eb18ebccbf4fe18669aca55778990e0" category="sidebar">管理卷备份计划</block>
-  <block id="0961e27231cdfd5dc9ef441903dabe01" category="doc">Amazon FSx for NetApp ONTAP 在 NetApp Workload Factory 中的已知限制</block>
   <block id="b6a0b5ebabfe42c8ed27e9b4c0efda76" category="paragraph">已知限制指出本产品版本不支持的平台、设备或功能，或与其无法正常互操作的平台、设备或功能。以下限制仅适用于 Amazon FSx for NetApp ONTAP 在 NetApp Workload Factory 中的使用。请仔细查看这些限制。</block>
   <block id="373a2f1d901c2d939efc602830f01830" category="paragraph">新的 Inventory 表自动扫描您的 AWS S3 存储桶并填充 S3 表，为您提供所有对象、其元数据、属性和标签的清晰快照。访问这些详细信息有助于您保持对自己负责的数据的控制、可见性和可信度，同时减少运营开销。您可以在创建和连接 S3 接入点或编辑现有接入点时打开此功能。</block>
   <block id="89431b722804b6b5729917d710d8bca9" category="inline-link-macro">在 NetApp Workload Factory 中为卷创建并附加 S3 访问点</block>
@@ -2763,7 +2748,6 @@
   <block id="b0a6eb48f73351a252096302ea696228" category="cell">s3tables：PutTableBucketPolicy</block>
   <block id="b1ad085edd3140c672ff2109d9242452" category="cell">允许 CloudWatch Logs 访问</block>
   <block id="4d565cafb7f83c16708d52b5ab6f97af" category="summary">查看 NetApp Workload Factory 中卷的 S3 访问点的详细信息。</block>
-  <block id="0508a20ce5214e259576cd4e33683ed1" category="doc">查看 NetApp Workload Factory 中卷的 S3 访问点的详细信息</block>
   <block id="b83eea7e75edc796e98ee57692e03801" category="paragraph">查看 S3 接入点详细信息，如别名、ARN 和 S3 URI。启用库存和日记表后，您可以查看跨 S3 访问点的用户访问事件和对象操作的元数据和审计日志。</block>
   <block id="cf3c11cd7ad93f5d574a0699e780188f" category="paragraph">当在卷上启用清单表时，您可以查看连接到卷的现有 S3 访问点的访问点、清单表和表存储桶详细信息。系统还提供到 AWS Management Console 中清单表的链接。</block>
   <block id="5a8fb625347b548bdba1297afcb24588" category="paragraph">启用日志表后，Workload Factory 将在表中的访问点上生成日志供您参考。该表包括 CloudTrail 事件、跟踪（AWS 活动的记录）、CloudTrail 过滤器、CloudWatch 日志组等。</block>
@@ -3255,4 +3239,33 @@
   <block id="64c7a4783273d9e14ea971d0631f7ac8" category="paragraph">验证密钥 ARN 是否包含以下键值对，但 _filesystemID_ 是可选的。</block>
   <block id="669b6152234fe8c12012646b005a7d2f" category="paragraph">密钥应包含以下键值对：</block>
   <block id="1641126472d40ab162e3acf05ac611ba" category="section-title">2026年8月30日</block>
+  <block id="c82db17d9640cb358a39977100613e95" category="section-title">工作负载标识</block>
+  <block id="9c2440b961ba52df8467b29a146f98ba" category="list-text">Workload Factory 现在可识别连接到部署在不同区域的 FSx for ONTAP 存储的主机的工作负载。</block>
+  <block id="c48db719590b6821db48e6238f4be1c4" category="list-text">改进的工作负载检测逻辑现在可以发现其他工作负载类型并提高调查结果的准确性。</block>
+  <block id="a5eed3b96d2185e0764ada195a486690" category="doc">在 NetApp Workload Factory 中更改卷的复制计划</block>
+  <block id="c092c4e03c30c753ec060fe6b2255de4" category="doc">在 NetApp Workload Factory 中为存储 VM 配置和更新 AD</block>
+  <block id="03fff97f7787377e3e4417517cf7b21e" category="doc">在 NetApp Workload Factory 中创建卷的按需备份</block>
+  <block id="08d70d11ddeec80d88a5f51591578656" category="doc">使用网络保管库保护您的 FSx for ONTAP 数据</block>
+  <block id="6721f36d179d854ccc58b2ad42c7362f" category="doc">在 NetApp Workload Factory 中为 Storage VM 创建快照策略</block>
+  <block id="dbf1c63cddd6309b0bc8cc75976dec7b" category="doc">在 NetApp Workload Factory 中创建卷的按需快照</block>
+  <block id="23d39bde9b08b2c6e975096219600185" category="doc">在 NetApp Workload Factory 中发现缓存卷</block>
+  <block id="5c1f913dca6b99f9befa10b536db4492" category="doc">在 NetApp Workload Factory 中启用卷自动增长</block>
+  <block id="d4a67598375b312f4832cf6bab5157bb" category="doc">在 NetApp Workload Factory 中启用长期快照保留</block>
+  <block id="b93731800482f89e9948a463e728ef9d" category="doc">在 NetApp Workload Factory 中获取 FSx for ONTAP 的帮助</block>
+  <block id="e8355e7c1132891c80c2af3110068130" category="doc">实施架构良好的 FSx for ONTAP 文件系统配置</block>
+  <block id="098db803ee017e3ecc391b755fd4943a" category="doc">在 NetApp Workload Factory 中手动调整文件系统容量</block>
+  <block id="d57644972c07db4650e08c2e26761651" category="doc">FSx for ONTAP 在 NetApp Workload Factory 中的已知限制</block>
+  <block id="ff71316397e1ef17bc15e9784bcb30bd" category="doc">限制 NetApp Workload Factory 中的复制传输速率</block>
+  <block id="96bbcf50926e08954b634fd05cb51ba4" category="doc">在 NetApp Workload Factory 中自动管理容量和 inode</block>
+  <block id="9e0ecd128d681936cd0b802126c384d4" category="doc">在 NetApp Workload Factory 中管理卷的 SMB/CIFS 共享</block>
+  <block id="a4d45bf93deed5e773f1c470ea181049" category="doc">管理 NetApp Workload Factory 链接</block>
+  <block id="c63ba25cc70bb1bddad69971b2178a35" category="doc">管理 NetApp Workload Factory 中卷的快照策略</block>
+  <block id="76bef3b45ffa41a70902eee6a180240d" category="doc">使用 NetApp Autonomous Ransomware Protection with AI 保护您的 FSx for ONTAP 数据</block>
+  <block id="111827ab44a64fef8ee33a4c31d9e746" category="doc">在 NetApp Workload Factory 中检查并重新平衡卷容量</block>
+  <block id="13eb38af096a3b48602b4708c1b1b87c" category="doc">在 NetApp Workload Factory 中从 Snapshot 还原卷</block>
+  <block id="b9be88fc11ad6670dab2c9b28bfeed84" category="doc">注册您的 Workload Factory 帐户以获得 NetApp 支持</block>
+  <block id="1154a7e4b2160ee9927e71e327ffc1fc" category="doc">在 NetApp Workload Factory 中更新复制快照数据</block>
+  <block id="dcd3b5b0b5be83a6428cf8e204033841" category="doc">在 NetApp Workload Factory 中更新卷存储效率</block>
+  <block id="9f6474fce0b75bbb20e073788d0f7d91" category="doc">更新 NetApp Workload Factory 中文件系统的吞吐量容量</block>
+  <block id="fa9e4ccc5a64e6bc26f23e2983b2ae89" category="doc">查看 NetApp Workload Factory 中卷的 S3 访问点详细信息</block>
 </blocks>

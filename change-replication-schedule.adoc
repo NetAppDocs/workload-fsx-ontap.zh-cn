@@ -4,7 +4,7 @@ permalink: change-replication-schedule.html
 keywords: change replication schedule, update replication schedule, edit replication schedule 
 summary: 更改NetApp Workload Factory 中复制关系中源卷的复制计划。 
 ---
-= 更改源卷的复制计划
+= 在 NetApp Workload Factory 中更改卷的复制计划
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

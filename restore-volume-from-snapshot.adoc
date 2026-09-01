@@ -4,7 +4,7 @@ permalink: restore-volume-from-snapshot.html
 keywords: restore volume, snapshot 
 summary: 当FSx for ONTAP卷包含已删除或损坏的文件时、从快照还原该卷。 
 ---
-= 从 Workload Factory 中的快照还原卷
+= 在 NetApp Workload Factory 中从 Snapshot 还原卷
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

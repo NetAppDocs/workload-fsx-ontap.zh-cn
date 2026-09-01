@@ -4,7 +4,7 @@ permalink: update-storage-efficiency.html
 keywords: storage efficiency change, update storage efficiency 
 summary: 在NetApp Workload Factory 中，您可以在创建卷后更新存储效率设置。 
 ---
-= 更新卷的存储效率设置
+= 在 NetApp Workload Factory 中更新卷存储效率
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

@@ -4,7 +4,7 @@ permalink: discover-cache-volumes.html
 keywords: discover cache volume, FlexCache technology, ONTAP FlexCache, FSx for ONTAP volume 
 summary: 无需离开NetApp Workload Factory 控制台即可发现并查看与缓存关系关联的缓存卷。 
 ---
-= 在 Workload Factory 中发现缓存卷
+= 在 NetApp Workload Factory 中发现缓存卷
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
