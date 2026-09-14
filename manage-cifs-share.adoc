@@ -16,7 +16,7 @@ summary: 在 Workload Factory 中管理卷的 SMB 或 CIFS 共享包括创建、
 .开始之前
 开始之前、请执行以下操作：
 
-* 要管理 SMB/CIFS 共享，您必须关联一个链接。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何关联现有链接或创建并关联新链接"] 。链接关联后，返回此操作。
+* 要管理 SMB/CIFS 共享，您必须关联链接。link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["了解如何关联现有链接或创建并关联新链接"^]。链接关联后，返回此操作。
 * 确定要为其授予访问权限的用户或组以及要为其授予的权限级别。
 
 

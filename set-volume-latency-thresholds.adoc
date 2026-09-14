@@ -31,7 +31,7 @@ summary: 设置卷的延迟阈值，以便在读取或写入延迟超过指定�
 当超过延迟阈值且在指定时间范围内达到 IOPS 阈值时，将生成警报。
 
 
-NOTE: 您可以在没有链接连接的情况下查看延迟事件并接收警报。但是，要分析事件并获得基于人工智能的见解和建议，您必须 link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["使用链接连接到文件系统"]。
+NOTE: 您可以在没有链接连接的情况下查看延迟事件并接收警报。但是，要分析事件并获得基于人工智能的见解和建议，您必须 link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["使用链接连接到文件系统"^]。
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
@@ -53,5 +53,5 @@ Workload Factory 监控卷，并在读取或写入延迟超过配置的阈值时
 
 .相关信息
 * link:analyze-events.html["在 NetApp Workload Factory 中分析 FSx for ONTAP 事件"]
-* link:adjust-volume-capacity.html["调整工作负载工厂的容量"]
+* link:manage-volume-capacity.html["调整工作负载工厂的容量"]
 

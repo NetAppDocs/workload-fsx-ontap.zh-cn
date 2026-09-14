@@ -37,7 +37,7 @@ summary: 在 NetApp Workload Factory 中发现和复制本地 ONTAP 数据，以
 开始之前、请确保您已具备以下条件：
 
 * 用于复制的FSx for ONTAP文件系统。
-* 要与发现的内部集群关联的已连接链路。如果没有链接，则需要link:create-link.html["创建一个"]。
+* 与发现的本地集群关联的已连接链接。如果您没有链接，则需要 link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["创建一个"^]。
 * 具有所需权限的ONTAP用户凭据。
 * 内部ONTAP 9.8及更高版本。
 * 连接、如下图所示。
@@ -85,7 +85,7 @@ image:screenshot-on-prem-connectivity.png["屏幕截图、显示应如何将内�
 .开始之前
 * 您必须发现内部ONTAP集群才能复制其卷数据。
 * 要将适用于ONTAP文件系统的FSx作为复制目标、您必须具有一个可用FSx。
-* 内部ONTAP集群和用于复制关系的FSx for ONTAP文件系统都必须具有关联的链接。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何关联现有链接或创建并关联新链接"](英文)链接关联后、返回此操作。
+* 用于复制关系的本地 ONTAP 集群和 FSx for ONTAP 文件系统都必须具有关联的链接。link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["了解如何关联现有链接或创建并关联新链接"^]。链接关联后，返回此操作。
 
 
 .步骤

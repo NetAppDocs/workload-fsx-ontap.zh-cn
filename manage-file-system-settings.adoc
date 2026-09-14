@@ -1,0 +1,75 @@
+---
+sidebar: sidebar 
+permalink: manage-file-system-settings.html 
+keywords: create fsx tags, create tags, edit fsx tags, fsx tags, reset fsx admin password 
+summary: 随时为文件系统添加、更新或删除 FSx for ONTAP文件系统标签。 
+---
+= 在 NetApp Workload Factory 中管理 FSx for ONTAP 文件系统设置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+在 NetApp Workload Factory 中管理 FSx for ONTAP 文件系统的设置。您可以管理文件系统的标签，必要时重置 fsxadmin 密码，并根据需要更新吞吐量容量。
+
+
+
+[[manage-fsx-for-ontap-file-system-tags]]
+== 管理 FSx for ONTAP 文件系统标记
+
+标签可以帮助你对资源进行分类。在NetApp Workload Factory中，您可以随时添加、编辑和删除文件系统的标签。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
+. 从存储菜单中，选择 *FSx for ONTAP*。
+. 从 *FSx for ONTAP* 中选择要更新的文件系统的操作菜单，然后选择 *管理文件系统标签*。
+. 在“管理文件系统标签”对话框中，根据需要添加、编辑或删除标签。
++
+文件系统最多可以应用 50 个标签。
+
+. 选择 * 应用 * 。
+
+
+
+
+[[reset-the-fsxadmin-password-of-an-fsx-for-ontap-file-system]]
+== 重置 FSx for ONTAP 文件系统的 fsxadmin 密码
+
+必要时重置NetApp Workload Factory 中的 fsxadmin 密码。
+
+如果您在文件系统创建期间提供了备用用户、则只能在AWS控制台中重置fsxadmin密码。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
+. 从存储菜单中，选择 *FSx for ONTAP*。
+. 从 *FSx for ONTAP* 中，选择要重置 fsxadmin 密码的文件系统的操作菜单，然后选择 *管理*。
+. 从文件系统概览中，选择操作菜单。
++
+image:screenshot-reset-fsxadmin-password.png["文件系统概览选项卡中的操作菜单的屏幕截图。"]
+
+. 选择*Reset fsxadmin password*。
+. 在"Reset fsxadmin password"对话框中、输入新的fsxadmin密码并重新输入以进行确认。
+. 选择 * 应用 * 。
+
+
+
+
+[[update-throughput-capacity-for-an-fsx-for-ontap-file-system]]
+== 更新 FSx for ONTAP 文件系统的吞吐量容量
+
+根据需要更新NetApp Workload Factory 中 FSx for ONTAP文件系统的吞吐容量。
+
+有关吞吐量容量限制、请参阅 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html["配额"^] AWS FSx for NetApp ONTAP文档中的。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
+. 从存储菜单中，选择 *FSx for ONTAP*。
+. 从 *FSx for ONTAP* 中，选择要更新吞吐量容量的文件系统的操作菜单，然后选择 *管理*。
+. 在信息下，选择*吞吐量*旁边的铅笔图标。鼠标悬停在*吞吐量*行上时，下拉箭头旁边将显示铅笔图标。
+. 在吞吐量容量对话框中、选择所需的吞吐量容量。
+. 选择 *Apply* 以保存更改
+

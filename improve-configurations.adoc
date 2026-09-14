@@ -11,9 +11,7 @@ summary: Workload Factory 扫描 Amazon FSx for NetApp ONTAP 配置，提供见�
 
 
 [role="lead"]
-使用配置分析见解和建议，利用 Workload Factory 为您的 FSx for ONTAP 文件系统实施最佳实践。您可以轻松查看架构完善状态，了解配置问题，并采取行动改进任何未针对可靠性、安全性、效率、性能和成本进行优化的系统的架构。
-
-您还可以忽略不适用于您的存储环境的特定存储配置的分析，以避免不必要的警报和不准确的优化结果。
+使用 Workload Factory 为您的 FSx for ONTAP 文件系统实施最佳实践。您可以轻松查看架构完善的状态，了解配置问题，并修复问题以改进任何未在可靠性、安全性、效率、性能和成本方面进行优化的系统的体系结构。
 
 link:configuration-analysis.html["了解配置分析和架构良好的状态。"]
 
@@ -22,13 +20,11 @@ link:configuration-analysis.html["了解配置分析和架构良好的状态。"
 [[about-this-task]]
 == 关于此任务
 
-Workload Factory 每天分析 Amazon FSx for NetApp ONTAP 文件系统部署配置。每日分析提供架构完善状态、见解和建议，以及自动修复配置问题的选项，使您的文件系统符合最佳实践。
+Workload Factory 每天分析 Amazon FSx for NetApp ONTAP 文件系统部署配置。
 
-链接连接允许 Workload Factory 扫描性能、数据保护和配置方面的问题。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["使用链接连接到 FSx for ONTAP文件系统"]对您的文件系统资源进行最全面的分析。
+由于存储配置的要求各不相同，因此您可以忽略不适用于存储环境的特定配置的分析。
 
-您可以选择查看文件系统配置问题的建议并解决问题。
-
-由于存储配置的要求各不相同，因此您可以忽略不适用于存储环境的特定配置的分析。这有助于您避免不必要的警报和不准确的优化结果。
+链接连接允许 Workload Factory 扫描性能、数据保护和配置问题。link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["使用链接连接到 FSx for ONTAP文件系统"^]以对文件系统资源进行最全面的分析。
 
 .分析的内容
 Workload Factory 分析 FSx for ONTAP 文件系统以下配置的良好架构状态：
@@ -46,7 +42,7 @@ Workload Factory 分析 FSx for ONTAP 文件系统以下配置的良好架构状
 == 开始之前
 
 * 您必须在 AWS 帐户中link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["授予 _操作和修复_ 权限"^]。
-* link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["使用链接连接到 FSx for ONTAP文件系统"]对您的文件系统资源进行最全面的分析。
+* link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["使用链接连接到 FSx for ONTAP文件系统"^] 以最全面地分析您的文件系统资源。
 
 
 
@@ -69,7 +65,7 @@ Workload Factory 分析 FSx for ONTAP 文件系统以下配置的良好架构状
 +
 某些修复操作仅适用于特定操作，并不总是适用于多个资源。例如，您可以修复单个卷的配置，但不能修复多个卷的配置。
 
-. 在对话框中查看与配置的修复操作相关的信息。某些操作可能会导致实例停机或服务中断。
+. 查看操作项目，了解此修复的后果，例如实例停机或服务中断。
 . 如果您希望 Workload Factory 应用建议的更改，请选择*修复*。
 
 

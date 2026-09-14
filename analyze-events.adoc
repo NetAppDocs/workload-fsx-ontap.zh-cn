@@ -22,8 +22,8 @@ summary: 分析 NetApp Workload Factory for FSx for ONTAP 中的事件。
 
 事件分析器会自动从 FSx for ONTAP 文件系统中提取以下事件类型：
 
-* *EMS 事件*：来自 ONTAP 事件管理系统的错误、警报和紧急事件。要查看和分析 EMS 事件，您必须 link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["使用链接连接到文件系统"]。
-* *延迟事件*：读取和写入延迟事件。可以在没有链接连接的情况下查看延迟事件。要分析延迟事件并接收 AI 驱动的洞察，您必须 link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["使用链接连接到文件系统"]。
+* *EMS 事件*：来自 ONTAP 事件管理系统的错误、警报和紧急事件。要查看和分析 EMS 事件，您必须 link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["使用链接连接到文件系统"^]。
+* *延迟事件*：读取和写入延迟事件。可以在没有链接连接的情况下查看延迟事件。要分析延迟事件并接收 AI 驱动的洞察，您必须 link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["使用链接连接到文件系统"^]。
 
 
 要查看事件，您必须link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["授予_查看、规划和分析_权限"^]在您的 AWS 帐户中。事件在移除前显示 72 小时。
@@ -66,13 +66,13 @@ NOTE: 如果您的账号管理员已关闭 AI 功能，您将看到一条消息�
 要查看延迟事件，必须执行以下操作：
 
 * link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["授予_查看、规划和分析_权限"^] 在您的 AWS 帐户中。
-* link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["使用链接连接到文件系统"]。
+* link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["使用链接连接到文件系统"^]。
 
 
 要分析 EMS 和延迟事件并接收 AI 驱动的见解和建议，请确保以下内容：
 
 * 您的 AWS 账户中有 link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["_operations and remediation_ 权限"^]。
-* 您有 link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["使用链接连接到文件系统"]。
+* 您有 link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["使用链接连接到文件系统"^]。
 * 端口 22 (SSH) 在与 FSx for ONTAP 文件系统关联的安全组中打开。
 
 
@@ -90,7 +90,7 @@ NOTE: 如果您的账号管理员已关闭 AI 功能，您将看到一条消息�
 创建链接并将其与 FSx for ONTAP 文件系统关联，以启用 AI 支持的事件分析。链接在 Workload Factory 与一个或多个 FSx for ONTAP 文件系统之间建立信任关系，并利用 AWS Lambda。
 
 +
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何关联现有链接或创建并关联新链接"]。链接关联后，返回此操作。
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html^["了解如何关联现有链接或创建并关联新链接"]。链接关联后，返回此操作。
 
 * *AWS IAM 权限*
 +

@@ -1,0 +1,104 @@
+---
+sidebar: sidebar 
+permalink: manage-volume-settings.html 
+keywords: volume tags, edit volume tags, edit tags, enable immutable files, disable immutable files, lock files, unlock files, storage efficiency change, update storage efficiency 
+summary: 标记可以帮助您对资源进行分类。您可以随时为FSx for ONTAP卷添加、编辑和删除卷标记。 
+---
+= 在 NetApp Workload Factory 中管理卷设置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+在 NetApp Workload Factory 中自定义 FSx for ONTAP 卷设置，以满足组织的需求。您可以管理卷标记以对资源进行分类，更新存储效率设置以优化空间和成本节省，以及管理不可变文件设置以控制数据保留并防止未经授权的更改。
+
+
+
+[[manage-volume-tags]]
+== 管理卷标记
+
+标签可以帮助您对资源进行分类。您可以随时在NetApp Workload Factory 中为 FSx for ONTAP卷添加、编辑和删除卷标签。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
+. 在存储菜单中，选择*Volumes explorer*。
+. 选择要修改其标记的卷的操作菜单。
+. 选择*基本操作*，然后选择*编辑卷标记*。
+. 在编辑卷标记页面上、添加、编辑或删除标记。
++
+一个卷最多可以应用50个标记。
+
+. 选择 * 应用 * 。
+
+
+
+
+[[update-volume-storage-efficiency]]
+== 更新卷存储效率
+
+创建卷后更新存储效率设置。
+
+存储效率功能包括重复数据删除、数据压缩和数据缩减、可在FlexVol volume上实现最佳空间节省。重复数据删除可消除重复的数据块。数据压缩可压缩数据块，以减少所需的物理存储量。数据缩减可在更少的空间中存储更多数据，以提高存储效率。
+
+如果您在创建卷时选择不启用存储效率、则可以随时启用此设置、以节省潜在的空间和成本。
+
+无论您启用还是禁用存储效率、卷都会使用精简配置。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
+. 在存储菜单中，选择*Volumes explorer*。
+. 选择要更新存储效率设置的卷的操作菜单。
+. 选择*高级操作*，然后选择*设置存储效率*。
+. 选择启用或禁用卷存储效率。
+. 选择*Apply*以保存更改。
+
+
+
+
+[[manage-immutable-files-for-a-volume-in-netapp-workload-factory]]
+== 在NetApp Workload Factory 中管理卷的不可变文件
+
+启用此功能后、您可以更新卷的某些不可变文件设置、例如保留策略和期限、自动提交期限以及卷附加模式。
+
+请注意，只有在期间才能启用不可删除的文件link:create-volume.html["创建卷"]。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
+. 在存储菜单中，选择*Volumes explorer*。
+. 选择要更新的卷的操作菜单。
+. 选择*数据保护操作*，然后选择*管理不可更改的文件*。
+. 在管理不可更改文件页面上、您可以更新以下内容：
++
+** *保留期限*：选择*未指定*或*指定期限*。
++
+*** *未指定*：默认最短期限为"0"年、默认最长期限为"30年"。
+*** *指定期限*：用于定义保留策略、最短和最长期限、自动提交功能以及卷附加模式功能的选项。请提供以下详细信息：
++
+**** *保留策略*：此期限必须大于或等于最短保留期限、且小于或等于最长保留期限。
+**** *最短和最长期限*：设置将此卷中的文件提交到不可变动的WORM状态的最短和最长期限。
+
+
+
+
+** *自动提交*：启用或禁用自动将在自动提交期间未修改的文件提交到WORM的功能。
+** *特权删除*：启用或禁用该功能。启用该功能允许SnapLock管理员删除未过期的 WORM 卷。此功能仅在企业保留模式下受支持。
+** *卷附加模式*：启用或禁用此功能。启用卷附加模式后、您可以向WORM文件添加新内容。
+
+
+. 单击 * 应用 * 。
+
+
+
+
+[[related-information]]
+== 相关信息
+
+* link:create-volume.html["在 Workload Factory 中创建卷"]
+* link:manage-volume-capacity.html["在 Workload Factory 中管理卷容量"]
+* link:change-tiering-policy.html["在工作负载工厂中更改容量分层策略"]
+* link:manage-s3-access-points.html["在工作负载工厂中管理 S3 访问点"]
+

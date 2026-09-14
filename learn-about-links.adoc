@@ -1,0 +1,14 @@
+---
+sidebar: sidebar 
+permalink: learn-about-links.html 
+keywords: links, accounts, lambda 
+summary: Workload Factory 链接在 Workload Factory 帐户和一个或多个 FSx for ONTAP文件系统之间创建信任关系和连接。 
+---
+= 了解有关NetApp Workload Factory 链接的信息
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+未解析的指令，位于 <stdin> - include::https://raw.githubusercontent.com/NetAppDocs/workload-setup-admin/main/_include/links-overview.adoc[]

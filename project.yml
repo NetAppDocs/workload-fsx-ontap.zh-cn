@@ -27,96 +27,84 @@ sidebar:
       url: "/learn-fsx-ontap.html"
     - title: 快速入门
       url: "/quick-start.html"
-    - title: 创建FSx for ONTAP文件系统
-      url: "/create-file-system.html"
   - title: 使用适用于NetApp ONTAP 的Amazon FSx
     entries:
     - title: 了解节省量
       url: "/explore-savings.html"
-    - title: 跟踪和分析 FSx for ONTAP成本
-      url: "/track-costs.html"
-    - title: 使用链接
+    - title: 创建存储资源
       entries:
-      - title: 了解链接
-        url: "/links-overview.html"
-      - title: 使用链接连接到文件系统
-        url: "/create-link.html"
-      - title: 管理链接
-        url: "/manage-links.html"
-    - title: 创建卷
-      url: "/create-volume.html"
-    - title: 发现并查看缓存卷
-      url: "/discover-cache-volumes.html"
-    - title: 访问您的数据
-      url: "/access-data.html"
-    - title: 创建块存储资源
-      entries:
+      - title: 创建FSx for ONTAP文件系统
+        url: "/create-file-system.html"
+      - title: 创建Storage VM
+        url: "/create-storage-vm.html"
+      - title: 创建卷
+        url: "/create-volume.html"
       - title: 创建 igroup
         url: "/create-igroup.html"
       - title: 创建块设备
         url: "/create-block-device.html"
-    - title: 创建Storage VM
-      url: "/create-storage-vm.html"
-    - title: 保护您的数据
+    - title: 了解链接
+      url: "/learn-about-links.html"
+    - title: 发现并查看缓存卷
+      url: "/discover-cache-volumes.html"
+    - title: 访问您的数据
+      url: "/access-data.html"
+  - title: 保护您的数据
+    entries:
+    - title: 数据保护概述
+      url: "/data-protection-overview.html"
+    - title: 使用快照保护数据
       entries:
-      - title: 数据保护概述
-        url: "/data-protection-overview.html"
-      - title: 使用快照
-        entries:
-        - title: 创建快照
-          url: "/create-snapshot.html"
-        - title: 创建快照策略
-          url: "/create-snapshot-policy.html"
-        - title: 从快照还原卷
-          url: "/restore-volume-from-snapshot.html"
-      - title: 使用备份到对象存储
-        entries:
-        - title: 创建手动备份
-          url: "/create-backup.html"
-        - title: 从备份还原卷
-          url: "/restore-from-backup.html"
+      - title: 使用快照保护数据
+        url: "/use-snapshots.html"
+      - title: 管理Snapshot策略
+        url: "/manage-snapshot-policy.html"
+      - title: 管理快照
+        url: "/manage-snapshots.html"
+    - title: 使用备份到对象存储
+      url: "/use-backups.html"
+    - title: 使用复制来保护数据
+      entries:
       - title: 复制数据
         url: "/create-replication.html"
-      - title: 利用自主防兰森保护功能保护数据
-        url: "/ransomware-protection.html"
-      - title: 克隆卷
-        url: "/clone-volume.html"
-      - title: 使用内部ONTAP数据
+      - title: 将本地 ONTAP 数据复制到 FSx for ONTAP
         url: "/use-onprem-data.html"
-      - title: 创建网络保险库以保护数据
-        url: "/create-cyber-vault.html"
-  - title: 管理和监控
+      - title: 将Storage VM复制到另一个文件系统
+        url: "/replicate-svm-to-file-system.html"
+      - title: 跟踪复制延迟
+        url: "/track-replication-delays.html"
+      - title: 管理复制关系
+        url: "/manage-replication.html"
+    - title: 利用自主防兰森保护功能保护数据
+      url: "/ransomware-protection.html"
+    - title: 克隆卷
+      url: "/clone-volume.html"
+    - title: 创建网络保险库以保护数据
+      url: "/create-cyber-vault.html"
+  - title: 在 Workload Factory 中管理 FSx for ONTAP
     entries:
-    - title: 使用Tracker监控操作
-      url: "/monitor-operations.html"
+    - title: 分析 FSx 中的ONTAP EMS 事件
+      url: "/analyze-events.html"
     - title: 实施文件系统最佳实践
       entries:
       - title: FSx for ONTAP的配置分析
         url: "/configuration-analysis.html"
       - title: 实施架构良好的文件系统配置
         url: "/improve-configurations.html"
-    - title: 分析 FSx 中的ONTAP EMS 事件
-      url: "/analyze-events.html"
-    - title: 卷管理
+    - title: 跟踪和分析 FSx for ONTAP成本
+      url: "/track-costs.html"
+    - title: 管理卷
       entries:
-      - title: 编辑卷自动增长
-        url: "/edit-volume-autogrow.html"
-      - title: 调整音量容量
-        url: "/adjust-volume-capacity.html"
+      - title: 管理卷容量
+        url: "/manage-volume-capacity.html"
       - title: 设置卷延迟阈值
         url: "/set-volume-latency-thresholds.html"
-      - title: 重新平衡卷容量
-        url: "/rebalance-volume.html"
-      - title: 管理不可配置文件
-        url: "/manage-immutable-files.html"
-      - title: 管理卷标记
-        url: "/manage-volume-tags.html"
+      - title: 管理卷设置
+        url: "/manage-volume-settings.html"
       - title: 管理缓存卷
         url: "/manage-cache-volumes.html"
       - title: 更改层策略
         url: "/change-tiering-policy.html"
-      - title: 更新存储效率
-        url: "/update-storage-efficiency.html"
       - title: 管理 NFS 导出策略
         url: "/manage-nfs-export-policy.html"
       - title: 管理 SMB/CIFS 共享
@@ -137,64 +125,30 @@ sidebar:
         url: "/split-cloned-volume.html"
       - title: 删除卷
         url: "/delete-volume.html"
-    - title: 块存储管理
+    - title: 管理块存储
       entries:
       - title: 管理块存储
         url: "/manage-block-storage.html"
       - title: 将标签应用于块设备
         url: "/apply-block-device-tags.html"
-    - title: 文件系统管理
+    - title: 管理文件系统
       entries:
-      - title: 手动调整文件系统容量
-        url: "/increase-file-system-capacity.html"
-      - title: 自动管理文件系统容量
-        url: "/manage-capacity-automatically.html"
-      - title: 管理文件系统标签
-        url: "/manage-fsx-tags.html"
-      - title: 重置fsxadmin密码
-        url: "/reset-fsxadmin-password.html"
-      - title: 删除文件系统
-        url: "/delete-file-system.html"
-    - title: Storage VM 管理
-      entries:
-      - title: 将Storage VM复制到另一个文件系统
-        url: "/replicate-svm-to-file-system.html"
-      - title: 配置和更新Storage VM的Active Directory
-        url: "/configure-active-directory.html"
-      - title: 管理Storage VM标记
-        url: "/manage-svm-tags.html"
-      - title: 重置Storage VM密码
-        url: "/reset-svm-password.html"
-      - title: 删除Storage VM
-        url: "/delete-svm.html"
-    - title: 数据保护管理
-      entries:
-      - title: 快照
-        entries:
-        - title: 管理Snapshot策略
-          url: "/manage-snapshot-policy.html"
-        - title: 启用和编辑快照以进行长期保留
-          url: "/enable-snapshots-long-term.html"
-        - title: 管理快照
-          url: "/manage-snapshots.html"
-      - title: 备份
-        entries:
-        - title: 管理卷备份计划
-          url: "/manage-backup-schedule.html"
-      - title: 复制
-        entries:
-        - title: 复制数据保护卷
-          url: "/cascade-replication.html"
-        - title: 跟踪复制延迟
-          url: "/track-replication-delays.html"
-        - title: 管理复制关系
-          url: "/manage-replication.html"
-    - title: 性能管理
-      entries:
+      - title: 调整文件系统容量
+        url: "/adjust-file-system-capacity.html"
+      - title: 管理文件系统设置
+        url: "/manage-file-system-settings.html"
       - title: 为文件系统配置IOPS
         url: "/provision-iops.html"
-      - title: 更新文件系统的吞吐量容量
-        url: "/update-throughput-capacity.html"
+      - title: 删除文件系统
+        url: "/delete-file-system.html"
+    - title: 管理 Storage VM
+      entries:
+      - title: 管理Storage VM设置
+        url: "/manage-svm-settings.html"
+      - title: 删除Storage VM
+        url: "/delete-svm.html"
+    - title: 使用Tracker监控操作
+      url: "/monitor-operations.html"
   - title: 参考
     entries:
     - title: FSx for ONTAP的性能

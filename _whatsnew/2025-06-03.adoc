@@ -9,7 +9,7 @@
 
 现在，您可以设置卷的自动增长大小，以便卷大小可以超出业务需求和应用程序要求的预配置大小。
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/edit-volume-autogrow.html["启用卷自动增长"]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-volume-capacity.html["启用卷自动增长"]
 
 
 

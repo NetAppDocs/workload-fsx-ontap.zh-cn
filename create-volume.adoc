@@ -64,7 +64,7 @@ NOTE: 即使保留期限到期、您也无法修改WORM文件。您只能将其�
 * 您必须具有Storage VM。
 * 要访问协议、请完成以下操作：
 +
-** 要配置对卷的访问，您必须关联一个链接。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何关联现有链接或创建并关联新链接"](英文)链接关联后、返回此操作。
+** 要配置对卷的访问权限，您必须关联链接。link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["了解如何关联现有链接或创建并关联新链接"^]。链接关联后，返回此操作。
 ** 您必须为所选协议（SMB/CIFS、NFS 或 iSCSI）配置访问权限。
 
 
@@ -177,7 +177,7 @@ ONTAP 使用重复数据删除和压缩功能实现存储效率。重复数据�
 
 .. *Snapshot policy*：选择快照策略以指定快照的频率和保留时间。
 +
-以下是 AWS 的默认策略。要显示现有的快照策略，您必须 link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["关联链接"]。
+以下是 AWS 的默认策略。要显示现有快照策略，您必须 link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["关联链接"^]。
 
 +
 `default`:: 此策略会按照以下计划自动创建快照、并删除最早的快照副本、以便为较新的副本腾出空间：
@@ -233,7 +233,7 @@ NOTE: 快照时间基于文件系统的时区、默认为协调世界时(UTC)。
 如果该功能不可用，则可能是由于以下原因之一：
 
 +
-*** 链接与文件系统无关联。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何关联现有链接或创建并关联新链接"](英文)链接关联后、返回此操作。
+*** 链接未与文件系统关联。link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["了解如何关联现有链接或创建并关联新链接"^]。链接关联后，返回此操作。
 *** ARP/AI 不支持具有不可变文件的卷和具有 NVMe 协议的卷。从 ONTAP 9.17.1 开始支持 iSCSI 卷。
 *** 文件系统已具有 ARP/AI 策略。
 
@@ -252,7 +252,7 @@ NOTE: 快照时间基于文件系统的时区、默认为协调世界时(UTC)。
 
 
 .相关信息
-* link:adjust-volume-capacity.html["调整工作负载工厂的容量"]
+* link:manage-volume-capacity.html["调整工作负载工厂的容量"]
 * link:change-tiering-policy.html["在工作负载工厂中更改容量分层策略"]
 * link:manage-s3-access-points.html["在工作负载工厂中管理 S3 访问点"]
 

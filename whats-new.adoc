@@ -25,7 +25,7 @@ summary: 了解Amazon FSx for NetApp ONTAP的新增功能。
 
 现在，除了 FSx for ONTAP 库存页面和文件系统概述页面之外，您还可以直接从"管理"菜单中的"链接"页面创建链接。
 
-link:create-link.html["详细了解如何创建链接"]。
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["详细了解如何创建链接"^]。
 
 
 
@@ -209,7 +209,7 @@ Workload Factory 标识使用存储的主机以及与主机活动相关联的工
 
 我们直接在文件系统的"概述"选项卡中显示所有文件系统和存储虚拟机端点。Workload Factory 控制台内的直接端点可见性使您可以更轻松地监控网络访问、端点和故障转移状态，而无需使用 CLI 或 CloudShell。要显示 LIF 详细信息，包括角色、端点、节点、IP 地址和状态，您需要将链接与文件系统关联。
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何在 NetApp Workload Factory 中将链接与您的文件系统关联"]。
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["了解如何在 NetApp Workload Factory 中将链接与您的文件系统关联"^]。
 
 
 
@@ -943,7 +943,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.htm
 
 您现在可以使用 Codebox 中的 Terraform 创建与 FSx for ONTAP文件系统关联的链接。此功能适用于手动创建链接的用户。
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["使用Lamba链接连接到FSx for ONTAP文件系统"]
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["使用Lamba链接连接到FSx for ONTAP文件系统"^]
 
 
 
@@ -1047,7 +1047,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-replication.html["�
 
 现在，您可以在 Workload Factory 控制台中创建链接时管理 IAM 执行角色及其附加的权限策略。链接在您的 Workload Factory 帐户和一个或多个 FSx for ONTAP文件系统之间建立连接。您有两种选择来分配 IAM 执行角色和链接权限 - 自动或用户提供。在 Workload Factory 中管理执行角色及其附加的权限策略意味着您不再需要使用第三方代码。
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["使用Lamba链接连接到FSx for ONTAP文件系统"]
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["使用Lamba链接连接到FSx for ONTAP文件系统"^]
 
 
 
@@ -1086,7 +1086,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.htm
 
 现在，您可以设置卷的自动增长大小，以便卷大小可以超出业务需求和应用程序要求的预配置大小。
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/edit-volume-autogrow.html["启用卷自动增长"]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-volume-capacity.html["启用卷自动增长"]
 
 
 
@@ -1548,7 +1548,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/explore-savings.html["了�
 * 支持手动创建链接：此功能允许通过手动注册链接ARN在AWS CloudFormation中独立创建。当安全或开发运营团队协助创建链接时、这将非常有用。
 
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["创建链接"]
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["创建链接"^]
 
 
 

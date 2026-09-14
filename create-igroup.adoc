@@ -19,7 +19,7 @@ summary: 创建启动器组，以管理对 NetApp Workload Factory 中块设备�
 igroup 充当块存储的权限层。当服务器连接到存储系统时，它会使用其 iSCSI qualified (IQN) 主机启动器来标识自己。如果该 IQN 属于一个或多个 igroup，则服务器将获得对与这些 igroup 关联的所有 LUN 的访问权限。iSCSI 正常工作需要 igroup 和 iSCSI 主机连接。
 
 .开始之前
-您必须关联一个链接以创建 igroups。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何关联现有链接或创建并关联新链接"]。关联链接后，返回此操作。
+您必须关联一个链接以创建 igroups。link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["了解如何关联现有链接或创建并关联新链接"^]。关联链接后，返回此操作。
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。

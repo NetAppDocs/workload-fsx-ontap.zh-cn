@@ -17,7 +17,7 @@ summary: 根据需要，在NetApp Workload Factory中管理 FSx for ONTAP文件�
 您可以在NetApp Workload Factory控制台中管理与缓存关系关联的缓存卷。
 
 .开始之前
-* 您必须关联一个链接来管理缓存卷和关系。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何关联现有链接或创建并关联新链接"]。关联链接后，返回此操作。
+* 必须关联链接才能管理缓存卷和关系。link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["了解如何关联现有链接或创建并关联新链接"^]。关联链接后，返回此操作。
 * 您必须拥有一个已存在的缓存卷才能进行编辑。
 
 

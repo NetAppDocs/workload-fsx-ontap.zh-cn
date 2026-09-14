@@ -19,7 +19,7 @@ NetApp Workload Factory仅支持块设备的FlexVol卷。您可以使用 iSCSI �
 块大小必须小于可用的FlexVol volume大小。
 
 .开始之前
-* 您必须关联链接才能创建块设备。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何关联现有链接或创建并关联新链接"]。关联链接后，返回此操作。
+* 您必须关联链接才能创建块设备。link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["了解如何关联现有链接或创建并关联新链接"^]。关联链接后，返回此操作。
 
 
 .步骤
@@ -69,7 +69,7 @@ ONTAP 使用重复数据删除和压缩功能实现存储效率。重复数据�
 
 .. *Snapshot policy*：选择快照策略以指定快照的频率和保留时间。
 +
-以下是 AWS 的默认策略。要显示现有的快照策略，您必须 link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["关联链接"]。
+以下是 AWS 的默认策略。要显示现有快照策略，您必须 link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["关联链接"^]。
 
 +
 `default`:: 此策略会按照以下计划自动创建快照、并删除最早的快照副本、以便为较新的副本腾出空间：
@@ -98,7 +98,7 @@ NOTE: 快照时间基于文件系统的时区、默认为协调世界时(UTC)。
 如果该功能不可用，则可能是由于以下原因之一：
 
 +
-*** 链接与文件系统无关联。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何关联现有链接或创建并关联新链接"](英文)链接关联后、返回此操作。
+*** 链接未与文件系统关联。link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["了解如何关联现有链接或创建并关联新链接"^]。链接关联后，返回此操作。
 *** ARP/AI 不支持包含不可变文件的卷和使用 NVMe 协议的卷。
 *** 文件系统已具有 ARP/AI 策略。
 

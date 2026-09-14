@@ -1,22 +1,82 @@
 ---
 sidebar: sidebar 
-permalink: rebalance-volume.html 
-keywords: rebalance capacity, volume capacity, redistribute capacity 
-summary: 检查并重新平衡容量以避免随着时间的推移而出现不平衡。 
+permalink: manage-volume-capacity.html 
+keywords: volume size, rebalance volume capacity, adjust volume capacity, volume autogrow, manage volume capacity, FlexVol volume, FlexGroup volume 
+summary: 了解如何管理卷容量，包括手动调整卷大小以及在 Workload Factory 中使用卷自动增长。 
 ---
-= 在 NetApp Workload Factory 中检查并重新平衡卷容量
+= 在 NetApp Workload Factory 中管理卷容量
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-检查 FlexVol 或 FlexGroup 卷容量的平衡，并重新平衡卷容量，以将文件均匀分布在节点中的所有 FlexVol 卷或所有组成部分之间，以便所有节点都参与单个 FlexGroup 卷的工作负载。
+应根据需求变化调整卷容量。您可以手动调整卷大小或启用卷自动增长，让 Workload Factory 为您管理卷容量。检查 FlexVol 或 FlexGroup 卷容量的平衡状况，并重新平衡卷容量，以将文件均匀分布到节点中的所有 FlexVol 卷或所有成员卷中，从而使所有节点都参与单个 FlexGroup 卷的工作负载。
 
 
 
-[[about-this-task]]
-== 关于此任务
+[[edit-volume-autogrow]]
+== 编辑卷自动增长
+
+打开卷自动扩展，让 NetApp Workload Factory 为您管理卷容量。您可以随时禁用它。
+
+
+NOTE: iSCSI卷不支持卷自动增长。
+
+.开始之前
+要启用卷自动增长，您必须关联链接。link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["了解如何关联现有链接或创建并关联新链接"^]。链接关联后，返回此操作。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
+. 在存储菜单中，选择*Volumes explorer*。
+. 选择要修改的卷对应的操作菜单。
+. 选择*基本操作*，然后选择*设置卷自动增长*。
+. 在“设置自动增长”对话框中，启用卷自动增长功能，以自动扩展卷容量，直至达到最大大小。此功能可适应不断增长的数据使用量，确保操作不间断。
++
+指定卷的最大增长大小和单位。最大增长大小不能小于当前卷大小。
+
+. 选择 * 应用 * 。
+
+
+
+
+[[adjust-volume-capacity-manually]]
+== 手动调整卷容量
+
+您可以通过增加或减少卷的已配置大小来调整卷容量。下表显示了不同体积类型的最小和最大体积尺寸：
+
+[cols="1,1,1"]
+|===
+| 卷类型 | 大小上限 | 最小大小 
+
+
+| FlexVol volume | 20 MiB | 300 TiB 
+
+
+| FlexGroup 卷 | 800 GiB | 2 PiB 
+|===
+对于 iSCSI LUN，增加卷的大小也会增加主机 LUN 的大小。增加卷容量后，请按照主机操作系统提供的步骤查找 LUN 的新大小并扩展 LUN 的文件系统。
+
+仅 NFS 和 SMB/CIFS 卷支持减小卷大小。
+
+.开始之前
+要调整卷容量，您必须关联一个链接。link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["了解如何关联现有链接或创建并关联新链接"^].链接关联后，返回此操作。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
+. 在存储菜单中，选择*Volumes explorer*。
+. 选择要修改的卷对应的操作菜单。
+. 选择*基本操作*，然后选择*调整容量*。
+. 在“调整卷容量”对话框中，设置“已配置容量”和单位。
+. 选择“调整”以应用更改。
+
+
+
+
+[[rebalance-volume-capacity-for-flexvol-and-flexgroup-volumes]]
+== 重新平衡 FlexVol 和 FlexGroup 卷的卷容量
 
 FlexVol 卷和 FlexGroup 卷支持重新平衡卷容量。当由于添加新文件和文件增长而导致逐渐出现不平衡时、重新平衡卷会重新分布容量。手动启动重新平衡操作后、我们会选择文件并自动无中断地移动它们。卷传输操作会占用文件系统资源。
 
@@ -42,13 +102,13 @@ NOTE: iSCSI 和 NVMe 等 SAN 卷不支持重新平衡。
 
 
 [[check-the-balance-of-your-volumes]]
-== 检查您的交易量余额
+=== 检查您的交易量余额
 
 检查 FSx for ONTAP 文件系统中 FlexVol 或 FlexGroup 卷的平衡。
 
 .开始之前
 * FlexGroup卷平衡仅适用于使用至少两个HA对的横向扩展部署的适用于ONTAP文件系统的FSx。
-* 要检查卷的余额，您必须link:manage-links.html["关联链接"] 。如果您没有现有链接，请 link:create-link.html["创建链接"]。要关联文件系统中的链接，请选择*Account name*下的*Associate link*。链接关联后、返回此操作。
+* 要检查卷的余额，您必须link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["创建链接并将其关联或将现有链接关联到文件系统"^]。链接关联后，返回此操作。
 
 
 .步骤
@@ -72,7 +132,7 @@ NOTE: iSCSI 和 NVMe 等 SAN 卷不支持重新平衡。
 
 
 [[rebalance-volume-capacity]]
-== 重新平衡卷容量
+=== 重新平衡卷容量
 
 重新平衡一个或多个不平衡的卷。
 
@@ -81,7 +141,7 @@ NOTE: Workload Factory 管理员可以<<停止卷重新平衡操作,停止重新
 
 .开始之前
 * <<检查您的交易量余额,检查卷的余额>>重新平衡卷之前。
-* 要重新平衡卷，您必须 link:manage-links.html["关联链接"]。如果您没有现有链接，请 link:create-link.html["创建链接"]。要关联文件系统中的链接，请选择*Account name*下的*Associate link*。链接关联后、返回此操作。
+* 要重新平衡卷，您必须link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["创建链接并将其关联或将现有链接关联到文件系统"^]。链接关联后，返回此操作。
 * 请注意、要重新平衡的卷上的现有快照会变为部分快照、不能用于还原卷数据、但在重新平衡后创建的新快照可用于还原卷数据。
 * 最好将 FlexVol 卷全部重新平衡，以便均匀地平衡所有卷资源。取消选定的卷不会主动参与平衡过程。
 
@@ -162,7 +222,7 @@ FlexVol 卷已重新平衡。操作完成后、文件系统将被控制回原始
 
 
 [[stop-a-volume-rebalance-operation]]
-== 停止卷重新平衡操作
+=== 停止卷重新平衡操作
 
 随时停止重新平衡操作；这不会造成中断。停止操作会中止正在进行的卷移动。
 

@@ -69,7 +69,6 @@
   <block id="c0aee0db2523a540ba66181f63809c8b" category="list-text">选择*数据保护操作*，然后选择*克隆卷*。</block>
   <block id="a9056a8f8a35fa168136ae9ea8b7866d" category="list-text">在克隆卷对话框中、输入卷克隆的名称。</block>
   <block id="d41d8cd98f00b204e9800998ecf8427e" category="summary"></block>
-  <block id="85a0e511a99369efd5c47890a946947b" category="doc">配置和更新Storage VM的Active Directory</block>
   <block id="c19f2fad6f0110c3951bd583edb5371f" category="paragraph">配置和更新Storage VM的Active Directory的步骤相同。</block>
   <block id="dcfecf722762bfcce19242fd2e38a2c2" category="list-text">在管理AD配置页面上、提供以下内容：</block>
   <block id="a531f5a3e49319a6c1b23021b5a27417" category="list-text">*要加入的Active Directory域*：输入Active Directory的完全限定域名(FQDN)。</block>
@@ -129,15 +128,7 @@
   <block id="073395e7b5fc53b602884ac0aaf757fb" category="inline-link-macro">数据保护</block>
   <block id="1354abc5a9e8cbf1dfec985c57fdde11" category="paragraph">通过存储清单中的文件系统，您可以 <block ref="41a32458a6146c3b772c57ac70acc68e" category="inline-link-macro-rx"></block>管理FSx for ONTAP文件系统并设置 <block ref="7fb4f81945268c9207e001bdf264dfef" category="inline-link-macro-rx"></block> 资源。</block>
   <block id="8997880c88dd70fe80799ee97bb7ac0c" category="doc">创建链接</block>
-  <block id="6015cd2e9e5bc5b037ad456163cc26cb" category="inline-link-macro">了解有关链接的更多信息</block>
-  <block id="95254aef509d2d84e8ee7dd3052d1b61" category="paragraph"><block ref="97608ab403cabf20e3bcac439aacde61" category="inline-link-macro-rx"></block>(英文)</block>
-  <block id="22cc060f8b88cfca4c298ec0a9aae3fa" category="list-text">使用CloudFormation堆栈添加链接时、您的AWS帐户必须具有以下权限：</block>
-  <block id="89a62ddcc9759060d903ef8b7aee42c3" category="list-text">*链接名称*：输入要用于此链接的名称。此名称在您的帐户中必须是唯一的。</block>
-  <block id="68d5729d2a63e62a04de68bac212b9ab" category="list-text">*标记*：您可以选择添加要与此链接关联的任何标记、以便更轻松地对资源进行分类。例如、您可以添加一个标记、用于将此链接标识为由FSx for ONTAP文件系统使用。</block>
-  <block id="c602cdf8533ce956e9f326890f6d8723" category="list-text">选择*继续*以打开AWS管理控制台、然后登录到此FSx for ONTAP文件系统的AWS帐户。</block>
-  <block id="ab44f988398acb833af7b9b2bc6c26b9" category="list-text">在Quick create堆栈页面的"Capabilities"下、选择*我确认AWS CloudFormation可能会创建IAM资源*。</block>
   <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">结果</block>
-  <block id="19b12f8ea4cd395e2a8c4f8e4dbac642" category="summary">为FSx for ONTAP文件系统创建复制关系、以避免在发生意外灾难时丢失数据。</block>
   <block id="ca0c3dd7dca9f636af3209d526098e1e" category="doc">创建复制关系</block>
   <block id="4820ffe2fe615fd37fb7932b296c86f1" category="inline-link-macro">关联链接</block>
   <block id="b9a2f47b5bc4bd7fcc8d23d6721ec4c2" category="list-text">在创建复制页面上的复制目标下、提供以下内容：</block>
@@ -267,12 +258,10 @@
   <block id="c966edae1d484c4f3e557d47709e08a1" category="list-text">选择*基本操作*，然后选择*编辑卷标记*。</block>
   <block id="9724e2d67a8b8dacb5f774fbf0309b44" category="list-text">在编辑卷标记页面上、添加、编辑或删除标记。</block>
   <block id="88ba83269635947653a5d84b3d1da8be" category="paragraph">一个卷最多可以应用50个标记。</block>
-  <block id="3189fa0a6c27988e9ac820b8115f1001" category="paragraph">只有一个帐户可以管理此功能。</block>
   <block id="fb0d8a1c841cd92afd4cb16ddedaeed5" category="inline-link-macro">配额</block>
   <block id="81b511c5e6d03d742f3a61abc3c4019a" category="paragraph">适用于ONTAP文件系统的所有FSx的最大SSD存储容量为524、288 GiB。要申请增加配额、请参见 <block ref="5e5311b04805e422cc2fabe002034628" category="inline-link-macro-rx"></block> AWS FSx for NetApp ONTAP文档中的。</block>
   <block id="811c0aa0f47faeb6a24c4abfb98d7a22" category="list-text">*凭据*：从下拉菜单中选择具有_Autome_权限的凭据。</block>
   <block id="3e0bdb480d66a7375d532c6c4aff035d" category="paragraph">或者、也可以禁用此功能。如果需要增加文件系统容量、则必须先禁用自动容量管理。</block>
-  <block id="c2a6ed685a94077454f8bad592ecfa44" category="doc">启用和编辑快照以进行长期保留</block>
   <block id="84926cfe10c3390bcbf0d7f22bc20ed1" category="paragraph">这些步骤同样适用于启用和编辑快照以进行长期保留。</block>
   <block id="9c3e61915a26d815f332c75fcafffe40" category="list-text">选择*编辑长期保留*。</block>
   <block id="3a83d555d51f666c990377ce4a7e8300" category="list-text">在编辑长期保留对话框中、启用或禁用要长期保留的快照。</block>
@@ -358,7 +347,6 @@
   <block id="ffc888e5ff626bf410d67b62a9e8a9a8" category="paragraph">有关SSD存储容量限制、请参阅 <block ref="5e5311b04805e422cc2fabe002034628" category="inline-link-macro-rx"></block> AWS FSx for NetApp ONTAP文档中的。</block>
   <block id="3fa4dafc00a14f08641efa3389891289" category="inline-link-macro">禁用自动容量管理</block>
   <block id="bb38e8f0462bc33d127ff7d217a31149" category="list-text">选择已配置容量的单位。</block>
-  <block id="eacbf9150c5d9c7a7032185805a236b8" category="inline-link-macro">启用自动增长功能</block>
   <block id="42812c21ac1eee37a9ac12cf59634ce6" category="paragraph">初始化会执行_baseline传输：创建源卷的快照、然后将该快照及其引用的所有数据块传输到目标卷。</block>
   <block id="8ab8abb2ddeeba17b40c9c83b7345674" category="paragraph">请考虑何时选择完成此操作。初始化可能非常耗时。您可能希望在非高峰时段运行基线传输。</block>
   <block id="18e73e557ecb75c57d1d16ca781cbfbe" category="list-text">选择*初始化*。</block>
@@ -425,25 +413,6 @@
   <block id="76d46f140889dce175ee00325fc5a79f" category="list-text">选择*编辑最大传输速率*。</block>
   <block id="9666adae2ca3bb8c64ee74e40c23c7b3" category="list-text">在编辑最大传输速率对话框中，选择*Limited*，然后输入最大传输速率(MB/秒)</block>
   <block id="0c2c6a9c149348bd95ea113c9e333baa" category="paragraph">或者，选择*Unlimited (无限制)*。</block>
-  <block id="87684df341e5a7d9f280a7bdf2048a6e" category="section-title">链接的工作原理</block>
-  <block id="5abd3a6ae198e27e4c8402463411560f" category="paragraph">链路利用AWS Lambs。在事件发生后、兰代执行代码、并自动管理该代码所需的计算资源。您创建的链接属于您的NetApp帐户、它们与AWS帐户相关联。</block>
-  <block id="66096c22a6220952b7aef731ef78c167" category="section-title">Costs</block>
-  <block id="0ab8cd7f04804af6d53be93ef7bd5345" category="inline-link-macro">详细了解与使用AWS Lamb泄 压相关的成本</block>
-  <block id="70f0040e444997fbb4beeeae8bd03d34" category="paragraph"><block ref="70f0040e444997fbb4beeeae8bd03d34" category="inline-link-macro-rx"></block></block>
-  <block id="8cd69d367e2dbdfca9ec0b55ba13baec" category="section-title">需要链接时</block>
-  <block id="c0653b3ad30a51a0fe3228ad2877ac9d" category="paragraph">需要链接的功能包括：</block>
-  <block id="fa1a08e2a749c9f330c9a8e60cac9cc3" category="doc">管理链接</block>
-  <block id="e32918056c538c64f6e229f2ca257e25" category="section-title">查看与您的帐户关联的链接</block>
-  <block id="a8fa4cf9dc4a62f0a1665e1500bbff0a" category="paragraph">您可以查看当前与您的帐户关联的链接。</block>
-  <block id="c1197fb19ed4c969880f963d9b6df11f" category="list-text">要查看与链接关联的FSx for ONTAP文件系统，请选择“关联的资源”部分中的*view*按钮。</block>
-  <block id="65ded7963c0209145c9b1f65dff784c8" category="list-text">如果您需要链接的亚马逊资源名称(ARN)、可以选择ARN字段旁边的_copy_icon。</block>
-  <block id="93ebb8d72a0e7c1dd1418d053f7a19cd" category="section-title">编辑链接</block>
-  <block id="191297866068665b2c5ad24b9642279b" category="admonition">您可以使用AWS控制台编辑Lamba网络配置(例如VPC、子网和安全组)、所做的更改将反映在链接管理UI中；但是、这些更改可能会导致Lamba和ONTAP之间出现连接问题、因此不建议这样做。</block>
-  <block id="d1a880704664676bffdaf8c74ccfdbbc" category="section-title">删除链接</block>
-  <block id="e39c068b963de97aa76b144b426e273e" category="paragraph">您可以删除环境中不再使用的链接。删除此链接后、任何使用此链接的FSx for ONTAP文件系统或其他资源将无法使用某些功能。</block>
-  <block id="39d7d9e85c32f2e7a66207533ef4a3a9" category="list-text">如果确定，请再次选择*Remove*。</block>
-  <block id="0978bfc9ea0b38f88360973d41319547" category="inline-link-macro">删除Lamb述 函数</block>
-  <block id="0cfc72f205d571b960431be39a5d413e" category="paragraph">请参见AWS文档 <block ref="00813965c876b66bf6a0f1cc3b46a3b0" category="inline-link-macro-rx"></block>。</block>
   <block id="aa7aca7c91fd6a0597d1d445950a06f4" category="doc">FSx for ONTAP的性能</block>
   <block id="bc4bb24d5e702fb79be623b84e7cf47e" category="inline-link-macro">适用于NetApp ONTAP 性能的Amazon FSX</block>
   <block id="635d4737dc14d283881c28be63b10bc5" category="paragraph">有关性能概述、请参见 <block ref="a572b0e55a3a15b7b3460602e8714ba1" category="inline-link-macro-rx"></block> 文档。</block>
@@ -471,14 +440,12 @@
   <block id="0828ddc896996b7d41cc9ceb1e453764" category="list-text">在重置密码对话框中、提供以下内容：</block>
   <block id="8d54082fcba7dd82063ffe4497f8c70d" category="list-text">*新密码*：输入Storage VM的新密码。</block>
   <block id="ebb4bf732c3ade314c393d5284af8715" category="list-text">*确认密码*：再次输入新密码进行确认。</block>
-  <block id="8b0e8407f70ad599b0ea28ad2aba3c8d" category="summary">将卷从备份还原到AWS帐户中的任何FSx for ONTAP文件系统。</block>
   <block id="669e24f4895025d47b6321e03f0890e4" category="doc">从备份还原卷</block>
   <block id="954f91e5419aff167b9c5ff119492972" category="list-text">在Restore from a backup对话框中、提供以下内容：</block>
   <block id="1db91acefbe1be544aa103101dea1eea" category="list-text">*目标文件系统*：从下拉菜单中选择目标文件系统。</block>
   <block id="dce3fffc0f825635bb1abc80d4fad0d8" category="list-text">*目标Storage VM*：从下拉菜单中选择目标Storage VM。</block>
   <block id="729115b7e52442b1c882ac7f46519925" category="list-text">*备份名称*：从下拉菜单中选择备份名称。</block>
   <block id="c5cce99928ce0d8af5b82b7d22ea310e" category="list-text">*已还原卷名称*：输入已还原的卷名称。</block>
-  <block id="67b0d8b6788b457b2c8385033f28756f" category="summary">当FSx for ONTAP卷包含已删除或损坏的文件时、从快照还原该卷。</block>
   <block id="c90683522eadafc05ec442d8c440363f" category="doc">从快照还原卷</block>
   <block id="71fa8628af6f2038af0eab0c8ca9c4cf" category="paragraph">只有当卷的现有Snapshot副本已存在时、才能从快照还原卷。</block>
   <block id="dfb1565e1ec2734dcbcb24e6b43c9919" category="list-text">在*已还原卷名称*字段中、为要还原的卷输入一个唯一名称。</block>
@@ -544,7 +511,6 @@
   <block id="684375e279a289295b72a006d93e2c4c" category="paragraph">在此过程中、NetApp应与您联系。这是针对新用户的一次性入职练习。</block>
   <block id="fb4531252f707fbda1308840e3c7d6af" category="summary">随时手动更新复制关系中源卷和目标卷之间传输的快照数据。</block>
   <block id="fa0604fd5c522ae5ab642bebf836c3d0" category="list-text">选择*立即更新*。</block>
-  <block id="241ea6618170a92484ea213e4cade854" category="doc">更新文件系统的吞吐量容量</block>
   <block id="6cc2a35072ede8f6e3bef70bce54ed8c" category="paragraph">有关吞吐量容量限制、请参阅 <block ref="5e5311b04805e422cc2fabe002034628" category="inline-link-macro-rx"></block> AWS FSx for NetApp ONTAP文档中的。</block>
   <block id="77fe58178c324bbc70fcb16af3bf2b46" category="list-text">在吞吐量容量对话框中、选择所需的吞吐量容量。</block>
   <block id="69a94f722f40461d326d0d87f7643499" category="summary">了解Amazon FSx for NetApp ONTAP的新增功能。</block>
@@ -559,24 +525,14 @@
   <block id="c82c15e6d66564201da1f424b2fb9bf4" category="sidebar">适用于NetApp的Amazon FSX ONTAP 文档</block>
   <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">新增功能</block>
   <block id="7aa1575aeeddba65d55707b41584cd4a" category="sidebar">使用适用于NetApp ONTAP 的Amazon FSx</block>
-  <block id="2553f0a003cdfb6c46e0fb29cca1c670" category="sidebar">使用链接</block>
   <block id="dc88dce8ec264777b2f90ec0af744f43" category="sidebar">创建卷</block>
   <block id="8272f5b23e79d0ee33bd5151dcddc454" category="sidebar">创建Storage VM</block>
   <block id="e5787a3a7b79c3cdbeb01e163f0a84de" category="sidebar">管理快照</block>
   <block id="af9c364e0933200b7b8c1e7e13947ccf" category="sidebar">创建快照</block>
   <block id="e807ebdf213353b8a415f991a2cade81" category="sidebar">创建快照策略</block>
-  <block id="c650dc131eb6eb56a3ed637559a17a3f" category="sidebar">创建手动备份</block>
-  <block id="5eb43e1edd4f0757c83c6d6f6632ff94" category="sidebar">管理和监控</block>
-  <block id="8cf9dbe17cb44a10f0622b63961c131d" category="sidebar">卷管理</block>
   <block id="56994f1db86bfe709cbe47f96bde566f" category="sidebar">编辑卷自动增长</block>
-  <block id="28b0bfb965f113c41530116951bfce50" category="sidebar">文件系统管理</block>
   <block id="ff117b5e42f4a60dd5b7859999c4f2bd" category="sidebar">启用自动容量管理</block>
-  <block id="c7ad4dd9b2ecb508f1366110b020e001" category="sidebar">重置fsxadmin密码</block>
-  <block id="bf36a77b5166293d07ef75b2861c69ad" category="sidebar">Storage VM 管理</block>
   <block id="463b6a907cababadde63e20d0a9d0a30" category="sidebar">将Storage VM复制到另一个文件系统</block>
-  <block id="b7f48cbd151b44682a0f2a8ffa114d0f" category="sidebar">重置Storage VM密码</block>
-  <block id="7f8d84e7d0adb2682a7102214e49dee2" category="sidebar">数据保护管理</block>
-  <block id="267e5e88580f97af56a5fa2b981a6a67" category="sidebar">性能管理</block>
   <block id="ef045d17e80274aec5be009d1f13f5a2" category="sidebar">为文件系统配置IOPS</block>
   <block id="63d5049791d9d79d86e9a108b0a999ca" category="sidebar">参考</block>
   <block id="c7f1094806f4a7907a28dc01a1473f90" category="inline-link-macro">了解如何使用CodeBox实现自动化</block>
@@ -585,8 +541,6 @@
   <block id="21e6ab9737790ab1abc18e49091d3c18" category="paragraph">下图直观地展示了使用快照、跨区域复制以及备份到对象存储来保护FSx for ONTAP存储的数据。</block>
   <block id="90388f794d575e628df271470a4b766e" category="inline-image-macro">屏幕截图显示了使用快照、跨区域复制以及备份到对象存储来保护FSx for ONTAP存储的数据。</block>
   <block id="29bed1477f8a04f4f702564c7e6bb224" category="paragraph"><block ref="29bed1477f8a04f4f702564c7e6bb224" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="d527a24e3cd3e2df59c9ec57fb8383de" category="inline-image-macro">屏幕截图、显示了正在使用特定链接的适用于ONTAP文件系统的FSx。</block>
-  <block id="8153258b50418b6ebcd06d64da06a5bc" category="paragraph"><block ref="8153258b50418b6ebcd06d64da06a5bc" category="inline-image-macro-rx" type="image"></block></block>
   <block id="efa42d5c66cb9948f402ee559611e12d" category="section-title">Terraform支持</block>
   <block id="75086276ae6b7e370f36c7fc49383216" category="inline-link-macro">创建文件系统</block>
   <block id="2532cd63354e6e99119077d45134b5ef" category="inline-link-macro">使用CodeBox中的Terraform</block>
@@ -649,9 +603,6 @@
   <block id="3721bd571f4111dad2c363436de34c51" category="list-text">支持手动创建链接：此功能允许通过手动注册链接ARN在AWS CloudFormation中独立创建。当安全或开发运营团队协助创建链接时、这将非常有用。</block>
   <block id="37bb8b5cad0754acdd2d9ed1e9d36928" category="paragraph">委派管理员组是Active Directory中可管理文件系统的组的名称。</block>
   <block id="1ffab80b063e5f05f25ab6681156237d" category="paragraph">如果您要连接到自行管理的AD、请使用AD中的组名称。默认组为<block ref="746c2ea920930b61350130daa63e23e5" prefix=" " category="inline-code"></block>。</block>
-  <block id="758ce486f132a2978be7ecfbcd518afa" category="list-text">您应考虑使用哪种链接创建选项。</block>
-  <block id="6903e2b3a86228f4d258e423fb6b913a" category="open-title">自动创建</block>
-  <block id="a85b3f8e5456d47e8056e0372aeccb2a" category="open-title">手动创建</block>
   <block id="26e6f4cc71039ce95ddbb0acdad6891d" category="section-title">2024年9月29日</block>
   <block id="50fa5062b83d0f575448ba449245fa17" category="list-text">iSCSI协议仅适用于FlexVol卷。^1^</block>
   <block id="e6816f159adf84ca7c085ce0702311af" category="inline-link-macro">删除所有现有复制关系</block>
@@ -666,7 +617,6 @@
   <block id="3b915cd68add8a6cdac4cd1adeb5f100" category="list-text"><block ref="3b915cd68add8a6cdac4cd1adeb5f100" category="inline-link-macro-rx"></block></block>
   <block id="7115d78353263dbb2dbe063624f9f601" category="list-text"><block ref="7115d78353263dbb2dbe063624f9f601" category="inline-link-macro-rx"></block></block>
   <block id="a0fbee91270a9c1ec1d2bc9b56f87ff3" category="paragraph"><block ref="a0fbee91270a9c1ec1d2bc9b56f87ff3" category="inline-link-macro-rx"></block></block>
-  <block id="3874612023324fe909b90a886072b352" category="paragraph"><block ref="3874612023324fe909b90a886072b352" category="inline-link-macro-rx"></block></block>
   <block id="0d2c81cd9ea6f82a77b580a488c5e8aa" category="doc">访问FSx for ONTAP文件系统数据</block>
   <block id="dcafe9cce796ce855e87b270f0a5af59" category="inline-link-macro">控制台体验</block>
   <block id="e1e54933838bb7ba662301d01c937d2d" category="list-text">使用其中一个登录<block ref="68ceec76279c6913cdee16884c2d813a" category="inline-link-macro-rx"></block>。</block>
@@ -676,11 +626,9 @@
   <block id="ff4d762e1ab6dd75731a4f97e66ec902" category="list-text">选择*备份*。</block>
   <block id="88ece72bda0e38c0bdca32d19f42a979" category="doc">在BlueXP  工作负载出厂时为ONTAP文件系统创建FSx</block>
   <block id="bf18811faac9b8e4fcaebab51afd1113" category="list-text">选择 * 创建 * 。</block>
-  <block id="4d4e41a17abafe417449016add2ee0bd" category="list-text">选择*创建堆栈*，然后选择*继续*。</block>
   <block id="c853397a437814fc2251c95bdf57909f" category="list-text">在“删除关系”对话框中，选择*Delete*。</block>
   <block id="ad1d6a18c0d830b44dfe2e6a96d2807d" category="list-text">(可选)选择*备份卷*以在删除前备份卷。</block>
   <block id="136dc09835924029e4299fa28f17233d" category="list-text">选择 * 继续 * 。</block>
-  <block id="759c5ad2620497fe90dc2bc5e085c8c0" category="summary">启用快照以实现长期保留、这样您就可以复制特定快照以实现长期灾难恢复。</block>
   <block id="37873c6c78867be44aa0676105354543" category="paragraph">通过长期保留、即使在站点完全瘫痪的情况下、业务服务也可以继续运行、从而支持使用二级副本对应用程序进行透明故障转移。</block>
   <block id="8107582f3eb31967f7b5b6bdc4826ea0" category="list-text">如果选择禁用快照以进行长期保留、请选择*应用*以完成此操作。</block>
   <block id="66ca66124b69024cef94c671dc4b97bf" category="list-text">要使用现有策略、请从下拉菜单中选择该策略。</block>
@@ -693,9 +641,6 @@
   <block id="478b776fc28a60e8545a858eb7ca9a3e" category="summary">已知限制确定了本产品版本不支持的平台、设备或功能、或者这些平台、设备或功能无法与产品正确交互操作。</block>
   <block id="384c5c520d0877aaaaed76d75d973d99" category="list-text">*存储成本比较计算器*：将您的Amazon Elelic Block Store (EBS)、Elelic File System (EFS)和FSx for Windows File Server存储成本与FSx for ONTAP进行比较。通过计算器、您可以查看FSx for ONTAP存储配置如何提供潜在的节省、并计划迁移到FSx for ONTAP存储。</block>
   <block id="f6858e5eadd0ed940450d85121838545" category="list-text">*Workload Factory用户界面*:提供_Quick cree_和_Advanced cree_部署模式选项。Quick create包含适用于您的存储配置的AWS、NetApp和行业标准最佳实践。</block>
-  <block id="53fe87832fd05bf7a8e9f1e1bad4aa86" category="doc">管理FSx for ONTAP文件系统的备份计划</block>
-  <block id="9f16bb4c9cbb656a02f2d0ac20ae70a8" category="list-text">*每日自动备份*：启用或禁用此功能。如果禁用此功能，请选择*Apply*。如果启用了此功能、请完成以下步骤。</block>
-  <block id="1b7732fda3ed237c994a5ac55fb150ea" category="list-text">*每日自动备份窗口*:选择*No Preferences*(已为您选择每日备份开始时间)或*Select start time for daily backups*并指定开始时间。</block>
   <block id="eeba2ebb020e2a04f72c79660c1af4c0" category="inline-link-macro">增加文件系统容量</block>
   <block id="c0e7e25823412689ce1766213ff693a9" category="paragraph">有关IOPS限制的信息、请参阅<block ref="5e5311b04805e422cc2fabe002034628" category="inline-link-macro-rx"></block>AWS FSx for NetApp ONTAP文档中的。</block>
   <block id="b110ae22e3b6b4051be0372bbeb02ea7" category="list-text">在"Information"(信息)下、选择鼠标悬停在*IOPS分配*行上时显示在下拉箭头旁边的铅笔图标。</block>
@@ -753,7 +698,6 @@
   <block id="4185f116d64b1130e6f9ba4250b147fa" category="paragraph">开始之前、请确保您已具备以下条件：</block>
   <block id="7e496dd07644d2f06f315e4fa164cc69" category="list-text">用于复制的FSx for ONTAP文件系统。</block>
   <block id="165a2e236f1aabd383e31c0b94f74338" category="inline-link-macro">创建一个</block>
-  <block id="96c11fa75af4ee186742d94b8c4312d1" category="list-text">要与发现的内部集群关联的已连接链路。如果没有链接，则需要<block ref="fde76afbe668994cedb59a1786140b8f" category="inline-link-macro-rx"></block>。</block>
   <block id="d9475c746638e60d2b7ab26ca255f52c" category="list-text">具有所需权限的ONTAP用户凭据。</block>
   <block id="08964fe3be5deba1b9687a253e630608" category="list-text">内部ONTAP 9.8及更高版本。</block>
   <block id="23850e6cb293edf3ae576c2cd44e4966" category="list-text">连接、如下图所示。</block>
@@ -780,8 +724,6 @@
   <block id="a4f4dcbfc1fe91a36caaac04506e0179" category="list-text">对于新策略，请选择*创建新策略*并提供以下内容：</block>
   <block id="3b1c3bad959c6c151d464eb6b626f56f" category="paragraph">您必须<block ref="fa9c4758a74309c74eff4644a0675063" category="inline-link-macro-rx"></block>先对内部ONTAP集群中的所有卷执行此操作、然后才能删除此集群、这样就不会保留任何已断开的关系。</block>
   <block id="78ce280a4b77e37298d71642a4457c0a" category="list-text">选择要删除的内部ONTAP集群。</block>
-  <block id="aab28bb522b1a572add493963001b88d" category="sidebar">使用内部ONTAP数据</block>
-  <block id="5d831b6559b5decf8f758715856498b9" category="sidebar">更新存储效率</block>
   <block id="442b133d7d895a50d67d2f8514b6fc0a" category="doc">卷CIFS共享增强功能</block>
   <block id="c67048e1717263df3fc8ffc894f40785" category="paragraph">以下增强功能可用于在BlueXP  工作负载工厂中管理Amazon FSx for ONTAP文件系统中卷的CIFS共享：</block>
   <block id="28ee2134fc1275e4f2052b7bd91a9f8d" category="list-text">支持在一个卷上使用多个CIFS共享</block>
@@ -793,7 +735,6 @@
   <block id="2898ec90c27f1541e38a1849b4b9923a" category="list-text">在挂载命令对话框中、选择*复制*以复制NFS挂载点或CIFS共享的命令。您将在终端中输入复制的命令。</block>
   <block id="42236277fa3913ec4d1fd1e17b26874c" category="paragraph">在所有地区、纵向扩展配置最高支持2 Gb/秒。以下地区支持纵向扩展部署的最大吞吐量高达4 GB/秒：美国东部(俄亥俄州)地区、美国东部(弗吉尼亚)地区、美国西部(俄勒冈)地区和欧洲(爱尔兰)。</block>
   <block id="f23f9e699754fa9634675e68ddb2477a" category="list-text">对于长期保留复制关系、只有最后一个快照可供还原。</block>
-  <block id="70b71b7616d1607e66f58defc9384bf3" category="list-text">在FSx for ONTAP文件系统上管理iSCSI卷</block>
   <block id="ed2b1c265309f7d9a2006128f317479e" category="paragraph">开始之前、请执行以下操作：</block>
   <block id="0162ca60ba3c63c1058d5815f318b75b" category="section-title">为卷创建CIFS共享</block>
   <block id="37b8354fe553b0151888468751ea8eb0" category="section-title">2025年1月5日</block>
@@ -909,10 +850,6 @@
   <block id="cf5df8345ca5f203e0f805460b558155" category="list-text">单可用性区域(单可用性区域、单可用性)部署：通过监控硬件故障来提供可用性、并在发生故障时自动更换基础架构组件。通过在可用性区域中自动复制数据以防止其发生组件故障、实现高持久性。</block>
   <block id="99f375ee1d56d1983309c071fe9cb69a" category="paragraph">目标文件系统中复制的卷是数据保护(DP)卷，命名格式如下：<block ref="4b5beb37da0fa6444b7f9f92238aadb1" prefix=" " category="inline-code"></block>。</block>
   <block id="df4c98f43132ebd68d92a0c9822984df" category="list-text">在复制数据页面上的复制目标下、提供以下内容：</block>
-  <block id="0cbe076a4ce5208b10cdb81c9e175006" category="list-text">*选择现有策略*：从下拉菜单中选择现有策略。</block>
-  <block id="b9a658e63ae9e8d9a604efb8acd930e6" category="list-text">*创建新策略*：提供以下内容：</block>
-  <block id="78c187892204fa9a888a00a5635447c9" category="list-text">可选：启用不可删除的快照。</block>
-  <block id="bac08643512e190f9a6a6c2a8e9b983b" category="list-text">选择*启用不可更改的快照*以防止在保留期间删除此策略中创建的快照。</block>
   <block id="4e41f89501d754d5c6885a51e74ac5f0" category="list-text">以小时、天、月或年为单位设置*保留期限*。</block>
   <block id="cf6066b0e9e3a71171e38923cf6da6f9" category="list-text">在文件系统概述中，选择*Storage VMS*选项卡。</block>
   <block id="c92307c84c3661374297e6b2cb6a8af4" category="list-text">在Snapshot策略管理页面上，选择*Create Snapshot policy*。</block>
@@ -934,7 +871,6 @@
   <block id="40042d0ee93698f3f63a7f8a3f2c9c1f" category="paragraph">手动时<block ref="a9cec068297d5b243eecd658574a7cef" category="inline-link-macro-rx"></block>、您可能需要增加IOPS分配以支持增加的文件系统容量。</block>
   <block id="d2a2f0e04d26b7123eb9c705ec13e758" category="list-text">此操作可能需要大约30分钟才能完成。</block>
   <block id="1e0df4591e77aee403bcdd8f97b71ee5" category="paragraph">限制最大传输速率是可选的、但建议这样做。如果没有限制、网络和应用程序性能可能会下降。</block>
-  <block id="8deecf84343cc455d4c3c3eea19e99e4" category="summary">启用此功能后、您可以更新某些不可更改的文件设置。</block>
   <block id="64a89a3651290ba9a03fd440b6a0ebf1" category="paragraph">启用此功能后、您可以更新卷的某些不可变文件设置、例如保留策略和期限、自动提交期限以及卷附加模式。</block>
   <block id="b492e06a3b3ad8340a18b513da6d700b" category="inline-link-macro">创建卷</block>
   <block id="dcfa45791ee058474d9440831351e387" category="paragraph">请注意，只有在期间才能启用不可删除的文件<block ref="c2ed7675c4babbb461c62976097c066d" category="inline-link-macro-rx"></block>。</block>
@@ -948,7 +884,6 @@
   <block id="25c4d2e22e431bb231ebfacb000ad26c" category="list-text">*自动提交*：启用或禁用自动将在自动提交期间未修改的文件提交到WORM的功能。</block>
   <block id="a673f232c0f3e69598b33b45ea372eb0" category="list-text">*卷附加模式*：启用或禁用此功能。启用卷附加模式后、您可以向WORM文件添加新内容。</block>
   <block id="400fae8e788b3721b9ac25fe01f04f50" category="list-text">单击 * 应用 * 。</block>
-  <block id="0040dd329c12b8e069f111ec942d89fd" category="paragraph">现在、更新将应用于卷。</block>
   <block id="750bccba0d1370cdcf80e381531ccf20" category="paragraph">管理卷的导出策略涉及添加详细说明客户端规范、访问控制、超级用户访问和NFS版本的导出策略规则。您可以添加多个导出策略并确定其优先级。</block>
   <block id="4867c217eac62c97b182966f57c83e8f" category="doc">管理Snapshot策略</block>
   <block id="491d37c735073b9ba15b69c580439021" category="paragraph">为FSx for ONTAP文件系统中的卷分配、更改和删除Snapshot策略等Snapshot管理操作在Storage VM级别进行管理。Snapshot策略可以与单个Storage VM共享、也可以与所有Storage VM共享。</block>
@@ -972,15 +907,12 @@
   <block id="07d4b0619f50f6f95ed7b83a046239a5" category="section-title">删除快照策略</block>
   <block id="696434880f5851290eaa4b1ba9f80d85" category="paragraph">删除不再需要的快照策略。</block>
   <block id="6a89139e7be9bba144081cf61352e3c2" category="list-text">在删除对话框中，选择*Delete*以删除策略。</block>
-  <block id="7aea6efc0dbafc8802c9399b1e3f6754" category="summary">暂停和恢复复制关系、以便目标卷成为源卷。</block>
-  <block id="76540d9eea5e27790a75dc0204324995" category="paragraph">暂停后、源卷和目标卷之间的复制关系将继续存在。数据传输将暂停、卷将变得独立。要重新启用从源卷到目标卷的更改传输、请恢复复制。</block>
   <block id="9eef2cd11da6de70c97fb30475ecd676" category="paragraph">如果在传输进行中暂停、则传输不会受到影响、关系将变为"暂停"、直到传输完成为止。如果当前传输已被禁止、则它现在是将来的传输、不会重新启动。</block>
   <block id="a252d0c2ed77d353301a08614eb0500e" category="section-title">暂停复制关系</block>
   <block id="a967615115cf9697b2655e3b54f1a0f4" category="list-text">选择*暂停(暂停)*。</block>
   <block id="dbd53807f2ebdf4974197a2ab5736a1a" category="list-text">在“*置于两国间的关系”对话框中，选择“*置于两国间的关系”。</block>
   <block id="bac97be0c65530902c34b510dbb654b6" category="paragraph">此关系将暂停、并且其状态显示为"Paused"。</block>
   <block id="eb59ce075de56e53756cdc61346d3683" category="section-title">恢复已暂停的复制关系</block>
-  <block id="510f0c7862ed4f4c13983246f994308e" category="paragraph">恢复复制关系后、在复制停止期间对目标卷所做的任何更改都将被删除。</block>
   <block id="f9d637e15d973238afdaad997d440a45" category="list-text">选择*恢复*。</block>
   <block id="e7dcd5c9be11d7b7d17ab22e0486a710" category="list-text">在“恢复关系”对话框中，选择*Resume*。</block>
   <block id="a79cee1f678331ce4a5e786550999b02" category="paragraph">此关系将恢复、并且其状态显示为"已复制"。</block>
@@ -1156,7 +1088,6 @@
   <block id="2bbce7d3d059871083eb12013b7bc70d" category="section-title">支持备用ONTAP用户凭据</block>
   <block id="21fe54f48c52f1924f6b2b74751f1611" category="paragraph">工作负载工厂现在支持使用备用ONTAP凭据集来创建文件系统、从而最大限度地降低安全风险。您可以选择一组不同的ONTAP凭据、也可以选择不为fsxadmin和vsaadmin用户提供密码、而不是仅使用fsxadmin用户。</block>
   <block id="514f1fc0ac0ff6e4200d3637146367f1" category="section-title">更新了权限术语</block>
-  <block id="17f03194826a802587b82edd13d7ac95" category="summary">复制数据保护卷或级联卷数据复制、将数据保护扩展到三级系统或迁移数据。</block>
   <block id="7652817ee4e140c39bef87f9905461f3" category="inline-link-macro">兼容ONTAP版本的ONTAP文档</block>
   <block id="96931212d5287ed1b328f78b0384b98d" category="paragraph">对于运行ONTAP 9.6及更高版本的ONTAP文件系统、FSx支持此功能。请参阅 <block ref="645fdc124f317ebe54966e1f8afbb990" category="inline-link-macro-rx"></block>。</block>
   <block id="1d11e66dcfc6dd530af10db4a5a40087" category="inline-link-macro">级联部署的工作原理</block>
@@ -1181,28 +1112,6 @@
   <block id="824994853534784eb4495b892e13b1c6" category="paragraph">如果您提供的用户不是fsxadmin用户、而稍后您需要重置fsxadmin密码、则可以从AWS控制台执行此操作。</block>
   <block id="dd34b811cd079417f985f8f56a4f1dca" category="list-text">* Storage VM凭据*：可选。输入您的用户名。密码可以特定于此文件系统、也可以使用为ONTAP凭据输入的相同密码。可以现在或稍后设置密码。</block>
   <block id="37b002845528ac0296b86d28bb71e5a5" category="doc">使用Lamba链接连接到FSx for ONTAP文件系统</block>
-  <block id="2c1b9e7969c6e96f38bd871fc9f26ae1" category="section-title">关联新链接</block>
-  <block id="05a2e668e80fd3ace12e9585ebc06578" category="paragraph">关联新链接包括创建和关联。</block>
-  <block id="de786693aed7955f1cb538f51e25f7d6" category="paragraph">您可以根据默认权限创建机密、也可以为链接策略分配自定义权限。</block>
-  <block id="49af4dcead2678507453b9bff6c332f1" category="paragraph">*将VPC专用端点配置到AWS秘密管理器*默认处于禁用状态。选择此选项将使用VPC专用端点存储此密钥、而不是将其存储在本地。</block>
-  <block id="48457d7f94975228307244f863f96fee" category="section-title">将现有链接与FSx for ONTAP文件系统相关联</block>
-  <block id="447f36846a239be6be0faf7dc1fa0364" category="list-text">在关联链接页面中，选择*关联现有链接*，选择链接，然后选择*继续*。</block>
-  <block id="5b5b11575f2a0c06c832b5cbd1c6dcfe" category="list-text">选择身份验证模式。</block>
-  <block id="219e99148dae7112d47eedc1f49517ae" category="list-text">Workload Factory：输入密码两次。</block>
-  <block id="b9000423f3d632810a4d8c3550eb4119" category="list-text">AWS机密管理器：输入机密ARN。</block>
-  <block id="91a73bc4f293d9fc4712c2770316ae08" category="list-text">filesystemID = FSx文件系统ID</block>
-  <block id="db1e2f706f83d7a3a9a03793db05422a" category="list-text">密码= USER_password</block>
-  <block id="3179fc8078925ef0503270fd907af44c" category="paragraph">此链接与FSx for ONTAP文件系统关联。您可以执行高级ONTAP操作。</block>
-  <block id="db9a0ca8d6bb6376ddaad7f254b049aa" category="section-title">对AWS的"Links Manager"链接身份验证问题进行故障排除</block>
-  <block id="642facf67e0ad311eee88b3ab8381590" category="list-text">问题描述</block>
-  <block id="c8a40767f19af94e9fbb95ab3a4c55c3" category="list-text">此链接缺少检索密钥的权限。</block>
-  <block id="4d918e036d58715d6e2919d728c5bea9" category="paragraph">*resolution*：链接处于活动状态后添加权限。登录到AWS控制台、找到Lamb代 链接、然后编辑附加的权限策略。</block>
-  <block id="61eb4620c8bf60aa233a601b6f63ae77" category="list-text">未找到密钥。</block>
-  <block id="ee67bf640d0b52ba5e821e265b1eacf5" category="paragraph">*分辨率*：提供正确的密钥ARN。</block>
-  <block id="0733070c151f197e780e335f701571f1" category="list-text">机密格式不正确。</block>
-  <block id="6ef3be28f69c1735acc5b68f50b352ab" category="paragraph">*分辨率*：转到AWS的"27.0"选项并编辑格式。</block>
-  <block id="ecc4c534126952c05eb3829106343643" category="list-text">此密钥不包含用于文件系统身份验证的有效ONTAP凭据。</block>
-  <block id="b94462bb135856834e40d9c982dbbc8b" category="paragraph">*解决方案*：提供可在AWS密码管理器中对ONTAP文件系统FSx进行身份验证的凭据。</block>
   <block id="db02b80a9dd5a7c959ec87fdf41baa91" category="inline-link-macro">级联复制</block>
   <block id="a9349d3c10a82990ac0a1fc539e5f621" category="list-text">复制文件系统中的所有卷或复制选定卷。</block>
   <block id="ccbd024216a98284de9e40d4f35c7a8e" category="list-text">复制文件系统中的所有卷：从文件系统概述中，选择*复制数据*。</block>
@@ -1219,16 +1128,6 @@
   <block id="887673b402c7bbc141e56321e277605f" category="list-text">远程数据复制</block>
   <block id="c9e425055996f71ecfc858708d926276" category="paragraph">此建议说明了未优化配置的最佳实践和潜在陷阱。</block>
   <block id="20086b220eeb33caf74bd6e628cfcd8c" category="section-title">AWS支持</block>
-  <block id="eee5751928fa32e80cacc3177eabff02" category="section-title">对链路进行身份验证</block>
-  <block id="696ea928d9d3c6e9a7783d23ab82a78a" category="admonition">每个链路仅支持一种身份验证方法。例如、如果您选择使用AWS专有信息管理器进行链接身份验证、则以后无法更改此身份验证方法。</block>
-  <block id="baab97c3c06c21b10c5fbf084fed88fe" category="list-text">在文件系统概述中，选择*鉴定链接*。</block>
-  <block id="6a77bcb0db7f616ab9e6d4b9682fd2e8" category="list-text">在身份验证链接页面中、选择身份验证模式：</block>
-  <block id="9bb198b717235f0a6c47edbb623da61b" category="paragraph">链路经过身份验证、您可以执行高级ONTAP操作</block>
-  <block id="5939baecae7dc8288ebfc473986ecb42" category="section-title">更新用于链路身份验证的密码</block>
-  <block id="3dbdaf9d78c6e1835c0a6d5d7aaaf3f4" category="paragraph">如果管理密码无效、请更新此密码以连接到FSx for ONTAP文件系统的链接。</block>
-  <block id="99210d4bfc7a4ca55c8efe57bb8b88d1" category="list-text">在文件系统概述中，选择*更新密码*。</block>
-  <block id="f98b1cc9dd042df9aefdcb9f72b86aeb" category="list-text">在身份验证链接页面中、输入新密码两次。</block>
-  <block id="3b9daf2248cf3d9617b236df5c887b99" category="paragraph">此时、密码已更新、并且此链接现已连接到FSx for ONTAP文件系统。</block>
   <block id="6092aff2fd96382c8039bf4b05f69f42" category="paragraph">Tracker提供了多种操作。您可以按时间范围(过去24小时、7天、14天或30天)、工作负载、状态和用户筛选作业；使用搜索功能查找作业；以及将作业表下载为CSV文件。您可以随时刷新Tracker。您可以快速重试失败的操作、也可以编辑失败操作的参数并重试此操作。</block>
   <block id="9233b1148f18eb744b69d4d3620c296c" category="paragraph">Tracker支持两个级别的监控、具体取决于操作。每个任务(例如文件系统部署)都会显示任务说明、状态、开始时间、任务工期、用户、区域、代理资源、任务ID以及所有相关子任务。您可以查看API响应以了解操作期间发生的情况。</block>
   <block id="0438bb5671845786f65a3d1eaf90ee88" category="list-text">将传入数据标识为加密或纯文本。</block>
@@ -1278,7 +1177,6 @@
   <block id="7583f12b4559f6687c67d8588da1e2f7" category="doc">卷自动增长增强</block>
   <block id="b57fe4f5ee65a0e01f61993297811ebf" category="paragraph">现在，您可以设置卷的自动增长大小，以便卷大小可以超出业务需求和应用程序要求的预配置大小。</block>
   <block id="9f1effd9ace68ca00fe9e9e3c024b362" category="inline-link-macro">启用卷自动增长</block>
-  <block id="0177289fb77b50bdfc34ab44aa432a21" category="paragraph"><block ref="0177289fb77b50bdfc34ab44aa432a21" category="inline-link-macro-rx"></block></block>
   <block id="159687e1c95e32f1dcb6c9c1624ba327" category="section-title">架构完善的分析更新</block>
   <block id="8500b95246538dfef049532751c1e9f5" category="paragraph">工作负载工厂现在会分析您的 FSx for ONTAP 文件系统，以检查是否正在利用存储效率，包括数据压缩、压缩和重复数据删除。存储效率衡量文件系统利用可用空间的效率。</block>
   <block id="26e5625f54c5c47a57293d23260101c7" category="inline-link-macro">查看存储效率的良好架构状态</block>
@@ -1312,24 +1210,6 @@
   <block id="5a7cf4155ebaa9aec1f33318c7c4cf82" category="section-title">2025年6月8日</block>
   <block id="2d5a4b914acb6c2f03d312067c73ce32" category="section-title">2025年3月2日</block>
   <block id="be8334e3a8f0885af8e03ba816b24537" category="inline-link-macro">了解如何关联现有链接或创建并关联新链接</block>
-  <block id="3b1785543fb9e9ab18e56f4cf89f47d9" category="paragraph"><block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>(英文)</block>
-  <block id="d7a33a9350fbc2bb6f775eabf85866de" category="list-text">必须在与 FSx for ONTAP 文件系统关联的安全组中打开以下端口以实现链路连接。</block>
-  <block id="316509fcb5a8d1b5e1280f3f64c594f2" category="list-text">用户名 = FSx_user</block>
-  <block id="3cb1fda07c1d6b96bda1c65f1996fc1f" category="list-text">要创建自定义快照策略，您必须关联一个链接。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>(英文)链接关联后、返回此操作。</block>
-  <block id="d49502975428f953533ab14ab9c02a5b" category="paragraph">您必须关联一个链接才能创建卷的手动快照。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>(英文)链接关联后、返回此操作。</block>
-  <block id="6234e99ad9e8c051d4afaa47c5d4ff82" category="list-text">要配置对卷的访问，您必须关联一个链接。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>(英文)链接关联后、返回此操作。</block>
-  <block id="2b34fc0bead4dcf64099078fdaf86d69" category="paragraph">要启用卷自动增长，您必须关联一个链接。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>(英文)链接关联后、返回此操作。</block>
-  <block id="f8e03e36604030c79d6107b800f61804" category="list-text">为了确保卷 inode 随着存储容量的增加，您必须关联一个链接。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>(英文)链接关联后、返回此操作。</block>
-  <block id="2c793b5b15ea565983390f5625f7b85b" category="inline-link-macro">创建并关联链接</block>
-  <block id="d2daf1f2c560c48cb1e86e38214b4f9f" category="paragraph"><block ref="97608ab403cabf20e3bcac439aacde61" category="inline-link-macro-rx"></block> 或 <block ref="cd9ae14bef62d063a73930ad8837c0cf" category="inline-link-macro-rx"></block>。</block>
-  <block id="facdbacecd0a382dee80b9b865bb8503" category="paragraph">要显示现有的快照策略，您必须关联一个链接。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>(英文)链接关联后、返回此操作。</block>
-  <block id="934b00a26e238802a369f0478947166f" category="paragraph">您必须关联一个链接才能启用不可变快照。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>(英文)链接关联后、返回此操作。</block>
-  <block id="00c1c06957f8f476507e7c8eab416ca3" category="paragraph">您必须关联一个链接才能分配快照策略。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>(英文)链接关联后、返回此操作。</block>
-  <block id="f25575fb26d63d8bebf4c5a568518443" category="paragraph">您必须关联一个链接才能删除快照策略。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>(英文)链接关联后、返回此操作。</block>
-  <block id="2ccb6b87f6c03ced811ff29d2a5f5ede" category="paragraph">要将存储虚拟机复制到另一个 FSx for ONTAP 文件系统，您必须关联一个链接。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>(英文)链接关联后、返回此操作。</block>
-  <block id="99ae6104ba82455197d215357b50f2f1" category="list-text">要分割克隆卷，您必须关联一个链接。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>(英文)链接关联后、返回此操作。</block>
-  <block id="21bd8c562c1d6ae4caf8a36f6d06c516" category="list-text">内部ONTAP集群和用于复制关系的FSx for ONTAP文件系统都必须具有关联的链接。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>(英文)链接关联后、返回此操作。</block>
-  <block id="11f24c2a8c13499208f4d69098436bd2" category="paragraph">如果没有限制、网络和应用程序性能可能会下降。或者、对于关键工作负载(例如、主要用于灾难恢复的工作负载)、我们建议对用于ONTAP文件系统的FSx使用无限传输速率。。在复制设置下、提供以下内容：</block>
   <block id="fca40712560cec2d2b7a47110cfecda1" category="list-text">*创建新策略*：输入*策略名称*。</block>
   <block id="0546ab198c101c424e412d1355272bcd" category="list-text">*不可变快照*：可选。选择*启用不可更改的快照*以防止在保留期间删除此策略中创建的快照。</block>
   <block id="64c17706e0528a5c44c7beee628cc101" category="doc">BlueXP 工作负载工厂通知服务支持</block>
@@ -1347,7 +1227,6 @@
   <block id="6250cd311debe5758acc69f81921ab78" category="paragraph">工作负载工厂支持将不可变卷从一个 FSx for ONTAP 系统复制到另一个 FSx for ONTAP 文件系统，以保护关键数据免遭意外删除或勒索软件等恶意攻击。目标卷及其主机文件系统将处于不可变状态（即锁定状态），并且在保留期结束之前，目标文件系统中的任何数据都无法修改或删除。</block>
   <block id="b6fc33d7434bb860ad528753113881b1" category="inline-link-macro">了解如何创建复制关系</block>
   <block id="d3dbddfb353eaaa957947efb04ca7013" category="paragraph"><block ref="d3dbddfb353eaaa957947efb04ca7013" category="inline-link-macro-rx"></block></block>
-  <block id="bdd7f454c54673987f53c40f8e5b8072" category="paragraph"><block ref="bdd7f454c54673987f53c40f8e5b8072" category="inline-link-macro-rx"></block></block>
   <block id="5c44c7d986372ccb1d679985b5416b64" category="section-title">在链接创建期间管理 IAM 执行角色和权限</block>
   <block id="cc7023e1e70f83f63ba0c94135b83c2d" category="paragraph">对于高性能工作负载，或者当工作负载从小规模开始并逐步扩展到 72 GB/s 的吞吐量和 240 万 IOPS 时，建议使用此配置。</block>
   <block id="ce920fde7af8f67cbfd1ca3e8efd6b91" category="list-text">多可用性区域(Multi-AZ)部署：即使可用性区域不可用、也能持续提供数据。多可用性文件系统专为业务关键型生产工作负载而设计、这些工作负载要求共享ONTAP文件数据具有高可用性、并需要具有跨可用性区域内置复制功能的存储。</block>
@@ -1361,17 +1240,13 @@
   <block id="ee6e43b0904c4672da5651009001b259" category="list-text">*预配置 IOPS*：选择以下选项之一：</block>
   <block id="2c8c409e84df8a5368e9fc203dacd0e0" category="list-text">*自动*：对于自动操作，每创建 1 GiB，就会添加 3 IOPS。</block>
   <block id="080138c9fde9abc63b7003839106198b" category="list-text">*用户配置*：对于用户配置，输入 IOPS 值。</block>
-  <block id="2f33e5a4fe58163ac0df8f3b097df4db" category="list-text">*链接权限*：选择以下链接权限选项之一：</block>
-  <block id="5f3b3b380e02766e8ad7eca5c6b37840" category="paragraph">在文本框中输入 Lambda 执行角色 ARN。</block>
   <block id="38adbad92c37166c4ce64da1eb51513b" category="inline-link-macro">创建卷</block>
   <block id="f80d67f0a6951b3f6c1185e7c7f39c30" category="paragraph">指定卷的最大增长大小和单位。不能将最大增长大小设置为小于当前卷大小</block>
   <block id="d932719afe063ca8fcfe0eb63f1b6ec9" category="paragraph">ONTAP 使用重复数据删除和压缩功能实现存储效率。重复数据删除可消除重复的数据块。数据压缩可压缩数据块，以减少所需的物理存储量。</block>
   <block id="9d083d8cac2f7524236aec0400de23bf" category="inline-link-macro">了解有关 ARP/AI 的更多信息</block>
   <block id="cb0b32de8b019bb1df747d59de75707b" category="list-text">*ARP/AI*：当链接与文件系统关联时，NetApp 自主勒索软件保护与 AI (ARP/AI) 默认启用。<block ref="c4c4beca7d4846b88f49bf491b5261f6" category="inline-link-macro-rx"></block>(英文)接受陈述以继续。</block>
   <block id="f6f1c3f8f0f62507f18da1fcf460ade4" category="paragraph">如果该功能不可用，则可能是由于以下原因之一：</block>
-  <block id="9e46846308a6940deed12bb97a4f8290" category="list-text">链接与文件系统无关联。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>(英文)链接关联后、返回此操作。</block>
   <block id="df1195db43983cb33962d0fe23f28da4" category="list-text">文件系统已具有 ARP/AI 策略。</block>
-  <block id="817a91472106a30911a7a081b0284ff7" category="paragraph">检查 FlexVol 或 FlexGroup 卷容量的平衡，并重新平衡卷容量，以将文件均匀分布在节点中的所有 FlexVol 卷或所有组成部分之间，以便所有节点都参与单个 FlexGroup 卷的工作负载。</block>
   <block id="46119f30376fd007e4806359f116810d" category="paragraph">FlexVol 卷和 FlexGroup 卷支持重新平衡卷容量。当由于添加新文件和文件增长而导致逐渐出现不平衡时、重新平衡卷会重新分布容量。手动启动重新平衡操作后、我们会选择文件并自动无中断地移动它们。卷传输操作会占用文件系统资源。</block>
   <block id="bbf6fdac51a56da72339e09ef6a7537c" category="paragraph">每种卷类型和重新平衡操作均有不同，如下所示。</block>
   <block id="7d98517078b732298ebd050c16b0fdc2" category="list-text">FlexVol 卷</block>
@@ -1383,8 +1258,6 @@
   <block id="d3ba2e7d0644f59c9834f36ad9a37bd9" category="admonition">iSCSI 和 NVMe 等 SAN 卷不支持重新平衡。</block>
   <block id="287fd51e17b8ed83911f0acd39496c50" category="section-title">检查您的交易量余额</block>
   <block id="7e42e168316583c933d50f5311ce6477" category="paragraph">检查 FSx for ONTAP 文件系统中 FlexVol 或 FlexGroup 卷的平衡。</block>
-  <block id="0691d778f09d713a755463d05ab1033d" category="inline-link-macro">创建链接</block>
-  <block id="53e6259fd019f47a663995e674152f8b" category="list-text">要检查卷的余额，您必须<block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block> 。如果您没有现有链接，请 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。要关联文件系统中的链接，请选择*Account name*下的*Associate link*。链接关联后、返回此操作。</block>
   <block id="267c95738d47a09a9b509ffdd48c24b0" category="list-text">从“卷”选项卡中，选择表格顶部的“检查卷余额”。</block>
   <block id="c9784b38284a9b2506bc92daf5caada4" category="list-text">在“交易量平衡”窗口中，查看以下平衡状态：</block>
   <block id="ba51913935bc9e57b04a0e373c7e87f1" category="section-title">重新平衡卷容量</block>
@@ -1392,7 +1265,6 @@
   <block id="3df496910d7ade34c46b7c3c46f516a9" category="inline-xref">停止重新平衡</block>
   <block id="6884c9c0713962c7d0a4fabd1cf49a6d" category="inline-xref">检查卷的余额</block>
   <block id="63acfaf1d07db652bff37bddaa4ba8bc" category="list-text"><block ref="65ac8887e886c8e0446817b3710e8cbe" category="inline-xref-macro-rx"></block>重新平衡卷之前。</block>
-  <block id="af7202b99122b0c2ef1b703335afeef9" category="list-text">要重新平衡卷，您必须 <block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>。如果您没有现有链接，请 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。要关联文件系统中的链接，请选择*Account name*下的*Associate link*。链接关联后、返回此操作。</block>
   <block id="dfaf4c319f7d24ec55b76a7ae4393e62" category="list-text">最好将 FlexVol 卷全部重新平衡，以便均匀地平衡所有卷资源。取消选定的卷不会主动参与平衡过程。</block>
   <block id="934baa9ec98e8fc4a616d393737537e5" category="open-title">FlexVol volume</block>
   <block id="8b101e32193fcbdd503f49081b4a7e4b" category="paragraph">在 FSx for ONTAP 文件系统中，一个 FlexVol 卷可以与同一节点内的其他 FlexVol 卷进行平衡。当文件系统每个节点有多个 FlexVol 卷且选择了单个 FlexVol 卷时，该 FlexVol 卷会在所有 FlexVol 卷的上下文中进行平衡，但只允许移动选定的卷。</block>
@@ -1414,30 +1286,12 @@
   <block id="e1c8bb61c19d6ae0db6ae5e69616299c" category="list-text">在停止重新平衡对话框中，选择*停止*。</block>
   <block id="dacae3a3d22c24a7e5e2a28664e1043d" category="paragraph">卷重新平衡操作停止并且活动卷移动中止。</block>
   <block id="7454fc4c14df2a987637928e569efe3a" category="section-title">2025年6月29日</block>
-  <block id="80b014e5654af87ea5edcdf6ec223a6d" category="list-text">*自动*：选择此选项，以便 AWS CloudFormation 代码自动创建 Lambda 权限策略和执行角色。</block>
   <block id="ff1dfe8b36206663d4bf870113dc19d6" category="paragraph">当音量不平衡时，请考虑<block ref="ef2b4a1f9f61a730aafc8bb66fd04b9b" category="inline-xref-macro-rx"></block> 。</block>
   <block id="89733971c4e3e5f45999d2907d6d1c43" category="paragraph">第二代 FSx for ONTAP 文件系统是快速创建的默认部署类型，除非所选区域不支持第二代 FSx for ONTAP 文件系统。</block>
   <block id="9f9382d36e2904b74545777af65bb3d2" category="list-text">*部署类型*：选择部署类型和文件系统生成。第二代文件系统的可用性取决于所选的区域。如果所选区域不支持第二代 FSx for ONTAP 文件系统，则部署类型将切换为第一代。</block>
   <block id="ad25ffa35c681232ceeec02144315aa5" category="paragraph">*文件系统生成*：选择以下之一：</block>
   <block id="19f3a3d53bb0ae9a377ecb1e961d2155" category="list-text">*第二代*：此配置适用于高性能工作负载，或当工作负载从小规模开始并逐步扩展到 72 GB/s 的吞吐量和 240 万 IOPS 时。</block>
-  <block id="2af62906cede15164d81a343aa2da6a4" category="summary">检查并重新平衡容量以避免随着时间的推移而出现不平衡。</block>
   <block id="bfebf248126ee0c8c192d7442b03e1a1" category="sidebar">查看 FSx for ONTAP文件系统的良好架构状态</block>
-  <block id="65050310e57f3790fef3c72eb48d33fe" category="section-title">为什么链接是有益的</block>
-  <block id="abca8c391b472ef4e80c6577b5d5eb2a" category="paragraph">以下是使用链接的一些好处：</block>
-  <block id="92d3d2d26bd62a6b2959d23585ef12a2" category="list-text">链接利用 AWS Lambda 执行代码来响应事件。这种无服务器方法消除了对 VPC 中运行实例的依赖。</block>
-  <block id="e721a1904dd1a2a54d259deb8d176230" category="paragraph">创建链接后，您可以将其与一个或多个 FSx for ONTAP文件系统关联。每个文件系统只能与同一个NetApp帐户中的一个链接相关联。如果您有多个NetApp帐户、则一个文件系统可以与不同NetApp帐户下的其他链接相关联。</block>
-  <block id="d078fe237d087bff0fe3c19efd14fa54" category="list-text">FSx for ONTAP文件系统配置的良好架构状态，可实现主动维护、可靠性和成本效益优化</block>
-  <block id="c6501747b7c38b1e25460b13a727ec7c" category="list-text">NetApp自主勒索软件防护 (ARP/AI)</block>
-  <block id="489e0dc0c162e1aff5f0f664bf2ea756" category="list-text">增强了 FSx for ONTAP文件系统的整体容量可观察性</block>
-  <block id="b97b322b8cb0f9b187eb7b966c9ff886" category="list-text">卷和存储虚拟机数据复制、管理和监控</block>
-  <block id="147d85abf5db68a53249c95e1a68cedb" category="list-text">SMB/CIFS 共享和 NFS 导出策略配置和管理</block>
-  <block id="0ff428418a3d64cc69a6ee68906a8959" category="list-text">创建和管理自定义保护 SLA 的快照策略</block>
-  <block id="c92f4938531f7fd55dc831a93892d29a" category="list-text">增强 Inode 管理以实现自动容量管理</block>
-  <block id="3b5c7e283e0b752d51311178d3fa06f1" category="list-text">容量自动增长以实现弹性扩展</block>
-  <block id="6cdde78d80d6fbbd8f3706a9bcac599e" category="list-text">克隆创建和管理，用于即时、就地数据克隆</block>
-  <block id="7cacd07dfdd5c4feadcbf23d19f9972d" category="list-text">直接从ONTAP显示其他指标，例如ONTAP版本</block>
-  <block id="30f1ae8a88bc842cdf5e493350ae7eb1" category="inline-link-macro">将链接连接到 FSx for ONTAP文件系统</block>
-  <block id="f86bb6aab3a49998f4db8fa07a49d81a" category="paragraph">了解如何<block ref="e658cbfbd30fb261626bc7c82308a713" category="inline-link-macro-rx"></block>。</block>
   <block id="78f8c00f462b0fbe742eab283e3fdf7a" category="sidebar">了解链接</block>
   <block id="46d508a0ef715ddbdea8774565e48b6b" category="list-text">*路径*：使用默认卷名定义路径或提供内部目录的共享。</block>
   <block id="8e2b88358241ef7747b6792d7462b691" category="paragraph">卷名的有效路径输入（例如“avocado”）如下：</block>
@@ -1449,11 +1303,6 @@
   <block id="5b4d700431157f8e7dcc17b14d365c7f" category="list-text">\\服务器</block>
   <block id="6b8258a2b9dce9918a5b42eb1c2de4c6" category="list-text">\\服务器\项目</block>
   <block id="710ecb74356fd86fc995d76f7fcb7c5c" category="list-text">\\服务器\项目\共享资源</block>
-  <block id="049f730a98eb69627912748561a543b8" category="paragraph">链接部署堆栈自动将以下默认密钥管理器 ARN 正则表达式添加到 Lambda 权限策略中：<block ref="218d5bbe44642244cc57db37477be310" prefix=" " category="inline-code"></block> 。</block>
-  <block id="bab25954c067653929b889d687bcb718" category="paragraph">出现“重定向到 CloudFormation”对话框并解释如何从 AWS CloudFormation 服务创建链接。</block>
-  <block id="1023373ba9dff02b999882804d6dc2ef" category="list-text">文件系统ID = FSx_filesystem_id（可选）</block>
-  <block id="508e0beab9fc0c907eb4adcaa7a736f7" category="list-text">用户 = FSx_user</block>
-  <block id="0dcf8b4e3476c0545950d4d61acb625c" category="admonition">使用 AWS Secrets Manager 进行身份验证需要一个用户，可以是您提供的 _FSx_user_，也可以是在 FSx for ONTAP文件系统上创建的其他用户。默认用户是<block ref="679500f227997b45be97e3ca8115c678" prefix=" " category="inline-code"></block>如果您不提供用户。</block>
   <block id="6a6ae8005c209a1567f9003ea9e5cebe" category="doc">复制关系选项卡的增强功能</block>
   <block id="c6a6fda1561189188099a8444886e4b7" category="paragraph">我们在复制关系表中添加了几个新列，以便在“复制关系”选项卡中为您提供有关复制关系的更多信息。该表现在包含以下列：</block>
   <block id="932acf34d9bec3ecdd131ec5df85300a" category="list-text">SnapMirror 策略</block>
@@ -1487,8 +1336,6 @@
   <block id="743828d5c9c11b38d3dbbf76d787f497" category="section-title">增强 SMB/CIFS 共享创建和管理</block>
   <block id="421075462886e558113f14b52fe22487" category="paragraph">您现在可以创建指向卷内的目录的 SMB/CIFS 共享。在卷内，您将能够看到存在哪些共享、共享指向哪里以及授予特定用户和组的权限。</block>
   <block id="4662a232249c09ca958781da08211b0c" category="paragraph">对于数据保护卷，创建 SMB/CIFS 共享的流程现在包括创建到卷的连接路径以用于安装目的。</block>
-  <block id="952da3361b1e3ca5daa8c23a39780e18" category="list-text">手动：使用 Codebox 中的 CloudFormation 或 Terraform 创建带有手动注册的链接。代码持续存在，为您提供更多时间来完成操作。这在与安全和 DevOps 等不同的团队合作时很有用，因为他们可能首先需要授予完成链接创建所需的权限。</block>
-  <block id="1ca9512c09f6b26312a475fda293b54a" category="list-text">*链接注册*：选择CloudFormation或Terraform获取如何注册链接的说明，并按照说明进行操作。</block>
   <block id="aeb7b1f8e40a81f588a0d8770c9826d3" category="list-text">SMB/CIFS：Windows操作系统的文件存储协议</block>
   <block id="77e7ba17717c79352c95d49bede81697" category="list-text">您必须为所选协议（SMB/CIFS、NFS 或 iSCSI）配置访问权限。</block>
   <block id="aa10f9c969547bf6e65a90292b199a04" category="list-text">*SMB/CIFS 共享*：提供以下内容：</block>
@@ -1499,12 +1346,10 @@
   <block id="b5dc11131d07e6b80a82ac57f0094e82" category="section-title">使用NetApp自主勒索软件防护和 AI 保护您的工作负载数据</block>
   <block id="cf543fd6dd3f50a958aecb8ddcc73e35" category="paragraph">如果防病毒软件未能检测到入侵， NetApp自主勒索软件防护 AI (ARP/AI) 将成为重要的额外防御层。设置 ARP/AI 策略可使其适用于所有存储虚拟机以及所有现有和新创建的卷。一旦启用，ARP/AI 就会检测并保护所有卷和存储虚拟机。如果文件扩展名被标记为异常，则您应该评估警报。</block>
   <block id="10cddc5c7e6cd81d7056d1293652526e" category="list-text">为您的文件系统或单个卷启用 ARP/AI 策略，以添加额外的保护层，保护您的数据免受勒索软件攻击。</block>
-  <block id="b2a386f5924b478e19e471dfee7196f1" category="paragraph">您还可以忽略不适用于您的存储环境的特定存储配置的分析，以避免不必要的警报和不准确的优化结果。</block>
   <block id="74bdd3d51d7fef35f3c1e1829b2c63fe" category="section-title">修复配置问题</block>
   <block id="4d39d4688820662a72b89ef0ab12f050" category="paragraph">您可以修复 FSx for ONTAP文件系统或文件系统中选定卷的配置问题。您可以选择一个或多个要修复的配置。</block>
   <block id="a46fab6bb1626887eac54858dc05cb71" category="section-title">取消配置分析</block>
   <block id="61ab3b6f044b76185565a9f1d6db2113" category="section-title">重新激活已解除的配置分析</block>
-  <block id="94ece9ea1a77966f2acd9441eeb32f2f" category="list-text">要管理 SMB/CIFS 共享，您必须关联一个链接。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block> 。链接关联后，返回此操作。</block>
   <block id="8862b4eacf59c99ed5fc21bc27f472cc" category="section-title">为卷创建 SMB/CIFS 共享</block>
   <block id="39a213f7d31d9201e8ff881a73e3819c" category="paragraph">按照步骤为卷创建 SMB/CIFS 共享。</block>
   <block id="3eb0695d4750920a7dd8ea4164e63096" category="list-text">选择*高级操作*，然后选择*管理 SMB/CIFS 共享*。</block>
@@ -1525,7 +1370,6 @@
   <block id="3d892826b81878b82d3bd5353e94ce1a" category="paragraph">ARP/AI 功能会根据Amazon FSx for NetApp ONTAP运行的ONTAP版本自动更新，因此您无需进行手动更新。</block>
   <block id="fa4c28f427b28e224da4284dcc124897" category="list-text">以下配置不支持使用 ARP/AI。</block>
   <block id="18c9bfe30b0887116855a65d0152a33b" category="section-title">为文件系统或卷启用 ARP/AI</block>
-  <block id="f03bda164bfeeaa7c09f85689862bd05" category="paragraph">要为文件系统或卷启用 ARP/AI，您必须关联一个链接。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block> 。链接关联后，返回此操作。</block>
   <block id="9af6115dc697f592721e21923c19d17f" category="open-title">为文件系统启用 ARP/AI</block>
   <block id="f371cba680893ef0527a9cf573867c3b" category="list-text">在信息下，选择“自主勒索软件防护”旁边的铅笔图标。当鼠标悬停在“Autonomous Ransomware Protection”行上时，箭头旁边会出现一个铅笔图标。</block>
   <block id="6d9dcefd190935b4cd500a98bedd247f" category="list-text">在NetApp自主勒索软件防护 AI (ARP/AI) 页面中，执行以下操作：</block>
@@ -1567,7 +1411,6 @@
   <block id="4c01998cfbe91538bc592922c3e8734f" category="list-text">或者，选择一个标签或创建一个新标签。</block>
   <block id="923a0a2b244437dc531c8a64263b0020" category="list-text">可选：*使此快照不可变*，以防止快照在保留期内被删除。</block>
   <block id="f7485ffd44c64cac23a73493d66e3cf4" category="summary">手动调整 FSx for ONTAP文件系统的 SSD 存储容量，以满足具有不同活动工作集的基于项目的工作负载的需求。</block>
-  <block id="36ce9e23b4485aac42f272cf012cfd85" category="paragraph">手动调整 FSx for ONTAP文件系统的固态硬盘 (SSD) 存储容量，以满足具有不同活动工作集的基于项目的工作负载的需求。</block>
   <block id="3c600356591a28f18cc21513190e4cb5" category="paragraph">利用弹性文件系统容量，您可以动态调整文件系统的容量以满足工作负载的需求。</block>
   <block id="fa86270fd952d04b42ae4b5586eabdef" category="paragraph">当你自动<block ref="a9cec068297d5b243eecd658574a7cef" category="inline-link-macro-rx"></block>对于文件系统，SSD 容量每增加或减少 1 GiB，IOPS 就会增加或减少 3 IOPS。</block>
   <block id="c58a7814e09e2136ba19c01a85ca87cb" category="list-text">从仪表板中选择*调整 SSD 容量*。</block>
@@ -1603,7 +1446,6 @@
   <block id="63421d2e7769a33701821702ab1b0be8" category="list-text">切换选择*恢复为新卷*。</block>
   <block id="2321232f7bb400db057064cec47f4904" category="list-text">将数据从快照恢复到现有卷。此操作将永久删除快照创建时间后修改的任何数据。</block>
   <block id="b271a75b2d121a8cb5f59ae458394323" category="section-title">2025年9月9日</block>
-  <block id="62486fa65fc31c383ace8989549632ad" category="sidebar">使用快照</block>
   <block id="b8d3d1ca4d4975c76eec10109e85c77f" category="sidebar">使用备份到对象存储</block>
   <block id="044dbc650d6316ed90f739b69dfff7ee" category="section-title">区域支持</block>
   <block id="468469fded9ecf5cf0e132a6daa62d32" category="paragraph">以下 AWS 区域不受支持：</block>
@@ -1616,7 +1458,6 @@
   <block id="edfbca9622799a953a48987a288fe283" category="paragraph">工作负载工厂支持减少第二代文件系统的固态硬盘 (SSD) 容量。利用弹性文件系统容量，您可以动态调整文件系统的容量以满足工作负载的需求。</block>
   <block id="381c6da705f822c3139853781716a57a" category="admonition">仅第二代文件系统支持减少 SSD 存储容量。</block>
   <block id="d3de0d39919d3426b0b013a4457e21ff" category="list-text">*用例*：选择以下其中一个用例进行复制。根据所选的用例，Workload Factory 会根据最佳实践在表单中填写推荐值。您可以接受建议的值，也可以在填写表格时进行更改。</block>
-  <block id="78e26b4f42ff9572ff33a0dbb9094105" category="paragraph">使用 Workload Factory 控制台创建卷时，_平衡（自动）_ 是默认分层策略。有关卷分层策略的更多信息，请参阅<block ref="de51d392f5d252a956349995f441f55c" category="inline-link-macro-rx"></block>在 AWS FSx for NetApp ONTAP文档中。请注意，工作负载工厂在工作负载工厂控制台中使用基于用例的名称来制定分层策略，并在括号中包含 FSx for ONTAP分层策略名称。</block>
   <block id="538da000f69d1359c086e0483675390f" category="paragraph">如果您选择了迁移用例，Workload Factory 会自动选择将源卷的分层策略复制到目标卷。您可以取消选择复制分层策略并选择适用于选择进行复制的卷的分层策略。</block>
   <block id="b18d7ec0ad964d10af97254ea8b0612d" category="doc">Amazon FSx for NetApp ONTAP的 Workload Factory 初始版本</block>
   <block id="8db376980442524a58ebd917532846d7" category="paragraph">读取模式可用于 Workload Factory 中的存储管理。读取模式通过添加只读权限增强了基本模式的体验，以便基础设施即代码模板填充您的特定变量。基础设施即代码模板可以直接从您的 AWS 账户执行，而无需向 Workload Factory 提供任何修改权限。</block>
@@ -1675,7 +1516,6 @@
   <block id="bf79d5699d9edd84404a4a8329ed718d" category="doc">在NetApp Workload Factory 中将 HA 对添加到文件系统</block>
   <block id="24d80cd4a2c4c1ee117632b920ca71fb" category="paragraph">添加高可用性 (HA) 对以在NetApp Workload Factory 中扩展 FSx for ONTAP第二代单可用区文件系统，从而提高性能和容量。与第一代文件系统相比，这种扩展为您提供了更高的性能可扩展性和灵活性。</block>
   <block id="022864559429d1768096c31dc8128576" category="list-text">从 *信息* 下的 *FSx for ONTAP* 中，选择 *HA 对* 旁边的铅笔图标。</block>
-  <block id="0f35e66a97fba2e64d9a3365a471a843" category="doc">在NetApp Workload Factory 中复制数据保护卷</block>
   <block id="fdfa6f46ac2846b7f738582d57fb90b2" category="paragraph">NetApp Workload Factory 支持复制数据保护卷，也称为_级联部署_。 _级联部署_由一系列关系组成，其中源卷镜像到辅助卷（第一跳），辅助卷镜像到第三卷（第二跳）。如果辅助卷不可用，您可以同步主卷和三级卷之间的关系，而无需执行新的基线传输。</block>
   <block id="c6c3ec500fcd9ad7eaa60d47e2c0b703" category="list-text">从 *FSx for ONTAP* 中，选择包含要复制的卷的文件系统的操作菜单，然后选择 *管理*。</block>
   <block id="07dba4b1db394152600a3f2fa2598bc1" category="summary">更改NetApp Workload Factory 中复制关系中源卷的复制计划。</block>
@@ -1688,24 +1528,12 @@
   <block id="21c979f4327cd67644d8ab5b64a762c7" category="doc">在NetApp Workload Factory 中克隆卷</block>
   <block id="93482e0e05af93f1f57953ff700f65af" category="summary">在NetApp Workload Factory 中为 FSx for ONTAP文件系统中的存储虚拟机配置和更新 Active Directory。</block>
   <block id="b517cd494437c46f189031b81fe054d1" category="list-text">从 *FSx for ONTAP* 中，选择要更新的存储虚拟机的文件系统的操作菜单，然后选择 *管理*。</block>
-  <block id="e2978ebf10a51b553f9a074316b27b79" category="summary">在定期备份之外，在NetApp Workload Factory 中创建卷的手动备份。</block>
   <block id="4f43be2165dfc12e9cac6220645b9996" category="paragraph">在NetApp Workload Factory 中定期备份之外创建卷的手动备份。</block>
   <block id="cc481e5a678e1d84e7207782a75f9a18" category="summary">使用NetApp Workload Factory，您可以创建 FSx for ONTAP文件系统来添加和管理卷和其他数据服务。</block>
   <block id="9b19e4522ce9145cc667b5fcceaba11d" category="doc">在NetApp Workload Factory 中创建 FSx for ONTAP文件系统</block>
   <block id="ebb1274f47205fb0c6d6d8988b0944b0" category="paragraph">使用NetApp Workload Factory，您可以创建第一代和第二代 FSx for ONTAP文件系统来添加和管理卷和其他数据服务。</block>
   <block id="ddf59bcbb71271f59e400a7e3d03e5e5" category="list-text">在存储磁贴中，选择*创建 FSx for ONTAP*。</block>
   <block id="cf8254c1af160e61f04022f6a69ab935" category="list-text">*AWS 凭证*：选择在 Workload Factory 中添加 AWS 凭证或继续不使用凭证。</block>
-  <block id="d1b55cbdf6e8ca176a53229f6dc39afc" category="summary">您可以创建和管理链接，以在NetApp Workload Factory 帐户和一个或多个 FSx for ONTAP文件系统之间提供信任关系和连接。</block>
-  <block id="5ba5b0aebf03129e0be728e866a2b27b" category="paragraph">要执行高级ONTAP管理操作，请在您的 Workload Factory 帐户和一个或多个 FSx for ONTAP文件系统之间建立连接。这涉及关联新的和现有的 Lambda 链接，并对链接进行验证。通过链接关联，您可以直接从 FSx for ONTAP文件系统监控和管理某些无法通过Amazon FSx for ONTAP API 获得的功能。</block>
-  <block id="8525c310ff1b921b05db83eb21ea6be7" category="paragraph">链接需要验证。您可以使用存储在 Workload Factory 凭证服务中的凭证或存储在 AWS Secrets Manager 中的凭证来验证链接。每个链接仅支持一种身份验证方法。例如，如果您选择使用 AWS Secrets Manager 进行链接身份验证，则以后无法更改身份验证方法。</block>
-  <block id="fa1694d04e308a581d5d23c44b278491" category="list-text">自动：通过 Workload Factory 创建自动注册的链接。自动创建的链接需要用于 Workload Factory 自动化的令牌，并且 CloudFormation 代码是短暂的。最多只能使用六个小时。</block>
-  <block id="d6305b17d1542122d978c37db15fd5d3" category="inline-link-macro">在 Workload Factory 中添加凭证</block>
-  <block id="3b6158401b21fd0fabd6f75b8d9c8c23" category="list-text">对于 Workload Factory 控制台：端口 443 (HTTPS)</block>
-  <block id="e07190df7367fb116bdd913bfce43fbe" category="paragraph">使用 CloudFormation 在 Workload Factory 内自动创建并注册链接。</block>
-  <block id="40be05127ecd2439f7ee7256f055873a" category="list-text">从 *FSx for ONTAP* 中，选择要关联链接的文件系统的操作菜单，然后选择 *关联链接*。</block>
-  <block id="939a8d22db4ccfbdde48d35119ad37a3" category="list-text">*AWS Secrets Manager*：可选。允许 Workload Factory 从您的 AWS Secrets Manager 获取 FSx for ONTAP访问凭证。</block>
-  <block id="7580bfe7832e708a7a254e231956ba42" category="list-text">返回 Workload Factory 界面，您将看到该链接与 FSx for ONTAP文件系统相关联。</block>
-  <block id="3d607d93b8532423a7bbebf948091168" category="summary">在 Workload Factory 中为存储虚拟机创建自定义快照策略。</block>
   <block id="ab9a6ebd2e1e5562fa11ba5a014fc247" category="paragraph">为工作负载工厂中的存储虚拟机创建自定义快照策略，以管理快照的创建和保留。快照策略定义了系统如何为存储虚拟机创建快照。您可以为 FSx for ONTAP文件系统中的存储虚拟机创建快照策略。您还可以在多个存储虚拟机之间共享该策略。</block>
   <block id="ab208b31e3a136f0c6135fb0336e666b" category="list-text">从“*存储虚拟机*”选项卡中，选择要使用计划快照保护的卷的操作菜单，然后选择“*高级操作*”，再选择“*管理快照策略*”。</block>
   <block id="639d2937555bcb4f73e857db43a5af09" category="summary">在NetApp Workload Factory 中创建 FSx for ONTAP卷的手动快照。快照是卷内容的某个时间点的版本。</block>
@@ -1739,8 +1567,6 @@
   <block id="5be4935f65cd6a9a3014866320800b46" category="list-text">从 *FSx for ONTAP* 中，选择要删除的 FSx for ONTAP文件系统的操作菜单。</block>
   <block id="ab65d6511db640831c292d22f7b54e88" category="list-text">在“*概述*”选项卡中，选择操作菜单。</block>
   <block id="93ab98e83f767e271a56c06a99e0061f" category="list-text">选择*删除*进行确认。</block>
-  <block id="40fb34faa64f3a5cda4ec5a57722d430" category="summary">根据需要删除NetApp Workload Factory 中的复制关系。</block>
-  <block id="a800ef7378078fd0321398e86e83be4f" category="doc">在NetApp Workload Factory 中删除复制关系</block>
   <block id="1c9d39dfea82aa323f287c11668fb9ab" category="paragraph">删除NetApp Workload Factory 中的复制关系。当您删除复制关系时，它会删除源卷和目标卷之间的复制关系。删除复制关系后，两个卷将继续独立存在，并保留其包含的当前数据。</block>
   <block id="06a91edaa8e77e04dfd0ccc1dee5a6c7" category="list-text">在复制关系选项卡中，选择要删除的复制关系的操作菜单。</block>
   <block id="ce1de3f28d8568be87cdce779516de02" category="doc">在NetApp Workload Factory 中删除存储虚拟机</block>
@@ -1752,7 +1578,6 @@
   <block id="feea797d265a4cb4c208df493f0593ca" category="paragraph">需要链接关联来发现缓存关系。</block>
   <block id="b7c0c52b20093f1b3f6d1f6f7598754b" category="paragraph">两个ONTAP系统上的卷之间可以存在缓存关系，例如一个 FSx for ONTAP文件系统和一个Cloud Volumes ONTAP系统。缓存关系也可以存在于单个 FSx for ONTAP文件系统中，从一个卷到另一个卷。</block>
   <block id="513c180c5d2a9ee1b68bcde16bb98445" category="paragraph">在开始之前请考虑以下事项。</block>
-  <block id="703777497377f6718c53959ea880fb02" category="list-text">您必须关联一个链接才能发现文件系统上的缓存关系。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block> 。链接关联后，返回此操作。</block>
   <block id="21c99410190350a1d55b69d712e211cf" category="list-text">您必须具有现有的缓存关系。</block>
   <block id="af7b04bb0021ca11c72e835013e8fda6" category="list-text">从 *FSx for ONTAP* 中，选择 *Cache relationships* 选项卡。</block>
   <block id="495559c1531d4c91961b3e2dda29c4ec" category="list-text">您的缓存卷出现在表中。该表包含有关每个缓存卷的以下信息：</block>
@@ -1767,10 +1592,7 @@
   <block id="4c6b37276dac45fc989fb46b7f298e93" category="list-text">*写入模式*： FlexCache关系的写入模式。</block>
   <block id="825763cb1d4ac91cb8dbbcc8c11440b8" category="list-text">*DR 缓存*：指示FlexCache关系是否为灾难恢复 (DR) 缓存。</block>
   <block id="3b231d6cca54e9d09e25b1461d3caafb" category="list-text">*导出策略*：缓存卷的导出策略。</block>
-  <block id="c39b3cbd986af96ef05b9724f0b92e6b" category="summary">启用卷自动增长以让 Workload Factory 为您管理卷容量。您可以随时禁用它。</block>
-  <block id="467fbaad5c04b9212fefde208c6fce39" category="doc">在 Workload Factory 中启用卷自动增长</block>
   <block id="a2f3bd55649066a9bad9a42a8df63f08" category="paragraph">在NetApp Workload Factory 中，您可以启用快照进行长期保留，这样您就可以复制特定快照以进行长期灾难恢复。</block>
-  <block id="116537ad3a8e9d253ab6c2cf9b1375c4" category="list-text">从 *FSx for ONTAP* 中，选择要更新的文件系统的操作，然后选择 *管理*。</block>
   <block id="92f16ef088dcbde798778ff8c71b147a" category="list-text">在复制关系选项卡中，选择要更改的复制关系计划的操作菜单。</block>
   <block id="402fb8f9686d3c174902b3a2cbd928af" category="doc">探索NetApp Workload Factory 中 FSx for ONTAP的节省</block>
   <block id="12ccd6f3103f84cc6566cf7fb5cb57d0" category="paragraph">NetApp Workload Factory 包含一个存储节省计算器，用于将 Amazon 存储环境与 FSx for ONTAP进行比较。无论是否提供 AWS 凭证，您都可以探索节省的方法，并为您的存储环境自定义配置设置。当您提供 AWS 凭证时，您可以选择一个或多个 Amazon Elastic Block Store 实例，然后让 Workload Factory 自动进行比较。无论是手动还是自动，计算器都会确定哪种存储服务可以为您的存储需求提供最低的成本。</block>
@@ -1794,9 +1616,6 @@
   <block id="785b440c0be1d853c5e2f4fb1f1ee2ab" category="list-text">选择*案例管理*，如果出现提示，请将您的 NSS 帐户添加到NetApp控制台。</block>
   <block id="c80d8addb8aa8e8872bbc44894b077f3" category="paragraph">*案例管理*页面显示与您的NetApp控制台用户帐户关联的 NSS 帐户相关的未结案例。这与出现在 *NSS 管理* 页面顶部的 NSS 帐户相同。</block>
   <block id="a9d8fc136a7c1528e9a5743b9de2661a" category="inline-link-macro">使用链接连接到 FSx for ONTAP文件系统</block>
-  <block id="f899a571558dc3581836d9ffe17218ed" category="paragraph">链接连接允许 Workload Factory 扫描性能、数据保护和配置方面的问题。<block ref="f06ee96e93460df1397f1b3b70044a3e" category="inline-link-macro-rx"></block>对您的文件系统资源进行最全面的分析。</block>
-  <block id="bdcff0916b9de421b3f836810688eb67" category="list-text"><block ref="f06ee96e93460df1397f1b3b70044a3e" category="inline-link-macro-rx"></block>对您的文件系统资源进行最全面的分析。</block>
-  <block id="39b152c5585fc0bf22a04de0cc07dff1" category="paragraph">或者，您可以<block ref="e5ea0961d6c7f5be0b804e74d995de2b" category="inline-link-macro-rx"></block>让 Workload Factory 为您管理卷容量。</block>
   <block id="ddc0042b887590b7a2423362f6c3455b" category="paragraph">初始化源卷和目标卷之间的复制关系，以传输NetApp Workload Factory 中的快照和所有数据块。</block>
   <block id="e7fac383dedc147790819a6b6ec1ca87" category="list-text">在复制关系选项卡中，选择要初始化的复制关系的操作菜单。</block>
   <block id="788b79b544c9d26ebf09e0fd37232958" category="paragraph">每个 SKU 的存储虚拟机数量是有限的。  Workload Factory 不支持创建超出限制的存储虚拟机。^1^</block>
@@ -1821,43 +1640,19 @@
   <block id="3a84cef0233ac32a841f51da8d052f65" category="doc">NetApp Workload Factory 的法律声明</block>
   <block id="aeb31c9f8c311597856b129ab948b4e6" category="inline-link">NetApp工作负载工厂</block>
   <block id="55f7843f27571db97da76bdf68a76d22" category="paragraph"><block ref="55f7843f27571db97da76bdf68a76d22" category="inline-link-rx"></block></block>
-  <block id="53893a46b1562475458c94d68f256609" category="summary">限制NetApp Workload Factory 中复制关系的最大传输速率。</block>
-  <block id="36e477de86b66c38e8877517294f32bc" category="paragraph">限制NetApp Workload Factory 中复制关系的最大传输速率。无限制的传输速率可能会对其他应用程序和网络的性能产生负面影响。</block>
   <block id="bfc4532e9898b7bb838f8a637df2b104" category="list-text">在复制关系选项卡中，选择复制关系的操作菜单来限制最大传输速率。</block>
   <block id="4d29eb8c304c032e0b8ec00fb7e0ae46" category="summary">Workload Factory 链接在 Workload Factory 帐户和一个或多个 FSx for ONTAP文件系统之间创建信任关系和连接。</block>
   <block id="19ecacf22bc9ac252b9476a0a17ca657" category="doc">了解有关NetApp Workload Factory 链接的信息</block>
-  <block id="87251eaee5bfd306ceab7bcacfbf47f6" category="paragraph">NetApp Workload Factory 链接在 Workload Factory 帐户和一个或多个 FSx for ONTAP文件系统之间创建信任关系和连接。这使您可以直接从ONTAP REST API 调用监控和管理某些文件系统功能，而这些功能无法通过Amazon FSx for ONTAP API 获得。</block>
-  <block id="1e2cf39904eebcbddae0fe72e0186b8b" category="paragraph">您不需要链接即可开始使用 Workload Factory，但在某些情况下，您需要创建链接来解锁所有 Workload Factory 功能和工作负载能力。</block>
-  <block id="8db5475a47ce008ca4a3d502a243007d" category="paragraph">链接很有用，因为它们允许 Workload Factory 执行通过Amazon FSx for ONTAP API 本身无法执行的操作。链接支持高级ONTAP功能和自动化，从而增强 FSx for ONTAP文件系统的管理。</block>
-  <block id="bf5b08a19bccddd5697b54218eb442dd" category="list-text">该链接使NetApp控制台能够将ONTAP命令直接发送到您的 FSx for ONTAP文件系统，从而带来 AWS 原生提供的ONTAP高级功能。</block>
-  <block id="0d369015d5a60606bb8b6330f6c1030f" category="paragraph">您可以在工作负载工厂中创建并关联来自存储工作负载的链接。</block>
-  <block id="7869cf138befae7f7af03581af782724" category="paragraph">您可以使用存储在 Workload Factory 凭证服务中的凭证或存储在 AWS Secrets Manager 中的凭证来验证链接。工作负载工厂不支持更改身份验证模式。</block>
-  <block id="2ec62661c871c6dda5bcd49be8cea521" category="paragraph">Lambda 执行的每笔交易都会产生费用。由于 Lambda 充当两个系统之间的代理，因此当 Lambda 向文件系统上的ONTAP REST API 发送请求时以及将响应发送回 Workload Factory 时都会产生费用。</block>
-  <block id="df22e5c72d75cea7ae766daf660bd529" category="summary">在需要时管理NetApp Workload Factory 中 FSx for ONTAP文件系统的备份计划。</block>
-  <block id="be1c92aa6bef23dd57df3395c46827bb" category="paragraph">在NetApp Workload Factory 中管理 FSx for ONTAP文件系统的备份计划。</block>
-  <block id="93ae473ca3e8f97f82687e6f98eab1da" category="list-text">从 *FSx for ONTAP* 中，选择要更新备份计划的文件系统的操作菜单，然后选择 *管理*。</block>
   <block id="c69f3e9214ff94aa0825993b6fb1b85a" category="paragraph">在 Workload Factory 中管理卷的 SMB/CIFS 共享包括创建 SMB/CIFS 共享、确定授予访问权限的用户和组以及授予他们的权限级别以及删除 SMB/CIFS 共享。</block>
   <block id="4b898528f057698b461041b6d7447cfe" category="list-text">从“卷”选项卡中，选择要更改 SMB 共享的卷的操作菜单。</block>
   <block id="52b572ba9057fb19fd2333ef3f707bd0" category="list-text">在 *FSx for ONTAP* 选项卡中，选择要更新卷的文件系统的操作菜单，然后选择 *管理*。</block>
   <block id="dd3ba3038bdde3ca3d4a9a2397052b60" category="list-text">在管理 SMB/CIFS 共享页面上，选择 SMB/CIFS 共享的操作菜单，然后选择*删除*。</block>
   <block id="0b83e178116e79ce2a76377c2fe4e4ed" category="doc">在NetApp Workload Factory 中管理卷的不可变文件</block>
   <block id="6dc7abcdf6f4b84a36a87f40f2787a33" category="list-text">*特权删除*：启用或禁用该功能。启用该功能允许SnapLock管理员删除未过期的 WORM 卷。此功能仅在企业保留模式下受支持。</block>
-  <block id="a1212a4e5f083322acc45c56b9938112" category="summary">您可以查看与您的帐户关联的链接、更新链接身份验证的密码以及删除NetApp Workload Factory 中的链接。</block>
-  <block id="83dfd07dca3a04ca19cdc3262cb17df4" category="paragraph">管理与您的 Workload Factory 帐户关联的链接。您可以查看与 FSx for ONTAP文件系统关联的链接、提供用于链接身份验证的密码以及从 Workload Factory 控制台中删除链接。</block>
-  <block id="2042c96024e7e8a46d1497c843c76da6" category="list-text">从存储菜单中，选择*管理*，然后选择*链接*。</block>
-  <block id="50e87fbed332b782c23eefcd063c29f3" category="paragraph">现有链接出现在链接页面上。</block>
-  <block id="c4aa49062b446a9d4f1b821ea4acbe46" category="paragraph">您无法从 Workload Factory 界面编辑链接。如果您需要更改链接，则需要创建一个新链接，然后将该链接关联到您的文件系统。</block>
-  <block id="6ac964feef269db1d25abb9f4ecad2aa" category="paragraph">提供 Workload Factory 凭证的管理用户密码或 AWS Secrets Manager 密钥 ARN，以将链接连接到 FSx for ONTAP文件系统。</block>
-  <block id="034e373fa9e2dc0b4cbe364fc260fa60" category="list-text">从 *FSx for ONTAP* 中，选择要关联链接的文件系统的操作菜单，然后选择 *管理*。</block>
-  <block id="03fc743c74b7e7511aa1eeb9bf490f14" category="paragraph">请注意，该链接仅从 Workload Factory 中删除 - 不会从您的 AWS 环境中删除。删除 Workload Factory 中的链接后，您必须从 AWS 账户中删除 Lambda 函数。</block>
-  <block id="758ba3729afd23bc4e9b98c419e8ea87" category="list-text">从链接页面中，选择要删除的链接的操作菜单，然后选择*删除*。</block>
-  <block id="f1ce091ae1a5a535ceceb1b8895c7620" category="inline-image-macro">显示如何从 Workload Factory 中删除链接的屏幕截图。</block>
-  <block id="8d0a9b10b0feb1fbeb54874e4db30c45" category="paragraph"><block ref="8d0a9b10b0feb1fbeb54874e4db30c45" category="inline-image-macro-rx" type="image"></block></block>
   <block id="3f84e7918b5436d562b6058d69a5e22b" category="summary">在NetApp Workload Factory 中管理使用 NFSv3 或 NFSv4.1 协议类型的卷的 NFS 导出策略。</block>
   <block id="be75a4ee41ef1c041e10be17f5ab5d8f" category="doc">在NetApp Workload Factory 中管理卷的 NFS 导出策略</block>
   <block id="45bad92c0320862bb24bd94703db0a08" category="summary">在 Workload Factory 中管理 FSx for ONTAP卷的快照策略。快照策略定义系统如何​​为卷创建快照。</block>
   <block id="e792f4d27d1dc64295baf4344c9aca49" category="inline-link-macro">了解 Workload Factory 链接</block>
-  <block id="144a013b1a947d3417ed511a6b60a2e1" category="paragraph">某些管理任务要求您将链接与 FSx for ONTAP文件系统关联。<block ref="0a8e0c490635c3084d9a0f334be1cdcd" category="inline-link-macro-rx"></block> 。</block>
   <block id="64889ee720a08ea5f08d321e6bb2d6e5" category="list-text">在 *FSx for ONTAP* 选项卡中，选择文件系统的操作菜单，然后选择 *管理*。</block>
   <block id="5f082ca638d644d115e72e5bf00e16ba" category="list-text">从“存储虚拟机”选项卡中，选择包含要使用计划快照保护的卷的存储虚拟机的操作菜单，然后选择“高级操作”，再选择“管理快照策略”。</block>
   <block id="632897d682f5f5f86ed88f142c34dd61" category="list-text">在快照策略管理页面上，选择要更改的快照策略的操作菜单，然后选择*编辑*。</block>
@@ -1871,17 +1666,13 @@
   <block id="f94d144be400675ae807174184acbf5f" category="list-text">在“管理快照”页面中，选择要编辑的快照的操作菜单，然后选择“*编辑*”。</block>
   <block id="59bcba28fd08adb2991cdf5d82670fe0" category="list-text">从管理快照页面中，选择要访问的快照的操作菜单，然后选择*访问*。</block>
   <block id="f1275ed085039c3832dda6dfba0ad9f2" category="list-text">在管理快照页面中，选择要删除的快照的操作菜单，然后选择*删除*。</block>
-  <block id="b8b31b5d8488dcb7ebd8c2bb9ba38f50" category="doc">在NetApp Workload Factory 中管理存储虚拟机标签</block>
   <block id="0c950433d94be139f73fb59247d857a5" category="paragraph">标签可以帮助您对资源进行分类。您可以随时在NetApp Workload Factory 中添加、编辑和删除存储虚拟机的标签。</block>
-  <block id="558281a06321bc8c7b90d170a463683f" category="doc">在NetApp Workload Factory 中管理卷标签</block>
   <block id="693a8f663c39ae53134101e5d974fda8" category="paragraph">标签可以帮助您对资源进行分类。您可以随时在NetApp Workload Factory 中为 FSx for ONTAP卷添加、编辑和删除卷标签。</block>
   <block id="674b84367e7a585d7eb4cb69538ab5be" category="paragraph">监控和跟踪 FSx for ONTAP、凭证和链接操作的执行情况，并使用NetApp Workload Factory 中的 Tracker 监控任务进度。</block>
   <block id="e80eb219e8472681a001172074028f46" category="paragraph">使用 Tracker 跟踪和监控NetApp控制台中的操作。</block>
   <block id="bd56fc255ce900fc195c9bc0d7ed20c0" category="list-text">选择操作菜单，然后选择*查看 API 请求*。</block>
   <block id="9d506eb8fb5e05c2467a690e5e727cd8" category="list-text">选择操作菜单，然后选择*重试*。</block>
   <block id="0270fd4391a6b334aa157faf0a6b7304" category="list-text">选择操作菜单，然后选择*编辑并重试*。</block>
-  <block id="7abadec4f28b789dea00025f14d2db02" category="doc">在NetApp Workload Factory 中暂停和恢复复制关系</block>
-  <block id="716ed38e70ed21728964089db60817b6" category="paragraph">当您恢复复制时，对目标卷的所有更改都将被撤消，并且NetApp Workload Factory 将重新启用复制。目标卷从读/写转换为只读，并再次按照计划的复制间隔从源卷接收更新。当您恢复复制关系时，目标卷将恢复到最新的初始复制快照，此时，卷复制过程重新开始。</block>
   <block id="1171afac244482535208c805bfb5473b" category="list-text">在复制关系选项卡中，选择要暂停的复制关系的操作菜单。</block>
   <block id="466d89359904d783b70a130aa0d6d963" category="list-text">在复制关系选项卡中，选择要恢复的复制关系的操作菜单。</block>
   <block id="f1cafa83a1b545ce630d3a9cc126037f" category="summary">NetApp Workload Factory 中提供了 FSx for ONTAP的性能参考。</block>
@@ -1908,7 +1699,6 @@
   <block id="e42fc3e4b35126c00393bef5dd43abb0" category="list-text">从 *FSx for ONTAP* 中，选择要复制存储虚拟机的文件系统的操作菜单，然后选择 *管理*。</block>
   <block id="60de20bb9aba6d637fe2c39698d63a93" category="paragraph">使用 Workload Factory FSx for ONTAP用户界面创建卷时，_Auto_ 是默认分层策略。有关卷分层策略的更多信息，请参阅<block ref="de51d392f5d252a956349995f441f55c" category="inline-link-macro-rx"></block>在 AWS FSx for NetApp ONTAP文档中。</block>
   <block id="00e61784b4c0263d643d339751f948b5" category="summary">必要时重置NetApp Workload Factory 中的 fsxadmin 密码。</block>
-  <block id="49504d649db43bbd86ff76609ad14e6b" category="doc">在NetApp Workload Factory 中重置 fsxadmin 密码</block>
   <block id="ccae0c552968683479a634d1b8d1fd70" category="list-text">从 *FSx for ONTAP* 中，选择要重置 fsxadmin 密码的文件系统的操作菜单，然后选择 *管理*。</block>
   <block id="56390cfc4f2fcc3e51d66c87b7f65149" category="list-text">从文件系统概览中，选择操作菜单。</block>
   <block id="68b2104217a7333b3eebfd93dd666045" category="inline-image-macro">文件系统概览选项卡中的操作菜单的屏幕截图。</block>
@@ -1917,19 +1707,13 @@
   <block id="3c483a45ab5fea02162be0b6c6004287" category="doc">在NetApp Workload Factory 中重置存储虚拟机密码</block>
   <block id="398b64d3ae2c039c62637d684fcbe30d" category="doc">从NetApp Workload Factory 中的备份还原卷</block>
   <block id="19002cddfac8e15ce79f8ccad53b74e6" category="paragraph">在NetApp Workload Factory 中，您可以将卷从备份还原到 AWS 账户中的任何 FSx for ONTAP文件系统。</block>
-  <block id="e8c0bed13dff2e82ae3fd20a79157041" category="list-text">恢复可能会使已用容量超过您指定的阈值。即可完成还原操作。考虑<block ref="e41647392a26a0e6b166f921fc9cbdef" category="inline-link-macro-rx"></block>或者选择 Workload Factory 自动添加 SSD 存储层容量。</block>
   <block id="2235d115064fc8246f43d55ab62b045c" category="list-text">恢复需要额外的 SSD 容量。您必须选择 Workload Factory 自动添加 SSD 存储层容量才能继续。</block>
-  <block id="d3a96b67aa0602273a39c3df984573da" category="paragraph">在 Workload Factory 中，您可以将数据从快照恢复到现有卷或新卷。当卷包含已删除或损坏的文件时，还原操作可以实现时间点恢复。</block>
   <block id="eae1ab715619b3c7c75c3c94c00fe8a7" category="list-text">从“*Volumes*”选项卡中，选择要从快照还原的卷的操作菜单。</block>
   <block id="fd2a512a440fa903a2db9a227f9c67d9" category="list-text">在“管理快照”页面中，选择要恢复的快照的操作菜单，然后选择“*恢复*”。</block>
-  <block id="b1d0c9f9cff6b5e0262fc4d1f2fb2d44" category="doc">在NetApp Workload Factory 中反转复制关系</block>
-  <block id="69e2363771dbe6068df4a3b3208900bd" category="paragraph">在NetApp Workload Factory 中反转复制关系，以便目标卷成为源卷。</block>
   <block id="f1961f17b051327f4863cb47a5b08d44" category="list-text">在复制关系选项卡中，选择要逆转的复制关系的操作菜单。</block>
   <block id="117ff5e4baddbf50b3b38a288594d39b" category="doc">NetApp Workload Factory 中 FSx for ONTAP的安全性</block>
   <block id="258917ec2ee16288f0cdb1fe8af0633f" category="doc">在NetApp Workload Factory 中拆分克隆卷</block>
   <block id="0ce9d462b15862a3d7f4258b37af2df3" category="paragraph">将克隆的FlexVol volume与其父卷分离，使克隆成为NetApp Workload Factory 中的正常读/写FlexVol volume。</block>
-  <block id="0afeadc4bedc444ef9fe962788f3cabc" category="summary">停止NetApp Workload Factory 中源卷和目标卷之间的复制关系。</block>
-  <block id="695c1eee16df28fb12cc40895f214b89" category="doc">停止NetApp Workload Factory 中的复制关系</block>
   <block id="6ac52b356e1de0ea8172c07c761b9a77" category="paragraph">停止NetApp Workload Factory 中的复制关系。当您停止复制关系时，从源卷到目标卷的计划复制更新将暂停。目标卷从只读转换为读/写。</block>
   <block id="8a55043269d6bf1d4683463d1775163b" category="list-text">在复制关系选项卡中，选择要停止的复制关系的操作菜单。</block>
   <block id="b334128403ed60ff931947907046e1f0" category="summary">在向NetApp技术支持部门提交支持案例之前，您需要向 Workload Factory 添加一个NetApp支持站点帐户，然后注册以获得支持。</block>
@@ -1947,7 +1731,6 @@
   <block id="f335678326583cea28377216c5515221" category="paragraph">拥有NetApp支持站点帐户后，请按照以下步骤将该帐户与您的NetApp控制台登录关联<block ref="2f3aba04ec49ee5f0573a6c80a1b9df2" category="inline-xref-macro-rx"></block>。</block>
   <block id="fbd561748c9b594e4d65b8ccf21f5769" category="paragraph">复制关系具有设定的复制计划，但您可以随时手动更新NetApp Workload Factory 中源卷和目标卷之间传输的快照数据。</block>
   <block id="1d27ede7e22b617fbd392a02ca413a78" category="list-text">在复制关系选项卡中，选择要更新的复制关系的操作菜单。</block>
-  <block id="0b81b68aa4b4da3fc81b7541c9557525" category="summary">在NetApp Workload Factory 中，您可以在创建卷后更新存储效率设置。</block>
   <block id="0254d70b292c2efb3924bc70f603207a" category="summary">根据需要更新NetApp Workload Factory 中 FSx for ONTAP文件系统的吞吐容量。</block>
   <block id="5b7dc0f0cef1ddf767dff9731a57d8a4" category="list-text">从 *FSx for ONTAP* 中，选择要更新吞吐量容量的文件系统的操作菜单，然后选择 *管理*。</block>
   <block id="5811115476eeb3b923e56f3b218e8861" category="doc">在NetApp Workload Factory 中使用本地ONTAP集群数据</block>
@@ -2004,9 +1787,6 @@
   <block id="c4a6983274098ca737ffda27862010ea" category="section-title">FSx 的ONTAP网络保险库支持</block>
   <block id="4a3b498d2b39740971d75ebbab434a8f" category="paragraph">您可以使用 FSx for ONTAP作为网络保险库架构中的源或目标来创建网络保险库。网络保险库为存储关键数据提供安全隔离的环境，保护数据免受勒索软件和其他网络威胁的侵害。</block>
   <block id="4bc6d1e741e4c817c4985300ec66b77f" category="inline-link-macro">使用 FSx 为ONTAP设置网络保险库</block>
-  <block id="443d77d8a4d29940f1da82d57cf91d7b" category="summary">您可以随时在NetApp Workload Factory中手动调整卷的容量。</block>
-  <block id="9506827488d3f10bebcc3d5a3e5f83f8" category="doc">在NetApp Workload Factory中调整卷容量</block>
-  <block id="2d6396444f6d2c33e9a33bc98d74a44b" category="paragraph">随时可通过NetApp Workload Factory控制台手动调整卷的容量。</block>
   <block id="fa091ab3e96a1d7a44f1f7c711636fb7" category="paragraph">您可以通过增加或减少卷的已配置大小来调整卷容量。下表显示了不同体积类型的最小和最大体积尺寸：</block>
   <block id="fc18634852d4299cd5f8c7ad55ddefbe" category="cell">卷类型</block>
   <block id="9dba50d3a2c2f26daddbf9d144c49772" category="cell">大小上限</block>
@@ -2017,17 +1797,12 @@
   <block id="9010e525ec80d0fdea3d56191f64ce39" category="cell">2 PiB</block>
   <block id="08842901b516656f4ce72eb7f4f5c0d1" category="paragraph">对于 iSCSI LUN，增加卷的大小也会增加主机 LUN 的大小。增加卷容量后，请按照主机操作系统提供的步骤查找 LUN 的新大小并扩展 LUN 的文件系统。</block>
   <block id="f4d84340dd6fee1664a29cabc2ba8c39" category="paragraph">仅 NFS 和 SMB/CIFS 卷支持减小卷大小。</block>
-  <block id="2880a60b72532c629f0cc885860ca8e5" category="paragraph">要调整音量容量，必须关联一个链接。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>。链接关联后，返回此操作。</block>
   <block id="4e54161de298fea40a1792b1351b1789" category="list-text">选择*基本操作*，然后选择*调整容量*。</block>
   <block id="4fbd17d05637f9e5fed62de5f827a895" category="list-text">在“调整卷容量”对话框中，设置“已配置容量”和单位。</block>
   <block id="6a6abbaa1bbd0c301b070b7a1615b31d" category="list-text">选择“调整”以应用更改。</block>
-  <block id="25e79c779a2e15c96afc5b7555e58a60" category="list-text"><block ref="25e79c779a2e15c96afc5b7555e58a60" category="inline-link-macro-rx"></block></block>
-  <block id="018b5169ae450db66c30a726fbd7e178" category="inline-link-macro">在工作负载工厂中重新平衡容量</block>
-  <block id="6ab1a086826b377aebef1904415ab23c" category="list-text"><block ref="6ab1a086826b377aebef1904415ab23c" category="inline-link-macro-rx"></block></block>
   <block id="ccfc2060f8f316d0ccd33b0289111a38" category="paragraph">要进行完整的文件系统分析，必须执行以下操作：</block>
   <block id="f95f58d64ce974b5c7aac839966c9c9b" category="list-text">关联链接。链路连接使 Workload Factory 能够分析所有文件系统配置，例如数据保护和性能。</block>
   <block id="64aefaaa1ffe9f3b50d13850f89ff59a" category="list-text">在您的 AWS 账户中授予_查看、规划和分析_权限。</block>
-  <block id="582f3532371a870cf4bd6406f93d26de" category="paragraph"><block ref="582f3532371a870cf4bd6406f93d26de" category="inline-link-macro-rx"></block></block>
   <block id="7335bfe9e44aaa30f676443b169c4028" category="summary">了解NetApp网络保险库以及如何实施网络保险库架构，以保护您的数据免受勒索软件和网络威胁的侵害。</block>
   <block id="c20c451e413ebde26a765cbbc0c15afc" category="paragraph">网络保险库卷是一个隔离的、安全的存储位置，用于存储数据的备份副本，保护数据免受勒索软件攻击和其他网络威胁。作为创建保险库的一部分，您将创建一个网络保险库卷，禁用所有客户端协议，并在源卷和网络保险库卷之间建立复制关系，并在网络保险库卷上创建不可变快照。</block>
   <block id="d825eb03b1924c3d41f95d2810515203" category="paragraph-title">什么是网络保险库？</block>
@@ -2041,18 +1816,13 @@
   <block id="9577a31ea32e2c5b58950150698f2a07" category="paragraph">请发送电子邮件至ng-FSx-CyberVault@netapp.com以开始使用。</block>
   <block id="a9541230016fd9f6de7895f1a32b75fb" category="inline-link-macro">ONTAP网络保险库文档</block>
   <block id="18e03b41df425134308f1975a1972f8e" category="list-text">具有创建和删除文件系统权限的凭据，用于创建ONTAP文件系统的 FSx。<block ref="582f3532371a870cf4bd6406f93d26de" category="inline-link-macro-rx"></block>。</block>
-  <block id="4c4658c6e6bcc607d3d1e8c00d38f9b6" category="list-text">Workload Factory 中至少需要一个 FSx for ONTAP文件系统。要发现 FSx for ONTAP文件系统，您必须拥有一个具有 FSx for ONTAP实例权限的 AWS 账户，并且<block ref="a253a365fdf90416889360c06d5b56a2" category="inline-link-macro-rx"></block>具有存储管理的_查看、规划和分析_权限。</block>
   <block id="8763b09bbcb06ec11c1d0d3331ba74f4" category="paragraph"><block ref="8763b09bbcb06ec11c1d0d3331ba74f4" category="inline-link-macro-rx"></block></block>
-  <block id="05fbfa43ca52b70a735d4a870f0f8f6d" category="inline-link-macro">调节音量容量功能</block>
-  <block id="8f764b06860786fe5978951124c18450" category="paragraph">您也可以随时使用以下方法手动增加卷的容量：<block ref="e78173f6bdea353abf41de50dd00987d" category="inline-link-macro-rx"></block> 。</block>
-  <block id="ad5ba1f7c14b2135486dafc0e40196ac" category="summary">启用此功能后，Workload Factory 可以根据容量需求随时间的变化，自动向 FSx for ONTAP文件系统添加增量存储或 inode。</block>
   <block id="7950e88c4d4bc489666a4af446a7d303" category="inline-link-macro">使用_查看、规划和分析_权限策略授予凭据</block>
   <block id="37d3a1150da64094460d233181c8c83e" category="list-text">你必须<block ref="1773ab1fe4aa6a3e5fc61d86a29970f0" category="inline-link-macro-rx"></block>在 Workload Factory 中完成此任务。</block>
   <block id="650ad6fb48eb81eacfa521124d1dc357" category="list-text">*警告阈值*：将警告阈值设置为低于触发工作负载工厂通知服务的阈值增加值。默认值为 70%。</block>
   <block id="8ec47943fca737be2b087573534a2057" category="inline-link-macro">启用工作负载工厂通知服务</block>
   <block id="60c52248134394a776265c66248137a8" category="paragraph">只有在您满足以下条件时，警告阈值设置才可用：<block ref="e500d492a56da387ccd67dac5045b171" category="inline-link-macro-rx"></block> 。</block>
   <block id="e5896468cb243b3cd2e0e75b0ca7173d" category="admonition">*Terraform 用户*：Terraform 有一个限制，要求所有操作都必须在 Terraform 内部完成。  Terraform 不支持 inode 管理，但您可以在 Workload Factory 控制台中启用自动 inode 管理。</block>
-  <block id="0a0054f32c5856b9e4d1227d3aff2de3" category="list-text">要自动管理卷 inode，必须关联一个链接。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>。链接关联后，返回此操作。</block>
   <block id="2dc6db0702897622d8829494f1d3b37f" category="inline-link-macro">启用工作负载工厂通知服务</block>
   <block id="8166fa3c69aeeb513514d7132a126f1d" category="list-text">可以通过设置_警告阈值_来设置自动 inode 管理，该阈值会触发 Workload Factory 通知服务的通知。要使用此功能，您必须<block ref="92ba022a113ba350cc22eb4ba703843c" category="inline-link-macro-rx"></block>第一的。</block>
   <block id="6e5f35050440735f1d3c74313b13121b" category="list-text">在 *FSx for ONTAP* 中，选择文件系统的操作菜单以启用自动 inode 管理。</block>
@@ -2094,7 +1864,6 @@
   <block id="38c4c72673e051381c12c32e1dd20f50" category="paragraph">如果您选择授予权限，您需要……<block ref="bb44378f07a38aa36833bde05fae1b5d" category="inline-link-macro-rx"></block>这包括选择工作负载功能（例如数据库和人工智能），以及创建所需权限的 IAM 策略。</block>
   <block id="2afa479317acb4455a0a649aab2944d1" category="section-title">2025年11月2日</block>
   <block id="2d7b297cbb6cd40fb509f94fc82809d8" category="sidebar">创建网络保险库以保护数据</block>
-  <block id="77323f759a4ed2ac40e1bf8211da2f5f" category="sidebar">调整音量容量</block>
   <block id="8cc5e5335040870d41183130dad2a0a6" category="paragraph"><block ref="8cc5e5335040870d41183130dad2a0a6" category="inline-link-macro-rx"></block></block>
   <block id="6b49a1e6e88960820791afdda16a063c" category="paragraph"><block ref="6b49a1e6e88960820791afdda16a063c" category="inline-link-macro-rx"></block></block>
   <block id="7999c939951d1cfce0556df15a76a345" category="paragraph"><block ref="7999c939951d1cfce0556df15a76a345" category="inline-link-macro-rx"></block></block>
@@ -2127,7 +1896,6 @@
   <block id="bf71ae5aa16f5632361df660e7d643c6" category="section-title">数据隐私和安全</block>
   <block id="ff8598dd406774c1ca9008fc13afdda5" category="inline-link-macro">Amazon Bedrock 数据保护文档</block>
   <block id="b523b0335680ab84edd50860caeed123" category="list-text">*工作负载工厂链接*</block>
-  <block id="72fa279f5dbab8677f6a4a2b563e0629" category="paragraph"><block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>。链接关联后，返回此操作。</block>
   <block id="7ed47c99073de0aed63f1c44842de720" category="list-text">*AWS IAM 权限*</block>
   <block id="3fc6364e2f4555bc71d109a7ba02fef1" category="paragraph">这些权限用于验证模型的可用性。</block>
   <block id="2a29012d549070ee593fcda2b2383198" category="paragraph">您可以管理使用 iSCSI 协议的ONTAP文件系统的 FSx 块设备。</block>
@@ -2144,7 +1912,6 @@
   <block id="5731c6f2c2af81018b15a6dc509612e7" category="doc">使用NetApp Workload Factory管理ONTAP的 FSx 缓存卷</block>
   <block id="434453d056f84022d78f78e508e2c9e4" category="paragraph">使用NetApp Workload Factory控制台管理 FSx for ONTAP文件系统的缓存卷。缓存是一种临时存储数据的方法，它通过减少检索时间来提高数据访问性能。您可以编辑缓存名称、调整容量、更改导出策略、选择缓存方法、预填充缓存或删除缓存卷。</block>
   <block id="511fe435e8165aed773eaad3ed9390d2" category="paragraph">您可以在NetApp Workload Factory控制台中管理与缓存关系关联的缓存卷。</block>
-  <block id="427f7328ade7fa24ab13c85e87e8bbfd" category="list-text">您必须关联一个链接来管理缓存卷和关系。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>。关联链接后，返回此操作。</block>
   <block id="70c7c51ab85c821261f3ba2480abf1db" category="section-title">调整缓存卷的容量</block>
   <block id="5ed1aecee1798642ab9b691b328aa8ab" category="paragraph">您可以随时调整现有缓存卷的容量。</block>
   <block id="fe3be7f306e31f68a5be5e69e70a8b52" category="list-text">选择要修改的缓存容量的操作菜单，然后选择“调整缓存容量”。</block>
@@ -2153,7 +1920,6 @@
   <block id="9b56249d55afe0d9c4ba3cc38ab4b64a" category="paragraph">在使用缓存卷之前，请先用源卷中的数据填充缓存卷，以加快缓存数据的可用性。</block>
   <block id="0e4f2d0a44a5351cf8fa58d69ca7867e" category="paragraph">删除缓存卷时，会移除与其缓存的关系。缓存数据已失效。</block>
   <block id="c5ef40517475cde4aa83a5451658e49f" category="summary">随时为文件系统添加、更新或删除 FSx for ONTAP文件系统标签。</block>
-  <block id="eb4fc4352d1165f11c777d937df4f824" category="doc">在NetApp Workload Factory中管理ONTAP文件系统标签的 FSx</block>
   <block id="46512aa67048f4a43e843b7f1767367e" category="paragraph">标签可以帮助你对资源进行分类。在NetApp Workload Factory中，您可以随时添加、编辑和删除文件系统的标签。</block>
   <block id="0212093392893715fbbcaff6318bf12c" category="list-text">从 *FSx for ONTAP* 中选择要更新的文件系统的操作菜单，然后选择 *管理文件系统标签*。</block>
   <block id="9b3a1ad5abecf153aceb732b418aab4f" category="list-text">在“管理文件系统标签”对话框中，根据需要添加、编辑或删除标签。</block>
@@ -2167,9 +1933,7 @@
   <block id="db2c0720daa95b2841a73d2a13c0e539" category="list-text">查看 FSx for ONTAP资源的*成本详情*。</block>
   <block id="815e75619b370a1b845eccec6979ed74" category="section-title">2025年11月27日</block>
   <block id="7ba9e316fdb6ba8e077283db064835f0" category="sidebar">跟踪和分析 FSx for ONTAP成本</block>
-  <block id="9f83e27b7a1a59c38fc7d458de16054a" category="sidebar">管理文件系统标签</block>
   <block id="79aceabdc6c99b8ffa443536ee6c3fac" category="list-text">*亚马逊基岩模型*</block>
-  <block id="ec43608dd1a0c06ed66226644c486b9a" category="sidebar">跟踪 FSx for ONTAP资源的成本和使用情况</block>
   <block id="063d22315ef43d4247b4ee3e2986ca61" category="sidebar">分析 FSx 中的ONTAP EMS 事件</block>
   <block id="01f76f754caa3b688233762c1b9391f6" category="section-title">支持用于ONTAP的 FSx 的 AWS S3 访问点</block>
   <block id="d30cb805d7270ac0b7cc06375888e47f" category="paragraph">NetApp Workload Factory为您的 FSx for ONTAP文件系统提供 AWS S3 访问点。您可以使用 S3 访问点创建卷，将 S3 访问点分配给现有卷，并从 Workload Factory 控制台管理 S3 访问点。使用 S3 访问点，您可以通过 AWS S3 API 访问驻留在 SMB/CIFS 或 NFS 卷上的文件数据。这样，您就可以将现有数据与来自支持 S3 访问点的 AWS 服务的 GenAI、ML 和分析功能集成在一起。</block>
@@ -2184,7 +1948,6 @@
   <block id="3e2c74c8c2d6921bd86b94a0e3ce7846" category="inline-link-macro">管理卷的 S3 访问点</block>
   <block id="bec075d59b91517943ea96b4d56e06de" category="list-text"><block ref="bec075d59b91517943ea96b4d56e06de" category="inline-link-macro-rx"></block></block>
   <block id="a008e298246d26d679639f7bc96ba6ac" category="inline-link-macro">调整工作负载工厂的容量</block>
-  <block id="6397bacd7d32cf08e4bf24faa5700a5a" category="list-text"><block ref="6397bacd7d32cf08e4bf24faa5700a5a" category="inline-link-macro-rx"></block></block>
   <block id="d8774a6076f48d902ee122d2219887a0" category="inline-link-macro">在工作负载工厂中更改容量分层策略</block>
   <block id="15edb6ed53ce8a32fd0631a4517d7fc7" category="list-text"><block ref="15edb6ed53ce8a32fd0631a4517d7fc7" category="inline-link-macro-rx"></block></block>
   <block id="d628678d4875b2f8f6ea7ca8dab6ade0" category="inline-link-macro">在工作负载工厂中管理 S3 访问点</block>
@@ -2220,7 +1983,6 @@
   <block id="3c1e85123bd6f772d273b23b09a26e74" category="doc">在NetApp Workload Factory中为文件系统创建块设备</block>
   <block id="7d004b13cdadf8e9ba5aa6e7fd56c9c9" category="paragraph">NetApp Workload Factory仅支持块设备的FlexVol卷。您可以使用 iSCSI 协议创建块设备。</block>
   <block id="454897ca790322f298897b4fdfc33941" category="paragraph">块大小必须小于可用的FlexVol volume大小。</block>
-  <block id="fb02a89efec565f92916696e97a69514" category="list-text">您必须关联链接才能创建块设备。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>。关联链接后，返回此操作。</block>
   <block id="b517955ef14866b28544f7b2807b497d" category="list-text">选择“创建块设备”。</block>
   <block id="c494d1f97c8af593b2547e971cde7048" category="list-text">在“音量详情”下，执行以下操作：</block>
   <block id="28d37ed4396c69863c777832e2dc985a" category="list-text">*卷名*：请选择以下选项之一。</block>
@@ -2253,8 +2015,6 @@
   <block id="d303726d253e10ceb3c3a9904bc4c18f" category="list-text">在“管理存储虚拟机”屏幕上，选择要重置密码的存储虚拟机的操作菜单，然后选择“基本操作”&gt;“重置密码”。</block>
   <block id="334f5b13a66630c66877aaf36ce24673" category="section-title">2026年1月4日</block>
   <block id="04c5d70ed6312687a1e39677346bbaff" category="sidebar">创建块设备</block>
-  <block id="64153de607e9925466a905a664c31502" category="list-text">用于ONTAP应急管理系统 (EMS) 事件分析的 CloudShell 和 FSx：端口 22 (SSH)</block>
-  <block id="f1a54b856438e25c87919e1789ae841c" category="list-text">ONTAP EMS 事件监控和警报</block>
   <block id="6e9c833800dbc4ebe142052809560480" category="list-text">在“为ONTAP文件系统创建 FSx”页面上，选择“高级创建”。</block>
   <block id="3a75f5b58f8a8c79c73ac8b3f0785afe" category="list-text">在创建 FSx for ONTAP文件系统页面上，选择*快速创建*。</block>
   <block id="342a19841e494c61bf9c06a5879eaffa" category="inline-image-macro">汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。</block>
@@ -2262,7 +2022,6 @@
   <block id="7f4aea97afc4fe9bca082673b0935315" category="list-text">从“存储”菜单中，选择“分析”。</block>
   <block id="aa56579381807f7a0875c83ea40e95f6" category="list-text">如有需要，请按照屏幕提示完成 AI 分析设置要求，以满足任何缺失的先决条件。</block>
   <block id="2d35ddb4d21997f4aa6c33cc82b9e218" category="list-text">从存储控制面板中，选择“创建文件系统”。</block>
-  <block id="2500dbf9595976bd1314c2eaa3c7cdb1" category="paragraph">以下是 AWS 的默认策略。要显示现有的快照策略，您必须 <block ref="6e2abc793876f9e04717a19a42b0bb65" category="inline-link-macro-rx"></block>。</block>
   <block id="4df0f1805985e10746c9c4f0c93c1972" category="list-text">从“存储”菜单中，选择“探索节省”，然后选择“Amazon Elastic Block Store (EBS)”选项卡。</block>
   <block id="ac451744a266e36dbad7a3a3b3ade56c" category="list-text">从“存储”菜单中，选择“探索节省”，然后选择“Amazon FSx for Windows 文件服务器”选项卡。</block>
   <block id="17213dc8118fcfe940b37a95d4307e39" category="list-text">从“存储”菜单中，选择“探索节省”，然后选择“Amazon Elastic File System (EFS)”选项卡。</block>
@@ -2277,7 +2036,6 @@
   <block id="68d85c073028f0fd978bc424d69ee8fd" category="list-text">在“孤立设备”下，选择“查看和回收容量”。</block>
   <block id="f6841052bd0d86548318f9b2df118ea3" category="list-text">在“回收未使用的块设备空间”屏幕上，选择一个或多个块设备来归档数据并回收容量。</block>
   <block id="2c77adf5fa1de4ed37a6e14d2212f074" category="list-text">选择“存档”。</block>
-  <block id="aca2e051b8b58a53ee4cf20a78bdde8a" category="list-text">该链接必须能够连接到以下端点：\ https://api.workloads.netapp.com.基于 Web 的控制台通过与 Workload Factory API 交互来管理和操作 FSx for ONTAP工作负载。</block>
   <block id="0ee3fcfb10a8d4af3c7cb550b6d9bc38" category="paragraph">借助 Amazon Bedrock 集成，Workload Factory 使用人工智能来分析事件并提供可操作的见解，以维护 FSx for ONTAP 文件系统的运行状况和性能。</block>
   <block id="27562a45337f51e17d281897d9fddcd2" category="paragraph">使用事件分析器时，您可以完全控制您的环境，同时受益于高级 AI 分析。</block>
   <block id="0da91429b3f9223cbaa4f8470ef89ea0" category="paragraph">要允许 Workload Factory 分析事件，必须激活 Amazon Bedrock，选择 Workload Factory 使用的模型，创建专用端点以连接到 Amazon Bedrock，添加权限并创建企业许可证。</block>
@@ -2326,7 +2084,6 @@
   <block id="7fa60554ae8bd6b13d23cabdd189c7c5" category="paragraph">使用 NetApp Workload Factory 创建启动器组并管理对 SAN 块设备的主机访问。</block>
   <block id="30ddb2a8f4393c24e7c572caffb658c3" category="paragraph">启动器组或 igroups 将块设备（LUN）连接到允许访问它们的计算资源。与 NFS 或 CIFS 不同，在 NFS 或 CIFS 中，卷可以广泛访问，用户权限控制访问，而块存储权限则在计算机级别运行。通常，一次只能有一个系统访问一个块设备。</block>
   <block id="e001414c2f2f18ec7a5b8edeac34513d" category="paragraph">igroup 充当块存储的权限层。当服务器连接到存储系统时，它会使用其 iSCSI qualified (IQN) 主机启动器来标识自己。如果该 IQN 属于一个或多个 igroup，则服务器将获得对与这些 igroup 关联的所有 LUN 的访问权限。iSCSI 正常工作需要 igroup 和 iSCSI 主机连接。</block>
-  <block id="ede6bdf1757b96e1b5471e16e68335ad" category="paragraph">您必须关联一个链接以创建 igroups。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>。关联链接后，返回此操作。</block>
   <block id="73f3ace4e6e8534569db86fc6aec4c49" category="list-text">选择资源类型 *Create initiator group*，然后选择 *Create igroup*。</block>
   <block id="8f70a2f50bfb27046fd5a4178b7197cf" category="list-text">在 *Create initiator group* 对话框中，执行以下操作：</block>
   <block id="64247bba5c3763028e72b0194b474327" category="list-text">*igroup name*：输入启动器组的名称。</block>
@@ -2335,13 +2092,11 @@
   <block id="cab281453766ba01226c32a419bd00b4" category="list-text">*Block device name*：选择一个或多个块设备与启动器组关联。列出的块设备是尚未映射到主机启动器的设备。</block>
   <block id="54d026e00002c68ee50033dbd7e53e6f" category="list-text">*操作系统类型*：选择 Linux、VMware 或 Windows 作为操作系统类型。</block>
   <block id="283119ca74749a876a6dfcb0c6968a8c" category="list-text">*主机启动程序*：将一个或多个 iSCSI 合格 (IQN) 主机启动程序添加到启动程序组。</block>
-  <block id="66aa1d91f89810f078327deb1e1fc2c8" category="list-text">用于复制关系的 FSx for ONTAP 文件系统必须具有相关联的链接。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>。关联链接后，返回此操作。</block>
   <block id="ba1072e8c0845f82f77ef660d46bde4a" category="list-text">对于从本地 ONTAP 系统复制到 FSx for ONTAP 文件系统，请确保您已发现本地 ONTAP 系统。</block>
   <block id="45eea8cd3d88c48d8f4826a6be39d707" category="list-text">*S3 接入点标签*：您最多可以添加 50 个标签或删除标签。</block>
   <block id="357d9dd76af15c8aaf8f09990a2846a9" category="list-text">您必须在 AWS 帐户中<block ref="6f74e2a9589a6666ba7fdb81dabfc5eb" category="inline-link-macro-rx"></block>。</block>
   <block id="448fd8fde4bcc32e3db009c4a666bbfd" category="list-text">在 Dismiss configuration 对话框中，选择 *Dismiss* 停止配置分析。</block>
   <block id="e1b530152da44e105ca4a8d377616f64" category="list-text">选择 *Dismissed configurations*。</block>
-  <block id="bc1c3c9e36135f9757b3dc3c3e193f02" category="list-text">您必须关联链接才能管理 igroups。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>。关联链接后，返回此操作。</block>
   <block id="08cd6b7c5ed112ac93d8c42844793856" category="section-title">管理 igroup 的客户端访问</block>
   <block id="7da430a2703aa373f838f3ca96dbd76a" category="list-text">选择资源类型 *Initiator groups (igroups)* 以查看现有 igroups。</block>
   <block id="ff1a20fd70e3a7ecfb8b967bada7a3e0" category="list-text">转到块设备的操作菜单，然后选择 *管理客户端访问权限*。</block>
@@ -2364,9 +2119,7 @@
   <block id="076804dea9fcf3467cf7c699f9811498" category="list-text">进行更新，然后选择 *Apply*。</block>
   <block id="f6e1df464413e09857979a0ca8b75a4b" category="paragraph">从 NetApp Workload Factory 中的卷删除现有 S3 访问点。</block>
   <block id="d1fabbd85b7cc34641739e525d26f652" category="section-title">2026 年 2 月 1 日</block>
-  <block id="2855f13e1a4620842b40a36c5090209b" category="sidebar">创建块存储资源</block>
   <block id="d8ad6fc6096c88d41f98b91f0043eebe" category="sidebar">创建 igroup</block>
-  <block id="9a6576dfb2c795711c67df7e1a5b076a" category="sidebar">块存储管理</block>
   <block id="e77c03d49e828607828412709552dbd6" category="sidebar">管理 igroup</block>
   <block id="0352f037ca8dfca49383ddb908805d9a" category="list-text"><block ref="0352f037ca8dfca49383ddb908805d9a" category="inline-link-macro-rx"></block></block>
   <block id="0a17c703284dc61149bdaf13e30980de" category="list-text"><block ref="0a17c703284dc61149bdaf13e30980de" category="inline-link-macro-rx"></block></block>
@@ -2434,9 +2187,6 @@
   <block id="df84e5c661ad9c55d4921f236021aac2" category="paragraph"><block ref="df84e5c661ad9c55d4921f236021aac2" category="inline-link-macro-rx"></block></block>
   <block id="3b40a61896ac7bb071b70913553072f1" category="inline-link-macro">管理 FSx for ONTAP 文件系统的块存储</block>
   <block id="72a58cc21323626d7784d44077612a4a" category="paragraph"><block ref="72a58cc21323626d7784d44077612a4a" category="inline-link-macro-rx"></block></block>
-  <block id="59f5126fcebfa1b4b592a46994a99827" category="paragraph">当使用量超过指定阈值时，增加 SSD 存储容量。当您不使用工作集以节省资金时，降低 SSD 存储容量。</block>
-  <block id="eb6c620cfb7e9a2b2d272cbd7de4add5" category="inline-link-macro">启用自动容量管理</block>
-  <block id="ecc53408400ad50b32a298b084aaab6c" category="paragraph">或者，您可以<block ref="3b9a1990588be58052dffdfdaa494467" category="inline-link-macro-rx"></block>，以便 Workload Factory 为您管理文件系统容量。</block>
   <block id="50b304c0a704b9a80773e4a50f6e7d06" category="paragraph">更改文件系统容量会影响 FSx for ONTAP 文件系统的 IOPS。</block>
   <block id="897441537fb13b6e015f73a76a79d07f" category="paragraph">要调整文件系统的容量，必须首先<block ref="ca55c81878fab545ebb59a964af2e0f9" category="inline-link-macro-rx"></block>。</block>
   <block id="201a18ac1c906df6358f39af33c244de" category="summary">在 NetApp Workload Factory 中管理 FSx for ONTAP 文件系统的块存储。</block>
@@ -2456,14 +2206,10 @@
   <block id="6a7ad49263c3fc8c151eb65f1806da11" category="paragraph">块设备或 LUN（逻辑单元编号）是 SAN 环境中具有文件系统的卷，可供主机通过网络访问。</block>
   <block id="b8566093dc7e8e13804760276e46227b" category="admonition">增加块设备大小后，请按照主机操作系统提供的步骤来发现新大小并扩展文件系统。</block>
   <block id="5604a07573c6d426e93e84ff1a6bd366" category="paragraph">未映射到客户端或七天未使用的块设备是非活动的块设备。此操作取消映射并删除选定的块设备。如果主机 FlexVol 卷不包含任何块设备，Workload Factory 将删除它。</block>
-  <block id="d5d9ee8255b76e97868c3facadf58360" category="paragraph">启用容量管理让 NetApp Workload Factory 能够随着容量需求随时间变化，自动向 FSx for ONTAP 文件系统添加增量存储。此外，启用此功能无需手动监控容量。</block>
-  <block id="b5750806a6c2de28360d7b511ba01b0c" category="paragraph">系统每 30 分钟扫描一次 FSx for ONTAP 文件系统。它检查是否需要添加增量存储，并验证可用的卷 inode。计数根据自动容量管理阈值增加。</block>
-  <block id="7bdf690b1d068245416e9f5cbb766f44" category="paragraph">启用 inode 管理允许 NetApp Workload Factory 在容量需求变化时自动将增量 inode 添加到 FSx for ONTAP 文件系统。此功能无需手动监控 inode。</block>
   <block id="a850b45530431e433b34aeb17888df66" category="paragraph">这是 Workload Factory 触发作业以增加容量的阈值。例如，如果文件系统达到 80% 的容量，则 Workload Factory 会增加容量。</block>
   <block id="52f65090db0661db649aa6c7e46a8b14" category="paragraph">每 30 分钟进行一次文件系统扫描，以确定其是否需要额外容量。</block>
   <block id="fcb18dec8d5281d1ce666db128df5515" category="section-title">为文件系统启用 inode 管理</block>
   <block id="083afef27eb29c6a017bada830bc631c" category="paragraph">启用自动 inode 管理，以将每个卷的 inode（文件）数量增加到允许的限制。</block>
-  <block id="d933b8209c8cd56ba75386ce9ae7847a" category="paragraph">每 30 分钟对 FSx for ONTAP 文件系统进行一次扫描。它验证可用的卷 inode，并检查是否需要添加增量 inode。计数基于自动 inode 管理阈值增加。</block>
   <block id="7e360279029f6830f2d762fa5ccf524e" category="paragraph">Amazon FSx for NetApp ONTAP 允许 NFS 和 SMB 文件系统访问 S3 数据并连接到 Amazon Bedrock、SageMaker、Athena、AWS Glue 等 AWS 服务。您可以将 AWS 服务连接到所有对象存储数据。</block>
   <block id="d38a17b6c80e0c89c1d9fcf60a993290" category="paragraph">将 S3 接入点连接到 FSx for ONTAP 文件系统中的 NFS 和 SMB 卷，以便 AWS 服务像在 S3 存储桶中一样访问文件。连接接入点时，请定义唯一 ID，选择文件访问类型（UNIX 或 Windows），并添加用于访问授权的用户名。</block>
   <block id="050fbf0b45be1573711ea227653f0c71" category="paragraph">连接 S3 访问点后，它会以唯一的别名显示在 AWS Management Console 中。使用此别名作为 AWS 服务（例如 Amazon Bedrock）的 S3 存储桶名称，以访问 FSx for ONTAP 卷中的文件。</block>
@@ -2475,15 +2221,11 @@
   <block id="4aa1f4ce7ff97e69b143fbe399631234" category="section-title">2026 年 3 月 1 日</block>
   <block id="f9b8d8043e7f357d7b5805e6dfd01b25" category="sidebar">管理块存储</block>
   <block id="90fbacfd00a759e142437ac247a4317c" category="sidebar">手动调整文件系统容量</block>
-  <block id="241296c9db6f3205e0e5738da7ec12ef" category="sidebar">自动管理文件系统容量</block>
   <block id="62790b093d67bd09f77b7088f1cf32a6" category="list-text">*卷备份*：默认情况下启用每日自动备份。如果需要，请禁用。</block>
   <block id="94a3e141996b9431c4516ae849425040" category="summary">NetApp Workload Factory 定期分析 Amazon FSx for NetApp ONTAP 文件系统配置，以确定是否存在任何配置问题。</block>
   <block id="eb2b721313223c7264abb769bf627d20" category="paragraph">NetApp Workload Factory 定期分析 Amazon FSx for NetApp ONTAP 文件系统配置，以确定是否存在任何配置问题。当发现问题时，Workload Factory 会向您展示问题所在，并解释需要更改的内容，以确保您的文件系统存储实现最佳性能、成本效益和符合最佳实践。</block>
   <block id="9ffdb95250e26c7a6b468126ac7c75b0" category="section-title">工作原理</block>
-  <block id="2888fa977354ad1bf513fa2f17fdd7df" category="paragraph">Workload Factory 每天分析在 Amazon FSx for NetApp ONTAP 文件系统部署上运行的工作负载。该分析提供了精心设计的状态、见解和建议。</block>
-  <block id="678b83ba882b41e4bae10f8e48f4a766" category="paragraph">每日分析完成后，配置在 Well-architected 仪表板中显示为"优化"或"未优化"。您可以找到总优化分数、按类别划分的配置问题以及配置问题和建议列表。您可以查看配置问题的建议。有些问题可以由 Workload Factory 自动修复，而其他问题则需要手动干预。在这种情况下，Workload Factory 会提供详细说明，以帮助您实施建议的更改。</block>
   <block id="ee25e0b6cd574166f206b4c5b7f02df3" category="section-title">为什么很重要</block>
-  <block id="1ae45cc8915c23757127ca10c1cc4000" category="paragraph">Workload Factory 通过将持续评估与建议见解和补救措施相结合，将最佳实践应用于大型存储、数据库和 VMware 环境。在 Workload Factory 控制台中应用的自动修复可减少人为错误，确保统一管理，并保持整个工作负载基础架构的性能和可靠性。</block>
   <block id="c6ee17dfa8bb85cfb470ccbc889f031c" category="section-title">存储工作负载的最佳实践和建议</block>
   <block id="ffd9fc00ab43b8283346c6266e00d684" category="paragraph">架构完善的分析将配置归类为框架的以下支柱：_reliability_、_security_、_operational excellence_、_cost optimization_ 和 _performance efficiency_。</block>
   <block id="820b8f74ad843d1574106ec4cadfc07e" category="section-title">可靠性</block>
@@ -2497,21 +2239,15 @@
   <block id="17d2a91a4f3c01de4c2f05b2242e49d3" category="section-title">卓越运营</block>
   <block id="aae272278ce139a51849ab88adc7d597" category="paragraph">卓越运营侧重于提供最佳架构和业务价值。</block>
   <block id="c2af0d35add26707ebd7d7030d750beb" category="paragraph">应启用自动容量管理，以定期确保 SSD 层不超过阈值。</block>
-  <block id="a58ce95d0ee8f9d592643a6f31d60878" category="paragraph">为了获得最佳性能，Workload Factory 建议使用最适合您的工作负载的缓存关系写入模式。写入绕行模式为具有小文件的读取密集型工作负载提供更好的性能，而写回模式为具有大文件的写入密集型工作负载提供更好的性能。</block>
-  <block id="3f8b3943fba700ffad94c47ef4638509" category="paragraph">Workload Factory 建议在缓存卷上启用卷自动调整大小和清理，以保持最佳大小，并将缓存集中在热数据上，以实现最高效率。</block>
   <block id="a39ae09f8be4327fc176cfeb76a0e366" category="section-title">成本优化</block>
   <block id="394c926099d3d2cf7e0d7477f17faf38" category="paragraph">成本优化可帮助您在保持低成本的同时为业务创造最大价值。</block>
   <block id="c359614024935abd3712075452782fa3" category="list-text">*非活动块设备*</block>
-  <block id="934ae55c0ac8033312b0dd4fc00ad677" category="paragraph">在块设备未使用七天后，Workload Factory 建议归档块设备数据或删除未使用的块设备以降低成本。</block>
   <block id="3224742265d3111d23b216e2a1d3036c" category="paragraph">卷备份是按卷进行的，因此每个备份仅包含特定卷中的数据。</block>
   <block id="9b1c40247bbd6b430d06045ce9149bf4" category="paragraph">卷备份是增量的，这意味着只有在最近一次备份后更改的卷上的数据才会被保存。这样可以最大限度地减少创建备份所需的时间和备份所需的存储空间，从而通过不复制数据来节省存储成本。</block>
   <block id="0b3a2f729072cb80e423288abd69fa27" category="list-text">选择 *Data protection actions*、*Volume backups*，然后选择 *Manual backup*。</block>
   <block id="108be83f8740c01bf49fb6d51d4b134e" category="admonition">快照不是数据的副本。如果要复制数据，请考虑使用卷备份或卷复制功能。</block>
   <block id="d6a7c6eb08e4e62d76793fd3d8b368d4" category="list-text">卷备份：卷备份副本将保留，您仍然可以使用它们。</block>
-  <block id="e18aace8bf973f70c990d2b81fcba316" category="list-text">在信息下，选择 *Volume backups* 旁边的铅笔图标。当鼠标悬停在 *Volume backups* 行上时，铅笔图标会出现在下拉箭头旁边。</block>
-  <block id="8650af0fa3c7b902ba6a94894d28c472" category="list-text">在 *Volume backups* 对话框中，提供以下内容：</block>
   <block id="5e9b88efcc8c9692790f512327a22476" category="list-text">选择 *Data protection actions*、*Volume backups*，然后选择 *Restore from a backup*。</block>
-  <block id="6eb18ebccbf4fe18669aca55778990e0" category="sidebar">管理卷备份计划</block>
   <block id="b6a0b5ebabfe42c8ed27e9b4c0efda76" category="paragraph">已知限制指出本产品版本不支持的平台、设备或功能，或与其无法正常互操作的平台、设备或功能。以下限制仅适用于 Amazon FSx for NetApp ONTAP 在 NetApp Workload Factory 中的使用。请仔细查看这些限制。</block>
   <block id="373a2f1d901c2d939efc602830f01830" category="paragraph">新的 Inventory 表自动扫描您的 AWS S3 存储桶并填充 S3 表，为您提供所有对象、其元数据、属性和标签的清晰快照。访问这些详细信息有助于您保持对自己负责的数据的控制、可见性和可信度，同时减少运营开销。您可以在创建和连接 S3 接入点或编辑现有接入点时打开此功能。</block>
   <block id="89431b722804b6b5729917d710d8bca9" category="inline-link-macro">在 NetApp Workload Factory 中为卷创建并附加 S3 访问点</block>
@@ -2531,7 +2267,6 @@
   <block id="dfe0bf59b17a7c242e3e57ed9983cadf" category="inline-link-macro">在 NetApp Workload Factory 中创建 FlexVol volume</block>
   <block id="438b9ce1f05f60505d31940eb7d80713" category="paragraph"><block ref="438b9ce1f05f60505d31940eb7d80713" category="inline-link-macro-rx"></block></block>
   <block id="934fd3399568391e103ee0d773bf954d" category="list-text">*非活动 NAS 卷*</block>
-  <block id="ad888b2fc1946f3bc7c47013f4399476" category="paragraph">配置分析可识别未主动使用的 NAS 卷，并建议删除或归档这些卷以降低成本。</block>
   <block id="27bbb381f95a5892aac5e6fa577ad167" category="list-text">*聚合名称*：选择聚合来托管新卷。</block>
   <block id="aadb221d48ad5912d16ae10d1a2f7515" category="inline-link-macro">修改分层策略</block>
   <block id="de12e179e610f435272079f58d2c6bf8" category="paragraph"><block ref="7a3d97c05742e0c35a808e39b9ae9bf1" category="inline-link-macro-rx"></block> 切换后的目标卷。</block>
@@ -2808,7 +2543,6 @@
   <block id="d0d09a499e6cdf9f1d34c4e5929c7f4d" category="section-title">步骤 3：为迁移用例切换复制</block>
   <block id="09b43c18bbbe0ab926e24296d842bf9b" category="paragraph">为迁移用例创建复制关系后，必须切换复制，以完成将存储 VM 数据和配置设置迁移到目标 FSx for ONTAP 文件系统。切换复制将数据和存储 VM 配置设置从源文件系统永久迁移到目标 FSx for ONTAP 文件系统。在切换期间，数据会进行最后一次复制。切换开始时，源存储 VM 会脱机。</block>
   <block id="3d7746b6894a23aa721b9d2b99f0bff4" category="list-text">*复制版本支持*：源和目标存储系统必须具有相同的主要 ONTAP 版本。例如，如果源系统运行的是 ONTAP 版本 9.18.1，则目标系统也必须运行 9.18.1 版本。</block>
-  <block id="28cd2b513c45599c0ed271171a723fae" category="paragraph">在 NetApp Workload Factory 中复制数据，以便在数据所在区域发生灾难时防止数据丢失。FSx for ONTAP 文件系统与本地 ONTAP 系统或 Cloud Volumes ONTAP 之间支持数据复制。</block>
   <block id="388c14942d26a5119b21a74fab9025a3" category="paragraph">在两个 FSx for ONTAP 文件系统之间、本地 ONTAP 系统和 FSx for ONTAP 文件系统之间，或者 Cloud Volumes ONTAP 和 FSx for ONTAP 文件系统之间复制数据。</block>
   <block id="5a022ce9df2c118b15eecf6d431faf14" category="doc">块设备克隆</block>
   <block id="c74340453798a5d4d4e10a5aaef38904" category="paragraph">Workload Factory 为您的块设备提供克隆，以便您可以快速配置可写入且高效的数据副本，同时控制容量、访问权限和生命周期。</block>
@@ -2899,7 +2633,6 @@
   <block id="9ef57b630c87ffd61b917510a7a26030" category="section-title">NetApp Workload Factory 中可用的 LIF 详细信息</block>
   <block id="055f68ac1562a94352bd56b1842791fb" category="paragraph">我们直接在文件系统的"概述"选项卡中显示所有文件系统和存储虚拟机端点。Workload Factory 控制台内的直接端点可见性使您可以更轻松地监控网络访问、端点和故障转移状态，而无需使用 CLI 或 CloudShell。要显示 LIF 详细信息，包括角色、端点、节点、IP 地址和状态，您需要将链接与文件系统关联。</block>
   <block id="c1bff806faafabc5316c2270f113bd85" category="inline-link-macro">了解如何在 NetApp Workload Factory 中将链接与您的文件系统关联</block>
-  <block id="0cfa9f29837495af6181228a2286658a" category="paragraph"><block ref="966e2ff22df42c69be9cce59aca228ff" category="inline-link-macro-rx"></block>。</block>
   <block id="3cb407325a893b82dafad46209626b50" category="section-title">成本增强功能</block>
   <block id="4ca110e0d9ae04c6ba757ec8fd3182f2" category="paragraph">新的可选页面级筛选器可用于改进所有 AWS 账户的资源成本分析结果。您可以选择多个区域，并使用文件系统分配标记键和键值来过滤成本分析结果，并获取针对 FSx for ONTAP 文件系统和卷的资源特定成本详细信息。</block>
   <block id="083b82dbc7669e65217c0c4cdd6a08f3" category="inline-link-macro">在 NetApp Workload Factory 中使用筛选器进行成本分析</block>
@@ -2931,15 +2664,12 @@
   <block id="b177ab05bd2fbdb0d056e9aab959cb42" category="paragraph">存储管理员通常仅在客户投诉后或通过维护自定义脚本和警报来响应 FSx for ONTAP 事件。这种被动响应方式会降低效率、延迟问题解决并增加停机时间。</block>
   <block id="ca49138d55194f3a1b69368658fa59c0" category="paragraph">事件分析器会自动从 FSx for ONTAP 文件系统中提取以下事件类型：</block>
   <block id="229e5c835625a6cd5a09a266df2faa8c" category="inline-link-macro">使用链接连接到文件系统</block>
-  <block id="5189ff53307ee7b08ddaa025da603b7c" category="list-text">*EMS 事件*：来自 ONTAP 事件管理系统的错误、警报和紧急事件。要查看和分析 EMS 事件，您必须 <block ref="e3e5092d2d9ecf941f8ffdff56f5837a" category="inline-link-macro-rx"></block>。</block>
-  <block id="35b385d2a34b34294a95472dbbafeb62" category="list-text">*延迟事件*：读取和写入延迟事件。可以在没有链接连接的情况下查看延迟事件。要分析延迟事件并接收 AI 驱动的洞察，您必须 <block ref="e3e5092d2d9ecf941f8ffdff56f5837a" category="inline-link-macro-rx"></block>。</block>
   <block id="1ee445f8e51142e85beb7b0f2c2e1518" category="paragraph">要查看事件，您必须<block ref="74a62493240df6cc0643a248f282a25a" category="inline-link-macro-rx"></block>在您的 AWS 帐户中。事件在移除前显示 72 小时。</block>
   <block id="59a0aad57efa98df25e199d3fa441911" category="list-text">高级故障排除：AI 自动识别、分析并提供见解，以修复 FSx for ONTAP EMS 和延迟事件，减少手动调查时间。</block>
   <block id="b5bc253203e24fc8972e3fe9be53196b" category="list-text">最佳实践修正：事件分析器提供清晰、可操作的步骤来解决 FSx for ONTAP EMS 和延迟事件。</block>
   <block id="ffb5c85ee020316605143a7a4c0773b7" category="paragraph">要分析 EMS 和延迟事件并接收 AI 驱动的见解和建议，请确保以下内容：</block>
   <block id="17a23fbf55b4140721bd4a74dda992ee" category="list-text">您的 AWS 账户中有 <block ref="3728a9886a6e8befe945facf87fd7817" category="inline-link-macro-rx"></block>。</block>
   <block id="4dfaad1ff2ec349d086542d609839be5" category="inline-link-macro">使用链接连接到文件系统</block>
-  <block id="118cc54d4ac9f6ec4ccf910143c8176e" category="list-text">您有 <block ref="e70ae182cde64a3166eabfbf424a24d8" category="inline-link-macro-rx"></block>。</block>
   <block id="55bc5f9b6cf37ff622a10cc4fd3aaccc" category="paragraph">其他要求（系统将在事件分析过程中提示您）：</block>
   <block id="6ab6dbf6bacb521f8499b17428a8a145" category="paragraph">为每个 AWS 账户配置 Amazon Bedrock API。Amazon Bedrock API 用于为 FSx for ONTAP 事件提供见解。</block>
   <block id="9aac5daa464aa807ec502ef1061168e5" category="section-title">查看和分析 FSx for ONTAP 的事件</block>
@@ -2957,15 +2687,6 @@
   <block id="1045d7a603969c049cf68b4017ae537e" category="list-text"><block ref="1045d7a603969c049cf68b4017ae537e" category="inline-link-macro-rx"></block></block>
   <block id="6149c2ac82c846d8c0c66beff37f271d" category="paragraph">创建块设备以支持您的业务线 (LOB) 应用程序要求。您可以在现有卷中创建块设备，为新块设备创建新卷，也可以从快照为新块设备创建新卷。</block>
   <block id="7d890770a60d61d9610602416316dd0c" category="list-text">从卷快照创建。选择源卷名称和快照名称。只有没有块设备的卷可用。</block>
-  <block id="0d9cf45fb23b4088730f72dd43be4a9b" category="paragraph">您有两个选项可以在此工作流程中创建链接——自动或手动。如果您有 AWS GovCloud 帐户，则必须手动创建新链接。</block>
-  <block id="e97bbb69ec6bcd2c1b3d761224ed4559" category="admonition">AWS GovCloud 帐户不支持自动创建链接。</block>
-  <block id="d37d952a78337c053485a61317b953df" category="list-text">*AWS Secrets Manager*：始终为 GovCloud 账户启用。其他账户可选。允许 Workload Factory 从 AWS Secrets Manager 获取 FSx for ONTAP 访问凭据。</block>
-  <block id="f3a06ea1d47de2a4216fe3fd53364d24" category="list-text">*用户提供的*：选择此选项可将指定的 Lambda 执行角色及其附加策略分配给 Lambda 链接。Lambda 权限策略需要以下权限。<block ref="e6b67e3118c0caaf2206ab3d3fba8d67" prefix=" " category="inline-code"></block> 权限仅在使用 AWS Secrets Manager 时才需要。</block>
-  <block id="1425c9b22ae63851bbaa938ebc0a967d" category="list-text">成功创建堆栈后，将 Lambda ARN 粘贴到 Workload Factory 控制台的文本框中。Workload Factory 基于 FSx for ONTAP 文件系统自动检索 AWS 帐户、位置和安全组。</block>
-  <block id="47dfa5e12270c73140e2f3dc8b32a020" category="paragraph">Workload Factory 将链接与 FSx for ONTAP 文件系统关联。您可以执行高级 ONTAP 操作。</block>
-  <block id="eb3eec333eedf15738e12e55e183cdb7" category="paragraph"><block ref="c7c8a4154bf78f63993b7572e6143221" category="inline-link-macro-rx"></block>。</block>
-  <block id="81fccfd8b7cc4d87c0978527048afe60" category="paragraph">支持 GovCloud 账户的链接连接。Workload Factory 使用 GovCloud 身份验证密钥，允许通过 GovCloud 批准的机制安全、无代理地访问 FSx for ONTAP 操作。</block>
-  <block id="f22e542eda471e2702ed07136761fd6c" category="list-text">显示Storage VM和集群LIF详细信息，包括角色、端点、节点、IP地址和状态</block>
   <block id="d72415af6292f1377ab69432624c64ea" category="summary">在 NetApp Workload Factory 中管理复制关系。</block>
   <block id="a26b114333821bd07a9e54008500a358" category="doc">在 NetApp Workload Factory 中管理您的复制关系</block>
   <block id="cdb933f4a358f433a7751a2bd01fe605" category="paragraph">在 NetApp Workload Factory 中管理您的复制关系。您可以暂停、恢复、还原、停止和删除源卷和目标卷之间的复制关系。您还可以更改源卷的复制计划，并限制复制关系的最大传输速率。</block>
@@ -2981,7 +2702,6 @@
   <block id="8b2efc01d419d2e075218fa1edac875b" category="list-text">*IOPS 阈值*：100 IOPS（读取和写入）</block>
   <block id="037ea7d94a5a2563d24d4aab128c2f74" category="list-text">*时间范围*：10 分钟</block>
   <block id="fc30acb77198b9a113675211028eeb7f" category="paragraph">当超过延迟阈值且在指定时间范围内达到 IOPS 阈值时，将生成警报。</block>
-  <block id="d663edf15a1c9b9cce32f438ee09111b" category="admonition">您可以在没有链接连接的情况下查看延迟事件并接收警报。但是，要分析事件并获得基于人工智能的见解和建议，您必须 <block ref="e3e5092d2d9ecf941f8ffdff56f5837a" category="inline-link-macro-rx"></block>。</block>
   <block id="ee43009d0c790146325573e838a42f39" category="list-text">选择*警报操作*，然后选择*设置延迟阈值*。</block>
   <block id="e7199990279785fb0027f522b7518c23" category="list-text">在"设置延迟阈值"对话框中，配置以下内容：</block>
   <block id="18a1f4ac498e878706a9bea4c3f7d8d2" category="list-text">*Read latency*：输入读取操作的阈值，以毫秒 (ms) 为单位。</block>
@@ -3084,7 +2804,6 @@
   <block id="95586dc24a07faa8b220610ee081b258" category="admonition">如果您的账号管理员已关闭 AI 功能，您将看到一条消息，无法使用 AI 分析功能。请联系管理员或<block ref="8a07854225cea4e549749d8d6bd03ae4" category="inline-link-rx"></block>。</block>
   <block id="7dda3a5d32a0f95d72a80e605571fac2" category="paragraph">要查看延迟事件，必须执行以下操作：</block>
   <block id="dcad9d7b64bcc7778ad8c3ce28000b5a" category="list-text"><block ref="74a62493240df6cc0643a248f282a25a" category="inline-link-macro-rx"></block> 在您的 AWS 帐户中。</block>
-  <block id="b5fa996e2b1ac4a33ba73889e4fd082c" category="list-text"><block ref="e3e5092d2d9ecf941f8ffdff56f5837a" category="inline-link-macro-rx"></block>。</block>
   <block id="8215457eb88ef1fb110b79579b908e3d" category="paragraph">您可以忽略不适用于您环境的配置分析。这样可以避免不必要的警报和不准确的优化结果。</block>
   <block id="8817b0c6f0795c52cab62044416eee8a" category="inline-link-macro">详细了解自定义规则</block>
   <block id="821af7226458ea25572e88e8ab2026e4" category="paragraph">您还可以用简单的语言创建自定义规则，以根据组织的标准和 NetApp 最佳实践验证您的环境。通过试运行测试规则，然后安排它们在您的环境中运行。<block ref="ce039b478eb432b675a03c04866f31ab" category="inline-link-macro-rx"></block>。</block>
@@ -3105,42 +2824,25 @@
   <block id="5f11ab37407484ede3169d7e37c9e28b" category="paragraph">使用 iSCSI 服务应用程序数据的卷不应同时允许 NAS 访问。Workload Factory 建议限制 iSCSI 卷使用任何其他协议。</block>
   <block id="ac6bba07ba0bbbb40281e6088f214af7" category="list-text">*自动容量管理*</block>
   <block id="bca05dfe73df2536775bb543bb367fb6" category="list-text">*卷容量余量*</block>
-  <block id="358a04c23a2e8b7a739dbfc478ae8427" category="paragraph">Workload Factory 建议卷容量不超过 80% 的利用率。这可能会影响对应用程序的数据读取和写入。卷容量可以手动增加，也可以使用卷自动增长功能自动增加。</block>
   <block id="cb24245fc7fbb951739f0e037e8ed58f" category="list-text">*FlexCache 写入模式*</block>
   <block id="199b5a17e840b5e8165065942a5aba7f" category="list-text">*FlexCache 副本大小*</block>
   <block id="9df3c9bccd6a766926fdecf9723bee25" category="list-text">*主机可见容量报告*</block>
-  <block id="ac6d1e17d25eaeb65d82b152dfdb57bf" category="paragraph">Workload Factory 建议启用主机可见容量报告，以便更好地了解卷级别的存储使用情况。</block>
   <block id="47d22e8e629e843266ec7435ff742bbb" category="list-text">*操作系统 (OS) 类型*</block>
-  <block id="5247b145ee65edc273dfc76802aa954d" category="paragraph">Workload Factory 建议确保 ONTAP LUN 操作系统 (OS) 类型值与操作系统分区方案匹配，以实现 I/O 对齐。配置不正确可能会降低性能。</block>
   <block id="6297d4b1adbdb3df46577f46811017d6" category="list-text">*块设备空间管理*</block>
-  <block id="0b3d1dbc35ccab38207b2110ee154a08" category="paragraph">Workload Factory 建议为数据库主机实例使用的 LUN 配置块设备空间设置，以防止写入失败并提高 FSx for ONTAP 的空间效率。此配置适用于精简配置卷的建议设置组合：空间预留、空间分配和部分预留。</block>
   <block id="03d17de0352cae761e78b42715347870" category="list-text">*精简配置*</block>
-  <block id="a276a4d3d1bb6ff49ba0c75013f6c037" category="paragraph">Workload Factory 建议为托管数据库实例的 FSx for ONTAP 卷配置精简配置。这种方法允许存储比实际可用容量更多的逻辑数据。</block>
   <block id="01fd10a8e7ac161e328da4eaf6292046" category="list-text">*冷数据分层*</block>
-  <block id="a5005a71aac05b88dbddcbb021b30d0a" category="paragraph">启用冷数据分层以降低 SSD 存储层利用率。Workload Factory 建议将分层策略应用于专注于一般数据存储的每个卷。对于数据库卷，我们建议在适当情况下启用冷数据分层。FSx for ONTAP 持续扫描数据以查找冷数据，并将其无中断地移动到容量池层。</block>
   <block id="1642a3ac22d754ea2e3215648c2ca8a7" category="list-text">*存储效率*</block>
   <block id="a97dffed0cf7eab28dd24e64546425b8" category="paragraph">启用存储效率功能（数据缩减、压缩和重复数据删除），以优化存储利用率并降低 SSD 层成本。</block>
   <block id="4839729f2857a14e606b9472d85de0c1" category="list-text">*备份过期时间*</block>
-  <block id="2d6228f6728e6cfbec7d7d819f3dc6bd" category="paragraph">Workload Factory 建议删除已删除卷的所有手动创建的备份，以及任何超过两周的备份。这些备份不会自动过期，如果您不再需要它们用于 SLA 或恢复，可能会增加成本并增加复杂性。</block>
   <block id="1404f94ec501f39118a91965272f695e" category="list-text">*Snapshot 过期*</block>
-  <block id="78820863b97d15c8f341065e658e9150" category="paragraph">Workload Factory 建议删除不再需要的旧快照或手动创建的快照。移除它们可以降低成本并减少冗余，特别是在您的 SLA 或恢复需求不需要它们的情况下。</block>
   <block id="8611faa768b220ecb3795c6fda54fdaa" category="list-text">*过度配置的 SSD 容量*</block>
-  <block id="5d6d944edf403daafeea5a5aeb5e3f87" category="paragraph">过度配置的 SSD 容量层会增加不必要的成本。Workload Factory 建议减少 SSD 层容量，同时保持 20% 的可用空间缓冲区。减少操作需要数小时到数天，在此期间不支持其他文件系统操作。</block>
   <block id="8722112d28d6eea0aff9478fb61c5de7" category="section-title">性能效率</block>
   <block id="62d0d3849cddbcf3cccae74f05719854" category="paragraph">性能效率可帮助您确保存储资源得到有效利用，并确保工作负载以最佳方式运行。</block>
   <block id="fbb48f4d1a3f9488b40b10d1cb8a50bd" category="list-text">*FlexGroup 卷重新平衡*</block>
-  <block id="a1ff290ebc3ad774d64f34c9530729c0" category="paragraph">Workload Factory 建议重新平衡您的 FlexGroup 卷以提高效率。横向扩展后，整个卷的容量和工作负载活动可能会变得不均匀。</block>
   <block id="ed1fc69039bbd36676c2e04fb15f5d02" category="list-text">*FlexVol 卷重新平衡*</block>
-  <block id="d594538bbec3297430ed8c995b262222" category="paragraph">Workload Factory 建议重新平衡您的 FlexVol 卷以提高效率。横向扩展后，整个卷的容量和工作负载活动可能会变得不均匀。</block>
-  <block id="dc0b44a6b07f576dd5f2f755574335ed" category="paragraph">Workload Factory 基于 FSx for ONTAP 文件系统自动检索 AWS 帐户、位置和安全组。</block>
-  <block id="325013ba9d083d4d579a01c87b58a749" category="paragraph">您可以使用 Codebox 中的两个基础架构即代码 (IaC) 工具创建链接：CloudFormation 或 Terraform。使用此选项，您可以从 AWS CloudFormation 中提取链接的 ARN，并在此处进行报告。Workload Factory 会为您手动注册链接。</block>
   <block id="e3a12eeb93ddbad9936f64a12bb2990b" category="summary">Workload Factory 扫描 Amazon FSx for NetApp ONTAP 配置，提供见解和建议，帮助您实现卓越运营。</block>
-  <block id="456dfd59254470bd0cb6fe309f187558" category="paragraph">使用配置分析见解和建议，利用 Workload Factory 为您的 FSx for ONTAP 文件系统实施最佳实践。您可以轻松查看架构完善状态，了解配置问题，并采取行动改进任何未针对可靠性、安全性、效率、性能和成本进行优化的系统的架构。</block>
   <block id="2481fd47e889a8c5be960ceeee3fc039" category="inline-link-macro">了解配置分析和架构良好的状态。</block>
   <block id="050f39c43a1faec7835a460a601cfaa4" category="paragraph"><block ref="050f39c43a1faec7835a460a601cfaa4" category="inline-link-macro-rx"></block></block>
-  <block id="7666c58e0bddac1cbe28645920551133" category="paragraph">Workload Factory 每天分析 Amazon FSx for NetApp ONTAP 文件系统部署配置。每日分析提供架构完善状态、见解和建议，以及自动修复配置问题的选项，使您的文件系统符合最佳实践。</block>
-  <block id="82879b45fce9fcdeb4f25012fa8fef7d" category="paragraph">您可以选择查看文件系统配置问题的建议并解决问题。</block>
-  <block id="df5c0246a90a5d139d7fb07cf388884f" category="paragraph">由于存储配置的要求各不相同，因此您可以忽略不适用于存储环境的特定配置的分析。这有助于您避免不必要的警报和不准确的优化结果。</block>
   <block id="3e21dedc161156a65d4b153c5653ab3d" category="paragraph">Workload Factory 分析 FSx for ONTAP 文件系统以下配置的良好架构状态：</block>
   <block id="a019551fbe33f5f8032e6ad7ea45cc46" category="list-text">可靠性：卷备份、快照策略、跨区域复制、SSD 容量余量、复制策略标签和文件对象容量</block>
   <block id="8201d40059d24557a9ae6b54f5db8a8c" category="list-text">安全性：勒索软件防护 (ARP/AI) 和未经授权的 iSCSI 卷访问</block>
@@ -3152,7 +2854,6 @@
   <block id="3efa1f5617c52b1aa6c34c67d5726abd" category="list-text">为任何配置选择*查看和修复*。请务必仔细阅读建议。</block>
   <block id="a4ae5a230015c0a679cee86f84a28962" category="list-text">选择资源，然后选择*修复*。</block>
   <block id="06e1b6c2480d62026b18d2c923a28506" category="paragraph">某些修复操作仅适用于特定操作，并不总是适用于多个资源。例如，您可以修复单个卷的配置，但不能修复多个卷的配置。</block>
-  <block id="d13a349bc65ac4879614661d04a45015" category="list-text">在对话框中查看与配置的修复操作相关的信息。某些操作可能会导致实例停机或服务中断。</block>
   <block id="53274680f8c8a77a8f6eea3b3540d8e8" category="list-text">如果您希望 Workload Factory 应用建议的更改，请选择*修复*。</block>
   <block id="0978922f14eb07f7fed49aad717e25a8" category="paragraph">修复过程开始。选择帐户设置菜单，然后选择 *Tracker* 以查看操作状态。</block>
   <block id="87fbaf4af36088cb5c229c5d63fc7d88" category="paragraph">无限期停止一个或多个资源的配置分析。您可以在需要时重新启动分析。</block>
@@ -3177,7 +2878,6 @@
   <block id="fe23abc487c1652819d9b5e7f369c584" category="list-text">对于一种资源：选择 <block ref="0b1a4328cf8d4a19e527f04594e503ab" category="inline-image-macro-rx" type="image"></block>，然后选择 *Reactivate*。</block>
   <block id="a38e01e3ec63bd595f916620c9db95f2" category="list-text">对于多个资源：选择资源，然后选择"批量操作"旁边的 *Reactivate*。</block>
   <block id="90bf65e5861f1213fc5134e7f7138cc3" category="paragraph">Workload Factory 每天重新激活配置分析并运行新的分析。</block>
-  <block id="875551355a7b095c8343c772ab9a39cd" category="paragraph">Workload Factory 需要一个链接来显示一些信息和执行一些任务。如果您尝试执行需要链接的操作，但尚未将链接与 FSx for ONTAP 文件系统关联，则 Workload Factory 会通知您该操作需要链接。</block>
   <block id="8dbebb7d8525e0c16443f866feb41a02" category="paragraph">Workload Factory 提供了 Tracker（一种监控功能），让您可以监控和跟踪 FSx for ONTAP、凭据和链接操作的进度与状态，查看操作任务和子任务的详细信息，并诊断任何问题或故障。</block>
   <block id="2f8586eac80bb95b25809876eb97f99a" category="paragraph">Workload Factory 确定您是否有足够的容量进行还原，如果没有，则可以自动添加 SSD 存储层容量。</block>
   <block id="4fd22cd0c1b62f84962ef1e8ffd9c966" category="paragraph">启用跟踪以监控整个帐户的复制延迟。当延迟超过设定的阈值时，Workload Factory 将提醒您。默认情况下，阈值为复制间隔的 150%，以允许正常传输时间并减少误报。您可以调整阈值以匹配您的 RPO，并在延迟超过阈值时收到通知。您还可以将数据导出为 CSV 文件以进行进一步分析。</block>
@@ -3222,50 +2922,153 @@
   <block id="c329a6ebc8c0891e88889203e3e31c39" category="doc">可从链接页面创建链接</block>
   <block id="ef8e743556b96fe2947729361cb5835f" category="paragraph">现在，除了 FSx for ONTAP 库存页面和文件系统概述页面之外，您还可以直接从"管理"菜单中的"链接"页面创建链接。</block>
   <block id="b65fab1584e1a15fb6cd01b1fb573a1f" category="inline-link-macro">详细了解如何创建链接</block>
-  <block id="2fb8fbf9eac6cb7cdbca3e8cae581dd0" category="paragraph"><block ref="ac8902bc899b18c41d3bea9bfd9e1e86" category="inline-link-macro-rx"></block>。</block>
-  <block id="eb72702456cb13d975ccfacb15b610d0" category="paragraph">链接使用 AWS Lambda 执行代码以响应事件并自动管理该代码所需的计算资源。您创建的链接是您 NetApp 帐户的一部分，它们与 AWS 帐户相关联。</block>
-  <block id="de753f9064c7210624293a7c1d1e13f9" category="paragraph">您可以在定义 FSx for ONTAP 文件系统时在帐户中创建链接。您可以使用该文件系统的链接，也可以将其用于其他 FSx for ONTAP 文件系统。您也可以稍后为文件系统关联链接。</block>
-  <block id="36c518eb88267ad8a7105893fd209a46" category="list-text">在"Administration"菜单中，选择"Links"。</block>
-  <block id="892be23a9211e0d2e6a0d60b06507944" category="list-text">在"链接"页面上，选择*创建并关联*。</block>
-  <block id="cb045f0740ec2fb29d2864d6c52abff5" category="list-text">在关联链接对话框中，选择要与链接关联的文件系统，然后选择*继续*。</block>
-  <block id="a9dc1217e276dbbc98e08e5bf8b4e0bd" category="list-text">选择*创建新链接*，然后选择*继续*。</block>
-  <block id="eaa9de7b48a473b999b69f05d59df6c2" category="list-text">在创建链接页面上，选择*自动创建*，然后提供以下内容：</block>
-  <block id="0a447482fbe2f57253df6484a37127e2" category="list-text">*用户提供的执行角色*：选择此选项可将指定的 Lambda 执行角色及其附加策略分配给 Lambda 链接。Lambda 权限策略需要以下权限。仅当您启用了 AWS Secrets Manager 时，才需要 <block ref="e6b67e3118c0caaf2206ab3d3fba8d67" prefix=" " category="inline-code"></block> 权限。</block>
-  <block id="4e4d4587b3d4f525dd0bfabd81edb7d7" category="paragraph">启动时，CloudFormation 模板会向 Lambda 授予三项权限。Workload Factory 在使用链接时会使用这些权限。</block>
-  <block id="6f0344b8291b1471c971ba88374dce8a" category="paragraph">您可以在"事件"页面上监控链接创建状态。这应该不超过五分钟。</block>
-  <block id="7b8171c19525234afed5066a22d0bdbe" category="list-text">在"创建链接"页面上，选择"手动创建"，然后从"代码框"中选择 CloudFormation 或 Terraform。</block>
-  <block id="bf419e3bcb855d67fd85a99f9a55eb97" category="list-text">在详细信息和凭据下，提供以下内容：</block>
-  <block id="0b1685216b81bbd8b7a0d6bb09435f98" category="paragraph">创建链接后，将其与一个或多个 FSx for ONTAP 文件系统关联。</block>
-  <block id="64c7a4783273d9e14ea971d0631f7ac8" category="paragraph">验证密钥 ARN 是否包含以下键值对，但 _filesystemID_ 是可选的。</block>
-  <block id="669b6152234fe8c12012646b005a7d2f" category="paragraph">密钥应包含以下键值对：</block>
   <block id="1641126472d40ab162e3acf05ac611ba" category="section-title">2026年8月30日</block>
   <block id="c82db17d9640cb358a39977100613e95" category="section-title">工作负载标识</block>
   <block id="9c2440b961ba52df8467b29a146f98ba" category="list-text">Workload Factory 现在可识别连接到部署在不同区域的 FSx for ONTAP 存储的主机的工作负载。</block>
   <block id="c48db719590b6821db48e6238f4be1c4" category="list-text">改进的工作负载检测逻辑现在可以发现其他工作负载类型并提高调查结果的准确性。</block>
-  <block id="a5eed3b96d2185e0764ada195a486690" category="doc">在 NetApp Workload Factory 中更改卷的复制计划</block>
   <block id="c092c4e03c30c753ec060fe6b2255de4" category="doc">在 NetApp Workload Factory 中为存储 VM 配置和更新 AD</block>
-  <block id="03fff97f7787377e3e4417517cf7b21e" category="doc">在 NetApp Workload Factory 中创建卷的按需备份</block>
   <block id="08d70d11ddeec80d88a5f51591578656" category="doc">使用网络保管库保护您的 FSx for ONTAP 数据</block>
-  <block id="6721f36d179d854ccc58b2ad42c7362f" category="doc">在 NetApp Workload Factory 中为 Storage VM 创建快照策略</block>
-  <block id="dbf1c63cddd6309b0bc8cc75976dec7b" category="doc">在 NetApp Workload Factory 中创建卷的按需快照</block>
   <block id="23d39bde9b08b2c6e975096219600185" category="doc">在 NetApp Workload Factory 中发现缓存卷</block>
-  <block id="5c1f913dca6b99f9befa10b536db4492" category="doc">在 NetApp Workload Factory 中启用卷自动增长</block>
   <block id="d4a67598375b312f4832cf6bab5157bb" category="doc">在 NetApp Workload Factory 中启用长期快照保留</block>
   <block id="b93731800482f89e9948a463e728ef9d" category="doc">在 NetApp Workload Factory 中获取 FSx for ONTAP 的帮助</block>
   <block id="e8355e7c1132891c80c2af3110068130" category="doc">实施架构良好的 FSx for ONTAP 文件系统配置</block>
-  <block id="098db803ee017e3ecc391b755fd4943a" category="doc">在 NetApp Workload Factory 中手动调整文件系统容量</block>
   <block id="d57644972c07db4650e08c2e26761651" category="doc">FSx for ONTAP 在 NetApp Workload Factory 中的已知限制</block>
-  <block id="ff71316397e1ef17bc15e9784bcb30bd" category="doc">限制 NetApp Workload Factory 中的复制传输速率</block>
-  <block id="96bbcf50926e08954b634fd05cb51ba4" category="doc">在 NetApp Workload Factory 中自动管理容量和 inode</block>
   <block id="9e0ecd128d681936cd0b802126c384d4" category="doc">在 NetApp Workload Factory 中管理卷的 SMB/CIFS 共享</block>
-  <block id="a4d45bf93deed5e773f1c470ea181049" category="doc">管理 NetApp Workload Factory 链接</block>
   <block id="c63ba25cc70bb1bddad69971b2178a35" category="doc">管理 NetApp Workload Factory 中卷的快照策略</block>
   <block id="76bef3b45ffa41a70902eee6a180240d" category="doc">使用 NetApp Autonomous Ransomware Protection with AI 保护您的 FSx for ONTAP 数据</block>
-  <block id="111827ab44a64fef8ee33a4c31d9e746" category="doc">在 NetApp Workload Factory 中检查并重新平衡卷容量</block>
-  <block id="13eb38af096a3b48602b4708c1b1b87c" category="doc">在 NetApp Workload Factory 中从 Snapshot 还原卷</block>
   <block id="b9be88fc11ad6670dab2c9b28bfeed84" category="doc">注册您的 Workload Factory 帐户以获得 NetApp 支持</block>
   <block id="1154a7e4b2160ee9927e71e327ffc1fc" category="doc">在 NetApp Workload Factory 中更新复制快照数据</block>
-  <block id="dcd3b5b0b5be83a6428cf8e204033841" category="doc">在 NetApp Workload Factory 中更新卷存储效率</block>
-  <block id="9f6474fce0b75bbb20e073788d0f7d91" category="doc">更新 NetApp Workload Factory 中文件系统的吞吐量容量</block>
   <block id="fa9e4ccc5a64e6bc26f23e2983b2ae89" category="doc">查看 NetApp Workload Factory 中卷的 S3 访问点详细信息</block>
+  <block id="84e723a77e5da7869a8731958afee785" category="paragraph"><block ref="84e723a77e5da7869a8731958afee785" category="inline-link-macro-rx"></block></block>
+  <block id="b57b118fc7eb05573ef3df2543b46119" category="paragraph"><block ref="b57b118fc7eb05573ef3df2543b46119" category="inline-link-macro-rx"></block></block>
+  <block id="33bf72dfc827cb301549543efe9d06b6" category="paragraph"><block ref="33bf72dfc827cb301549543efe9d06b6" category="inline-link-macro-rx"></block></block>
+  <block id="2bc7b08e0a89609168d2bc46fd508e3a" category="paragraph"><block ref="f843de33104c0af1d198195d3c1e3651" category="inline-link-macro-rx"></block>。</block>
+  <block id="5755a9e38430cc58eec03f6a091d949b" category="paragraph"><block ref="3b334f327ff595e44f743e1d47e519c8" category="inline-link-macro-rx"></block>。</block>
+  <block id="abe89f144f71f63531169dbe67ea9daf" category="doc">在 NetApp Workload Factory 中调整文件系统容量</block>
+  <block id="07eb6926e05993980c93aea6c29ac170" category="paragraph">在 NetApp Workload Factory 中调整 FSx for ONTAP 文件系统的固态驱动器 (SSD) 存储容量，以匹配具有不同活动工作集的工作负载需求。当使用量超过阈值时，手动增加容量；或者当您不使用工作集时，减少容量以节省资金。或者，启用自动容量管理，以便 Workload Factory 根据需求随时间变化添加增量存储，从而消除手动监控的负担。</block>
+  <block id="7f3f636f8acee1979f07ce3c7c8b2560" category="section-title">启用自动容量和 inode 管理</block>
+  <block id="e043e0158108e546fad120bd022abbf7" category="paragraph">启用容量和 inode 管理，使 NetApp Workload Factory 能够在容量需求随时间变化时，自动将适用于 ONTAP 文件系统的 FSx 的增量存储和 inode（文件）添加到卷中。这些功能无需手动监控容量和 inode。</block>
+  <block id="70d4c35820163e0b856c045342d606a9" category="paragraph">只有一个账号可以管理这些功能。</block>
+  <block id="8bc021972e5d74ca036119e7a5332088" category="paragraph">Workload Factory 每 30 分钟扫描一次 FSx for ONTAP 文件系统，以检查是否需要添加增量存储。</block>
+  <block id="fe7092f0e0109e4bea77833888ffbb44" category="list-text">为了确保卷 inode 随着存储容量的增加而增加，您必须关联一个链接。<block ref="b0d0cfa49a5b8ebda8e687152ec0aadd" category="inline-link-macro-rx"></block>.链接关联后，返回此操作。</block>
+  <block id="15f65ce72d7f7cca8bbf9a71c251f762" category="paragraph">Workload Factory 每 30 分钟扫描一次 FSx for ONTAP 文件系统，以验证可用的卷 inode，并检查是否需要添加增量 inode。计数根据自动 inode 管理阈值增加。</block>
+  <block id="7162d658cf12ef3b0ecaa70960545951" category="list-text">要自动管理卷信息节点，您必须关联一个链接。<block ref="b0d0cfa49a5b8ebda8e687152ec0aadd" category="inline-link-macro-rx"></block>.链接关联后，返回此操作。</block>
+  <block id="ba294ef3e2afdb1cf035d970e10e3d1d" category="list-text">*EMS 事件*：来自 ONTAP 事件管理系统的错误、警报和紧急事件。要查看和分析 EMS 事件，您必须 <block ref="7745b5ac48fce1a270f0f48c25ec8bcd" category="inline-link-macro-rx"></block>。</block>
+  <block id="b1ce41eb28657974af6204ee827ac110" category="list-text">*延迟事件*：读取和写入延迟事件。可以在没有链接连接的情况下查看延迟事件。要分析延迟事件并接收 AI 驱动的洞察，您必须 <block ref="7745b5ac48fce1a270f0f48c25ec8bcd" category="inline-link-macro-rx"></block>。</block>
+  <block id="ea05a1e5432074a56846a3cb823f80f2" category="inline-link-macro">使用链接连接到文件系统</block>
+  <block id="4cef7c6d6a0dbf34de8eba95d0e16b67" category="list-text"><block ref="7e93da5b3f54c52f1a6c0b519dbe8002" category="inline-link-macro-rx"></block>。</block>
+  <block id="83726c1191ab868f046fb1270a7954b5" category="list-text">您有 <block ref="4c631e4853ec617b9b81a0579deada8a" category="inline-link-macro-rx"></block>。</block>
+  <block id="8261903e070030df643604429f468749" category="paragraph"><block ref="b7a77703e091475e5a757f20e1f86c42" category="inline-link-macro-rx"></block>。链接关联后，返回此操作。</block>
+  <block id="874fbc8635967fd5300d05269c50cea0" category="paragraph">Workload Factory 每天分析在支持的云存储系统部署上运行的工作负载。该分析提供架构完善的状态、见解和建议。</block>
+  <block id="081bb4ab1716ea656b2b52715598f415" category="paragraph">每日分析完成后，配置在部署的精心设计的仪表板中显示为"优化"或"未优化"。您将按类别找到配置问题以及配置问题和建议列表。您可以查看配置问题的建议。Workload Factory 可以自动修复某些问题；其他问题需要手动干预。在此情况下，Workload Factory 会提供详细说明，以帮助您实施建议的更改。</block>
+  <block id="8feb6c8d13e912657481adbe0cafebb3" category="paragraph">NetApp Workload Factory 通过将持续评估与建议见解和补救措施相结合，将最佳实践应用于大型存储、数据库和 VMware 环境。自动化修复可减少人为错误，确保统一管理，并保持整个工作负载基础架构的性能和可靠性。</block>
+  <block id="fb7e951a08ddce4b83498e18f05a36da" category="paragraph"><block ref="b0d0cfa49a5b8ebda8e687152ec0aadd" category="inline-link-macro-rx"></block>。</block>
+  <block id="72a389467e8e4db775c5a741c5559e79" category="paragraph"><block ref="582f3532371a870cf4bd6406f93d26de" category="inline-link-macro-rx"></block>。</block>
+  <block id="790f3394151f1512273bc61b08727dec" category="paragraph">将卷利用率保持在 80% 以下，以防止潜在的应用程序读/写影响。您可以手动增加容量或使用卷自动增长。</block>
+  <block id="8c4934da22211f5267b48cfff0082296" category="paragraph">为了获得最佳性能，请将缓存关系写入模式设置为最适合您的工作负载。写入绕行模式为具有小文件的读取密集型工作负载提供更好的性能，而写回模式为具有大文件的写入密集型工作负载提供更好的性能。</block>
+  <block id="2755592dcb98e0fc2a75e14798e12e68" category="paragraph">在缓存卷上启用卷自动调整大小和清理，以保持最佳大小，并将缓存集中在热数据上，以实现最高效率。</block>
+  <block id="f40bf749154ab4415270dadb6eb98096" category="paragraph">启用主机可见容量报告，以更好地了解卷级别的存储使用情况。</block>
+  <block id="fb60661b6b5261bf2a78af461148b330" category="paragraph">确认 ONTAP LUN 操作系统 (OS) 类型值与操作系统分区方案匹配，以实现 I/O 对齐。配置不正确可能会降低性能。</block>
+  <block id="6f7eb4df2a69f930a31e0b1e6d41aa1d" category="paragraph">为数据库主机实例使用的 LUN 配置块设备空间设置，以防止写入失败并提高 FSx for ONTAP 上的空间效率。此配置适用于精简配置卷的建议设置组合：空间预留、空间分配和小数预留。</block>
+  <block id="b971cc6cd2b11daebaf9842a9d1e65dd" category="paragraph">为托管数据库实例的 FSx for ONTAP 卷配置精简配置。此方法允许存储的逻辑数据量超过实际可用的物理容量。</block>
+  <block id="fdc181efad43392a7f4edba311fccf94" category="paragraph">启用冷数据分层以降低 SSD 存储层利用率。将分层策略应用于专注于常规数据存储的每个卷。对于数据库卷，在适当情况下启用冷数据分层。FSx for ONTAP 持续扫描数据以查找冷数据，并将其无中断地移动到容量池层。</block>
+  <block id="6dbb8a49c1538ebdedcc12468334fb46" category="paragraph">删除已删除卷的任何手动创建的备份，以及任何超过两周的备份。这些备份不会自动过期，如果您不再需要这些备份用于 SLA 或恢复，可能会增加成本并增加复杂性。</block>
+  <block id="b5ad1c06d1e3c827001a5d86081f1bdb" category="paragraph">删除不再需要的旧的或手动创建的快照。删除它们可以降低成本并减少混乱，特别是在 SLA 或恢复需求不需要它们的情况下。</block>
+  <block id="0be251ac51e901583999154779926c3b" category="paragraph">在块设备未使用七天后，归档块设备数据或删除未使用的块设备以降低成本。</block>
+  <block id="baae99faf5c3e54a1e7e85346ab5de9b" category="paragraph">多余的SSD容量会增加不必要的成本。减少SSD层，同时保持20%的可用空间缓冲区。此操作可能需要数小时至数天，在此期间不支持其他文件系统操作。</block>
+  <block id="72d8d7f27cf31b02bb7df1a01b23ab49" category="paragraph">配置分析可识别未主动使用的 NAS 卷，并建议删除或归档卷以降低成本。</block>
+  <block id="058f4c97fb457003efd47bf8dac18f8b" category="paragraph">重新平衡 FlexGroup 卷以提高效率。横向扩展后，整个卷的容量和工作负载活动可能会变得不均匀。</block>
+  <block id="98ee4192cbfc73d968e2c1f61cbdb3dc" category="paragraph">重新平衡您的 FlexVol 卷以提高效率。横向扩展后，整个卷的容量和工作负载活动可能会变得不均匀。</block>
+  <block id="c2a622b55f06f11550a3499362e678c9" category="list-text">您必须关联链接才能创建块设备。<block ref="b0d0cfa49a5b8ebda8e687152ec0aadd" category="inline-link-macro-rx"></block>。关联链接后，返回此操作。</block>
+  <block id="552ac450c85c4d6c0b84e271307b9973" category="paragraph">以下是 AWS 的默认策略。要显示现有快照策略，您必须 <block ref="1c85a9585130a3e66370d665193250bb" category="inline-link-macro-rx"></block>。</block>
+  <block id="177fa04e8cef57813d85fd4018cc8352" category="list-text">链接未与文件系统关联。<block ref="b0d0cfa49a5b8ebda8e687152ec0aadd" category="inline-link-macro-rx"></block>。链接关联后，返回此操作。</block>
+  <block id="8aee15a772726da23efedaa9e4544f7f" category="paragraph">您必须关联一个链接以创建 igroups。<block ref="b0d0cfa49a5b8ebda8e687152ec0aadd" category="inline-link-macro-rx"></block>。关联链接后，返回此操作。</block>
+  <block id="ca96d74d3692df000dc2771e8945b8f2" category="summary">使用复制来保护数据免受意外灾难导致的数据丢失，迁移数据，或在 Amazon FSx for NetApp ONTAP 文件系统中为数据保护卷级联复制</block>
+  <block id="0f9c5601f0e05e5fb42348146ed5e572" category="paragraph">在 NetApp Workload Factory 中复制数据，以便在数据所在区域发生灾难时防止数据丢失。FSx for ONTAP 文件系统与本地 ONTAP 系统或 Cloud Volumes ONTAP 之间支持数据复制。Workload Factory 还支持级联复制，以将数据保护扩展到第三级系统或迁移您的数据。</block>
+  <block id="0b774d7f8bd8be5c36f058c964826c46" category="section-title">标准复制</block>
+  <block id="f81e6d20a11a569d21ca81f72afc3189" category="list-text">用于复制关系的 FSx for ONTAP 文件系统必须具有相关联的链接。<block ref="b0d0cfa49a5b8ebda8e687152ec0aadd" category="inline-link-macro-rx"></block>。关联链接后，返回此操作。</block>
+  <block id="7b626244b5e77ec8426207a79760602c" category="inline-link-macro">修改分层策略</block>
+  <block id="67cc9410d25e801e252f5deb80054129" category="paragraph">如果需要，<block ref="3a64959985d458e07b4f09b2f2e0e438" category="inline-link-macro-rx"></block>用于切换后的目标卷。</block>
+  <block id="baa96deae022aad76ed59c8c451563d1" category="section-title">数据保护卷的级联复制</block>
+  <block id="809f8e4060925e15a29859502e4e77bb" category="list-text">要配置对卷的访问权限，您必须关联链接。<block ref="b0d0cfa49a5b8ebda8e687152ec0aadd" category="inline-link-macro-rx"></block>。链接关联后，返回此操作。</block>
+  <block id="0d1854336982d0ce7a4ccf1801395e09" category="list-text"><block ref="0d1854336982d0ce7a4ccf1801395e09" category="inline-link-macro-rx"></block></block>
+  <block id="0e3bc6610e075f32baf20b515cbde2e2" category="list-text">您必须关联链接才能发现文件系统上的缓存关系。<block ref="b0d0cfa49a5b8ebda8e687152ec0aadd" category="inline-link-macro-rx"></block>。链接关联后，返回此操作。</block>
+  <block id="3d8d0d139cbabc5d5b68f0cbce47a35e" category="paragraph">使用 Workload Factory 为您的 FSx for ONTAP 文件系统实施最佳实践。您可以轻松查看架构完善的状态，了解配置问题，并修复问题以改进任何未在可靠性、安全性、效率、性能和成本方面进行优化的系统的体系结构。</block>
+  <block id="99007d80378159684e13cc3fbd01851d" category="paragraph">Workload Factory 每天分析 Amazon FSx for NetApp ONTAP 文件系统部署配置。</block>
+  <block id="432cde80af7aede16dd04f981eecdffc" category="paragraph">由于存储配置的要求各不相同，因此您可以忽略不适用于存储环境的特定配置的分析。</block>
+  <block id="cd5018d2830f482994e77102c7380ec5" category="paragraph">链接连接允许 Workload Factory 扫描性能、数据保护和配置问题。<block ref="bd244e13e9233be6d4441bce58acbc1c" category="inline-link-macro-rx"></block>以对文件系统资源进行最全面的分析。</block>
+  <block id="ab656c8a69b575add6ee0729f5bc54c7" category="list-text"><block ref="bd244e13e9233be6d4441bce58acbc1c" category="inline-link-macro-rx"></block> 以最全面地分析您的文件系统资源。</block>
+  <block id="5d1f387838383b2d368f6e7f1c840316" category="list-text">查看操作项目，了解此修复的后果，例如实例停机或服务中断。</block>
+  <block id="6ad3b6fcf10a846b365b85062abd036b" category="paragraph">未解析的指令，位于 &lt;stdin&gt; - include::https://raw.githubusercontent.com/NetAppDocs/workload-setup-admin/main/_include/links-overview.adoc[]</block>
+  <block id="1bd303a4a4865b24239ad78c657bf53e" category="list-text">您必须关联链接才能管理 igroups。<block ref="b0d0cfa49a5b8ebda8e687152ec0aadd" category="inline-link-macro-rx"></block>。关联链接后，返回此操作。</block>
+  <block id="a5546560157685322114f05def377bc2" category="list-text">必须关联链接才能管理缓存卷和关系。<block ref="b0d0cfa49a5b8ebda8e687152ec0aadd" category="inline-link-macro-rx"></block>。关联链接后，返回此操作。</block>
+  <block id="873090954c0fe574d1c9f3181d89742b" category="list-text">要管理 SMB/CIFS 共享，您必须关联链接。<block ref="b0d0cfa49a5b8ebda8e687152ec0aadd" category="inline-link-macro-rx"></block>。链接关联后，返回此操作。</block>
+  <block id="3dd4ca2c61c588825f3e69d7851510b5" category="doc">在 NetApp Workload Factory 中管理 FSx for ONTAP 文件系统设置</block>
+  <block id="b24c16fd1abe8154a92346f6dd1baf6b" category="paragraph">在 NetApp Workload Factory 中管理 FSx for ONTAP 文件系统的设置。您可以管理文件系统的标签，必要时重置 fsxadmin 密码，并根据需要更新吞吐量容量。</block>
+  <block id="f120bfb32fdc034593c753c46a030312" category="section-title">管理 FSx for ONTAP 文件系统标记</block>
+  <block id="29cb5b84055613450fa3b7f8bd673507" category="section-title">重置 FSx for ONTAP 文件系统的 fsxadmin 密码</block>
+  <block id="1f0c3f24c67a1d779b9c755cffe696cb" category="section-title">更新 FSx for ONTAP 文件系统的吞吐量容量</block>
+  <block id="6fdc32a452fdf57560d6580dc47def65" category="list-text">选择 *Apply* 以保存更改</block>
+  <block id="99b37ae0bba3904ea2b9dcb1882bedc4" category="paragraph">某些管理任务要求您将链接与 FSx for ONTAP 文件系统关联。<block ref="04934ce78294f2ffdb9c8a1ca9aae200" category="inline-link-macro-rx"></block>。</block>
+  <block id="0550a020b20180517840f8bb9d6a1b20" category="paragraph">必须关联链接才能分配快照策略。<block ref="b0d0cfa49a5b8ebda8e687152ec0aadd" category="inline-link-macro-rx"></block>。链接关联后，返回此操作。</block>
+  <block id="350644392b5901520f6c734be7d9f0c2" category="paragraph">要显示现有快照策略，必须关联链接。<block ref="b0d0cfa49a5b8ebda8e687152ec0aadd" category="inline-link-macro-rx"></block>。链接关联后，返回此操作。</block>
+  <block id="44a000ee3d4e210c575e2246c98f573b" category="paragraph">要启用不可变快照，必须关联链接。<block ref="b0d0cfa49a5b8ebda8e687152ec0aadd" category="inline-link-macro-rx"></block>。链接关联后，返回此操作。</block>
+  <block id="10095aa38d9bac305192b3103bccf6be" category="paragraph">必须关联链接才能删除快照策略。<block ref="b0d0cfa49a5b8ebda8e687152ec0aadd" category="inline-link-macro-rx"></block>。链接关联后，返回此操作。</block>
+  <block id="1e17e1ef6f3580b494a3d1d62b93c1de" category="doc">在 NetApp Workload Factory 中管理 Storage VM 设置</block>
+  <block id="10931162a585a9dc879d16df11ca24ef" category="paragraph">在 NetApp Workload Factory 中管理存储虚拟机的设置。您可以为存储虚拟机配置和更新 Active Directory，可以更新存储虚拟机密码，并管理存储虚拟机的标签。</block>
+  <block id="9eef8a6b35d2a8083c7ae5fffd991a79" category="summary">了解如何管理卷容量，包括手动调整卷大小以及在 Workload Factory 中使用卷自动增长。</block>
+  <block id="d82b523196e27a5ad5c1e885c21d9163" category="doc">在 NetApp Workload Factory 中管理卷容量</block>
+  <block id="06147d3cc0b6a96280063a5b02a8a8e1" category="paragraph">应根据需求变化调整卷容量。您可以手动调整卷大小或启用卷自动增长，让 Workload Factory 为您管理卷容量。检查 FlexVol 或 FlexGroup 卷容量的平衡状况，并重新平衡卷容量，以将文件均匀分布到节点中的所有 FlexVol 卷或所有成员卷中，从而使所有节点都参与单个 FlexGroup 卷的工作负载。</block>
+  <block id="0aad51e6adc57cb3bfbfea6baae812d7" category="paragraph">打开卷自动扩展，让 NetApp Workload Factory 为您管理卷容量。您可以随时禁用它。</block>
+  <block id="06de84f4889afe0bfdc4371fcbe42def" category="paragraph">要启用卷自动增长，您必须关联链接。<block ref="b0d0cfa49a5b8ebda8e687152ec0aadd" category="inline-link-macro-rx"></block>。链接关联后，返回此操作。</block>
+  <block id="6e8c422ac34d739f4c1c2f0ece93e40d" category="section-title">手动调整卷容量</block>
+  <block id="c4402b30e16f59a5800bff7276631db5" category="paragraph">要调整卷容量，您必须关联一个链接。<block ref="b0d0cfa49a5b8ebda8e687152ec0aadd" category="inline-link-macro-rx"></block>.链接关联后，返回此操作。</block>
+  <block id="8f689dc63c26aae9a149b22b3a8da88f" category="section-title">重新平衡 FlexVol 和 FlexGroup 卷的卷容量</block>
+  <block id="425d54aecc34adc9d67b19e13a75c382" category="inline-link-macro">创建链接并将其关联或将现有链接关联到文件系统</block>
+  <block id="547681f58321cc4c4e00242e76349ef0" category="list-text">要检查卷的余额，您必须<block ref="f960ac2e0181c6eb35c54dd47690135b" category="inline-link-macro-rx"></block>。链接关联后，返回此操作。</block>
+  <block id="09e86e8ae984e03c55fcfede6e04d924" category="list-text">要重新平衡卷，您必须<block ref="f960ac2e0181c6eb35c54dd47690135b" category="inline-link-macro-rx"></block>。链接关联后，返回此操作。</block>
+  <block id="2e4be9b0e28ca3065b74b93bd25ca696" category="doc">在 NetApp Workload Factory 中管理卷设置</block>
+  <block id="e541b8bee1897be0fb1272397166c050" category="paragraph">在 NetApp Workload Factory 中自定义 FSx for ONTAP 卷设置，以满足组织的需求。您可以管理卷标记以对资源进行分类，更新存储效率设置以优化空间和成本节省，以及管理不可变文件设置以控制数据保留并防止未经授权的更改。</block>
+  <block id="70db812201935aaccc5a6c48663fbbd9" category="section-title">更新卷存储效率</block>
+  <block id="5315e58af0e826259e6ff3250a45d68c" category="paragraph">创建卷后更新存储效率设置。</block>
+  <block id="f2b9c933540bfeebed06160c6e39c4ba" category="list-text"><block ref="f2b9c933540bfeebed06160c6e39c4ba" category="inline-link-macro-rx"></block></block>
+  <block id="db99231f6dff7de5950fdeb11214939f" category="inline-link-macro">在 Workload Factory 中管理卷容量</block>
+  <block id="61997900d4fc9768044346fe0401366d" category="list-text"><block ref="61997900d4fc9768044346fe0401366d" category="inline-link-macro-rx"></block></block>
+  <block id="56471eeffebd467d23fa40067ebf7d30" category="paragraph">要为文件系统或卷启用 ARP/AI，必须关联链接。<block ref="b0d0cfa49a5b8ebda8e687152ec0aadd" category="inline-link-macro-rx"></block>。链接关联后，返回此操作。</block>
+  <block id="9761cca72ea2ee7f3440ac289814e03a" category="paragraph">要将存储虚拟机复制到另一个 FSx for ONTAP 文件系统，您必须关联一个链接。<block ref="b0d0cfa49a5b8ebda8e687152ec0aadd" category="inline-link-macro-rx"></block>。链接关联后，返回此操作。</block>
+  <block id="891ab01f31d124a7e86e477aa2bcd6b5" category="admonition">您可以在没有链接连接的情况下查看延迟事件并接收警报。但是，要分析事件并获得基于人工智能的见解和建议，您必须 <block ref="7745b5ac48fce1a270f0f48c25ec8bcd" category="inline-link-macro-rx"></block>。</block>
+  <block id="e134e2363380e0464a1cd491a3d60670" category="list-text">要拆分克隆的卷，必须关联链接。<block ref="b0d0cfa49a5b8ebda8e687152ec0aadd" category="inline-link-macro-rx"></block>。链接关联后，返回此操作。</block>
+  <block id="e864a0b806602087df30288a86a4e36e" category="summary">通过在 NetApp Workload Factory 中创建和恢复备份，保护卷数据免受意外删除、损坏和其他数据丢失事件的影响。</block>
+  <block id="027eb1482d15eb3aebd19f3995f7bb67" category="doc">使用备份在 NetApp Workload Factory 中保护数据</block>
+  <block id="f5203e225aafb11111668807c9a3c5b0" category="paragraph">通过在 NetApp Workload Factory 中创建和恢复备份，保护卷数据免受意外删除、损坏和其他数据丢失事件的影响。您可以设置备份计划，在常规计划备份之外创建卷的按需备份，并且可以将卷从现有备份还原到 AWS 帐户中的任何 FSx for ONTAP 文件系统。</block>
+  <block id="bdd6becf2bf5a6597da003f450cd97cb" category="section-title">创建卷的按需备份</block>
+  <block id="bd12d5cc5e1bf80d25cfed29623128ff" category="list-text">还原可以将使用的容量推到指定的阈值之外。您可以完成还原操作。考虑<block ref="aecf95e5256921808b6cdd52dd08f389" category="inline-link-macro-rx"></block>或选择让 Workload Factory 自动添加 SSD 存储层容量。</block>
+  <block id="2016ffd60b3542efa92347ddf90a5965" category="list-text">与发现的本地集群关联的已连接链接。如果您没有链接，则需要 <block ref="154710284124a95fd7cb3e07a7a0827c" category="inline-link-macro-rx"></block>。</block>
+  <block id="4c6bfb06e11d247af528d8025885ba15" category="list-text">用于复制关系的本地 ONTAP 集群和 FSx for ONTAP 文件系统都必须具有关联的链接。<block ref="b0d0cfa49a5b8ebda8e687152ec0aadd" category="inline-link-macro-rx"></block>。链接关联后，返回此操作。</block>
+  <block id="0704ec8db6fe4e43ac6ebb00949d63b9" category="summary">通过在 NetApp Workload Factory 中创建和管理快照，保护卷数据免受意外删除或损坏。</block>
+  <block id="3b1c9d8b80a0a74d39ef5e3f08ac168f" category="doc">使用快照在 NetApp Workload Factory 中保护数据</block>
+  <block id="df7ca0e3efe45b9088e37cac9b6ccf2c" category="paragraph">通过在 NetApp Workload Factory 中创建和管理快照，保护卷数据免受意外删除或损坏。您可以创建卷的按需快照，定义快照策略以自动化存储虚拟机的快照创建和保留，并从现有快照中恢复卷以在特定时间点恢复数据。</block>
+  <block id="77b8308f4862dd4c02d3f049b5b145d0" category="section-title">创建卷的按需快照</block>
+  <block id="409fef009f255ca7e93979516f887531" category="paragraph">您必须关联一个链接以创建卷的手动快照。<block ref="b0d0cfa49a5b8ebda8e687152ec0aadd" category="inline-link-macro-rx"></block>。链接关联后，返回此操作。</block>
+  <block id="34f1332a8638e14cfef16253590606ff" category="section-title">为 Storage VM 创建快照策略</block>
+  <block id="62395f97212e497f05ff596087d40f5f" category="list-text">要创建自定义快照策略，必须关联链接。<block ref="b0d0cfa49a5b8ebda8e687152ec0aadd" category="inline-link-macro-rx"></block>。链接关联后，返回此操作。</block>
+  <block id="496f3e6a8fe06f04dca3557829a0f4e7" category="paragraph">您可以将数据从快照恢复到现有卷或新卷。当卷包含已删除或损坏的文件时，还原操作可实现时间点恢复。</block>
+  <block id="5754a200fd7e07c7e8ff9205df7a260a" category="sidebar">了解 Workload Factory 中的数据保护</block>
+  <block id="602b42ac9c94036154b64a05c5ce2bfe" category="sidebar">使用快照保护数据</block>
+  <block id="04f951b8dfac73983bcd1c9f9d4c595f" category="sidebar">使用备份来保护数据</block>
+  <block id="d0420fc01e7b557e5fb8adfdbc33fc88" category="sidebar">使用复制来保护数据</block>
+  <block id="97a47bbfee9b367a5d2f77e182c21e72" category="sidebar">管理FSx for ONTAP</block>
+  <block id="246fd4480ce3e8ad5f3657af6202d2de" category="sidebar">更改卷的分层策略</block>
+  <block id="f454a3afe610506ee737280bedb4db50" category="sidebar">改进 FSx for ONTAP 文件系统配置</block>
+  <block id="45fb2d91114f23a7fa34169cced985d1" category="sidebar">管理卷的快照策略</block>
+  <block id="acfd761f055d6e902d690e174c035517" category="sidebar">管理卷容量</block>
+  <block id="7d22fda4fe7064e9f6927cf43573ddc9" category="sidebar">创建存储资源</block>
+  <block id="5c146202949da4cea2277a15ad62dea0" category="sidebar">将本地 ONTAP 数据复制到 FSx for ONTAP</block>
+  <block id="c75135aa5d8aec63048c10d0b5eafd32" category="sidebar">在 Workload Factory 中管理 FSx for ONTAP</block>
+  <block id="e2439a8512b353f75391ba9c346bc84d" category="sidebar">管理卷</block>
+  <block id="8ef44904f2697ecb1dce6a715c97b679" category="sidebar">管理卷设置</block>
+  <block id="3c31606adc4b20f1bd2855e3f6c8f75c" category="sidebar">管理文件系统</block>
+  <block id="55ce7397d464ef8e34bfaee401cec48d" category="sidebar">管理文件系统设置</block>
+  <block id="2ee20619a771993544eaaa7e388816d1" category="sidebar">管理 Storage VM</block>
+  <block id="1c388674e0a6805e31fb6d7602029a59" category="sidebar">管理Storage VM设置</block>
 </blocks>

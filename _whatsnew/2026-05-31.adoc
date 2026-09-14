@@ -41,7 +41,7 @@ Workload Factory 标识使用存储的主机以及与主机活动相关联的工
 
 我们直接在文件系统的"概述"选项卡中显示所有文件系统和存储虚拟机端点。Workload Factory 控制台内的直接端点可见性使您可以更轻松地监控网络访问、端点和故障转移状态，而无需使用 CLI 或 CloudShell。要显示 LIF 详细信息，包括角色、端点、节点、IP 地址和状态，您需要将链接与文件系统关联。
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何在 NetApp Workload Factory 中将链接与您的文件系统关联"]。
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["了解如何在 NetApp Workload Factory 中将链接与您的文件系统关联"^]。
 
 
 

@@ -12,4 +12,4 @@
 * 支持手动创建链接：此功能允许通过手动注册链接ARN在AWS CloudFormation中独立创建。当安全或开发运营团队协助创建链接时、这将非常有用。
 
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["创建链接"]
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["创建链接"^]

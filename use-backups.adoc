@@ -1,0 +1,74 @@
+---
+sidebar: sidebar 
+permalink: use-backups.html 
+keywords: create backup, volume backup, back up a volume, FSx for ONTAP backup, manual backup, restore from a backup, restore volume 
+summary: 通过在 NetApp Workload Factory 中创建和恢复备份，保护卷数据免受意外删除、损坏和其他数据丢失事件的影响。 
+---
+= 使用备份在 NetApp Workload Factory 中保护数据
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+通过在 NetApp Workload Factory 中创建和恢复备份，保护卷数据免受意外删除、损坏和其他数据丢失事件的影响。您可以设置备份计划，在常规计划备份之外创建卷的按需备份，并且可以将卷从现有备份还原到 AWS 帐户中的任何 FSx for ONTAP 文件系统。
+
+
+
+[[create-an-on-demand-backup-of-a-volume]]
+== 创建卷的按需备份
+
+在NetApp Workload Factory 中定期备份之外创建卷的手动备份。
+
+.关于此任务
+卷备份是按卷进行的，因此每个备份仅包含特定卷中的数据。
+
+卷备份是增量的，这意味着只有在最近一次备份后更改的卷上的数据才会被保存。这样可以最大限度地减少创建备份所需的时间和备份所需的存储空间，从而通过不复制数据来节省存储成本。
+
+.开始之前
+要备份卷、卷和文件系统都必须具有足够的可用SSD存储容量来存储备份快照。创建备份快照时、快照占用的额外存储容量不会导致卷的SSD存储利用率超过98%。如果发生这种情况、备份将失败。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
+. 在存储菜单中，选择*Volumes explorer*。
+. 选择要备份的卷的操作菜单。
+. 选择 *Data protection actions*、*Volume backups*，然后选择 *Manual backup*。
+. 在手动备份对话框中、输入备份的名称。
+. 选择*备份*。
+
+
+
+
+[[restore-a-volume-from-a-backup-in-netapp-workload-factory]]
+== 从NetApp Workload Factory 中的备份还原卷
+
+在NetApp Workload Factory 中，您可以将卷从备份还原到 AWS 账户中的任何 FSx for ONTAP文件系统。
+
+Workload Factory 确定您是否有足够的容量进行还原，如果没有，则可以自动添加 SSD 存储层容量。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
+. 在存储菜单中，选择*Volumes explorer*。
+. 选择要从备份还原的卷的操作菜单。
+. 选择 *Data protection actions*、*Volume backups*，然后选择 *Restore from a backup*。
+. 在Restore from a backup对话框中、提供以下内容：
++
+.. *目标文件系统*：从下拉菜单中选择目标文件系统。
+.. *目标Storage VM*：从下拉菜单中选择目标Storage VM。
+.. *备份名称*：从下拉菜单中选择备份名称。
+.. *已还原卷名称*：输入已还原的卷名称。
+
+
+. 验证用于还原操作的文件系统容量。
++
+当文件系统容量受限时、可能会发生以下情况：
+
++
+** 还原可以将使用的容量推到指定的阈值之外。您可以完成还原操作。考虑link:adjust-file-system-capacity.html["手动添加SSD存储层容量"]或选择让 Workload Factory 自动添加 SSD 存储层容量。
+** 恢复需要额外的 SSD 容量。您必须选择 Workload Factory 自动添加 SSD 存储层容量才能继续。
+
+
+. 选择 * 还原 * 。
+

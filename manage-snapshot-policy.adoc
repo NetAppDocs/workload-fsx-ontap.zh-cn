@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: manage-snapshot-policy.html 
-keywords: manage snapshot policy, change snapshot policy, snapshot policies, snapshot schedule, update 
+keywords: manage snapshot policy, change snapshot policy, assign snapshot policy, remove snapshot policy, snapshot policies, snapshot schedule, update, snapshot long-term retention, enable long-term retention 
 summary: 在 Workload Factory 中管理 FSx for ONTAP卷的快照策略。快照策略定义系统如何​​为卷创建快照。 
 ---
 = 管理 NetApp Workload Factory 中卷的快照策略
@@ -13,12 +13,38 @@ summary: 在 Workload Factory 中管理 FSx for ONTAP卷的快照策略。快照
 [role="lead"]
 在 Workload Factory 中管理 FSx for ONTAP卷的快照策略。快照策略定义系统如何​​为卷创建快照。
 
-.关于此任务
 为FSx for ONTAP文件系统中的卷分配、更改和删除Snapshot策略等Snapshot管理操作在Storage VM级别进行管理。Snapshot策略可以与单个Storage VM共享、也可以与所有Storage VM共享。
 
-某些管理任务要求您将链接与 FSx for ONTAP文件系统关联。link:https://docs.netapp.com/us-en/workload-fsx-ontap/links-overview.html["了解 Workload Factory 链接"] 。
+某些管理任务要求您将链接与 FSx for ONTAP 文件系统关联。link:https://docs.netapp.com/us-en/workload-setup-admin/links-overview.html["了解 Workload Factory 链接"^]。
 
 默认情况下、每个卷都与文件系统的快照策略相关联 `default` 。建议对大多数工作负载使用此策略。
+
+
+
+[[assign-a-snapshot-policy-to-a-volume]]
+== 将快照策略分配给卷
+
+您可以将快照策略分配给单个卷、以便为该卷创建计划快照。
+
+.开始之前
+必须关联链接才能分配快照策略。link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["了解如何关联现有链接或创建并关联新链接"^]。链接关联后，返回此操作。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
+. 在 *FSx for ONTAP* 选项卡中，选择包含要分配快照策略的卷的文件系统的操作菜单，然后选择 *管理*。
+. 在文件系统概述中，选择*Storage VMS*选项卡。
+. 从“存储虚拟机”选项卡中，选择包含要使用计划快照保护的卷的存储虚拟机的操作菜单，然后选择“高级操作”，再选择“管理快照策略”。
+. 在快照策略管理页面，选择快照策略的操作菜单，然后选择*将策略分配给卷*。
+. 在分配快照策略对话框中、选择要分配给卷的快照策略并查看策略计划。
++
+如果此策略包含不可更改的快照、并且您希望使用此策略、请接受此语句。
+
+. 选择*Assign*。
+
+
+.结果
+此时将为卷分配Snapshot策略。
 
 
 
@@ -28,7 +54,7 @@ summary: 在 Workload Factory 中管理 FSx for ONTAP卷的快照策略。快照
 您可以更改要保留的快照策略名称、计划和副本数、以及启用或禁用不可变快照。无法在Storage VM之间启用或禁用策略共享。此选项仅在创建Snapshot策略期间可用。
 
 .开始之前
-要显示现有的快照策略，您必须关联一个链接。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何关联现有链接或创建并关联新链接"](英文)链接关联后、返回此操作。
+要显示现有快照策略，必须关联链接。link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["了解如何关联现有链接或创建并关联新链接"^]。链接关联后，返回此操作。
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
@@ -52,7 +78,7 @@ summary: 在 Workload Factory 中管理 FSx for ONTAP卷的快照策略。快照
 锁定快照、防止在保留期间将其删除。
 
 .开始之前
-您必须关联一个链接才能启用不可变快照。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何关联现有链接或创建并关联新链接"](英文)链接关联后、返回此操作。
+要启用不可变快照，必须关联链接。link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["了解如何关联现有链接或创建并关联新链接"^]。链接关联后，返回此操作。
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
@@ -76,30 +102,44 @@ summary: 在 Workload Factory 中管理 FSx for ONTAP卷的快照策略。快照
 
 
 
-[[assign-a-snapshot-policy-to-a-volume]]
-== 将快照策略分配给卷
+[[enable-long-term-snapshot-retention-in-netapp-workload-factory]]
+== 在 NetApp Workload Factory 中启用长期快照保留
 
-您可以将快照策略分配给单个卷、以便为该卷创建计划快照。
+在NetApp Workload Factory 中，您可以启用快照进行长期保留，这样您就可以复制特定快照以进行长期灾难恢复。
 
-.开始之前
-您必须关联一个链接才能分配快照策略。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何关联现有链接或创建并关联新链接"](英文)链接关联后、返回此操作。
+通过长期保留、即使在站点完全瘫痪的情况下、业务服务也可以继续运行、从而支持使用二级副本对应用程序进行透明故障转移。
+
+这些步骤同样适用于启用和编辑快照以进行长期保留。
+
+如果内部ONTAP集群是复制关系的目标、则不支持更改快照以进行长期保留。
+
+
+NOTE: 复制 Storage VM 数据和配置设置时，编辑长期保留不可用。
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
-. 在 *FSx for ONTAP* 选项卡中，选择包含要分配快照策略的卷的文件系统的操作菜单，然后选择 *管理*。
-. 在文件系统概述中，选择*Storage VMS*选项卡。
-. 从“存储虚拟机”选项卡中，选择包含要使用计划快照保护的卷的存储虚拟机的操作菜单，然后选择“高级操作”，再选择“管理快照策略”。
-. 在快照策略管理页面，选择快照策略的操作菜单，然后选择*将策略分配给卷*。
-. 在分配快照策略对话框中、选择要分配给卷的快照策略并查看策略计划。
+. 从存储菜单中，选择 *FSx for ONTAP*。
+. 从 *FSx for ONTAP* 中，选择要更新的文件系统的操作菜单，然后选择 *管理*。
+. 从文件系统概述中，选择*复制关系*选项卡。
+. 在复制关系选项卡中，选择要更改的复制关系计划的操作菜单。
+. 选择*编辑长期保留*。
+. 在编辑长期保留对话框中、启用或禁用要长期保留的快照。
+. 如果选择禁用快照以进行长期保留、请选择*应用*以完成此操作。
+. 如果选择启用快照以进行长期保留、请选择选择现有策略还是创建新策略。
 +
-如果此策略包含不可更改的快照、并且您希望使用此策略、请接受此语句。
+.. 要使用现有策略、请从下拉菜单中选择该策略。
+.. 要创建新策略、请提供以下内容：
++
+... *策略名称*：输入策略名称。
+... *Snapshot策略*：选择一个或多个Snapshot策略。
+... *要保留的副本*：输入要在目标文件系统上保留的Snapshot副本数。
 
-. 选择*Assign*。
 
 
-.结果
-此时将为卷分配Snapshot策略。
+
+. 选择 * 应用 * 。
+
 
 
 
@@ -109,7 +149,7 @@ summary: 在 Workload Factory 中管理 FSx for ONTAP卷的快照策略。快照
 从卷中删除快照策略、因为您不再需要此卷的快照、或者您要删除分配给多个卷的快照策略。对于<<删除快照策略,删除Snapshot策略>>已分配给多个卷的、您必须手动将其从所有卷中删除。
 
 .开始之前
-您必须关联一个链接才能删除快照策略。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何关联现有链接或创建并关联新链接"](英文)链接关联后、返回此操作。
+必须关联链接才能删除快照策略。link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["了解如何关联现有链接或创建并关联新链接"^]。链接关联后，返回此操作。
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
