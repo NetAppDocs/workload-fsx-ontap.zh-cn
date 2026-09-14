@@ -2999,7 +2999,6 @@
   <block id="cd5018d2830f482994e77102c7380ec5" category="paragraph">链接连接允许 Workload Factory 扫描性能、数据保护和配置问题。<block ref="bd244e13e9233be6d4441bce58acbc1c" category="inline-link-macro-rx"></block>以对文件系统资源进行最全面的分析。</block>
   <block id="ab656c8a69b575add6ee0729f5bc54c7" category="list-text"><block ref="bd244e13e9233be6d4441bce58acbc1c" category="inline-link-macro-rx"></block> 以最全面地分析您的文件系统资源。</block>
   <block id="5d1f387838383b2d368f6e7f1c840316" category="list-text">查看操作项目，了解此修复的后果，例如实例停机或服务中断。</block>
-  <block id="6ad3b6fcf10a846b365b85062abd036b" category="paragraph">未解析的指令，位于 &lt;stdin&gt; - include::https://raw.githubusercontent.com/NetAppDocs/workload-setup-admin/main/_include/links-overview.adoc[]</block>
   <block id="1bd303a4a4865b24239ad78c657bf53e" category="list-text">您必须关联链接才能管理 igroups。<block ref="b0d0cfa49a5b8ebda8e687152ec0aadd" category="inline-link-macro-rx"></block>。关联链接后，返回此操作。</block>
   <block id="a5546560157685322114f05def377bc2" category="list-text">必须关联链接才能管理缓存卷和关系。<block ref="b0d0cfa49a5b8ebda8e687152ec0aadd" category="inline-link-macro-rx"></block>。关联链接后，返回此操作。</block>
   <block id="873090954c0fe574d1c9f3181d89742b" category="list-text">要管理 SMB/CIFS 共享，您必须关联链接。<block ref="b0d0cfa49a5b8ebda8e687152ec0aadd" category="inline-link-macro-rx"></block>。链接关联后，返回此操作。</block>
@@ -3071,4 +3070,39 @@
   <block id="55ce7397d464ef8e34bfaee401cec48d" category="sidebar">管理文件系统设置</block>
   <block id="2ee20619a771993544eaaa7e388816d1" category="sidebar">管理 Storage VM</block>
   <block id="1c388674e0a6805e31fb6d7602029a59" category="sidebar">管理Storage VM设置</block>
+  <block id="87251eaee5bfd306ceab7bcacfbf47f6" category="paragraph">NetApp Workload Factory 链接在 Workload Factory 帐户与一个或多个 FSx for ONTAP 文件系统之间创建信任关系和连接。这允许您直接通过 ONTAP REST API 调用来监控和管理某些文件系统功能，而这些功能无法通过 Amazon FSx for ONTAP API 获得。</block>
+  <block id="1e2cf39904eebcbddae0fe72e0186b8b" category="paragraph">您不需要链接即可开始使用 Workload Factory，但在某些情况下，您需要创建链接以解锁所有 Workload Factory 功能和工作负载功能。</block>
+  <block id="65050310e57f3790fef3c72eb48d33fe" category="section-title">链接为何有益</block>
+  <block id="8db5475a47ce008ca4a3d502a243007d" category="paragraph">链接非常有用，因为它们允许 Workload Factory 执行通过 Amazon FSx for ONTAP API 本机不可用的操作。链接可实现高级 ONTAP 功能和自动化，从而增强对 FSx for ONTAP 文件系统的管理。</block>
+  <block id="abca8c391b472ef4e80c6577b5d5eb2a" category="paragraph">以下是使用链接的一些好处：</block>
+  <block id="bf5b08a19bccddd5697b54218eb442dd" category="list-text">该链接使 NetApp Console 能够将 ONTAP 命令直接发送到您的 FSx for ONTAP 文件系统，从而带来超出 AWS 原生提供的高级 ONTAP 功能。</block>
+  <block id="92d3d2d26bd62a6b2959d23585ef12a2" category="list-text">链接利用 AWS Lambda 来执行代码以响应事件。这种无服务器方法消除了对 VPC 中运行实例的依赖。</block>
+  <block id="87684df341e5a7d9f280a7bdf2048a6e" category="section-title">链接的运作方式</block>
+  <block id="5abd3a6ae198e27e4c8402463411560f" category="paragraph">链接利用 AWS Lambda。Lambda 执行代码以响应事件，并自动管理该代码所需的计算资源。您创建的链接是您 NetApp 帐户的一部分，它们与 AWS 帐户相关联。</block>
+  <block id="e721a1904dd1a2a54d259deb8d176230" category="paragraph">创建链接后，您可以将其与一个或多个 FSx for ONTAP 文件系统相关联。每个文件系统只能关联到同一 NetApp 帐户中的一个链接。如果您有多个 NetApp 帐户，则可以将单个文件系统与不同 NetApp 帐户下的其他链接相关联。</block>
+  <block id="0d369015d5a60606bb8b6330f6c1030f" category="paragraph">您可以在 Workload Factory 中从存储工作负载创建和关联链接。</block>
+  <block id="7869cf138befae7f7af03581af782724" category="paragraph">您可以使用 Workload Factory 凭据服务中存储的凭据或 AWS Secrets Manager 中存储的凭据对链接进行身份验证。Workload Factory 不支持更改身份验证模式。</block>
+  <block id="81fccfd8b7cc4d87c0978527048afe60" category="paragraph">支持 GovCloud 账户的链接连接。Workload Factory 使用 GovCloud 身份验证密钥，允许通过 GovCloud 批准的机制安全、无代理地访问 FSx for ONTAP 操作。</block>
+  <block id="66096c22a6220952b7aef731ef78c167" category="section-title">费用</block>
+  <block id="2ec62661c871c6dda5bcd49be8cea521" category="paragraph">Lambda 执行的每笔事务都会产生费用。由于 Lambda 充当两个系统之间的代理，因此当 Lambda 向文件系统上的 ONTAP REST API 发送请求时，以及当它将响应发送回 Workload Factory 时，都会产生费用。</block>
+  <block id="0ab8cd7f04804af6d53be93ef7bd5345" category="inline-link-macro">详细了解与使用 AWS Lambda 相关的成本</block>
+  <block id="70f0040e444997fbb4beeeae8bd03d34" category="paragraph"><block ref="70f0040e444997fbb4beeeae8bd03d34" category="inline-link-macro-rx"></block></block>
+  <block id="8cd69d367e2dbdfca9ec0b55ba13baec" category="section-title">需要链接时</block>
+  <block id="875551355a7b095c8343c772ab9a39cd" category="paragraph">Workload Factory 需要一个链接来显示一些信息和执行一些任务。如果您尝试执行需要链接的操作，但尚未将链接与 FSx for ONTAP 文件系统关联，则 Workload Factory 会通知您该操作需要链接。</block>
+  <block id="c0653b3ad30a51a0fe3228ad2877ac9d" category="paragraph">需要链接的功能包括：</block>
+  <block id="d078fe237d087bff0fe3c19efd14fa54" category="list-text">针对主动维护、可靠性和成本性能优化的 FSx for ONTAP 文件系统配置的良好架构状态</block>
+  <block id="f1a54b856438e25c87919e1789ae841c" category="list-text">ONTAP EMS 事件监视和警报</block>
+  <block id="c6501747b7c38b1e25460b13a727ec7c" category="list-text">NetApp 自主勒索软件防护（ARP/AI）</block>
+  <block id="489e0dc0c162e1aff5f0f664bf2ea756" category="list-text">增强 FSx for ONTAP 文件系统的整体容量可观测性</block>
+  <block id="b97b322b8cb0f9b187eb7b966c9ff886" category="list-text">卷和存储 VM 数据复制、管理和监控</block>
+  <block id="147d85abf5db68a53249c95e1a68cedb" category="list-text">SMB/CIFS 共享和 NFS 导出策略配置和管理</block>
+  <block id="70b71b7616d1607e66f58defc9384bf3" category="list-text">管理 FSx for ONTAP 文件系统上的 iSCSI 卷</block>
+  <block id="0ff428418a3d64cc69a6ee68906a8959" category="list-text">为自定义保护 SLA 创建和管理快照策略</block>
+  <block id="c92f4938531f7fd55dc831a93892d29a" category="list-text">用于自动容量管理的 Inode 管理增强功能</block>
+  <block id="3b5c7e283e0b752d51311178d3fa06f1" category="list-text">用于弹性扩展的卷自动增长</block>
+  <block id="6cdde78d80d6fbbd8f3706a9bcac599e" category="list-text">克隆创建和管理，用于即时、就地数据克隆</block>
+  <block id="7cacd07dfdd5c4feadcbf23d19f9972d" category="list-text">直接从 ONTAP 显示其他指标，例如 ONTAP 版本</block>
+  <block id="f22e542eda471e2702ed07136761fd6c" category="list-text">显示Storage VM和集群LIF详细信息，包括角色、端点、节点、IP地址和状态</block>
+  <block id="30f1ae8a88bc842cdf5e493350ae7eb1" category="inline-link-macro">将链接连接到 FSx for ONTAP 文件系统</block>
+  <block id="f86bb6aab3a49998f4db8fa07a49d81a" category="paragraph">了解如何 <block ref="e658cbfbd30fb261626bc7c82308a713" category="inline-link-macro-rx"></block>。</block>
 </blocks>
