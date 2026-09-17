@@ -18,6 +18,8 @@ indexpage:
     links:
     - title: 了解节省量
       url: "/explore-savings.html"
+    - title: 了解链接
+      url: "/links-overview.html"
     - title: 使用链接连接到文件系统
       url: https://docs.netapp.com/us-en/workload-setup-admin/create-link.html
     - title: 创建Storage VM

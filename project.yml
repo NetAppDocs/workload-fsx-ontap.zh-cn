@@ -44,7 +44,7 @@ sidebar:
       - title: 创建块设备
         url: "/create-block-device.html"
     - title: 了解链接
-      url: "/learn-about-links.html"
+      url: "/links-overview.html"
     - title: 发现并查看缓存卷
       url: "/discover-cache-volumes.html"
     - title: 访问您的数据
