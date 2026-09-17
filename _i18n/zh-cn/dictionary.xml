@@ -1634,7 +1634,6 @@
   <block id="65c95ed5c9f895be6dfa81e8583c86af" category="list-text">*CloudShell CLI*：Workload Factory 包含一个 CloudShell CLI，可通过基于浏览器的单个 CLI 跨账户管理和操作 AWS 和NetApp环境。从 Workload Factory 控制台顶部栏访问 CloudShell。</block>
   <block id="34904d30d825a389b588efb76a1ceb16" category="list-text">*REST API*：使用 Workload Factory REST API 部署和管理您的 FSx for ONTAP文件系统和其他 AWS 资源。</block>
   <block id="3995165ba76339d9d4d08edf5a17c07c" category="list-text">*CloudFormation*：使用 AWS CloudFormation 代码执行您在 Workload Factory 控制台中定义的操作，以从您的 AWS 账户中的 CloudFormation 堆栈对 AWS 和第三方资源进行建模、配置和管理。</block>
-  <block id="a1b1209dad1b58c4e66fd68ee5bc0148" category="list-text">*Terraform NetApp Workload Factory 提供商*：使用 Terraform 构建和管理在 Workload Factory 控制台中生成的基础架构工作流。</block>
   <block id="f779a02b6ead6147136f74bc7ce29eaa" category="paragraph">AWS 维护您的 FSx for ONTAP帐户，而不是 Workload Factory。请参阅<block ref="d466c04e3dc9277f23f307f5afe7df62" category="inline-link-macro-rx"></block> 。</block>
   <block id="b49c47706d393689e68481f76e8388d7" category="paragraph">有关 Workload Factory 或 Workload Factory 应用程序和服务的一般问题，请参阅<block ref="212087c74fdb398dac1262c0d5f1734c" category="inline-link-macro-rx"></block>。</block>
   <block id="3a84cef0233ac32a841f51da8d052f65" category="doc">NetApp Workload Factory 的法律声明</block>
@@ -3107,4 +3106,5 @@
   <block id="f54caf9bcfff2cb7aa30ba073518e7db" category="list-text"><block ref="f54caf9bcfff2cb7aa30ba073518e7db" category="inline-link-macro-rx"></block></block>
   <block id="fa1a08e2a749c9f330c9a8e60cac9cc3" category="inline-link-macro">管理链接</block>
   <block id="364f26fd39f55f2137b4749b01da3565" category="list-text"><block ref="364f26fd39f55f2137b4749b01da3565" category="inline-link-macro-rx"></block></block>
+  <block id="06e2f75907573850abfa673fd6e8572a" category="list-text">*NetApp Terraform 提供程序*：使用 Terraform 构建和管理在 Workload Factory 控制台中生成的基础设施工作流。</block>
 </blocks>
