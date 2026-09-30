@@ -11,7 +11,24 @@ summary: 标记可以帮助您对资源进行分类。您可以随时为FSx for 
 
 
 [role="lead"]
-在 NetApp Workload Factory 中自定义 FSx for ONTAP 卷设置，以满足组织的需求。您可以管理卷标记以对资源进行分类，更新存储效率设置以优化空间和成本节省，以及管理不可变文件设置以控制数据保留并防止未经授权的更改。
+在 NetApp Workload Factory 中自定义 FSx for ONTAP 卷设置，以满足组织的需求。您可以管理卷标记以对资源进行分类（例如设置卷工作负载）、更新存储效率设置以优化空间和成本节约，以及管理不可变文件设置以控制数据保留并防止未经授权的更改。
+
+
+
+[[change-volume-workload]]
+== 更改卷工作负载
+
+更新卷的工作负载以匹配其预期用例。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
+. 在存储菜单中，选择*Volumes explorer*。
+. 选择要更新工作负载的卷的操作菜单。
+. 选择*高级操作*，然后选择*更改工作负载*。
+. 在"更改工作负载"对话框中，为卷选择正确的工作负载。
+. 选择*应用*以保存更改。
+
 
 
 

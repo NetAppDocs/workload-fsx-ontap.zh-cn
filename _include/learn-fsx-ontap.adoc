@@ -1,16 +1,7 @@
----
-sidebar: sidebar 
-permalink: learn-fsx-ontap.html 
-keywords: Amazon FSx for NetApp ONTAP, FSx, storage, aws 
-summary: Amazon FSx for NetApp ONTAP是一项完全托管的服务，允许客户启动和运行文件系统作为 Workload Factory 内工作负载的存储后端。 
----
-= 了解NetApp Workload Factory 中的Amazon FSx for NetApp ONTAP
+= 功能
 :allow-uri-read: 
-:icons: font
-:imagesdir: ./media/
 
 
-[role="lead"]
 Amazon FSx for NetApp ONTAP是一种完全托管的基于云的数据存储服务，可提供高级数据管理功能和高度可扩展的性能。  FSx for ONTAP允许您创建和管理文件系统作为NetApp Workload Factory 中所有工作负载的存储后端。
 
 FSX for ONTAP 提供了与 NetApp 客户目前在内部使用的相同的特性，性能和管理功能，并具有原生 AWS 服务的精简性，灵活性，安全性和可扩展性。
@@ -45,7 +36,7 @@ FSx for ONTAP提供以下功能：
 == 工作负载工厂的附加功能
 
 * *存储成本比较计算器*：将您的Amazon Elelic Block Store (EBS)、Elelic File System (EFS)和FSx for Windows File Server存储成本与FSx for ONTAP进行比较。通过计算器、您可以查看FSx for ONTAP存储配置如何提供潜在的节省、并计划迁移到FSx for ONTAP存储。
-* *Workload Factory 用户界面*：提供 _快速创建_ 和 _高级创建_ 部署模式选项。快速创建包括 AWS、NetApp 和行业标准的存储配置最佳实践。该界面还显示 SSD 存储容量和吞吐量使用趋势、工作负载摘要以及您可以展开的详细配置设置。
+* *Workload Factory用户界面*:提供_Quick cree_和_Advanced cree_部署模式选项。Quick create包含适用于您的存储配置的AWS、NetApp和行业标准最佳实践。
 * *Codebox*：为开发人员提供FSx for ONTAP操作的代码查看器、用于复制和下载的代码模板以及用于代码重复使用的自动化目录。
 
 

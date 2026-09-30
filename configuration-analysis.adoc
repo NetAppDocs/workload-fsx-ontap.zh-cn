@@ -11,7 +11,7 @@ summary: NetApp Workload Factory 定期分析 Amazon FSx for NetApp ONTAP 文件
 
 
 [role="lead"]
-NetApp Workload Factory 定期分析 Amazon FSx for NetApp ONTAP 文件系统配置，以确定是否存在任何配置问题。当发现问题时，Workload Factory 会向您展示问题所在，并解释需要更改的内容，以确保您的文件系统存储实现最佳性能、成本效益和符合最佳实践。
+NetApp Workload Factory 定期分析 Amazon FSx for NetApp ONTAP 文件系统配置，以确定是否存在任何配置问题。发现问题时，Workload Factory 会向您展示问题所在，并说明需要更改的内容，以便您的文件系统存储实现最佳性能、成本效益并符合最佳实践。
 
 主要功能包括：
 
@@ -27,9 +27,9 @@ NetApp Workload Factory 定期分析 Amazon FSx for NetApp ONTAP 文件系统配
 [[how-it-works]]
 == 工作原理
 
-Workload Factory 每天分析在支持的云存储系统部署上运行的工作负载。该分析提供架构完善的状态、见解和建议。
+NetApp Workload Factory 每天分析受支持的云存储部署中的工作负载。该分析提供架构完善的状态、见解和建议。
 
-每日分析完成后，配置在部署的精心设计的仪表板中显示为"优化"或"未优化"。您将按类别找到配置问题以及配置问题和建议列表。您可以查看配置问题的建议。Workload Factory 可以自动修复某些问题；其他问题需要手动干预。在此情况下，Workload Factory 会提供详细说明，以帮助您实施建议的更改。
+每日分析完成后，配置在部署的 Well-architected 仪表板中显示为"已优化"或"未优化"。您可以找到按类别组织的配置问题以及相关建议。Workload Factory 可以自动解决某些问题；对于需要手动干预的问题，Workload Factory 提供了详细说明，帮助您实施建议的更改。
 
 您可以忽略不适用于您环境的配置分析。这样可以避免不必要的警报和不准确的优化结果。
 
@@ -69,6 +69,9 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["�
 架构完善的分析将配置归类为框架的以下支柱：_reliability_、_security_、_operational excellence_、_cost optimization_ 和 _performance efficiency_。
 
 
+NOTE: 目前，Workload Factory 不为所有配置提供特定于工作负载的建议。根据特定工作负载需求定制配置。
+
+
 
 [[reliability]]
 === 可靠性
@@ -85,7 +88,7 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["�
 
 * *应用程序一致性快照*
 +
-对于数据库环境，请使用应用程序一致性快照与 NetApp SnapCenter 配合，以便在特定时间点为卷数据拍摄准确、可靠的快照。这可确保您的应用程序顺利运行和数据安全。SnapCenter 使备份更轻松，并帮助您快速、正确地还原数据，从而减少停机时间并保护您最重要的工作负载。
+对于数据库环境，请使用 NetApp SnapCenter 的应用程序一致性快照，以便在特定时间点为卷数据拍摄准确、可靠的快照。这有助于保持您的应用程序平稳运行并保护您的数据。SnapCenter 使备份更轻松，并帮助您快速、正确地还原数据，减少停机时间并保护您最重要的工作负载。
 
 * *跨区域复制*
 +
@@ -161,6 +164,10 @@ NetApp Autonomous Ransomware Protection with AI (ARP/AI) 有助于保护您的�
 +
 为托管数据库实例的 FSx for ONTAP 卷配置精简配置。此方法允许存储的逻辑数据量超过实际可用的物理容量。
 
+* *针对 AWS MGN 的配置*
++
+在将 FSx for ONTAP 文件系统与 AWS MGN 结合使用之前，请先使用所需的 AWS MGN 连接和 API 身份验证设置对其进行配置。
+
 
 
 
@@ -192,7 +199,7 @@ NetApp Autonomous Ransomware Protection with AI (ARP/AI) 有助于保护您的�
 
 * *过度配置的 SSD 容量*
 +
-多余的SSD容量会增加不必要的成本。减少SSD层，同时保持20%的可用空间缓冲区。此操作可能需要数小时至数天，在此期间不支持其他文件系统操作。
+多余的SSD容量会增加不必要的成本。减少SSD层，同时保持20%的可用空间缓冲区。此操作可能需要数小时到数天，在此期间不支持其他文件系统操作。
 
 * *非活动 NAS 卷*
 +
@@ -214,6 +221,10 @@ NetApp Autonomous Ransomware Protection with AI (ARP/AI) 有助于保护您的�
 * *FlexVol 卷重新平衡*
 +
 重新平衡您的 FlexVol 卷以提高效率。横向扩展后，整个卷的容量和工作负载活动可能会变得不均匀。
+
+* *卷空间管理*
++
+启用协调的卷空间管理，以降低卷空间耗尽的风险。如果没有此功能，意外的数据或快照增长可能会填满卷，从而导致写入失败并影响应用程序。
 
 
 

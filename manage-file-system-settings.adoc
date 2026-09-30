@@ -11,7 +11,9 @@ summary: 随时为文件系统添加、更新或删除 FSx for ONTAP文件系统
 
 
 [role="lead"]
-在 NetApp Workload Factory 中管理 FSx for ONTAP 文件系统的设置。您可以管理文件系统的标签，必要时重置 fsxadmin 密码，并根据需要更新吞吐量容量。
+在 NetApp Workload Factory 中管理 FSx for ONTAP 文件系统的设置，以保持文件系统的有序性、安全性以及适合您工作负载的规模。您可以随时添加或编辑标记、管理 ONTAP 凭据、重置 fsxadmin 密码以及更新吞吐量容量。
+
+文件系统概述显示 SSD 容量和吞吐量使用趋势、AI 生成的顶级工作负载摘要以及可扩展的文件系统配置详细信息。
 
 
 
@@ -29,6 +31,44 @@ summary: 随时为文件系统添加、更新或删除 FSx for ONTAP文件系统
 +
 文件系统最多可以应用 50 个标签。
 
+. 选择 * 应用 * 。
+
+
+
+
+[[manage-ontap-credentials]]
+== 管理 ONTAP 凭据
+
+在 NetApp Workload Factory 中管理 FSx for ONTAP 文件系统的 ONTAP 凭据。Workload Factory 有两种类型的凭据：主凭据和受限凭据。默认情况下，文件系统使用主 ONTAP 凭据。受限凭据仅用于 AI 操作 （AIOps），例如 Ask Me、Rule builder 和 Custom dashboards。您可以选择添加受限凭据集，也可以随时更新任一凭据集。
+
+您可以执行以下任务：
+
+* 选择加入以添加受限凭据集，使用用户名和密码或机密 ARN。
+* 更改现有凭据，包括用户名和密码、仅密码或机密 ARN。
+
+
+Workload Factory 支持在 Workload Factory 凭据服务（用户名和密码）和 AWS Secrets Manager 之间进行转换。
+
+Workload Factory 按以下方式处理受限凭据：
+
+* 如果您没有为文件系统提供受限凭据，然后创建自定义规则或仪表板或询问 Ask Me 问题，Workload Factory 将创建只读 ONTAP 凭据以用作受限凭据集。
+* 如果您已经为文件系统提供了受限凭据，则这些凭据将用于 AIOps。
+
+
+.开始之前
+您必须关联链接以管理 ONTAP 凭据。link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["了解如何关联现有链接或创建并关联新链接"^]。链接关联后，返回此操作。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
+. 从存储菜单中，选择 *FSx for ONTAP*。
+. 从 *FSx for ONTAP* 中，选择要重置 fsxadmin 密码的文件系统的操作菜单，然后选择 *管理*。
+. 从文件系统概览中，选择操作菜单。
++
+image:screenshot-manage-ontap-credentials.png["文件系统概览选项卡中的操作菜单的屏幕截图。"]
+
+. 选择*管理 ONTAP 凭据*。
+. 更新主 ONTAP 或受限 ONTAP 凭据。
 . 选择 * 应用 * 。
 
 

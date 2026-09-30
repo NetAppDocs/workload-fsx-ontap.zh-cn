@@ -88,6 +88,7 @@ NOTE: 使用来自CodeBox的Terraform时、您复制或下载的代码会隐藏 
 . 在Create volume页面上的General Details下、提供以下详细信息：
 +
 .. *卷名称*：输入卷的名称。
+.. *Workload*：选择与该卷关联的工作负载。
 .. * Storage VM名称*：(可选)输入Storage VM名称。
 .. *卷样式*：选择* FlexVol *或* FlexGroup *卷。
 +
