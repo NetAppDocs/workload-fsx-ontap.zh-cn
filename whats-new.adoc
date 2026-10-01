@@ -15,8 +15,8 @@ summary: 了解Amazon FSx for NetApp ONTAP的新增功能。
 
 
 
-[[27-september-2026]]
-== 2026年9月27日
+[[30-september-2026]]
+== 2026年9月30日
 
 
 
