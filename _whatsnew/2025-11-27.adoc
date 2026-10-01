@@ -49,7 +49,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/track-costs.html["在 Work
 
 直接从NetApp Workload Factory控制台轻松管理文件系统的 FSx 标签。此功能允许您添加、编辑或删除标签，从而更好地组织和分类您的 FSx for ONTAP文件系统。
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-fsx-tags.html["在工作负载工厂中管理 FSx 标签"]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-file-system-settings.html["在工作负载工厂中管理 FSx 标签"]
 
 
 
