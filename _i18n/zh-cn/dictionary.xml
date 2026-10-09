@@ -2957,7 +2957,6 @@
   <block id="6dbb8a49c1538ebdedcc12468334fb46" category="paragraph">删除已删除卷的任何手动创建的备份，以及任何超过两周的备份。这些备份不会自动过期，如果您不再需要这些备份用于 SLA 或恢复，可能会增加成本并增加复杂性。</block>
   <block id="b5ad1c06d1e3c827001a5d86081f1bdb" category="paragraph">删除不再需要的旧的或手动创建的快照。删除它们可以降低成本并减少混乱，特别是在 SLA 或恢复需求不需要它们的情况下。</block>
   <block id="0be251ac51e901583999154779926c3b" category="paragraph">在块设备未使用七天后，归档块设备数据或删除未使用的块设备以降低成本。</block>
-  <block id="72d8d7f27cf31b02bb7df1a01b23ab49" category="paragraph">配置分析可识别未主动使用的 NAS 卷，并建议删除或归档卷以降低成本。</block>
   <block id="058f4c97fb457003efd47bf8dac18f8b" category="paragraph">重新平衡 FlexGroup 卷以提高效率。横向扩展后，整个卷的容量和工作负载活动可能会变得不均匀。</block>
   <block id="98ee4192cbfc73d968e2c1f61cbdb3dc" category="paragraph">重新平衡您的 FlexVol 卷以提高效率。横向扩展后，整个卷的容量和工作负载活动可能会变得不均匀。</block>
   <block id="c2a622b55f06f11550a3499362e678c9" category="list-text">您必须关联链接才能创建块设备。<block ref="b0d0cfa49a5b8ebda8e687152ec0aadd" category="inline-link-macro-rx"></block>。关联链接后，返回此操作。</block>
@@ -3187,4 +3186,5 @@
   <block id="ec39403359b5b677efc5171e16b20cdb" category="paragraph"><block ref="b0d0cfa49a5b8ebda8e687152ec0aadd" category="inline-link-macro-rx"></block>。链接关联后，返回此操作。</block>
   <block id="9a90fd93ba397d5f48de07251acc1808" category="list-text">延迟事件的组件细分</block>
   <block id="6d4d9f3d79904b627f6aca8246717bca" category="list-text">*缓存卷*：包含缓存卷的源存储虚拟机不支持切换。在切换之前删除 ONTAP FlexCache 关系，以避免迁移失败。</block>
+  <block id="084b022f1511ba8dda542f70832d22e4" category="paragraph">在 NAS 卷未使用 31 天后，归档或删除未使用的 NAS 卷以降低成本。</block>
 </blocks>

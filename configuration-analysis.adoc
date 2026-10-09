@@ -203,7 +203,7 @@ NetApp Autonomous Ransomware Protection with AI (ARP/AI) 有助于保护您的�
 
 * *非活动 NAS 卷*
 +
-配置分析可识别未主动使用的 NAS 卷，并建议删除或归档卷以降低成本。
+在 NAS 卷未使用 31 天后，归档或删除未使用的 NAS 卷以降低成本。
 
 
 
