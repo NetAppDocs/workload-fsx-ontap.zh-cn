@@ -2508,7 +2508,6 @@
   <block id="fa425772bf4dc1e54c8368c2b99d4b1b" category="paragraph">在规划迁移用例的切换操作时，请考虑以下内容。</block>
   <block id="d77811034f737ab45ed7ddebe9c096fd" category="inline-xref">切换后更新配置设置</block>
   <block id="dddf91d5ccee3135470e6089b62618ba" category="list-text">*克隆*：克隆作为单个卷进行迁移，因此将占用目标 FSx for ONTAP 文件系统上的更多空间。考虑在切换之前删除克隆，以避免增加目标容量。</block>
-  <block id="233115f3ed74b7b4516b8f0a1efbaedf" category="list-text">*缓存卷*：适用于 ONTAP FlexCache 9.17.x 或更低版本。包含缓存卷的源存储 VM 不支持切换。在切换之前删除 ONTAP FlexCache 关系，以避免迁移失败。</block>
   <block id="03c85e91696d00a533c3da3b08434532" category="list-text">*AWS S3 接入点*：具有 S3 接入点的卷不支持迁移使用情形的切换复制。从源卷中删除 S3 接入点以避免迁移失败。</block>
   <block id="849ee629a3b8f33b04a9b242a47e3d59" category="list-text">*ONTAP S3 配置*：具有 ONTAP S3 配置的 vserver 不支持迁移用例的切换复制。删除 ONTAP S3 配置，包括 vserver 上的对象存储服务器、存储桶、用户、组或策略，以避免迁移失败。</block>
   <block id="ab3171de62100468c23112d3fda9227b" category="list-text">*LUN 序列号和 iSCSI 目标 IQN*：LUN 序列号和 iSCSI 目标 IQN 在切换期间发生变化。</block>
@@ -3187,4 +3186,5 @@
   <block id="56643767ee547abedda1d643567a4c85" category="paragraph">所有链接文档现在都包含在 Workload Factory 设置和管理文档中。您仍然可以参考 Workload Factory FSx for ONTAP 文档中的 <block ref="08c564abbdedd12846cfb2f0de43f628" category="inline-link-macro-rx"></block>，并在设置和管理文档中找到相关页面的链接。</block>
   <block id="ec39403359b5b677efc5171e16b20cdb" category="paragraph"><block ref="b0d0cfa49a5b8ebda8e687152ec0aadd" category="inline-link-macro-rx"></block>。链接关联后，返回此操作。</block>
   <block id="9a90fd93ba397d5f48de07251acc1808" category="list-text">延迟事件的组件细分</block>
+  <block id="6d4d9f3d79904b627f6aca8246717bca" category="list-text">*缓存卷*：包含缓存卷的源存储虚拟机不支持切换。在切换之前删除 ONTAP FlexCache 关系，以避免迁移失败。</block>
 </blocks>
