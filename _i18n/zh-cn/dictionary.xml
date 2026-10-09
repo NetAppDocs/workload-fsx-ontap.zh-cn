@@ -3186,4 +3186,5 @@
   <block id="cdda19a64421ad2d94977547c50a1983" category="paragraph"><block ref="cdda19a64421ad2d94977547c50a1983" category="inline-link-macro-rx"></block></block>
   <block id="56643767ee547abedda1d643567a4c85" category="paragraph">所有链接文档现在都包含在 Workload Factory 设置和管理文档中。您仍然可以参考 Workload Factory FSx for ONTAP 文档中的 <block ref="08c564abbdedd12846cfb2f0de43f628" category="inline-link-macro-rx"></block>，并在设置和管理文档中找到相关页面的链接。</block>
   <block id="ec39403359b5b677efc5171e16b20cdb" category="paragraph"><block ref="b0d0cfa49a5b8ebda8e687152ec0aadd" category="inline-link-macro-rx"></block>。链接关联后，返回此操作。</block>
+  <block id="9a90fd93ba397d5f48de07251acc1808" category="list-text">延迟事件的组件细分</block>
 </blocks>
