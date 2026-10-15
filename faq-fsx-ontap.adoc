@@ -1,0 +1,268 @@
+---
+sidebar: sidebar 
+permalink: faq-fsx-ontap.html 
+keywords: faq, frequently asked questions, frequently asked questions about amazon fsx for netapp ontap, fsx for ontap, workload factory, storage, file system, volume, link, snapshot, replication, arp, ai, s3 access point, iscsi, flexcache, configuration analysis 
+summary: 在 NetApp Workload Factory 中查找有关 FSx for ONTAP 文件系统、卷、数据保护、复制、勒索软件保护和块存储的常见问题解答。 
+---
+= 适用于 NetApp Workload Factory 的 Amazon FSx for NetApp ONTAP 常见问题
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+关于 Amazon FSx for NetApp ONTAP in NetApp Workload Factory 的常见问题涵盖了影响您规划、保护和管理 FSx for ONTAP 文件系统和存储的概念、行为和限制。
+
+
+
+[[links]]
+== 链接
+
+.什么是链接，何时需要为 FSx for ONTAP 使用链接？
+链接在 Workload Factory 与一个或多个 FSx for ONTAP 文件系统之间建立信任关系，并使用 AWS Lambda。许多操作需要关联的链接，包括：
+
+* 配置卷协议访问
+* 管理快照和快照策略
+* 使用人工智能（ARP/AI）启用 NetApp 自主勒索软件防护
+* 管理卷自动增长和手动容量更改
+* 管理 igroup 和缓存卷
+* 管理 ONTAP 凭据
+
+
+link:learn-about-links.html["详细了解链接"]。
+
+.如果我不将链接与我的文件系统关联，会发生什么？
+依赖于链接的功能可能不可用。例如，如果没有链接，则 ARP/AI 不可用，在创建卷时无法显示现有快照策略，并且无法发现缓存关系。没有链接，配置分析无法扫描数据保护和性能设置，因此分析不完整。您仍然可以在没有链接的情况下查看延迟事件，但您需要一个链接来查看和分析 EMS 事件以及分析延迟事件。
+
+
+
+[[file-systems]]
+== 文件系统
+
+.我应该对新文件系统使用快速创建还是高级创建？
+快速创建应用推荐的最佳实践配置，之后您可以更改大多数设置。它默认为第二代文件系统，除非该区域不支持它。高级创建允许您设置所有选项，包括可用性、安全性、备份和维护。
+
+link:create-file-system.html["创建文件系统"]。
+
+.创建文件系统时会自动创建哪些资源，我需要哪些权限？
+创建文件系统还会创建存储 VM 和安全组。您需要具有文件系统创建和删除权限的凭据，以及要部署的区域和 VPC 详细信息。
+
+.在删除文件系统、存储 VM 或卷之前，我必须做些什么？
+要删除文件系统，请先删除其卷、存储 VM 和复制关系。要删除存储 VM，请停止应用程序访问并删除所有非根卷。要删除卷，请先删除其复制关系。删除卷是不可逆的，并且会永久删除其快照，不过卷备份仍然存在。在保留期结束之前，无法删除包含不可变文件和快照的卷。
+
+link:delete-file-system.html["删除文件系统"]。
+
+.在添加 HA 对以横向扩展文件系统之前，我应该考虑什么？
+添加 HA 对仅适用于第二代单 AZ 文件系统，添加后无法删除 HA 对。该操作大约需要 30 分钟，在此期间，文件系统无法用于其他操作，例如卷创建。在开始之前，您必须删除所有 iSCSI LUN。
+
+link:add-ha-pairs.html["添加 HA 对"]。
+
+.主 ONTAP 凭据和受限 ONTAP 凭据有什么区别？
+默认情况下，文件系统使用主 ONTAP 凭据，即用于管理文件系统的主凭据。受限凭据仅用于询问我、规则生成器和自定义仪表板等 AI 操作。如果您没有提供受限凭据，Workload Factory 将为这些操作创建只读 ONTAP 凭据。管理凭据需要链接。
+
+link:manage-file-system-settings.html["管理 ONTAP 凭据"]
+
+
+
+[[capacity-and-performance]]
+== 容量和性能
+
+.自动容量管理的工作原理是什么，我应该注意什么？
+Workload Factory 每 30 分钟扫描一次文件系统，并使用增量模式（在阈值处固定增加）或自适应模式（根据历史数据预测需求）添加 SSD 容量。启用此功能后，必须先将其禁用，然后才能手动增加容量。避免在数据迁移期间启用它，因为 AWS 会在 SSD 容量增加操作之间强制执行至少六个小时的冷却时间。
+
+link:adjust-file-system-capacity.html["调整文件系统容量"]。
+
+.更改 SSD 容量如何影响 IOPS？
+更改文件系统容量会影响 IOPS。通过自动 IOPS 调配，每添加或删除 1 GiB 的 SSD 容量，IOPS 就会改变 3。使用手动调配，您可能需要在增加容量之前提高 IOPS。只有第二代文件系统才支持降低 SSD 容量。
+
+.我应该保留多少 SSD 预留空间，如果容量用完会发生什么？
+将 SSD 层利用率保持在 80% 以下。当容量耗尽时，卷将变为只读，并且写入失败。卷和文件（inode）利用率也应保持在 80% 以下。如果备份快照导致卷的 SSD 利用率超过 98%，则备份将失败。link:adjust-file-system-capacity.html["增加容量以避免用尽空间"]。
+
+
+
+[[volumes-and-tiering]]
+== 卷和分层
+
+.卷是否占用文件系统容量，我应该选择 FlexVol 还是 FlexGroup？
+卷以虚拟方式对数据进行分组，本身不消耗文件系统存储容量。它们的数据主要消耗 SSD 存储，并根据分层策略消耗容量池存储。FlexVol 是默认样式。FlexGroup 是一种用于实现高性能和大容量的横向扩展 NAS 容器，由共享流量的成分卷组成。大小有所不同：FlexVol 为 20 MiB 到 300 TiB，而 FlexGroup 为 800 GiB 到 2 PiB，每个成分卷需要 100 GiB。
+
+.重新平衡卷会产生什么影响？
+重新平衡是无中断的，但卷传输会消耗文件系统资源。重新平衡的卷上的现有快照将变为部分快照，无法用于恢复卷数据，而之后拍摄的快照则可以。SAN 卷（iSCSI 和 NVMe）不支持重新平衡。FlexGroup 重新平衡可以添加成员卷并增加调配的大小，除非您选择受限布局，该布局支持处于复制关系中的卷。
+
+.我应该为卷选择哪种分层策略？
+策略选择会影响成本和性能：
+
+* *平衡（自动）*：默认；建议用于一般主要工作负载。
+* *成本优化（全部）*：建议用于次要目标。
+* *性能优化（仅限快照）*：建议用于任务关键型数据库等低延迟工作负载。
+* *无*：将所有数据保留在 SSD 上。
+
+
+策略按卷设置，您可以随时更改。
+
+link:change-tiering-policy.html["更改分层策略"]。
+
+.克隆的卷及其父卷会发生什么情况？
+克隆是可写卷。它的数据仍然驻留在父卷上，只有新的写入驻留在克隆上。在拆分克隆之前，无法删除具有克隆的父卷。要拆分克隆，必须将链接与包含克隆的文件系统关联。拆分仅更新元数据，如果克隆处于数据保护关系中，则无法执行拆分。拆分后，这两个卷无法重新合并，并且每个卷都需要分配完整的空间。
+
+
+
+[[data-protection]]
+== 数据保护
+
+.我应该使用哪些数据保护方法？
+建议使用组合。快照可提供低至一小时的 RPO 和快速的文件级还原。备份提供一天起的 RPO，只能作为整个卷进行还原，这可能需要数小时到数天的时间。复制会将副本保留在另一个区域以进行低 RTO 灾难恢复，但您必须调整客户端以使用副本。ARP/AI 增加了勒索软件检测功能。
+
+link:data-protection-overview.html["了解数据保护的类型"]。
+
+.我应该如何规划快照的容量，快照是否可以替代我的数据副本？
+快照不是数据的副本。它们只占用已更改数据的空间，因此通常会随着时间的推移而增大。对于大多数数据集，额外 20% 的容量足以保留快照长达四周，但覆盖所有数据会消耗大量容量。如果您需要真实的副本，请使用备份或复制。
+
+.从快照还原卷的后果是什么？
+还原到现有卷会永久删除在创建快照后修改的任何数据。作为新卷还原，无论大小如何，都可以在几秒钟内创建副本。如果还原切换了 NAS 协议类型，它也可能会切换权限模型，这可能会导致文件访问问题，您只能使用 NAS 客户端工具手动修复这些问题。
+
+.关于快照策略，我需要了解哪些信息？
+每个卷都使用文件系统的 `default`快照策略，除非您对其进行更改。策略在存储 VM 级别进行管理，可以在卷之间共享。快照时间遵循文件系统的时区，默认为 UTC。
+
+link:manage-snapshot-policy.html["管理Snapshot策略"]。
+
+.不可变快照的作用是什么，它们如何影响删除快照或卷？
+创建卷快照时，可以启用不变性，以便在保留期间无法更改或删除快照。在快照策略上启用不可变快照将锁定该策略中的所有快照。在保留期结束之前，无法更改或删除包含不可变文件和快照的卷。
+
+.在卷上启用不可变文件（SnapLock）之前，我应该决定什么？
+不可变文件只能在创建卷时启用，此后无法禁用。这是一项额外收费的高级功能。选择保留模式：在企业模式下，SnapLock 管理员可以在保留期间删除文件，而在合规模式下，WORM 文件在保留期到期之前无法删除，卷也无法删除。复制包含不可变文件的源卷会使目标卷和文件系统保持锁定状态，直到源保留期结束。
+
+link:create-volume.html["创建卷时启用不可变文件"]。
+
+.卷备份的工作原理是什么？是什么原因导致卷备份失败？
+备份是按卷和增量进行的，因此仅保存自上次备份以来更改的数据。如果备份快照将使卷的 SSD 利用率超过 98%，则备份可能会失败。您可以将备份还原到 AWS 帐户中的任何 FSx for ONTAP 文件系统，如果还原需要，Workload Factory 可以添加 SSD 容量。手动创建的备份不会自动过期，因此请清理旧备份。
+
+link:use-backups.html["通过备份保护您的数据"]。
+
+.什么是网络保管库？如何获取？
+网络保管库是一个隔离的、气隙隔离的、不可变的备份副本存储库，可以抵御勒索软件和内部威胁。支持将 FSx for ONTAP 作为网络保管库的源和目标。NetApp 协助实施：请通过 ng-FSx-CyberVault@netapp.com 联系网络保管库团队，随后将有专家进行跟进。
+
+link:create-cyber-vault.html["详细了解网络保管库"]。
+
+
+
+[[ransomware-protection]]
+== 勒索软件防护
+
+.ARP/AI 是如何工作的，它需要什么？
+ARP/AI 监控 NAS（NFS/SMB）和 SAN（iSCSI）卷。当检测到威胁时，它会创建不可变的快照。在文件系统上启用它可以保护所有当前卷和新卷，并且需要关联的链接。NVMe 卷或 ONTAP 早于 9.17.1 的 iSCSI 卷不支持此功能。NAS 保护会立即启动，而 SAN 卷会经过两到四周的学习期，但仍会受到监控。
+
+link:ransomware-protection.html["利用 ARP/AI 实现勒索软件防护"]。
+
+.当 ARP/AI 标记攻击时会发生什么，如何处理误报？
+ARP/AI 在检测到威胁时创建锁定的快照。默认情况下，ARP/AI 每四小时最多创建六个快照，每个快照锁定两到五天。如果您确认发生真正的攻击，则可以恢复受影响的文件或整个卷。如果您将其标记为误报，则锁定的快照将被删除，系统将更新其警报设置，因此相同的文件扩展名下次不会触发警报。
+
+
+
+[[replication-and-migration]]
+== 复制和迁移
+
+.在创建复制关系之前，我需要做些什么？
+您需要：
+
+* 具有关联链接的目标 FSx for ONTAP 文件系统。
+* TCP 端口 11104 和 11105 在存储系统之间打开。
+* 已发现的本地 ONTAP 系统（如果这是您的源）。
+
+
+复制可以在 FSx for ONTAP 文件系统、本地 ONTAP 系统和 Cloud Volumes ONTAP 之间进行。已复制卷是名为 `\{OriginalVolumeName}_copy`的数据保护卷。
+
+link:create-replication.html["复制数据"]。
+
+.当我暂停、停止、恢复、反向或删除复制关系时，数据会发生什么？
+暂停或停止会使目标卷变为可写状态。恢复操作会删除在目标处于可写状态时对其所做的任何更改，并将其恢复为只读状态。反向操作会交换源和目标角色，并使用新源的内容覆盖新目标。删除关系会使两个卷保持独立，但会删除它们共同的复制快照。当您反向或恢复时，在上次复制之后写入源的数据将不会保留。
+
+link:manage-replication.html["管理复制"]。
+
+.级联复制支持多少跳？有哪些权衡？
+级联复制支持数据保护卷的一个副本（第二个跃点：源到二级到三级）。不支持第三个跃点，这也不被视为最佳实践。如果二级卷不可用，级联允许您重新同步主卷和三级卷，而无需进行新的基线传输。级联卷可能需要更长时间才能重新同步，并且您无法反转其源本身是另一个关系目标的数据保护卷的关系。
+
+link:create-replication.html["数据保护卷的级联复制"]。
+
+.是否应限制复制关系的传输速率？
+限制最大传输速率是可选的，但建议这样做，因为如果没有限制，网络和应用程序性能可能会下降。对于关键工作负载（例如主要用于灾难恢复的文件系统），建议使用无限传输速率。
+
+link:manage-replication.html["限制复制关系的最大传输速率"]。
+
+.在迁移存储 VM 和切换复制时，我应该做哪些计划？
+迁移需要三个操作：创建关系（选择*迁移*作为用例和*复制存储虚拟机配置*）、初始化和切换。在切换之前，请停止客户端访问，并确保数据已同步。源和目标必须运行相同的主要 ONTAP 版本。切换后，源存储虚拟机离线，LUN 序列号和 iSCSI 目标 IQN 发生变化，必须手动更新 iSCSI、MTU 和 DNS 设置。
+
+link:create-replication.html["复制数据"]。
+
+
+
+[[s3-access-points-block-storage-and-cache-volumes]]
+== S3 接入点、块存储和缓存卷
+
+.什么是 S3 接入点，在启用清单或日志表等功能之前，我应该了解哪些信息？
+S3 接入点连接到 NFS 和 SMB 卷，因此 AWS 服务（如 Amazon Bedrock）可以像在 S3 存储桶中一样读取文件数据。您可以将多个接入点连接到一个卷。清单表生成对象元数据并产生 AWS S3 请求成本。日志表的审核日志记录需要 AWS 基础架构（CloudTrail、CloudWatch、S3、IAM），并要求接入点的网络配置为*互联网*。
+
+link:create-s3-access-points.html["创建 S3 接入点"]。
+
+.设置块（iSCSI）存储需要什么？
+您需要一个链接、一个 FlexVol volume 和一个 igroup。块访问仅适用于具有六个或更少 HA 对的横向扩展部署。igroup 通过 IQN 授予主机访问权限，并且您需要 igroup 和 iSCSI 主机连接才能使 iSCSI 工作。配置分析建议 iSCSI 卷不要同时允许 NAS 访问。
+
+* link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["创建链接"^]。
+* link:create-volume.html["创建 FlexVol volume"]。
+* link:create-igroup.html["创建 igroup"]。
+* link:create-block-device.html["创建块设备"]。
+
+
+.不活动的块设备会发生什么？
+未映射到客户端或连续七天未使用的块设备被归类为非活动设备。您可以将其数据归档到容量池层以回收 SSD 容量，或者将其删除。配置分析将非活动块设备标记为成本优化项目。
+
+.如何选择缓存写入模式，以及管理缓存卷需要什么？
+对于包含小文件的读取密集型工作负载，绕写模式性能更好；对于包含大文件的写入密集型工作负载，写回模式性能更好。Workload Factory 发现现有的缓存（FlexCache）关系，您必须关联一个链接来发现或管理缓存卷。
+
+link:manage-cache-volumes.html["管理缓存卷"]。
+
+
+
+[[configuration-analysis-and-monitoring]]
+== 配置分析和监控
+
+.配置分析的工作原理是什么？自动应用修补程序是否安全？
+Workload Factory 每天根据 ONTAP 最佳实践和 AWS Well-Architected Framework 支柱（可靠性、安全性、卓越运营、成本优化和性能效率）分析配置。它可以自动修复某些问题，并为其他问题提供手动步骤。修复操作可能会导致停机或服务中断，因此请先查看每个建议。您可以忽略不适用于您的环境的检查。
+
+您必须在 AWS 帐户中link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["授予 _操作和修复_ 权限"^]，以便让 Workload Factory 分析您的配置。
+
+link:improve-configurations.html["评估配置"]。
+
+.使用人工智能驱动的事件分析需要什么？
+您需要：
+
+* link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["_操作和补救_ 权限。"^]。
+* 一个链接。
+* 在文件系统的安全组中开放端口 22。
+* 已为该帐户激活 Amazon Bedrock，并具有所需的 Bedrock IAM 权限。
+
+
+事件在移除前显示 72 小时。数据保留在您的 AWS 帐户中，客户数据不用于训练模型。如果您的账号管理员关闭了 AI 功能，则无法进行分析。
+
+link:analyze-events.html["分析事件"]。
+
+
+
+[[costs-and-support]]
+== 成本和支持
+
+.节省计算器的工作原理是什么？需要哪些权限？
+该计算器将 Amazon Elastic Block Store （EBS）、Elastic File System （EFS） 和 FSx for Windows File Server 的成本与 FSx for ONTAP 进行比较。您可以手动输入详细信息，或让 Workload Factory 自动检测您的环境，这需要 *查看、规划和分析* 权限来检测它们。自动检测不支持 EBS 快照或 FSx for Windows File Server 卷影副本。
+
+link:explore-savings.html["了解如何使用节省计算器"]。
+
+.成本跟踪数据来自哪里，其最新程度如何？
+成本数据来自 AWS Cost Explorer，使用 `ce:GetCostAndUsage`和 `ce:GetTags`权限，每 24 小时刷新一次。Workload Factory 还使用自己的估算值计算每个资源的成本。要按 AWS 成本分配标签进行筛选，您必须将标签分配给您的文件系统。
+
+link:track-costs.html["跟踪成本"]。
+
+.谁维护 FSx for ONTAP 帐户，谁为文件系统问题提供支持？
+AWS 维护您的 FSx for ONTAP 帐户，而不是 Workload Factory。对于文件系统或基础架构的支持问题，请使用 AWS 管理控制台中的支持中心打开 AWS 支持案例，并选择 FSx for ONTAP 服务。有关一般 Workload Factory 问题，请参见link:get-help.html["获取帮助页面"]。

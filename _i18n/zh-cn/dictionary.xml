@@ -3187,4 +3187,157 @@
   <block id="9a90fd93ba397d5f48de07251acc1808" category="list-text">延迟事件的组件细分</block>
   <block id="6d4d9f3d79904b627f6aca8246717bca" category="list-text">*缓存卷*：包含缓存卷的源存储虚拟机不支持切换。在切换之前删除 ONTAP FlexCache 关系，以避免迁移失败。</block>
   <block id="084b022f1511ba8dda542f70832d22e4" category="paragraph">在 NAS 卷未使用 31 天后，归档或删除未使用的 NAS 卷以降低成本。</block>
+  <block id="cbcebbbc53a0dc734d698e345cc9f911" category="summary">在 NetApp Workload Factory 中查找有关 FSx for ONTAP 文件系统、卷、数据保护、复制、勒索软件保护和块存储的常见问题解答。</block>
+  <block id="f9a4cd4e165d95f6097d6058f8418612" category="doc">适用于 NetApp Workload Factory 的 Amazon FSx for NetApp ONTAP 常见问题</block>
+  <block id="d14d5544a341d1a9bc258908f734089f" category="paragraph">关于 Amazon FSx for NetApp ONTAP in NetApp Workload Factory 的常见问题涵盖了影响您规划、保护和管理 FSx for ONTAP 文件系统和存储的概念、行为和限制。</block>
+  <block id="bd908db5ccb07777ced8023dffc802f4" category="section-title">链接</block>
+  <block id="9dc4bd783bd557a81d2c1fbf6f420a0e" category="paragraph-title">什么是链接，何时需要为 FSx for ONTAP 使用链接？</block>
+  <block id="50ccca3d9155c7a2f9130ee7765743fb" category="paragraph">链接在 Workload Factory 与一个或多个 FSx for ONTAP 文件系统之间建立信任关系，并使用 AWS Lambda。许多操作需要关联的链接，包括：</block>
+  <block id="77acec8553d9971af97eac0340d2f48f" category="list-text">配置卷协议访问</block>
+  <block id="a196e8c9e955288d8493ee9936ce3c76" category="list-text">管理快照和快照策略</block>
+  <block id="53c219370bf0c0452c0ccb2201bc2f80" category="list-text">使用人工智能（ARP/AI）启用 NetApp 自主勒索软件防护</block>
+  <block id="ac63e90ab01039aa5e6c8597290b5cac" category="list-text">管理卷自动增长和手动容量更改</block>
+  <block id="ddf35bccac94d0810429e6fa6c2fb972" category="list-text">管理 igroup 和缓存卷</block>
+  <block id="d49fbd4141ef9211647083b276c978a0" category="list-text">管理 ONTAP 凭据</block>
+  <block id="6015cd2e9e5bc5b037ad456163cc26cb" category="inline-link-macro">详细了解链接</block>
+  <block id="7199140a960155d0d2f40b39a85d69f9" category="paragraph"><block ref="8fae953ea9a38f9ca7be3c5b0b0db56c" category="inline-link-macro-rx"></block>。</block>
+  <block id="dfe642f2cfde396edc18a4148131fed6" category="paragraph-title">如果我不将链接与我的文件系统关联，会发生什么？</block>
+  <block id="b4995c14539d70a4f6014816a0690b2e" category="paragraph">依赖于链接的功能可能不可用。例如，如果没有链接，则 ARP/AI 不可用，在创建卷时无法显示现有快照策略，并且无法发现缓存关系。没有链接，配置分析无法扫描数据保护和性能设置，因此分析不完整。您仍然可以在没有链接的情况下查看延迟事件，但您需要一个链接来查看和分析 EMS 事件以及分析延迟事件。</block>
+  <block id="3b18b13f059019d19211f8a9f36f7e4e" category="section-title">文件系统</block>
+  <block id="cf8717fd7b61340ca19189e27312c629" category="paragraph-title">我应该对新文件系统使用快速创建还是高级创建？</block>
+  <block id="9eddcbef8d779c018cde871331edb56a" category="paragraph">快速创建应用推荐的最佳实践配置，之后您可以更改大多数设置。它默认为第二代文件系统，除非该区域不支持它。高级创建允许您设置所有选项，包括可用性、安全性、备份和维护。</block>
+  <block id="a19403c093e2bb37035acc084ebfaba3" category="paragraph"><block ref="9e0421bb729ebed0fb12b88c1fc5b0e9" category="inline-link-macro-rx"></block>。</block>
+  <block id="406f09292985fe61625e5bc497b6c220" category="paragraph-title">创建文件系统时会自动创建哪些资源，我需要哪些权限？</block>
+  <block id="1dc12f7a5785b1a42ba7ddefb5ab5b8f" category="paragraph">创建文件系统还会创建存储 VM 和安全组。您需要具有文件系统创建和删除权限的凭据，以及要部署的区域和 VPC 详细信息。</block>
+  <block id="76a9205ec492cf551c5f1ee90bccaa35" category="paragraph-title">在删除文件系统、存储 VM 或卷之前，我必须做些什么？</block>
+  <block id="23880fdd8c50489737b55ed18e4ae078" category="paragraph">要删除文件系统，请先删除其卷、存储 VM 和复制关系。要删除存储 VM，请停止应用程序访问并删除所有非根卷。要删除卷，请先删除其复制关系。删除卷是不可逆的，并且会永久删除其快照，不过卷备份仍然存在。在保留期结束之前，无法删除包含不可变文件和快照的卷。</block>
+  <block id="28939361ef523b7b86e672e676b3e1ec" category="paragraph"><block ref="ce3cc6283244706d274727f309dc5c90" category="inline-link-macro-rx"></block>。</block>
+  <block id="346281733a566a2751f70d7d04da2306" category="paragraph-title">在添加 HA 对以横向扩展文件系统之前，我应该考虑什么？</block>
+  <block id="96f4a6eb6e28a53e7635063841767803" category="paragraph">添加 HA 对仅适用于第二代单 AZ 文件系统，添加后无法删除 HA 对。该操作大约需要 30 分钟，在此期间，文件系统无法用于其他操作，例如卷创建。在开始之前，您必须删除所有 iSCSI LUN。</block>
+  <block id="c0b2b9b069c7939799991f9d3d616613" category="inline-link-macro">添加 HA 对</block>
+  <block id="8195e8292fc7b3768df50ac10c7d2d7b" category="paragraph"><block ref="de5bf829a5358aac681b2e7eebaf884a" category="inline-link-macro-rx"></block>。</block>
+  <block id="c1c25df001491639d7e888e014b6f293" category="paragraph-title">主 ONTAP 凭据和受限 ONTAP 凭据有什么区别？</block>
+  <block id="119bd10814b18c6c0c529a31fc0f461b" category="paragraph">默认情况下，文件系统使用主 ONTAP 凭据，即用于管理文件系统的主凭据。受限凭据仅用于询问我、规则生成器和自定义仪表板等 AI 操作。如果您没有提供受限凭据，Workload Factory 将为这些操作创建只读 ONTAP 凭据。管理凭据需要链接。</block>
+  <block id="c296e3b831241983b2e24abde7008365" category="paragraph"><block ref="c296e3b831241983b2e24abde7008365" category="inline-link-macro-rx"></block></block>
+  <block id="57087519281821fc1d17d5e30777c380" category="section-title">容量和性能</block>
+  <block id="b3a9161808f27cc9a6cd00e86ea1e4e0" category="paragraph-title">自动容量管理的工作原理是什么，我应该注意什么？</block>
+  <block id="0c1c113c4f2ee23ecdde19495129d466" category="paragraph">Workload Factory 每 30 分钟扫描一次文件系统，并使用增量模式（在阈值处固定增加）或自适应模式（根据历史数据预测需求）添加 SSD 容量。启用此功能后，必须先将其禁用，然后才能手动增加容量。避免在数据迁移期间启用它，因为 AWS 会在 SSD 容量增加操作之间强制执行至少六个小时的冷却时间。</block>
+  <block id="a0b7bb144ab4d77c2e5c1863b5bbbd7b" category="paragraph"><block ref="e469d94a0ee9bf1ce6c0c27369cc1fd0" category="inline-link-macro-rx"></block>。</block>
+  <block id="d67fb3daeedc86ea1260ab85263eeeff" category="paragraph-title">更改 SSD 容量如何影响 IOPS？</block>
+  <block id="4e640f4e7080cf80420cd99bfa5a75d3" category="paragraph">更改文件系统容量会影响 IOPS。通过自动 IOPS 调配，每添加或删除 1 GiB 的 SSD 容量，IOPS 就会改变 3。使用手动调配，您可能需要在增加容量之前提高 IOPS。只有第二代文件系统才支持降低 SSD 容量。</block>
+  <block id="46d051c62a62bfc93f333021f3788d2e" category="paragraph-title">我应该保留多少 SSD 预留空间，如果容量用完会发生什么？</block>
+  <block id="52a5e43b336bdda3aefca2c487f6d913" category="inline-link-macro">增加容量以避免用尽空间</block>
+  <block id="71c7540d16f368c7990f779b523c38e4" category="paragraph">将 SSD 层利用率保持在 80% 以下。当容量耗尽时，卷将变为只读，并且写入失败。卷和文件（inode）利用率也应保持在 80% 以下。如果备份快照导致卷的 SSD 利用率超过 98%，则备份将失败。<block ref="b018d6bf39140941e97093a6185497f7" category="inline-link-macro-rx"></block>。</block>
+  <block id="b654d5b61cf2e16008a43b9a314e798a" category="section-title">卷和分层</block>
+  <block id="01bf97c05cf670ec1be04b3c6d5b0d93" category="paragraph-title">卷是否占用文件系统容量，我应该选择 FlexVol 还是 FlexGroup？</block>
+  <block id="7e1917a81d1dd5f9ee3540ab8195fd0f" category="paragraph">卷以虚拟方式对数据进行分组，本身不消耗文件系统存储容量。它们的数据主要消耗 SSD 存储，并根据分层策略消耗容量池存储。FlexVol 是默认样式。FlexGroup 是一种用于实现高性能和大容量的横向扩展 NAS 容器，由共享流量的成分卷组成。大小有所不同：FlexVol 为 20 MiB 到 300 TiB，而 FlexGroup 为 800 GiB 到 2 PiB，每个成分卷需要 100 GiB。</block>
+  <block id="a36ca7371803cf76de041db8c92a58f1" category="paragraph-title">重新平衡卷会产生什么影响？</block>
+  <block id="88dd9a20e01131121034b7168943572d" category="paragraph">重新平衡是无中断的，但卷传输会消耗文件系统资源。重新平衡的卷上的现有快照将变为部分快照，无法用于恢复卷数据，而之后拍摄的快照则可以。SAN 卷（iSCSI 和 NVMe）不支持重新平衡。FlexGroup 重新平衡可以添加成员卷并增加调配的大小，除非您选择受限布局，该布局支持处于复制关系中的卷。</block>
+  <block id="b9ab1ccee5c0da0d27f4ae3b0852cc94" category="paragraph-title">我应该为卷选择哪种分层策略？</block>
+  <block id="a074e1a1355e3b9a6616c1b9f56e8a30" category="paragraph">策略选择会影响成本和性能：</block>
+  <block id="6f2eaf5cb4bb4cc40bc20d5980030182" category="list-text">*平衡（自动）*：默认；建议用于一般主要工作负载。</block>
+  <block id="077b9427f46090f6af0271f7abb515c4" category="list-text">*成本优化（全部）*：建议用于次要目标。</block>
+  <block id="3818513aad03af927b34cef46fbf9e9f" category="list-text">*性能优化（仅限快照）*：建议用于任务关键型数据库等低延迟工作负载。</block>
+  <block id="8f175cd81e367993ea59a83a2e1b87a0" category="list-text">*无*：将所有数据保留在 SSD 上。</block>
+  <block id="489b63d7af220700583bbbe5a7c3c0ee" category="paragraph">策略按卷设置，您可以随时更改。</block>
+  <block id="c51c2f28a3258635295934f850798c60" category="inline-link-macro">更改分层策略</block>
+  <block id="94672c1a39764381cca229e031dad1aa" category="paragraph"><block ref="d187c757e0826c740815f6a73145d775" category="inline-link-macro-rx"></block>。</block>
+  <block id="763216abb62d188fd2a38c22749c8268" category="paragraph-title">克隆的卷及其父卷会发生什么情况？</block>
+  <block id="6698d44afa73e0e2e99c54192f1dafac" category="paragraph">克隆是可写卷。它的数据仍然驻留在父卷上，只有新的写入驻留在克隆上。在拆分克隆之前，无法删除具有克隆的父卷。要拆分克隆，必须将链接与包含克隆的文件系统关联。拆分仅更新元数据，如果克隆处于数据保护关系中，则无法执行拆分。拆分后，这两个卷无法重新合并，并且每个卷都需要分配完整的空间。</block>
+  <block id="b018ec01649174ef4df48cfd1f6a90dc" category="paragraph-title">我应该使用哪些数据保护方法？</block>
+  <block id="6c1c987f19ea3d715e011f06d2f0dba1" category="paragraph">建议使用组合。快照可提供低至一小时的 RPO 和快速的文件级还原。备份提供一天起的 RPO，只能作为整个卷进行还原，这可能需要数小时到数天的时间。复制会将副本保留在另一个区域以进行低 RTO 灾难恢复，但您必须调整客户端以使用副本。ARP/AI 增加了勒索软件检测功能。</block>
+  <block id="e4b83b46c1cd11a2fe17fd874db8da11" category="inline-link-macro">了解数据保护的类型</block>
+  <block id="70c7303d6fd3f53eef2db9d073aee797" category="paragraph"><block ref="6f46f98f09a27b6993946c92b3c28ff7" category="inline-link-macro-rx"></block>。</block>
+  <block id="8613922e21d84b44dce92caf0ab391b7" category="paragraph-title">我应该如何规划快照的容量，快照是否可以替代我的数据副本？</block>
+  <block id="c51ddae531add08bc2905d49040923a1" category="paragraph">快照不是数据的副本。它们只占用已更改数据的空间，因此通常会随着时间的推移而增大。对于大多数数据集，额外 20% 的容量足以保留快照长达四周，但覆盖所有数据会消耗大量容量。如果您需要真实的副本，请使用备份或复制。</block>
+  <block id="dc32484a3e2d422fbbb01210766e4130" category="paragraph-title">从快照还原卷的后果是什么？</block>
+  <block id="4c48097b287bebce494ccfcacbb7622f" category="paragraph">还原到现有卷会永久删除在创建快照后修改的任何数据。作为新卷还原，无论大小如何，都可以在几秒钟内创建副本。如果还原切换了 NAS 协议类型，它也可能会切换权限模型，这可能会导致文件访问问题，您只能使用 NAS 客户端工具手动修复这些问题。</block>
+  <block id="dd15a6587062568b1c339538786c7a23" category="paragraph-title">关于快照策略，我需要了解哪些信息？</block>
+  <block id="f5c98f5e83814192eab43901f65ebc6f" category="paragraph">每个卷都使用文件系统的<block ref="c21f969b5f03d33d43e04f8f136e7682" prefix=" " category="inline-code"></block>快照策略，除非您对其进行更改。策略在存储 VM 级别进行管理，可以在卷之间共享。快照时间遵循文件系统的时区，默认为 UTC。</block>
+  <block id="4e0fc48912e3e29f8b937ac9310dfdaf" category="paragraph"><block ref="736a68cb55f91f66669a195b9fe5473b" category="inline-link-macro-rx"></block>。</block>
+  <block id="c502f11c8db4ea75e5eb35f396e3300e" category="paragraph-title">不可变快照的作用是什么，它们如何影响删除快照或卷？</block>
+  <block id="0e8e6e5b8e504664d110271d696e2435" category="paragraph">创建卷快照时，可以启用不变性，以便在保留期间无法更改或删除快照。在快照策略上启用不可变快照将锁定该策略中的所有快照。在保留期结束之前，无法更改或删除包含不可变文件和快照的卷。</block>
+  <block id="cf038fd665473a97bff21c349dc17074" category="paragraph-title">在卷上启用不可变文件（SnapLock）之前，我应该决定什么？</block>
+  <block id="12c3dce509666534de9a7eea019d9d82" category="paragraph">不可变文件只能在创建卷时启用，此后无法禁用。这是一项额外收费的高级功能。选择保留模式：在企业模式下，SnapLock 管理员可以在保留期间删除文件，而在合规模式下，WORM 文件在保留期到期之前无法删除，卷也无法删除。复制包含不可变文件的源卷会使目标卷和文件系统保持锁定状态，直到源保留期结束。</block>
+  <block id="a6cad80eac0d5069954875431536437c" category="inline-link-macro">创建卷时启用不可变文件</block>
+  <block id="bcaf9f890002d3e28f3df693fa025aae" category="paragraph"><block ref="749d0f46da5a5b1a0bf12aa938415ec7" category="inline-link-macro-rx"></block>。</block>
+  <block id="b65d1fe7ba94cbdd04fd3027af86e3fe" category="paragraph-title">卷备份的工作原理是什么？是什么原因导致卷备份失败？</block>
+  <block id="29efc3ce452f0cb3108631bbbd0942ac" category="paragraph">备份是按卷和增量进行的，因此仅保存自上次备份以来更改的数据。如果备份快照将使卷的 SSD 利用率超过 98%，则备份可能会失败。您可以将备份还原到 AWS 帐户中的任何 FSx for ONTAP 文件系统，如果还原需要，Workload Factory 可以添加 SSD 容量。手动创建的备份不会自动过期，因此请清理旧备份。</block>
+  <block id="74d7e4521babc21838cb582b2bc32c8b" category="inline-link-macro">通过备份保护您的数据</block>
+  <block id="f1c9bf156c6c97b6b26ac2d8b1ed2c44" category="paragraph"><block ref="66366016d4e373a595f71ecdad6566ed" category="inline-link-macro-rx"></block>。</block>
+  <block id="d6a89ef548882aa2cac45b8985313205" category="paragraph-title">什么是网络保管库？如何获取？</block>
+  <block id="d0e2c888863a16106a253179c04828a6" category="paragraph">网络保管库是一个隔离的、气隙隔离的、不可变的备份副本存储库，可以抵御勒索软件和内部威胁。支持将 FSx for ONTAP 作为网络保管库的源和目标。NetApp 协助实施：请通过 ng-FSx-CyberVault@netapp.com 联系网络保管库团队，随后将有专家进行跟进。</block>
+  <block id="420f68f6332b3deddd99f6b53543ddd9" category="inline-link-macro">详细了解网络保管库</block>
+  <block id="06283f74ee45e09d68d11154aeb67b8e" category="paragraph"><block ref="3e786ad2ca598d807275c49bbdb03a30" category="inline-link-macro-rx"></block>。</block>
+  <block id="7478f8f98c41fc2f5747e6f31892fe6f" category="section-title">勒索软件防护</block>
+  <block id="e6b09da75dd5269b66eee7c0d3c15e8e" category="paragraph-title">ARP/AI 是如何工作的，它需要什么？</block>
+  <block id="5ae6f721128845e30592fc95dc204972" category="paragraph">ARP/AI 监控 NAS（NFS/SMB）和 SAN（iSCSI）卷。当检测到威胁时，它会创建不可变的快照。在文件系统上启用它可以保护所有当前卷和新卷，并且需要关联的链接。NVMe 卷或 ONTAP 早于 9.17.1 的 iSCSI 卷不支持此功能。NAS 保护会立即启动，而 SAN 卷会经过两到四周的学习期，但仍会受到监控。</block>
+  <block id="f4112b3a56167004c566fed18c25301b" category="inline-link-macro">利用 ARP/AI 实现勒索软件防护</block>
+  <block id="3c91d07a3b6082ef91f683ede528795a" category="paragraph"><block ref="e47e35f0fd751ec997a09e6ba0525b5e" category="inline-link-macro-rx"></block>。</block>
+  <block id="d40b922d6399c0f75bd8fe0dd35865a9" category="paragraph-title">当 ARP/AI 标记攻击时会发生什么，如何处理误报？</block>
+  <block id="87ad13a82b896ad06830d3be808a7a52" category="paragraph">ARP/AI 在检测到威胁时创建锁定的快照。默认情况下，ARP/AI 每四小时最多创建六个快照，每个快照锁定两到五天。如果您确认发生真正的攻击，则可以恢复受影响的文件或整个卷。如果您将其标记为误报，则锁定的快照将被删除，系统将更新其警报设置，因此相同的文件扩展名下次不会触发警报。</block>
+  <block id="6383d03df046324b1bcbe5529c2a0784" category="section-title">复制和迁移</block>
+  <block id="c6ae48f5a3c4c0040cb182a1bd548112" category="paragraph-title">在创建复制关系之前，我需要做些什么？</block>
+  <block id="36ee27bc3fc7c617977b35534609c979" category="paragraph">您需要：</block>
+  <block id="1b8ccd724ee15c5fc6c3791eb885da99" category="list-text">具有关联链接的目标 FSx for ONTAP 文件系统。</block>
+  <block id="01364c2a8f11483bf4a87621ff0dc5a0" category="list-text">TCP 端口 11104 和 11105 在存储系统之间打开。</block>
+  <block id="84a932e4e1232b9f4190664226239f81" category="list-text">已发现的本地 ONTAP 系统（如果这是您的源）。</block>
+  <block id="b51258de1e203e5ece7e3160756e695c" category="paragraph">复制可以在 FSx for ONTAP 文件系统、本地 ONTAP 系统和 Cloud Volumes ONTAP 之间进行。已复制卷是名为<block ref="b10977e679cd9d50cf5cfc7431a7afa4" prefix=" " category="inline-code"></block>的数据保护卷。</block>
+  <block id="42a812c944fb445cb3758a031cad03b7" category="paragraph"><block ref="7f69f5f06b7f1081d234c230e63e1465" category="inline-link-macro-rx"></block>。</block>
+  <block id="77c1f0b1d4ead69988edf8dc8ac07564" category="paragraph-title">当我暂停、停止、恢复、反向或删除复制关系时，数据会发生什么？</block>
+  <block id="a3a90d21994cca3e8154b9450b10efc3" category="paragraph">暂停或停止会使目标卷变为可写状态。恢复操作会删除在目标处于可写状态时对其所做的任何更改，并将其恢复为只读状态。反向操作会交换源和目标角色，并使用新源的内容覆盖新目标。删除关系会使两个卷保持独立，但会删除它们共同的复制快照。当您反向或恢复时，在上次复制之后写入源的数据将不会保留。</block>
+  <block id="3baac809cc5d7dd36919afed53778b41" category="inline-link-macro">管理复制</block>
+  <block id="3a658afba9c3dfcee9d925db2e0ff4f8" category="paragraph"><block ref="f2c69fd21a914dd83b13a85cdc4eec00" category="inline-link-macro-rx"></block>。</block>
+  <block id="3d5bff6139d795a8155e7f553f076dcb" category="paragraph-title">级联复制支持多少跳？有哪些权衡？</block>
+  <block id="28b5e1c7f1d73416c886ec69d18688b1" category="paragraph">级联复制支持数据保护卷的一个副本（第二个跃点：源到二级到三级）。不支持第三个跃点，这也不被视为最佳实践。如果二级卷不可用，级联允许您重新同步主卷和三级卷，而无需进行新的基线传输。级联卷可能需要更长时间才能重新同步，并且您无法反转其源本身是另一个关系目标的数据保护卷的关系。</block>
+  <block id="2bc8d84a3423863f5c9a0b3ab7db7f3f" category="paragraph"><block ref="bd81ceddd5c97e92f9f4da47609bf1b1" category="inline-link-macro-rx"></block>。</block>
+  <block id="ad329ec5a5e4e7399cd752b6449172cc" category="paragraph-title">是否应限制复制关系的传输速率？</block>
+  <block id="ec0c7f22de2bdbae44d9c6ccfca26e29" category="paragraph">限制最大传输速率是可选的，但建议这样做，因为如果没有限制，网络和应用程序性能可能会下降。对于关键工作负载（例如主要用于灾难恢复的文件系统），建议使用无限传输速率。</block>
+  <block id="945292565dfffe4ed0fee6488bb3b60c" category="paragraph"><block ref="429a56d62002f598b22dcce8288b3439" category="inline-link-macro-rx"></block>。</block>
+  <block id="a230097e09995be185ef52257dc95903" category="paragraph-title">在迁移存储 VM 和切换复制时，我应该做哪些计划？</block>
+  <block id="d61626dd853155a6688645f9530e9e29" category="paragraph">迁移需要三个操作：创建关系（选择*迁移*作为用例和*复制存储虚拟机配置*）、初始化和切换。在切换之前，请停止客户端访问，并确保数据已同步。源和目标必须运行相同的主要 ONTAP 版本。切换后，源存储虚拟机离线，LUN 序列号和 iSCSI 目标 IQN 发生变化，必须手动更新 iSCSI、MTU 和 DNS 设置。</block>
+  <block id="fcd9f2021e4153be79dc65c67cde662d" category="section-title">S3 接入点、块存储和缓存卷</block>
+  <block id="f49ad1be510ca9d27bc7647626247d9c" category="paragraph-title">什么是 S3 接入点，在启用清单或日志表等功能之前，我应该了解哪些信息？</block>
+  <block id="34d042a2b876982d8d0353b5c197424a" category="paragraph">S3 接入点连接到 NFS 和 SMB 卷，因此 AWS 服务（如 Amazon Bedrock）可以像在 S3 存储桶中一样读取文件数据。您可以将多个接入点连接到一个卷。清单表生成对象元数据并产生 AWS S3 请求成本。日志表的审核日志记录需要 AWS 基础架构（CloudTrail、CloudWatch、S3、IAM），并要求接入点的网络配置为*互联网*。</block>
+  <block id="a48c3194ed0afa3543de0ca1d8f81697" category="inline-link-macro">创建 S3 接入点</block>
+  <block id="373d2ffaec3d2acfaffcb7cadb99bd68" category="paragraph"><block ref="4eea5e415e098e4f094fd10e1d1b560b" category="inline-link-macro-rx"></block>。</block>
+  <block id="6ab646db89ac6e181dfc79f6c575c8e9" category="paragraph-title">设置块（iSCSI）存储需要什么？</block>
+  <block id="3e99c51170de44f25365793ca0d135cc" category="paragraph">您需要一个链接、一个 FlexVol volume 和一个 igroup。块访问仅适用于具有六个或更少 HA 对的横向扩展部署。igroup 通过 IQN 授予主机访问权限，并且您需要 igroup 和 iSCSI 主机连接才能使 iSCSI 工作。配置分析建议 iSCSI 卷不要同时允许 NAS 访问。</block>
+  <block id="fe2d39294076e85cdac10b70a7da042f" category="list-text"><block ref="84e723a77e5da7869a8731958afee785" category="inline-link-macro-rx"></block>。</block>
+  <block id="07d668b158d086e53e8fd941e7fdca71" category="inline-link-macro">创建 FlexVol volume</block>
+  <block id="7091b500a5a1083b4a0bc1cab9624d7c" category="list-text"><block ref="1152b69358e25ed020038ab1a2f7b59f" category="inline-link-macro-rx"></block>。</block>
+  <block id="7ae90698ba1370fe67da0f295b2b2e91" category="list-text"><block ref="d6d1c309c44b2ac294477e9c723222b3" category="inline-link-macro-rx"></block>。</block>
+  <block id="c991dc9f9a111736388c73da7f87b61b" category="list-text"><block ref="fae14ed30eab3eb467fd76c772cc086d" category="inline-link-macro-rx"></block>。</block>
+  <block id="3594719ae8cb139070d67e6d40b8e95b" category="paragraph-title">不活动的块设备会发生什么？</block>
+  <block id="9fa43fc99133313d50d439ec2c6fa134" category="paragraph">未映射到客户端或连续七天未使用的块设备被归类为非活动设备。您可以将其数据归档到容量池层以回收 SSD 容量，或者将其删除。配置分析将非活动块设备标记为成本优化项目。</block>
+  <block id="827c14c926238a66c0a093c1a77e016d" category="paragraph-title">如何选择缓存写入模式，以及管理缓存卷需要什么？</block>
+  <block id="b667ecd610cc9a1c9a8cfaf7df74c77e" category="paragraph">对于包含小文件的读取密集型工作负载，绕写模式性能更好；对于包含大文件的写入密集型工作负载，写回模式性能更好。Workload Factory 发现现有的缓存（FlexCache）关系，您必须关联一个链接来发现或管理缓存卷。</block>
+  <block id="e3d67258919e3eaca0c3bfa2a4707cf8" category="paragraph"><block ref="f247a85aba96158557fe677ffc5b46f1" category="inline-link-macro-rx"></block>。</block>
+  <block id="8e7ca95a59148086d486ef47fb49de06" category="section-title">配置分析和监控</block>
+  <block id="d69b5c8fc4dad1afa25ce53b41b16a51" category="paragraph-title">配置分析的工作原理是什么？自动应用修补程序是否安全？</block>
+  <block id="7978cb5149f8ef83ac902951c6fb0404" category="paragraph">Workload Factory 每天根据 ONTAP 最佳实践和 AWS Well-Architected Framework 支柱（可靠性、安全性、卓越运营、成本优化和性能效率）分析配置。它可以自动修复某些问题，并为其他问题提供手动步骤。修复操作可能会导致停机或服务中断，因此请先查看每个建议。您可以忽略不适用于您的环境的检查。</block>
+  <block id="aa54af5c37eb0272481e2b886c582cc4" category="paragraph">您必须在 AWS 帐户中<block ref="6f74e2a9589a6666ba7fdb81dabfc5eb" category="inline-link-macro-rx"></block>，以便让 Workload Factory 分析您的配置。</block>
+  <block id="ff5ccdaf2a7215ed465831a104fb3f0a" category="inline-link-macro">评估配置</block>
+  <block id="708e218d0fedd11d8a301c079fa4bb75" category="paragraph"><block ref="7b6cc10b0bbf4a457f384d4dc42b913d" category="inline-link-macro-rx"></block>。</block>
+  <block id="cfb77eda684e695aff27ff4baff059a1" category="paragraph-title">使用人工智能驱动的事件分析需要什么？</block>
+  <block id="e706ac51ff9738151992ba5cc32b94a3" category="inline-link-macro">_操作和补救_ 权限。</block>
+  <block id="b5f2f11273f258a399d225cfec9c5962" category="list-text"><block ref="311b9cdc8339ca8d6ef3bd16df51bc69" category="inline-link-macro-rx"></block>。</block>
+  <block id="ed0b5847028c930dc408ebbd36f6d482" category="list-text">一个链接。</block>
+  <block id="4c5f4b60eb6665165918fe104a709275" category="list-text">在文件系统的安全组中开放端口 22。</block>
+  <block id="46aa87fd95842ab8f19cc307118fa880" category="list-text">已为该帐户激活 Amazon Bedrock，并具有所需的 Bedrock IAM 权限。</block>
+  <block id="c8eeeef64a75facc83f44f154dbcdb60" category="paragraph">事件在移除前显示 72 小时。数据保留在您的 AWS 帐户中，客户数据不用于训练模型。如果您的账号管理员关闭了 AI 功能，则无法进行分析。</block>
+  <block id="6ff7afa8b9f67a5aab7d9ebedd08b828" category="inline-link-macro">分析事件</block>
+  <block id="c86a9065970d75fe94e2d0706441c006" category="paragraph"><block ref="074e21582aeb4daa56e1d1a7a4bcb4c1" category="inline-link-macro-rx"></block>。</block>
+  <block id="46efaf50e38b8209fb70575ab93faf71" category="section-title">成本和支持</block>
+  <block id="e3b45ee370955f06a09cd88b69cd4b20" category="paragraph-title">节省计算器的工作原理是什么？需要哪些权限？</block>
+  <block id="b1eeb9184bcd81ce2ddce0bcf7057718" category="paragraph">该计算器将 Amazon Elastic Block Store （EBS）、Elastic File System （EFS） 和 FSx for Windows File Server 的成本与 FSx for ONTAP 进行比较。您可以手动输入详细信息，或让 Workload Factory 自动检测您的环境，这需要 *查看、规划和分析* 权限来检测它们。自动检测不支持 EBS 快照或 FSx for Windows File Server 卷影副本。</block>
+  <block id="d29c90b4f82c166798f1f8e15dcd72f2" category="inline-link-macro">了解如何使用节省计算器</block>
+  <block id="3892560eb1e15954593d8839a8469893" category="paragraph"><block ref="8d0197f1622e03b4410d58423c12a49b" category="inline-link-macro-rx"></block>。</block>
+  <block id="49d2626703101935d9e398b71c96df6f" category="paragraph-title">成本跟踪数据来自哪里，其最新程度如何？</block>
+  <block id="9360e28d38d02374c3ad5c00a2ecef7b" category="paragraph">成本数据来自 AWS Cost Explorer，使用<block ref="bba6542a0e46014b21a818003b1e41d2" prefix=" " category="inline-code"></block>和<block ref="f74e5982a82afd7d2755b24355dd08c6" prefix=" " category="inline-code"></block>权限，每 24 小时刷新一次。Workload Factory 还使用自己的估算值计算每个资源的成本。要按 AWS 成本分配标签进行筛选，您必须将标签分配给您的文件系统。</block>
+  <block id="041a2914aeb45839ef442b10d6702fce" category="paragraph"><block ref="d0de6db93f8e6230acc4beefa23bc62e" category="inline-link-macro-rx"></block>。</block>
+  <block id="d6a34a9b5fe1c271b8ccaa32eea6e101" category="paragraph-title">谁维护 FSx for ONTAP 帐户，谁为文件系统问题提供支持？</block>
+  <block id="9b0bda92a515730dcb3448fe36afdbe6" category="inline-link-macro">获取帮助页面</block>
+  <block id="017c1ba79347b70465209b766fe98e58" category="paragraph">AWS 维护您的 FSx for ONTAP 帐户，而不是 Workload Factory。对于文件系统或基础架构的支持问题，请使用 AWS 管理控制台中的支持中心打开 AWS 支持案例，并选择 FSx for ONTAP 服务。有关一般 Workload Factory 问题，请参见<block ref="5eb13988e4c0f86962c0003b7b755674" category="inline-link-macro-rx"></block>。</block>
+  <block id="1fe917b01f9a3f87fa2d7d3b7643fac1" category="sidebar">常见问题解答</block>
 </blocks>
