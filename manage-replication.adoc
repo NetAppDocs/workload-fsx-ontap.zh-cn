@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: manage-replication.html 
 keywords: replication management, manage replication, pause replication, stop replication, break replication, delete replication, track replication, change replication schedule, limit replication transfer rate, reverse replication 
-summary: 在 NetApp Workload Factory 中管理复制关系。 
+summary: 暂停、恢复、反向、停止和删除复制关系，更改复制计划，并限制 NetApp Workload Factory 中的传输速率。 
 ---
 = 在 NetApp Workload Factory 中管理您的复制关系
 :allow-uri-read: 
@@ -20,7 +20,7 @@ summary: 在 NetApp Workload Factory 中管理复制关系。
 
 更改NetApp Workload Factory 中复制关系中源卷的复制计划。
 
-选择将源卷中的快照传输到复制的卷的频率、以匹配所需的点目标(RPO)。
+选择将快照从源卷传输到复制卷的频率，以匹配您的恢复点目标（RPO）。
 
 如果内部ONTAP集群是复制关系的目标、则不支持更改复制计划。
 
@@ -32,7 +32,7 @@ summary: 在 NetApp Workload Factory 中管理复制关系。
 . 从文件系统概述中，选择*复制关系*选项卡。
 . 在复制关系选项卡中，选择要更改的复制关系计划的操作菜单。
 . 选择*编辑复制间隔*。
-. 在编辑复制间隔对话框中、选择从源卷传输快照的频率。您可以选择以下频率：
+. 在“编辑复制间隔”对话框中，选择从源卷传输快照的频率。选择以下频率之一：
 +
 ** 每 5 分钟
 ** 每小时
@@ -51,7 +51,7 @@ summary: 在 NetApp Workload Factory 中管理复制关系。
 
 限制最大传输速率是可选的、但建议这样做。如果没有限制、网络和应用程序性能可能会下降。
 
-或者、对于关键工作负载(例如、主要用于灾难恢复的工作负载)、我们建议对用于ONTAP文件系统的FSx使用无限传输速率。
+对于关键工作负载，例如主要用于灾难恢复的 FSx for ONTAP 文件系统，建议使用无限传输速率。
 
 .开始之前
 请考虑为复制分配多少带宽。
@@ -62,7 +62,7 @@ summary: 在 NetApp Workload Factory 中管理复制关系。
 . 从存储菜单中，选择 *FSx for ONTAP*。
 . 从 *FSx for ONTAP* 中，选择要更新的文件系统的操作菜单，然后选择 *管理*。
 . 从文件系统概述中，选择*复制关系*选项卡。
-. 在复制关系选项卡中，选择复制关系的操作菜单来限制最大传输速率。
+. 在复制关系选项卡中，选择要限制最大传输速率的复制关系的操作菜单。
 . 选择*编辑最大传输速率*。
 . 在编辑最大传输速率对话框中，选择*Limited*，然后输入最大传输速率(MB/秒)
 +
@@ -118,7 +118,7 @@ summary: 在 NetApp Workload Factory 中管理复制关系。
 [[resume-a-paused-replication-relationship]]
 == 恢复已暂停的复制关系
 
-当您恢复复制关系时，将删除在复制停止期间对目标卷所做的任何更改。目标卷从读/写转换为只读，并以计划的复制间隔再次从源卷接收更新。
+恢复复制关系时，将删除在复制停止期间对目标卷所做的任何更改。目标卷从读/写转换为只读，并再次按计划的复制间隔从源卷接收更新。
 
 
 NOTE: 系统不会保留从上次数据复制到源卷被禁用这段时间写入原始源卷的任何数据。
@@ -152,7 +152,7 @@ NOTE: 系统不会保留从上次数据复制到源卷被禁用这段时间写�
 
 停止复制并对目标卷进行更改后、您可以将这些更改复制回源卷。在灾难恢复场景中、此过程很常见、在此场景中、您在目标卷上运行了一段时间、并希望切换卷的角色。
 
-反转并恢复复制时、它会切换卷的源角色和目标角色；目标卷将成为新的源卷、而源卷将成为新的目标卷。反向操作还会使用新源卷的内容覆盖新目标卷的内容。如果反转复制两次、则会重新建立原始复制方向。
+当您反向并恢复复制时，卷的源和目标角色将切换；目标卷将成为新的源卷，而源卷将成为新的目标卷。反向操作还会使用新源卷的内容覆盖新目标卷的内容。如果将复制反向两次，则会重新建立原始复制方向。
 
 []
 ====
@@ -203,7 +203,7 @@ NOTE: 系统不会保留从上次数据复制到源卷被禁用这段时间写�
 [[delete-a-replication-relationship]]
 == 删除复制关系
 
-删除NetApp Workload Factory 中的复制关系。当您删除复制关系时，它会删除源卷和目标卷之间的复制关系。删除复制关系后，两个卷将继续独立存在，并保留其包含的当前数据。
+在 NetApp Workload Factory 中删除复制关系。删除复制关系时，源卷和目标卷之间的关系将被删除。删除该关系后，这两个卷将保留其包含的当前数据并继续独立存在。
 
 删除复制关系时、FSx for ONTAP还会删除源卷和目标卷的通用复制快照。
 

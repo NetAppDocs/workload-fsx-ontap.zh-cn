@@ -11,7 +11,7 @@ summary: 分析 NetApp Workload Factory for FSx for ONTAP 中的事件。
 
 
 [role="lead"]
-使用 NetApp Workload Factory 中的智能事件分析器快速识别并解决 FSx for ONTAP 文件系统问题。事件分析器利用 Agentic AI 与 Amazon Bedrock 集成，自动提取和分析 FSx for ONTAP Event Management System (EMS) 和延迟事件。
+使用 NetApp Workload Factory 中的智能事件分析器快速识别并解决 FSx for ONTAP 文件系统问题。事件分析器使用与 Amazon Bedrock 集成的 Agentic AI，自动提取和分析 FSx for ONTAP 事件管理系统 (EMS) 和延迟事件。
 
 
 
@@ -53,7 +53,7 @@ NOTE: 如果您的账号管理员已关闭 AI 功能，您将看到一条消息�
 您的数据隐私和安全通过以下方式得到保护：
 
 * *数据主权*：所有数据和聚合都保留在您的 AWS 账户内，并通过私有 VPC 端点（Amazon Bedrock）进行通信，没有公共互联网暴露。
-* *无 AI 训练*：客户数据不用于训练或改进模型。Amazon Bedrock 实时处理事件，但不根据您的数据进行训练。结果仅存储在您的环境中。
+* *无人工智能训练*：客户数据不用于训练或改进模型。Amazon Bedrock 实时处理事件，但不根据您的数据进行训练。结果仅存储在您的环境中。
 
 
 有关更多详细信息，请参阅 link:https://docs.aws.amazon.com/bedrock/latest/userguide/data-protection.html["Amazon Bedrock 数据保护文档"^]。
@@ -69,7 +69,7 @@ NOTE: 如果您的账号管理员已关闭 AI 功能，您将看到一条消息�
 * link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["使用链接连接到文件系统"^]。
 
 
-要分析 EMS 和延迟事件并接收 AI 驱动的见解和建议，请确保以下内容：
+要分析 EMS 和延迟事件并接收 AI 驱动的见解和建议，请确认以下内容：
 
 * 您的 AWS 账户中有 link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["_operations and remediation_ 权限"^]。
 * 您有 link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["使用链接连接到文件系统"^]。
@@ -87,7 +87,7 @@ NOTE: 如果您的账号管理员已关闭 AI 功能，您将看到一条消息�
 
 * *工作负载工厂链接*
 +
-创建链接并将其与 FSx for ONTAP 文件系统关联，以启用 AI 支持的事件分析。链接在 Workload Factory 与一个或多个 FSx for ONTAP 文件系统之间建立信任关系，并利用 AWS Lambda。
+创建链接并将其与 FSx for ONTAP 文件系统关联，以启用 AI 支持的事件分析。链接在 Workload Factory 与一个或多个 FSx for ONTAP 文件系统之间建立信任关系，并使用 AWS Lambda。
 
 +
 link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["了解如何关联现有链接或创建并关联新链接"^]。链接关联后，返回此操作。

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: configuration-analysis.html 
 keywords: configuration issues, issues, improve, analyze, storage configuration, Amazon FSx for NetApp ONTAP, FSx for ONTAP, recommendation, recommendations 
-summary: NetApp Workload Factory 定期分析 Amazon FSx for NetApp ONTAP 文件系统配置，以确定是否存在任何配置问题。 
+summary: 在 NetApp Workload Factory 中分析 FSx for ONTAP 文件系统配置，以发现问题并获得提高性能、成本效率和合规性的建议。 
 ---
 = FSx for ONTAP文件系统的配置分析
 :allow-uri-read: 
@@ -104,7 +104,7 @@ SSD 存储层容量不应超过 80% 的利用率。这可能会影响对容量�
 
 * *文件对象容量*
 +
-应提高文件容量阈值，以避免达到卷容量限制。低文件容量（索引节点）会阻止向卷写入其他数据。Workload Factory 建议将文件容量利用率保持在 80% 以下，以允许创建新文件。
+提高文件容量阈值，以避免达到卷容量限制。文件容量（索引节点）过低会阻止向卷写入其他数据。Workload Factory 建议将文件容量利用率保持在 80% 以下，以允许创建新文件。
 
 
 
@@ -134,7 +134,7 @@ NetApp Autonomous Ransomware Protection with AI (ARP/AI) 有助于保护您的�
 
 * *自动容量管理*
 +
-应启用自动容量管理，以定期确保 SSD 层不超过阈值。
+启用自动容量管理，定期确保 SSD 层不超过阈值。
 
 * *卷容量余量*
 +

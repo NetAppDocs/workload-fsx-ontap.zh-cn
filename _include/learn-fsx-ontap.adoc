@@ -26,7 +26,7 @@ FSx for ONTAP提供以下功能：
 * *内存缓存和NVMe缓存*：包括唯一的内存缓存和NVMe缓存、可提高经常访问的数据的性能。
 * *数十万IOP*：利用SSD磁盘提供数十万次IOPS、确保您的存储和工作负载及时获得结果。
 * *精简配置*：允许提前配置容量、节省成本、直到需要更多容量为止。
-* *重复数据删除和数据压缩*：删除重复数据并对数据进行压缩、以减少FSx for ONTAP文件系统所需的物理存储量、从而节省成本。
+* *重复数据删除和压缩*：删除重复数据并压缩数据，以减少 FSx for ONTAP 文件系统所需的物理存储量，从而节省成本。
 * *数据分层*：通过将不常访问的数据从高性能主SSD存储层移至二级容量池存储层、降低存储成本。
 
 
@@ -68,7 +68,7 @@ AWS 维护您的 FSx for ONTAP帐户，而不是 Workload Factory。请参阅lin
 [[regions]]
 == 区域
 
-所有支持 FSx for ONTAP 的商业区域都支持工作负载工厂。link:https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/["查看支持的 Amazon 地区。"^]
+在所有支持 FSx for ONTAP 的商业区域均支持 Workload Factory。 link:https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/["查看支持的 Amazon 地区。"^]
 
 以下 AWS 区域不受支持：
 

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: explore-savings.html 
 keywords: cost, savings, compare costs, EBS, EFS, FSx for Windows file servers FSx for ONTAP 
-summary: '通过AWS FSx for NetApp ONTAP、了解在Amazon Elelic Block Store (EBS)存储、Elelic File System (EFS)和FSx for Windows文件服务器中为存储工作负载节省的空间。' 
+summary: '了解与 Amazon FSx for NetApp ONTAP 相比，您的存储工作负载在 Amazon Elastic Block Store (EBS)、Elastic File System (EFS) 和 FSx for Windows File Server 中的节省情况。' 
 ---
 = 探索NetApp Workload Factory 中 FSx for ONTAP的节省
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: '通过AWS FSx for NetApp ONTAP、了解在Amazon Elelic Block Store (E
 
 
 [role="lead"]
-了解通过使用Amazon Elecic Block Store (EBS)、Elecic File System (EFS)和FSx for Windows File Server和FSx for NetApp ONTAP为存储工作负载节省的空间。
+通过将使用 Amazon Elastic Block Store（EBS）、Elastic File System（EFS）和 FSx for Windows File Server 的存储工作负载与 FSx for ONTAP 进行比较，探索节省成本的方案。
 
 NetApp Workload Factory 包含一个存储节省计算器，用于将 Amazon 存储环境与 FSx for ONTAP进行比较。无论是否提供 AWS 凭证，您都可以探索节省的方法，并为您的存储环境自定义配置设置。当您提供 AWS 凭证时，您可以选择一个或多个 Amazon Elastic Block Store 实例，然后让 Workload Factory 自动进行比较。无论是手动还是自动，计算器都会确定哪种存储服务可以为您的存储需求提供最低的成本。
 
@@ -22,7 +22,7 @@ NetApp Workload Factory 包含一个存储节省计算器，用于将 Amazon 存
 [[calculator-options]]
 == 计算器选项
 
-您可以使用两个计算器选项来比较您的系统与FSx for ONTAP之间的成本-针对您的Amazon存储环境进行自定义和自动检测。
+使用两种计算器选项之一将您的系统成本与 FSx for ONTAP 进行比较：针对您的 Amazon 存储环境的自定义或自动检测。
 
 通过自定义了解节省量：您可以提供存储环境的配置设置、包括使用情形、区域、卷或文件系统数量、存储量、快照频率、每个快照的更改量、已配置的IOPS、吞吐量等。
 

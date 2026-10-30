@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: manage-cifs-share.html 
 keywords: cifs, smb, SMB, CIFS, cifs share, change, update, modify, delete, create 
-summary: 在 Workload Factory 中管理卷的 SMB 或 CIFS 共享包括创建、确定用户和组访问权限以及删除。 
+summary: 在 Workload Factory 中创建、更改或删除卷的 SMB/CIFS 共享，并控制哪些用户和组可以访问它。 
 ---
 = 在 NetApp Workload Factory 中管理卷的 SMB/CIFS 共享
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 在 Workload Factory 中管理卷的 SMB 或 CIFS 共享包括创建、
 
 
 [role="lead"]
-在 Workload Factory 中管理卷的 SMB/CIFS 共享包括创建 SMB/CIFS 共享、确定授予访问权限的用户和组以及授予他们的权限级别以及删除 SMB/CIFS 共享。
+在 Workload Factory 中创建、更改或删除卷的 SMB/CIFS 共享。控制哪些用户和组可以访问共享以及他们拥有的权限级别。
 
 .开始之前
 开始之前、请执行以下操作：
@@ -25,7 +25,7 @@ summary: 在 Workload Factory 中管理卷的 SMB 或 CIFS 共享包括创建、
 [[create-an-smbcifs-share-for-a-volume]]
 == 为卷创建 SMB/CIFS 共享
 
-按照步骤为卷创建 SMB/CIFS 共享。
+为卷创建 SMB/CIFS 共享。
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
@@ -37,7 +37,7 @@ summary: 在 Workload Factory 中管理卷的 SMB 或 CIFS 共享包括创建、
 . 在创建 SMB/CIFS 共享对话框中，提供以下内容：
 +
 .. *名称*：输入 SMB/CIFS 共享的名称。
-.. *路径*：使用默认卷名定义路径或提供内部目录的共享。
+.. *路径*：使用默认卷名定义路径，或提供指向内部目录的共享。
 +
 卷名的有效路径输入（例如“avocado”）如下：
 
@@ -65,7 +65,7 @@ summary: 在 Workload Factory 中管理卷的 SMB 或 CIFS 共享包括创建、
 [[change-an-smbcifs-share-for-a-volume]]
 == 更改卷的 SMB/CIFS 共享
 
-按照步骤更改卷的 SMB/CIFS 共享设置。
+更改卷的 SMB/CIFS 共享设置。
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。

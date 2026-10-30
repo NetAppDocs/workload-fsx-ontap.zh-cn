@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: manage-file-system-settings.html 
 keywords: create fsx tags, create tags, edit fsx tags, fsx tags, reset fsx admin password 
-summary: 随时为文件系统添加、更新或删除 FSx for ONTAP文件系统标签。 
+summary: 在 NetApp Workload Factory 中管理 FSx for ONTAP 文件系统设置，包括标签、ONTAP 凭据、fsxadmin 密码和吞吐容量。 
 ---
 = 在 NetApp Workload Factory 中管理 FSx for ONTAP 文件系统设置
 :allow-uri-read: 
@@ -51,7 +51,7 @@ Workload Factory 支持在 Workload Factory 凭据服务（用户名和密码）
 
 Workload Factory 按以下方式处理受限凭据：
 
-* 如果您没有为文件系统提供受限凭据，然后创建自定义规则或仪表板或询问 Ask Me 问题，Workload Factory 将创建只读 ONTAP 凭据以用作受限凭据集。
+* 如果您没有为文件系统提供受限凭据，然后创建自定义规则或仪表板或向 Ask Me 提交问题，Workload Factory 将创建只读 ONTAP 凭据以用作受限凭据集。
 * 如果您已经为文件系统提供了受限凭据，则这些凭据将用于 AIOps。
 
 

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: manage-volume-settings.html 
 keywords: volume tags, edit volume tags, edit tags, enable immutable files, disable immutable files, lock files, unlock files, storage efficiency change, update storage efficiency 
-summary: 标记可以帮助您对资源进行分类。您可以随时为FSx for ONTAP卷添加、编辑和删除卷标记。 
+summary: 在 NetApp Workload Factory 中更改卷工作负载、编辑卷标记、更新存储效率以及管理 FSx for ONTAP 卷的不可变文件设置。 
 ---
 = 在 NetApp Workload Factory 中管理卷设置
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 标记可以帮助您对资源进行分类。您可以随时为FSx for 
 
 
 [role="lead"]
-在 NetApp Workload Factory 中自定义 FSx for ONTAP 卷设置，以满足组织的需求。您可以管理卷标记以对资源进行分类（例如设置卷工作负载）、更新存储效率设置以优化空间和成本节约，以及管理不可变文件设置以控制数据保留并防止未经授权的更改。
+在 NetApp Workload Factory 中自定义 FSx for ONTAP 卷设置，以满足组织的需求。您可以设置卷工作负载和标记以对资源进行分类，更新存储效率设置以优化空间和成本节约，并管理不可变文件设置以控制数据保留并防止未经授权的更改。
 
 
 
@@ -80,7 +80,7 @@ summary: 标记可以帮助您对资源进行分类。您可以随时为FSx for 
 
 启用此功能后、您可以更新卷的某些不可变文件设置、例如保留策略和期限、自动提交期限以及卷附加模式。
 
-请注意，只有在期间才能启用不可删除的文件link:create-volume.html["创建卷"]。
+您只能在 link:create-volume.html["创建卷"] 期间启用不可变文件。
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
@@ -92,7 +92,7 @@ summary: 标记可以帮助您对资源进行分类。您可以随时为FSx for 
 +
 ** *保留期限*：选择*未指定*或*指定期限*。
 +
-*** *未指定*：默认最短期限为"0"年、默认最长期限为"30年"。
+*** *未指定*：默认最短期限为 0 年，默认最长期限为 30 年。
 *** *指定期限*：用于定义保留策略、最短和最长期限、自动提交功能以及卷附加模式功能的选项。请提供以下详细信息：
 +
 **** *保留策略*：此期限必须大于或等于最短保留期限、且小于或等于最长保留期限。
@@ -103,10 +103,10 @@ summary: 标记可以帮助您对资源进行分类。您可以随时为FSx for 
 
 ** *自动提交*：启用或禁用自动将在自动提交期间未修改的文件提交到WORM的功能。
 ** *特权删除*：启用或禁用该功能。启用该功能允许SnapLock管理员删除未过期的 WORM 卷。此功能仅在企业保留模式下受支持。
-** *卷附加模式*：启用或禁用此功能。启用卷附加模式后、您可以向WORM文件添加新内容。
+** *卷追加模式*：启用或禁用该功能。启用卷追加模式可将新内容添加到 WORM 文件。
 
 
-. 单击 * 应用 * 。
+. 选择 * 应用 * 。
 
 
 

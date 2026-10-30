@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: support-registration.html 
 keywords: support registration, register for support, support, nss account, add nss account 
-summary: 在向NetApp技术支持部门提交支持案例之前，您需要向 Workload Factory 添加一个NetApp支持站点帐户，然后注册以获得支持。 
+summary: 将 NetApp 支持站点帐户添加到 Workload Factory，并注册您的帐户以获得支持，以便向 NetApp 技术支持开启支持案例。 
 ---
 = 注册您的 Workload Factory 帐户以获得 NetApp 支持
 :allow-uri-read: 

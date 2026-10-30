@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: use-onprem-data.html 
 keywords: use, detect, replicate, remove, on-premises, ONTAP cluster, on-premises cluster, ONTAP 
-summary: 在 NetApp Workload Factory 中发现和复制本地 ONTAP 数据，以便将其用作云中的备份。 
+summary: 在 NetApp Workload Factory 中发现、复制和删除本地 ONTAP 集群，以便将卷数据备份到云中的 FSx for ONTAP 文件系统。 
 ---
 = 在NetApp Workload Factory 中使用本地ONTAP集群数据
 :allow-uri-read: 
@@ -34,12 +34,12 @@ summary: 在 NetApp Workload Factory 中发现和复制本地 ONTAP 数据，以
 在NetApp Workload Factory 中发现本地ONTAP集群，以便您可以将数据复制到Amazon FSx for NetApp ONTAP文件系统。
 
 .开始之前
-开始之前、请确保您已具备以下条件：
+请确保您具备以下条件：
 
 * 用于复制的FSx for ONTAP文件系统。
 * 与发现的本地集群关联的已连接链接。如果您没有链接，则需要 link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["创建一个"^]。
 * 具有所需权限的ONTAP用户凭据。
-* 内部ONTAP 9.8及更高版本。
+* 本地 ONTAP 版本 9.8 或更高版本。
 * 连接、如下图所示。
 +
 image:screenshot-on-prem-connectivity.png["屏幕截图、显示应如何将内部ONTAP集群连接到Amazon Web Services Cloud的管理路径和数据路径"]
@@ -85,7 +85,7 @@ image:screenshot-on-prem-connectivity.png["屏幕截图、显示应如何将内�
 .开始之前
 * 您必须发现内部ONTAP集群才能复制其卷数据。
 * 要将适用于ONTAP文件系统的FSx作为复制目标、您必须具有一个可用FSx。
-* 用于复制关系的本地 ONTAP 集群和 FSx for ONTAP 文件系统都必须具有关联的链接。link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["了解如何关联现有链接或创建并关联新链接"^]。链接关联后，返回此操作。
+* 用于复制关系的本地 ONTAP 集群和 FSx for ONTAP 文件系统都必须具有关联的链接。link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["了解如何关联现有链接或创建并关联新链接"^]。关联链接后，返回此操作。
 
 
 .步骤
@@ -109,13 +109,13 @@ image:screenshot-on-prem-connectivity.png["屏幕截图、显示应如何将内�
 请注意、某些分层策略具有关联的最短冷却期、该冷却期用于设置卷中的用户数据必须保持非活动状态的时间或_冷却天数_、才能将数据视为"冷"数据并移至容量池存储层。冷却期从数据写入磁盘时开始。
 
 +
-有关卷分层策略的详细信息、请参阅 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["卷存储容量"^]AWS FSx for NetApp ONTAP文档中的。
+有关卷分层策略的详细信息，请参阅 AWS FSx for NetApp ONTAP 文档中的 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["卷存储容量"^]。
 
 
 
 .. *最大传输速率*：选择*受限*并输入最大传输限制(单位：MiB/秒)或者，选择*Unlimited (无限制)*。
 +
-如果没有限制、网络和应用程序性能可能会下降。或者、对于关键工作负载(例如、主要用于灾难恢复的工作负载)、我们建议对用于ONTAP文件系统的FSx使用无限传输速率。
+如果没有限制，网络和应用程序性能可能会下降。但是，对于关键工作负载，例如主要用于灾难恢复的工作负载，我们建议为 FSx for ONTAP 文件系统提供无限制的传输速率。
 
 
 
@@ -124,7 +124,7 @@ image:screenshot-on-prem-connectivity.png["屏幕截图、显示应如何将内�
 .. *复制间隔*：选择从源卷向目标卷传输快照的频率。
 .. *长期保留*：(可选)启用快照以进行长期保留。
 +
-如果启用长期保留、请选择现有策略或创建新策略以定义要复制的快照以及要保留的数量。
+如果启用长期保留，请选择现有策略或创建新策略以定义要复制的快照以及要保留的数量。
 
 +
 *** 对于现有策略，请选择*选择现有策略*，然后从下拉菜单中选择现有策略。

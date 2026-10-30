@@ -187,7 +187,7 @@ summary: 在 NetApp Workload Factory 中为 S3 访问点设置日志表基础架
 . 从文件系统概述中，选择*Volumes*选项卡。
 . 从"卷"选项卡中，选择要为其管理 S3 接入点的卷的操作菜单，然后选择 *高级操作*，然后选择 *管理 S3 接入点*。
 . 在*管理 S3 接入点*屏幕中，选择操作菜单，然后选择*编辑接入点*。
-. 在 *编辑 S3 接入点* 对话框中，确保网络配置设置为 *Internet*。
+. 在 *编辑 S3 接入点* 对话框中，确认网络配置设置为 *互联网*。
 . 按照对话框中的说明设置日记表功能的基础架构。
 . 下载 CloudFormation 模板。
 . 在 AWS 帐户中部署 CloudFormation 堆栈。
@@ -232,7 +232,7 @@ summary: 在 NetApp Workload Factory 中为 S3 访问点设置日志表基础架
 
 ==== CloudTrail 限制
 
-AWS 强制执行每个区域 5 条跟踪路径的默认限制。如果帐户已有 5 个轨迹，则  `the FsxDataEventTrail` 资源将失败：超出最大轨迹数 (5)。您可以使用以下命令检查区域级别的轨迹数量：
+AWS 强制执行每个区域五个跟踪的默认限制。如果帐户已有五个跟踪，则  `FsxDataEventTrail` 资源将失败并显示：超出最大跟踪数（5）。您可以使用以下命令检查区域级别的跟踪数量：
 
 [source, cli]
 ----
@@ -335,14 +335,14 @@ S3TableIntegration 会自动创建一个名为 aws-cloudwatch 的表存储桶，
 +
 ** 如果 aws-cloudwatch 表存储桶不存在，则 `S3TableIntegrationRole`缺少权限。它需要 `s3tables:CreateTableBucket`、 `s3tables:PutTableBucketEncryption`和 `s3tables:PutTableBucketPolicy`——所有范围均为 `arn:aws:s3tables:*:*:bucket/aws-cloudwatch`。
 ** 如果表存储桶存在但 `logs.aws_cloudtrail__data`不存在，则集成不会路由事件。集成必须显示 `Status: ACTIVE`并包含 `aws_cloudtrail`作为日志源。
-** 如果该表存在但种子事件不在其中，则该事件可能仍在传输中。S3 Tables 摄取有一些延迟。再等几分钟。如果 15-20 分钟后仍未显示，则集成可能会中断。
+** 如果该表存在但种子事件不在其中，则该事件可能仍在传输中。S3 表格摄取有一些延迟。再等几分钟。如果 15-20 分钟后仍未显示，则集成可能已中断。
 
 
 . 直接查询种子事件。
 +
 .. 在 AWS 管理控制台中打开 S3 Tables。
 .. 导航到 aws-cloudwatch 表存储桶 → aws_cloudtrail__data 表，然后使用 *Preview* 按钮直接在浏览器中运行快速查询。
-.. 如果事件存在于表中，但日志仍显示 `FAILED`，则可能在事件到达之前轮询窗口已过期。
+.. 如果事件存在于表中，但日志仍显示 `FAILED`，则轮询窗口可能在事件到达之前已过期。
 
 
 

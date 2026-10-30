@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: access-data.html 
 keywords: access data, mount point, mount volumes, mount clients, on-premises 
-summary: 您可以通过为NAS客户端挂载卷并为SAN客户端挂载iSCSI LUN、从内部访问FSx for ONTAP文件系统。 
+summary: 在 Workload Factory 中获取 FSx for ONTAP 卷的挂载点，并找到在 NAS 和 SAN 客户端上挂载卷和 iSCSI LUN 的链接。 
 ---
 = 访问FSx for ONTAP文件系统数据
 :allow-uri-read: 
@@ -13,7 +13,7 @@ summary: 您可以通过为NAS客户端挂载卷并为SAN客户端挂载iSCSI LU
 [role="lead"]
 您可以通过为NAS客户端挂载卷并为SAN客户端挂载iSCSI LUN、从内部访问FSx for ONTAP文件系统。
 
-link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/supported-fsx-clients.html["访问数据"^] 在Amazon FSx for NetApp ONTAP中、文档提供了有关如何访问数据供您参考的主题。
+Amazon FSx for NetApp ONTAP 文档中的 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/supported-fsx-clients.html["访问数据"^] 提供了有关如何访问数据的信息。
 
 您还可以在NetApp Workload Factory 中获取卷的挂载点。
 
@@ -22,7 +22,7 @@ link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/supported-fsx-clients.htm
 [[get-mount-point-for-volumes-in-netapp-workload-factory]]
 == 获取NetApp Workload Factory 中卷的挂载点
 
-获取卷在CIFS共享或NFS客户端上挂载共享的挂载点。
+获取卷的挂载点，以便将该卷挂载为 CIFS 共享或挂载到 NFS 客户端。
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。

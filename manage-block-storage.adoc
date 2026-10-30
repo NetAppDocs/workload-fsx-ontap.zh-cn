@@ -16,7 +16,7 @@ summary: 在 NetApp Workload Factory 中管理 FSx for ONTAP 文件系统的块�
 .关于此任务
 从 Workload Factory 控制台，您可以管理启动程序组 (igroup) 以控制客户端对块设备的访问。您还可以查看块设备详细信息、增加容量、制作克隆、管理客户端访问、存档非活动块设备的数据以及删除块设备。
 
-检查块存储图以检查以下内容：
+使用块存储图检查以下内容：
 
 * 客户端连接
 * 块设备状态
@@ -103,9 +103,9 @@ summary: 在 NetApp Workload Factory 中管理 FSx for ONTAP 文件系统的块�
 . 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
 . 从存储菜单中，选择 *FSx for ONTAP*。
 . 从 *FSx for ONTAP* 中选择 *块设备* 选项卡。
-. 导航至块设备的操作菜单，然后选择*查看详细信息*。
+. 导航到块设备的操作菜单，然后选择*查看详细信息*。
 +
-显示块设备的常规详细信息、功耗、访问权限和保护信息。
+Workload Factory 显示块设备的一般详细信息、消耗、访问和保护信息。
 
 
 

@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: whats-new.html 
 keywords: 'what"s new, features, new, release notes, enhancements, fixes, new features, Workload Factory, amazon fsx for netapp ontap, fsx for ontap' 
-summary: 了解Amazon FSx for NetApp ONTAP的新增功能。 
+summary: 查看按发布日期列出的 NetApp Workload Factory 中 Amazon FSx for NetApp ONTAP 的新功能、增强功能和修复程序。 
 ---
-= 适用于NetApp ONTAP 的Amazon FSX的新增功能
+= NetApp Workload Factory 中 Amazon FSx for NetApp ONTAP 的新增功能
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-了解Amazon FSx for NetApp ONTAP的新增功能。
+查看 Amazon FSx for NetApp ONTAP 在 NetApp Workload Factory 中的新功能和增强功能，按发布日期排序。
 
 
 

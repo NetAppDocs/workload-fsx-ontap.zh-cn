@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: create-block-device.html 
 keywords: create block device, create lun, iscsi protocol 
-summary: '创建块设备以支持您的业务线 (LOB) 应用需求。' 
+summary: 在现有或新卷中创建 iSCSI 块设备，配置启动器组访问，并为 FSx for ONTAP 设置存储效率和保护选项。 
 ---
 = 在NetApp Workload Factory中为文件系统创建块设备
 :allow-uri-read: 
@@ -91,7 +91,7 @@ NOTE: 快照时间基于文件系统的时区、默认为协调世界时(UTC)。
 
 .. *分层策略*：为卷中存储的数据选择分层策略。
 +
-使用 Workload Factory 控制台创建卷时，默认分层策略为 _Balanced (Auto)_。有关容量分层策略的更多信息，请参阅 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["卷存储容量"^] 在 AWS FSx for NetApp ONTAP文档中。请注意，Workload Factory 在 Workload Factory 控制台中使用基于用例的名称来定义分层策略，并在括号中包含 FSx for ONTAP分层策略名称。
+_Balanced (Auto)_ 是使用 Workload Factory 控制台创建卷时的默认分层策略。有关卷分层策略的详细信息，请参见 AWS FSx for NetApp ONTAP 文档中的 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["卷存储容量"^]。Workload Factory 在 Workload Factory 控制台中为分层策略使用基于用例的名称，并在括号中包含 FSx for ONTAP 分层策略名称。
 
 .. *ARP/AI*：当链接与文件系统关联时，NetApp 自主勒索软件保护与 AI (ARP/AI) 默认启用。link:https://docs.netapp.com/us-en/workload-fsx-ontap/ransomware-protection.html["了解有关 ARP/AI 的更多信息"](英文)接受陈述以继续。
 +

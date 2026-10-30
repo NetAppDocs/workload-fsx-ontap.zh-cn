@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: quick-start.html 
 keywords: Amazon FSx for NetApp ONTAP, fsx, netapp, quick, get started, install, deploy, setup, launch, requirements, prerequisites, credentials, permissions, policy 
-summary: 只需几个步骤，即可在NetApp Workload Factory 中开始使用 FSx for ONTAP 。 
+summary: 通过登录、添加凭据和权限以及创建文件系统，在 NetApp Workload Factory 中开始使用 FSx for ONTAP。 
 ---
 = NetApp Workload Factory 中Amazon FSx for NetApp ONTAP的快速入门
 :allow-uri-read: 
@@ -19,7 +19,7 @@ summary: 只需几个步骤，即可在NetApp Workload Factory 中开始使用 F
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一个"]登录工作负载工厂
 [role="quick-margin-para"]
-你需要link:https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html["在 Workload Factory 上创建一个帐户"^]和link:https://console.workloads.netapp.com["登录"^]
+您需要完成link:https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html["在 Workload Factory 上创建一个帐户"^]和link:https://console.workloads.netapp.com["登录"^]。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["两个"] 添加凭据和权限
 [role="quick-margin-para"]

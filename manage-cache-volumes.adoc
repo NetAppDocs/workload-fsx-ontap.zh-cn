@@ -11,7 +11,7 @@ summary: 根据需要，在NetApp Workload Factory中管理 FSx for ONTAP文件�
 
 
 [role="lead"]
-使用NetApp Workload Factory控制台管理 FSx for ONTAP文件系统的缓存卷。缓存是一种临时存储数据的方法，它通过减少检索时间来提高数据访问性能。您可以编辑缓存名称、调整容量、更改导出策略、选择缓存方法、预填充缓存或删除缓存卷。
+使用 NetApp Workload Factory 控制台管理 FSx for ONTAP 文件系统的缓存卷。缓存是一种临时存储数据的方法，通过减少检索时间来提高数据访问性能。您可以编辑缓存名称、调整容量、更改导出策略、选择缓存方法、预填充缓存或删除缓存卷。
 
 .关于此任务
 您可以在NetApp Workload Factory控制台中管理与缓存关系关联的缓存卷。

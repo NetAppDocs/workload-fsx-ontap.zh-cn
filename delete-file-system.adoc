@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: delete-file-system.html 
 keywords: file system, delete file system, file system deletion 
-summary: 要删除NetApp Workload Factory 中的文件系统，您必须首先删除与该文件系统关联的任何卷、存储虚拟机或复制关系。 
+summary: 删除其卷、存储虚拟机和复制关系后，在 NetApp Workload Factory 中删除 FSx for ONTAP 文件系统。 
 ---
 = 在NetApp Workload Factory 中删除文件系统
 :allow-uri-read: 

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: performance-reference.html 
 keywords: performance, FSx for ONTAP performance 
-summary: NetApp Workload Factory 中提供了 FSx for ONTAP的性能参考。 
+summary: 查看 NetApp Workload Factory 中 FSx for ONTAP 文件系统的性能参考信息，包括指向 AWS 性能文档的链接。 
 ---
 = NetApp Workload Factory 中 FSx for ONTAP的性能
 :allow-uri-read: 
@@ -11,4 +11,4 @@ summary: NetApp Workload Factory 中提供了 FSx for ONTAP的性能参考。
 
 
 [role="lead"]
-有关性能概述、请参见 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/performance.html["适用于NetApp ONTAP 性能的Amazon FSX"^] 文档。
+查看 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/performance.html["适用于NetApp ONTAP 性能的Amazon FSX"^] 文档，了解 FSx for ONTAP 文件系统的性能。

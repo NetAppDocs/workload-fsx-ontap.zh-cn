@@ -11,7 +11,7 @@ summary: 无需离开NetApp Workload Factory 控制台即可发现并查看与�
 
 
 [role="lead"]
-无需离开NetApp Workload Factory 控制台即可发现并查看与缓存关系关联的缓存卷。缓存关系也称为ONTAP FlexCache关系。  Workload Factory 使用FlexCache技术发现现​​有的缓存关系，FlexCache 技术是NetApp ONTAP 的远程缓存功能，可加速数据访问，减少 WAN 延迟、带宽和读取密集型工作负载的成本，尤其是在客户端需要重复访问相同数据的情况下。
+无需离开 NetApp Workload Factory 控制台，即可发现和查看与缓存关系关联的 _cache_ 卷。缓存关系也称为 ONTAP FlexCache 关系。Workload Factory 使用 FlexCache 技术发现现有的缓存关系，这是 NetApp ONTAP 的远程缓存功能，可加速数据访问，降低读取密集型工作负载的 WAN 延迟、带宽和成本，特别是在客户端需要重复访问相同数据的情况下。
 
 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/using-flexcache.html["了解有关使用FlexCache复制数据的更多信息。"^]
 

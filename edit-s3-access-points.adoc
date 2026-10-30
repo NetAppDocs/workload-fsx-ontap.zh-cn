@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: edit-s3-access-points.html 
 keywords: S3, s3, access points, manage access points, change access points, update access points, modify access points 
-summary: 在 NetApp Workload Factory 中编辑卷的 S3 访问点。 
+summary: 更新 S3 访问点详细信息，管理标签，并启用或禁用 FSx for ONTAP 中卷的清单表。 
 ---
 = 在 NetApp Workload Factory 中编辑卷的 S3 访问点
 :allow-uri-read: 
