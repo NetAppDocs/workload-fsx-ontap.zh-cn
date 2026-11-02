@@ -3419,4 +3419,6 @@
   <block id="356b28bbbd0d4021c21f75e7c065f091" category="list-text">主机详细信息，包括主机名、实例 ID、工作负载类型、区域和 iSCSI 限定名称（IQN）</block>
   <block id="8b253c1d4259c21c8314fc85adcb31d6" category="section-title">2026年11月1日</block>
   <block id="7dc50386b3284326e1114e4e7f4eb3fd" category="section-title">2026年11月1日</block>
+  <block id="7cc20c44b067a9d650d7a25d5be9d67d" category="section-title">客户管理的 Bedrock 分类支持</block>
+  <block id="8a8cb6e7e1b94c2efc52b7f5d677eb4d" category="paragraph">Workload Factory 现在允许您使用自己的 Amazon Bedrock 设置进行工作负载标记分类。您可以提供自己的 Bedrock 端点和凭据，以便分类请求通过您自己的 Bedrock 配置运行。</block>
 </blocks>
