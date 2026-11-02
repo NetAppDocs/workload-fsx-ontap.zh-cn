@@ -1999,7 +1999,6 @@
   <block id="292198e01fad7795066f40b6fec350fd" category="list-text">从 *FSx for ONTAP* 中，选择包含要复制的卷的文件系统。</block>
   <block id="bc9c958c3279391522e702151359608b" category="list-text">选择 *Replication relationships* 选项卡。</block>
   <block id="23c1b911bea8dc9e9cdd65d07a7745ca" category="list-text">在复制关系表中，选择要切换的复制关系，然后选择 *Cut over replication* 。</block>
-  <block id="e4d846e7cde6ab6686b9817d81bc55f6" category="list-text">查看"切换复制"对话框中的信息，然后键入 _cut over_ 确认。</block>
   <block id="5d8caeaede63e2cdba6715a163d09892" category="doc">支持 Storage VM 迁移</block>
   <block id="353d7ff4a3d58ad1fe8ef0ad6acab574" category="paragraph">NetApp Workload Factory 现在支持存储虚拟机的迁移。此功能允许将 ONTAP 存储系统数据和配置从本地 ONTAP 系统或第一代 FSx for ONTAP 文件系统迁移到第二代 FSx for ONTAP 文件系统。您可以复制存储虚拟机数据和配置设置以移动到新的文件系统，同时将停机时间和对用户和应用程序的中断降至最低。</block>
   <block id="fb2a77c6756f10fcc139a51a83349d7f" category="inline-link-macro">创建复制关系</block>
@@ -2015,7 +2014,6 @@
   <block id="9b03bdd83a5017b3aa998f32e7ad219f" category="list-text">第二代到第二代</block>
   <block id="66de39f46af06b661b7bce68c01c8e61" category="list-text">不支持对处于可用、已创建或配置错误以外的状态以及 ONTAP 版本不兼容的卷执行复制。</block>
   <block id="41ad46bbff5ae50ffe14d0bdc1b66775" category="paragraph">如果您创建了用于迁移的复制关系，则必须切换所有卷及其关联的存储 VM，以完成将存储 VM 数据和配置设置迁移到目标 FSx for ONTAP 文件系统。</block>
-  <block id="f2ce5ba0f770aa8ae822f79404813d99" category="section-title">切换复制以用于迁移用例</block>
   <block id="aed0e194718db8e0128d88b14756819e" category="list-text">在切换复制之前，请停止对 Storage VM 的任何客户端访问。</block>
   <block id="882f34227a47a95827c88036c610642f" category="list-text">选择 *Cut over*。</block>
   <block id="51123444304b31165de4e3a52117437d" category="admonition">复制 Storage VM 数据和配置设置时，编辑长期保留不可用。</block>
@@ -2059,7 +2057,6 @@
   <block id="897441537fb13b6e015f73a76a79d07f" category="paragraph">要调整文件系统的容量，必须首先<block ref="ca55c81878fab545ebb59a964af2e0f9" category="inline-link-macro-rx"></block>。</block>
   <block id="201a18ac1c906df6358f39af33c244de" category="summary">在 NetApp Workload Factory 中管理 FSx for ONTAP 文件系统的块存储。</block>
   <block id="0006ccbc0d0f541209207d590ebc1b08" category="doc">在 NetApp Workload Factory 中管理文件系统的块存储</block>
-  <block id="373d40a556613e20661d6c89ac8751a6" category="paragraph">使用 NetApp Workload Factory 简化块存储资源（包括 igroup 和块设备）的管理，并控制 FSx for ONTAP 块设备的客户端访问，以提供最佳性能并最大限度地降低成本。</block>
   <block id="30f276b848a0c37c6c54368f5714fc72" category="list-text">客户端连接</block>
   <block id="e7963aa68819cfe7f854ea292af57bb0" category="list-text">块设备状态</block>
   <block id="fa23eba521e62c0f542759bfbbeff7da" category="list-text">节点-客户端关系</block>
@@ -2360,10 +2357,8 @@
   <block id="3ff25ab258de4c80bbe3f420e00a3c7e" category="paragraph">对于迁移，您可以选择复制一个存储 VM 的存储 VM 数据和配置设置。如果同时迁移数据和配置设置，请确保卷的上次复制在过去 24 小时内完成。您必须选择同一存储 VM 中的所有卷才能使用此功能。所有卷的分层策略默认为源卷的分层策略，建议用于迁移使用情形。</block>
   <block id="a4b076b073df12f01e734ba016dbebd2" category="paragraph">Workload Factory 支持以下存储系统之间的存储虚拟机的迁移复制。</block>
   <block id="ed57615365ad2815423480008d91d450" category="section-title">规划切换操作</block>
-  <block id="fa425772bf4dc1e54c8368c2b99d4b1b" category="paragraph">在规划迁移用例的切换操作时，请考虑以下内容。</block>
   <block id="d77811034f737ab45ed7ddebe9c096fd" category="inline-xref">切换后更新配置设置</block>
   <block id="03c85e91696d00a533c3da3b08434532" category="list-text">*AWS S3 接入点*：具有 S3 接入点的卷不支持迁移使用情形的切换复制。从源卷中删除 S3 接入点以避免迁移失败。</block>
-  <block id="849ee629a3b8f33b04a9b242a47e3d59" category="list-text">*ONTAP S3 配置*：具有 ONTAP S3 配置的 vserver 不支持迁移用例的切换复制。删除 ONTAP S3 配置，包括 vserver 上的对象存储服务器、存储桶、用户、组或策略，以避免迁移失败。</block>
   <block id="ab3171de62100468c23112d3fda9227b" category="list-text">*LUN 序列号和 iSCSI 目标 IQN*：LUN 序列号和 iSCSI 目标 IQN 在切换期间发生变化。</block>
   <block id="3021805b6a1038ca60c0a0b6321eeb81" category="list-text">以下端口必须在与 FSx for ONTAP 文件系统关联的安全组中打开以实现链路连接：端口 443 (HTTPS) 和端口 22 (SSH)。</block>
   <block id="02fd7814960d61424a4fd3855641dc2c" category="paragraph">启动切换后，源 Storage VM 脱机。</block>
@@ -2371,7 +2366,6 @@
   <block id="2a6f3123e92916a549d4843b0432ee15" category="list-text">对于 iSCSI：</block>
   <block id="6620d06a6f36ee92ee8c0b9c206e5932" category="list-text">重新创建 igroup</block>
   <block id="1d215d1d64ff0e5459b1b60c4e0f0ba2" category="list-text">更新 LUN 映射</block>
-  <block id="22c26e33ed22192caefb59eb41da6dd7" category="list-text">登录到每个 SAN 客户端并更新新目标的 iSCSI/MPIO 设置并删除旧的 vserver 目标 IP</block>
   <block id="add6659449d7aeb40a4dd48b3f75db00" category="list-text">验证广播域 MTU 设置是否符合预期</block>
   <block id="cd823c1632b612f3a00bc9cf049ef97b" category="list-text">验证 DNS 设置是否符合预期</block>
   <block id="b33f176ae89f054db5b204e18e50bedb" category="list-text">如果源存储虚拟机中有缓存卷，则重新创建缓存关系（ONTAP FlexCache 关系）。</block>
@@ -2380,11 +2374,6 @@
   <block id="5599690d98e9754752709f4613760d6e" category="list-text">具有 S3 访问点或 ONTAP S3 配置（包括 vserver 上的对象存储服务器、存储区、用户、组或策略）的卷不支持切换复制。</block>
   <block id="357b33fc2f59a9d12f59fb35bf104b91" category="paragraph">复制包括创建和初始化复制关系。要设置复制，请创建复制关系。若要在源和目标存储系统之间传输数据，请初始化复制关系。迁移存储 VM 数据和配置设置时，还必须完成切换操作。</block>
   <block id="e148ba55e71be246708dafe4293a314f" category="paragraph">要迁移存储 VM 数据和配置设置，必须完成三个操作。</block>
-  <block id="c6b6c5bfe5708feb9348282cee3701d5" category="inline-xref">创建复制关系</block>
-  <block id="3297677183a67f243b8c6abf28b4fb81" category="list-text"><block ref="d3f4ef0dd3d11e1cc504390affbdef58" category="inline-xref-macro-rx"></block>，选择 *Migration* 作为用例，然后选择 *Replicate storage VM configuration*。</block>
-  <block id="4578208e79d59d2ad53f30812b33d008" category="inline-xref">初始化复制关系</block>
-  <block id="ee673c79e2fee1e050f07ed104f6188d" category="list-text"><block ref="1876753e18c7b524394b3d041c7ca2f6" category="inline-xref-macro-rx"></block> 将数据从源存储系统传输到目标存储系统。</block>
-  <block id="23dd3a896e2b24326fa839ac0c555b13" category="list-text"><block ref="78c2faa9b52f24796e9c82977a0d449a" category="inline-xref-macro-rx"></block> 将数据和配置设置从源文件系统永久迁移到目标 FSx for ONTAP 文件系统。</block>
   <block id="34ed3d0886446fdce0ca12aba8d0a847" category="section-title">步骤 1：创建复制关系</block>
   <block id="58f14dbd85a730a03075451e9af3c2b2" category="section-title">步骤 2：初始化复制关系</block>
   <block id="938304b34ce3517fe01a2000f5b9d7df" category="paragraph">当复制状态显示 *Idle* 时，数据传输完成。</block>
@@ -2449,11 +2438,9 @@
   <block id="596e30b7050101709ce0d710420e77a7" category="paragraph">直接从适用于 ONTAP 文件系统的 FSx 概述中了解 SSD 容量趋势。新的容量管理卡显示了上个月的使用趋势。该分析比较了实际容量和分配容量，便于评估资源使用情况。</block>
   <block id="deede3cf7f18c08613ec53890188368e" category="section-title">FSx for ONTAP 文件系统架构良好状态的 PDF 报告</block>
   <block id="eeb77472aa3a83d51f0873ec83e22572" category="list-text">*Storage VM 配置设置*：</block>
-  <block id="0abde7f01f46e5ae295493bf4b280687" category="list-text">切换操作不会将所有存储虚拟机配置设置迁移到目标存储虚拟机。例如，iSCSI、广播域 MTU 和 DNS 设置不会迁移。切换后在目标存储虚拟机上手动更新这些设置。有关更多详细信息，请参阅 <block ref="af05d35e02c20d22f4e6b1df9b57e0a2" category="inline-xref-macro-rx"></block> 节。</block>
   <block id="893700039eb02078c7602e997d7f9922" category="list-text">如果您的存储 VM 使用域隧道身份验证，请在开始迁移之前在目标文件系统上设置并启用域隧道。</block>
   <block id="8ee47478c07b40fab9e5a6a34028629c" category="list-text">打开 TCP 端口 11104 和 11105，以实现存储系统之间的安全数据传输和管理。ICMP 是可选的，但可以帮助进行网络检查和故障排除。</block>
   <block id="fa8b213a52b4f0e35de875db4340e809" category="paragraph"><block ref="fa8b213a52b4f0e35de875db4340e809" category="inline-link-macro-rx"></block></block>
-  <block id="e9df00e078102fb55394d13dad9115a4" category="paragraph">您可以复制一个源（读/写）卷或一个数据保护（DP）卷。支持级联复制，但不支持第三个跃点。详细了解<block ref="a7ce0f55df6d6b86426266d8a7eeb328" category="inline-link-macro-rx"></block>。</block>
   <block id="6fbe09b3d9705d922f633d5654393f36" category="paragraph">*复制存储虚拟机配置*：可选择复制单个存储虚拟机的存储虚拟机数据和配置设置。迁移数据和设置时，所有卷必须在过去 24 小时内完成复制，然后同时切换。</block>
   <block id="d5b5dacfafad754125a1766d22142ae9" category="paragraph">所有卷的分层策略默认为源卷的分层策略，建议用于迁移使用情形。</block>
   <block id="21c415465773e849068dc431e13446de" category="paragraph">在迁移期间，客户端从源 ONTAP 文件系统访问数据。切换后，可通过目标 FSx for ONTAP 文件系统 IP 地址访问卷。更新仍使用旧 IP 地址的所有客户端或资源。</block>
@@ -3020,7 +3007,6 @@
   <block id="ddf35bccac94d0810429e6fa6c2fb972" category="list-text">管理 igroup 和缓存卷</block>
   <block id="d49fbd4141ef9211647083b276c978a0" category="list-text">管理 ONTAP 凭据</block>
   <block id="6015cd2e9e5bc5b037ad456163cc26cb" category="inline-link-macro">详细了解链接</block>
-  <block id="7199140a960155d0d2f40b39a85d69f9" category="paragraph"><block ref="8fae953ea9a38f9ca7be3c5b0b0db56c" category="inline-link-macro-rx"></block>。</block>
   <block id="dfe642f2cfde396edc18a4148131fed6" category="paragraph-title">如果我不将链接与我的文件系统关联，会发生什么？</block>
   <block id="b4995c14539d70a4f6014816a0690b2e" category="paragraph">依赖于链接的功能可能不可用。例如，如果没有链接，则 ARP/AI 不可用，在创建卷时无法显示现有快照策略，并且无法发现缓存关系。没有链接，配置分析无法扫描数据保护和性能设置，因此分析不完整。您仍然可以在没有链接的情况下查看延迟事件，但您需要一个链接来查看和分析 EMS 事件以及分析延迟事件。</block>
   <block id="3b18b13f059019d19211f8a9f36f7e4e" category="section-title">文件系统</block>
@@ -3363,4 +3349,74 @@
   <block id="d56aae4930133feee16677d0d7e79d8b" category="summary">查看按发布日期列出的 NetApp Workload Factory 中 Amazon FSx for NetApp ONTAP 的新功能、增强功能和修复程序。</block>
   <block id="a811a6180339ac414cb29f505164688a" category="doc">NetApp Workload Factory 中 Amazon FSx for NetApp ONTAP 的新增功能</block>
   <block id="15446ab78757c18a126998e08d0c741d" category="paragraph">查看 Amazon FSx for NetApp ONTAP 在 NetApp Workload Factory 中的新功能和增强功能，按发布日期排序。</block>
+  <block id="4db89734d848869d20c5c98a44e7de1b" category="list-text">完成这些步骤以测试切换，然后执行实际的切换。</block>
+  <block id="fa0ab2f86cd05046110c737fd5ce84b8" category="paragraph">如果您在此过程中关闭对话框，则可以从 *复制关系* 选项卡中检查 *SVM 迁移状态*，并在准备就绪后继续切换操作。</block>
+  <block id="981cf06d12c9b4f422a2927885d64c6f" category="list-text">查看“切换复制”对话框中的信息，然后键入 _cut over_ 以完成此过程。</block>
+  <block id="230227ce1631475a082d9f0865ea84b2" category="doc">启动程序组图增强功能</block>
+  <block id="9312a185b7f4389cd2dc1b61172e5f20" category="paragraph">在“管理客户端访问权限”页面上显示块设备启动器组的图表现在包括主机的更多详细信息。当您将鼠标悬停在图表中的主机上时，将显示主机详细信息，包括主机名、实例 ID、工作负载类型、区域和 iSCSI 限定名称（IQN）。</block>
+  <block id="5c944601b7f8744b2a84a9a8ea43d363" category="section-title">链接创建通知电子邮件</block>
+  <block id="19206cde68f30f89cddf386749d22382" category="paragraph">Workload Factory 现在提醒您在成功添加凭据后完成链接关联。虽然凭据支持资源发现，但高级 ONTAP 功能需要与发现的文件系统进行链接关联。您将每周一收到一次电子邮件通知。完成链接关联后，通知将停止。</block>
+  <block id="6ea6cb3b2f3b5abc021a1f0e4229c7fc" category="inline-link-macro">在 Workload Factory 控制台中配置通知</block>
+  <block id="a518b4e2bba0d0ce3d0ecdc772d503ed" category="paragraph"><block ref="a518b4e2bba0d0ce3d0ecdc772d503ed" category="inline-link-macro-rx"></block></block>
+  <block id="41d8c250ba5deffd33a0d05e7f94eaf4" category="paragraph">所有链接文档现在都包含在 Workload Factory 设置和管理文档中。您仍然可以参考 Workload Factory FSx for ONTAP 文档中的 <block ref="25b81a757714a127c9c382013e960ce5" category="inline-link-macro-rx"></block>，并在设置和管理文档中找到相关页面的链接。</block>
+  <block id="40a8a1ceba59de4101cf77a14d6fb2d5" category="section-title">针对架构完善的问题的电子邮件增强功能</block>
+  <block id="954ae82c2d96e9bd8c7d4e143bf3c187" category="paragraph">新的电子邮件设计为 Workload Factory 检测到的配置问题提供了更多详细信息和上下文。该电子邮件包括已分析的资源数量、存在警告或严重问题的资源数量，以及这些问题是什么。该电子邮件还链接到 FSx for ONTAP 架构完善的控制面板，以便您可以立即解决问题。</block>
+  <block id="1854fdec65dd4a2dd839c666aba07186" category="section-title">精心设计的仪表板增强功能</block>
+  <block id="4640bfbf90e44f31ffe06c764207a151" category="section-title">支持选定的配置检查</block>
+  <block id="4baa1879436d89821519b031a9b29e1d" category="paragraph">您可以对选定配置手动运行分析，以便仅分析您感兴趣的配置并减少等待时间。</block>
+  <block id="696836fc5f2a32266d0ffc0fb5047e3b" category="paragraph">对于存储工作负载：</block>
+  <block id="c244576dbf541429d6bef056ce769d1b" category="list-text">*将主机连接到故障转移节点*：检查主机是否连接到主动-被动 FSx for ONTAP 文件系统中的故障转移节点，以确保可靠性。</block>
+  <block id="6ebacaf65862325841aba88bf388a132" category="list-text">*将主机连接到首选节点*：检查主机是否使用首选节点连接到其块设备，以提高性能效率。</block>
+  <block id="b25392745f1a47aaf9f1983cd8b1eff5" category="list-text">*ARP/AI 多设备检测差距*：当卷仅连接了一个块设备时，ARP/AI 可提供全面的保护覆盖。如果卷连接了多个块设备，Workload Factory 会将这些块设备移动到新卷，以便每个卷只有一个块设备。</block>
+  <block id="034f9073833298cb75f90f7455203432" category="list-text">*克隆清理*：检查是否有任何超过 30 天的卷克隆可以删除，以优化存储使用并降低成本。</block>
+  <block id="8e5f97675e6b58e2c142d4e3623f4e20" category="list-text">*将 igroup OS 与主机匹配*：检查启动器组（igroup）的操作系统是否与主机的操作系统匹配，以防止 I/O 或性能问题。</block>
+  <block id="68545ea02d5d413d5558618d4f250fed" category="paragraph">对于 Kubernetes 工作负载：</block>
+  <block id="92ea527417ca1a6f10e672dd5dc590fb" category="list-text">*QoS 配置*：检查 Kubernetes 持久卷是否受到 ONTAP QoS 策略的保护，以提高性能效率。</block>
+  <block id="a48d1b9cc2b4fca01a8c056a0f21ca0b" category="list-text">*专用 Kubernetes 存储虚拟机*：检查文件系统是否正在为 Kubernetes 工作负载使用专用存储虚拟机，以提高隔离度并简化存储管理。</block>
+  <block id="e8b78d1ad4445d483c25f605f3dcd508" category="list-text">*专用 Kubernetes 导出策略*：检查每个 Kubernetes 持久卷是否具有仅允许从集群的工作节点访问的专用导出策略。</block>
+  <block id="15c94f3b03de47c250527326d660fabe" category="list-text">*Kubernetes iSCSI 后端的双向 CHAP*：检查 Trident iSCSI 后端是否启用了双向 CHAP 身份验证以确保安全。</block>
+  <block id="a9f15f720c325ed93ec2ae6e8f017053" category="list-text">*在应用程序存储 VM 上禁用<block ref="d51321f13693d09d4a9cbb2758b42d12" prefix=" " category="inline-code"></block>*：检查是否在应用程序存储 VM 上禁用了<block ref="d51321f13693d09d4a9cbb2758b42d12" prefix=" " category="inline-code"></block>，以防止客户端列出其无法访问的导出。</block>
+  <block id="8c491145be7052ead6caabd40f13d8d8" category="paragraph">对于数据库工作负载：</block>
+  <block id="109086be5976370a05137d1276790c52" category="list-text">*SAP HANA 快照策略*：检查 SAP HANA 卷的快照策略是否设置为“无”，以降低存储成本并提高活动数据库数据的性能。</block>
+  <block id="f516997bc5858804907fffead3bf17bc" category="list-text">*MySQL 快照策略*：检查 MySQL 卷的快照策略是否设置为“None”，以降低存储成本并提高活动数据库数据的性能。</block>
+  <block id="326acdfcec515bde261a6c24416222fc" category="list-text">*PostgreSQL 快照策略*：检查 PostgreSQL 卷的快照策略是否设置为“None”，以降低存储成本并提高活动数据库数据的性能。</block>
+  <block id="b37f9a2971bf4d3f39ba06b420da1cf6" category="section-title">配置的当前值和建议值</block>
+  <block id="da748e56834f287fe9b9c164de80a667" category="paragraph">您可以在架构完善的仪表板中查看某些未优化配置的当前值和推荐值。这可让您在进行修复之前了解推荐值。</block>
+  <block id="0ab265b548fdc40b21483e61ffde3aba" category="list-text">冷数据分层</block>
+  <block id="4c0abf2d4c54820b8d33061abaf30759" category="list-text">Snapshot 策略</block>
+  <block id="6f5cf50fa90f8d99bf50f65e676c6cba" category="list-text">固态硬盘容量余量</block>
+  <block id="4c3fd0f1c4be65a2279b728897c84838" category="section-title">成本改进</block>
+  <block id="7d9291e210fb85e5195b3fd168c5441e" category="section-title">成本预测和见解</block>
+  <block id="abc7b1907c0e0856759e4d13b2c516f0" category="paragraph">现在，您可以使用成本预测功能预测 FSx for ONTAP 文件系统的成本。这有助于您规划预算并有效优化资源。您还可以查看有关成本和使用模式的见解，以确定成本优化的机会。</block>
+  <block id="0e1d8ca59fdf60970c2d4a8bbabe2e5b" category="section-title">AWS 成本和使用情况报告（CUR）</block>
+  <block id="133a30124f90912db7b6e93321823906" category="paragraph">Workload Factory 现在使用 AWS Cost and Usage Reports（CUR）而不是 AWS Cost Explorer 来提供交付给客户拥有的 S3 存储桶的详细计费记录。CUR 提供了更好的成本粒度，并作为高级 FinOps、内部计费和成本分配用例的基础。</block>
+  <block id="9744964a1ca6fbce3b75a4f5042f9597" category="section-title">Storage VM 迁移改进</block>
+  <block id="e6567f9c034c2cedd4efbe2f207f9b2a" category="paragraph">Workload Factory 在用户界面中为迁移存储虚拟机提供增强的指导。这包括分步说明以及在将迁移提交到生产环境之前进行测试运行。</block>
+  <block id="5d9883007f4bc5361c0311ad3ad7cfd1" category="inline-link-macro">详细了解存储虚拟机迁移</block>
+  <block id="3bcf392ef4e690644e59c7c7eb9bb71f" category="paragraph"><block ref="3bcf392ef4e690644e59c7c7eb9bb71f" category="inline-link-macro-rx"></block></block>
+  <block id="f96336c52a88a7b30c68866854b7e3f2" category="section-title">复制滞后电子邮件通知改进</block>
+  <block id="1e403f6a94558e4fb3362faed8f74a9b" category="paragraph">当发生大量相关复制延迟事件时，Workload Factory 会自动将其合并为一封电子邮件通知，以免您收到过多通知。</block>
+  <block id="f45963c176c2d5c66e1ddbfab6e6a59e" category="section-title">自动容量管理增强</block>
+  <block id="cc7093a020c173b1abf32b6436684cd2" category="paragraph">现在，您可以在要求 Workload Factory 自动管理您的容量之前，打开自动容量管理通知以试用此功能。当您的文件系统容量不足时，您将收到通知。</block>
+  <block id="84ae0158deb3f95e6027fdf8d5ff467d" category="section-title">吞吐量决策点</block>
+  <block id="44c9fa36f4500e57d111bbc550132124" category="paragraph">您现在可以查看客户端吞吐量建议和自动化决策点。将鼠标悬停在决策点上可查看详细信息，例如当前和推荐的 SKU 或时间窗口中的违规指标（%）。</block>
+  <block id="32e2568abf1f06db9af3e7c8594aae66" category="paragraph">您可以复制一个源（读/写）卷或一个数据保护（DP）卷。支持级联复制，但不支持第三个跃点。详细了解<block ref="b43da9c23395dea7a8657c3dcd68f92f" category="inline-xref-macro-rx"></block>。</block>
+  <block id="99975dc4e0b5174f74f44270f9c4bb79" category="list-text"><block ref="c333b1c4d501da5c597263cb02a86bf0" category="inline-xref-macro-rx"></block>，选择 *Migration* 作为用例，然后选择 *Replicate storage VM configuration*。</block>
+  <block id="439799af583df4008d7b4f10d93c939a" category="list-text"><block ref="86056281cff85f2bf6f7be28510fe95d" category="inline-xref-macro-rx"></block> 将数据从源存储系统传输到目标存储系统。</block>
+  <block id="48a79c23389fad3919124aa678f218c9" category="list-text"><block ref="8e0c7083554029f9517e717da960b953" category="inline-xref-macro-rx"></block> 测试迁移，然后将数据和配置设置从源文件系统永久迁移到目标 FSx for ONTAP 文件系统。</block>
+  <block id="d69fbbb711f8ff18ddfdec1f828d8dde" category="paragraph">在测试和切换之前，请考虑以下内容。</block>
+  <block id="f54dbcea12e59e12722877876b169b60" category="inline-xref">手动更新这些设置</block>
+  <block id="773c27512e59c2c2dbd6e6ff8964b7d4" category="list-text">切换操作不会将所有存储虚拟机配置设置迁移到目标存储虚拟机。例如，iSCSI、广播域 MTU 和 DNS 设置不会迁移。切换后在目标存储虚拟机上<block ref="e8bd260fbd2f342593da7654c0529249" category="inline-xref-macro-rx"></block>。</block>
+  <block id="e618f0853e36806a08addf80f080aa17" category="list-text">*ONTAP S3 配置*：具有 ONTAP S3 配置的存储 VM 不支持迁移用例的切换复制。删除 ONTAP S3 配置，包括存储 VM 上的 object-store-server、存储桶、用户、组或策略，以避免迁移失败。</block>
+  <block id="24cce11f73b548e9176ae1c180b0e7c1" category="list-text">检查 Workload Factory 文件系统内 Replication relationships 表中的 *SVM 迁移状态* 是否为 *Enabled | Ready to test cutover*。</block>
+  <block id="6685d526488e756ed5738a4874c4bccb" category="section-title">切换复制</block>
+  <block id="12dabbf4de087e3801b25bebe491cfe6" category="paragraph">Workload Factory 可帮助您管理迁移用例中复制的切换过程。首先，它会测试您的环境，以确认切换可以顺利进行。其次，它执行到目标文件系统的实际切换。</block>
+  <block id="641a5b87ae1a6b3f69a51cbf9d3327e7" category="paragraph">在完成迁移测试之前，请确保您可以访问目标存储 VM 上的所有数据。</block>
+  <block id="e710e21634c08d4bb9e43d51a67a87eb" category="paragraph">按照说明切换迁移用例的复制。用户界面将引导您逐步完成切换过程。</block>
+  <block id="d4db5cd7a78570802f5cc12157792523" category="list-text">登录到每个 SAN 客户端并更新新目标的 iSCSI/MPIO 设置，并删除旧存储 VM 目标 IP</block>
+  <block id="95254aef509d2d84e8ee7dd3052d1b61" category="paragraph"><block ref="97608ab403cabf20e3bcac439aacde61" category="inline-link-macro-rx"></block>。</block>
+  <block id="78727553c283af369070757e652c05cc" category="paragraph">使用 NetApp Workload Factory 简化块存储资源（包括 igroup 和块设备）的管理，并控制 FSx for ONTAP 块设备的客户端访问，以提供最佳性能并最大限度地降低成本。请参阅块设备 igroup 图以优化客户端连接并快速解决问题。</block>
+  <block id="356b28bbbd0d4021c21f75e7c065f091" category="list-text">主机详细信息，包括主机名、实例 ID、工作负载类型、区域和 iSCSI 限定名称（IQN）</block>
+  <block id="8b253c1d4259c21c8314fc85adcb31d6" category="section-title">2026年11月1日</block>
+  <block id="7dc50386b3284326e1114e4e7f4eb3fd" category="section-title">2026年11月1日</block>
 </blocks>

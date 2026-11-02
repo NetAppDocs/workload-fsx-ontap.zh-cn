@@ -30,7 +30,7 @@ summary: 复制数据以防止数据丢失、迁移数据或级联复制 Amazon 
 
 [NOTE]
 ====
-您可以复制一个源（读/写）卷或一个数据保护（DP）卷。支持级联复制，但不支持第三个跃点。详细了解link:https://docs.netapp.com/us-en/workload-fsx-ontap/cascade-replication.html["级联复制"]。
+您可以复制一个源（读/写）卷或一个数据保护（DP）卷。支持级联复制，但不支持第三个跃点。详细了解<<cascade-replication,级联复制>>。
 
 ====
 
@@ -54,14 +54,15 @@ Workload Factory 支持以下存储系统之间的存储虚拟机的迁移复制
 
 要迁移存储 VM 数据和配置设置，必须完成三个操作。
 
-. <<步骤 1：创建复制关系,创建复制关系>>，选择 *Migration* 作为用例，然后选择 *Replicate storage VM configuration*。
-. <<步骤 2：初始化复制关系,初始化复制关系>> 将数据从源存储系统传输到目标存储系统。
-. <<步骤 3：为迁移用例切换复制,切换复制以用于迁移用例>> 将数据和配置设置从源文件系统永久迁移到目标 FSx for ONTAP 文件系统。
+. <<step-1-create-replication-relationship,步骤 1：创建复制关系>>，选择 *Migration* 作为用例，然后选择 *Replicate storage VM configuration*。
+. <<step-2-initialize-replication-relationship,步骤 2：初始化复制关系>> 将数据从源存储系统传输到目标存储系统。
+. <<step-3-cutover-replication,步骤 3：为迁移用例切换复制>> 测试迁移，然后将数据和配置设置从源文件系统永久迁移到目标 FSx for ONTAP 文件系统。
 
 
 
 
 [[step-1-create-the-replication-relationship]]
+[[step-1-create-replication-relationship]]
 == 步骤 1：创建复制关系
 
 在两个 FSx for ONTAP 文件系统之间、本地 ONTAP 系统和 FSx for ONTAP 文件系统之间，或者 Cloud Volumes ONTAP 和 FSx for ONTAP 文件系统之间复制数据。
@@ -200,6 +201,7 @@ NOTE: 长期保留需要匹配的源标签和目标标签。如果需要，Workl
 
 
 [[step-2-initialize-the-replication-relationship]]
+[[step-2-initialize-replication-relationship]]
 == 步骤 2：初始化复制关系
 
 初始化源卷和目标卷之间的复制关系，以传输NetApp Workload Factory 中的快照和所有数据块。
@@ -226,6 +228,7 @@ NOTE: 长期保留需要匹配的源标签和目标标签。如果需要，Workl
 
 
 [[step-3-cut-over-replication-for-migration-use-cases]]
+[[step-3-cutover-replication]]
 == 步骤 3：为迁移用例切换复制
 
 为迁移用例创建复制关系后，您必须切换复制，以完成将存储 VM 数据和配置设置迁移到目标 FSx for ONTAP 文件系统的操作。切换复制会将数据和存储 VM 配置设置从源文件系统永久迁移到目标 FSx for ONTAP 文件系统。在切换期间，Workload Factory 会最后一次复制数据。切换开始时，源存储 VM 将脱机。
@@ -235,25 +238,26 @@ NOTE: 长期保留需要匹配的源标签和目标标签。如果需要，Workl
 [[plan-for-the-cutover-operation]]
 === 规划切换操作
 
-在规划迁移用例的切换操作时，请考虑以下内容。
+在测试和切换之前，请考虑以下内容。
 
 * *复制版本支持*：源和目标存储系统必须具有相同的主要 ONTAP 版本。例如，如果源系统运行的是 ONTAP 版本 9.18.1，则目标系统也必须运行 ONTAP 版本 9.18.1。
 * *Storage VM 配置设置*：
 +
-** 切换操作不会将所有存储虚拟机配置设置迁移到目标存储虚拟机。例如，iSCSI、广播域 MTU 和 DNS 设置不会迁移。切换后在目标存储虚拟机上手动更新这些设置。有关更多详细信息，请参阅 <<切换后更新配置设置,切换后更新配置设置>> 节。
+** 切换操作不会将所有存储虚拟机配置设置迁移到目标存储虚拟机。例如，iSCSI、广播域 MTU 和 DNS 设置不会迁移。切换后在目标存储虚拟机上<<update-configuration-settings-after-cutover,手动更新这些设置>>。
 ** 如果您的存储 VM 使用域隧道身份验证，请在开始迁移之前在目标文件系统上设置并启用域隧道。
 
 
 * *克隆*：切换操作将克隆作为单个卷进行迁移，这会在目标 FSx for ONTAP 文件系统上占用更多空间。请考虑在切换之前删除克隆，以避免增加目标上的容量。
 * *缓存卷*：包含缓存卷的源存储虚拟机不支持切换。在切换之前删除 ONTAP FlexCache 关系，以避免迁移失败。
 * *AWS S3 接入点*：具有 S3 接入点的卷不支持迁移使用情形的切换复制。从源卷中删除 S3 接入点以避免迁移失败。
-* *ONTAP S3 配置*：具有 ONTAP S3 配置的 vserver 不支持迁移用例的切换复制。删除 ONTAP S3 配置，包括 vserver 上的对象存储服务器、存储桶、用户、组或策略，以避免迁移失败。
+* *ONTAP S3 配置*：具有 ONTAP S3 配置的存储 VM 不支持迁移用例的切换复制。删除 ONTAP S3 配置，包括存储 VM 上的 object-store-server、存储桶、用户、组或策略，以避免迁移失败。
 * *LUN 序列号和 iSCSI 目标 IQN*：LUN 序列号和 iSCSI 目标 IQN 在切换期间发生变化。
 
 
 .开始之前
 在开始之前，请查看这些要求。
 
+* 检查 Workload Factory 文件系统内 Replication relationships 表中的 *SVM 迁移状态* 是否为 *Enabled | Ready to test cutover*。
 * 在切换复制之前，请停止对 Storage VM 的任何客户端访问。
 * 在切换复制之前，请确认没有源卷正在提供数据。
 * 在切换复制之前，请确认数据已在源卷和目标卷之间同步。
@@ -264,6 +268,17 @@ NOTE: 长期保留需要匹配的源标签和目标标签。如果需要，Workl
 
 
 
+
+
+[[cut-over-replication]]
+=== 切换复制
+
+Workload Factory 可帮助您管理迁移用例中复制的切换过程。首先，它会测试您的环境，以确认切换可以顺利进行。其次，它执行到目标文件系统的实际切换。
+
+在完成迁移测试之前，请确保您可以访问目标存储 VM 上的所有数据。
+
+按照说明切换迁移用例的复制。用户界面将引导您逐步完成切换过程。
+
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
@@ -271,7 +286,11 @@ NOTE: 长期保留需要匹配的源标签和目标标签。如果需要，Workl
 . 从 *FSx for ONTAP* 中，选择包含要复制的卷的文件系统。
 . 选择 *Replication relationships* 选项卡。
 . 在复制关系表中，选择要切换的复制关系，然后选择 *Cut over replication* 。
-. 查看"切换复制"对话框中的信息，然后键入 _cut over_ 确认。
+. 完成这些步骤以测试切换，然后执行实际的切换。
++
+如果您在此过程中关闭对话框，则可以从 *复制关系* 选项卡中检查 *SVM 迁移状态*，并在准备就绪后继续切换操作。
+
+. 查看“切换复制”对话框中的信息，然后键入 _cut over_ 以完成此过程。
 
 
 . 选择 *Cut over*。
@@ -291,7 +310,7 @@ NOTE: 长期保留需要匹配的源标签和目标标签。如果需要，Workl
 +
 ** 重新创建 igroup
 ** 更新 LUN 映射
-** 登录到每个 SAN 客户端并更新新目标的 iSCSI/MPIO 设置并删除旧的 vserver 目标 IP
+** 登录到每个 SAN 客户端并更新新目标的 iSCSI/MPIO 设置，并删除旧存储 VM 目标 IP
 
 
 * 验证广播域 MTU 设置是否符合预期
@@ -304,6 +323,7 @@ NOTE: 长期保留需要匹配的源标签和目标标签。如果需要，Workl
 
 
 [[cascade-replication-for-data-protection-volumes]]
+[[cascade-replication]]
 == 数据保护卷的级联复制
 
 NetApp Workload Factory 支持复制数据保护卷，也称为_级联部署_。 _级联部署_由一系列关系组成，其中源卷镜像到辅助卷（第一跳），辅助卷镜像到第三卷（第二跳）。如果辅助卷不可用，您可以同步主卷和三级卷之间的关系，而无需执行新的基线传输。

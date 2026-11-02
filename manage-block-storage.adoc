@@ -11,13 +11,14 @@ summary: 在 NetApp Workload Factory 中管理 FSx for ONTAP 文件系统的块�
 
 
 [role="lead"]
-使用 NetApp Workload Factory 简化块存储资源（包括 igroup 和块设备）的管理，并控制 FSx for ONTAP 块设备的客户端访问，以提供最佳性能并最大限度地降低成本。
+使用 NetApp Workload Factory 简化块存储资源（包括 igroup 和块设备）的管理，并控制 FSx for ONTAP 块设备的客户端访问，以提供最佳性能并最大限度地降低成本。请参阅块设备 igroup 图以优化客户端连接并快速解决问题。
 
 .关于此任务
 从 Workload Factory 控制台，您可以管理启动程序组 (igroup) 以控制客户端对块设备的访问。您还可以查看块设备详细信息、增加容量、制作克隆、管理客户端访问、存档非活动块设备的数据以及删除块设备。
 
 使用块存储图检查以下内容：
 
+* 主机详细信息，包括主机名、实例 ID、工作负载类型、区域和 iSCSI 限定名称（IQN）
 * 客户端连接
 * 块设备状态
 * 节点-客户端关系

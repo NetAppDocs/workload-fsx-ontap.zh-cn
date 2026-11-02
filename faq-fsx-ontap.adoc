@@ -32,7 +32,7 @@ summary: 在 NetApp Workload Factory 中查找有关 FSx for ONTAP 文件系统�
 * 管理 ONTAP 凭据
 
 
-link:learn-about-links.html["详细了解链接"]。
+link:links-overview.html["详细了解链接"]。
 
 .如果我不将链接与我的文件系统关联，会发生什么？
 依赖于链接的功能可能不可用。例如，如果没有链接，则 ARP/AI 不可用，在创建卷时无法显示现有快照策略，并且无法发现缓存关系。没有链接，配置分析无法扫描数据保护和性能设置，因此分析不完整。您仍然可以在没有链接的情况下查看延迟事件，但您需要一个链接来查看和分析 EMS 事件以及分析延迟事件。
