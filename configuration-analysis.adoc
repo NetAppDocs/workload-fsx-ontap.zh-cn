@@ -106,6 +106,22 @@ SSD 存储层容量不应超过 80% 的利用率。这可能会影响对容量�
 +
 提高文件容量阈值，以避免达到卷容量限制。文件容量（索引节点）过低会阻止向卷写入其他数据。Workload Factory 建议将文件容量利用率保持在 80% 以下，以允许创建新文件。
 
+* *将主机连接到故障转移节点*
++
+Workload Factory 建议将主机连接到故障转移节点，以保持连接并避免在故障转移期间发生中断。
+
+* *SAP HANA 快照策略*
++
+将 SAP HANA 卷的快照策略设置为“无”，以降低存储成本并提高活动数据库数据的性能。
+
+* *MySQL 快照策略*
++
+将 MySQL 卷的快照策略设置为“None”，以降低存储成本并提高活动数据库数据的性能。
+
+* *PostgreSQL 快照策略*
++
+将 PostgreSQL 卷的快照策略设置为“None”，以降低存储成本并提高活动数据库数据的性能。
+
 
 
 
@@ -122,6 +138,18 @@ NetApp Autonomous Ransomware Protection with AI (ARP/AI) 有助于保护您的�
 * *未经授权的 iSCSI 卷访问*
 +
 使用 iSCSI 服务应用程序数据的卷不应同时允许 NAS 访问。Workload Factory 建议限制 iSCSI 卷使用任何其他协议。
+
+* *ARP/AI 多设备检测差距*
++
+当卷仅连接了一个块设备时，ARP/AI 提供全面的保护覆盖。如果卷连接了多个块设备，Workload Factory 会将这些块设备移动到新卷，以便每个卷只有一个块设备。
+
+* *Kubernetes iSCSI 后端的双向 CHAP*
++
+对 Trident iSCSI 后端使用双向 CHAP 身份验证，以确保 iSCSI 启动程序和目标相互进行身份验证。这可以防止未经授权的主机针对存储 VM 建立 iSCSI 会话。
+
+* *在应用程序 storage VM 上禁用 `showmount`*
++
+在应用程序存储虚拟机上禁用 `showmount`，以防止客户端列出其无法访问的导出。
 
 
 
@@ -168,6 +196,14 @@ NetApp Autonomous Ransomware Protection with AI (ARP/AI) 有助于保护您的�
 +
 在将 FSx for ONTAP 文件系统与 AWS MGN 结合使用之前，请先使用所需的 AWS MGN 连接和 API 身份验证设置对其进行配置。
 
+* *专用 Kubernetes storage VM*
++
+为 Kubernetes 工作负载使用专用存储 VM。将 Kubernetes 存储分开可以更轻松地管理，简化策略设置，并有助于确保存储设置的一致性。
+
+* *将 igroup OS 与主机匹配*
++
+将启动器组（igroup）的操作系统与主机的操作系统进行匹配，以防止 I/O 或性能问题。
+
 
 
 
@@ -204,6 +240,10 @@ NetApp Autonomous Ransomware Protection with AI (ARP/AI) 有助于保护您的�
 * *非活动 NAS 卷*
 +
 在 NAS 卷未使用 31 天后，归档或删除未使用的 NAS 卷以降低成本。
+
+* *克隆清理*
++
+删除任何超过 30 天的卷克隆，以优化存储使用并降低成本。
 
 
 

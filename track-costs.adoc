@@ -2,31 +2,40 @@
 sidebar: sidebar 
 permalink: track-costs.html 
 keywords: cost, consumption, Cost Explorer 
-summary: 在 NetApp Workload Factory 中跟踪 FSx for ONTAP 文件系统资源的成本并生成报告。 
+summary: 在 NetApp Workload Factory 中跟踪 FSx for ONTAP 文件系统资源的成本。 
 ---
-= 跟踪 FSx for ONTAP 成本并在 NetApp Workload Factory 中获取报告
+= 跟踪 NetApp Workload Factory 中的资源成本
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-NetApp Workload Factory 为您的 FSx for ONTAP 文件系统成本和使用情况提供综合视图，帮助您有效管理预算并优化资源。您还可以为 FSx for ONTAP 文件系统资源生成成本报告，以便与利益相关者共享。
+使用 NetApp Workload Factory 跟踪您的 FSx for ONTAP 文件系统成本和使用情况，以便您可以有效地管理预算并优化资源。我们使用 AWS Cost Explorer 通过需要最低权限的数据来提供总体成本。按资源（文件系统或卷）划分的成本基于 Workload Factory 计算，该计算提供了通过 AWS Cost Explorer 无法获得的独特见解。
 
 
 
 [[about-this-task]]
 == 关于此任务
 
-Workload Factory 通过从 AWS Cost Explorer 获取成本数据，跟踪 FSx for ONTAP 文件系统成本和使用情况。跟踪以下成本详细信息：使用类型、使用 SKU、部署类型、使用情况和总成本。
+Workload Factory 使用以下权限从 AWS Cost Explorer 获取 FSx for ONTAP 文件系统资源的成本和使用数据： `ce:GetCostAndUsage`和 `ce:GetTags`。跟踪以下成本详细信息：使用类型、使用 SKU、部署类型、使用情况和总成本。
 
+在“成本”仪表板中，两个选项卡提供总成本和按资源划分的成本。
+
+* 总成本基于直接从 AWS Cost Explorer API 提取的数据。
+* 按资源划分的成本显示按文件系统或卷划分的成本估算。
++
 对于唯一资源，Workload Factory 通过将实际性能层使用量、分配给已调配但未使用空间的性能层成本的比例份额、按容量分配的性能分配和容量池使用量相结合来计算成本。Workload Factory 将每个组件乘以该维度的单位价格，并将结果相加以确定每个资源的总成本。
 
-在成本仪表板中，您可以按 AWS 帐户、凭据、一个或多个区域和时间范围筛选成本和使用数据，以了解您的 FSx for ONTAP 文件系统消耗。Workload Factory 始终按月显示数据。您还可以按一个或多个文件系统以及文件系统中的一个或多个卷进行筛选。AWS 成本分配标签键和标签键值添加了一层筛选，以确定特定成本。_标签_ 由键和值组成。要按标签键和标签键值进行筛选，请将标签分配给您的 FSx for ONTAP 文件系统。 link:https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html["详细了解 AWS 成本分配标签。"^]
 
-Workload Factory 使用以下权限从 AWS Cost Explorer 获取 FSx for ONTAP 文件系统资源的成本和使用数据： `ce:GetCostAndUsage`和 `ce:GetTags`。我们使用 AWS 成本 API 和我们自己的估算来计算总成本。
 
-除了成本仪表板中的成本数据之外，成本执行摘要还显示了您的 FSx for ONTAP 文件系统成本以及您组织的支出模式。您还可以为 FSx for ONTAP 文件系统资源生成成本报告。该报告是可下载的 CSV 文件，您可以与利益相关者共享。
+Workload Factory 始终按月显示数据。
+
+您可以按 AWS 帐户、凭据、一个或多个区域和时间范围筛选成本和使用数据，以便了解您的 FSx for ONTAP 文件系统消耗情况。您还可以按一个或多个文件系统以及文件系统中的一个或多个卷进行筛选。
+
+AWS 成本分配标签键和标签键值添加了一层筛选，以确定特定成本。_标签_ 由键和值组成。要按标签键和标签键值进行筛选，请将标签分配给您的 FSx for ONTAP 文件系统。 link:https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html["详细了解 AWS 成本分配标签。"^]
+
+除了成本仪表板中的成本数据之外，AI 生成的成本执行摘要还显示了您的 FSx for ONTAP 文件系统成本和您组织的支出模式。您可以生成 FSx for ONTAP 文件系统资源的 CSV 文件，以便与您的团队和利益相关者共享。
 
 
 

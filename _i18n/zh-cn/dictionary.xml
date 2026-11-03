@@ -2539,8 +2539,6 @@
   <block id="9204792b7a380af352b0493b88d5303b" category="inline-link-macro">分析屏幕</block>
   <block id="6f5b7d64dd977f3594b9b347533d7259" category="paragraph">Workload Factory 监控卷，并在读取或写入延迟超过配置的阈值时生成警报。您可以从 <block ref="df1730d271761ecb498a3dca135d5e07" category="inline-link-macro-rx"></block> 查看延迟事件。</block>
   <block id="a1edc47cfd4f855c0729219748978279" category="list-text"><block ref="a1edc47cfd4f855c0729219748978279" category="inline-link-macro-rx"></block></block>
-  <block id="56df9b1084a1d8fbfcb5630d52db4560" category="summary">在 NetApp Workload Factory 中跟踪 FSx for ONTAP 文件系统资源的成本并生成报告。</block>
-  <block id="132c7cd068e9c3c95296d05738c81a90" category="paragraph">Workload Factory 通过从 AWS Cost Explorer 获取成本数据，跟踪 FSx for ONTAP 文件系统成本和使用情况。跟踪以下成本详细信息：使用类型、使用 SKU、部署类型、使用情况和总成本。</block>
   <block id="80e92f578bcc9bc76e7904c0736e30b0" category="inline-link-macro">详细了解 AWS 成本分配标签。</block>
   <block id="258ef99c8c6162f96d39f58575b891c4" category="section-title">跟踪成本</block>
   <block id="4eb4c996873463b028b9c244954294a7" category="paragraph">Workload Factory 控制台成本仪表板中显示的成本基于 AWS Cost Explorer 的数据，每 24 小时更新一次。</block>
@@ -2981,10 +2979,7 @@
   <block id="17ec06b9eaa321300fab59fd56971e66" category="list-text">选择要更新工作负载的卷的操作菜单。</block>
   <block id="ed2541738b61ca0c7584cd62bf74b27d" category="list-text">选择*高级操作*，然后选择*更改工作负载*。</block>
   <block id="cd9e2d546766552cd75de00b7717f0cf" category="list-text">在"更改工作负载"对话框中，为卷选择正确的工作负载。</block>
-  <block id="8137b647e9c277bf5504be0415118937" category="paragraph">NetApp Workload Factory 为您的 FSx for ONTAP 文件系统成本和使用情况提供综合视图，帮助您有效管理预算并优化资源。您还可以为 FSx for ONTAP 文件系统资源生成成本报告，以便与利益相关者共享。</block>
   <block id="0ecf72bcc13fb55d0aa28c82a90ab6f4" category="paragraph">对于唯一资源，Workload Factory 通过将实际性能层使用量、分配给已调配但未使用空间的性能层成本的比例份额、按容量分配的性能分配和容量池使用量相结合来计算成本。Workload Factory 将每个组件乘以该维度的单位价格，并将结果相加以确定每个资源的总成本。</block>
-  <block id="ecec373dbe2f05b3a3b863fd07d13592" category="paragraph">Workload Factory 使用以下权限从 AWS Cost Explorer 获取 FSx for ONTAP 文件系统资源的成本和使用数据：<block ref="bba6542a0e46014b21a818003b1e41d2" prefix=" " category="inline-code"></block>和<block ref="f74e5982a82afd7d2755b24355dd08c6" prefix=" " category="inline-code"></block>。我们使用 AWS 成本 API 和我们自己的估算来计算总成本。</block>
-  <block id="552ae61b34399969ed0ea2c7955fd9ef" category="paragraph">除了成本仪表板中的成本数据之外，成本执行摘要还显示了您的 FSx for ONTAP 文件系统成本以及您组织的支出模式。您还可以为 FSx for ONTAP 文件系统资源生成成本报告。该报告是可下载的 CSV 文件，您可以与利益相关者共享。</block>
   <block id="e291c5603b49506d01779471f77ce7c8" category="paragraph">请验证您是否符合以下要求：</block>
   <block id="53c306e93da69caff455d3eaa34a6b5c" category="list-text">要按 AWS 分配标记过滤，请验证您的 FSx for ONTAP 文件系统是否已分配标记。</block>
   <block id="74bc5d714652a3ae18c64ee93e4ba085" category="section-title">2026年9月30日</block>
@@ -3334,8 +3329,6 @@
   <block id="a27e74c36d4d969817e56da6fc886e29" category="list-text">将 FlexClone 卷从其父卷拆分后，您无法重新连接它们。</block>
   <block id="02ed8ce03f0b69a9238ad5fe674db730" category="list-text">要拆分克隆的卷，必须关联链接。<block ref="b0d0cfa49a5b8ebda8e687152ec0aadd" category="inline-link-macro-rx"></block>。关联链接后，返回此操作。</block>
   <block id="c880e220ac8aee50a0a860cfa3d40661" category="summary">将 NetApp 支持站点帐户添加到 Workload Factory，并注册您的帐户以获得支持，以便向 NetApp 技术支持开启支持案例。</block>
-  <block id="79ccfc8de982194cab3acf19277d4a57" category="doc">跟踪 FSx for ONTAP 成本并在 NetApp Workload Factory 中获取报告</block>
-  <block id="9fa871dac57d54d520eddd6e7c2bc7e4" category="paragraph">在成本仪表板中，您可以按 AWS 帐户、凭据、一个或多个区域和时间范围筛选成本和使用数据，以了解您的 FSx for ONTAP 文件系统消耗。Workload Factory 始终按月显示数据。您还可以按一个或多个文件系统以及文件系统中的一个或多个卷进行筛选。AWS 成本分配标签键和标签键值添加了一层筛选，以确定特定成本。_标签_ 由键和值组成。要按标签键和标签键值进行筛选，请将标签分配给您的 FSx for ONTAP 文件系统。 <block ref="8ea95efe0fef689337ea8960e5c1861f" category="inline-link-macro-rx"></block></block>
   <block id="904e5c7e4bec4fed64fcbb6a83a967f6" category="paragraph">Workload Factory 生成可供下载的 CSV 报告。</block>
   <block id="d50ebccae5983a46539e57c6cafdeafa" category="list-text">（可选）选择*启用延迟时间通知*，以便在复制延迟超过阈值时接收通知。</block>
   <block id="57aa08723363676e08889a7debcc7fae" category="paragraph">卷备份是增量备份，这意味着仅保存最近一次备份后更改的卷上的数据。这可以最大限度地减少创建备份所需的时间和备份所需的存储空间，从而通过不复制数据来节省存储成本。</block>
@@ -3421,4 +3414,35 @@
   <block id="7dc50386b3284326e1114e4e7f4eb3fd" category="section-title">2026年11月1日</block>
   <block id="7cc20c44b067a9d650d7a25d5be9d67d" category="section-title">客户管理的 Bedrock 分类支持</block>
   <block id="8a8cb6e7e1b94c2efc52b7f5d677eb4d" category="paragraph">Workload Factory 现在允许您使用自己的 Amazon Bedrock 设置进行工作负载标记分类。您可以提供自己的 Bedrock 端点和凭据，以便分类请求通过您自己的 Bedrock 配置运行。</block>
+  <block id="6347309ad07af7266241819bb2af76d1" category="list-text">*将主机连接到故障转移节点*</block>
+  <block id="e89cb70f69260bd0359dad1d58cb94de" category="paragraph">Workload Factory 建议将主机连接到故障转移节点，以保持连接并避免在故障转移期间发生中断。</block>
+  <block id="d8f7d6931c10571f6b09ab824fb1eb68" category="list-text">*SAP HANA 快照策略*</block>
+  <block id="5430bb473a033ac7ca3cf168ada8eef0" category="paragraph">将 SAP HANA 卷的快照策略设置为“无”，以降低存储成本并提高活动数据库数据的性能。</block>
+  <block id="bed53786c7f97a0d4610c92e2155c179" category="list-text">*MySQL 快照策略*</block>
+  <block id="2cfa406a51ef73bbf2e8700e3f414fba" category="paragraph">将 MySQL 卷的快照策略设置为“None”，以降低存储成本并提高活动数据库数据的性能。</block>
+  <block id="277b9300260dd55ca64290333450ba59" category="list-text">*PostgreSQL 快照策略*</block>
+  <block id="2a902e0c93222642481e7829b61f6885" category="paragraph">将 PostgreSQL 卷的快照策略设置为“None”，以降低存储成本并提高活动数据库数据的性能。</block>
+  <block id="f6713ad974e1c45e6ae6f336e05e1acb" category="list-text">*ARP/AI 多设备检测差距*</block>
+  <block id="99585e92af9e1ad2380aa522d6753d7a" category="paragraph">当卷仅连接了一个块设备时，ARP/AI 提供全面的保护覆盖。如果卷连接了多个块设备，Workload Factory 会将这些块设备移动到新卷，以便每个卷只有一个块设备。</block>
+  <block id="94252ec3a780f58314c91e97ef4e34dd" category="list-text">*Kubernetes iSCSI 后端的双向 CHAP*</block>
+  <block id="33abb23bb89c7fd6e6403f57410fd19d" category="paragraph">对 Trident iSCSI 后端使用双向 CHAP 身份验证，以确保 iSCSI 启动程序和目标相互进行身份验证。这可以防止未经授权的主机针对存储 VM 建立 iSCSI 会话。</block>
+  <block id="6afaedca049edca8b26b3afcc63112c5" category="list-text">*在应用程序 storage VM 上禁用<block ref="d51321f13693d09d4a9cbb2758b42d12" prefix=" " category="inline-code"></block>*</block>
+  <block id="bfd8d5ee3b60e71cb8f894bb8d7d7f01" category="paragraph">在应用程序存储虚拟机上禁用<block ref="d51321f13693d09d4a9cbb2758b42d12" prefix=" " category="inline-code"></block>，以防止客户端列出其无法访问的导出。</block>
+  <block id="17a183ee5c2a455937989091c69ca48d" category="list-text">*专用 Kubernetes storage VM*</block>
+  <block id="aeb9ac6a931deb0972004e13a0b50cbd" category="paragraph">为 Kubernetes 工作负载使用专用存储 VM。将 Kubernetes 存储分开可以更轻松地管理，简化策略设置，并有助于确保存储设置的一致性。</block>
+  <block id="dd54a6cc471e0bb15a8807c9b04d608a" category="list-text">*将 igroup OS 与主机匹配*</block>
+  <block id="9b4b32350b17fe80d09c863ee9493bc1" category="paragraph">将启动器组（igroup）的操作系统与主机的操作系统进行匹配，以防止 I/O 或性能问题。</block>
+  <block id="e2521a2a2f696d450620b08167cf1c24" category="list-text">*克隆清理*</block>
+  <block id="25c12f9fc894aee637d81a1bb835e475" category="paragraph">删除任何超过 30 天的卷克隆，以优化存储使用并降低成本。</block>
+  <block id="01fae763ec208cbe8aba55abc3b09866" category="summary">在 NetApp Workload Factory 中跟踪 FSx for ONTAP 文件系统资源的成本。</block>
+  <block id="3f9d767840a18ac75b11c7dd9ba87a88" category="doc">跟踪 NetApp Workload Factory 中的资源成本</block>
+  <block id="bfb6f1b412cd95d58b271e3d69547dda" category="paragraph">使用 NetApp Workload Factory 跟踪您的 FSx for ONTAP 文件系统成本和使用情况，以便您可以有效地管理预算并优化资源。我们使用 AWS Cost Explorer 通过需要最低权限的数据来提供总体成本。按资源（文件系统或卷）划分的成本基于 Workload Factory 计算，该计算提供了通过 AWS Cost Explorer 无法获得的独特见解。</block>
+  <block id="c3f094be203d9270a67844e5fa353013" category="paragraph">Workload Factory 使用以下权限从 AWS Cost Explorer 获取 FSx for ONTAP 文件系统资源的成本和使用数据：<block ref="bba6542a0e46014b21a818003b1e41d2" prefix=" " category="inline-code"></block>和<block ref="f74e5982a82afd7d2755b24355dd08c6" prefix=" " category="inline-code"></block>。跟踪以下成本详细信息：使用类型、使用 SKU、部署类型、使用情况和总成本。</block>
+  <block id="0044e1f3a22c6d9ef97c0d6e8c1fdb03" category="paragraph">在“成本”仪表板中，两个选项卡提供总成本和按资源划分的成本。</block>
+  <block id="65ab1b7df4df327df8504998be956f5b" category="list-text">总成本基于直接从 AWS Cost Explorer API 提取的数据。</block>
+  <block id="19750d3971220ee9a9363828b643acdf" category="list-text">按资源划分的成本显示按文件系统或卷划分的成本估算。</block>
+  <block id="512a8b4930f422b87988b36e61c761d2" category="paragraph">Workload Factory 始终按月显示数据。</block>
+  <block id="03bb428183665b2d297f7a2b126ada64" category="paragraph">您可以按 AWS 帐户、凭据、一个或多个区域和时间范围筛选成本和使用数据，以便了解您的 FSx for ONTAP 文件系统消耗情况。您还可以按一个或多个文件系统以及文件系统中的一个或多个卷进行筛选。</block>
+  <block id="6d24db4e0644546ba5972d86f0474123" category="paragraph">AWS 成本分配标签键和标签键值添加了一层筛选，以确定特定成本。_标签_ 由键和值组成。要按标签键和标签键值进行筛选，请将标签分配给您的 FSx for ONTAP 文件系统。 <block ref="8ea95efe0fef689337ea8960e5c1861f" category="inline-link-macro-rx"></block></block>
+  <block id="00785d0f1296ca2a8d0846890b38a469" category="paragraph">除了成本仪表板中的成本数据之外，AI 生成的成本执行摘要还显示了您的 FSx for ONTAP 文件系统成本和您组织的支出模式。您可以生成 FSx for ONTAP 文件系统资源的 CSV 文件，以便与您的团队和利益相关者共享。</block>
 </blocks>
