@@ -26,7 +26,7 @@ summary: 了解NetApp网络保险库以及如何实施网络保险库架构，�
 .实施
 Workload Factory 提供创建网络安全架构方面的帮助。当您联系NetApp表示有兴趣实施网络安全保险库后， NetApp专家会与您联系，讨论您的需求。
 
-请发送电子邮件至ng-FSx-CyberVault@netapp.com以开始使用。
+请发送电子邮件至 ng-CyberVault@netapp.com 以开始使用。
 
 .相关信息
 有关网络保险库以及如何搭建此架构的更多信息，请参阅…… link:https://docs.netapp.com/us-en/netapp-solutions-dataops/cyber-vault/ontap-cyber-vault-overview.html["ONTAP网络保险库文档"^]。
